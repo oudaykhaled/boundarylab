@@ -1,0 +1,368 @@
+[
+  {
+    "id": "R01",
+    "requirement": "Middleware direction",
+    "kind": "responsibility",
+    "evidence_category": "technical",
+    "target_gate": "G1",
+    "evidence": "Architecture, ownership ADR and ordered roadmap",
+    "acceptance": "Trace one design choice through implementation and its acceptance evidence",
+    "limitation": "One bounded project is smaller than company-wide architecture ownership",
+    "work_packages": [
+      "B01",
+      "B11"
+    ],
+    "status": "planned",
+    "implemented": false,
+    "verified": false
+  },
+  {
+    "id": "R02",
+    "requirement": "Multiple application ecosystems",
+    "kind": "responsibility",
+    "evidence_category": "technical",
+    "target_gate": "G1",
+    "evidence": "Native Kotlin and Flutter consumers of one broker",
+    "acceptance": "Both installed clients execute identical vectors over actual IPC",
+    "limitation": "Two ecosystems; no universal runtime support",
+    "work_packages": [
+      "B04",
+      "B05"
+    ],
+    "status": "planned",
+    "implemented": false,
+    "verified": false
+  },
+  {
+    "id": "R03",
+    "requirement": "Phone/PC compatibility",
+    "kind": "responsibility",
+    "evidence_category": "technical",
+    "target_gate": "G2",
+    "evidence": "Android run plus actual macOS host/CLI conformance",
+    "acceptance": "Shared semantic corpus passes on both named environments",
+    "limitation": "Independent local jobs; no device synchronization or other PC OS claim",
+    "work_packages": [
+      "B07",
+      "B08"
+    ],
+    "status": "planned",
+    "implemented": false,
+    "verified": false
+  },
+  {
+    "id": "R04",
+    "requirement": "Performance",
+    "kind": "responsibility",
+    "evidence_category": "technical",
+    "target_gate": "G2",
+    "evidence": "Baseline-controlled latency/throughput study and raw traces",
+    "acceptance": "Separate queue, execution and observation costs; report uncertainty and negative results",
+    "limitation": "No performance superiority before a valid comparison",
+    "work_packages": [
+      "B09",
+      "B11"
+    ],
+    "status": "planned",
+    "implemented": false,
+    "verified": false
+  },
+  {
+    "id": "R05",
+    "requirement": "Memory",
+    "kind": "responsibility",
+    "evidence_category": "technical",
+    "target_gate": "G2",
+    "evidence": "Bounded resource counters, PSS/RSS diagnosis and churn evidence",
+    "acceptance": "Caps hold; no retained-job/descriptor growth in declared campaign",
+    "limitation": "No whole-device or all-workload optimization claim",
+    "work_packages": [
+      "B02",
+      "B06",
+      "B09"
+    ],
+    "status": "planned",
+    "implemented": false,
+    "verified": false
+  },
+  {
+    "id": "R06",
+    "requirement": "Startup",
+    "kind": "responsibility",
+    "evidence_category": "technical",
+    "target_gate": "G2",
+    "evidence": "Separate app, SDK and broker-readiness observations",
+    "acceptance": "Controlled cold/resident conditions and raw launches retained",
+    "limitation": "No OS boot improvement claim",
+    "work_packages": [
+      "B09"
+    ],
+    "status": "planned",
+    "implemented": false,
+    "verified": false
+  },
+  {
+    "id": "R07",
+    "requirement": "Stability/reliability",
+    "kind": "responsibility",
+    "evidence_category": "technical",
+    "target_gate": "G2",
+    "evidence": "Process death, timeout, teardown and race corpus",
+    "acceptance": "No false success; surviving clients remain functional; limits hold",
+    "limitation": "No durable recovery, production SLO or fleet history",
+    "work_packages": [
+      "B06",
+      "B08"
+    ],
+    "status": "planned",
+    "implemented": false,
+    "verified": false
+  },
+  {
+    "id": "R08",
+    "requirement": "Scale",
+    "kind": "responsibility",
+    "evidence_category": "technical",
+    "target_gate": "G2",
+    "evidence": "Concurrency/arrival-rate sweep and saturation curve",
+    "acceptance": "Report rejected as well as completed work; preserve bounds and second-caller progress",
+    "limitation": "Local capacity only; no distributed scalability",
+    "work_packages": [
+      "B02",
+      "B06",
+      "B09"
+    ],
+    "status": "planned",
+    "implemented": false,
+    "verified": false
+  },
+  {
+    "id": "R09",
+    "requirement": "Implementation and commercial relevance",
+    "kind": "responsibility",
+    "evidence_category": "mixed",
+    "target_gate": "G2",
+    "evidence": "Runnable candidate, fresh consumer, migration guide and productization assessment",
+    "acceptance": "Follow a design decision into built release artifacts and consumer execution",
+    "limitation": "Actual commercial shipping needs a separate permission-safe career example",
+    "work_packages": [
+      "B10",
+      "B16"
+    ],
+    "status": "separate-evidence-required",
+    "implemented": false,
+    "verified": false
+  },
+  {
+    "id": "R10",
+    "requirement": "Architecture standards",
+    "kind": "responsibility",
+    "evidence_category": "technical",
+    "target_gate": "G2",
+    "evidence": "Version, ownership, trust and lifecycle ADRs",
+    "acceptance": "Compiled old-consumer fixtures enforce the agreed compatibility policy",
+    "limitation": "Project standards do not prove enterprise-wide adoption",
+    "work_packages": [
+      "B01",
+      "B08"
+    ],
+    "status": "planned",
+    "implemented": false,
+    "verified": false
+  },
+  {
+    "id": "R11",
+    "requirement": "Guidelines and quality mechanisms",
+    "kind": "responsibility",
+    "evidence_category": "technical",
+    "target_gate": "G2",
+    "evidence": "Contribution/review guidance and executable CI lanes",
+    "acceptance": "Required meaningful checks fail on contract/authorization regressions",
+    "limitation": "A documentation check is not a native runtime test; self-review stays labeled",
+    "work_packages": [
+      "B06",
+      "B08",
+      "B10"
+    ],
+    "status": "planned",
+    "implemented": false,
+    "verified": false
+  },
+  {
+    "id": "R12",
+    "requirement": "Technology assessment",
+    "kind": "responsibility",
+    "evidence_category": "technical",
+    "target_gate": "G2",
+    "evidence": "Dated Binder/Messenger, Flutter/RN and deployment tradeoff record",
+    "acceptance": "Primary sources, alternatives, revisit triggers and one upgrade rehearsal",
+    "limitation": "Reading a platform guide is not hands-on platform expertise",
+    "work_packages": [
+      "B11"
+    ],
+    "status": "planned",
+    "implemented": false,
+    "verified": false
+  },
+  {
+    "id": "R13",
+    "requirement": "Relevant qualification or equivalent practice",
+    "kind": "qualification",
+    "evidence_category": "career",
+    "target_gate": "external",
+    "evidence": "Separate verified qualification/practical-history evidence",
+    "acceptance": "Candidate can substantiate the credential or equivalent practice privately",
+    "limitation": "A repository cannot create a degree; no CV or credential document published",
+    "work_packages": [],
+    "status": "separate-evidence-required",
+    "implemented": false,
+    "verified": false
+  },
+  {
+    "id": "R14",
+    "requirement": "Android or iOS framework plus system software",
+    "kind": "required",
+    "evidence_category": "mixed",
+    "target_gate": "G3",
+    "evidence": "Android framework integration; booted AOSP service/facade and enforcing tests",
+    "acceptance": "G1 proves app-accessible IPC; G3 adds executed platform build/lifecycle/security changes",
+    "limitation": "App profile alone has less system-software depth; no iOS/kernel claim",
+    "work_packages": [
+      "B03",
+      "B13",
+      "B14"
+    ],
+    "status": "separate-evidence-required",
+    "implemented": false,
+    "verified": false
+  },
+  {
+    "id": "R15",
+    "requirement": "Cross-platform framework practice",
+    "kind": "required",
+    "evidence_category": "technical",
+    "target_gate": "G1",
+    "evidence": "Authored Flutter plugin and installed consumer",
+    "acceptance": "Native channel invokes SDK/Binder; cancel, loss and disposal behavior execute",
+    "limitation": "Flutter satisfies the alternative; no React Native expertise claim",
+    "work_packages": [
+      "B05",
+      "B06"
+    ],
+    "status": "planned",
+    "implemented": false,
+    "verified": false
+  },
+  {
+    "id": "R16",
+    "requirement": "OS implementation principles",
+    "kind": "required",
+    "evidence_category": "technical",
+    "target_gate": "G3",
+    "evidence": "Process/thread/identity walkthrough tied to traces and platform build",
+    "acceptance": "Explain and reproduce service registration, supervision, permission and isolation behavior",
+    "limitation": "Using or extending userspace OS facilities is not kernel implementation",
+    "work_packages": [
+      "B03",
+      "B12",
+      "B14"
+    ],
+    "status": "planned",
+    "implemented": false,
+    "verified": false
+  },
+  {
+    "id": "R17",
+    "requirement": "Difficult engineering problem resolution",
+    "kind": "required",
+    "evidence_category": "technical",
+    "target_gate": "G2",
+    "evidence": "Observed failure or bottleneck investigation with alternatives and regression",
+    "acceptance": "Retain failing evidence, hypothesis/test, minimal change and repeat measurement",
+    "limitation": "Do not manufacture a field incident or promise a successful speedup",
+    "work_packages": [
+      "B06",
+      "B11",
+      "B15"
+    ],
+    "status": "planned",
+    "implemented": false,
+    "verified": false
+  },
+  {
+    "id": "R18",
+    "requirement": "Communication and cross-team work",
+    "kind": "required",
+    "evidence_category": "mixed",
+    "target_gate": "external",
+    "evidence": "RFC, concise walkthrough and actual review/career collaboration example",
+    "acceptance": "Docs explain choices; real participants or historical evidence establish collaboration",
+    "limitation": "Solo docs and AI proposals do not prove cross-team leadership",
+    "work_packages": [
+      "B10",
+      "B16"
+    ],
+    "status": "separate-evidence-required",
+    "implemented": false,
+    "verified": false
+  },
+  {
+    "id": "R19",
+    "requirement": "Preferred OS exposure",
+    "kind": "preferred",
+    "evidence_category": "technical",
+    "target_gate": "G3",
+    "evidence": "Deep Android work, macOS comparison and honest support matrix",
+    "acceptance": "Run declared profiles and explain their distinct boundaries",
+    "limitation": "iOS, Fuchsia and ChromeOS are examples, not an all-platform mandate",
+    "work_packages": [
+      "B07",
+      "B14"
+    ],
+    "status": "planned",
+    "implemented": false,
+    "verified": false
+  },
+  {
+    "id": "R20",
+    "requirement": "External technology/ecosystem partners",
+    "kind": "preferred",
+    "evidence_category": "external",
+    "target_gate": "external",
+    "evidence": "Actual permission-safe partner example or substantive voluntary upstream interaction",
+    "acceptance": "Attributable real interaction and its technical outcome; none assumed",
+    "limitation": "A public repo, self-authored integration or unanswered issue is not a partnership",
+    "work_packages": [],
+    "status": "separate-evidence-required",
+    "implemented": false,
+    "verified": false
+  },
+  {
+    "id": "R21",
+    "requirement": "Sustained European professional work",
+    "kind": "preferred",
+    "evidence_category": "career",
+    "target_gate": "external",
+    "evidence": "Separately verified professional history",
+    "acceptance": "Dates and responsibilities can be substantiated through appropriate private evidence",
+    "limitation": "Project geography, hosting or naming proves no professional tenure",
+    "work_packages": [],
+    "status": "separate-evidence-required",
+    "implemented": false,
+    "verified": false
+  },
+  {
+    "id": "R22",
+    "requirement": "International technical collaboration",
+    "kind": "preferred",
+    "evidence_category": "external",
+    "target_gate": "external",
+    "evidence": "Actual cross-border technical work and communication evidence",
+    "acceptance": "Real consented participants, contribution and outcomes can be explained",
+    "limitation": "English docs enable participation but do not prove it",
+    "work_packages": [],
+    "status": "separate-evidence-required",
+    "implemented": false,
+    "verified": false
+  }
+]

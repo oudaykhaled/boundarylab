@@ -1,0 +1,102 @@
+[
+  {
+    "agent": "astra_01",
+    "requested_model": "gpt-6-astra",
+    "independence": "fresh context; common brief; no peer proposals",
+    "report": "proposals/01-os-architecture.md",
+    "source_sha256": "c999d99376452d3fe6d3038a3d30bd8bce131e83396904ae75e3ea7aee48ae81",
+    "public_sha256": "7507bef3ed658abc2f88b4cfa0c5a99f7b5f293e230d44e46b1131d209143d60",
+    "status": "completed",
+    "public_edit": "archive banner; removal of candidate-specific biography wording where present"
+  },
+  {
+    "agent": "astra_02",
+    "requested_model": "gpt-6-astra",
+    "independence": "fresh context; common brief; no peer proposals",
+    "report": "proposals/02-android-framework.md",
+    "source_sha256": "2abee695bae2cbe824699f747f9d0e0515b7a9064455dc6bc6343c8a23c3201a",
+    "public_sha256": "d0627197287416e3175f286ce8bea9c326bc8ae9f2c67141334bbb1cfdd82799",
+    "status": "completed",
+    "public_edit": "archive banner; removal of candidate-specific biography wording where present"
+  },
+  {
+    "agent": "astra_03",
+    "requested_model": "gpt-6-astra",
+    "independence": "fresh context; common brief; no peer proposals",
+    "report": "proposals/03-ios-platforms.md",
+    "source_sha256": "ceb93e9b37adb0648e5b8d5838389b99b2a74d6a65e7a5ce0954a53ab261b9f0",
+    "public_sha256": "b432144a4a48e2b9b6b8d1cdbc4bd6c7a43b341762a5c6ab41eb856f08cdc900",
+    "status": "completed",
+    "public_edit": "archive banner; removal of candidate-specific biography wording where present"
+  },
+  {
+    "agent": "astra_04",
+    "requested_model": "gpt-6-astra",
+    "independence": "fresh context; common brief; no peer proposals",
+    "report": "proposals/04-cross-platform.md",
+    "source_sha256": "2c40a63e92260cc18eef615575ccf7d670a1a5d10650bc630a5865afbe22b85e",
+    "public_sha256": "e8f25620ed3f3a31d4b41681fe8ad8a73df5286891ee1aa63cb5d6dbb3a625c3",
+    "status": "completed",
+    "public_edit": "archive banner; removal of candidate-specific biography wording where present"
+  },
+  {
+    "agent": "astra_05",
+    "requested_model": "gpt-6-astra",
+    "independence": "fresh context; common brief; no peer proposals",
+    "report": "proposals/05-performance.md",
+    "source_sha256": "c0c8e0dbd7f7b28fb57630ebb7c8e01acb8224ee886bb135e5c5f8a017c37290",
+    "public_sha256": "d95b5d877bfa20f9204009f55a501482f3b5b60aac65a66d132a90b7785b49ec",
+    "status": "completed",
+    "public_edit": "archive banner; removal of candidate-specific biography wording where present"
+  },
+  {
+    "agent": "astra_06",
+    "requested_model": "gpt-6-astra",
+    "independence": "fresh context; common brief; no peer proposals",
+    "report": "proposals/06-reliability.md",
+    "source_sha256": "6c40fb654878d5724a39a7d8ddca0baa7805c02fa7283f334d962453f68ebf3c",
+    "public_sha256": "82e6f87dce0b7ef12b1fd901cf11d11e630c2841ea987c838abe18d5d04db2b4",
+    "status": "completed",
+    "public_edit": "archive banner; removal of candidate-specific biography wording where present"
+  },
+  {
+    "agent": "astra_07",
+    "requested_model": "gpt-6-astra",
+    "independence": "fresh context; common brief; no peer proposals",
+    "report": "proposals/07-hiring-evidence.md",
+    "source_sha256": "55af9b72d73c0e40806c0bf3fa41fa0dee88c0fcf8f84c83d32705baec28ce61",
+    "public_sha256": "84b37f806f6e9f253c1fe68d2c3777b2d9f37d6d06afec43d73c4cb216dae0c8",
+    "status": "completed",
+    "public_edit": "archive banner; removal of candidate-specific biography wording where present"
+  },
+  {
+    "agent": "astra_08",
+    "requested_model": "gpt-6-astra",
+    "independence": "fresh context; common brief; no peer proposals",
+    "report": "proposals/08-open-source.md",
+    "source_sha256": "188939c32aa2b28089720034d2dc7bd98566f1ce265ff5051826f92c4c5d1307",
+    "public_sha256": "e81d6a4f4d87a01510b70254a4781a5bf2e5dff950f9962f0f65fe18a1650976",
+    "status": "completed",
+    "public_edit": "archive banner; removal of candidate-specific biography wording where present"
+  },
+  {
+    "agent": "astra_09",
+    "requested_model": "gpt-6-astra",
+    "independence": "fresh context; common brief; no peer proposals",
+    "report": "proposals/09-delivery.md",
+    "source_sha256": "1a09227d29603e3bea68f6ea14bdac817a1a168b4c3cb28ac631fb664ed9efec",
+    "public_sha256": "87b3d3ac80fe20f36fdf917c519e70ca3ff4f3b63bf338a1daf250d5248284ea",
+    "status": "completed",
+    "public_edit": "archive banner; removal of candidate-specific biography wording where present"
+  },
+  {
+    "agent": "astra_10",
+    "requested_model": "gpt-6-astra",
+    "independence": "fresh context; common brief; no peer proposals",
+    "report": "proposals/10-guardrail-challenge.md",
+    "source_sha256": "f362e29a1613a18c3188b739a9645a77378769d0de54bb953bc51d77c5e6e6cf",
+    "public_sha256": "869bcff9bf50f200d817823b7440b171d801ca19394deddba379d9053d1c0b70",
+    "status": "completed",
+    "public_edit": "archive banner; removal of candidate-specific biography wording where present"
+  }
+]
