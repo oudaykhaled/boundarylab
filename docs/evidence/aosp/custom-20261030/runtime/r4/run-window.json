@@ -1,0 +1,8 @@
+{
+  "started_utc": "2026-10-30T22:19:33.439945+00:00",
+  "boot_deadline_epoch": 1793399373.4341445,
+  "proof_deadline_epoch": 1793400273.4341445,
+  "hard_end_epoch": 1793455800.0,
+  "no_new_start_epoch": 1793449200.0,
+  "cleanup_reserve_seconds": 150
+}

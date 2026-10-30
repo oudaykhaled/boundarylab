@@ -1,0 +1,23 @@
+{
+  "kind": "curated_verified_attempt_teardown",
+  "verified_utc": "2026-10-30T22:42:33.521039+00:00",
+  "charged_resources_absent_since_utc": "2026-10-30T22:41:46.211288+00:00",
+  "instance_absent": true,
+  "both_disks_absent": true,
+  "final_resource_lists": {
+    "instances": [],
+    "disks": [],
+    "addresses": [],
+    "snapshots": [],
+    "networks": [],
+    "queues": []
+  },
+  "deadline_task_deleted": true,
+  "deadline_queue_deleted": true,
+  "deadline_iam_binding_role_service_account_deleted": true,
+  "attempt_firewall_subnet_network_deleted": true,
+  "evidence_verified_before_deletion": true,
+  "final_custom_archive_sha256": "7ae43bfb1186ceb4ee23939f4a57eafd7d1c784b886100e3c589940eef3e89cf",
+  "deletion_deadlines_extended": false,
+  "limits": "Operator-recorded provider responses and local integrity hashes; no settled invoice or independent execution attestation."
+}

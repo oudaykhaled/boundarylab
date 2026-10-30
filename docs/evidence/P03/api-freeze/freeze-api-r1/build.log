@@ -1,0 +1,43 @@
+
+============================================
+PLATFORM_VERSION_CODENAME=REL
+PLATFORM_VERSION=16
+TARGET_PRODUCT=aosp_cf_x86_64_only_phone
+TARGET_BUILD_VARIANT=userdebug
+TARGET_ARCH=x86_64
+TARGET_ARCH_VARIANT=silvermont
+HOST_OS=linux
+HOST_OS_EXTRA=Linux-7.0.0-1014-gcp-x86_64-Ubuntu-24.04.5-LTS
+HOST_CROSS_OS=windows
+BUILD_ID=BP4A.251205.006
+OUT_DIR=out
+SOONG_ONLY=true
+============================================
+Running product configuration...
+============================================
+PLATFORM_VERSION_CODENAME=REL
+PLATFORM_VERSION=16
+TARGET_PRODUCT=aosp_cf_x86_64_only_phone
+TARGET_BUILD_VARIANT=userdebug
+TARGET_ARCH=x86_64
+TARGET_ARCH_VARIANT=silvermont
+HOST_OS=linux
+HOST_OS_EXTRA=Linux-7.0.0-1014-gcp-x86_64-Ubuntu-24.04.5-LTS
+HOST_CROSS_OS=windows
+BUILD_ID=BP4A.251205.006
+OUT_DIR=out
+SOONG_ONLY=true
+============================================
+[100% 1/1] bootstrap blueprint
+Running globs...
+Globs changed, rerunning soong...
+One culprit glob (may be more): vendor/boundarylab/aidl_api/boundarylab-platform/current
+[100% 2/2] analyzing Android.bp files and generating ninja file at out/soong/build.aosp_cf_x86_64_only_phone.ninja
+No need to regenerate ninja file
+Starting ninja...
+[ 75% 3/4] rm -f out/soong/.intermediates/vendor/boundarylab/boundarylab-platform_interface/has_development && echo 1 > out/soong/.intermediates/vendor/boundarylab/boundarylab-platform_interface/has_development # hash of input list: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+[100% 4/4] //vendor/boundarylab:boundarylab-platform_interface raw update_or_freeze_api_1.sh
+There is change between ToT version and the latest stable version. Freezing boundarylab-platform-V1.
+
+#### build completed successfully (01:37 (mm:ss)) ####
+

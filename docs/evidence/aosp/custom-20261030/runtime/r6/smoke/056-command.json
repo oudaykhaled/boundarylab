@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "adb",
+    "-s",
+    "0.0.0.0:6520",
+    "shell",
+    "setprop ctl.start boundarylab_denied_probe"
+  ],
+  "started_at": "2026-10-30T22:38:56.194633+00:00",
+  "ended_at": "2026-10-30T22:38:56.240412+00:00",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

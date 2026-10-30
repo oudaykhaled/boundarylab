@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "adb",
+    "-s",
+    "0.0.0.0:6520",
+    "pull",
+    "/sys/fs/selinux/policy",
+    "/srv/aosp/evidence/custom/proof/smoke/loaded-policy.bin"
+  ],
+  "started_at": "2026-10-30T22:38:57.852118+00:00",
+  "ended_at": "2026-10-30T22:38:58.024349+00:00",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "/sys/fs/selinux/policy: 1 file pulled, 0 skipped. 8.9 MB/s (817203 bytes in 0.087s)\n"
+}

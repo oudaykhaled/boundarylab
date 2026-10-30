@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "sudo",
+    "--login",
+    "--user=aosp",
+    "--",
+    "/srv/aosp/source/out/host/linux-x86/bin/adb",
+    "-s",
+    "0.0.0.0:6520",
+    "shell",
+    "getprop ro.build.version.sdk"
+  ],
+  "started_utc": "2026-10-30T22:05:47.119074+00:00",
+  "ended_utc": "2026-10-30T22:05:47.233515+00:00",
+  "exit_code": 0,
+  "timed_out": false,
+  "error": null,
+  "duration_seconds": 0.1144457299997157
+}

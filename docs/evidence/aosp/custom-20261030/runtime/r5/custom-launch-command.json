@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "sudo",
+    "--login",
+    "--user=aosp",
+    "--",
+    "bash",
+    "/tmp/custom-proof-launch.sh"
+  ],
+  "started_utc": "2026-10-30T22:31:11.815787+00:00",
+  "ended_utc": "2026-10-30T22:31:55.977927+00:00",
+  "exit_code": 0,
+  "timed_out": false,
+  "error": null,
+  "duration_seconds": 44.16214368600049
+}

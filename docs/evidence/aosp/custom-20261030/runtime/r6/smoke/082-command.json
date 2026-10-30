@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "adb",
+    "-s",
+    "0.0.0.0:6520",
+    "shell",
+    "pidof boundarylab_service"
+  ],
+  "started_at": "2026-10-30T22:39:02.601868+00:00",
+  "ended_at": "2026-10-30T22:39:02.648501+00:00",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": ""
+}

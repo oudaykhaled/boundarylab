@@ -2,7 +2,9 @@
 
 ## Authorized limited attempt — 2026-10-30
 
-Applied attempt status: the one allocated N2/Linux/KVM host passed a real paired public prebuilt boot with SELinux Enforcing; a screenshot and failed-launch diagnosis were exported before stopping/removing the prebuilt artifacts. The pinned Android16 source checkout is running. [Current evidence](evidence/aosp/attempt-20261030/README.md) and [P01 inventory](evidence/P01/README.md) distinguish the completed host gate from unverified source/service runtime. The safeguards below are applied, not merely planned.
+Completed attempt: the pinned unchanged Android16 baseline and custom native-service image built and booted. The final run passed 236 harness observations, 61 native assertions and 34 operator checks, with enforcing security domains and verified cleanup. All five earlier failed proof attempts are preserved. [Runtime evidence](evidence/aosp/custom-20261030/README.md) · [original host gate](evidence/aosp/attempt-20261030/README.md).
+
+The VM and both disks were verified absent at22:41:46UTC; deadline, IAM and attempt-network cleanup also completed. Estimated infrastructure use is **US$6.1723**; with the US$2 egress allowance and 40% tax/FX reserve, **US$11.4413**. These are estimates, with the settled invoice/credits/taxes unavailable. [Actual deletion receipts and calculation](evidence/aosp/teardown-20261030/README.md). The resource controls below were verified before use and then removed during early teardown.
 
 The user authorized an AOSP attempt with a **total US$50 infrastructure ceiling**, minimum necessary tests, and evidence captured while tests execute. The earlier US$100–200 estimate below is historical planning for a longer campaign, not the budget for this attempt. A complete P01–P09 campaign is not promised within this limit.
 
@@ -10,7 +12,7 @@ Prepare implementation, smoke probes and evidence collection locally before paid
 
 At the dated list rates, 24 hours of compute and workspace storage is approximately **US$23.60**, plus roughly US$0.19 for standard boot disk and ephemeral external IPv4, and bounded evidence transfer. Billing currency was verified as USD. Reserve substantial headroom inside US$50 for tax, local-currency conversion, network and cleanup. Confirm the resource configuration before provisioning. This is a conservative usage envelope, not a provider-enforced dollar cap or final invoice. Ordinary budget alerts are delayed and do not cap Compute Engine/storage spend.
 
-Use one output tree for the baseline followed by the incremental custom image, shallow/current-branch sync and no source mirror, ccache, duplicate output, distribution archive or image copy. Actual Android 16 source/output fit remains unverified: require at least 180 GiB free after sync, warn below 80 GiB and abort below 40 GiB. Export failure evidence and tear down if the workspace cannot safely accommodate the build.
+Use one output tree for the baseline followed by the incremental custom image, shallow/current-branch sync and no source mirror, ccache, duplicate output, distribution archive or image copy. The actual dated Android16 source/output fit was confirmed by the completed build; the original resource gate remains: require at least 180 GiB free after sync, warn below 80 GiB and abort below 40 GiB. Export failure evidence and tear down if the workspace cannot safely accommodate the build.
 
 Stop early for a failed KVM/unchanged-image gate or a build that cannot finish within the remaining time. Capture failures as evidence. Export small logs, manifests, checksums and screenshots during execution; do not transfer multi-gigabyte system images for presentation. Remove the disposable VM and its disks as soon as the required evidence is secured, then verify that no attempt-owned chargeable resources remain. The absolute provider deadline is a backstop, not a reason to leave idle resources running.
 
@@ -20,7 +22,7 @@ Sources: [absolute VM runtime limits](https://docs.cloud.google.com/compute/docs
 
 ## Historical longer-campaign estimate
 
-Researched 2026-10-30. Planning estimate only: no account, paid VM, disk or cloud service has been created. This budget covers infrastructure, not Codex/Astra subscriptions or usage, engineering labor, taxes or a guarantee of completion time.
+Researched 2026-10-30. At that historical planning snapshot, no account, paid VM, disk or cloud service had been created. This budget covers infrastructure, not Codex/Astra subscriptions or usage, engineering labor, taxes or a guarantee of completion time.
 
 The [Astra-selected profile](decisions/BUILD-DECISIONS.md) is Intel Google Compute Engine `n2-standard-16`, 64 GB RAM, nested KVM, Ubuntu amd64, 1,000 GiB SSD workspace and a small separate boot disk in `europe-west4`. Actual quota, capacity and KVM/Cuttlefish preflight remain required.
 

@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "adb",
+    "-s",
+    "0.0.0.0:6520",
+    "shell",
+    "/system_ext/bin/boundarylab_probe leak"
+  ],
+  "started_at": "2026-10-30T22:38:54.388369+00:00",
+  "ended_at": "2026-10-30T22:38:54.434288+00:00",
+  "exit_code": 0,
+  "stdout": "{\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\n{\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\n{\"case\":\"authorized_capabilities\",\"passed\":true,\"detail\":\"07cb39e9-78ed-4d0e-afcb-29080c066eec\"}\n{\"case\":\"major_2\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"open_session\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"handle_admitted\",\"passed\":true,\"detail\":\"\"}\n{\"epoch\":\"07cb39e9-78ed-4d0e-afcb-29080c066eec\",\"sessionId\":\"329058db-afee-439d-b564-bb6776b7e2e2\",\"jobId\":\"0a4ebea5-cd76-4d30-9e59-3b7b28d1708b\"}\n",
+  "stderr": ""
+}

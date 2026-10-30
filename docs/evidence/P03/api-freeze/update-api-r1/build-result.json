@@ -1,0 +1,21 @@
+{
+  "kind": "custom_source_build_step",
+  "phase": "update-api",
+  "attempt": "1",
+  "started_utc": "2026-10-30T21:40:54.043394+00:00",
+  "ended_utc": "2026-10-30T21:42:11.698465+00:00",
+  "exit_code": 1,
+  "stop_reason": null,
+  "cleanup": {
+    "group_present_at_cleanup": false,
+    "kill_sent": false,
+    "group_exists_after_cleanup": false
+  },
+  "source_manifest": "android-16.0.0_r4",
+  "target": "aosp_cf_x86_64_only_phone-bp4a-userdebug",
+  "out_dir": "/srv/aosp/source/out",
+  "overlay_present": true,
+  "log_sha256": "87a7f58105ff9edb90ca4bd7fb75fa56615a92ac2dfea5859ea8002d38a1f1b6",
+  "log_bytes": 2059,
+  "guest_boot_proven": false
+}

@@ -1,0 +1,15 @@
+10-30 22:08:33.054 1943664 1943664 I launch_cvd: main.cc:179 Using system_image_dir of: /srv/aosp/source/out/target/product/vsoc_x86_64_only
+Reading --config option from: /srv/aosp/source/out/target/product/vsoc_x86_64_only/android-info.txt
+Launching CVD using --config='phone'.
+GPU vhost user auto mode: not needed for --gpu_mode=guest_swiftshader. Not enabling vhost user gpu.
+Path for instance UDS: /tmp/cf_avd_1002
+The following lines contain useful debugging information:
+  Point your browser to https://localhost:8443 to interact with the device.
+  Serial console is disabled; use -console=true to enable it.
+  Logcat output: /srv/aosp/home/cuttlefish/instances/cvd-1/logs/logcat
+  Kernel log: /srv/aosp/home/cuttlefish/instances/cvd-1/kernel.log
+  Launcher log: /srv/aosp/home/cuttlefish/instances/cvd-1/logs/launcher.log
+  Instance configuration: /srv/aosp/home/cuttlefish/instances/cvd-1/cuttlefish_config.json
+  Launcher Build ID: eng.aosp
+Virtual device booted successfully
+VIRTUAL_DEVICE_BOOT_COMPLETED

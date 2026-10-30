@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "adb",
+    "-s",
+    "0.0.0.0:6520",
+    "shell",
+    "/system_ext/bin/boundarylab_probe inspect 07cb39e9-78ed-4d0e-afcb-29080c066eec 5e820ae4-f162-462b-9da4-66698276540c a4963e39-8663-4425-9f0a-f45d8c9a9bc8 STALE_EPOCH"
+  ],
+  "started_at": "2026-10-30T22:39:18.955614+00:00",
+  "ended_at": "2026-10-30T22:39:19.001435+00:00",
+  "exit_code": 0,
+  "stdout": "{\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\n{\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\n{\"case\":\"inspect\",\"passed\":true,\"detail\":\"STALE_EPOCH\"}\n",
+  "stderr": ""
+}

@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "adb",
+    "-s",
+    "0.0.0.0:6520",
+    "shell",
+    "getenforce"
+  ],
+  "started_at": "2026-10-30T22:20:30.369775+00:00",
+  "ended_at": "2026-10-30T22:20:30.419425+00:00",
+  "exit_code": 0,
+  "stdout": "Enforcing\n",
+  "stderr": ""
+}

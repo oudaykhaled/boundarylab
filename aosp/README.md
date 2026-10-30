@@ -1,9 +1,15 @@
 # BoundaryLab native AOSP profile
 
-Status: implementation prepared; **no Android 16 Soong build, frozen API, policy compilation,
-custom-image boot or Binder runtime result is claimed here**. Actual local host evidence is
-under `evidence/local/`. This is the generated-only native platform integration in P03–P06,
-not the app broker and not a `framework.jar` or `SystemServiceManager` extension.
+Status: **the bounded Android 16 source-build and custom native-service proof passed** at
+source `444ae29a31833616c465e155a3dc1335d061cda6`. The completed run records 236 harness
+checks, 61 unique native assertions and 34 operator checks, with guest SELinux Enforcing,
+all three security domains checked against loaded policy, matching image binaries and
+verified Cuttlefish cleanup. [Actual receipts and preserved failures](../docs/evidence/aosp/custom-20261030/README.md)
+are separate from earlier host-only evidence in `evidence/local/`.
+
+This is the generated-only native platform integration in P03–P05. Compatibility
+evolution, performance, soak and fresh final-image reproduction remain open. The facade
+is a native platform library; the Java framework, `system_server` and kernel are unchanged.
 
 ## Fixed source target
 
@@ -25,8 +31,9 @@ no content hashing holds it. Sessions/queue/outstanding/terminal storage retain 
 16/16/4/64/60,000 ms/1,048,576-byte bounds. Cancellation and deadline decisions cannot
 replace a committed terminal state. Session death revokes access immediately.
 
-Structured `boundarylab-platform` AIDL uses libbinder CPP. Its first V1 API must be frozen
-by the pinned Soong tools; it has no VINTF or vendor stability declaration. The native
+Structured `boundarylab-platform` AIDL uses libbinder CPP. Pinned Soong update/freeze
+produced the committed V1 API, hash `6a6258db03acac4a2fa4bd1abecbcf528d7348ea`; it has
+no VINTF or vendor stability declaration. The native
 `libboundarylab_platform_client` facade deliberately compiles with platform Binder APIs.
 It maps security denial to `DENIED` and transport loss to `LOST_OR_UNKNOWN`, does no replay,
 and preserves epoch/session handles. Calls are synchronous; an eventual UI consumer must
@@ -36,7 +43,7 @@ and five-second observation-timeout contract.
 The service authenticates **exact transport UID 2000**, before generated parcel decoding,
 and service discovery/calls additionally require the dedicated probe SELinux domain.
 UID 0 is not authorized. This is a narrowly scoped userdebug test principal, not a production
-app signing/permission scheme. The denied init probe uses UID 65534 in a separate `boundarylab_denied`
+app signing/permission scheme. The denied init probe uses UID 9999 (Android `AID_NOBODY`) in a separate `boundarylab_denied`
 domain with narrow find/call permission, so its explicit `DENIED` demonstrates the independent UID gate. Untrusted apps
 have no service find/call rule. A production caller scheme needs separate design and review.
 
@@ -74,14 +81,16 @@ and BoardConfig policy include, and records before/after hashes. It refuses an e
 integration; inspect an interrupted attempt before retrying. `SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS`
 is set from BoardConfig, not through product inheritance.
 
-In the AOSP tree with the same pinned environment and existing output directory:
+The checkout already contains frozen V1. The update/freeze commands below record the
+first integration sequence; future version evolution remains P06. The actual build used
+the same pinned AOSP environment and existing output directory:
 
 ```sh
 source build/envsetup.sh
 lunch aosp_cf_x86_64_only_phone-bp4a-userdebug
 m boundarylab-platform-update-api
 m boundarylab-platform-freeze-api
-m -j12 boundarylab_service boundarylab_probe boundarylab_engine_test
+m -j12 boundarylab_service boundarylab_probe boundarylab_denied_probe boundarylab_engine_test sepolicy-analyze
 m -j12
 ```
 

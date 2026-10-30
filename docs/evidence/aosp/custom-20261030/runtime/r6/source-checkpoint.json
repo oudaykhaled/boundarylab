@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "kind": "frozen_custom_source_checkpoint",
+  "source_commit": "444ae29a31833616c465e155a3dc1335d061cda6",
+  "source_tree": "3a846272ace5588f683b146b03306a30990db942",
+  "source_inventory_captured_utc": "2026-10-30T22:36:34.607236+00:00",
+  "manifest_commit": "15128c9e27cfa599c48d294babd39286ee8f1426",
+  "target": "aosp_cf_x86_64_only_phone-bp4a-userdebug",
+  "overlay_files": {
+    "Android.bp": "2823bd4cfaaead8654b3be027a754babf6e847a0de4e73c5d44ed79d7bcd394d",
+    "BoardConfigBoundaryLab.mk": "378a4bb360762017a0f7d9198374f7a2618631bf2191e655cb630bc1f2166056",
+    "PUBLIC-PREFLIGHT.md": "7e11b175d4e8c9d7506c815c682ebcf5331af13b834a21a84de328166dab8ffc",
+    "README.md": "3cb4f0496be72d38c8cc1c1146f874bb77248bf2d5525c03f33e1b4ea071d1d9",
+    "aidl/dev/boundarylab/platform/Capabilities.aidl": "4fc33d1e706495bae0806e32c78639d1f7ccde13e1799b3d083b5877df3cf867",
+    "aidl/dev/boundarylab/platform/IBoundaryLab.aidl": "c2850e424ccc54c724d7139f00bdda373e76a4d766ea714f216378308c2e2c7a",
+    "aidl/dev/boundarylab/platform/Request.aidl": "e362a699eaf5a0ebb9dad9811f56d18f9d50f08f18bd1bfabf14c606fabcaf62",
+    "aidl/dev/boundarylab/platform/Result.aidl": "e4e14f3131665cb2515233cb558b54847f178b6d2f9e2b80de026ec5642951de",
+    "aidl_api/boundarylab-platform/1/.hash": "5af33e491e67fce275b3ba9d42257d4074e175cf698c0f5e196c2e3d0afa5312",
+    "aidl_api/boundarylab-platform/1/dev/boundarylab/platform/Capabilities.aidl": "995e8577b632a7d020267c733e27fcfa116460c6cef6a8631192aaf9d8b4c513",
+    "aidl_api/boundarylab-platform/1/dev/boundarylab/platform/IBoundaryLab.aidl": "699ff1f3b4db472671c0c5e1501c97dffc7d08d312e10f4ec41b27f639662fb4",
+    "aidl_api/boundarylab-platform/1/dev/boundarylab/platform/Request.aidl": "7e312560dd9ec12101cee5fd2453c960c0a356e2083c634ab02c944de0ae91a4",
+    "aidl_api/boundarylab-platform/1/dev/boundarylab/platform/Result.aidl": "f3fa5989b9253411f1d2b683fe40811ec1ae16312ab07de799719ab0382caf74",
+    "aidl_api/boundarylab-platform/current/dev/boundarylab/platform/Capabilities.aidl": "995e8577b632a7d020267c733e27fcfa116460c6cef6a8631192aaf9d8b4c513",
+    "aidl_api/boundarylab-platform/current/dev/boundarylab/platform/IBoundaryLab.aidl": "699ff1f3b4db472671c0c5e1501c97dffc7d08d312e10f4ec41b27f639662fb4",
+    "aidl_api/boundarylab-platform/current/dev/boundarylab/platform/Request.aidl": "7e312560dd9ec12101cee5fd2453c960c0a356e2083c634ab02c944de0ae91a4",
+    "aidl_api/boundarylab-platform/current/dev/boundarylab/platform/Result.aidl": "f3fa5989b9253411f1d2b683fe40811ec1ae16312ab07de799719ab0382caf74",
+    "client/Client.cpp": "e23d6243c599654e24b55346cd9be870c35a3ac80eb71a9ff5bb745d902d492a",
+    "client/Client.h": "d00e6c0a6dfaed5512bd176baf61736b072166aea4ed8cad9047867d1bfada15",
+    "client/probe.cpp": "9a21355ffb8ab48905d490b9421f7fcf0c69f22298fb93d1fae32354f873f3ef",
+    "engine/Engine.cpp": "b05dd4c31b08cffe3a48bed3280eb2365e28166acc7f74c2ce9bb3218cb20cc1",
+    "engine/Engine.h": "3900dbe8968074de7aac66f2dffa3573dfe061cd54ea331436723333878dd790",
+    "product.mk": "6dc19f988be4709ab44001420b155250afa2cd5c650812eea23c097f810db10c",
+    "scripts/device-smoke.py": "bb5b1868eb617043fb1fd32496a36057b3e11f5aa93859da58effc53bd3ee518",
+    "scripts/stage-overlay.py": "abcf0aacef96e60c63ada03080566b33fe4c8825e0b389d5854cf28c9cfd970e",
+    "scripts/test-host.sh": "395adb2ce290cc917889dfb0cde59d1acdc42e956eb48bb7a6f30ce36fcb7f31",
+    "sepolicy/private/boundarylab.te": "28b01c997f7f7adccd6c091c2d29a2badf5d4edf7741b4c792887f18ee61c831",
+    "sepolicy/private/file_contexts": "5185be83d1c73e981c22b07b87d7b01afbe4fd323d2fa04ccfa3b0ca53efd1e0",
+    "sepolicy/private/service_contexts": "c5af65af923153597bccdf76a80db3d78d38eda4a21669629e734b7d66ce1c4d",
+    "service/boundarylab.rc": "9c2eb2ad0ecd0b5654ec182d02f0678fa5b741f3d87796d151e43ea82f3cd0cd",
+    "service/main.cpp": "e3de5457f72dfbfe0c0ba254117dde373020a8a84ba2ba0955ef3161f508d5d5",
+    "tests/Vectors.h": "3f72bb5701081a01f476de1ed57bb62f5f822d3ff27f37a6fc592eebefcfb016",
+    "tests/engine_test.cpp": "6c5cc1fe0f00342b803d9c01dd80132a0b5e54f4fc1b357927027ff2da7d71b0"
+  },
+  "baseline_boot_run_sha256": "345a38b0667a523bc9f38f404988e0673766e51d2e96f8ae3e8aec90d7f73ce1",
+  "baseline_local_export": {
+    "path": "baseline-local-export-integrity.json",
+    "sha256": "233634f7c3c942ce889d6999eb0a7902e9208dcd8cc3a4366df83944b60434bd"
+  },
+  "phase_receipts": {
+    "native": {
+      "path": "native-r5/build-result.json",
+      "sha256": "de4efce9c0104a1c685bf09c35914930204b5769dd6351f0a6e2faf42d89e483"
+    },
+    "image": {
+      "path": "image-r4/build-result.json",
+      "sha256": "666a31d6b8af5220b082b49d019f8b41c79f49292e1d200e35c2006fc61cc21f"
+    }
+  },
+  "expected_native_assertions": 61,
+  "note": "Only denied-probe expected UID corrected to pinned Android AID_NOBODY9999. Authorization remains exactUID2000; prior failed run preserved. Astra authorized this final bounded native5/image4/proof; no phase6.",
+  "superseded_source_checkpoint_sha256": "4f9f7760dcc098f5b4c87243e9c9d59bfa23e47854f5fbf9c73f9fb46e280f39"
+}

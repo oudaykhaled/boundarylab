@@ -1,0 +1,3 @@
+project device/google/cuttlefish/               (*** NO BRANCH ***)
+ -m	vsoc_x86_64_only/BoardConfig.mk
+ -m	vsoc_x86_64_only/phone/aosp_cf.mk

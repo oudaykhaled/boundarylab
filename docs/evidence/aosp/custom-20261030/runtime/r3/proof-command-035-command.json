@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "sudo",
+    "--login",
+    "--user=aosp",
+    "--",
+    "/srv/aosp/source/out/host/linux-x86/bin/adb",
+    "-s",
+    "0.0.0.0:6520",
+    "wait-for-device"
+  ],
+  "started_utc": "2026-10-30T22:12:42.850975+00:00",
+  "ended_utc": "2026-10-30T22:12:42.882870+00:00",
+  "exit_code": 0,
+  "timed_out": false,
+  "error": null,
+  "duration_seconds": 0.03189774599741213
+}

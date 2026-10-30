@@ -1,0 +1,2 @@
+10-30 22:12:43.635  4243  4243 I auditd  : type=1400 audit(0.0:206): avc:  denied  { read } for  comm="boundarylab_pro" name="enforce" dev="selinuxfs" ino=4 scontext=u:r:boundarylab_probe:s0 tcontext=u:object_r:selinuxfs:s0 tclass=file permissive=0
+10-30 22:12:43.635  4243  4243 W boundarylab_pro: type=1400 audit(0.0:206): avc:  denied  { read } for  name="enforce" dev="selinuxfs" ino=4 scontext=u:r:boundarylab_probe:s0 tcontext=u:object_r:selinuxfs:s0 tclass=file permissive=0

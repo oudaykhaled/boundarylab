@@ -1,0 +1,217 @@
+{
+  "kind": "custom_source_boot_smoke_and_cleanup",
+  "passed": false,
+  "proof_passed": false,
+  "ended_utc": "2026-10-30T22:20:33.527642+00:00",
+  "started_epoch": 1793398773.4341445,
+  "proof_deadline_epoch": 1793400273.4341445,
+  "original_hard_end_epoch": 1793455800.0,
+  "prerequisites_validated": true,
+  "cleanup_attempted": true,
+  "cleanup_verified": true,
+  "error": "RuntimeError('single combined harness failed/timed out; do not retry automatically')",
+  "source_commit": "0d484a0ec7e3b60ce3394440d436f78108bce379",
+  "checkpoint_sha256": "ea85d88fefe7a2343190116574140b0ef9a093d66d7ea3bf365a12b70da86577",
+  "serial": "0.0.0.0:6520",
+  "checks": [
+    {
+      "case": "kernel.apparmor_restrict_unprivileged_userns",
+      "passed": true,
+      "actual": "1",
+      "utc": "2026-10-30T22:19:33.445052+00:00"
+    },
+    {
+      "case": "kernel.unprivileged_userns_clone",
+      "passed": true,
+      "actual": "1",
+      "utc": "2026-10-30T22:19:33.449239+00:00"
+    },
+    {
+      "case": "boot_completed",
+      "passed": true,
+      "actual": {
+        "serial": "0.0.0.0:6520"
+      },
+      "utc": "2026-10-30T22:20:25.747258+00:00"
+    },
+    {
+      "case": "fingerprint_matches_built_system",
+      "passed": true,
+      "actual": {
+        "actual": "generic/aosp_cf_x86_64_only_phone/vsoc_x86_64_only:16/BP4A.251205.006/eng.aosp:userdebug/test-keys",
+        "expected": "generic/aosp_cf_x86_64_only_phone/vsoc_x86_64_only:16/BP4A.251205.006/eng.aosp:userdebug/test-keys"
+      },
+      "utc": "2026-10-30T22:20:25.864777+00:00"
+    },
+    {
+      "case": "ro.build.version.release",
+      "passed": true,
+      "actual": "16",
+      "utc": "2026-10-30T22:20:25.982155+00:00"
+    },
+    {
+      "case": "ro.build.version.sdk",
+      "passed": true,
+      "actual": "36",
+      "utc": "2026-10-30T22:20:26.099576+00:00"
+    },
+    {
+      "case": "ro.build.id",
+      "passed": true,
+      "actual": "BP4A.251205.006",
+      "utc": "2026-10-30T22:20:26.216914+00:00"
+    },
+    {
+      "case": "ro.boundarylab.profile",
+      "passed": true,
+      "actual": "generated-v1",
+      "utc": "2026-10-30T22:20:26.334386+00:00"
+    },
+    {
+      "case": "selinux_enforcing_before",
+      "passed": true,
+      "actual": "Enforcing",
+      "utc": "2026-10-30T22:20:26.451828+00:00"
+    },
+    {
+      "case": "config:enable_sandbox",
+      "passed": true,
+      "actual": true,
+      "utc": "2026-10-30T22:20:26.454522+00:00"
+    },
+    {
+      "case": "config:enable_webrtc",
+      "passed": true,
+      "actual": true,
+      "utc": "2026-10-30T22:20:26.455765+00:00"
+    },
+    {
+      "case": "config:boot_image",
+      "passed": true,
+      "actual": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/boot.img",
+      "utc": "2026-10-30T22:20:26.456835+00:00"
+    },
+    {
+      "case": "config:super_image",
+      "passed": true,
+      "actual": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/super.img",
+      "utc": "2026-10-30T22:20:26.457869+00:00"
+    },
+    {
+      "case": "config:crosvm_binary",
+      "passed": true,
+      "actual": "/srv/aosp/source/out/host/linux-x86/bin/crosvm",
+      "utc": "2026-10-30T22:20:26.458868+00:00"
+    },
+    {
+      "case": "root_for_artifact_and_test_placement",
+      "passed": true,
+      "actual": "0",
+      "utc": "2026-10-30T22:20:26.976858+00:00"
+    },
+    {
+      "case": "boundarylab_service:image_sha256",
+      "passed": true,
+      "actual": "8c575b2e10b7c23c661ca0f74659afe185377be5e206770cff0087d568685b5c  /system_ext/bin/boundarylab_service",
+      "utc": "2026-10-30T22:20:27.094379+00:00"
+    },
+    {
+      "case": "boundarylab_service:installed_mode_label",
+      "passed": true,
+      "actual": {
+        "mode_owner": "755:0:2000",
+        "label_listing": "-rwxr-xr-x 1 root shell u:object_r:boundarylab_exec:s0  102944 2026-10-30 22:00 /system_ext/bin/boundarylab_service"
+      },
+      "utc": "2026-10-30T22:20:27.328146+00:00"
+    },
+    {
+      "case": "boundarylab_probe:image_sha256",
+      "passed": true,
+      "actual": "cffb0e7bfd204d57c4b2a110b93cd9fd579b23aa61325b044b2d17b4ba467d6f  /system_ext/bin/boundarylab_probe",
+      "utc": "2026-10-30T22:20:27.445508+00:00"
+    },
+    {
+      "case": "boundarylab_probe:installed_mode_label",
+      "passed": true,
+      "actual": {
+        "mode_owner": "755:0:2000",
+        "label_listing": "-rwxr-xr-x 1 root shell u:object_r:boundarylab_probe_exec:s0  68608 2026-10-30 22:00 /system_ext/bin/boundarylab_probe"
+      },
+      "utc": "2026-10-30T22:20:27.679076+00:00"
+    },
+    {
+      "case": "boundarylab_denied_probe:image_sha256",
+      "passed": true,
+      "actual": "cffb0e7bfd204d57c4b2a110b93cd9fd579b23aa61325b044b2d17b4ba467d6f  /system_ext/bin/boundarylab_denied_probe",
+      "utc": "2026-10-30T22:20:27.796558+00:00"
+    },
+    {
+      "case": "boundarylab_denied_probe:installed_mode_label",
+      "passed": true,
+      "actual": {
+        "mode_owner": "755:0:2000",
+        "label_listing": "-rwxr-xr-x 1 root shell u:object_r:boundarylab_denied_exec:s0  68608 2026-10-30 22:00 /system_ext/bin/boundarylab_denied_probe"
+      },
+      "utc": "2026-10-30T22:20:28.029997+00:00"
+    },
+    {
+      "case": "custom-boot:png",
+      "passed": true,
+      "actual": {
+        "bytes": 706887,
+        "sha256": "60c4c929c5322a870ed1627e4274b4d81a0c198be7dc3bb800f277729443c9b6",
+        "scope": "actual custom-image boot screenshot, not native UI interaction"
+      },
+      "utc": "2026-10-30T22:20:28.917574+00:00"
+    },
+    {
+      "case": "native_test_source_hash",
+      "passed": true,
+      "actual": {
+        "host_path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/data/nativetest64/boundarylab_engine_test/boundarylab_engine_test",
+        "device_path": "/data/nativetest64/boundarylab_engine_test/boundarylab_engine_test",
+        "sha256": "aae13062a147b97c9859feb96833459d4b6fdb8087533af29582c0187a8849bd",
+        "bytes": 102792
+      },
+      "utc": "2026-10-30T22:20:29.035594+00:00"
+    },
+    {
+      "case": "native_test_fixture_before_mode",
+      "passed": true,
+      "actual": {
+        "device_sha256": "aae13062a147b97c9859feb96833459d4b6fdb8087533af29582c0187a8849bd  /data/nativetest64/boundarylab_engine_test/boundarylab_engine_test",
+        "mode_owner": "644:0:0",
+        "label_listing": "-rw-r--r-- 1 root root u:object_r:nativetest_data_file:s0  102792 2026-10-30 22:00 /data/nativetest64/boundarylab_engine_test/boundarylab_engine_test"
+      },
+      "utc": "2026-10-30T22:20:29.397018+00:00"
+    },
+    {
+      "case": "native_test_device_identity",
+      "passed": true,
+      "actual": {
+        "source": {
+          "host_path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/data/nativetest64/boundarylab_engine_test/boundarylab_engine_test",
+          "device_path": "/data/nativetest64/boundarylab_engine_test/boundarylab_engine_test",
+          "sha256": "aae13062a147b97c9859feb96833459d4b6fdb8087533af29582c0187a8849bd",
+          "bytes": 102792
+        },
+        "device_sha256": "aae13062a147b97c9859feb96833459d4b6fdb8087533af29582c0187a8849bd  /data/nativetest64/boundarylab_engine_test/boundarylab_engine_test",
+        "mode_owner": "755:0:0",
+        "label_listing": "-rwxr-xr-x 1 root root u:object_r:nativetest_data_file:s0  102792 2026-10-30 22:00 /data/nativetest64/boundarylab_engine_test/boundarylab_engine_test",
+        "pushed_only_because_absent": false
+      },
+      "utc": "2026-10-30T22:20:29.812960+00:00"
+    },
+    {
+      "case": "overlay_unchanged_before_smoke",
+      "passed": true,
+      "actual": "full frozen file inventory comparison",
+      "utc": "2026-10-30T22:20:30.218597+00:00"
+    }
+  ],
+  "native_assertions": null,
+  "limitations": [
+    "One custom-image minimum smoke; not old-consumer evolution, peak resources, performance, soak or fresh reproduction.",
+    "Root must export/verify these receipts before teardown; this script performs no cloud operation."
+  ]
+}

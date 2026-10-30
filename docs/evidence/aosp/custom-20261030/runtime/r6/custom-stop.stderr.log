@@ -1,0 +1,2 @@
+10-30 22:39:21.436 1961932 1961939 I stop_cvd: main.cc:130 Requesting stop
+10-30 22:39:22.345 1961932 1961939 I stop_cvd: main.cc:134 Successfully stopped device cvd-1: 0.0.0.0:6520

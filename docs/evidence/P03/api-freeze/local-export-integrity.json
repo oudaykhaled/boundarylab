@@ -1,0 +1,13 @@
+{
+  "kind": "actual_soong_api_local_export_integrity",
+  "utc": "2026-10-30T21:51:34.365618+00:00",
+  "archive": "api-freeze-export.tar.gz",
+  "bytes": 48246,
+  "sha256": "a920dd1d8a9648ead13271791593bb59c54e814e95deb251461c88cee39bf758",
+  "all_file_hashes_match": true,
+  "verified_files": 19,
+  "actual_generated_files_copied": 10,
+  "frozen_v1_hash_bytes": "6a6258db03acac4a2fa4bd1abecbcf528d7348ea\n",
+  "api_was_generated_on_pinned_source_host": true,
+  "custom_image_runtime_proven": false
+}

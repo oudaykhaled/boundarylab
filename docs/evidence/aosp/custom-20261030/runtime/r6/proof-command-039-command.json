@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "sudo",
+    "--login",
+    "--user=aosp",
+    "--",
+    "/srv/aosp/source/out/host/linux-x86/bin/adb",
+    "-s",
+    "0.0.0.0:6520",
+    "pull",
+    "/data/local/tmp/boundarylab-custom-proof-custom-after-smoke.png",
+    "/srv/aosp/evidence/custom/proof/custom-after-smoke.png"
+  ],
+  "started_utc": "2026-10-30T22:39:21.059878+00:00",
+  "ended_utc": "2026-10-30T22:39:21.274455+00:00",
+  "exit_code": 0,
+  "timed_out": false,
+  "error": null,
+  "duration_seconds": 0.21458001700011664
+}

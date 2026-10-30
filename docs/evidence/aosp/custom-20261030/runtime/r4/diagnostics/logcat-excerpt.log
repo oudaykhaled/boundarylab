@@ -1,0 +1,3 @@
+10-30 22:20:32.091  4280  4280 I auditd  : type=1400 audit(0.0:202): avc:  denied  { use } for  comm="boundarylab_pro" path="socket:[39950]" dev="sockfs" ino=39950 scontext=u:r:boundarylab:s0 tcontext=u:r:adbd:s0 tclass=fd permissive=0
+10-30 22:20:32.091  4280  4280 W boundarylab_pro: type=1400 audit(0.0:202): avc:  denied  { use } for  path="socket:[39950]" dev="sockfs" ino=39950 scontext=u:r:boundarylab:s0 tcontext=u:r:adbd:s0 tclass=fd permissive=0
+10-30 22:20:32.152     0     0 W rust_binder: Transaction failed: BR_FAILED_REPLY { source: EACCES } my_pid:4280

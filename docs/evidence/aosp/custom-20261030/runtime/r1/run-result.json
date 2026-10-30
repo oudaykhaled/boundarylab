@@ -1,0 +1,112 @@
+{
+  "kind": "custom_source_boot_smoke_and_cleanup",
+  "passed": false,
+  "proof_passed": false,
+  "ended_utc": "2026-10-30T22:05:48.826664+00:00",
+  "started_epoch": 1793397899.2670603,
+  "proof_deadline_epoch": 1793399399.2670603,
+  "original_hard_end_epoch": 1793455800.0,
+  "prerequisites_validated": true,
+  "cleanup_attempted": true,
+  "cleanup_verified": true,
+  "error": "RuntimeError('command failed: proof-command-012')",
+  "source_commit": "df4f293b611ccc60f685e08e9a6a5b873860872e",
+  "checkpoint_sha256": "0d8962f279f301e098fa1dc6f2299397c69f7056648fafcb130d541723c83898",
+  "serial": "0.0.0.0:6520",
+  "checks": [
+    {
+      "case": "kernel.apparmor_restrict_unprivileged_userns",
+      "passed": true,
+      "actual": "1",
+      "utc": "2026-10-30T22:04:59.278024+00:00"
+    },
+    {
+      "case": "kernel.unprivileged_userns_clone",
+      "passed": true,
+      "actual": "1",
+      "utc": "2026-10-30T22:04:59.281910+00:00"
+    },
+    {
+      "case": "boot_completed",
+      "passed": true,
+      "actual": {
+        "serial": "0.0.0.0:6520"
+      },
+      "utc": "2026-10-30T22:05:46.881282+00:00"
+    },
+    {
+      "case": "fingerprint_matches_built_system",
+      "passed": true,
+      "actual": {
+        "actual": "generic/aosp_cf_x86_64_only_phone/vsoc_x86_64_only:16/BP4A.251205.006/eng.aosp:userdebug/test-keys",
+        "expected": "generic/aosp_cf_x86_64_only_phone/vsoc_x86_64_only:16/BP4A.251205.006/eng.aosp:userdebug/test-keys"
+      },
+      "utc": "2026-10-30T22:05:46.999517+00:00"
+    },
+    {
+      "case": "ro.build.version.release",
+      "passed": true,
+      "actual": "16",
+      "utc": "2026-10-30T22:05:47.117605+00:00"
+    },
+    {
+      "case": "ro.build.version.sdk",
+      "passed": true,
+      "actual": "36",
+      "utc": "2026-10-30T22:05:47.235362+00:00"
+    },
+    {
+      "case": "ro.build.id",
+      "passed": true,
+      "actual": "BP4A.251205.006",
+      "utc": "2026-10-30T22:05:47.352803+00:00"
+    },
+    {
+      "case": "ro.boundarylab.profile",
+      "passed": true,
+      "actual": "generated-v1",
+      "utc": "2026-10-30T22:05:47.470243+00:00"
+    },
+    {
+      "case": "selinux_enforcing_before",
+      "passed": true,
+      "actual": "Enforcing",
+      "utc": "2026-10-30T22:05:47.587961+00:00"
+    },
+    {
+      "case": "config:enable_sandbox",
+      "passed": true,
+      "actual": true,
+      "utc": "2026-10-30T22:05:47.591293+00:00"
+    },
+    {
+      "case": "config:enable_webrtc",
+      "passed": true,
+      "actual": true,
+      "utc": "2026-10-30T22:05:47.592446+00:00"
+    },
+    {
+      "case": "config:boot_image",
+      "passed": true,
+      "actual": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/boot.img",
+      "utc": "2026-10-30T22:05:47.593595+00:00"
+    },
+    {
+      "case": "config:super_image",
+      "passed": true,
+      "actual": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/super.img",
+      "utc": "2026-10-30T22:05:47.594792+00:00"
+    },
+    {
+      "case": "config:crosvm_binary",
+      "passed": true,
+      "actual": "/srv/aosp/source/out/host/linux-x86/bin/crosvm",
+      "utc": "2026-10-30T22:05:47.596001+00:00"
+    }
+  ],
+  "native_assertions": null,
+  "limitations": [
+    "One custom-image minimum smoke; not old-consumer evolution, peak resources, performance, soak or fresh reproduction.",
+    "Root must export/verify these receipts before teardown; this script performs no cloud operation."
+  ]
+}

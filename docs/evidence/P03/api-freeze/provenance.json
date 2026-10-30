@@ -1,0 +1,275 @@
+{
+  "kind": "public_curation_of_actual_soong_api_update_and_freeze",
+  "archive": {
+    "name": "api-freeze-export.tar.gz",
+    "bytes": 48246,
+    "sha256": "a920dd1d8a9648ead13271791593bb59c54e814e95deb251461c88cee39bf758"
+  },
+  "integrity": {
+    "archive_hash_verified_locally": true,
+    "inventory_payloads_verified": 19,
+    "archive_members_including_inventory": 20,
+    "source_files_compared_to_worktree_and_commit": 10,
+    "source_commit": "90a479d1e44f7367e693ae5e16f3a153fdda367a",
+    "scope": "Supplied export integrity and local source-byte linkage only; not independent execution authenticity or signed attestation."
+  },
+  "coverage": {
+    "selected_archive_members": 10,
+    "linked_existing_source_members": 10,
+    "omitted_without_link": 0,
+    "all_members_accounted_for": true
+  },
+  "members": [
+    {
+      "archive_path": "api-freeze-export/Android.bp",
+      "original_bytes": 2869,
+      "original_sha256": "2823bd4cfaaead8654b3be027a754babf6e847a0de4e73c5d44ed79d7bcd394d",
+      "disposition": "linked_existing_source",
+      "reason": "Exact generated source/build-definition bytes already committed; avoid duplicate copy.",
+      "repository_path": "aosp/Android.bp",
+      "source_commit": "90a479d1e44f7367e693ae5e16f3a153fdda367a",
+      "public_sha256": "2823bd4cfaaead8654b3be027a754babf6e847a0de4e73c5d44ed79d7bcd394d",
+      "public_bytes": 2869,
+      "transformation": "none; byte-identical at pinned commit"
+    },
+    {
+      "archive_path": "api-freeze-export/aidl_api/boundarylab-platform/1/.hash",
+      "original_bytes": 41,
+      "original_sha256": "5af33e491e67fce275b3ba9d42257d4074e175cf698c0f5e196c2e3d0afa5312",
+      "disposition": "linked_existing_source",
+      "reason": "Exact generated source/build-definition bytes already committed; avoid duplicate copy.",
+      "repository_path": "aosp/aidl_api/boundarylab-platform/1/.hash",
+      "source_commit": "90a479d1e44f7367e693ae5e16f3a153fdda367a",
+      "public_sha256": "5af33e491e67fce275b3ba9d42257d4074e175cf698c0f5e196c2e3d0afa5312",
+      "public_bytes": 41,
+      "transformation": "none; byte-identical at pinned commit"
+    },
+    {
+      "archive_path": "api-freeze-export/aidl_api/boundarylab-platform/1/dev/boundarylab/platform/Capabilities.aidl",
+      "original_bytes": 1849,
+      "original_sha256": "995e8577b632a7d020267c733e27fcfa116460c6cef6a8631192aaf9d8b4c513",
+      "disposition": "linked_existing_source",
+      "reason": "Exact generated source/build-definition bytes already committed; avoid duplicate copy.",
+      "repository_path": "aosp/aidl_api/boundarylab-platform/1/dev/boundarylab/platform/Capabilities.aidl",
+      "source_commit": "90a479d1e44f7367e693ae5e16f3a153fdda367a",
+      "public_sha256": "995e8577b632a7d020267c733e27fcfa116460c6cef6a8631192aaf9d8b4c513",
+      "public_bytes": 1849,
+      "transformation": "none; byte-identical at pinned commit"
+    },
+    {
+      "archive_path": "api-freeze-export/aidl_api/boundarylab-platform/1/dev/boundarylab/platform/IBoundaryLab.aidl",
+      "original_bytes": 1909,
+      "original_sha256": "699ff1f3b4db472671c0c5e1501c97dffc7d08d312e10f4ec41b27f639662fb4",
+      "disposition": "linked_existing_source",
+      "reason": "Exact generated source/build-definition bytes already committed; avoid duplicate copy.",
+      "repository_path": "aosp/aidl_api/boundarylab-platform/1/dev/boundarylab/platform/IBoundaryLab.aidl",
+      "source_commit": "90a479d1e44f7367e693ae5e16f3a153fdda367a",
+      "public_sha256": "699ff1f3b4db472671c0c5e1501c97dffc7d08d312e10f4ec41b27f639662fb4",
+      "public_bytes": 1909,
+      "transformation": "none; byte-identical at pinned commit"
+    },
+    {
+      "archive_path": "api-freeze-export/aidl_api/boundarylab-platform/1/dev/boundarylab/platform/Request.aidl",
+      "original_bytes": 1325,
+      "original_sha256": "7e312560dd9ec12101cee5fd2453c960c0a356e2083c634ab02c944de0ae91a4",
+      "disposition": "linked_existing_source",
+      "reason": "Exact generated source/build-definition bytes already committed; avoid duplicate copy.",
+      "repository_path": "aosp/aidl_api/boundarylab-platform/1/dev/boundarylab/platform/Request.aidl",
+      "source_commit": "90a479d1e44f7367e693ae5e16f3a153fdda367a",
+      "public_sha256": "7e312560dd9ec12101cee5fd2453c960c0a356e2083c634ab02c944de0ae91a4",
+      "public_bytes": 1325,
+      "transformation": "none; byte-identical at pinned commit"
+    },
+    {
+      "archive_path": "api-freeze-export/aidl_api/boundarylab-platform/1/dev/boundarylab/platform/Result.aidl",
+      "original_bytes": 1402,
+      "original_sha256": "f3fa5989b9253411f1d2b683fe40811ec1ae16312ab07de799719ab0382caf74",
+      "disposition": "linked_existing_source",
+      "reason": "Exact generated source/build-definition bytes already committed; avoid duplicate copy.",
+      "repository_path": "aosp/aidl_api/boundarylab-platform/1/dev/boundarylab/platform/Result.aidl",
+      "source_commit": "90a479d1e44f7367e693ae5e16f3a153fdda367a",
+      "public_sha256": "f3fa5989b9253411f1d2b683fe40811ec1ae16312ab07de799719ab0382caf74",
+      "public_bytes": 1402,
+      "transformation": "none; byte-identical at pinned commit"
+    },
+    {
+      "archive_path": "api-freeze-export/aidl_api/boundarylab-platform/current/dev/boundarylab/platform/Capabilities.aidl",
+      "original_bytes": 1849,
+      "original_sha256": "995e8577b632a7d020267c733e27fcfa116460c6cef6a8631192aaf9d8b4c513",
+      "disposition": "linked_existing_source",
+      "reason": "Exact generated source/build-definition bytes already committed; avoid duplicate copy.",
+      "repository_path": "aosp/aidl_api/boundarylab-platform/current/dev/boundarylab/platform/Capabilities.aidl",
+      "source_commit": "90a479d1e44f7367e693ae5e16f3a153fdda367a",
+      "public_sha256": "995e8577b632a7d020267c733e27fcfa116460c6cef6a8631192aaf9d8b4c513",
+      "public_bytes": 1849,
+      "transformation": "none; byte-identical at pinned commit"
+    },
+    {
+      "archive_path": "api-freeze-export/aidl_api/boundarylab-platform/current/dev/boundarylab/platform/IBoundaryLab.aidl",
+      "original_bytes": 1909,
+      "original_sha256": "699ff1f3b4db472671c0c5e1501c97dffc7d08d312e10f4ec41b27f639662fb4",
+      "disposition": "linked_existing_source",
+      "reason": "Exact generated source/build-definition bytes already committed; avoid duplicate copy.",
+      "repository_path": "aosp/aidl_api/boundarylab-platform/current/dev/boundarylab/platform/IBoundaryLab.aidl",
+      "source_commit": "90a479d1e44f7367e693ae5e16f3a153fdda367a",
+      "public_sha256": "699ff1f3b4db472671c0c5e1501c97dffc7d08d312e10f4ec41b27f639662fb4",
+      "public_bytes": 1909,
+      "transformation": "none; byte-identical at pinned commit"
+    },
+    {
+      "archive_path": "api-freeze-export/aidl_api/boundarylab-platform/current/dev/boundarylab/platform/Request.aidl",
+      "original_bytes": 1325,
+      "original_sha256": "7e312560dd9ec12101cee5fd2453c960c0a356e2083c634ab02c944de0ae91a4",
+      "disposition": "linked_existing_source",
+      "reason": "Exact generated source/build-definition bytes already committed; avoid duplicate copy.",
+      "repository_path": "aosp/aidl_api/boundarylab-platform/current/dev/boundarylab/platform/Request.aidl",
+      "source_commit": "90a479d1e44f7367e693ae5e16f3a153fdda367a",
+      "public_sha256": "7e312560dd9ec12101cee5fd2453c960c0a356e2083c634ab02c944de0ae91a4",
+      "public_bytes": 1325,
+      "transformation": "none; byte-identical at pinned commit"
+    },
+    {
+      "archive_path": "api-freeze-export/aidl_api/boundarylab-platform/current/dev/boundarylab/platform/Result.aidl",
+      "original_bytes": 1402,
+      "original_sha256": "f3fa5989b9253411f1d2b683fe40811ec1ae16312ab07de799719ab0382caf74",
+      "disposition": "linked_existing_source",
+      "reason": "Exact generated source/build-definition bytes already committed; avoid duplicate copy.",
+      "repository_path": "aosp/aidl_api/boundarylab-platform/current/dev/boundarylab/platform/Result.aidl",
+      "source_commit": "90a479d1e44f7367e693ae5e16f3a153fdda367a",
+      "public_sha256": "f3fa5989b9253411f1d2b683fe40811ec1ae16312ab07de799719ab0382caf74",
+      "public_bytes": 1402,
+      "transformation": "none; byte-identical at pinned commit"
+    },
+    {
+      "archive_path": "api-freeze-export/freeze-api-r1/build-result.json",
+      "original_bytes": 648,
+      "original_sha256": "f0459e722703f1fdd64c882b874d129762b0a45dc2ffff320ce0a5c730ac8799",
+      "disposition": "selected",
+      "public_path": "freeze-api-r1/build-result.json",
+      "public_bytes": 648,
+      "public_sha256": "f0459e722703f1fdd64c882b874d129762b0a45dc2ffff320ce0a5c730ac8799",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "archive_path": "api-freeze-export/freeze-api-r1/build.log",
+      "original_bytes": 1744,
+      "original_sha256": "680831f941586228653d086bab81833e0474e0172cd65b239127cd8e80bf6188",
+      "disposition": "selected",
+      "public_path": "freeze-api-r1/build.log",
+      "public_bytes": 1744,
+      "public_sha256": "680831f941586228653d086bab81833e0474e0172cd65b239127cd8e80bf6188",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "archive_path": "api-freeze-export/integration-cuttlefish.diff",
+      "original_bytes": 908,
+      "original_sha256": "7afd1d92bc55752196223b74cc6c0df4e3c94c5e17dce82f8feec2927773c14a",
+      "disposition": "selected",
+      "public_path": "integration-cuttlefish.diff",
+      "public_bytes": 908,
+      "public_sha256": "7afd1d92bc55752196223b74cc6c0df4e3c94c5e17dce82f8feec2927773c14a",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "archive_path": "api-freeze-export/manifest.xml",
+      "original_bytes": 233871,
+      "original_sha256": "4e8beb5d1b590dff3d631b1dbb957138dbda4e608a3183c625683da4bc84918f",
+      "disposition": "selected",
+      "public_path": "manifest.xml",
+      "public_bytes": 233871,
+      "public_sha256": "4e8beb5d1b590dff3d631b1dbb957138dbda4e608a3183c625683da4bc84918f",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "archive_path": "api-freeze-export/source-status-after-overlay.txt",
+      "original_bytes": 142,
+      "original_sha256": "8ec03b4b06f71b569b0c66a9a35feadd96e325bfcb0c9f1daa07a84cd1a216bd",
+      "disposition": "selected",
+      "public_path": "source-status-after-overlay.txt",
+      "public_bytes": 142,
+      "public_sha256": "8ec03b4b06f71b569b0c66a9a35feadd96e325bfcb0c9f1daa07a84cd1a216bd",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "archive_path": "api-freeze-export/update-api-r1/build-result.json",
+      "original_bytes": 648,
+      "original_sha256": "edce0348e495e24c8e805f54316474af43572aaf411c5fb3b039f84452476e8f",
+      "disposition": "selected",
+      "public_path": "update-api-r1/build-result.json",
+      "public_bytes": 648,
+      "public_sha256": "edce0348e495e24c8e805f54316474af43572aaf411c5fb3b039f84452476e8f",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "archive_path": "api-freeze-export/update-api-r1/build.log",
+      "original_bytes": 2059,
+      "original_sha256": "87a7f58105ff9edb90ca4bd7fb75fa56615a92ac2dfea5859ea8002d38a1f1b6",
+      "disposition": "selected",
+      "public_path": "update-api-r1/build.log",
+      "public_bytes": 2059,
+      "public_sha256": "87a7f58105ff9edb90ca4bd7fb75fa56615a92ac2dfea5859ea8002d38a1f1b6",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "archive_path": "api-freeze-export/update-api-r2/build-result.json",
+      "original_bytes": 648,
+      "original_sha256": "b7c78ac7754aaf346f214b2943bfe7d1f4cb534313ab09a441a786a64852f73b",
+      "disposition": "selected",
+      "public_path": "update-api-r2/build-result.json",
+      "public_bytes": 648,
+      "public_sha256": "b7c78ac7754aaf346f214b2943bfe7d1f4cb534313ab09a441a786a64852f73b",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "archive_path": "api-freeze-export/update-api-r2/build.log",
+      "original_bytes": 2661,
+      "original_sha256": "967e2016ad65c6b4bfe0f64ecb267f5c29a247b82ce0eaaf9cf1027a4ab74a54",
+      "disposition": "selected",
+      "public_path": "update-api-r2/build.log",
+      "public_bytes": 2661,
+      "public_sha256": "967e2016ad65c6b4bfe0f64ecb267f5c29a247b82ce0eaaf9cf1027a4ab74a54",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "archive_path": "api-freeze-export/inventory.json",
+      "original_bytes": 3766,
+      "original_sha256": "9f76e174b7bbf2d3372f7d223f160156a2a524888b3b8ecdf10ec705665c705c",
+      "disposition": "selected",
+      "public_path": "inventory.json",
+      "public_bytes": 3766,
+      "public_sha256": "9f76e174b7bbf2d3372f7d223f160156a2a524888b3b8ecdf10ec705665c705c",
+      "transformation": "none; byte-identical"
+    }
+  ],
+  "additional_files": [
+    {
+      "public_path": "local-export-integrity.json",
+      "source_name": "api-freeze-export-verified.json",
+      "original_bytes": 498,
+      "original_sha256": "9b000e5888428aa48e54b5e6182131499fec719d432a6edc63d609766466386e",
+      "public_bytes": 498,
+      "public_sha256": "9b000e5888428aa48e54b5e6182131499fec719d432a6edc63d609766466386e",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "public_path": "aidl-partition-fix.diff",
+      "source_commit": "e50a8e24dc218790e80e84c80677addb16a4b033",
+      "source_path": "aosp/Android.bp",
+      "public_bytes": 400,
+      "public_sha256": "ddc44c4337d4fdf8e3a4c484aad5c334f870aa9d2e6d452cd81a840b10c0a919",
+      "transformation": "git show --format= --no-ext-diff for this source path; commit author/committer metadata intentionally not included"
+    }
+  ],
+  "frozen_v1_hash_contents": "6a6258db03acac4a2fa4bd1abecbcf528d7348ea\n",
+  "privacy_review": {
+    "all_selected_archive_text_scanned": true,
+    "redactions": [],
+    "findings": "No account-email, private-key, common credential-token, signed-URL parameter, Mac home-root or known physical-device identifier matches in archive payload text. No private credentials or author metadata included in derived partition diff. Generic build paths retained. Pattern scan is not a guarantee against every secret format."
+  },
+  "claim_limits": [
+    "API metadata generation/freezing only; native/image/runtime unverified by this evidence.",
+    "No vendor/VINTF compatibility, old-consumer compatibility, performance or soak proof.",
+    "Archive integrity and source hashes do not independently authenticate execution.",
+    "No artifact-path allowlist or enforcement bypass; partition property fix is recorded separately from generated API formatting."
+  ]
+}

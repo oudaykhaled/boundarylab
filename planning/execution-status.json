@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-10-30T21:43:38.248071+00:00",
+  "updated": "2026-10-30T22:46:42.493090+00:00",
   "sourceCommit": "06b2d4f9d550a7c2b02bcc4d3e8743800ea9eb4c",
   "reviewMethod": "Astra specialist implementation and independent scoped AI security/reliability reviews; root acceptance reconciliation; no human review claimed",
   "notes": [
@@ -431,15 +431,15 @@
       "status": "In Progress",
       "owner": "AOSP team",
       "evidence": [
-        "docs/evidence/aosp/attempt-20261030/README.md",
-        "docs/evidence/reviews/AOSP-REVIEW.md",
-        "aosp/README.md"
+        "docs/evidence/aosp/custom-20261030/README.md",
+        "docs/evidence/aosp/custom-20261030/actual-results.json",
+        "docs/evidence/reviews/AOSP-ACCEPTANCE-MAP.md",
+        "docs/evidence/P03/api-freeze/README.md",
+        "docs/AOSP-LAYERS.md"
       ],
-      "result": "Baseline verified and reviewed overlay staged. Generated AIDL partition corrected without bypassing enforcement; real pinned Soong update/freeze passed and V1 artifacts copied exactly. Native/policy/image/runtime remain unverified.",
-      "remainingAcceptance": [
-        "Execute every original target-specific acceptance clause with real frozen API, compile/policy/image/runtime provenance; no completion inferred from host tests or baseline."
-      ],
-      "nextStep": "Compile native components and policy/custom image, then one combined target smoke; reconcile every original acceptance clause from actual evidence."
+      "result": "Final source444ae29 native/image/runtime passed, with61unique native assertions,236harness observations and34operatorchecks. Independent scoped AI audit supports all6original clauses for this ticket. Five earlier failed proofs preserved; publication/board closure pending.",
+      "remainingAcceptance": [],
+      "nextStep": "Publish exact source/evidence, then close the accepted scoped ticket and verify the GitHub board."
     },
     {
       "key": "P04",
@@ -449,15 +449,15 @@
       "status": "In Progress",
       "owner": "AOSP team",
       "evidence": [
-        "docs/evidence/aosp/attempt-20261030/README.md",
-        "docs/evidence/reviews/AOSP-REVIEW.md",
-        "aosp/README.md"
+        "docs/evidence/aosp/custom-20261030/README.md",
+        "docs/evidence/aosp/custom-20261030/actual-results.json",
+        "docs/evidence/reviews/AOSP-ACCEPTANCE-MAP.md",
+        "docs/evidence/P03/api-freeze/README.md",
+        "docs/AOSP-LAYERS.md"
       ],
-      "result": "Baseline verified and reviewed overlay staged. Generated AIDL partition corrected without bypassing enforcement; real pinned Soong update/freeze passed and V1 artifacts copied exactly. Native/policy/image/runtime remain unverified.",
-      "remainingAcceptance": [
-        "Execute every original target-specific acceptance clause with real frozen API, compile/policy/image/runtime provenance; no completion inferred from host tests or baseline."
-      ],
-      "nextStep": "Compile native components and policy/custom image, then one combined target smoke; reconcile every original acceptance clause from actual evidence."
+      "result": "Final source444ae29 native/image/runtime passed, with61unique native assertions,236harness observations and34operatorchecks. Independent scoped AI audit supports all6original clauses for this ticket. Five earlier failed proofs preserved; publication/board closure pending.",
+      "remainingAcceptance": [],
+      "nextStep": "Publish exact source/evidence, then close the accepted scoped ticket and verify the GitHub board."
     },
     {
       "key": "P05",
@@ -467,15 +467,15 @@
       "status": "In Progress",
       "owner": "AOSP team",
       "evidence": [
-        "docs/evidence/aosp/attempt-20261030/README.md",
-        "docs/evidence/reviews/AOSP-REVIEW.md",
-        "aosp/README.md"
+        "docs/evidence/aosp/custom-20261030/README.md",
+        "docs/evidence/aosp/custom-20261030/actual-results.json",
+        "docs/evidence/reviews/AOSP-ACCEPTANCE-MAP.md",
+        "docs/evidence/P03/api-freeze/README.md",
+        "docs/AOSP-LAYERS.md"
       ],
-      "result": "Baseline verified and reviewed overlay staged. Generated AIDL partition corrected without bypassing enforcement; real pinned Soong update/freeze passed and V1 artifacts copied exactly. Native/policy/image/runtime remain unverified.",
-      "remainingAcceptance": [
-        "Execute every original target-specific acceptance clause with real frozen API, compile/policy/image/runtime provenance; no completion inferred from host tests or baseline."
-      ],
-      "nextStep": "Compile native components and policy/custom image, then one combined target smoke; reconcile every original acceptance clause from actual evidence."
+      "result": "Final source444ae29 native/image/runtime passed, with61unique native assertions,236harness observations and34operatorchecks. Independent scoped AI audit supports all6original clauses for this ticket. Five earlier failed proofs preserved; publication/board closure pending.",
+      "remainingAcceptance": [],
+      "nextStep": "Publish exact source/evidence, then close the accepted scoped ticket and verify the GitHub board."
     },
     {
       "key": "P06",
@@ -839,11 +839,21 @@
     "evidence": "docs/evidence/aosp/attempt-20261030/README.md",
     "settledCostUsd": null,
     "reviewedNativeCheckpoint": "735ebba107a4b0ab82fa4f243cd8c3c350236a8d",
-    "customIntegration": "Pinned Soong update-api-r2 and freeze-api-r1 passed with process groups gone. Actual frozen V1 API and Soong-updated Android.bp copied from host; all19 exported payload hashes verified. Native/policy/custom-image compilation and runtime remain pending.",
+    "customIntegration": "Actual pinned Soong frozenV1 API, native-r5/image-r4 compile and complete custom runtime at444ae29 verified. Three BoundaryLab domains nonpermissive in loaded policy, global Enforcing before/after; engineunit process su is separately permissive.",
     "sourceBaselineEvidence": "docs/evidence/P02/README.md",
     "apiPartitionFixCommit": "e50a8e24dc218790e80e84c80677addb16a4b033",
     "frozenV1Hash": "6a6258db03acac4a2fa4bd1abecbcf528d7348ea",
-    "realApiExportSha256": "a920dd1d8a9648ead13271791593bb59c54e814e95deb251461c88cee39bf758"
+    "realApiExportSha256": "a920dd1d8a9648ead13271791593bb59c54e814e95deb251461c88cee39bf758",
+    "customCompiledSource": "df4f293b611ccc60f685e08e9a6a5b873860872e",
+    "runtimeProof": "Finalr6 source444ae29 passed34operatorchecks/236harnessobservations/61unique native assertions, alloriginalP03\u2013P05 clauses independentlyAIaudited6/6each. Fiveearlierfailedproofattempts preserved. Ticketclosurepending source/evidence publication.",
+    "reviewedPolicyCorrectionCommit": "0d484a0ec7e3b60ce3394440d436f78108bce379",
+    "finalBoundedSourceCommit": "444ae29a31833616c465e155a3dc1335d061cda6",
+    "finalRuntimeEvidence": "docs/evidence/aosp/custom-20261030/actual-results.json",
+    "teardownVerified": true,
+    "teardownEvidence": "docs/evidence/aosp/teardown-20261030/teardown.json",
+    "estimatedInfrastructureUsd": 6.1723,
+    "conservativeEstimateWithReserveUsd": 11.4413,
+    "chargedResourcesAbsentSinceUtc": "2026-10-30T22:41:46.211288+00:00"
   },
   "lastPublishedBoardCounts": {
     "Done": 11,
@@ -853,7 +863,7 @@
     "Blocked": 11
   },
   "boardSync": {
-    "status": "pending_next_milestone_publication",
-    "note": "Local P02Done/P03\u2013P05InProgress are verified/preparation states. lastPublishedBoardCounts remain the last actual Chrome verification; root will reconcile GitHub after current target results."
+    "status": "pending_publication_then_actual_board_update",
+    "note": "P03\u2013P05 native acceptance passed and was audited, but closure follows source/evidence publication. lastPublishedBoardCounts remains actual previous Chrome verification."
   }
 }

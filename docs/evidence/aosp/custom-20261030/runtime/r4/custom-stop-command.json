@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "sudo",
+    "--login",
+    "--user=aosp",
+    "--",
+    "/srv/aosp/source/out/host/linux-x86/bin/stop_cvd"
+  ],
+  "started_utc": "2026-10-30T22:20:32.541529+00:00",
+  "ended_utc": "2026-10-30T22:20:33.480710+00:00",
+  "exit_code": 0,
+  "timed_out": false,
+  "error": null,
+  "duration_seconds": 0.939182942998741
+}

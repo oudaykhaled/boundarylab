@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "scope": "Actual minimum custom-image combined proof; not blanket original acceptance completion",
+  "final_attempt": "r6",
+  "source_commit": "444ae29a31833616c465e155a3dc1335d061cda6",
+  "ended_utc": "2026-10-30T22:39:22.424199+00:00",
+  "passed": true,
+  "cleanup_verified": true,
+  "preserved_failed_attempts": [
+    "r1",
+    "r2",
+    "r3",
+    "r4",
+    "r5"
+  ],
+  "operator_checks": {
+    "count": 34,
+    "passed": 34,
+    "receipt": "runtime/r6/run-result.json"
+  },
+  "harness_observations": {
+    "count": 236,
+    "passed": 236,
+    "includes_repeated_case_names": true,
+    "completed_present": true,
+    "receipt": "runtime/r6/smoke/checks.json"
+  },
+  "native_assertions": {
+    "unique_cases": 61,
+    "passed": 61,
+    "summary": {
+      "summary": "PASS",
+      "checks": 61
+    },
+    "source_sha256": "6c5cc1fe0f00342b803d9c01dd80132a0b5e54f4fc1b357927027ff2da7d71b0",
+    "raw_receipt": "runtime/r6/smoke/058-command.json",
+    "raw_receipt_sha256": "f24623a09fbb1332b6d6afbc9d7dbb5e06f1a7e0d01be106d5a40beceb052e47",
+    "extracted_stdout": "runtime/r6/native61.jsonl",
+    "case_names": [
+      "admit_0",
+      "golden_0",
+      "success_wins_cancel_0",
+      "admit_1",
+      "golden_1",
+      "success_wins_cancel_1",
+      "admit_65535",
+      "golden_65535",
+      "success_wins_cancel_65535",
+      "admit_65536",
+      "golden_65536",
+      "success_wins_cancel_65536",
+      "admit_65537",
+      "golden_65537",
+      "success_wins_cancel_65537",
+      "admit_134217728",
+      "golden_134217728",
+      "success_wins_cancel_134217728",
+      "foreign_uid_denied",
+      "stale_epoch",
+      "invalid_length_-1",
+      "invalid_length_134217729",
+      "major_2",
+      "file_unsupported",
+      "malformed_uuid",
+      "invalid_deadline_0",
+      "invalid_deadline_120001",
+      "dedup_no_new_job",
+      "dedup_conflict",
+      "lookup_request",
+      "queued_cancel_zero_work",
+      "foreign_session_denied",
+      "close_revokes",
+      "session_bound_16",
+      "queue_admit_0",
+      "queue_admit_1",
+      "queue_admit_2",
+      "queue_admit_3",
+      "queue_admit_4",
+      "queue_admit_5",
+      "queue_admit_6",
+      "queue_admit_7",
+      "queue_admit_8",
+      "queue_admit_9",
+      "queue_admit_10",
+      "queue_admit_11",
+      "queue_admit_12",
+      "queue_admit_13",
+      "queue_admit_14",
+      "queue_admit_15",
+      "outstanding_bound_4",
+      "queue_bound_16",
+      "cleanup_to_baseline",
+      "retention_count_bytes",
+      "terminal_ttl_60000",
+      "queued_deadline_no_work",
+      "cancel_retains_worker",
+      "running_cancel_cooperative",
+      "cancel_wins_success",
+      "deadline_retains_worker",
+      "deadline_wins_success"
+    ],
+    "execution_identity": "root, u:r:su:s0; su listed permissive in loaded policy; no su-enforcement claim"
+  },
+  "identities": {
+    "authorized_binder_uid": 2000,
+    "authorized_binder_domain": "u:r:boundarylab_probe:s0",
+    "denied_fixture_uid": 9999,
+    "denied_fixture_domain": "u:r:boundarylab_denied:s0",
+    "denied_reply": "DENIED",
+    "root_scope": "protected artifacts, fixture setup, native unit binary, loaded-policy/process observations and init lifecycle controls"
+  },
+  "policy": {
+    "guest_global_before": "Enforcing",
+    "guest_global_after": "Enforcing",
+    "loaded_policy": "runtime/r6/smoke/loaded-policy.bin",
+    "loaded_policy_sha256": "ee92f2ab2590753a27a79fa4bff0e9b2a323b12295741a6615d87836f7fbe0d1",
+    "analysis_receipt": "runtime/r6/smoke/permissive-domains.json",
+    "permissive_domains": [
+      "su"
+    ],
+    "boundarylab_domains_checked_nonpermissive": [
+      "boundarylab",
+      "boundarylab_probe",
+      "boundarylab_denied"
+    ]
+  },
+  "restart_start_intervals_seconds": [
+    33.230000000000004,
+    10.009999999999998,
+    10.000000000000007
+  ],
+  "resource_cycle_fd_delta": 0,
+  "selected_check_results": {
+    "raw_fd_rejected": {
+      "passed": true,
+      "receipt": "runtime/r6/smoke/checks.json",
+      "case": "raw_fd_rejected"
+    },
+    "denied": {
+      "passed": true,
+      "receipt": "runtime/r6/smoke/checks.json",
+      "case": "denied"
+    },
+    "resource_cycle_returns_to_baseline": {
+      "passed": true,
+      "receipt": "runtime/r6/smoke/checks.json",
+      "case": "resource_cycle_returns_to_baseline"
+    },
+    "post_restart_new_epoch": {
+      "passed": true,
+      "receipt": "runtime/r6/smoke/checks.json",
+      "case": "post_restart_new_epoch"
+    },
+    "final_snapshot_matches_fresh_job": {
+      "passed": true,
+      "receipt": "runtime/r6/smoke/checks.json",
+      "case": "final_snapshot_matches_fresh_job"
+    },
+    "completed": {
+      "passed": true,
+      "receipt": "runtime/r6/smoke/checks.json",
+      "case": "completed"
+    }
+  },
+  "screenshots": [
+    "runtime/r6/custom-boot.png",
+    "runtime/r6/custom-after-smoke.png"
+  ],
+  "limits": [
+    "Native assertions run under su, not in the three app/service security domains.",
+    "Same-UID foreign completed-job cancellation is not RUNNING foreign cancellation.",
+    "Quiescent FD recovery and three restart intervals are not peak/performance/soak measurements.",
+    "Compatibility evolution, old-consumer and fresh reproduction remain unexecuted here.",
+    "Original clause-level acceptance is assessed separately; this aggregate is not a P03-P05 blanket Done verdict.",
+    "Local hash verification is not independent execution authenticity."
+  ]
+}

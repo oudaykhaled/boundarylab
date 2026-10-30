@@ -1,0 +1,1 @@
+[   42.078149] type=1400 audit(1793398363.635:206): avc:  denied  { read } for  comm="boundarylab_pro" name="enforce" dev="selinuxfs" ino=4 scontext=u:r:boundarylab_probe:s0 tcontext=u:object_r:selinuxfs:s0 tclass=file permissive=0

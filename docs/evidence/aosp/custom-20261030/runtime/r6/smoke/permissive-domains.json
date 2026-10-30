@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "/srv/aosp/source/out/host/linux-x86/bin/sepolicy-analyze",
+    "/srv/aosp/evidence/custom/proof/smoke/loaded-policy.bin",
+    "permissive"
+  ],
+  "exit_code": 0,
+  "stdout": "su\n",
+  "stderr": ""
+}
