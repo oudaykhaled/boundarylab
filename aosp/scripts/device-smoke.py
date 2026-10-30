@@ -65,8 +65,8 @@ def shell(*args, **kwargs):
     return adb('shell', shlex.join(args), **kwargs)['stdout'].strip()
 
 
-def run_probe(*args):
-    out = shell(probe, *args, timeout=150)
+def run_probe(*args, timeout=150):
+    out = shell(probe, *args, timeout=timeout)
     records = [json.loads(line) for line in out.splitlines() if line.startswith('{')]
     for record in records:
         if 'case' in record:
@@ -86,6 +86,52 @@ def root():
     check('adb_uid_root_for_lifecycle_only', shell('id', '-u') == '0', shell('id'))
 
 
+CORE_COUNTS = ('liveSessions', 'queuedJobs', 'runningJobs', 'retainedEntries', 'retainedBytes')
+
+
+def quiescent(label):
+    # Cooperative cleanup may outlive close/death. Bound the entire observation
+    # window, including the probe subprocess, rather than assuming a fixed sleep suffices.
+    deadline = time.monotonic() + 5
+    observations = []
+    while time.monotonic() < deadline:
+        records = run_probe('resources', timeout=max(0.001, deadline - time.monotonic()))
+        samples = [r['resources'] for r in records if 'resources' in r]
+        check(label + ':resource_record', len(samples) == 1, samples)
+        sample = samples[0]
+        check(label + ':resource_shape', all(type(sample.get(k)) is int and sample[k] >= 0 for k in CORE_COUNTS)
+              and type(sample.get('servicePid')) is int and sample['servicePid'] > 0
+              and isinstance(sample.get('epoch'), str) and bool(sample['epoch']), sample)
+        observations.append({'observed_at': stamp(), 'resources': sample})
+        if all(sample[k] == 0 for k in CORE_COUNTS):
+            check(label + ':quiescent', True, observations)
+            return sample
+        time.sleep(min(0.25, max(0, deadline - time.monotonic())))
+    check(label + ':quiescent', False, observations)
+
+
+def resource_snapshot(label):
+    # Caller is unrooted so metrics always traverse the authorized UID/domain.
+    core = quiescent(label)
+    root()
+    pid = shell('pidof', 'boundarylab_service')
+    check(label + ':pid_matches_metrics', pid.isdigit() and int(pid) == core['servicePid'],
+          {'pid': pid, 'resources': core})
+    start_ticks = int(shell('cat', f'/proc/{pid}/stat').rsplit(')', 1)[1].split()[19])
+    entries = shell('ls', '-1', f'/proc/{pid}/fd').splitlines()
+    check(label + ':fd_listing', bool(entries) and all(e.isdigit() for e in entries), entries)
+    listing = shell('ls', '-l', f'/proc/{pid}/fd')
+    check(label + ':generation_stable', shell('pidof', 'boundarylab_service') == pid and
+          int(shell('cat', f'/proc/{pid}/stat').rsplit(')', 1)[1].split()[19]) == start_ticks,
+          {'pid': pid, 'start_ticks': start_ticks})
+    snapshot = {'observed_at': stamp(), 'pid': int(pid), 'start_ticks': start_ticks,
+                'resources': core, 'fd_count': len(entries), 'fd_numbers': sorted(int(e) for e in entries),
+                'fd_listing': listing}
+    check(label + ':snapshot', True, snapshot)
+    unroot()
+    return snapshot
+
+
 try:
     adb('wait-for-device', timeout=45)
     check('profile', shell('getprop', 'ro.boundarylab.profile') == 'generated-v1', shell('getprop', 'ro.build.fingerprint'))
@@ -93,13 +139,21 @@ try:
     shell('getprop')
     unroot()
     run_probe('empty')
+    run_probe('known')  # Warm Binder/session/worker/crypto lazy resources before the measured cycle.
+    before = resource_snapshot('cycle_before')
     run_probe('smoke')
-    run_probe('empty')
+    quiescent('after_smoke')
     # Deliberately abrupt process exit must revoke the remote token's session.
     leaked = next(r for r in run_probe('leak') if 'sessionId' in r)
-    time.sleep(0.5)
+    quiescent('after_client_death')
     run_probe('inspect', leaked['epoch'], leaked['sessionId'], leaked['jobId'], 'EXPIRED_OR_UNKNOWN')
-    run_probe('empty')
+    after = resource_snapshot('cycle_after')
+    check('resource_cycle_same_generation', before['pid'] == after['pid'] and
+          before['start_ticks'] == after['start_ticks'] and
+          before['resources']['epoch'] == after['resources']['epoch'], {'before': before, 'after': after})
+    check('resource_cycle_returns_to_baseline', before['fd_count'] == after['fd_count'] and
+          all(before['resources'][k] == after['resources'][k] == 0 for k in CORE_COUNTS),
+          {'fd_delta': after['fd_count'] - before['fd_count'], 'before': before, 'after': after})
     old = next(r for r in run_probe('snapshot') if 'sessionId' in r)
     root()
     # No log clearing: use a bounded time window and preserve raw output.
@@ -146,7 +200,10 @@ try:
         last_pid, last_start = current_pid, current_start
     unroot()
     run_probe('inspect', old['epoch'], old['sessionId'], old['jobId'], 'STALE_EPOCH')
-    run_probe('empty')
+    fresh = next(r for r in run_probe('known') if 'sessionId' in r)
+    check('post_restart_new_epoch', fresh['epoch'] != old['epoch'], {'old': old, 'fresh': fresh})
+    final = resource_snapshot('final_after_restart')
+    check('final_snapshot_matches_fresh_job', final['resources']['epoch'] == fresh['epoch'], final)
     check('enforcing_after', shell('getenforce') == 'Enforcing', shell('getenforce'))
     check('completed', True, 'Minimum runtime corpus only; no compatibility-evolution/performance/soak claim')
 finally:

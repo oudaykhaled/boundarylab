@@ -1,0 +1,34 @@
+{
+  "ticket": "P02",
+  "status": "in_progress",
+  "recorded_utc": "2026-10-30T17:57:10.110309+00:00",
+  "source_checkout_completed": true,
+  "manifest_commit": "15128c9e27cfa599c48d294babd39286ee8f1426",
+  "manifest_lock_sha256": "4e8beb5d1b590dff3d631b1dbb957138dbda4e608a3183c625683da4bc84918f",
+  "source_clean_before_build": true,
+  "overlay_present": false,
+  "target": "aosp_cf_x86_64_only_phone-bp4a-userdebug",
+  "platform_version": "16",
+  "build_id": "BP4A.251205.006",
+  "relative_out_dir": "out",
+  "physical_out_dir": "/srv/aosp/source/out",
+  "parallel_jobs": 12,
+  "completed_source_build_proven": false,
+  "source_guest_boot_proven": false,
+  "custom_service_runtime_proven": false,
+  "prior_failures": [
+    "r1 upstream shell nounset incompatibility",
+    "r2 host output directory not writable",
+    "r3 upstream test packager absolute output-path assumption"
+  ],
+  "latest_progress_snapshot": {
+    "utc": "2026-10-30T17:56:57.696838+00:00",
+    "pid": 80854,
+    "freeBytes": 377865859072,
+    "warningBelow80GiB": false,
+    "logBytes": 4219372,
+    "tail": "28588/174912] //prebuilts/sdk/current/androidx/m2repository/androidx/wear/compose/compose-foundation/1.6.0-alpha01:androidx.wear.compose_compose-foundation merge assets from dependencies [common apex34] (priority: 37)\n[ 16% 28589/174912] //prebuilts/sdk/current/androidx/m2repository/androidx/wear/compose/compose-material-core/1.6.0-alpha01:androidx.wear.compose_compose-material-core overlay resource file list [common apex34] (priority: 37)\n[ 16% 28590/174912] //prebuilts/sdk/current/androidx/m2repository/androidx/webkit/webkit/1.12.0-alpha02:androidx.webkit_webkit overlay resource file list [common apex31] (priority: 37)\n[ 16% 28591/174912] //prebuilts/sdk/current/androidx/m2repository/androidx/webkit/webkit/1.12.0-alpha02:androidx.webkit_webkit overlay resource file list [common apex33] (priority: 37)\n[ 16% 28592/174912] //prebuilts/sdk/current/androidx/m2repository/androidx/window/window/1.5.0-rc01:androidx.window_window overlay resource file list [common apex10000_p] (priority: 37)\n",
+    "stopReason": null
+  },
+  "compilation_limitation": "Upstream Soong disabled host build sandbox after nsjail error; unprivileged isolated build allowed by Astra, no hermetic/build-confinement claim. Runtime CVDsandbox/Enforcing remain required."
+}

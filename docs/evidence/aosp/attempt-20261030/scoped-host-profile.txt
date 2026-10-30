@@ -1,0 +1,11 @@
+c15ad61a1a20d69e5ccf640d31e9941d3d3147f1e3938518a8cd66cd4777c69e  /srv/aosp/preflight/cf/bin/x86_64-linux-gnu/crosvm
+kernel.apparmor_restrict_unprivileged_userns = 1
+kernel.unprivileged_userns_clone = 1
+abi <abi/4.0>,
+include <tunables/global>
+profile boundarylab-crosvm /srv/aosp/preflight/cf/bin/x86_64-linux-gnu/crosvm flags=(unconfined) {
+  userns,
+}
+dc2f2e749aa86419452ef4995a39124dfb6ac34e82abe985d981a52070992643  /etc/apparmor.d/boundarylab-crosvm
+kernel.apparmor_restrict_unprivileged_userns = 1
+kernel.unprivileged_userns_clone = 1

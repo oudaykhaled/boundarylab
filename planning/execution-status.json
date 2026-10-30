@@ -7,7 +7,7 @@
     "tickets-v2.json is the immutable original planning snapshot; this file records current execution without rewriting original acceptance.",
     "Done is scoped task acceptance, not completion of every G1/G2/G3 gate or production release.",
     "In Review identifies implemented work with specific remaining acceptance; it is not a pass.",
-    "AOSP attempt authorized2026-10-30 with totalUS$50 ceiling and minimum required tests/evidence; host KVM and each ticket runtime proof still required. Original acceptance is preserved; ADR-B14 records the authorized scope amendment."
+    "AOSP attempt authorized2026-10-30 with totalUS$50 ceiling and minimum required tests/evidence; actual KVM/public prebuilt host gate passed. Android16 source baseline/custom image remain unverified. Original acceptance is preserved; ADR-B14 records the authorized scope amendment."
   ],
   "tickets": [
     {
@@ -397,34 +397,36 @@
       "issue": "https://github.com/oudaykhaled/boundarylab/issues/20",
       "parent": "B12",
       "title": "Audit authorized Linux/AOSP resources and pin baseline target",
-      "status": "Blocked",
-      "owner": "AOSP team",
+      "status": "Done",
+      "owner": "Root + Astra chief",
       "evidence": [
-        "docs/AOSP-CLOUD-BUDGET.md"
+        "docs/evidence/P01/README.md",
+        "docs/evidence/P01/results.json",
+        "docs/evidence/aosp/attempt-20261030/README.md"
       ],
-      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
-      "remainingAcceptance": [
-        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
-        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
-      ],
-      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+      "result": "Authorized N2/Linux/KVM inventory, prerequisites, exact Android16r4 manifest/target and cumulative budget/deadlines verified. Original no-purchase constraint explicitly superseded by user US$50 authorization; no flashing. Public prebuilt boot is extra host evidence only.",
+      "remainingAcceptance": [],
+      "nextStep": "Maintain allocated-host limits and execute P02 unchanged-source proof; inventory completion does not complete any image/service ticket."
     },
     {
       "key": "P02",
       "issue": "https://github.com/oudaykhaled/boundarylab/issues/23",
       "parent": "B12",
       "title": "Build and boot unchanged AOSP baseline image",
-      "status": "Blocked",
-      "owner": "AOSP team",
+      "status": "In Progress",
+      "owner": "Root + Astra chief",
       "evidence": [
-        "docs/AOSP-CLOUD-BUDGET.md"
+        "docs/evidence/P02/README.md",
+        "docs/evidence/aosp/attempt-20261030/README.md",
+        "docs/decisions/BUILD-DECISIONS.md"
       ],
-      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
+      "result": "Pinned clean Android16r4 checkout passed; baseline compilation in progress. Two wrapper/setup failures and one upstream absolute-output-path failure were preserved; standardrelative out correction keeps source unchanged.",
       "remainingAcceptance": [
-        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
-        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
+        "Build unchanged pinned manifest/target.",
+        "Boot source-built Android16 image; capture fingerprint/Enforcing/readiness, tool versions, logs and image checksums.",
+        "Record real duration/failure if timebox fails; no physical performance claim."
       ],
-      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+      "nextStep": "Finish unchanged source baseline, export checksums/build log, boot matching image Enforcing before any overlay."
     },
     {
       "key": "P03",
@@ -434,14 +436,16 @@
       "status": "Blocked",
       "owner": "AOSP team",
       "evidence": [
-        "docs/AOSP-CLOUD-BUDGET.md"
+        "docs/evidence/aosp/attempt-20261030/README.md",
+        "docs/evidence/reviews/AOSP-REVIEW.md",
+        "aosp/README.md"
       ],
-      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
+      "result": "Generated-only native implementation prepared and source-reviewed;61 host assertions/SDK AIDL generation do not establish target runtime.",
       "remainingAcceptance": [
-        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
-        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
+        "P02 unchanged source-build/enforcing-boot prerequisite remains open.",
+        "Execute this ticket's original image/service/native-client acceptance on the rebuilt custom image."
       ],
-      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+      "nextStep": "Clear P02, stage overlay, build/freeze real APIs and custom image, then execute minimum target probes."
     },
     {
       "key": "P04",
@@ -451,14 +455,16 @@
       "status": "Blocked",
       "owner": "AOSP team",
       "evidence": [
-        "docs/AOSP-CLOUD-BUDGET.md"
+        "docs/evidence/aosp/attempt-20261030/README.md",
+        "docs/evidence/reviews/AOSP-REVIEW.md",
+        "aosp/README.md"
       ],
-      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
+      "result": "Generated-only native implementation prepared and source-reviewed;61 host assertions/SDK AIDL generation do not establish target runtime.",
       "remainingAcceptance": [
-        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
-        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
+        "P02 unchanged source-build/enforcing-boot prerequisite remains open.",
+        "Execute this ticket's original image/service/native-client acceptance on the rebuilt custom image."
       ],
-      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+      "nextStep": "Clear P02, stage overlay, build/freeze real APIs and custom image, then execute minimum target probes."
     },
     {
       "key": "P05",
@@ -468,14 +474,16 @@
       "status": "Blocked",
       "owner": "AOSP team",
       "evidence": [
-        "docs/AOSP-CLOUD-BUDGET.md"
+        "docs/evidence/aosp/attempt-20261030/README.md",
+        "docs/evidence/reviews/AOSP-REVIEW.md",
+        "aosp/README.md"
       ],
-      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
+      "result": "Generated-only native implementation prepared and source-reviewed;61 host assertions/SDK AIDL generation do not establish target runtime.",
       "remainingAcceptance": [
-        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
-        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
+        "P02 unchanged source-build/enforcing-boot prerequisite remains open.",
+        "Execute this ticket's original image/service/native-client acceptance on the rebuilt custom image."
       ],
-      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+      "nextStep": "Clear P02, stage overlay, build/freeze real APIs and custom image, then execute minimum target probes."
     },
     {
       "key": "P06",
@@ -487,12 +495,12 @@
       "evidence": [
         "docs/AOSP-CLOUD-BUDGET.md"
       ],
-      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
+      "result": "Cloud host is available for the authorized minimum proof; this wider acceptance has not executed.",
       "remainingAcceptance": [
-        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
-        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
+        "Prerequisite source/custom-image and ticket-specific original acceptance remain open.",
+        "Compatibility evolution, paired performance, two-hour soak or independent reproduction cannot be inferred from minimum smoke."
       ],
-      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+      "nextStep": "Preserve original scope and execute a separately planned campaign after prerequisite runtime evidence."
     },
     {
       "key": "P07",
@@ -504,12 +512,12 @@
       "evidence": [
         "docs/AOSP-CLOUD-BUDGET.md"
       ],
-      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
+      "result": "Cloud host is available for the authorized minimum proof; this wider acceptance has not executed.",
       "remainingAcceptance": [
-        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
-        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
+        "Prerequisite source/custom-image and ticket-specific original acceptance remain open.",
+        "Compatibility evolution, paired performance, two-hour soak or independent reproduction cannot be inferred from minimum smoke."
       ],
-      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+      "nextStep": "Preserve original scope and execute a separately planned campaign after prerequisite runtime evidence."
     },
     {
       "key": "P08",
@@ -521,12 +529,12 @@
       "evidence": [
         "docs/AOSP-CLOUD-BUDGET.md"
       ],
-      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
+      "result": "Cloud host is available for the authorized minimum proof; this wider acceptance has not executed.",
       "remainingAcceptance": [
-        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
-        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
+        "Prerequisite source/custom-image and ticket-specific original acceptance remain open.",
+        "Compatibility evolution, paired performance, two-hour soak or independent reproduction cannot be inferred from minimum smoke."
       ],
-      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+      "nextStep": "Preserve original scope and execute a separately planned campaign after prerequisite runtime evidence."
     },
     {
       "key": "P09",
@@ -538,12 +546,12 @@
       "evidence": [
         "docs/AOSP-CLOUD-BUDGET.md"
       ],
-      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
+      "result": "Cloud host is available for the authorized minimum proof; this wider acceptance has not executed.",
       "remainingAcceptance": [
-        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
-        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
+        "Prerequisite source/custom-image and ticket-specific original acceptance remain open.",
+        "Compatibility evolution, paired performance, two-hour soak or independent reproduction cannot be inferred from minimum smoke."
       ],
-      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+      "nextStep": "Preserve original scope and execute a separately planned campaign after prerequisite runtime evidence."
     },
     {
       "key": "FP01",
@@ -760,7 +768,7 @@
     {
       "key": "B12",
       "issue": "https://github.com/oudaykhaled/boundarylab/issues/12",
-      "status": "Blocked",
+      "status": "In Progress",
       "children": [
         "P01",
         "P02"
@@ -817,17 +825,34 @@
     }
   ],
   "counts": {
-    "Done": 8,
+    "Done": 9,
     "In Review": 11,
-    "In Progress": 8,
+    "In Progress": 9,
     "Planned": 4,
-    "Blocked": 9
+    "Blocked": 7
   },
   "boardCounts": {
-    "Done": 10,
+    "Done": 11,
     "In Review": 15,
-    "In Progress": 14,
+    "In Progress": 16,
     "Planned": 4,
-    "Blocked": 14
-  }
+    "Blocked": 11
+  },
+  "aospAttempt": {
+    "sourcePreparationCommit": "5663baa0bcdefb5b82f6a219995129d6c91bd48f",
+    "authorizedTotalUsd": 50,
+    "budgetScopeAmendment": "ADR-B14; user explicitly authorized cloud testing/evidence after original P01 no-purchase text",
+    "hostGate": "Actual non-root KVM and paired public prebuilt boot completed with SELinux Enforcing; source baseline remains separate",
+    "sourceBaseline": "Pinned Android16r4 checkout completed and clean verified; unchanged baseline compiling with conventional relative OUT_DIR=out after retained wrapper/setup/path failures. No source image boot yet.",
+    "evidence": "docs/evidence/aosp/attempt-20261030/README.md",
+    "settledCostUsd": null
+  },
+  "lastPublishedBoardCounts": {
+    "Done": 11,
+    "In Review": 15,
+    "In Progress": 16,
+    "Planned": 4,
+    "Blocked": 11
+  },
+  "boardSync": "GitHub Project3 UI statuses verified2026-10-30~17:52UTC; P01Done/P02InProgress/B12InProgress. Issue state/body/labels reconciled via existing same-user CLI login; curated code/evidence remains on the local AOSP branch until publication."
 }

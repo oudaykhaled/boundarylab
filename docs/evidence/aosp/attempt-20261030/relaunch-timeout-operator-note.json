@@ -1,0 +1,9 @@
+{
+  "record_kind": "retrospective_operator_note",
+  "recorded_utc": "2026-10-30T16:52:28.955320+00:00",
+  "source": "live tool result from exec session44767",
+  "observation": "Python subprocess.run for second launch_cvd SSH command raised TimeoutExpired at240seconds; intended public-launch-scoped-profile.json was not written. This note is not a reconstructed process exit receipt. Remote process/log observations independently captured in immutable collector events.",
+  "timeout_seconds": 240,
+  "android_boot_proven": false,
+  "custom_source_download_started": false
+}

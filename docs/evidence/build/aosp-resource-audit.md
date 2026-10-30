@@ -1,4 +1,6 @@
-# AOSP resource audit — 2026-10-30
+# Historical workstation resource audit — 2026-10-30
+
+Superseded for the authorized cloud attempt: the user later approved a totalUS$50 ceiling. A real N2/Linux/KVM host and paired public enforcing boot now pass; [current attempt evidence](../aosp/attempt-20261030/README.md) and [ADR-B14](../../decisions/BUILD-DECISIONS.md) record the new allocation and source plan. The observations below remain the original Mac audit, not the current cloud status.
 
 P01 remains blocked. The accessible workstation is Darwin 25.5.0 arm64, with 32 GiB RAM and 39,862,181,888 bytes (~37.1 GiB) free at the probe. `/dev/kvm` is absent. Docker CLI is installed but its daemon is unreachable. No authorized remote Linux resource has been identified. The connected Samsung is an app test target, not an allocated flashing target.
 

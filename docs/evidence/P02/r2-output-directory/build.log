@@ -1,0 +1,25 @@
+
+... A new version of repo (2.71) is available.
+... New version is available at: /srv/aosp/source/.repo/repo/repo
+... The launcher is run from: /usr/bin/repo
+!!! The launcher is not writable.  Please talk to your sysadmin or distro
+!!! to get an update installed.
+
+Saved manifest to /srv/aosp/evidence/baseline/manifest.xml
+
+... A new version of repo (2.71) is available.
+... New version is available at: /srv/aosp/source/.repo/repo/repo
+... The launcher is run from: /usr/bin/repo
+!!! The launcher is not writable.  Please talk to your sysadmin or distro
+!!! to get an update installed.
+
+15128c9e27cfa599c48d294babd39286ee8f1426
+
+... A new version of repo (2.71) is available.
+... New version is available at: /srv/aosp/source/.repo/repo/repo
+... The launcher is run from: /usr/bin/repo
+!!! The launcher is not writable.  Please talk to your sysadmin or distro
+!!! to get an update installed.
+
+{'baselineFreeBytes': 395468537856}
+mkdir: cannot create directory ‘/srv/aosp/out’: Permission denied

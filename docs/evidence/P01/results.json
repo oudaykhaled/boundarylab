@@ -1,0 +1,21 @@
+{
+  "ticket": "P01",
+  "scope": "resource inventory and pinned plan only",
+  "status": "passed_in_explicitly_amended_scope",
+  "authorization_amendment": "User authorized cloud development/testing/evidence withUS$50 total on2026-10-30; ADR-B14 preserves original P01 acceptance separately",
+  "checks": {
+    "authorized_linux_x86_host": true,
+    "nonroot_kvm_api12_and_vm_creation": true,
+    "actual_disk_ram_toolchain_recorded": true,
+    "manifest_target_and_elapsed_vs_active_plan_recorded": true,
+    "no_physical_flashing": true,
+    "generated_only_scope_real_file_deferred": true
+  },
+  "source_manifest": "15128c9e27cfa599c48d294babd39286ee8f1426",
+  "source_tag": "android-16.0.0_r4",
+  "target": "aosp_cf_x86_64_only_phone-bp4a-userdebug",
+  "actual_source_build_or_boot_proven": false,
+  "source_preparation_commit": "5663baa0bcdefb5b82f6a219995129d6c91bd48f",
+  "evidence": "../aosp/attempt-20261030/README.md",
+  "review": "Root execution reconciliation and independent Astra chief review; no human attestation"
+}

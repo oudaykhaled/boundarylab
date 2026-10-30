@@ -1,0 +1,30 @@
+{
+  "kind": "curated_applied_controls",
+  "original_private_provider_receipt_sha256": "19f23994d1fc7378eac62b95c4b19b3c9c2307f475eaf974142a8f65d745166e",
+  "created_utc": "2026-10-30T16:28:13.565000+00:00",
+  "machine_type": "n2-standard-16",
+  "nested_virtualization": true,
+  "automatic_restart": false,
+  "native_termination_action": "DELETE",
+  "native_termination_time": "2026-10-31T16:27:18Z",
+  "independent_delete_task_time": "2026-10-31T16:12:18Z",
+  "vm_service_accounts": [],
+  "disks": [
+    {
+      "boot": true,
+      "size_gib": 50,
+      "auto_delete": true
+    },
+    {
+      "boot": false,
+      "size_gib": 500,
+      "auto_delete": true
+    }
+  ],
+  "network_exposure": "IAP TCP22 only; no inbound ADB/WebRTC firewall permission",
+  "budget_usd_total": 50,
+  "costs_are_estimates": true,
+  "prebuilt_build": 16644040,
+  "prebuilt_is_source_baseline": false,
+  "source_commit": "5663baa0bcdefb5b82f6a219995129d6c91bd48f"
+}

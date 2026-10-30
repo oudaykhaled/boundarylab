@@ -1,0 +1,17 @@
+{
+  "exit_code": 0,
+  "timed_out": false,
+  "started_utc": "2026-10-30T16:53:16.909439+00:00",
+  "ended_utc": "2026-10-30T16:53:51.996232+00:00",
+  "original_private_receipt_sha256": "3aed934fe03af2179a43c4db143c4fe58f463352e61e51cde14d1ab00d9b4d68",
+  "launch_flags": [
+    "--daemon",
+    "--report_anonymous_usage_stats=n",
+    "--cpus=4",
+    "--memory_mb=8192",
+    "--start_webrtc=true",
+    "--gpu_mode=guest_swiftshader",
+    "--enable_audio=false"
+  ],
+  "stdout_semantics_confirmed_separately": "prebuilt-boot.txt"
+}

@@ -1,0 +1,54 @@
+{
+  "kind": "public_derived_artifact_inventory",
+  "source_preparation_commit": "5663baa0bcdefb5b82f6a219995129d6c91bd48f",
+  "files": {
+    "README.md": {
+      "sha256": "9fc8ea604bbba7221433cba829c17ed978bd3cdc7c2440beed44688b28524833",
+      "bytes": 3567
+    },
+    "cloud-controls.json": {
+      "sha256": "8bea7891267bf208c5c3f6f9c22b928043b211d84731d6b90bc6d445aefb0f03",
+      "bytes": 942
+    },
+    "final-launch.json": {
+      "sha256": "b6cf4bf3db5dd8e3a0871087ac6051ee4e1b4d42d2977daca423ac1ed089cb0d",
+      "bytes": 527
+    },
+    "first-failure-and-controls.txt": {
+      "sha256": "96788e679edf49a14f9994847cfed203903cbc5910b0f49c7c429a5597520968",
+      "bytes": 8905
+    },
+    "first-launch-failure.json": {
+      "sha256": "aa3ab5a10971803f3b82ca528dd0651cf3bc3b637b61353fb3caba55b350afa3",
+      "bytes": 2971
+    },
+    "graphics-helper-state.txt": {
+      "sha256": "3061c4a75f781edefdc72f01162bee0e17f6aa638d8578699a4ac2e15b79b14d",
+      "bytes": 14567
+    },
+    "host-kvm.json": {
+      "sha256": "3b6a6a27a54084534f92ca50d12f37d77b71bde21507887644a907c7f119204c",
+      "bytes": 243
+    },
+    "prebuilt-boot.png": {
+      "sha256": "5f57ccd7d901c9b65d0adeb06cf5f7bc065c3fd1683e514cb3847474cfd0de20",
+      "bytes": 708499
+    },
+    "prebuilt-boot.txt": {
+      "sha256": "e64bb7c76fc2411f7c5e590d0a01b032e81c3782b098fd46f5e5a3bff22c90e6",
+      "bytes": 822
+    },
+    "provenance.json": {
+      "sha256": "cb5460f00e5864b1ee584196fc27de24526e6a5826b14167071aa97037f26c00",
+      "bytes": 3748
+    },
+    "relaunch-timeout-operator-note.json": {
+      "sha256": "14de6e5bc6441f3bc00a44bcfee861d7a47913838c3de5b5c7851a9554a9c284",
+      "bytes": 574
+    },
+    "scoped-host-profile.txt": {
+      "sha256": "d36b58978944119b10d00b61e14261136bf6353d42e0f0983faa98fe65b6433c",
+      "bytes": 542
+    }
+  }
+}

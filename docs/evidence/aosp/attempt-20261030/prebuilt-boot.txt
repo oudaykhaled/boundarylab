@@ -1,0 +1,11 @@
+List of devices attached
+<explicit-test-device>           device product:aosp_cf_x86_64_only_phone model:Cuttlefish_x86_64_phone_64_bit_only device:vsoc_x86_64_only transport_id:1
+
+BOOT_COMPLETED=1
+FINGERPRINT=generic/aosp_cf_x86_64_only_phone/vsoc_x86_64_only:17/CP2A.260605.016/16644040:userdebug/test-keys
+SELINUX=Enforcing
+uid=2000(shell) gid=2000(shell) groups=2000(shell),1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),1078(ext_data_rw),1079(ext_obb_rw),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats),3009(readproc),3011(uhid),3012(readtracefs) context=u:r:shell:s0
+119:			"enable_sandbox" : true,
+kernel.apparmor_restrict_unprivileged_userns = 1
+kernel.unprivileged_userns_clone = 1
+5f57ccd7d901c9b65d0adeb06cf5f7bc065c3fd1683e514cb3847474cfd0de20  /srv/aosp/evidence/public-boot.png

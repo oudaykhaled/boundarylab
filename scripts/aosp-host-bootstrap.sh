@@ -51,8 +51,11 @@ for group in kvm cvdnetwork render; do
     getent group "$group" >/dev/null
     usermod -aG "$group" aosp
 done
-mkdir -p /srv/aosp/source /srv/aosp/evidence /srv/aosp/preflight
-chown aosp:aosp /srv/aosp/source /srv/aosp/evidence /srv/aosp/preflight
+test ! -L /srv/aosp/source/out
+mkdir -p /srv/aosp/source /srv/aosp/evidence /srv/aosp/preflight /srv/aosp/source/out
+chown aosp:aosp /srv/aosp/source /srv/aosp/evidence /srv/aosp/preflight /srv/aosp/source/out
+chmod 0755 /srv/aosp/source/out
+runuser -u aosp -- test -w /srv/aosp/source/out
 if ! modprobe kvm_intel || ! modprobe vhost_vsock; then
     apt-get install -y --no-install-recommends linux-modules-extra-"$(uname -r)"
     modprobe kvm_intel

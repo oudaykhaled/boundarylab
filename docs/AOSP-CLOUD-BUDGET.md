@@ -2,6 +2,8 @@
 
 ## Authorized limited attempt — 2026-10-30
 
+Applied attempt status: the one allocated N2/Linux/KVM host passed a real paired public prebuilt boot with SELinux Enforcing; a screenshot and failed-launch diagnosis were exported before stopping/removing the prebuilt artifacts. The pinned Android16 source checkout is running. [Current evidence](evidence/aosp/attempt-20261030/README.md) and [P01 inventory](evidence/P01/README.md) distinguish the completed host gate from unverified source/service runtime. The safeguards below are applied, not merely planned.
+
 The user authorized an AOSP attempt with a **total US$50 infrastructure ceiling**, minimum necessary tests, and evidence captured while tests execute. The earlier US$100–200 estimate below is historical planning for a longer campaign, not the budget for this attempt. A complete P01–P09 campaign is not promised within this limit.
 
 Prepare implementation, smoke probes and evidence collection locally before paid runtime. Use one isolated project, one Intel `n2-standard-16` VM, a 50-GiB standard boot disk and a **500-GiB zonal SSD workspace**. The verified regional SSD quota is 500 GiB; Astra chose that layout rather than pay for idle time waiting for quota. The VM must have an **absolute termination timestamp no more than 24 hours after creation**, termination action `DELETE`, and `autoDelete=true` for both attached disks. Verify those applied settings before starting the workload. Do not create reservations, snapshots, extra VMs, retained images, managed groups or a VM service account. No automatic deadline extension or second attempt is authorized by this document.
