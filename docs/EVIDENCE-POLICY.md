@@ -1,14 +1,14 @@
 # Evidence policy
 
-Status: proposed project; no runtime, benchmark or adoption claims exist at plan publication.
+At initial plan publication the repository contained plans only. Implementation and scoped runtime receipts were added on 2026-10-30; current results and limitations are recorded in the [implementation evidence map](IMPLEMENTATION-STATUS.md) and [execution board](../planning/BUILD-BOARD.md). Controlled benchmark and independent adoption claims remain unavailable.
 
 Every requirement is assigned one or more evidence types: source/design, executable contract, native runtime, controlled experiment, independent adoption or historical career evidence. A design document cannot satisfy a runtime gate. An emulator result cannot silently become a physical-device performance claim. Author-run integration cannot become external adoption.
 
 ## Evidence record
 
-Future results must name the source commit, artifact hashes, exact toolchain/dependency pins, OS build/API and architecture, device class (with public identifiers redacted), build mode, scenario and workload seed, timestamps, command/runner, expected outcome, actual outcome, raw-output/trace checksums, exclusions and limitations. A report includes failures, not only successful attempts. Every summary links its underlying record.
+Results must name the source commit or exact uncommitted source hashes, artifact hashes, toolchain/dependency pins, OS build/API and architecture, device class (with public identifiers redacted), build mode, scenario and workload seed, timestamps, command/runner, expected outcome, actual outcome, raw-output/trace checksums, exclusions and limitations. Source-hash receipts are associated with the subsequent publication commit; a later edit does not inherit an earlier passing result. A report includes failures, not only successful attempts. Every summary links its underlying record.
 
-Separate statuses: planned → implemented → checked in declared scope → independently reproduced. Merged, tagged, deployed and commercially shipped are separate facts. The initial public repository contains plans only. Do not add passing badges for lanes that do not exist.
+Separate statuses: planned → implemented → checked in declared scope → independently reproduced. Merged, tagged, deployed and commercially shipped are separate facts. Do not add passing badges for lanes that do not exist.
 
 ## Experiments
 

@@ -1,0 +1,57 @@
+openjdk version "17.0.14" 2025-01-21
+OpenJDK Runtime Environment Homebrew (build 17.0.14+0)
+OpenJDK 64-Bit Server VM Homebrew (build 17.0.14+0, mixed mode, sharing)
+Apple clang version 21.0.0 (clang-2100.1.1.101)
+Target: arm64-apple-darwin25.5.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+Downloading https://services.gradle.org/distributions/gradle-8.13-bin.zip
+.............10%.............20%.............30%.............40%.............50%.............60%.............70%.............80%.............90%.............100%
+
+Welcome to Gradle 8.13!
+
+Here are the highlights of this release:
+ - Daemon JVM auto-provisioning
+ - Enhancements for Scala plugin and JUnit testing
+ - Improvements for build authors and plugin developers
+
+For more details see https://docs.gradle.org/8.13/release-notes.html
+
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.13/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :android:broker
+w: file://<fresh-checkout>/android/broker/build.gradle.kts:20:21: 'jvmTarget: String' is deprecated. Please migrate to the compilerOptions DSL. More details are here: https://kotl.in/u1r8ln
+
+> Configure project :examples:android-native
+w: file://<fresh-checkout>/examples/android-native/build.gradle.kts:21:21: 'jvmTarget: String' is deprecated. Please migrate to the compilerOptions DSL. More details are here: https://kotl.in/u1r8ln
+
+> Configure project :sdk:kotlin
+w: file://<fresh-checkout>/sdk/kotlin/build.gradle.kts:14:21: 'jvmTarget: String' is deprecated. Please migrate to the compilerOptions DSL. More details are here: https://kotl.in/u1r8ln
+
+> Task :desktop:host:compileNative
+> Task :core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:processResources NO-SOURCE
+> Task :desktop:host:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :desktop:host:processResources NO-SOURCE
+> Task :desktop:cli:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :desktop:cli:processResources NO-SOURCE
+> Task :core:compileKotlin
+> Task :core:compileJava NO-SOURCE
+> Task :core:classes UP-TO-DATE
+> Task :core:jar
+> Task :desktop:host:compileKotlin
+> Task :desktop:host:compileJava
+> Task :desktop:host:classes
+> Task :desktop:host:jar
+> Task :desktop:host:startScripts
+> Task :desktop:host:installDist
+> Task :desktop:cli:compileKotlin
+> Task :desktop:cli:compileJava NO-SOURCE
+> Task :desktop:cli:classes UP-TO-DATE
+> Task :desktop:cli:jar
+> Task :desktop:cli:startScripts
+> Task :desktop:cli:installDist
+
+BUILD SUCCESSFUL in 1m 3s
+12 actionable tasks: 12 executed

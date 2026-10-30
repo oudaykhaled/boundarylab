@@ -8,9 +8,18 @@ BoundaryLab shares admission, ownership, cancellation, deadlines and process-los
 
 ## Build status
 
-Implementation candidate, under integrated verification. Core, desktop host/CLI, Android broker/SDK, native client and Flutter plugin/client are implemented. Current receipts include core159, desktop host20 and CLI11 tests; Flutter10 app+2 facade tests and static analysis; native8 installed-device tests. Final amended Android/Flutter runtime and real-picker handoff checks are in progress. See the [execution board](planning/BUILD-BOARD.md) and the [verification charter](docs/evidence/build/QA-CHARTER.md). The conditional AOSP image and full controlled hardware campaign are outstanding.
+Engineering prototype: core, desktop host/CLI, Android broker/SDK, native client and authored Flutter plugin/client are implemented. At source `06b2d4f`, 393 selected host test cases passed; final physical-device suites passed 31 cases with one explicitly unavailable hardlink fixture. Native and Flutter each exported a real manifest, and separate JVM/Python recipients agreed on all five good/changed/missing/unsupported outcomes. An isolated fresh-checkout desktop consumer and all five [hosted CI lanes](https://github.com/oudaykhaled/boundarylab/actions/runs/41068567469) passed. See the [quality report](docs/evidence/build/QUALITY.md), [current ticket status](planning/EXECUTION-STATUS.md) and [requirement evidence map](docs/IMPLEMENTATION-STATUS.md). The conditional AOSP image, compatibility matrix and controlled hardware campaign remain outstanding.
 
 No production release, commercial shipment, external adopter or human implementation review is claimed. [Astra architecture decisions](docs/decisions/BUILD-DECISIONS.md), [security review](docs/evidence/reviews/SECURITY-REVIEW.md) and [reliability review](docs/evidence/reviews/RELIABILITY-REVIEW.md) document the actual AI review scope.
+
+Actual installed-device captures below show explicit successful exports. These are runtime screenshots; the separate animated presentation illustrates the architecture proposal.
+
+<p>
+  <img src="docs/evidence/build/native-exported-post-loss-api36.png" width="300" alt="Native FieldPack client after real manifest export" />
+  <img src="docs/evidence/build/flutter-exported-final-api36.png" width="300" alt="Flutter FieldPack client after real manifest export" />
+</p>
+
+[Real mobile-to-desktop results](conformance/desktop/mobile-handoff.json) · [Observed defect and verified fix](docs/case-studies/broker-loss.md) · [Optional AOSP cloud budget](docs/AOSP-CLOUD-BUDGET.md)
 
 ## Run the reference now
 

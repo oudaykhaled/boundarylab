@@ -1,0 +1,29 @@
+{
+  "source_commit": "06b2d4f9d550a7c2b02bcc4d3e8743800ea9eb4c",
+  "context": "Local debug APKs built using existing external local debug keystore; this is not the independently signed CI matched bundle.",
+  "three_product_certificates_match": true,
+  "denial_fixture_signer_differs": true,
+  "private_key_material_included": false,
+  "artifacts": [
+    {
+      "apk": "android/broker/build/outputs/apk/debug/broker-debug.apk",
+      "sha256": "d1fce929990b08880bf27f5cb0d194776c3c6c33a5d4df170535b4f48ad25337",
+      "certificate_sha256": "6b9991b39b4ad0faef79f4db866e6b61492adf2391804df8dc6ea78eb9d15450"
+    },
+    {
+      "apk": "examples/android-native/build/outputs/apk/debug/android-native-debug.apk",
+      "sha256": "c81af5811e7a0b2015d3e19c2c3ab5279a7c1493d7e7baf9b8a191db233c0057",
+      "certificate_sha256": "6b9991b39b4ad0faef79f4db866e6b61492adf2391804df8dc6ea78eb9d15450"
+    },
+    {
+      "apk": "examples/flutter/build/app/outputs/flutter-apk/app-debug.apk",
+      "sha256": "0a2c1f429d87b6e7c966a8e3c2407466983b7ab6b8fe32287b2dd1cf66658a05",
+      "certificate_sha256": "6b9991b39b4ad0faef79f4db866e6b61492adf2391804df8dc6ea78eb9d15450"
+    },
+    {
+      "apk": "android/denied-client/build/outputs/apk/debug/denied-client-debug.apk",
+      "sha256": "4b2ed1aeffa1fc430cbadab7344c159b56536461c8ace42109796f8b6909ba12",
+      "certificate_sha256": "49c9863f50d2a00a4275ba6f5fbdfd54ecdfb19388deea61989c65eafc4d4156"
+    }
+  ]
+}

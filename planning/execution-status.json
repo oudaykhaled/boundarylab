@@ -1,0 +1,833 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-10-30",
+  "sourceCommit": "06b2d4f9d550a7c2b02bcc4d3e8743800ea9eb4c",
+  "reviewMethod": "Astra specialist implementation and independent scoped AI security/reliability reviews; root acceptance reconciliation; no human review claimed",
+  "notes": [
+    "tickets-v2.json is the immutable original planning snapshot; this file records current execution without rewriting original acceptance.",
+    "Done is scoped task acceptance, not completion of every G1/G2/G3 gate or production release.",
+    "In Review identifies implemented work with specific remaining acceptance; it is not a pass.",
+    "Blocked AOSP items need host allocation and their own runtime proof; no spending authorized."
+  ],
+  "tickets": [
+    {
+      "key": "C01",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/18",
+      "parent": "B01",
+      "title": "Prove Android, Flutter and macOS toolchain feasibility",
+      "status": "Done",
+      "owner": "Quality team",
+      "evidence": [
+        "docs/evidence/build/QUALITY.md"
+      ],
+      "result": "Pinned toolchains; physical Android/Flutter IPC and macOS two-process probes; fresh checkout passed.",
+      "remainingAcceptance": [],
+      "nextStep": "Maintain verified scope and rerun when affected source changes."
+    },
+    {
+      "key": "C02",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/19",
+      "parent": "B01",
+      "title": "Freeze volatile job contract, caps and ownership semantics",
+      "status": "Done",
+      "owner": "Astra chief",
+      "evidence": [
+        "docs/decisions/BUILD-DECISIONS.md"
+      ],
+      "result": "Frozen bounded protocol, ownership, cancellation, retention and loss contract.",
+      "remainingAcceptance": [],
+      "nextStep": "Maintain verified scope and rerun when affected source changes."
+    },
+    {
+      "key": "C03",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/22",
+      "parent": "B02",
+      "title": "Implement owner-scoped state machine, quotas and fairness",
+      "status": "Done",
+      "owner": "Middleware team",
+      "evidence": [
+        "docs/evidence/build/crossplatform-qa-core-jvm-r3.json"
+      ],
+      "result": "Owner/session/epoch policy, fairness, limits and retention covered in core159 passing cases.",
+      "remainingAcceptance": [],
+      "nextStep": "Maintain verified scope and rerun when affected source changes."
+    },
+    {
+      "key": "C04",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/25",
+      "parent": "B02",
+      "title": "Implement bounded generated and positional-source digest engine",
+      "status": "Done",
+      "owner": "Middleware team",
+      "evidence": [
+        "core/README.md"
+      ],
+      "result": "Bounded digest engine tested; legal partial reads explicitly reconciled in ADR-B08, exact completion still required.",
+      "remainingAcceptance": [],
+      "nextStep": "Maintain verified scope and rerun when affected source changes."
+    },
+    {
+      "key": "A01",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/26",
+      "parent": "B03",
+      "title": "Implement same-publisher cross-package Binder service",
+      "status": "In Review",
+      "owner": "Middleware team",
+      "evidence": [
+        "docs/evidence/build/android-broker-instrumentation-post-loss-r2.json"
+      ],
+      "result": "Real Binder, distinct-UID denial and token-death execution.",
+      "remainingAcceptance": [
+        "AC4: complete forwarded-Binder/per-operation negative matrix.",
+        "AC6: link/death/admission race orderings."
+      ],
+      "nextStep": "AC4: complete forwarded-Binder/per-operation negative matrix."
+    },
+    {
+      "key": "A02",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/30",
+      "parent": "B03",
+      "title": "Implement Kotlin SDK generation, polling and loss behavior",
+      "status": "In Review",
+      "owner": "Middleware team",
+      "evidence": [
+        "docs/case-studies/broker-loss.md"
+      ],
+      "result": "Final SDK loss fix: native9 pass, broker19 pass/1 unavailable, Flutter3 pass.",
+      "remainingAcceptance": [
+        "Duplicate notification/session and onBindingDied/null-binding cases.",
+        "Explicit terminal/close poll-stop and retry-exhaustion/foreground-demand observations."
+      ],
+      "nextStep": "Duplicate notification/session and onBindingDied/null-binding cases."
+    },
+    {
+      "key": "A03",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/33",
+      "parent": "B04",
+      "title": "Build native generated-work consumer and denial smoke suite",
+      "status": "In Review",
+      "owner": "Experience team",
+      "evidence": [
+        "docs/evidence/build/android-native-instrumentation-post-loss-r2.json"
+      ],
+      "result": "Native9 pass includes actual broker death, fresh epoch and explicit new submission; separately signed denial passes.",
+      "remainingAcceptance": [
+        "AC2: installed UI under queue saturation/BUSY.",
+        "Final candidate release-exclusion/security inspection is scoped, not full release approval."
+      ],
+      "nextStep": "AC2: installed UI under queue saturation/BUSY."
+    },
+    {
+      "key": "F01",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/34",
+      "parent": "B05",
+      "title": "Implement authored Flutter plugin and generated-work consumer",
+      "status": "In Review",
+      "owner": "Experience team",
+      "evidence": [
+        "docs/evidence/build/QUALITY.md"
+      ],
+      "result": "Authored plugin,11 app tests,2 facade tests,3 installed tests and actual SAF export; timeout text fixed.",
+      "remainingAcceptance": [
+        "AC3: equivalent complete native/Flutter error-vector corpus.",
+        "AC4: installed cancel/timeout/loss user-visible journeys."
+      ],
+      "nextStep": "AC3: equivalent complete native/Flutter error-vector corpus."
+    },
+    {
+      "key": "F02",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/39",
+      "parent": "B05",
+      "title": "Verify Flutter engine lifecycle and second-engine isolation",
+      "status": "In Review",
+      "owner": "Experience team",
+      "evidence": [
+        "docs/evidence/build/android-flutter-instrumentation-post-loss-r2.json"
+      ],
+      "result": "Real two-engine isolation, pending disposal/fresh-engine reuse, strict numeric rejection.",
+      "remainingAcceptance": [
+        "Activity recreation; negative cross-engine read/cancel.",
+        "Observed RUNNING teardown resources and broker death during teardown."
+      ],
+      "nextStep": "Activity recreation; negative cross-engine read/cancel."
+    },
+    {
+      "key": "Q01",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/35",
+      "parent": "B06",
+      "title": "Create deterministic fault hooks and regression corpus",
+      "status": "In Progress",
+      "owner": "Quality team",
+      "evidence": [
+        "docs/evidence/build/QUALITY.md"
+      ],
+      "result": "Deterministic core and targeted actual process/lifecycle regressions execute.",
+      "remainingAcceptance": [
+        "Complete admission/registration race ordering and before/after-terminal process-death matrix."
+      ],
+      "nextStep": "Complete admission/registration race ordering and before/after-terminal process-death matrix."
+    },
+    {
+      "key": "Q02",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/42",
+      "parent": "B06",
+      "title": "Execute descriptor cleanup and bounded saturation campaign",
+      "status": "In Progress",
+      "owner": "Quality team",
+      "evidence": [
+        "docs/evidence/build/android-broker-instrumentation-post-loss-r2.json"
+      ],
+      "result": "100-FD-cycle cleanup and bounded core/resource tests execute.",
+      "remainingAcceptance": [
+        "Full100-repetition race cells,1000 rejects,30-minute churn, transient Binder FD headroom and complete noisy-caller campaign accounting."
+      ],
+      "nextStep": "Full100-repetition race cells,1000 rejects,30-minute churn, transient Binder FD headroom and complete noisy-caller campaign accounting."
+    },
+    {
+      "key": "Q03",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/43",
+      "parent": "B06",
+      "title": "Audit manifest, trust boundaries and public evidence privacy",
+      "status": "In Review",
+      "owner": "Security reviewer + root",
+      "evidence": [
+        "docs/evidence/reviews/SECURITY-REVIEW.md"
+      ],
+      "result": "Scoped source/security review, real denial and rooted-file negatives; publication privacy inspection separate.",
+      "remainingAcceptance": [
+        "Android nlink=2 runtime fixture unavailable: EACCES.",
+        "Remaining file-provider negative matrix; no blanket security-release attestation."
+      ],
+      "nextStep": "Android nlink=2 runtime fixture unavailable: EACCES."
+    },
+    {
+      "key": "D01",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/31",
+      "parent": "B07",
+      "title": "Implement bounded macOS JVM host and connection-owned sessions",
+      "status": "Done",
+      "owner": "Desktop team",
+      "evidence": [
+        "conformance/desktop/installed-smoke.json"
+      ],
+      "result": "20 host tests; separate processes, frame bounds, ownership, disconnect and fresh epochs; macOS verified.",
+      "remainingAcceptance": [],
+      "nextStep": "Maintain verified scope and rerun when affected source changes."
+    },
+    {
+      "key": "D02",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/36",
+      "parent": "B07",
+      "title": "Implement macOS CLI and generated-profile parity corpus",
+      "status": "In Progress",
+      "owner": "Desktop + middleware teams",
+      "evidence": [
+        "conformance/desktop/README.md"
+      ],
+      "result": "CLI11 tests and macOS generated corpus; hosted Linux/macOS lanes pass.",
+      "remainingAcceptance": [
+        "AC2\u20133: full shared generated/lifecycle/error parity through both actual Android and macOS transports."
+      ],
+      "nextStep": "AC2\u20133: full shared generated/lifecycle/error parity through both actual Android and macOS transports."
+    },
+    {
+      "key": "V01",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/44",
+      "parent": "B08",
+      "title": "Retain compiled old clients and test supported version evolution",
+      "status": "Planned",
+      "owner": "Compatibility owner unassigned",
+      "evidence": [
+        "contracts/PROTOCOL-V1.md"
+      ],
+      "result": "Protocol and capability contracts exist; archived old binaries do not.",
+      "remainingAcceptance": [
+        "Archived unchanged compiled clients/providers, both compatibility directions, additive/incompatible ABI controls and unknown-error behavior."
+      ],
+      "nextStep": "Archived unchanged compiled clients/providers, both compatibility directions, additive/incompatible ABI controls and unknown-error behavior."
+    },
+    {
+      "key": "V02",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/46",
+      "parent": "B08",
+      "title": "Create pinned quality lanes and meaningful regression gates",
+      "status": "In Progress",
+      "owner": "Quality team",
+      "evidence": [
+        "docs/evidence/build/QUALITY.md"
+      ],
+      "result": "Pinned five-lane hosted CI passed; runtime/compile states explicitly separate.",
+      "remainingAcceptance": [
+        "Deliberate contract/authorization regression proving the relevant lane fails.",
+        "Complete release fault-control/secrets rejection gate; V01 dependency remains open."
+      ],
+      "nextStep": "Deliberate contract/authorization regression proving the relevant lane fails."
+    },
+    {
+      "key": "M01",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/27",
+      "parent": "B09",
+      "title": "Preregister fair benchmark hypotheses and bounded experiment matrix",
+      "status": "In Progress",
+      "owner": "Quality team",
+      "evidence": [
+        "benchmarks/README.md"
+      ],
+      "result": "Preregistered bounded720-trial design and9 synthetic tooling tests; physical target inventoried.",
+      "remainingAcceptance": [
+        "Final target/release/compilation/baseline freeze and pilot calibration before confirmatory campaign."
+      ],
+      "nextStep": "Final target/release/compilation/baseline freeze and pilot calibration before confirmatory campaign."
+    },
+    {
+      "key": "M02",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/47",
+      "parent": "B09",
+      "title": "Instrument equal baselines and stage timing without private data",
+      "status": "Planned",
+      "owner": "Measurement team",
+      "evidence": [
+        "benchmarks/README.md"
+      ],
+      "result": "Stage boundaries and equivalent-work requirements specified.",
+      "remainingAcceptance": [
+        "Implement and validate equal in-process baselines, full milestone traces and trace-overhead/memory collection."
+      ],
+      "nextStep": "Implement and validate equal in-process baselines, full milestone traces and trace-overhead/memory collection."
+    },
+    {
+      "key": "M03",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/50",
+      "parent": "B09",
+      "title": "Execute physical-device startup, file, load and memory campaign",
+      "status": "Planned",
+      "owner": "Measurement team",
+      "evidence": [
+        "benchmarks/README.md"
+      ],
+      "result": "Physical functional tests exist; controlled measurement campaign does not.",
+      "remainingAcceptance": [
+        "Execute physical randomized startup/file/load/memory matrix after baselines and readiness."
+      ],
+      "nextStep": "Execute physical randomized startup/file/load/memory matrix after baselines and readiness."
+    },
+    {
+      "key": "M04",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/54",
+      "parent": "B09",
+      "title": "Publish reproducible analysis with uncertainty and protected metrics",
+      "status": "Planned",
+      "owner": "Measurement team",
+      "evidence": [
+        "benchmarks/README.md"
+      ],
+      "result": "Analyzer tested with synthetic inputs only.",
+      "remainingAcceptance": [
+        "Analyze actual campaign traces and uncertainty; no measured improvement claim."
+      ],
+      "nextStep": "Analyze actual campaign traces and uncertainty; no measured improvement claim."
+    },
+    {
+      "key": "L01",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/51",
+      "parent": "B10",
+      "title": "Rehearse fresh same-publisher consumer and release artifacts",
+      "status": "In Progress",
+      "owner": "Quality team + root",
+      "evidence": [
+        "docs/evidence/build/fresh-consumer-06b2d4f.json"
+      ],
+      "result": "Isolated fresh published checkout builds and actual desktop consumer passes; matched-signer APK bundle built.",
+      "remainingAcceptance": [
+        "Fresh separately built Android same-publisher consumer rehearsal; complete dependency/license/version inventory and release recipe.",
+        "V02, FP06 and Q03 dependencies remain open."
+      ],
+      "nextStep": "Fresh separately built Android same-publisher consumer rehearsal; complete dependency/license/version inventory and release recipe."
+    },
+    {
+      "key": "L02",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/56",
+      "parent": "B10",
+      "title": "Publish auditable requirement ledger and five-minute FieldPack demo",
+      "status": "In Progress",
+      "owner": "Root",
+      "evidence": [
+        "docs/IMPLEMENTATION-STATUS.md"
+      ],
+      "result": "Current22-row evidence map, real screenshots, exported manifests and recipient results published as candidate.",
+      "remainingAcceptance": [
+        "Complete five-minute recorded failure/retry/export walkthrough and remaining dependency gates; animation alone is illustrative."
+      ],
+      "nextStep": "Complete five-minute recorded failure/retry/export walkthrough and remaining dependency gates; animation alone is illustrative."
+    },
+    {
+      "key": "T01",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/28",
+      "parent": "B11",
+      "title": "Assess technology alternatives and architectural revisit triggers",
+      "status": "In Progress",
+      "owner": "Astra chief + root",
+      "evidence": [
+        "docs/decisions/BUILD-DECISIONS.md"
+      ],
+      "result": "13 dated architecture decisions with alternatives and primary sources; real JNI feasibility decision.",
+      "remainingAcceptance": [
+        "Complete per-major-boundary alternatives, observable revisit triggers and final technology assessment reconciliation."
+      ],
+      "nextStep": "Complete per-major-boundary alternatives, observable revisit triggers and final technology assessment reconciliation."
+    },
+    {
+      "key": "T02",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/55",
+      "parent": "B11",
+      "title": "Document one observed difficult defect or bottleneck investigation",
+      "status": "In Review",
+      "owner": "Root + Astra review",
+      "evidence": [
+        "docs/case-studies/broker-loss.md"
+      ],
+      "result": "Actual broker-loss failure, competing explanations, minimal fix and protected physical regressions documented.",
+      "remainingAcceptance": [
+        "Review final case study; original T01/M04 planning prerequisites remain unresolved and are not silently removed."
+      ],
+      "nextStep": "Review final case study; original T01/M04 planning prerequisites remain unresolved and are not silently removed."
+    },
+    {
+      "key": "P01",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/20",
+      "parent": "B12",
+      "title": "Audit authorized Linux/AOSP resources and pin baseline target",
+      "status": "Blocked",
+      "owner": "AOSP team",
+      "evidence": [
+        "docs/AOSP-CLOUD-BUDGET.md"
+      ],
+      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
+      "remainingAcceptance": [
+        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
+        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
+      ],
+      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+    },
+    {
+      "key": "P02",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/23",
+      "parent": "B12",
+      "title": "Build and boot unchanged AOSP baseline image",
+      "status": "Blocked",
+      "owner": "AOSP team",
+      "evidence": [
+        "docs/AOSP-CLOUD-BUDGET.md"
+      ],
+      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
+      "remainingAcceptance": [
+        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
+        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
+      ],
+      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+    },
+    {
+      "key": "P03",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/29",
+      "parent": "B13",
+      "title": "Implement generated-only native AIDL service and core vectors",
+      "status": "Blocked",
+      "owner": "AOSP team",
+      "evidence": [
+        "docs/AOSP-CLOUD-BUDGET.md"
+      ],
+      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
+      "remainingAcceptance": [
+        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
+        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
+      ],
+      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+    },
+    {
+      "key": "P04",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/32",
+      "parent": "B13",
+      "title": "Integrate service boot, supervision and enforcing SELinux policy",
+      "status": "Blocked",
+      "owner": "AOSP team",
+      "evidence": [
+        "docs/AOSP-CLOUD-BUDGET.md"
+      ],
+      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
+      "remainingAcceptance": [
+        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
+        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
+      ],
+      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+    },
+    {
+      "key": "P05",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/37",
+      "parent": "B14",
+      "title": "Implement platform-built facade and deliberate API client",
+      "status": "Blocked",
+      "owner": "AOSP team",
+      "evidence": [
+        "docs/AOSP-CLOUD-BUDGET.md"
+      ],
+      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
+      "remainingAcceptance": [
+        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
+        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
+      ],
+      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+    },
+    {
+      "key": "P06",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/48",
+      "parent": "B14",
+      "title": "Execute platform boot, restart and interface-compatibility corpus",
+      "status": "Blocked",
+      "owner": "AOSP team",
+      "evidence": [
+        "docs/AOSP-CLOUD-BUDGET.md"
+      ],
+      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
+      "remainingAcceptance": [
+        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
+        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
+      ],
+      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+    },
+    {
+      "key": "P07",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/52",
+      "parent": "B15",
+      "title": "Investigate platform scheduling or memory with a controlled experiment",
+      "status": "Blocked",
+      "owner": "AOSP team",
+      "evidence": [
+        "docs/AOSP-CLOUD-BUDGET.md"
+      ],
+      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
+      "remainingAcceptance": [
+        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
+        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
+      ],
+      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+    },
+    {
+      "key": "P08",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/53",
+      "parent": "B15",
+      "title": "Run two-hour bounded generated-profile platform soak",
+      "status": "Blocked",
+      "owner": "AOSP team",
+      "evidence": [
+        "docs/AOSP-CLOUD-BUDGET.md"
+      ],
+      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
+      "remainingAcceptance": [
+        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
+        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
+      ],
+      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+    },
+    {
+      "key": "P09",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/57",
+      "parent": "B16",
+      "title": "Reproduce final image and reconcile platform productization gaps",
+      "status": "Blocked",
+      "owner": "AOSP team",
+      "evidence": [
+        "docs/AOSP-CLOUD-BUDGET.md"
+      ],
+      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
+      "remainingAcceptance": [
+        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
+        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
+      ],
+      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+    },
+    {
+      "key": "FP01",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/24",
+      "parent": "B17",
+      "title": "Freeze FieldPack manifest, file profile and shared negative vectors",
+      "status": "Done",
+      "owner": "Middleware + contract team",
+      "evidence": [
+        "docs/FIELDPACK.md"
+      ],
+      "result": "Normative file/manifest profile, strict shared negative vectors, independent reference and core codec tests.",
+      "remainingAcceptance": [],
+      "nextStep": "Maintain verified scope and rerun when affected source changes."
+    },
+    {
+      "key": "REF01",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/21",
+      "parent": "B17",
+      "title": "Deliver runnable Python FieldPack reference, tests, fixtures and walkthrough",
+      "status": "Done",
+      "owner": "Root + independent Astra reference reviewer",
+      "evidence": [
+        "examples/fieldpack/EVIDENCE.md"
+      ],
+      "result": "Published original reference12 tests/demo plus later174 shared/reference cases; original independent AI review retained.",
+      "remainingAcceptance": [],
+      "nextStep": "Maintain verified scope and rerun when affected source changes."
+    },
+    {
+      "key": "FP02",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/38",
+      "parent": "B17",
+      "title": "Implement Android regular-file capability and descriptor ownership",
+      "status": "In Review",
+      "owner": "Middleware team",
+      "evidence": [
+        "docs/evidence/build/android-broker-instrumentation-post-loss-r2.json"
+      ],
+      "result": "Real read-only regular PFD adapter; ownership/dedup/rejection cleanup and process tests pass.",
+      "remainingAcceptance": [
+        "AC9: nlink=2 fixture skipped due EACCES.",
+        "AC2: socket/closed/subsection-negative profile matrix; bare PFD cannot recover discarded AFD subsection metadata."
+      ],
+      "nextStep": "AC9: nlink=2 fixture skipped due EACCES."
+    },
+    {
+      "key": "FP03",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/40",
+      "parent": "B17",
+      "title": "Implement native FieldPack selection, assembly and explicit export",
+      "status": "In Review",
+      "owner": "Experience team",
+      "evidence": [
+        "docs/evidence/build/android-native-saf-post-loss-r2.json"
+      ],
+      "result": "Final native real picker\u2192broker\u21922/2 prepare\u2192explicit destination export; native9 installed cases.",
+      "remainingAcceptance": [
+        "Revoked/null/cancelled/delayed provider matrix.",
+        "Actual broker loss mid-file/pack and destination cancellation/write-error UI."
+      ],
+      "nextStep": "Revoked/null/cancelled/delayed provider matrix."
+    },
+    {
+      "key": "FP04",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/45",
+      "parent": "B17",
+      "title": "Implement Flutter real-file workflow through native broker adapter",
+      "status": "In Review",
+      "owner": "Experience team",
+      "evidence": [
+        "docs/evidence/build/android-flutter-saf-final.json"
+      ],
+      "result": "Actual Flutter real picker/broker/export produced same299B manifest; correctedSDK engine suite3 pass.",
+      "remainingAcceptance": [
+        "Installed file-preparation cancel/loss/error and navigation/running-disposal cases.",
+        "Actual destination cancellation/write-error UI; F02/FP02 dependencies remain open."
+      ],
+      "nextStep": "Installed file-preparation cancel/loss/error and navigation/running-disposal cases."
+    },
+    {
+      "key": "FP05",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/41",
+      "parent": "B17",
+      "title": "Implement macOS rooted-file host capability and JVM recipient verifier",
+      "status": "Done",
+      "owner": "Desktop team",
+      "evidence": [
+        "conformance/desktop/mobile-handoff.json"
+      ],
+      "result": "Reviewed JNI rooted-file adapter, host/CLI tests, capability fallback and five actual mobile-manifest outcomes.",
+      "remainingAcceptance": [],
+      "nextStep": "Maintain verified scope and rerun when affected source changes."
+    },
+    {
+      "key": "FP06",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/49",
+      "parent": "B17",
+      "title": "Verify manual Android-to-PC FieldPack handoff and failure diagnosis",
+      "status": "In Review",
+      "owner": "Quality + desktop + experience teams",
+      "evidence": [
+        "conformance/desktop/mobile-handoff.json"
+      ],
+      "result": "Both actual mobile exports and separately pulled phone files agree through10 JVM and10 Python recipient checks.",
+      "remainingAcceptance": [
+        "AC5: actual broker death mid-pack blocking export plus explicit full-file rehash retry; generated-job kill is narrower."
+      ],
+      "nextStep": "AC5: actual broker death mid-pack blocking export plus explicit full-file rehash retry; generated-job kill is narrower."
+    }
+  ],
+  "epics": [
+    {
+      "key": "B01",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/1",
+      "status": "Done",
+      "children": [
+        "C01",
+        "C02"
+      ]
+    },
+    {
+      "key": "B02",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/2",
+      "status": "Done",
+      "children": [
+        "C03",
+        "C04"
+      ]
+    },
+    {
+      "key": "B03",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/3",
+      "status": "In Review",
+      "children": [
+        "A01",
+        "A02"
+      ]
+    },
+    {
+      "key": "B04",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/4",
+      "status": "In Review",
+      "children": [
+        "A03"
+      ]
+    },
+    {
+      "key": "B05",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/5",
+      "status": "In Review",
+      "children": [
+        "F01",
+        "F02"
+      ]
+    },
+    {
+      "key": "B06",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/6",
+      "status": "In Progress",
+      "children": [
+        "Q01",
+        "Q02",
+        "Q03"
+      ]
+    },
+    {
+      "key": "B07",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/7",
+      "status": "In Progress",
+      "children": [
+        "D01",
+        "D02"
+      ]
+    },
+    {
+      "key": "B08",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/8",
+      "status": "In Progress",
+      "children": [
+        "V01",
+        "V02"
+      ]
+    },
+    {
+      "key": "B09",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/9",
+      "status": "In Progress",
+      "children": [
+        "M01",
+        "M02",
+        "M03",
+        "M04"
+      ]
+    },
+    {
+      "key": "B10",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/10",
+      "status": "In Progress",
+      "children": [
+        "L01",
+        "L02"
+      ]
+    },
+    {
+      "key": "B11",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/11",
+      "status": "In Progress",
+      "children": [
+        "T01",
+        "T02"
+      ]
+    },
+    {
+      "key": "B12",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/12",
+      "status": "Blocked",
+      "children": [
+        "P01",
+        "P02"
+      ]
+    },
+    {
+      "key": "B13",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/13",
+      "status": "Blocked",
+      "children": [
+        "P03",
+        "P04"
+      ]
+    },
+    {
+      "key": "B14",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/14",
+      "status": "Blocked",
+      "children": [
+        "P05",
+        "P06"
+      ]
+    },
+    {
+      "key": "B15",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/15",
+      "status": "Blocked",
+      "children": [
+        "P07",
+        "P08"
+      ]
+    },
+    {
+      "key": "B16",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/16",
+      "status": "Blocked",
+      "children": [
+        "P09"
+      ]
+    },
+    {
+      "key": "B17",
+      "issue": "https://github.com/oudaykhaled/boundarylab/issues/17",
+      "status": "In Review",
+      "children": [
+        "FP01",
+        "REF01",
+        "FP02",
+        "FP03",
+        "FP04",
+        "FP05",
+        "FP06"
+      ]
+    }
+  ],
+  "counts": {
+    "Done": 8,
+    "In Review": 11,
+    "In Progress": 8,
+    "Planned": 4,
+    "Blocked": 9
+  },
+  "boardCounts": {
+    "Done": 10,
+    "In Review": 15,
+    "In Progress": 14,
+    "Planned": 4,
+    "Blocked": 14
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "target": "physical Samsung SM-A336B API36",
+  "apk_sha256": "238b65338130d2b941245e60187693286ad019f0faab0187c0f3dc78046a2d7f",
+  "source_profile": "Android DocumentsUI Recent entries for owned Downloads/BoundaryLab-20261030 fixtures",
+  "files": [
+    "inspection-note.txt",
+    "sensor-readings.csv"
+  ],
+  "prepare_attempts": 1,
+  "all_files_succeeded": true,
+  "destination_profile": "ACTION_CREATE_DOCUMENT in owned Downloads subdirectory",
+  "manifest": "flutter-exported.fieldpack.json",
+  "manifest_sha256": "80558a687b642ed16d0a8443a3229ad5705fa462d4db21c1a34fbed11135df9f",
+  "native_manifest_byte_identical": true,
+  "ui_export_observations": [
+    "Prepare a reliable handoff\nInspection handoff\n1 Select attachments   \u00b7   2 Prepare pack   \u00b7   3 Export manifest\nUp to 32 local files \u00b7 128 MiB total. Use stable files that are not being edited. Some document providers are unsupported.",
+    "Export manifest",
+    "Manifest exported. Transfer attachments separately using the aliases below.\n2/2 \u00b7 attachment-002.bin"
+  ]
+}

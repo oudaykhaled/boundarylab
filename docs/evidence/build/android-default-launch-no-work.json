@@ -10,10 +10,11 @@
     },
     {
       "client": "flutter",
-      "own_ui_visible": false,
+      "own_ui_visible": true,
       "broker_process_absent": true,
       "pidof_exit": 1,
-      "meaning": "functional no-broker-process on default launch; no latency comparison"
+      "meaning": "functional no-broker-process on default launch; no latency comparison",
+      "initial_ui_snapshot_not_ready": true
     }
   ]
 }

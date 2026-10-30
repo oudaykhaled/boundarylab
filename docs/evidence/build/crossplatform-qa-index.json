@@ -1,6 +1,6 @@
 {
   "status": "assigned-host-verification-complete-runtime-parent-owned",
-  "timestampUtc": "2026-10-30T13:44:17.544518+00:00",
+  "timestampUtc": "2026-10-30T14:08:33.525686+00:00",
   "androidDeviceActionsByThisAgent": false,
   "suites": [
     {
@@ -32,16 +32,17 @@
     },
     {
       "label": "JVM host native/process tests",
-      "receipt": "crossplatform-qa-host-final-broker-tests.json",
+      "receipt": "crossplatform-qa-post-loss-android-desktop.json",
       "casePrefix": "dev.boundarylab.desktop.",
       "tests_run": 20,
       "tests_passed": 20,
       "tests_failed": 0,
-      "tests_skipped": 0
+      "tests_skipped": 0,
+      "caseExcludePrefix": "dev.boundarylab.desktop.cli."
     },
     {
       "label": "JVM CLI process tests",
-      "receipt": "crossplatform-qa-core-jvm-r3.json",
+      "receipt": "crossplatform-qa-post-loss-android-desktop.json",
       "casePrefix": "dev.boundarylab.desktop.cli.",
       "tests_run": 11,
       "tests_passed": 11,
@@ -50,8 +51,8 @@
     },
     {
       "label": "Native app unit tests",
-      "receipt": "crossplatform-qa-android-build-r3.json",
-      "casePrefix": null,
+      "receipt": "crossplatform-qa-post-loss-android-desktop.json",
+      "casePrefix": "dev.boundarylab.nativeapp.",
       "tests_run": 5,
       "tests_passed": 5,
       "tests_failed": 0,
@@ -59,12 +60,13 @@
     },
     {
       "label": "Flutter app controller/widget tests",
-      "receipt": "crossplatform-qa-flutter-app-final.json",
+      "receipt": "crossplatform-qa-post-loss-flutter-owner-tests.json",
       "casePrefix": null,
-      "tests_run": 10,
-      "tests_passed": 10,
+      "tests_run": 11,
+      "tests_passed": 11,
       "tests_failed": 0,
-      "tests_skipped": 0
+      "tests_skipped": 0,
+      "executionProvenance": "Owner-executed expanded log; parsed by QA, not independently rerun."
     },
     {
       "label": "Flutter SDK Dart channel tests",
@@ -86,20 +88,18 @@
     }
   ],
   "finalSelectedCounts": {
-    "tests_run": 392,
-    "tests_passed": 392,
+    "tests_run": 393,
+    "tests_passed": 393,
     "tests_failed": 0,
     "tests_skipped": 0
   },
   "coverage": null,
   "coverageReason": "No coverage instrumenter executed; passing cases do not imply code coverage.",
   "finalBuildReceipts": [
-    "crossplatform-qa-android-metadata-final.json",
-    "crossplatform-qa-broker-fixtures-final.json",
-    "crossplatform-qa-flutter-apk-metadata-final.json",
-    "crossplatform-qa-flutter-test-apk-metadata-final.json",
-    "crossplatform-qa-release-fixtures.json",
-    "crossplatform-qa-native-broker-loss-test-r2.json"
+    "crossplatform-qa-post-loss-android-desktop.json",
+    "crossplatform-qa-post-loss-flutter-apk.json",
+    "crossplatform-qa-post-loss-flutter-test-apk.json",
+    "crossplatform-qa-release-fixtures.json"
   ],
   "failedAttempts": [
     {
@@ -129,7 +129,10 @@
     "Flutter host tests use controlled gateways/channels; native strict-number unit tests are separate from MethodChannel device tests.",
     "No perf campaign, blocked-provider interruption, atomic source snapshot, or code coverage measurement claimed.",
     "Historical success snapshots are retained. FinalSelectedCounts chooses nonoverlapping test classes across final relevant receipts; do not sum all historical reports.",
-    "CLI11 passed before host cleanup ordering change; focused host20 rerun validates final change; desktop owner additionally owns installed-distribution smoke.",
-    "Latest broker test APK contains19 authored cases. Physical hardlink fixture inability remains explicit unsupported/skipped evidence owned by parent; it is not included in the passing host counts."
-  ]
+    "Latest broker test APK has20 authored cases; parent owns physical execution and explicit unsupported hardlink result. These are not included in host test counts."
+  ],
+  "executionProvenance": {
+    "directlyExecutedByCrossplatformQa": 382,
+    "ownerExecutedFlutterHostCasesWithPreservedLog": 11
+  }
 }

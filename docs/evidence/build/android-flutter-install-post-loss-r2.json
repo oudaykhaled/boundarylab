@@ -1,0 +1,37 @@
+{
+  "target": "physical Samsung SM-A336B API36",
+  "installs": [
+    {
+      "command": [
+        "adb",
+        "-s",
+        "<allocated-target>",
+        "install",
+        "-r",
+        "-t",
+        "<repository>/examples/flutter/build/app/outputs/flutter-apk/app-debug.apk"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.242,
+      "stdout": "Performing Streamed Install\nSuccess\n",
+      "stderr": "",
+      "apk_sha256": "0a2c1f429d87b6e7c966a8e3c2407466983b7ab6b8fe32287b2dd1cf66658a05"
+    },
+    {
+      "command": [
+        "adb",
+        "-s",
+        "<allocated-target>",
+        "install",
+        "-r",
+        "-t",
+        "<repository>/examples/flutter/build/app/outputs/apk/androidTest/debug/app-debug-androidTest.apk"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.663,
+      "stdout": "Performing Streamed Install\nSuccess\n",
+      "stderr": "",
+      "apk_sha256": "ab312cb26ed150d00f1a2a1987bd5a5d29f7cecdd4077fd39008b4114277f94a"
+    }
+  ]
+}

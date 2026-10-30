@@ -2,7 +2,7 @@
 
 Source: [Sparagus target vacancy](https://www.linkedin.com/jobs/view/4476561682/), reviewed 2026-10-30. These are paraphrased requirement labels; no complete job description is redistributed. The original responsibilities are decomposed into 22 traceable items so performance, memory and startup have separate evidence targets.
 
-**All technical evidence is planned, not implemented or verified.** G1/G2/G3 mean the future gates in the [roadmap](ROADMAP.md). Mapping every item is not claiming every item can be established by a solo repository. Mixed, career and external rows remain open until appropriate separate evidence exists. Machine-readable source: [requirements.json](../planning/requirements.json).
+The table below preserves the original acceptance targets. Implementation and scoped runtime evidence now exist; see the dated [implementation evidence map](IMPLEMENTATION-STATUS.md) and [execution board](../planning/BUILD-BOARD.md) for actual results and remaining gates. G1/G2/G3 refer to the [roadmap](ROADMAP.md); none is satisfied merely by mapping a requirement. Mixed, career and external rows remain open until appropriate separate evidence exists. Machine-readable requirement definitions: [requirements.json](../planning/requirements.json).
 
 Android **or** iOS and Flutter **or** React Native are alternatives in the posting. The preferred OS names are examples, not a demand to implement each. End-client identity is not stated. This plan chooses deep Android, Flutter and one PC host rather than inventing that requirement.
 

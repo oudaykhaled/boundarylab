@@ -3,45 +3,61 @@
   "artifacts": [
     {
       "path": "android/broker/build/outputs/apk/debug/broker-debug.apk",
-      "bytes": 2676859,
-      "sha256": "53c97d7478aba6fddb84832d81b86e6b43207f6a7685a377e523469cc896d0f9"
+      "bytes": 2623570,
+      "sha256": "d1fce929990b08880bf27f5cb0d194776c3c6c33a5d4df170535b4f48ad25337",
+      "buildReceipt": "crossplatform-qa-post-loss-android-desktop.json",
+      "sourceMapping": "sourceSha256After in buildReceipt"
     },
     {
       "path": "android/broker/build/outputs/apk/androidTest/debug/broker-debug-androidTest.apk",
-      "bytes": 2250458,
-      "sha256": "98b1afee824fe349266174536f75f290304e314f89dadd693ed150db1bb555e2"
+      "bytes": 2226477,
+      "sha256": "21be134a4ab29f183f8165e21022a64c606a64a328317ab84717cb3db48fa14c",
+      "buildReceipt": "crossplatform-qa-post-loss-android-desktop.json",
+      "sourceMapping": "sourceSha256After in buildReceipt"
     },
     {
       "path": "android/denied-client/build/outputs/apk/debug/denied-client-debug.apk",
       "bytes": 2460474,
-      "sha256": "4b2ed1aeffa1fc430cbadab7344c159b56536461c8ace42109796f8b6909ba12"
+      "sha256": "4b2ed1aeffa1fc430cbadab7344c159b56536461c8ace42109796f8b6909ba12",
+      "buildReceipt": "crossplatform-qa-android-build-r3.json",
+      "sourceMapping": "sourceSha256After in buildReceipt"
     },
     {
       "path": "android/denied-client/build/outputs/apk/androidTest/debug/denied-client-debug-androidTest.apk",
       "bytes": 2163113,
-      "sha256": "558d19836e4a83e851d94c62f184498feb7f0c6eb03eccb09d2fc05ba60933fc"
+      "sha256": "558d19836e4a83e851d94c62f184498feb7f0c6eb03eccb09d2fc05ba60933fc",
+      "buildReceipt": "crossplatform-qa-android-build-r3.json",
+      "sourceMapping": "sourceSha256After in buildReceipt"
     },
     {
       "path": "examples/android-native/build/outputs/apk/debug/android-native-debug.apk",
-      "bytes": 2723551,
-      "sha256": "e524b2e3368b63f8c64b7d9db08f439bc795973b89c086333445dc1be72efbe7"
+      "bytes": 2661382,
+      "sha256": "c81af5811e7a0b2015d3e19c2c3ab5279a7c1493d7e7baf9b8a191db233c0057",
+      "buildReceipt": "crossplatform-qa-post-loss-android-desktop.json",
+      "sourceMapping": "sourceSha256After in buildReceipt"
     },
     {
       "path": "examples/android-native/build/outputs/apk/androidTest/debug/android-native-debug-androidTest.apk",
-      "bytes": 2250858,
-      "sha256": "897cc4a18ca1d4bd3e65dc9ca1eede50e5b54b5fe9c96feeab98d1103051415a"
+      "bytes": 2207001,
+      "sha256": "95472adf7d8000b8200f1cc966a1e968d839600acb325ba938857d02996485c6",
+      "buildReceipt": "crossplatform-qa-post-loss-android-desktop.json",
+      "sourceMapping": "sourceSha256After in buildReceipt"
     },
     {
       "path": "examples/flutter/build/app/outputs/flutter-apk/app-debug.apk",
-      "bytes": 161379962,
-      "sha256": "238b65338130d2b941245e60187693286ad019f0faab0187c0f3dc78046a2d7f"
+      "bytes": 161380192,
+      "sha256": "0a2c1f429d87b6e7c966a8e3c2407466983b7ab6b8fe32287b2dd1cf66658a05",
+      "buildReceipt": "crossplatform-qa-post-loss-flutter-apk.json",
+      "sourceMapping": "sourceSha256After in buildReceipt"
     },
     {
       "path": "examples/flutter/build/app/outputs/apk/androidTest/debug/app-debug-androidTest.apk",
       "bytes": 836638,
-      "sha256": "ab312cb26ed150d00f1a2a1987bd5a5d29f7cecdd4077fd39008b4114277f94a"
+      "sha256": "ab312cb26ed150d00f1a2a1987bd5a5d29f7cecdd4077fd39008b4114277f94a",
+      "buildReceipt": "crossplatform-qa-post-loss-flutter-test-apk.json",
+      "sourceMapping": "sourceSha256After in buildReceipt"
     }
   ],
   "deviceExecutionByThisAgent": false,
-  "timestampUtc": "2026-10-30T13:46:08.827824+00:00"
+  "timestampUtc": "2026-10-30T14:08:33.524935+00:00"
 }

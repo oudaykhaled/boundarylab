@@ -72,3 +72,10 @@ They do not themselves prove picker taps/export destination behavior, differentl
 signed denial, broker kill/rebind, hostile-provider races or physical performance.
 Those require separately recorded device/provider evidence. Compilation and
 unit-test success alone are not an installed journey.
+
+The additional `brokerDeathRequiresFreshEpochAndExplicitNewSubmission` device
+case force-stops only the owned broker package, checks loss of the old handle,
+then requires a new epoch and an explicit new generated submission. Run this
+suite serially with other broker consumers. Its first execution exposed an SDK
+error-classification bug; consult [current receipts](EVIDENCE.md) for the corrected
+SDK's rerun status rather than treating compilation as a passing recovery test.

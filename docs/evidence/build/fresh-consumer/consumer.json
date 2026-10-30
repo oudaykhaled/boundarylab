@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "evidenceClass": "fresh-checkout-documented-jvm-consumer",
+  "sourceCommit": "06b2d4f9d550a7c2b02bcc4d3e8743800ea9eb4c",
+  "timestampUtc": "2026-10-30T14:09:21.998753+00:00",
+  "freshHttpsClone": true,
+  "initialWorkingTreeClean": true,
+  "isolatedGradleCache": true,
+  "buildCacheInitiallyEmpty": true,
+  "environment": {
+    "os": "Darwin",
+    "release": "25.5.0",
+    "architecture": "arm64"
+  },
+  "readmeSha256": "e915394e038f9381457966261bb7dc129605d0f02415e3d1e3a7e79120dd4f6c",
+  "checks": [
+    {
+      "name": "readme-build",
+      "exitCode": 0,
+      "timeoutSeconds": 1200,
+      "durationSeconds": 64.531,
+      "scriptSha256": "9c5c1d90eedf17d52fff99281bbeb004f111526e36b5b19d0ce6979559f123ca",
+      "log": "readme-build.log",
+      "logSha256": "11fa45d90c5db6a721d9441e969c1392d79df407f0bffbca4d8df68d2185013a"
+    },
+    {
+      "name": "readme-consumer",
+      "exitCode": 0,
+      "timeoutSeconds": 120,
+      "durationSeconds": 4.535,
+      "scriptSha256": "24603d2cf2476498e9ea8a72a10559b6db42a131f701261b3dca00fe4b6ed7f0",
+      "log": "readme-consumer.log",
+      "logSha256": "5005d8dbbb47ba24109ad0f03cd372eec4e2e5dea051ea0cd28252e24c2f15d4"
+    }
+  ],
+  "androidRuntimeExecuted": false,
+  "limitations": [
+    "Same local machine and installed JDK/SDK/compiler; independent checkout and initially empty Gradle user cache.",
+    "macOS host/CLI consumer only; not Android, Flutter, Linux or AOSP runtime evidence."
+  ],
+  "consumerResults": [
+    {
+      "result": "SUCCEEDED",
+      "size": 65537,
+      "sha256": "a06f90a8ad95b4a8528baffc69f68729e941decadb1c352fcedf3942e0bf7278",
+      "hostPid": 63110,
+      "cliPid": 63143
+    },
+    {
+      "result": "CREATED",
+      "files": 2,
+      "hostPid": 63110,
+      "cliPid": 63151
+    },
+    {
+      "scope": "manifest_entries_only",
+      "files": [
+        {
+          "name": "abc.txt",
+          "outcome": "MATCH"
+        },
+        {
+          "name": "empty.bin",
+          "outcome": "MATCH"
+        }
+      ],
+      "hostPid": 63161,
+      "cliPid": 63180
+    },
+    {
+      "scope": "manifest_entries_only",
+      "files": [
+        {
+          "name": "abc.txt",
+          "outcome": "DIGEST_MISMATCH"
+        },
+        {
+          "name": "empty.bin",
+          "outcome": "MATCH"
+        }
+      ],
+      "hostPid": 63161,
+      "cliPid": 63191
+    },
+    {
+      "scope": "manifest_entries_only",
+      "files": [
+        {
+          "name": "abc.txt",
+          "outcome": "SIZE_MISMATCH"
+        },
+        {
+          "name": "empty.bin",
+          "outcome": "MATCH"
+        }
+      ],
+      "hostPid": 63161,
+      "cliPid": 63204
+    },
+    {
+      "scope": "manifest_entries_only",
+      "files": [
+        {
+          "name": "abc.txt",
+          "outcome": "MISSING"
+        },
+        {
+          "name": "empty.bin",
+          "outcome": "MATCH"
+        }
+      ],
+      "hostPid": 63161,
+      "cliPid": 63214
+    }
+  ],
+  "manifest": {
+    "format": "fieldpack",
+    "version": 1,
+    "algorithm": "sha256",
+    "files": [
+      {
+        "name": "abc.txt",
+        "size": 3,
+        "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+      },
+      {
+        "name": "empty.bin",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  "buildArtifacts": [
+    {
+      "path": "desktop/host/build/install/host/lib/annotations-13.0.jar",
+      "sha256": "ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478"
+    },
+    {
+      "path": "desktop/host/build/install/host/lib/core-0.1.0-SNAPSHOT.jar",
+      "sha256": "5cc6a02473055455a80168acb16a345e8fc8dd16d05678dba02d4babf95c57a5"
+    },
+    {
+      "path": "desktop/host/build/install/host/lib/host-0.1.0-SNAPSHOT.jar",
+      "sha256": "5578ee3c76ddfaec912a8ffd991c3e8a7068deecb5e135db9af0903b6da84568"
+    },
+    {
+      "path": "desktop/host/build/install/host/lib/kotlin-stdlib-2.2.21.jar",
+      "sha256": "6558a3d233da56a20934b32159f9db5f86ed5816ef098f78a2c223dc6abb79dd"
+    },
+    {
+      "path": "desktop/cli/build/install/cli/lib/annotations-13.0.jar",
+      "sha256": "ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478"
+    },
+    {
+      "path": "desktop/cli/build/install/cli/lib/cli-0.1.0-SNAPSHOT.jar",
+      "sha256": "cd10e3de36cf7b48d25c14fb8f0f854e47d1bf695c44d88719442c8fa906673a"
+    },
+    {
+      "path": "desktop/cli/build/install/cli/lib/core-0.1.0-SNAPSHOT.jar",
+      "sha256": "5cc6a02473055455a80168acb16a345e8fc8dd16d05678dba02d4babf95c57a5"
+    },
+    {
+      "path": "desktop/cli/build/install/cli/lib/host-0.1.0-SNAPSHOT.jar",
+      "sha256": "5578ee3c76ddfaec912a8ffd991c3e8a7068deecb5e135db9af0903b6da84568"
+    },
+    {
+      "path": "desktop/cli/build/install/cli/lib/kotlin-stdlib-2.2.21.jar",
+      "sha256": "6558a3d233da56a20934b32159f9db5f86ed5816ef098f78a2c223dc6abb79dd"
+    },
+    {
+      "path": "desktop/host/build/native/libboundarylab_files.dylib",
+      "sha256": "c3e58dd34e89c2e284f36c9fddfb1c19785b98e0b058b85fedc8ccb0925dd6f5"
+    }
+  ],
+  "finalTrackedDiff": [],
+  "passed": true,
+  "hostCleanupVerified": {
+    "63110": true,
+    "63161": true
+  },
+  "finalWorkingTreeClean": true,
+  "readmeExecution": {
+    "source": "desktop/README.md",
+    "buildBlock": 0,
+    "consumerBlocks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "shell": "/bin/zsh",
+    "buildCommand": "./gradlew :desktop:host:compileNative :desktop:host:installDist :desktop:cli:installDist",
+    "harness": "consumer_check.py outside checkout; adds bounded execution, EXIT cleanup and result assertions without editing README blocks"
+  },
+  "harnessSha256": "594499d44c1bb11bacb3c0db769911bd99ead474ebdd731314ce4c614af4c77a"
+}

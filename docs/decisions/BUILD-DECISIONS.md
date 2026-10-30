@@ -208,6 +208,77 @@ This per-call completion is distinct from state/progress/UI observation. Suppres
 
 **Alternatives considered.** Broker-only checks leave the transport allocation/error-classification gap. Treating every Binder transaction failure as invalid hides real process loss. Validate known local argument faults before IPC and retain true transport-loss handling separately.
 
+## ADR-B13 — conditional online AOSP host, planning only
+
+**Status.** Recommendation researched 2026-10-30; no host, account mutation, purchase, remote command, source download or image build executed. User resource choice remains pending. This conditional G3 track does not block Android/JVM publication.
+
+**Context.** AOSP requires x86-64 Linux, at least 64 GB RAM and 400 GB free build/check-out storage. Cuttlefish additionally needs working KVM. The current macOS host cannot supply this profile. These requirements establish suitability, not a successful build or boot. [AOSP requirements](https://source.android.com/docs/setup/start/requirements), [Cuttlefish setup](https://source.android.com/docs/devices/cuttlefish/get-started).
+
+**Decision.** Recommend this initial on-demand Google Compute Engine profile, subject to the selected project's actual quota, zone capacity and authorized budget:
+
+| Setting | Selected planning value |
+|---|---|
+| Machine | Intel `n2-standard-16`: 16 vCPU, 64 GB RAM |
+| Location | Prefer `europe-west4-a`, Netherlands; another N2-capable zone only after checking availability |
+| OS | Ubuntu 24.04 LTS x86-64; `ubuntu-os-cloud/ubuntu-2404-lts-amd64`; record resolved immutable image ID |
+| Storage | 50 GB boot disk plus 1,000 GB zonal `pd-ssd`, ext4 workspace mounted at `/srv/aosp`; no source mirror |
+| Virtualization | `enableNestedVirtualization=true`; Linux KVM, ordinary non-Confidential VM |
+| Operation | One full build or one Cuttlefish instance at a time; begin conservatively with 12 build jobs, adjust from memory evidence |
+| Guest proof | One pinned x86-64 Cuttlefish userdebug image; record build/manifest and matching host-package revisions |
+
+N2 supplies the stated memory/CPU and supports SSD Persistent Disk. Its listed Netherlands zone is a candidate, not a reservation. Ubuntu 24.04 is an explicit compatible LTS choice, not a claim of the newest OS. [N2 specifications](https://docs.cloud.google.com/compute/docs/general-purpose-machines#n2_series), [zone catalog](https://docs.cloud.google.com/compute/docs/regions-zones), [Ubuntu image catalog](https://docs.cloud.google.com/compute/docs/images/os-details).
+
+Intel N2 avoids excluded E2, Arm and N2D profiles; enable nested virtualization directly rather than creating a legacy licensed custom image. Check the effective `compute.disableNestedVirtualization` policy and granted permissions before any future provisioning. A permission-denied policy read is unresolved, not evidence that nested virtualization is allowed. Check regional N2 CPU, aggregate CPU and SSD-disk quota headroom as well as actual zone capacity; quota alone does not reserve a machine. [Nested restrictions](https://docs.cloud.google.com/compute/docs/instances/nested-virtualization/overview), [enablement](https://docs.cloud.google.com/compute/docs/instances/nested-virtualization/enabling), [effective policy](https://docs.cloud.google.com/compute/docs/instances/nested-virtualization/managing-constraint), [allocation quotas](https://docs.cloud.google.com/compute/resource-usage).
+
+**Reproducible preflight, not executed.** After the user selects an authorized project, these are read-only project checks. Set `AOSP_PROJECT` to that project; no create/enable/policy-update command is included:
+
+```sh
+gcloud resource-manager org-policies describe constraints/compute.disableNestedVirtualization --effective --project="$AOSP_PROJECT"
+gcloud compute machine-types describe n2-standard-16 --zone=europe-west4-a --project="$AOSP_PROJECT"
+gcloud compute regions describe europe-west4 --project="$AOSP_PROJECT" --format='json(quotas)'
+gcloud compute project-info describe --project="$AOSP_PROJECT" --format='json(quotas)'
+gcloud compute images describe-from-family ubuntu-2404-lts-amd64 --project=ubuntu-os-cloud --format='json(name,id,architecture,creationTimestamp)'
+```
+
+On the separately authorized/configured host, run the following as the intended build/Cuttlefish user, after installing the documented host packages and applying their KVM/network/render group membership. It uses no sudo, changes no permissions, creates only a transient empty KVM object and closes it. The memory check allows kernel reservations on a cloud-verified nominal 64 GB machine; it does not authorize selecting a smaller plan. [Linux KVM API](https://docs.kernel.org/virt/kvm/api.html).
+
+```sh
+python3 - <<'PY'
+import fcntl, json, os, pathlib, platform, shutil, stat
+
+def require(ok, message):
+    if not ok:
+        raise SystemExit('PREFLIGHT FAILED: ' + message)
+
+require(platform.system() == 'Linux' and platform.machine() == 'x86_64', 'Linux x86_64 required')
+require((os.cpu_count() or 0) >= 16, 'expected at least 16 virtual CPUs')
+cpu = pathlib.Path('/proc/cpuinfo').read_text().split()
+require('vmx' in cpu, 'Intel nested virtualization not exposed')
+mem_kib = int(next(x.split()[1] for x in pathlib.Path('/proc/meminfo').read_text().splitlines() if x.startswith('MemTotal:')))
+require(mem_kib * 1024 >= 60 * 1024**3, 'insufficient usable memory for nominal 64 GB profile')
+root = pathlib.Path('/srv/aosp')
+require(root.is_dir(), 'workspace mount missing')
+free = shutil.disk_usage(root).free
+require(free >= 400_000_000_000, 'less than 400 GB free workspace')
+require(stat.S_ISCHR(os.stat('/dev/kvm').st_mode), '/dev/kvm is not a character device')
+kvm = os.open('/dev/kvm', os.O_RDWR | os.O_CLOEXEC)
+try:
+    api = fcntl.ioctl(kvm, 0xAE00, 0)  # Linux x86 KVM_GET_API_VERSION
+    require(api == 12, 'unexpected KVM API version')
+    vm = fcntl.ioctl(kvm, 0xAE01, 0)   # KVM_CREATE_VM; no guest code runs
+    os.close(vm)
+finally:
+    os.close(kvm)
+print(json.dumps({'preflight': 'PASS', 'cpus': os.cpu_count(), 'memoryKiB': mem_kib, 'workspaceFreeBytes': free, 'kvmApi': api}))
+PY
+```
+
+Record OS/kernel, instance description including enabled nesting, immutable image, disk mount/type/free space, host-package revision and preflight output. Then boot an unmodified `aosp_cf_x86_64_only_phone` userdebug baseline with images and `cvd-host_package.tar.gz` from the **same pinned build**. Require `adb` availability, `sys.boot_completed=1` and `getenforce=Enforcing` before the large source sync/custom-service phase. Device-node existence or KVM object creation alone is not Cuttlefish boot evidence. Pin the source manifest and exact branch-supported lunch target before custom image work. [Cuttlefish baseline procedure](https://source.android.com/docs/devices/cuttlefish/get-started).
+
+**Consequences and guards.** Sixty-four GB is the documented memory floor; concurrent build/guest work may need the separately chosen `n2-standard-32`/128 GB profile. No build-duration or physical-device performance promise is made. Agree a spending ceiling and explicit stop/retention plan before provisioning; stopping compute does not remove retained disk charges. Keep SSH access restricted and reach the Cuttlefish web UI through an authorized tunnel; do not expose ADB or debugging endpoints publicly. The guest service remains generated-only under the existing G3 contract. G3 stays blocked until actual authorized host and enforcing-boot evidence exists.
+
+**Alternatives considered.** Hetzner **bare metal** with at least 64 GB RAM, adequate usable SSD space, enabled VT-x/AMD-V and verified `/dev/kvm` avoids nested-hypervisor dependency but requires more OS/host administration and actual order/hardware validation. Hetzner **Cloud**, including dedicated-vCPU Cloud plans, is unsuitable for this KVM requirement according to its nested-virtualization FAQ. Prebuilt Cuttlefish alone is a cheap feasibility step but does not prove a custom image/service build. [Hetzner bare-metal virtualization](https://docs.hetzner.com/robot/dedicated-server/virtualization/general/), [Hetzner Cloud restriction](https://docs.hetzner.com/cloud/servers/faq/#can-i-run-virtual-machines-on-cloud-servers-or-rather-is-nested-virtualization-possible).
+
 ## Milestones and acceptance authority
 
 1. **M0: integration contract and executable build.** Pins, shared API and process probes are available. A compilation receipt alone does not complete C01.

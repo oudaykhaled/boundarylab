@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "evidenceClass": "owner-executed-flutter-host-tests",
+  "provenance": "Experience team supplied expanded Flutter test log and exit0/readiness; QA parsed and verified log, did not rerun per parent instruction.",
+  "timestampUtc": "2026-10-30T14:04:44.984673+00:00",
+  "command": null,
+  "commandReason": "Exact command not encoded in supplied expanded log; do not reconstruct one.",
+  "ownerReportedExitCode": 0,
+  "tests_run": 11,
+  "tests_passed": 11,
+  "tests_failed": 0,
+  "tests_skipped": 0,
+  "coverage": null,
+  "cases": [
+    {
+      "id": "all-success attempt enables export; new attempt rehashes",
+      "status": "passed"
+    },
+    {
+      "id": "late prepare success after cancel cannot enable export",
+      "status": "passed"
+    },
+    {
+      "id": "broker loss clears successful pack",
+      "status": "passed"
+    },
+    {
+      "id": "unknown timeout is distinct and never retries or enables export",
+      "status": "passed"
+    },
+    {
+      "id": "write failure retains complete pack for explicit retry",
+      "status": "passed"
+    },
+    {
+      "id": "export lifecycle cancellation never restores ready pack",
+      "status": "passed"
+    },
+    {
+      "id": "dispose discards delayed completion and closes gateway",
+      "status": "passed"
+    },
+    {
+      "id": "cancel while connect pending never admits file work",
+      "status": "passed"
+    },
+    {
+      "id": "dispose while connect pending never admits generated work",
+      "status": "passed"
+    },
+    {
+      "id": "dispose while clear pending never opens selection",
+      "status": "passed"
+    },
+    {
+      "id": "actions gated and transfer guidance visible",
+      "status": "passed"
+    }
+  ],
+  "sourceSha256VerifiedAtIngestion": {
+    "examples/flutter/lib/pack_controller.dart": "f9905ba4548bdc0cfe0babe0f34e5e14556a914114b2b2baf5fe86e1537929f0",
+    "examples/flutter/test/widget_test.dart": "2420f934e5e5fefb1740b39fa1bb4c0065649097b6b7e4a42c481e19bf5b3063"
+  },
+  "log": "crossplatform-qa-post-loss-flutter-owner-tests.log",
+  "analysisLog": "crossplatform-qa-post-loss-flutter-owner-analysis.log",
+  "limitations": [
+    "Expanded text reporter parsed into JSON; this is not an independently executed machine-reporter run.",
+    "Flutter host tests do not establish installed Binder runtime behavior."
+  ]
+}
