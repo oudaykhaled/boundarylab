@@ -1,0 +1,100 @@
+
+============================================
+PLATFORM_VERSION_CODENAME=REL
+PLATFORM_VERSION=16
+TARGET_PRODUCT=aosp_cf_x86_64_only_phone
+TARGET_BUILD_VARIANT=userdebug
+TARGET_ARCH=x86_64
+TARGET_ARCH_VARIANT=silvermont
+HOST_OS=linux
+HOST_OS_EXTRA=Linux-7.0.0-1014-gcp-x86_64-Ubuntu-24.04.5-LTS
+HOST_CROSS_OS=windows
+BUILD_ID=BP4A.251205.006
+OUT_DIR=out
+SOONG_ONLY=true
+============================================
+Running product configuration...
+============================================
+PLATFORM_VERSION_CODENAME=REL
+PLATFORM_VERSION=16
+TARGET_PRODUCT=aosp_cf_x86_64_only_phone
+TARGET_BUILD_VARIANT=userdebug
+TARGET_ARCH=x86_64
+TARGET_ARCH_VARIANT=silvermont
+HOST_OS=linux
+HOST_OS_EXTRA=Linux-7.0.0-1014-gcp-x86_64-Ubuntu-24.04.5-LTS
+HOST_CROSS_OS=windows
+BUILD_ID=BP4A.251205.006
+OUT_DIR=out
+SOONG_ONLY=true
+============================================
+[100% 1/1] bootstrap blueprint
+Running globs...
+Globs changed, rerunning soong...
+One culprit glob (may be more): vendor/boundarylab/aidl_api/boundarylab-platform/1
+[100% 2/2] analyzing Android.bp files and generating ninja file at out/soong/build.aosp_cf_x86_64_only_phone.ninja
+out/soong/soong_phony_targets.mk was modified, regenerating...
+[ 50% 3/6] initializing packaging system
+[ 66% 4/6] including distdir.mk
+[3/4] defining phony modules ...
+[100% 5/5] writing packaging rules
+Starting ninja...
+[  8% 6/70] sed  s/%s/boundarylab-platform/g  system/tools/aidl/build/message_check_equality_frozen.txt  >  out/soong/.intermediates/vendor/boundarylab/boundarylab-platform_interface/message_check_equality.txt # hash of input list: 59fcdaae73664ad06c5a36cda0085df8a4c845c26f9725096ceee755ca874b26
+[ 10% 7/70] create out/soong/.intermediates/vendor/boundarylab/boundarylab-platform-V1-cpp-source/gen/timestamp
+[ 11% 8/70] Verify vendor/boundarylab/aidl_api/boundarylab-platform/1 files have not been modified
+[ 12% 9/70] AIDL CHECK API: vendor/boundarylab/aidl_api/boundarylab-platform/current against vendor/boundarylab/aidl_api/boundarylab-platform/1
+[ 14% 10/70] rm -rf "out/soong/.intermediates/vendor/boundarylab/boundarylab-platform_interface/dump" && mkdir -p "out/soong/.intermediates/vendor/boundarylab/boundarylab-platform_interface/dump" && out/host/linux-x86/bin/aidl --dumpapi -Ivendor/boundarylab/aidl --structured --out out/soong/.intermediates/vendor/boundarylab/boundarylab-platform_interface/dump vendor/boundarylab/aidl/dev/boundarylab/platform/Capabilities.aidl vendor/boundarylab/aidl/dev/boundarylab/platform/IBoundaryLab.aidl vendor/boundarylab/aidl/dev/boundarylab/platform/Request.aidl vendor/boundarylab/aidl/dev/boundarylab/platform/Result.aidl && out/host/linux-x86/bin/aidl_hash_gen out/soong/.intermediates/vendor/boundarylab/boundarylab-platform_interface/dump 1 out/soong/.intermediates/vendor/boundarylab/boundarylab-platform_interface/dump/.hash
+[ 15% 11/70] rm -f out/soong/.intermediates/vendor/boundarylab/boundarylab-platform_interface/has_development && out/host/linux-x86/bin/aidl --checkapi=equal vendor/boundarylab/aidl_api/boundarylab-platform/1 out/soong/.intermediates/vendor/boundarylab/boundarylab-platform_interface/dump 2> /dev/null || ( echo "Interface boundarylab-platform can not be marked \`frozen: true\` because there are changes between the current version and the last frozen version." && exit -1) && echo 0 > out/soong/.intermediates/vendor/boundarylab/boundarylab-platform_interface/has_development # hash of input list: 6f0ada19ee8addf48d270bd279c6cf7f28e6c4e6dde7da9c0a2e265ee476ba7c
+[ 17% 12/70] //system/sepolicy/tools/sepolicy-analyze:sepolicy-analyze clang booleans.c [linux_glibc]
+[ 18% 13/70] //vendor/boundarylab:boundarylab_engine_test test config
+[ 20% 14/70] //system/sepolicy/tools/sepolicy-analyze:sepolicy-analyze clang perm.c [linux_glibc]
+[ 21% 15/70] AIDL CHECK API: out/soong/.intermediates/vendor/boundarylab/boundarylab-platform_interface/dump against vendor/boundarylab/aidl_api/boundarylab-platform/current
+[ 22% 16/70] cp out/target/product/vsoc_x86_64_only/testcases/boundarylab_engine_test/boundarylab_engine_test.config
+[ 24% 17/70] //system/sepolicy/tools/sepolicy-analyze:sepolicy-analyze clang sepolicy-analyze.c [linux_glibc]
+[ 25% 18/70] //system/sepolicy/tools/sepolicy-analyze:sepolicy-analyze clang utils.c [linux_glibc]
+[ 27% 19/70] //system/sepolicy/tools/sepolicy-analyze:sepolicy-analyze clang dups.c [linux_glibc]
+[ 28% 20/70] //system/sepolicy/tools/sepolicy-analyze:sepolicy-analyze clang attribute.c [linux_glibc]
+[ 30% 21/70] //system/sepolicy/tools/sepolicy-analyze:sepolicy-analyze clang typecmp.c [linux_glibc]
+[ 31% 22/70] //system/sepolicy/tools/sepolicy-analyze:sepolicy-analyze clang neverallow.c [linux_glibc]
+[ 32% 23/70] AIDL cpp vendor/boundarylab/aidl_api/boundarylab-platform/1/dev/boundarylab/platform/Request.aidl
+[ 34% 24/70] AIDL cpp vendor/boundarylab/aidl_api/boundarylab-platform/1/dev/boundarylab/platform/Capabilities.aidl
+[ 35% 25/70] AIDL cpp vendor/boundarylab/aidl_api/boundarylab-platform/1/dev/boundarylab/platform/IBoundaryLab.aidl
+[ 37% 26/70] AIDL cpp vendor/boundarylab/aidl_api/boundarylab-platform/1/dev/boundarylab/platform/Result.aidl
+[ 38% 27/70] //system/sepolicy/tools/sepolicy-analyze:sepolicy-analyze link sepolicy-analyze [linux_glibc]
+[ 40% 28/70] cp out/host/linux-x86/symbols/bin/sepolicy-analyze
+[ 41% 29/70] //system/sepolicy/tools/sepolicy-analyze:sepolicy-analyze install sepolicy-analyze [linux_glibc]
+[ 42% 30/70] out/host/linux-x86/bin/symbols_map -elf out/host/linux-x86/symbols/bin/sepolicy-analyze -write_if_changed out/host/linux-x86/obj/PACKAGING/elf_symbol_mapping_intermediates/bin/sepolicy-analyze.textproto
+[ 44% 31/70] //vendor/boundarylab:boundarylab_probe clang++ client/probe.cpp
+FAILED: out/soong/.intermediates/vendor/boundarylab/boundarylab_probe/android_x86_64_silvermont/obj/vendor/boundarylab/client/probe.o
+PWD=/proc/self/cwd prebuilts/clang/host/linux-x86/clang-r563880c/bin/clang++ -c -nostdlibinc  -Werror=implicit-function-declaration -D__BIONIC_NO_PAGE_SIZE_MACRO -O2 -Wall -Wextra -Wpointer-arith -Wunguarded-availability -Werror=bool-operation -Werror=date-time -Werror=int-conversion -Werror=multichar -Werror=pragma-pack -Werror=pragma-pack-suspicious-include -Werror=sizeof-array-div -Werror=sizeof-pointer-memaccess -Werror=string-plus-int -Werror=unreachable-code-loop-increment -Wno-error=deprecated-declarations -Wno-error=unused-variable -Wno-c23-extensions -Wno-c99-designator -Wno-gnu-folding-constant -Wno-inconsistent-missing-override -Wno-error=reorder-init-list -Wno-reorder-init-list -Wno-sign-compare -Wno-unused -DANDROID -DNDEBUG -UDEBUG -D__compiler_offsetof=__builtin_offsetof -D__ANDROID_UNAVAILABLE_SYMBOLS_ARE_WEAK__ -faddrsig -fdebug-default-version=5 -fcolor-diagnostics -ffp-contract=off -fno-exceptions -fno-strict-aliasing -fmessage-length=0 -gsimple-template-names -gz=zstd -no-canonical-prefixes -fdebug-prefix-map=/proc/self/cwd= -ftrivial-auto-var-init=zero -g -ffunction-sections -fdata-sections -fno-short-enums -funwind-tables -fstack-protector-strong -Wa,--noexecstack -D_FORTIFY_SOURCE=3 -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Werror=format-security -Wno-enum-compare -Wno-enum-compare-switch -Wno-null-pointer-arithmetic -Wno-psabi -Wno-null-pointer-subtraction -Wno-string-concatenation -Wno-deprecated-non-prototype -Wno-unused -Wno-unused-but-set-variable -Wno-deprecated -Wno-tautological-constant-compare -Wno-error=range-loop-construct -m64 -march=slm -mssse3 -msse4 -msse4.1 -msse4.2 -maes -mpopcnt -target x86_64-linux-android10000 -DANDROID_STRICT -fPIE -Wimplicit-fallthrough -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS -Wno-gnu-include-next -fvisibility-inlines-hidden  -Ivendor/boundarylab/engine -Ivendor/boundarylab -D__LIBC_API__=10000 -D__LIBM_API__=10000 -D__LIBDL_API__=10000 -Ivendor/boundarylab/client -Isystem/libbase/include -Iexternal/fmtlib/include -Iframeworks/native/libs/binder/include -Iframeworks/native/libs/binder/ndk/include_cpp -Isystem/core/libcutils/include -Isystem/core/libprocessgroup/include -Isystem/core/libutils/include -Isystem/logging/liblog/include -Isystem/core/libsystem/include -Isystem/core/libutils/binder/include -Iout/soong/.intermediates/frameworks/native/libs/binder/libbinder/android_x86_64_silvermont_shared/gen/aidl -Iout/soong/.intermediates/vendor/boundarylab/boundarylab-platform-V1-cpp-source/gen/include -Ivendor/boundarylab/engine -Iexternal/boringssl/src/include -Iexternal/selinux/libselinux/include -Iprebuilts/clang/host/linux-x86/clang-r563880c/android_libc++/platform/x86_64/include/c++/v1 -Iprebuilts/clang/host/linux-x86/clang-r563880c/include/c++/v1 -Ibionic/libc/async_safe/include -Ibionic/libc/system_properties/include -Isystem/core/property_service/libpropertyinfoparser/include -isystem bionic/libc/include -isystem bionic/libc/kernel/uapi/asm-x86 -isystem bionic/libc/kernel/uapi -isystem bionic/libc/kernel/android/scsi -isystem bionic/libc/kernel/android/uapi -Wall -Wextra -Werror -DDO_NOT_CHECK_MANUAL_BINDER_INTERFACES -flto=thin -fsplit-lto-unit -std=c++17 -fno-rtti -Isystem/core/include -Isystem/logging/liblog/include -Isystem/media/audio/include -Ihardware/libhardware/include -Ihardware/libhardware_legacy/include -Ihardware/ril/include -Iframeworks/native/include -Iframeworks/native/opengl/include -Iframeworks/av/include  -Werror=address-of-temporary -Werror=dangling -Werror=format-insufficient-args -Werror=fortify-source -Werror=incompatible-function-pointer-types -Werror=int-in-bool-context -Werror=int-to-pointer-cast -Werror=null-dereference -Werror=return-type -Werror=xor-used-as-pow -Wno-missing-field-initializers -Wno-packed-non-pod -Wno-error=tautological-constant-compare -Wno-implicit-int-float-conversion -Wno-tautological-overlap-compare -Wno-deprecated-copy -Wno-zero-as-null-pointer-constant -Wno-deprecated-anon-enum-enum-conversion -Wno-deprecated-enum-enum-conversion -Wno-error=pessimizing-move -Wno-non-c-typedef-for-linkage -Wno-align-mismatch -Wno-error=unused-but-set-parameter -Wno-error=deprecated -Wno-error=invalid-offsetof -Wno-nontrivial-memcall -Wno-invalid-specialization -Wno-vla-cxx-extension -Wno-cast-function-type-mismatch  -fcommon -Wno-format-insufficient-args -Wno-misleading-indentation -Wno-unused -Wno-unused-parameter -Wno-unused-but-set-parameter -Wno-unused-variable -Wno-unqualified-std-cast-call -Wno-array-parameter -Wno-gnu-offsetof-extensions -Wno-pessimizing-move -Wno-pointer-to-int-cast -MD -MF out/soong/.intermediates/vendor/boundarylab/boundarylab_probe/android_x86_64_silvermont/obj/vendor/boundarylab/client/probe.o.d -o out/soong/.intermediates/vendor/boundarylab/boundarylab_probe/android_x86_64_silvermont/obj/vendor/boundarylab/client/probe.o vendor/boundarylab/client/probe.cpp
+vendor/boundarylab/client/probe.cpp:144:54: error: call to non-static member function without an object argument
+  144 |         data.writeInterfaceToken(wire::IBoundaryLab::getInterfaceDescriptor());
+      |                                  ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+vendor/boundarylab/client/probe.cpp:156:54: error: call to non-static member function without an object argument
+  156 |         data.writeInterfaceToken(wire::IBoundaryLab::getInterfaceDescriptor());
+      |                                  ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+[ 45% 32/70] //vendor/boundarylab:boundarylab_denied_probe clang++ client/probe.cpp
+FAILED: out/soong/.intermediates/vendor/boundarylab/boundarylab_denied_probe/android_x86_64_silvermont/obj/vendor/boundarylab/client/probe.o
+PWD=/proc/self/cwd prebuilts/clang/host/linux-x86/clang-r563880c/bin/clang++ -c -nostdlibinc  -Werror=implicit-function-declaration -D__BIONIC_NO_PAGE_SIZE_MACRO -O2 -Wall -Wextra -Wpointer-arith -Wunguarded-availability -Werror=bool-operation -Werror=date-time -Werror=int-conversion -Werror=multichar -Werror=pragma-pack -Werror=pragma-pack-suspicious-include -Werror=sizeof-array-div -Werror=sizeof-pointer-memaccess -Werror=string-plus-int -Werror=unreachable-code-loop-increment -Wno-error=deprecated-declarations -Wno-error=unused-variable -Wno-c23-extensions -Wno-c99-designator -Wno-gnu-folding-constant -Wno-inconsistent-missing-override -Wno-error=reorder-init-list -Wno-reorder-init-list -Wno-sign-compare -Wno-unused -DANDROID -DNDEBUG -UDEBUG -D__compiler_offsetof=__builtin_offsetof -D__ANDROID_UNAVAILABLE_SYMBOLS_ARE_WEAK__ -faddrsig -fdebug-default-version=5 -fcolor-diagnostics -ffp-contract=off -fno-exceptions -fno-strict-aliasing -fmessage-length=0 -gsimple-template-names -gz=zstd -no-canonical-prefixes -fdebug-prefix-map=/proc/self/cwd= -ftrivial-auto-var-init=zero -g -ffunction-sections -fdata-sections -fno-short-enums -funwind-tables -fstack-protector-strong -Wa,--noexecstack -D_FORTIFY_SOURCE=3 -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Werror=format-security -Wno-enum-compare -Wno-enum-compare-switch -Wno-null-pointer-arithmetic -Wno-psabi -Wno-null-pointer-subtraction -Wno-string-concatenation -Wno-deprecated-non-prototype -Wno-unused -Wno-unused-but-set-variable -Wno-deprecated -Wno-tautological-constant-compare -Wno-error=range-loop-construct -m64 -march=slm -mssse3 -msse4 -msse4.1 -msse4.2 -maes -mpopcnt -target x86_64-linux-android10000 -DANDROID_STRICT -fPIE -Wimplicit-fallthrough -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS -Wno-gnu-include-next -fvisibility-inlines-hidden  -Ivendor/boundarylab/engine -Ivendor/boundarylab -D__LIBC_API__=10000 -D__LIBM_API__=10000 -D__LIBDL_API__=10000 -Ivendor/boundarylab/client -Isystem/libbase/include -Iexternal/fmtlib/include -Iframeworks/native/libs/binder/include -Iframeworks/native/libs/binder/ndk/include_cpp -Isystem/core/libcutils/include -Isystem/core/libprocessgroup/include -Isystem/core/libutils/include -Isystem/logging/liblog/include -Isystem/core/libsystem/include -Isystem/core/libutils/binder/include -Iout/soong/.intermediates/frameworks/native/libs/binder/libbinder/android_x86_64_silvermont_shared/gen/aidl -Iout/soong/.intermediates/vendor/boundarylab/boundarylab-platform-V1-cpp-source/gen/include -Ivendor/boundarylab/engine -Iexternal/boringssl/src/include -Iexternal/selinux/libselinux/include -Iprebuilts/clang/host/linux-x86/clang-r563880c/android_libc++/platform/x86_64/include/c++/v1 -Iprebuilts/clang/host/linux-x86/clang-r563880c/include/c++/v1 -Ibionic/libc/async_safe/include -Ibionic/libc/system_properties/include -Isystem/core/property_service/libpropertyinfoparser/include -isystem bionic/libc/include -isystem bionic/libc/kernel/uapi/asm-x86 -isystem bionic/libc/kernel/uapi -isystem bionic/libc/kernel/android/scsi -isystem bionic/libc/kernel/android/uapi -Wall -Wextra -Werror -DDO_NOT_CHECK_MANUAL_BINDER_INTERFACES -flto=thin -fsplit-lto-unit -std=c++17 -fno-rtti -Isystem/core/include -Isystem/logging/liblog/include -Isystem/media/audio/include -Ihardware/libhardware/include -Ihardware/libhardware_legacy/include -Ihardware/ril/include -Iframeworks/native/include -Iframeworks/native/opengl/include -Iframeworks/av/include  -Werror=address-of-temporary -Werror=dangling -Werror=format-insufficient-args -Werror=fortify-source -Werror=incompatible-function-pointer-types -Werror=int-in-bool-context -Werror=int-to-pointer-cast -Werror=null-dereference -Werror=return-type -Werror=xor-used-as-pow -Wno-missing-field-initializers -Wno-packed-non-pod -Wno-error=tautological-constant-compare -Wno-implicit-int-float-conversion -Wno-tautological-overlap-compare -Wno-deprecated-copy -Wno-zero-as-null-pointer-constant -Wno-deprecated-anon-enum-enum-conversion -Wno-deprecated-enum-enum-conversion -Wno-error=pessimizing-move -Wno-non-c-typedef-for-linkage -Wno-align-mismatch -Wno-error=unused-but-set-parameter -Wno-error=deprecated -Wno-error=invalid-offsetof -Wno-nontrivial-memcall -Wno-invalid-specialization -Wno-vla-cxx-extension -Wno-cast-function-type-mismatch  -fcommon -Wno-format-insufficient-args -Wno-misleading-indentation -Wno-unused -Wno-unused-parameter -Wno-unused-but-set-parameter -Wno-unused-variable -Wno-unqualified-std-cast-call -Wno-array-parameter -Wno-gnu-offsetof-extensions -Wno-pessimizing-move -Wno-pointer-to-int-cast -MD -MF out/soong/.intermediates/vendor/boundarylab/boundarylab_denied_probe/android_x86_64_silvermont/obj/vendor/boundarylab/client/probe.o.d -o out/soong/.intermediates/vendor/boundarylab/boundarylab_denied_probe/android_x86_64_silvermont/obj/vendor/boundarylab/client/probe.o vendor/boundarylab/client/probe.cpp
+vendor/boundarylab/client/probe.cpp:144:54: error: call to non-static member function without an object argument
+  144 |         data.writeInterfaceToken(wire::IBoundaryLab::getInterfaceDescriptor());
+      |                                  ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+vendor/boundarylab/client/probe.cpp:156:54: error: call to non-static member function without an object argument
+  156 |         data.writeInterfaceToken(wire::IBoundaryLab::getInterfaceDescriptor());
+      |                                  ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+[ 47% 33/70] //vendor/boundarylab:libboundarylab_platform_client clang++ client/Client.cpp
+[ 48% 34/70] //vendor/boundarylab:boundarylab-platform-V1-cpp clang++ dev/boundarylab/platform/Request.cpp
+[ 50% 35/70] //vendor/boundarylab:boundarylab-platform-V1-cpp clang++ dev/boundarylab/platform/Capabilities.cpp
+[ 51% 36/70] //vendor/boundarylab:boundarylab_engine_test clang++ tests/engine_test.cpp
+[ 52% 37/70] //vendor/boundarylab:boundarylab-platform-V1-cpp clang++ dev/boundarylab/platform/Result.cpp
+[ 54% 38/70] //vendor/boundarylab:boundarylab_service clang++ service/main.cpp
+[ 55% 39/70] //vendor/boundarylab:boundarylab-platform-V1-cpp clang++ dev/boundarylab/platform/IBoundaryLab.cpp
+[ 57% 40/70] //vendor/boundarylab:libboundarylab_engine clang++ engine/Engine.cpp
+[ 58% 41/70] //vendor/boundarylab:libboundarylab_engine clang++ engine/Engine.cpp
+ninja: build stopped: subcommand failed.
+21:55:50 ninja failed with: exit status 1
+
+#### failed to build some targets (01:51 (mm:ss)) ####
+

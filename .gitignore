@@ -8,6 +8,9 @@ local.properties
 private/
 raw-private/
 build/
+# Reviewed immutable evidence, rather than generated local build outputs.
+!docs/evidence/aosp/custom-20261030/build/
+!docs/evidence/aosp/custom-20261030/build/**
 __pycache__/
 *.py[cod]
 .gradle/

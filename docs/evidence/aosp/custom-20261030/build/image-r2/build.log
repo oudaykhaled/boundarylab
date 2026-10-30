@@ -1,0 +1,419 @@
+
+============================================
+PLATFORM_VERSION_CODENAME=REL
+PLATFORM_VERSION=16
+TARGET_PRODUCT=aosp_cf_x86_64_only_phone
+TARGET_BUILD_VARIANT=userdebug
+TARGET_ARCH=x86_64
+TARGET_ARCH_VARIANT=silvermont
+HOST_OS=linux
+HOST_OS_EXTRA=Linux-7.0.0-1014-gcp-x86_64-Ubuntu-24.04.5-LTS
+HOST_CROSS_OS=windows
+BUILD_ID=BP4A.251205.006
+OUT_DIR=out
+SOONG_ONLY=true
+============================================
+Running product configuration...
+============================================
+PLATFORM_VERSION_CODENAME=REL
+PLATFORM_VERSION=16
+TARGET_PRODUCT=aosp_cf_x86_64_only_phone
+TARGET_BUILD_VARIANT=userdebug
+TARGET_ARCH=x86_64
+TARGET_ARCH_VARIANT=silvermont
+HOST_OS=linux
+HOST_OS_EXTRA=Linux-7.0.0-1014-gcp-x86_64-Ubuntu-24.04.5-LTS
+HOST_CROSS_OS=windows
+BUILD_ID=BP4A.251205.006
+OUT_DIR=out
+SOONG_ONLY=true
+============================================
+[100% 1/1] bootstrap blueprint
+Running globs...
+ninja: no work to do.
+No need to regenerate ninja file
+Starting ninja...
+[  0% 2/347 1m47s remaining] //system/sepolicy:system_ext_sepolicy.conf Transform policy to conf: system_ext_sepolicy.conf [common]
+[  0% 3/347 1m47s remaining] //system/sepolicy:product_sepolicy.conf Transform policy to conf: product_sepolicy.conf [common]
+[  1% 4/347 1m47s remaining] //system/sepolicy:recovery_sepolicy.conf Transform policy to conf: recovery_sepolicy.conf [common]
+[  1% 5/347 1m47s remaining] //system/sepolicy:recovery_sepolicy.cil Building cil for recovery_sepolicy.cil [common]
+[  1% 6/347 1m36s remaining] //system/sepolicy:sepolicy.recovery Compiling cil files for sepolicy.recovery [common]
+[  2% 7/347 1m35s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_recovery_image Assemble filesystem staging dir aosp_cf_x86_64_only_phone_generated_recovery_image [common]
+[  2% 8/347 1m34s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_recovery_image Creating filesystem aosp_cf_x86_64_only_phone_generated_recovery_image [common]
+[  2% 9/347 1m34s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_recovery_image Installed file list json [common]
+[  2% 10/347 1m34s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-recovery.json
+[  3% 11/347 1m34s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_recovery_image Installed file list txt [common]
+[  3% 12/347 1m34s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-recovery.txt
+[  3% 13/347 1m28s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_ramdisk_image Creating filesystem aosp_cf_x86_64_only_phone_generated_vendor_ramdisk_image [common]
+[  4% 14/347 1m28s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_ramdisk_image Installed file list json [common]
+[  4% 15/347 1m28s remaining] cp out/target/product/vsoc_x86_64_only/vendor_ramdisk.img
+[  4% 16/347 1m28s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-vendor-ramdisk.json
+[  4% 17/347 1m28s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_ramdisk_image Installed file list txt [common]
+[  5% 18/347 1m28s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-vendor-ramdisk.txt
+[  5% 19/347 1m28s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_boot_image Creating aosp_cf_x86_64_only_phone_generated_vendor_boot_image
+[  5% 20/347 1m28s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_boot_image Adding avb footer to aosp_cf_x86_64_only_phone_generated_vendor_boot_image
+[  6% 21/347 1m28s remaining] cp out/target/product/vsoc_x86_64_only/vendor_boot.img
+[  6% 22/347 1m22s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_ramdisk-debug_image Creating filesystem aosp_cf_x86_64_only_phone_generated_vendor_ramdisk-debug_image [common]
+[  6% 23/347 1m22s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_ramdisk-test-harness_image Creating filesystem aosp_cf_x86_64_only_phone_generated_vendor_ramdisk-test-harness_image [common]
+[  6% 24/347 1m22s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_boot-debug_image Creating aosp_cf_x86_64_only_phone_generated_vendor_boot-debug_image
+[  7% 25/347 1m22s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_boot-test-harness_image Creating aosp_cf_x86_64_only_phone_generated_vendor_boot-test-harness_image
+[  7% 26/347 1m22s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_boot-debug_image Adding avb footer to aosp_cf_x86_64_only_phone_generated_vendor_boot-debug_image
+[  7% 27/347 1m22s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_boot-test-harness_image Adding avb footer to aosp_cf_x86_64_only_phone_generated_vendor_boot-test-harness_image
+[  8% 28/347 1m13s remaining] //system/sepolicy:system_ext_sepolicy.cil Building cil for system_ext_sepolicy.cil [common]
+[  8% 29/347 1m13s remaining] //system/sepolicy:system_ext_sepolicy.cil install system_ext_sepolicy.cil [common]
+[  8% 30/347 1m13s remaining] //system/sepolicy:system_ext_sepolicy_and_mapping.sha256_gen generate system_ext_sepolicy_and_mapping.sha256 [common]
+[  8% 31/347 1m13s remaining] cp out/soong/.intermediates/system/sepolicy/system_ext_sepolicy_and_mapping.sha256/android_x86_64_silvermont/system_ext_sepolicy_and_mapping.sha256
+[  9% 32/347 1m13s remaining] cp out/soong/.intermediates/system/sepolicy/precompiled_sepolicy.system_ext_sepolicy_and_mapping.sha256/android_vendor_x86_64_silvermont/precompiled_sepolicy.system_ext_sepolicy_and_mapping.sha256
+[  9% 33/347 1m13s remaining] //system/sepolicy:system_ext_sepolicy_and_mapping.sha256 install system_ext_sepolicy_and_mapping.sha256
+[  9% 34/347 1m13s remaining] //system/sepolicy:precompiled_sepolicy.system_ext_sepolicy_and_mapping.sha256 install precompiled_sepolicy.system_ext_sepolicy_and_mapping.sha256
+[ 10% 35/347 39s remaining] //system/sepolicy:product_sepolicy.cil Building cil for product_sepolicy.cil [common]
+[ 10% 36/347 39s remaining] //system/sepolicy:product_sepolicy.cil install product_sepolicy.cil [common]
+[ 10% 37/347 39s remaining] //system/sepolicy:product_sepolicy_and_mapping.sha256_gen generate product_sepolicy_and_mapping.sha256 [common]
+[ 10% 38/347 39s remaining] cp out/soong/.intermediates/system/sepolicy/product_sepolicy_and_mapping.sha256/android_x86_64_silvermont/product_sepolicy_and_mapping.sha256
+[ 11% 39/347 39s remaining] cp out/soong/.intermediates/system/sepolicy/precompiled_sepolicy.product_sepolicy_and_mapping.sha256/android_vendor_x86_64_silvermont/precompiled_sepolicy.product_sepolicy_and_mapping.sha256
+[ 11% 40/347 39s remaining] //system/sepolicy:product_sepolicy_and_mapping.sha256 install product_sepolicy_and_mapping.sha256
+[ 11% 41/347 39s remaining] //system/sepolicy:precompiled_sepolicy.product_sepolicy_and_mapping.sha256 install precompiled_sepolicy.product_sepolicy_and_mapping.sha256
+[ 12% 42/347 38s remaining] //system/sepolicy:vendor_sepolicy.cil Versioning mapping file vendor_sepolicy.cil [common]
+[ 12% 43/347 38s remaining] //system/sepolicy:vendor_sepolicy.cil install vendor_sepolicy.cil [common]
+[ 12% 44/347 38s remaining] //system/sepolicy:odm_sepolicy.cil Versioning mapping file odm_sepolicy.cil [common]
+[ 12% 45/347 38s remaining] //system/sepolicy:odm_sepolicy.cil install odm_sepolicy.cil [common]
+[ 13% 46/347 24s remaining] //system/sepolicy:precompiled_sepolicy Compiling cil files for precompiled_sepolicy [common]
+[ 13% 47/347 24s remaining] //system/sepolicy:precompiled_sepolicy install precompiled_sepolicy [common]
+[ 13% 48/347 24s remaining] //system/sepolicy/contexts:odm_seapp_contexts Building seapp_contexts: odm_seapp_contexts [common]
+[ 14% 49/347 24s remaining] //system/sepolicy/contexts:odm_seapp_contexts copy odm_seapp_contexts [common]
+[ 14% 50/347 24s remaining] //system/sepolicy/contexts:odm_seapp_contexts install odm_seapp_contexts [common]
+[ 14% 51/347 24s remaining] //system/sepolicy/contexts:product_seapp_contexts Building seapp_contexts: product_seapp_contexts [common]
+[ 14% 52/347 24s remaining] //system/sepolicy/contexts:system_ext_seapp_contexts Building seapp_contexts: system_ext_seapp_contexts [common]
+[ 15% 53/347 24s remaining] //system/sepolicy/contexts:product_seapp_contexts copy product_seapp_contexts [common]
+[ 15% 54/347 24s remaining] //system/sepolicy/contexts:vendor_seapp_contexts Building seapp_contexts: vendor_seapp_contexts [common]
+[ 15% 55/347 24s remaining] //system/sepolicy/contexts:system_ext_seapp_contexts copy system_ext_seapp_contexts [common]
+[ 16% 56/347 24s remaining] //system/sepolicy/contexts:vendor_seapp_contexts copy vendor_seapp_contexts [common]
+[ 16% 57/347 24s remaining] //system/sepolicy/contexts:product_seapp_contexts install product_seapp_contexts [common]
+[ 16% 58/347 24s remaining] //system/sepolicy/contexts:system_ext_seapp_contexts install system_ext_seapp_contexts [common]
+[ 17% 59/347 24s remaining] //system/sepolicy/contexts:vendor_seapp_contexts install vendor_seapp_contexts [common]
+[ 17% 60/347 24s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_odm_image Assemble filesystem staging dir aosp_cf_x86_64_only_phone_generated_odm_image [common]
+[ 17% 61/347 24s remaining] //system/sepolicy/tests:apex_sepolicy_tests python library archive [linux_glibc]
+[ 17% 62/347 24s remaining] //system/sepolicy:file_contexts.device.sorted.tmp generate file_contexts.device.sorted.tmp [common]
+[ 18% 63/347 24s remaining] //system/sepolicy:file_contexts.concat.tmp generate file_contexts.concat.tmp [common]
+[ 18% 64/347 24s remaining] //system/sepolicy:file_contexts_bin_gen generate file_contexts.bin [common]
+[ 18% 65/347 24s remaining] //system/sepolicy/tests:apex_sepolicy_tests Precompile the python sources of apex_sepolicy_tests [linux_glibc]
+[ 19% 66/347 24s remaining] //system/sepolicy/tests:apex_sepolicy_tests embedded python archive [linux_glibc]
+[ 19% 67/347 24s remaining] //system/sepolicy/tests:apex_sepolicy_tests install apex_sepolicy_tests [linux_glibc]
+[ 19% 68/347 24s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_ext_image Assemble filesystem staging dir aosp_cf_x86_64_only_phone_generated_system_ext_image [common]
+[ 19% 69/347 23s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_product_image Assemble filesystem staging dir aosp_cf_x86_64_only_phone_generated_product_image [common]
+[ 20% 70/347 23s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_image Assemble filesystem staging dir aosp_cf_x86_64_only_phone_generated_vendor_image [common]
+[ 20% 71/347 23s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_other_image build system other [common]
+[ 20% 72/347 22s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_odm_image Creating filesystem aosp_cf_x86_64_only_phone_generated_odm_image [common]
+[ 21% 73/347 22s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_dlkm_image Creating filesystem aosp_cf_x86_64_only_phone_generated_vendor_dlkm_image [common]
+[ 21% 74/347 22s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_odm_dlkm_image Creating filesystem aosp_cf_x86_64_only_phone_generated_odm_dlkm_image [common]
+[ 21% 75/347 21s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_dlkm_image Creating filesystem aosp_cf_x86_64_only_phone_generated_system_dlkm_image [common]
+[ 21% 76/347 18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_ext_image Creating filesystem aosp_cf_x86_64_only_phone_generated_system_ext_image [common]
+[ 22% 77/347 17s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_image Creating filesystem aosp_cf_x86_64_only_phone_generated_vendor_image [common]
+[ 22% 78/347 17s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_product_image Creating filesystem aosp_cf_x86_64_only_phone_generated_product_image [common]
+[ 22% 79/347 17s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.media.swcodec
+[ 23% 80/347 15s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.adservices
+[ 23% 81/347 15s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.tethering
+[ 23% 82/347 15s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.extservices
+[ 23% 83/347 15s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.mediaprovider
+[ 24% 84/347 15s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.conscrypt
+[ 24% 85/347 15s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.art
+[ 24% 86/347 14s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.cellbroadcast
+[ 25% 87/347 14s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.adbd
+[ 25% 88/347 14s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.bt
+[ 25% 89/347 14s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.rild
+[ 25% 90/347 14s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.permission
+[ 26% 91/347 14s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.emulated.camera.provider.hal
+[ 26% 92/347 13s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_product_image Installed file list json [common]
+[ 26% 93/347 13s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.ondevicepersonalization
+[ 27% 94/347 13s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.bt
+[ 27% 95/347 13s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.threadnetwork
+[ 27% 96/347 13s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.ir
+[ 27% 97/347 13s remaining] //system/sepolicy:sepolicy_dev_type_test generate sepolicy_dev_type_test [common]
+[ 28% 98/347 13s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.usb
+[ 28% 99/347 13s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.appsearch
+[ 28% 100/347 13s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.wifi
+[ 29% 101/347 12s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.uwb
+[ 29% 102/347 12s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.vndk.v34
+[ 29% 103/347 12s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.vulkan
+[ 29% 104/347 12s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.virt
+[ 30% 105/347 12s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.vndk.v31
+[ 30% 106/347 12s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.identity
+[ 30% 107/347 12s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.rebootescrow
+[ 31% 108/347 11s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.nfc
+[ 31% 109/347 11s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.gnss
+[ 31% 110/347 11s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.thermal
+[ 31% 111/347 11s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.nfcservices
+[ 32% 112/347 11s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.security.authgraph
+[ 32% 113/347 11s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.health.storage
+[ 32% 114/347 11s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.emulated.camera.provider.hal.fastscenecycle
+[ 33% 115/347 11s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.keymint.rust_nonsecure
+[ 33% 116/347 10s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.wifi
+[ 33% 117/347 10s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.media
+[ 34% 118/347 10s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.neuralnetworks
+[ 34% 119/347 10s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.vndk.v32
+[ 34% 120/347 9s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.confirmationui
+[ 34% 121/347 9s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.dumpstate
+[ 35% 122/347 9s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.health
+[ 35% 123/347 9s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.wifi
+[ 35% 124/347 9s remaining] //system/sepolicy:sepolicy_test generate sepolicy_test [common]
+[ 36% 125/347 9s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_image Creating filesystem aosp_cf_x86_64_only_phone_generated_system_image [common]
+[ 36% 126/347 9s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.audio
+[ 36% 127/347 9s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.graphics.composer.ranchu
+[ 36% 128/347 9s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.apex.cts.shim.v1_prebuilt
+[ 37% 129/347 9s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.ipsec
+[ 37% 130/347 8s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.uwb
+[ 37% 131/347 8s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.compos
+[ 38% 132/347 8s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.neuralnetworks
+[ 38% 133/347 8s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.biometrics.face.virtual
+[ 38% 134/347 8s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.runtime
+[ 38% 135/347 8s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.gatekeeper.cf_remote
+[ 39% 136/347 8s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.light
+[ 39% 137/347 8s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.vndk.v33
+[ 39% 138/347 8s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.keymint.rust_cf_remote
+[ 40% 139/347 8s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.telephonycore
+[ 40% 140/347 8s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.sensors
+[ 40% 141/347 7s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.configinfrastructure
+[ 40% 142/347 7s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.input.config
+[ 41% 143/347 7s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.rkpd
+[ 41% 144/347 7s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_super_image Creating super image aosp_cf_x86_64_only_phone_generated_super_image [common]
+2026-10-30 22:19:02 - build_super_image.py - INFO    : Building super image from info dict...
+2026-10-30 22:19:02 - common.py - INFO    :   Running: "/srv/aosp/source/out/host/linux-x86/bin/lpmake --metadata-size 65536 --super-name super --metadata-slots 3 --virtual-ab --device super:8589934592 --group google_system_dynamic_partitions_a:6845104128 --group google_system_dynamic_partitions_b:6845104128 --partition product_a:readonly:250114048:google_system_dynamic_partitions_a --image product_a=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_product_image/android_common/product.img --partition product_b:readonly:0:google_system_dynamic_partitions_b --partition system_a:readonly:729563136:google_system_dynamic_partitions_a --image system_a=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_system_image/android_common/system.img --partition system_b:readonly:4399104:google_system_dynamic_partitions_b --image system_b=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_system_other_image/android_common/system_other.img --partition system_ext_a:readonly:257482752:google_system_dynamic_partitions_a --image system_ext_a=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_system_ext_image/android_common/system_ext.img --partition system_ext_b:readonly:0:google_system_dynamic_partitions_b --partition system_dlkm_a:readonly:8359936:google_system_dynamic_partitions_a --image system_dlkm_a=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_system_dlkm_image/android_common/system_dlkm.img --partition system_dlkm_b:readonly:0:google_system_dynamic_partitions_b --group google_vendor_dynamic_partitions_a:1472200704 --group google_vendor_dynamic_partitions_b:1472200704 --partition odm_a:readonly:471040:google_vendor_dynamic_partitions_a --image odm_a=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_odm_image/android_common/odm.img --partition odm_b:readonly:0:google_vendor_dynamic_partitions_b --partition vendor_a:readonly:303558656:google_vendor_dynamic_partitions_a --image vendor_a=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_vendor_image/android_common/vendor.img --partition vendor_b:readonly:0:google_vendor_dynamic_partitions_b --partition vendor_dlkm_a:readonly:1441792:google_vendor_dynamic_partitions_a --image vendor_dlkm_a=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_vendor_dlkm_image/android_common/vendor_dlkm.img --partition vendor_dlkm_b:readonly:0:google_vendor_dynamic_partitions_b --partition odm_dlkm_a:readonly:348160:google_vendor_dynamic_partitions_a --image odm_dlkm_a=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_odm_dlkm_image/android_common/odm_dlkm.img --partition odm_dlkm_b:readonly:0:google_vendor_dynamic_partitions_b --sparse --output out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_super_image/android_common/super.img"
+2026-10-30 22:19:03 - common.py - INFO    : 10-30 22:19:02.007  2771  2771 I lpmake  : builder.cpp:1027 [liblp] Partition product_a will resize from 0 bytes to 250114048 bytes
+10-30 22:19:02.007  2771  2771 I lpmake  : builder.cpp:1027 [liblp] Partition system_a will resize from 0 bytes to 729563136 bytes
+10-30 22:19:02.007  2771  2771 I lpmake  : builder.cpp:1027 [liblp] Partition system_b will resize from 0 bytes to 4399104 bytes
+10-30 22:19:02.007  2771  2771 I lpmake  : builder.cpp:1027 [liblp] Partition system_ext_a will resize from 0 bytes to 257482752 bytes
+10-30 22:19:02.007  2771  2771 I lpmake  : builder.cpp:1027 [liblp] Partition system_dlkm_a will resize from 0 bytes to 8359936 bytes
+10-30 22:19:02.007  2771  2771 I lpmake  : builder.cpp:1027 [liblp] Partition odm_a will resize from 0 bytes to 471040 bytes
+10-30 22:19:02.007  2771  2771 I lpmake  : builder.cpp:1027 [liblp] Partition vendor_a will resize from 0 bytes to 303558656 bytes
+10-30 22:19:02.007  2771  2771 I lpmake  : builder.cpp:1027 [liblp] Partition vendor_dlkm_a will resize from 0 bytes to 1441792 bytes
+10-30 22:19:02.007  2771  2771 I lpmake  : builder.cpp:1027 [liblp] Partition odm_dlkm_a will resize from 0 bytes to 348160 bytes
+Invalid sparse file format at header magic
+Invalid sparse file format at header magic
+Invalid sparse file format at header magic
+Invalid sparse file format at header magic
+Invalid sparse file format at header magic
+Invalid sparse file format at header magic
+Invalid sparse file format at header magic
+Invalid sparse file format at header magic
+Invalid sparse file format at header magic
+2026-10-30 22:19:03 - build_super_image.py - INFO    : Done writing image out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_super_image/android_common/super.img
+[ 41% 145/347 7s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.resolv
+[ 42% 146/347 7s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.uprobestats
+[ 42% 147/347 7s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.tetheroffload
+[ 42% 148/347 7s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_image Installed file list json [common]
+[ 42% 149/347 7s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.gralloc
+[ 43% 150/347 7s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.i18n
+[ 43% 151/347 7s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.devicelock
+[ 43% 152/347 6s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.authsecret
+[ 44% 153/347 6s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.cas
+[ 44% 154/347 6s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.profiling
+[ 44% 155/347 6s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.tzdata
+[ 44% 156/347 6s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.security.secretkeeper
+[ 45% 157/347 6s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.os.statsd
+[ 45% 158/347 6s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.graphics.composer.drm_hwcomposer
+[ 45% 159/347 6s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.healthfitness
+[ 46% 160/347 6s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.boot
+[ 46% 161/347 6s remaining] cp out/target/product/vsoc_x86_64_only/super.img
+[ 46% 162/347 6s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.contexthub
+[ 46% 163/347 5s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.secure_element
+[ 47% 164/347 5s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.oemlock
+[ 47% 165/347 5s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.power
+[ 47% 166/347 5s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.gatekeeper.nonsecure
+[ 48% 167/347 5s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.scheduling
+[ 48% 168/347 5s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.net.nlinterceptor
+[ 48% 169/347 5s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.drm.clearkey
+[ 48% 170/347 5s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.vibrator
+[ 49% 171/347 5s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.wpa_supplicant
+[ 49% 172/347 5s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_image Installed file list json [common]
+[ 49% 173/347 5s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.memtrack
+[ 50% 174/347 5s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_ext_image Installed file list json [common]
+[ 50% 175/347 5s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device Check partition sizes
+2026-10-30 22:19:06 - check_partition_sizes.py - INFO    : sum of sizes of ['odm', 'odm_dlkm', 'product', 'system', 'system_dlkm', 'system_ext', 'vendor', 'vendor_dlkm', 'system_other'] is less than or equal to BOARD_SUPER_PARTITION_SIZE:
+471040+348160+250114048+729563136+8359936+257482752+303558656+1441792+4399104 == 1555738624 <= 8589934592 == 8589934592
+2026-10-30 22:19:06 - check_partition_sizes.py - INFO    : sum of sizes of ['odm', 'odm_dlkm', 'product', 'system', 'system_dlkm', 'system_ext', 'vendor', 'vendor_dlkm', 'system_other'] is less than or equal to BOARD_SUPER_PARTITION_ERROR_LIMIT:
+471040+348160+250114048+729563136+8359936+257482752+303558656+1441792+4399104 == 1555738624 <= 8589934592 == 8589934592
+2026-10-30 22:19:06 - check_partition_sizes.py - INFO    : sum of sizes of ['odm', 'odm_dlkm', 'product', 'system', 'system_dlkm', 'system_ext', 'vendor', 'vendor_dlkm', 'system_other'] is less than or equal to BOARD_SUPER_PARTITION_WARN_LIMIT:
+471040+348160+250114048+729563136+8359936+257482752+303558656+1441792+4399104 == 1555738624 <= 8160437862 == 8160437862
+2026-10-30 22:19:06 - check_partition_sizes.py - INFO    : sum of sizes of ['product', 'system', 'system_ext', 'system_dlkm'] is less than or equal to BOARD_google_system_dynamic_partitions_SIZE:
+250114048+729563136+257482752+8359936 == 1245519872 <= 6845104128 == 6845104128
+2026-10-30 22:19:06 - check_partition_sizes.py - INFO    : sum of sizes of ['odm', 'vendor', 'vendor_dlkm', 'odm_dlkm'] is less than or equal to BOARD_google_vendor_dynamic_partitions_SIZE:
+471040+303558656+1441792+348160 == 305819648 <= 1472200704 == 1472200704
+2026-10-30 22:19:06 - check_partition_sizes.py - INFO    : sum of sizes of ['google_system_dynamic_partitions', 'google_vendor_dynamic_partitions'] is less than BOARD_SUPER_PARTITION_SIZE:
+6845104128+1472200704 == 8317304832 < 8589934592 == 8589934592
+2026-10-30 22:19:06 - check_partition_sizes.py - INFO    : sum of sizes of ['google_system_dynamic_partitions', 'google_vendor_dynamic_partitions'] plus 1M metadata is less than or equal to BOARD_SUPER_PARTITION_SIZE:
+6845104128+1472200704+1048576 == 8318353408 <= 8589934592 == 8589934592
+[ 50% 176/347 5s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_userdata_image Creating filesystem aosp_cf_x86_64_only_phone_generated_userdata_image [common]
+[ 51% 177/347 5s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.input.processor
+[ 51% 178/347 4s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_image Construct system partition root dir [common]
+[ 51% 179/347 4s remaining] //.:aosp_cf_x86_64_only_phone_generated_vbmeta_image vbmeta aosp_cf_x86_64_only_phone_generated_vbmeta_image [common]
+[ 51% 180/347 4s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.sdkext
+[ 52% 181/347 4s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.keymint.rust_cf_guest_trusty_nonsecure
+[ 52% 182/347 4s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_dlkm_image Installed file list json [common]
+[ 52% 183/347 4s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_image Installed file list json [common]
+[ 53% 184/347 4s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_userdata_image Installed file list json [common]
+[ 53% 185/347 4s remaining] //.:aosp_cf_x86_64_only_phone_generated_vbmeta_vendor_dlkm_image vbmeta aosp_cf_x86_64_only_phone_generated_vbmeta_vendor_dlkm_image [common]
+[ 53% 186/347 4s remaining] //.:aosp_cf_x86_64_only_phone_generated_vbmeta_system_image vbmeta aosp_cf_x86_64_only_phone_generated_vbmeta_system_image [common]
+[ 53% 187/347 4s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_other_image Installed file list json [common]
+[ 54% 188/347 4s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_dlkm_image Installed file list json [common]
+[ 54% 189/347 4s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_odm_dlkm_image Installed file list json [common]
+[ 54% 190/347 4s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.biometrics.fingerprint.virtual
+[ 55% 191/347 4s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_image Installed file list txt [common]
+[ 55% 192/347 4s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.disabled
+[ 55% 193/347 4s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_dlkm_image Installed file list txt [common]
+[ 55% 194/347 4s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_odm_image Installed file list json [common]
+[ 56% 195/347 4s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_userdata_image Installed file list txt [common]
+[ 56% 196/347 4s remaining] cp out/target/product/vsoc_x86_64_only/system.img
+[ 56% 197/347 4s remaining] cp out/target/product/vsoc_x86_64_only/system_ext.img
+[ 57% 198/347 4s remaining] cp out/target/product/vsoc_x86_64_only/vendor.img
+[ 57% 199/347 4s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-root.txt
+[ 57% 200/347 4s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-system_dlkm.txt
+[ 57% 201/347 4s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-userdata.txt
+[ 58% 202/347 4s remaining] cp out/target/product/vsoc_x86_64_only/system_dlkm.img
+[ 58% 203/347 4s remaining] //.:aosp_cf_x86_64_only_phone_generated_vbmeta_system_dlkm_image vbmeta aosp_cf_x86_64_only_phone_generated_vbmeta_system_dlkm_image [common]
+[ 58% 204/347 4s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/SatelliteClient.jar.fsv_meta
+[ 59% 205/347 4s remaining] cp out/target/product/vsoc_x86_64_only/product.img
+[ 59% 206/347 4s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_odm_dlkm_image Installed file list txt [common]
+[ 59% 207/347 4s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_other_image Installed file list txt [common]
+[ 59% 208/347 4s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-system_ext.json
+[ 60% 209/347 4s remaining] cp out/target/product/vsoc_x86_64_only/system_other.img
+[ 60% 210/347 4s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/androidx.window.extensions.jar.fsv_meta
+[ 60% 211/347 4s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/oat/x86_64/SatelliteClient.odex.fsv_meta
+[ 61% 212/347 4s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/oat/x86_64/SatelliteClient.vdex.fsv_meta
+[ 61% 213/347 4s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_dlkm_image Installed file list txt [common]
+[ 61% 214/347 4s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/oat/x86_64/androidx.window.extensions.odex.fsv_meta
+[ 61% 215/347 4s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/oat/x86_64/androidx.window.extensions.vdex.fsv_meta
+[ 62% 216/347 4s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_image Installed file list txt [common]
+[ 62% 217/347 4s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/oat/x86_64/androidx.window.sidecar.odex.fsv_meta
+[ 62% 218/347 4s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/oat/x86_64/androidx.window.sidecar.vdex.fsv_meta
+[ 63% 219/347 4s remaining] cp 'out/target/product/vsoc_x86_64_only/system_ext/framework/oat/x86_64/apex@com.android.compos@javalib@service-compos.jar@classes.odex.fsv_meta'
+[ 63% 220/347 4s remaining] cp 'out/target/product/vsoc_x86_64_only/system_ext/framework/oat/x86_64/apex@com.android.compos@javalib@service-compos.jar@classes.vdex.fsv_meta'
+[ 63% 221/347 4s remaining] cp out/target/product/vsoc_x86_64_only/odm.img
+[ 63% 222/347 4s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-odm_dlkm.json
+[ 64% 223/347 4s remaining] cp out/target/product/vsoc_x86_64_only/odm_dlkm.img
+[ 64% 224/347 4s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-odm_dlkm.txt
+[ 64% 225/347 4s remaining] cp out/target/product/vsoc_x86_64_only/installed-files.json
+[ 65% 226/347 4s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-root.json
+[ 65% 227/347 4s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_image Installed file list txt [common]
+[ 65% 228/347 4s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_ext_image Installed file list txt [common]
+[ 65% 229/347 4s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-system_dlkm.json
+[ 66% 230/347 4s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-system-other.txt
+[ 66% 231/347 4s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-userdata.json
+[ 66% 232/347 4s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/androidx.window.sidecar.jar.fsv_meta
+[ 67% 233/347 4s remaining] cp out/target/product/vsoc_x86_64_only/installed-files.txt
+[ 67% 234/347 4s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-system_ext.txt
+[ 67% 235/347 4s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/com.android.extensions.appfunctions.jar.fsv_meta
+[ 68% 236/347 4s remaining] cp out/target/product/vsoc_x86_64_only/vbmeta_system.img
+[ 68% 237/347 4s remaining] cp out/target/product/vsoc_x86_64_only/vendor_dlkm.img
+[ 68% 238/347 4s remaining] cp out/target/product/vsoc_x86_64_only/vbmeta_system_dlkm.img
+[ 68% 239/347 4s remaining] cp out/target/product/vsoc_x86_64_only/vbmeta_vendor_dlkm.img
+[ 69% 240/347 4s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-odm.json
+[ 69% 241/347 4s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-product.json
+[ 69% 242/347 4s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-system-other.json
+[ 70% 243/347 4s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-vendor.json
+[ 70% 244/347 4s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-vendor.txt
+[ 70% 245/347 4s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-vendor_dlkm.json
+[ 70% 246/347 4s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_odm_image Installed file list txt [common]
+[ 71% 247/347 4s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_product_image Installed file list txt [common]
+[ 71% 248/347 4s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-vendor_dlkm.txt
+[ 71% 249/347 4s remaining] cp out/target/product/vsoc_x86_64_only/vbmeta.img
+[ 72% 250/347 3s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-odm.txt
+[ 72% 251/347 3s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-product.txt
+[ 72% 252/347 3s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.crashrecovery
+[ 72% 253/347 3s remaining] cp out/target/product/vsoc_x86_64_only/userdata.img
+[ 73% 254/347 3s remaining] run apex_sepolicy_tests
+[ 73% 255/347 3s remaining] run apex_sepolicy_tests
+[ 73% 256/347 3s remaining] run apex_sepolicy_tests
+[ 74% 257/347 3s remaining] run apex_sepolicy_tests
+[ 74% 258/347 3s remaining] touch out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_device/android_x86_64_silvermont/product_out_copy_timestamp
+[ 74% 259/347 3s remaining] touch out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_device/android_x86_64_silvermont/all_images_stamp
+[ 74% 260/347 3s remaining] run apex_sepolicy_tests
+[ 75% 261/347 3s remaining] run apex_sepolicy_tests
+[ 75% 262/347 3s remaining] run apex_sepolicy_tests
+[ 75% 263/347 3s remaining] run apex_sepolicy_tests
+[ 76% 264/347 3s remaining] run apex_sepolicy_tests
+[ 76% 265/347 3s remaining] run apex_sepolicy_tests
+[ 76% 266/347 3s remaining] run apex_sepolicy_tests
+[ 76% 267/347 2s remaining] run apex_sepolicy_tests
+[ 77% 268/347 2s remaining] run apex_sepolicy_tests
+[ 77% 269/347 2s remaining] run apex_sepolicy_tests
+[ 77% 270/347 2s remaining] run apex_sepolicy_tests
+[ 78% 271/347 2s remaining] run apex_sepolicy_tests
+[ 78% 272/347 2s remaining] run apex_sepolicy_tests
+[ 78% 273/347 2s remaining] run apex_sepolicy_tests
+[ 78% 274/347 2s remaining] run apex_sepolicy_tests
+[ 79% 275/347 1s remaining] run apex_sepolicy_tests
+[ 79% 276/347 1s remaining] run apex_sepolicy_tests
+[ 79% 277/347 1s remaining] run apex_sepolicy_tests
+[ 80% 278/347 1s remaining] run apex_sepolicy_tests
+[ 80% 279/347 1s remaining] run apex_sepolicy_tests
+[ 80% 280/347 1s remaining] run apex_sepolicy_tests
+[ 80% 281/347 1s remaining] run apex_sepolicy_tests
+[ 81% 282/347 1s remaining] run apex_sepolicy_tests
+[ 81% 283/347 1s remaining] run apex_sepolicy_tests
+[ 81% 284/347 0s remaining] run apex_sepolicy_tests
+[ 82% 285/347 0s remaining] run apex_sepolicy_tests
+[ 82% 286/347 0s remaining] run apex_sepolicy_tests
+[ 82% 287/347 0s remaining] run apex_sepolicy_tests
+[ 82% 288/347 0s remaining] run apex_sepolicy_tests
+[ 83% 289/347 0s remaining] run apex_sepolicy_tests
+[ 83% 290/347 0s remaining] run apex_sepolicy_tests
+[ 83% 291/347 0s remaining] run apex_sepolicy_tests
+[ 84% 292/347 0s remaining] run apex_sepolicy_tests
+[ 84% 293/347 0s remaining] run apex_sepolicy_tests
+[ 84% 294/347 0s remaining] run apex_sepolicy_tests
+[ 85% 295/347 0s remaining] run apex_sepolicy_tests
+[ 85% 296/347 0s remaining] run apex_sepolicy_tests
+[ 85% 297/347 0s remaining] run apex_sepolicy_tests
+[ 85% 298/347 0s remaining] run apex_sepolicy_tests
+[ 86% 299/347 0s remaining] run apex_sepolicy_tests
+[ 86% 300/347 0s remaining] run apex_sepolicy_tests
+[ 86% 301/347 0s remaining] run apex_sepolicy_tests
+[ 87% 302/347 0s remaining] run apex_sepolicy_tests
+[ 87% 303/347 0s remaining] run apex_sepolicy_tests
+[ 87% 304/347 0s remaining] run apex_sepolicy_tests
+[ 87% 305/347 0s remaining] run apex_sepolicy_tests
+[ 88% 306/347 0s remaining] run apex_sepolicy_tests
+[ 88% 307/347 0s remaining] run apex_sepolicy_tests
+[ 88% 308/347 0s remaining] run apex_sepolicy_tests
+[ 89% 309/347 0s remaining] run apex_sepolicy_tests
+[ 89% 310/347 0s remaining] run apex_sepolicy_tests
+[ 89% 311/347 0s remaining] run apex_sepolicy_tests
+[ 89% 312/347 0s remaining] run apex_sepolicy_tests
+[ 90% 313/347 0s remaining] run apex_sepolicy_tests
+[ 90% 314/347 0s remaining] run apex_sepolicy_tests
+[ 90% 315/347 0s remaining] run apex_sepolicy_tests
+[ 91% 316/347 0s remaining] run apex_sepolicy_tests
+[ 91% 317/347 0s remaining] run apex_sepolicy_tests
+[ 91% 318/347 0s remaining] run apex_sepolicy_tests
+[ 91% 319/347 0s remaining] run apex_sepolicy_tests
+[ 92% 320/347 0s remaining] run apex_sepolicy_tests
+[ 92% 321/347 0s remaining] run apex_sepolicy_tests
+[ 92% 322/347 0s remaining] run apex_sepolicy_tests
+[ 93% 323/347 0s remaining] run apex_sepolicy_tests
+[ 93% 324/347 0s remaining] run apex_sepolicy_tests
+[ 93% 325/347 0s remaining] run apex_sepolicy_tests
+[ 93% 326/347 0s remaining] run apex_sepolicy_tests
+[ 94% 327/347 0s remaining] run apex_sepolicy_tests
+[ 94% 328/347 0s remaining] run apex_sepolicy_tests
+[ 94% 329/347 0s remaining] run apex_sepolicy_tests
+[ 95% 330/347 0s remaining] run apex_sepolicy_tests
+[ 95% 331/347 0s remaining] run apex_sepolicy_tests
+[ 95% 332/347 0s remaining] run apex_sepolicy_tests
+[ 95% 333/347 0s remaining] run apex_sepolicy_tests
+[ 96% 334/347 0s remaining] run apex_sepolicy_tests
+[ 96% 335/347 0s remaining] run apex_sepolicy_tests
+[ 96% 336/347 0s remaining] run apex_sepolicy_tests
+[ 97% 337/347 0s remaining] run apex_sepolicy_tests
+[ 97% 338/347 0s remaining] run apex_sepolicy_tests
+[ 97% 339/347 0s remaining] run apex_sepolicy_tests
+[ 97% 340/347 0s remaining] run apex_sepolicy_tests
+[ 98% 341/347 0s remaining] run apex_sepolicy_tests
+[ 98% 342/347 0s remaining] run apex_sepolicy_tests
+[ 98% 343/347 0s remaining] run apex_sepolicy_tests
+[ 99% 344/347 0s remaining] run apex_sepolicy_tests
+[ 99% 345/347 0s remaining] run apex_sepolicy_tests
+[ 99% 346/347 0s remaining] run apex_sepolicy_tests
+[100% 347/347 0s remaining] run apex_sepolicy_tests
+
+#### build completed successfully (02:04 (mm:ss)) ####
+
