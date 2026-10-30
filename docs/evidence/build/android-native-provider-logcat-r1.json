@@ -1,0 +1,16 @@
+{
+  "command": [
+    "adb",
+    "-s",
+    "<allocated-target>",
+    "logcat",
+    "-d",
+    "--uid=10698",
+    "-t",
+    "400"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 0.654,
+  "stdout": "",
+  "stderr": ""
+}

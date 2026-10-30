@@ -1,0 +1,905 @@
+{
+  "schemaVersion": 1,
+  "evidenceClass": "python-reference-local-filesystem",
+  "timestampUtc": "2026-10-30T13:21:06.245753+00:00",
+  "baseCommit": "2a49ae3c15dafd0d3070bde74c48d2390f286538",
+  "sourceState": "working-tree; source SHA-256 recorded below",
+  "command": "python3 conformance/shared/run_reference.py --suite reference --output docs/evidence/build/crossplatform-qa-reference-final.json",
+  "environment": {
+    "python": "3.14.5",
+    "os": "Darwin",
+    "osRelease": "25.5.0",
+    "machine": "arm64"
+  },
+  "sourceSha256": {
+    "examples/fieldpack/fieldpack.py": "9f08480e7e875933c641de9c64c36e380031e14adf61af3efecada94fb926f36",
+    "examples/fieldpack/test_fieldpack.py": "14f6bb595e3e6db1d27738a96b0b7c48c8a3530010ccb216ef414d02d114f74a",
+    "conformance/shared/run_reference.py": "d67b65572ac993b52aba4a26b8a93deb3b5edfb0bf2b665fabe21bff6a440974",
+    "conformance/shared/digest-v1.json": "a2f30c893e26537d63c148366fd818c4f56fdd1e7d04f9aa0d771cf98c68aea6",
+    "conformance/shared/file-v1.json": "a3848b0fbcaab95a8f8b33922638f39dd33ba486bf5d46f966745ff6c64db879",
+    "conformance/shared/manifest-v1.json": "eed3bbe7280b03f731894a5695f45c1835c5fe5daec95824dcf45739601d23bb"
+  },
+  "tests_run": 174,
+  "tests_passed": 174,
+  "tests_failed": 0,
+  "tests_skipped": 0,
+  "coverage": null,
+  "coverageReason": "No coverage instrumentation run; test counts are not code coverage.",
+  "cases": [
+    {
+      "id": "test_fieldpack.FieldPackTests.test_cli_exit_codes",
+      "status": "passed",
+      "durationSeconds": 0.003619
+    },
+    {
+      "id": "test_fieldpack.FieldPackTests.test_count_and_total_caps",
+      "status": "passed",
+      "durationSeconds": 0.000781
+    },
+    {
+      "id": "test_fieldpack.FieldPackTests.test_failed_create_and_interrupt_leave_no_manifest",
+      "status": "passed",
+      "durationSeconds": 0.001617
+    },
+    {
+      "id": "test_fieldpack.FieldPackTests.test_known_vectors_and_deterministic_order",
+      "status": "passed",
+      "durationSeconds": 0.00069
+    },
+    {
+      "id": "test_fieldpack.FieldPackTests.test_match_tamper_missing_and_extra_scope",
+      "status": "passed",
+      "durationSeconds": 0.001206
+    },
+    {
+      "id": "test_fieldpack.FieldPackTests.test_name_policy",
+      "status": "passed",
+      "durationSeconds": 0.000895
+    },
+    {
+      "id": "test_fieldpack.FieldPackTests.test_output_is_external_atomic_and_does_not_overwrite",
+      "status": "passed",
+      "durationSeconds": 0.002759
+    },
+    {
+      "id": "test_fieldpack.FieldPackTests.test_read_error_and_mutation_close_descriptors",
+      "status": "passed",
+      "durationSeconds": 0.001406
+    },
+    {
+      "id": "test_fieldpack.FieldPackTests.test_real_binary_multichunk_and_bounded_reads",
+      "status": "passed",
+      "durationSeconds": 0.002064
+    },
+    {
+      "id": "test_fieldpack.FieldPackTests.test_replacement_after_read_is_detected",
+      "status": "passed",
+      "durationSeconds": 0.004
+    },
+    {
+      "id": "test_fieldpack.FieldPackTests.test_strict_manifest_negatives",
+      "status": "passed",
+      "durationSeconds": 0.001543
+    },
+    {
+      "id": "test_fieldpack.FieldPackTests.test_symlink_hardlink_fifo_and_root_symlink",
+      "status": "passed",
+      "durationSeconds": 0.001785
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_33_entries",
+      "status": "passed",
+      "durationSeconds": 0.000218
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_algorithm_0",
+      "status": "passed",
+      "durationSeconds": 0.000307
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_algorithm_1",
+      "status": "passed",
+      "durationSeconds": 8.6e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_algorithm_2",
+      "status": "passed",
+      "durationSeconds": 7.6e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_algorithm_3",
+      "status": "passed",
+      "durationSeconds": 7e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_bom",
+      "status": "passed",
+      "durationSeconds": 7e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_byte_cap_plus_one",
+      "status": "passed",
+      "durationSeconds": 9.6e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_deep_nesting",
+      "status": "passed",
+      "durationSeconds": 0.000284
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_digest_0",
+      "status": "passed",
+      "durationSeconds": 8e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_digest_1",
+      "status": "passed",
+      "durationSeconds": 6.7e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_digest_2",
+      "status": "passed",
+      "durationSeconds": 6.7e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_digest_3",
+      "status": "passed",
+      "durationSeconds": 6.6e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_digest_4",
+      "status": "passed",
+      "durationSeconds": 6.5e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_digest_5",
+      "status": "passed",
+      "durationSeconds": 6.6e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_digest_6",
+      "status": "passed",
+      "durationSeconds": 6.4e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_digest_7",
+      "status": "passed",
+      "durationSeconds": 0.000143
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_duplicate_alias",
+      "status": "passed",
+      "durationSeconds": 0.000103
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_duplicate_entry",
+      "status": "passed",
+      "durationSeconds": 0.000101
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_duplicate_escaped_key",
+      "status": "passed",
+      "durationSeconds": 7.9e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_duplicate_top",
+      "status": "passed",
+      "durationSeconds": 0.000115
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_entry_missing_name",
+      "status": "passed",
+      "durationSeconds": 0.000118
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_entry_missing_sha256",
+      "status": "passed",
+      "durationSeconds": 9.3e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_entry_missing_size",
+      "status": "passed",
+      "durationSeconds": 8e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_entry_unknown_field",
+      "status": "passed",
+      "durationSeconds": 7.3e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_exponent_size",
+      "status": "passed",
+      "durationSeconds": 7.2e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_files_0",
+      "status": "passed",
+      "durationSeconds": 6.4e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_files_1",
+      "status": "passed",
+      "durationSeconds": 6.3e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_files_2",
+      "status": "passed",
+      "durationSeconds": 6.2e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_files_3",
+      "status": "passed",
+      "durationSeconds": 6.1e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_files_4",
+      "status": "passed",
+      "durationSeconds": 6.8e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_format_0",
+      "status": "passed",
+      "durationSeconds": 6.3e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_format_1",
+      "status": "passed",
+      "durationSeconds": 0.000261
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_format_2",
+      "status": "passed",
+      "durationSeconds": 6.2e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_format_3",
+      "status": "passed",
+      "durationSeconds": 6.1e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_infinity",
+      "status": "passed",
+      "durationSeconds": 6.2e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_lone_surrogate",
+      "status": "passed",
+      "durationSeconds": 6.5e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_missing_algorithm",
+      "status": "passed",
+      "durationSeconds": 6.4e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_missing_files",
+      "status": "passed",
+      "durationSeconds": 6e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_missing_format",
+      "status": "passed",
+      "durationSeconds": 6.1e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_missing_version",
+      "status": "passed",
+      "durationSeconds": 6.1e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_0",
+      "status": "passed",
+      "durationSeconds": 6.3e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_1",
+      "status": "passed",
+      "durationSeconds": 6.9e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_10",
+      "status": "passed",
+      "durationSeconds": 6.2e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_11",
+      "status": "passed",
+      "durationSeconds": 6.2e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_12",
+      "status": "passed",
+      "durationSeconds": 6.2e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_13",
+      "status": "passed",
+      "durationSeconds": 6.2e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_14",
+      "status": "passed",
+      "durationSeconds": 6.1e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_15",
+      "status": "passed",
+      "durationSeconds": 6e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_16",
+      "status": "passed",
+      "durationSeconds": 5.8e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_17",
+      "status": "passed",
+      "durationSeconds": 5.8e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_18",
+      "status": "passed",
+      "durationSeconds": 6.1e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_19",
+      "status": "passed",
+      "durationSeconds": 6.2e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_2",
+      "status": "passed",
+      "durationSeconds": 6.3e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_20",
+      "status": "passed",
+      "durationSeconds": 6.5e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_21",
+      "status": "passed",
+      "durationSeconds": 0.000259
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_22",
+      "status": "passed",
+      "durationSeconds": 6.5e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_23",
+      "status": "passed",
+      "durationSeconds": 6.2e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_24",
+      "status": "passed",
+      "durationSeconds": 6.1e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_25",
+      "status": "passed",
+      "durationSeconds": 6e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_26",
+      "status": "passed",
+      "durationSeconds": 6e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_27",
+      "status": "passed",
+      "durationSeconds": 6e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_28",
+      "status": "passed",
+      "durationSeconds": 6e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_29",
+      "status": "passed",
+      "durationSeconds": 6e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_3",
+      "status": "passed",
+      "durationSeconds": 5.9e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_30",
+      "status": "passed",
+      "durationSeconds": 0.000107
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_31",
+      "status": "passed",
+      "durationSeconds": 0.000111
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_32",
+      "status": "passed",
+      "durationSeconds": 8.6e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_33",
+      "status": "passed",
+      "durationSeconds": 7.7e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_34",
+      "status": "passed",
+      "durationSeconds": 7.1e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_35",
+      "status": "passed",
+      "durationSeconds": 7.2e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_36",
+      "status": "passed",
+      "durationSeconds": 6.8e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_37",
+      "status": "passed",
+      "durationSeconds": 6.7e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_38",
+      "status": "passed",
+      "durationSeconds": 6.6e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_39",
+      "status": "passed",
+      "durationSeconds": 6.6e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_4",
+      "status": "passed",
+      "durationSeconds": 6.4e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_5",
+      "status": "passed",
+      "durationSeconds": 6.3e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_6",
+      "status": "passed",
+      "durationSeconds": 6.4e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_7",
+      "status": "passed",
+      "durationSeconds": 7.1e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_8",
+      "status": "passed",
+      "durationSeconds": 0.000284
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_name_9",
+      "status": "passed",
+      "durationSeconds": 6.5e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_nan",
+      "status": "passed",
+      "durationSeconds": 6.5e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_negative_infinity",
+      "status": "passed",
+      "durationSeconds": 0.000172
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_overlong_utf8",
+      "status": "passed",
+      "durationSeconds": 0.000114
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_size_0",
+      "status": "passed",
+      "durationSeconds": 8.8e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_size_1",
+      "status": "passed",
+      "durationSeconds": 7.4e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_size_2",
+      "status": "passed",
+      "durationSeconds": 6.8e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_size_3",
+      "status": "passed",
+      "durationSeconds": 7e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_size_4",
+      "status": "passed",
+      "durationSeconds": 6.6e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_size_5",
+      "status": "passed",
+      "durationSeconds": 6.6e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_size_6",
+      "status": "passed",
+      "durationSeconds": 6.4e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_size_7",
+      "status": "passed",
+      "durationSeconds": 6.5e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_size_8",
+      "status": "passed",
+      "durationSeconds": 6.5e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_top_type_0",
+      "status": "passed",
+      "durationSeconds": 6.1e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_top_type_1",
+      "status": "passed",
+      "durationSeconds": 6.3e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_top_type_2",
+      "status": "passed",
+      "durationSeconds": 5.9e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_top_type_3",
+      "status": "passed",
+      "durationSeconds": 5.8e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_top_type_4",
+      "status": "passed",
+      "durationSeconds": 5.8e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_top_unknown_field",
+      "status": "passed",
+      "durationSeconds": 6.2e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_total_limit_plus_one",
+      "status": "passed",
+      "durationSeconds": 7.1e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_trailing_comma",
+      "status": "passed",
+      "durationSeconds": 7.4e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_trailing_content",
+      "status": "passed",
+      "durationSeconds": 6.5e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_truncated",
+      "status": "passed",
+      "durationSeconds": 6.3e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_unsorted",
+      "status": "passed",
+      "durationSeconds": 0.000274
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_utf8",
+      "status": "passed",
+      "durationSeconds": 5.9e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_version_0",
+      "status": "passed",
+      "durationSeconds": 6.1e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_version_1",
+      "status": "passed",
+      "durationSeconds": 5.9e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_version_2",
+      "status": "passed",
+      "durationSeconds": 8.9e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_version_3",
+      "status": "passed",
+      "durationSeconds": 0.000125
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_version_4",
+      "status": "passed",
+      "durationSeconds": 7.8e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_version_5",
+      "status": "passed",
+      "durationSeconds": 6.8e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_version_6",
+      "status": "passed",
+      "durationSeconds": 6.5e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_invalid_version_7",
+      "status": "passed",
+      "durationSeconds": 6.4e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_valid_31_entries",
+      "status": "passed",
+      "durationSeconds": 0.000132
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_valid_32_entries",
+      "status": "passed",
+      "durationSeconds": 0.000107
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_valid_alias_63",
+      "status": "passed",
+      "durationSeconds": 2.2e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_valid_alias_64",
+      "status": "passed",
+      "durationSeconds": 2e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_valid_byte_cap",
+      "status": "passed",
+      "durationSeconds": 9.1e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_valid_byte_cap_minus_one",
+      "status": "passed",
+      "durationSeconds": 9.3e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_valid_empty_and_abc",
+      "status": "passed",
+      "durationSeconds": 2.1e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_valid_escaped_ascii",
+      "status": "passed",
+      "durationSeconds": 2.1e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_valid_file_limit",
+      "status": "passed",
+      "durationSeconds": 1.9e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_valid_file_limit_minus_one",
+      "status": "passed",
+      "durationSeconds": 1.8e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_valid_not_reserved",
+      "status": "passed",
+      "durationSeconds": 2.8e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_valid_object_key_order",
+      "status": "passed",
+      "durationSeconds": 2.3e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_valid_single_empty",
+      "status": "passed",
+      "durationSeconds": 1.8e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_valid_total_limit",
+      "status": "passed",
+      "durationSeconds": 2.2e-05
+    },
+    {
+      "id": "__main__.SharedManifestTests.test_valid_total_limit_minus_one",
+      "status": "passed",
+      "durationSeconds": 2.1e-05
+    },
+    {
+      "id": "__main__.SharedFileTests.test_directory",
+      "status": "passed",
+      "durationSeconds": 0.000789
+    },
+    {
+      "id": "__main__.SharedFileTests.test_empty",
+      "status": "passed",
+      "durationSeconds": 0.000348
+    },
+    {
+      "id": "__main__.SharedFileTests.test_fifo",
+      "status": "passed",
+      "durationSeconds": 0.000281
+    },
+    {
+      "id": "__main__.SharedFileTests.test_grown",
+      "status": "passed",
+      "durationSeconds": 0.000348
+    },
+    {
+      "id": "__main__.SharedFileTests.test_hardlink",
+      "status": "passed",
+      "durationSeconds": 0.001088
+    },
+    {
+      "id": "__main__.SharedFileTests.test_match_abc",
+      "status": "passed",
+      "durationSeconds": 0.000369
+    },
+    {
+      "id": "__main__.SharedFileTests.test_missing",
+      "status": "passed",
+      "durationSeconds": 0.000187
+    },
+    {
+      "id": "__main__.SharedFileTests.test_same_size_tamper",
+      "status": "passed",
+      "durationSeconds": 0.000301
+    },
+    {
+      "id": "__main__.SharedFileTests.test_symlink",
+      "status": "passed",
+      "durationSeconds": 0.000372
+    },
+    {
+      "id": "__main__.SharedFileTests.test_truncated",
+      "status": "passed",
+      "durationSeconds": 0.000347
+    },
+    {
+      "id": "__main__.SharedDigestTests.test_ascii_abc",
+      "status": "passed",
+      "durationSeconds": 0.000542
+    },
+    {
+      "id": "__main__.SharedDigestTests.test_ramp_0_0",
+      "status": "passed",
+      "durationSeconds": 0.000403
+    },
+    {
+      "id": "__main__.SharedDigestTests.test_ramp_0_1",
+      "status": "passed",
+      "durationSeconds": 0.000947
+    },
+    {
+      "id": "__main__.SharedDigestTests.test_ramp_0_134217728",
+      "status": "passed",
+      "durationSeconds": 0.204421
+    },
+    {
+      "id": "__main__.SharedDigestTests.test_ramp_0_65535",
+      "status": "passed",
+      "durationSeconds": 0.000986
+    },
+    {
+      "id": "__main__.SharedDigestTests.test_ramp_0_65536",
+      "status": "passed",
+      "durationSeconds": 0.000828
+    },
+    {
+      "id": "__main__.SharedDigestTests.test_ramp_0_65537",
+      "status": "passed",
+      "durationSeconds": 0.000555
+    },
+    {
+      "id": "__main__.SharedDigestTests.test_ramp_255_0",
+      "status": "passed",
+      "durationSeconds": 0.000426
+    },
+    {
+      "id": "__main__.SharedDigestTests.test_ramp_255_1",
+      "status": "passed",
+      "durationSeconds": 0.00052
+    },
+    {
+      "id": "__main__.SharedDigestTests.test_ramp_255_134217728",
+      "status": "passed",
+      "durationSeconds": 0.179632
+    },
+    {
+      "id": "__main__.SharedDigestTests.test_ramp_255_65535",
+      "status": "passed",
+      "durationSeconds": 0.001348
+    },
+    {
+      "id": "__main__.SharedDigestTests.test_ramp_255_65536",
+      "status": "passed",
+      "durationSeconds": 0.000703
+    },
+    {
+      "id": "__main__.SharedDigestTests.test_ramp_255_65537",
+      "status": "passed",
+      "durationSeconds": 0.000641
+    },
+    {
+      "id": "__main__.SharedDigestTests.test_ramp_9223372036854775807_0",
+      "status": "passed",
+      "durationSeconds": 0.000563
+    },
+    {
+      "id": "__main__.SharedDigestTests.test_ramp_9223372036854775807_1",
+      "status": "passed",
+      "durationSeconds": 0.000859
+    },
+    {
+      "id": "__main__.SharedDigestTests.test_ramp_9223372036854775807_134217728",
+      "status": "passed",
+      "durationSeconds": 0.235569
+    },
+    {
+      "id": "__main__.SharedDigestTests.test_ramp_9223372036854775807_65535",
+      "status": "passed",
+      "durationSeconds": 0.001121
+    },
+    {
+      "id": "__main__.SharedDigestTests.test_ramp_9223372036854775807_65536",
+      "status": "passed",
+      "durationSeconds": 0.001072
+    },
+    {
+      "id": "__main__.SharedDigestTests.test_ramp_9223372036854775807_65537",
+      "status": "passed",
+      "durationSeconds": 0.00074
+    },
+    {
+      "id": "__main__.SharedDigestTests.test_ramp__1_0",
+      "status": "passed",
+      "durationSeconds": 0.000738
+    },
+    {
+      "id": "__main__.SharedDigestTests.test_ramp__1_1",
+      "status": "passed",
+      "durationSeconds": 0.00058
+    },
+    {
+      "id": "__main__.SharedDigestTests.test_ramp__1_134217728",
+      "status": "passed",
+      "durationSeconds": 0.195053
+    },
+    {
+      "id": "__main__.SharedDigestTests.test_ramp__1_65535",
+      "status": "passed",
+      "durationSeconds": 0.000924
+    },
+    {
+      "id": "__main__.SharedDigestTests.test_ramp__1_65536",
+      "status": "passed",
+      "durationSeconds": 0.001243
+    },
+    {
+      "id": "__main__.SharedDigestTests.test_ramp__1_65537",
+      "status": "passed",
+      "durationSeconds": 0.000791
+    }
+  ],
+  "failures": [],
+  "limitations": [
+    "Reference local POSIX filesystem only; no Android/Flutter/Binder/JVM boundary execution.",
+    "Reference fault tests inject selected failures; no blocked provider or adversarial snapshot guarantee."
+  ]
+}

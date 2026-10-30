@@ -1,0 +1,12 @@
+READY pid=63110
+{"result":"SUCCEEDED","size":65537,"sha256":"a06f90a8ad95b4a8528baffc69f68729e941decadb1c352fcedf3942e0bf7278","hostPid":63110,"cliPid":63143}
+{"result":"CREATED","files":2,"hostPid":63110,"cliPid":63151}
+{"format":"fieldpack","version":1,"algorithm":"sha256","files":[{"name":"abc.txt","size":3,"sha256":"ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"},{"name":"empty.bin","size":0,"sha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}]}
+READY pid=63161
+{"scope":"manifest_entries_only","files":[{"name":"abc.txt","outcome":"MATCH"},{"name":"empty.bin","outcome":"MATCH"}],"hostPid":63161,"cliPid":63180}
+{"scope":"manifest_entries_only","files":[{"name":"abc.txt","outcome":"DIGEST_MISMATCH"},{"name":"empty.bin","outcome":"MATCH"}],"hostPid":63161,"cliPid":63191}
+Verification exit: 1 (expected 1; DIGEST_MISMATCH)
+{"scope":"manifest_entries_only","files":[{"name":"abc.txt","outcome":"SIZE_MISMATCH"},{"name":"empty.bin","outcome":"MATCH"}],"hostPid":63161,"cliPid":63204}
+Verification exit: 1 (expected 1; SIZE_MISMATCH)
+{"scope":"manifest_entries_only","files":[{"name":"abc.txt","outcome":"MISSING"},{"name":"empty.bin","outcome":"MATCH"}],"hostPid":63161,"cliPid":63214}
+Verification exit: 1 (expected 1; MISSING)

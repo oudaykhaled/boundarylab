@@ -1,0 +1,33 @@
+{
+  "transport": "explicit adb pull of owned phone files to separately supplied macOS recipient root; alias rename performed at destination",
+  "files": [
+    {
+      "source_name": "inspection-note.txt",
+      "recipient_alias": "attachment-001.bin",
+      "bytes": 181,
+      "sha256": "d31091d8d9ec0dff457b8f679c1a604aa418fb72f43b50590eda3a5a8929608f"
+    },
+    {
+      "source_name": "sensor-readings.csv",
+      "recipient_alias": "attachment-002.bin",
+      "bytes": 69,
+      "sha256": "a092da6fa3e3e9af96ad3984b81f904b80b9cbcaade5bea44cca68834bebea10"
+    }
+  ],
+  "verification": [
+    {
+      "implementation": "Python reference",
+      "manifest": "native-exported.fieldpack.json",
+      "exit_code": 0,
+      "stdout": "{\"scope\": \"manifest_entries_only\", \"files\": [{\"name\": \"attachment-001.bin\", \"outcome\": \"MATCH\"}, {\"name\": \"attachment-002.bin\", \"outcome\": \"MATCH\"}]}\n",
+      "stderr": ""
+    },
+    {
+      "implementation": "Python reference",
+      "manifest": "flutter-exported.fieldpack.json",
+      "exit_code": 0,
+      "stdout": "{\"scope\": \"manifest_entries_only\", \"files\": [{\"name\": \"attachment-001.bin\", \"outcome\": \"MATCH\"}, {\"name\": \"attachment-002.bin\", \"outcome\": \"MATCH\"}]}\n",
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,639 @@
+{
+  "schemaVersion": 1,
+  "evidenceClass": "actual-mobile-export-manual-recipient-two-JVM-processes",
+  "recordedAtUtc": "2026-10-30T13:59:42.436499+00:00",
+  "sourceCommit": "af6b3561e1ec799264719beede7a6d06e43aa2eb",
+  "runtimeArtifactsSha256": {
+    "desktop/host/build/native/libboundarylab_files.dylib": "008902320c9c0fcc93e3fdc4f3697911d9b50118255e713a89ac67dd458669cd",
+    "desktop/host/build/install/host/lib/annotations-13.0.jar": "ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478",
+    "desktop/host/build/install/host/lib/core-0.1.0-SNAPSHOT.jar": "5efb06809e65a87dfd0282cb41685996facb170f85c8a220afbcc7a30eede9c6",
+    "desktop/host/build/install/host/lib/host-0.1.0-SNAPSHOT.jar": "bab0d247f6ae625528e88a459faa41a38d84a6d6f0e30a793cee7366a963f15a",
+    "desktop/host/build/install/host/lib/kotlin-stdlib-2.2.21.jar": "6558a3d233da56a20934b32159f9db5f86ed5816ef098f78a2c223dc6abb79dd",
+    "desktop/cli/build/install/cli/lib/annotations-13.0.jar": "ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478",
+    "desktop/cli/build/install/cli/lib/cli-0.1.0-SNAPSHOT.jar": "0eb1728278c62f04c71285a4b2fd95d1d842f9680825800d2a456ac63fd1b94f",
+    "desktop/cli/build/install/cli/lib/core-0.1.0-SNAPSHOT.jar": "5efb06809e65a87dfd0282cb41685996facb170f85c8a220afbcc7a30eede9c6",
+    "desktop/cli/build/install/cli/lib/host-0.1.0-SNAPSHOT.jar": "bab0d247f6ae625528e88a459faa41a38d84a6d6f0e30a793cee7366a963f15a",
+    "desktop/cli/build/install/cli/lib/kotlin-stdlib-2.2.21.jar": "6558a3d233da56a20934b32159f9db5f86ed5816ef098f78a2c223dc6abb79dd"
+  },
+  "environment": {
+    "os": "26.5.1",
+    "architecture": "arm64",
+    "java": "openjdk version \"17.0.14\" 2025-01-21"
+  },
+  "provenance": {
+    "phoneTransferReceipt": "docs/evidence/build/android-to-macos-manual-transfer.json",
+    "inputs": "Actual owned attachments separately adb-pulled from phone by QA, copied byte-for-byte into private temporary recipient roots for these tests. Repository fixture originals were not substituted.",
+    "mobileManifestInputs": {
+      "native": "docs/evidence/build/native-exported.fieldpack.json",
+      "flutter": "docs/evidence/build/flutter-exported.fieldpack.json"
+    },
+    "sourceArtifactSha256Before": {
+      "docs/evidence/build/native-exported.fieldpack.json": "80558a687b642ed16d0a8443a3229ad5705fa462d4db21c1a34fbed11135df9f",
+      "docs/evidence/build/flutter-exported.fieldpack.json": "80558a687b642ed16d0a8443a3229ad5705fa462d4db21c1a34fbed11135df9f",
+      "docs/evidence/build/manual-recipient/attachment-001.bin": "d31091d8d9ec0dff457b8f679c1a604aa418fb72f43b50590eda3a5a8929608f",
+      "docs/evidence/build/manual-recipient/attachment-002.bin": "a092da6fa3e3e9af96ad3984b81f904b80b9cbcaade5bea44cca68834bebea10"
+    },
+    "sourceArtifactSha256After": {
+      "docs/evidence/build/native-exported.fieldpack.json": "80558a687b642ed16d0a8443a3229ad5705fa462d4db21c1a34fbed11135df9f",
+      "docs/evidence/build/flutter-exported.fieldpack.json": "80558a687b642ed16d0a8443a3229ad5705fa462d4db21c1a34fbed11135df9f",
+      "docs/evidence/build/manual-recipient/attachment-001.bin": "d31091d8d9ec0dff457b8f679c1a604aa418fb72f43b50590eda3a5a8929608f",
+      "docs/evidence/build/manual-recipient/attachment-002.bin": "a092da6fa3e3e9af96ad3984b81f904b80b9cbcaade5bea44cca68834bebea10"
+    },
+    "originalArtifactsUnchanged": true
+  },
+  "hostCommand": [
+    "JAVA_OPTS=-Dboundarylab.native.library=<REPO>/desktop/host/build/native/libboundarylab_files.dylib",
+    "desktop/host/build/install/host/bin/host",
+    "--socket",
+    "<PRIVATE_RUNTIME>/host.sock",
+    "--root",
+    "<RECIPIENT_ROOT>"
+  ],
+  "producerResults": [
+    {
+      "producer": "native",
+      "manifest": "docs/evidence/build/native-exported.fieldpack.json",
+      "manifestBytes": 299,
+      "manifestSha256": "80558a687b642ed16d0a8443a3229ad5705fa462d4db21c1a34fbed11135df9f",
+      "cases": [
+        {
+          "case": "unchanged",
+          "expectedFirstOutcome": "MATCH",
+          "jvm": {
+            "command": [
+              "desktop/cli/build/install/cli/bin/cli",
+              "verify",
+              "--socket",
+              "<PRIVATE_RUNTIME>/host.sock",
+              "--manifest",
+              "docs/evidence/build/native-exported.fieldpack.json"
+            ],
+            "exitCode": 0,
+            "output": {
+              "scope": "manifest_entries_only",
+              "files": [
+                {
+                  "name": "attachment-001.bin",
+                  "outcome": "MATCH"
+                },
+                {
+                  "name": "attachment-002.bin",
+                  "outcome": "MATCH"
+                }
+              ],
+              "hostPid": 46365,
+              "cliPid": 46375
+            }
+          },
+          "independentPythonReference": {
+            "command": [
+              "python3",
+              "examples/fieldpack/fieldpack.py",
+              "verify",
+              "--root",
+              "<RECIPIENT_ROOT>",
+              "--manifest",
+              "docs/evidence/build/native-exported.fieldpack.json"
+            ],
+            "exitCode": 0,
+            "output": {
+              "scope": "manifest_entries_only",
+              "files": [
+                {
+                  "name": "attachment-001.bin",
+                  "outcome": "MATCH"
+                },
+                {
+                  "name": "attachment-002.bin",
+                  "outcome": "MATCH"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "case": "same-length-changed",
+          "expectedFirstOutcome": "DIGEST_MISMATCH",
+          "jvm": {
+            "command": [
+              "desktop/cli/build/install/cli/bin/cli",
+              "verify",
+              "--socket",
+              "<PRIVATE_RUNTIME>/host.sock",
+              "--manifest",
+              "docs/evidence/build/native-exported.fieldpack.json"
+            ],
+            "exitCode": 1,
+            "output": {
+              "scope": "manifest_entries_only",
+              "files": [
+                {
+                  "name": "attachment-001.bin",
+                  "outcome": "DIGEST_MISMATCH"
+                },
+                {
+                  "name": "attachment-002.bin",
+                  "outcome": "MATCH"
+                }
+              ],
+              "hostPid": 46365,
+              "cliPid": 46389
+            }
+          },
+          "independentPythonReference": {
+            "command": [
+              "python3",
+              "examples/fieldpack/fieldpack.py",
+              "verify",
+              "--root",
+              "<RECIPIENT_ROOT>",
+              "--manifest",
+              "docs/evidence/build/native-exported.fieldpack.json"
+            ],
+            "exitCode": 1,
+            "output": {
+              "scope": "manifest_entries_only",
+              "files": [
+                {
+                  "name": "attachment-001.bin",
+                  "outcome": "DIGEST_MISMATCH"
+                },
+                {
+                  "name": "attachment-002.bin",
+                  "outcome": "MATCH"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "case": "truncated",
+          "expectedFirstOutcome": "SIZE_MISMATCH",
+          "jvm": {
+            "command": [
+              "desktop/cli/build/install/cli/bin/cli",
+              "verify",
+              "--socket",
+              "<PRIVATE_RUNTIME>/host.sock",
+              "--manifest",
+              "docs/evidence/build/native-exported.fieldpack.json"
+            ],
+            "exitCode": 1,
+            "output": {
+              "scope": "manifest_entries_only",
+              "files": [
+                {
+                  "name": "attachment-001.bin",
+                  "outcome": "SIZE_MISMATCH"
+                },
+                {
+                  "name": "attachment-002.bin",
+                  "outcome": "MATCH"
+                }
+              ],
+              "hostPid": 46365,
+              "cliPid": 46401
+            }
+          },
+          "independentPythonReference": {
+            "command": [
+              "python3",
+              "examples/fieldpack/fieldpack.py",
+              "verify",
+              "--root",
+              "<RECIPIENT_ROOT>",
+              "--manifest",
+              "docs/evidence/build/native-exported.fieldpack.json"
+            ],
+            "exitCode": 1,
+            "output": {
+              "scope": "manifest_entries_only",
+              "files": [
+                {
+                  "name": "attachment-001.bin",
+                  "outcome": "SIZE_MISMATCH"
+                },
+                {
+                  "name": "attachment-002.bin",
+                  "outcome": "MATCH"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "case": "missing",
+          "expectedFirstOutcome": "MISSING",
+          "jvm": {
+            "command": [
+              "desktop/cli/build/install/cli/bin/cli",
+              "verify",
+              "--socket",
+              "<PRIVATE_RUNTIME>/host.sock",
+              "--manifest",
+              "docs/evidence/build/native-exported.fieldpack.json"
+            ],
+            "exitCode": 1,
+            "output": {
+              "scope": "manifest_entries_only",
+              "files": [
+                {
+                  "name": "attachment-001.bin",
+                  "outcome": "MISSING"
+                },
+                {
+                  "name": "attachment-002.bin",
+                  "outcome": "MATCH"
+                }
+              ],
+              "hostPid": 46365,
+              "cliPid": 46410
+            }
+          },
+          "independentPythonReference": {
+            "command": [
+              "python3",
+              "examples/fieldpack/fieldpack.py",
+              "verify",
+              "--root",
+              "<RECIPIENT_ROOT>",
+              "--manifest",
+              "docs/evidence/build/native-exported.fieldpack.json"
+            ],
+            "exitCode": 1,
+            "output": {
+              "scope": "manifest_entries_only",
+              "files": [
+                {
+                  "name": "attachment-001.bin",
+                  "outcome": "MISSING"
+                },
+                {
+                  "name": "attachment-002.bin",
+                  "outcome": "MATCH"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "case": "symlink",
+          "expectedFirstOutcome": "UNREADABLE_OR_UNSUPPORTED",
+          "jvm": {
+            "command": [
+              "desktop/cli/build/install/cli/bin/cli",
+              "verify",
+              "--socket",
+              "<PRIVATE_RUNTIME>/host.sock",
+              "--manifest",
+              "docs/evidence/build/native-exported.fieldpack.json"
+            ],
+            "exitCode": 1,
+            "output": {
+              "scope": "manifest_entries_only",
+              "files": [
+                {
+                  "name": "attachment-001.bin",
+                  "outcome": "UNREADABLE_OR_UNSUPPORTED"
+                },
+                {
+                  "name": "attachment-002.bin",
+                  "outcome": "MATCH"
+                }
+              ],
+              "hostPid": 46365,
+              "cliPid": 46419
+            }
+          },
+          "independentPythonReference": {
+            "command": [
+              "python3",
+              "examples/fieldpack/fieldpack.py",
+              "verify",
+              "--root",
+              "<RECIPIENT_ROOT>",
+              "--manifest",
+              "docs/evidence/build/native-exported.fieldpack.json"
+            ],
+            "exitCode": 1,
+            "output": {
+              "scope": "manifest_entries_only",
+              "files": [
+                {
+                  "name": "attachment-001.bin",
+                  "outcome": "UNREADABLE_OR_UNSUPPORTED"
+                },
+                {
+                  "name": "attachment-002.bin",
+                  "outcome": "MATCH"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "hostPid": 46365,
+      "hostStopped": true,
+      "temporaryRecipientRemoved": true
+    },
+    {
+      "producer": "flutter",
+      "manifest": "docs/evidence/build/flutter-exported.fieldpack.json",
+      "manifestBytes": 299,
+      "manifestSha256": "80558a687b642ed16d0a8443a3229ad5705fa462d4db21c1a34fbed11135df9f",
+      "cases": [
+        {
+          "case": "unchanged",
+          "expectedFirstOutcome": "MATCH",
+          "jvm": {
+            "command": [
+              "desktop/cli/build/install/cli/bin/cli",
+              "verify",
+              "--socket",
+              "<PRIVATE_RUNTIME>/host.sock",
+              "--manifest",
+              "docs/evidence/build/flutter-exported.fieldpack.json"
+            ],
+            "exitCode": 0,
+            "output": {
+              "scope": "manifest_entries_only",
+              "files": [
+                {
+                  "name": "attachment-001.bin",
+                  "outcome": "MATCH"
+                },
+                {
+                  "name": "attachment-002.bin",
+                  "outcome": "MATCH"
+                }
+              ],
+              "hostPid": 46438,
+              "cliPid": 46447
+            }
+          },
+          "independentPythonReference": {
+            "command": [
+              "python3",
+              "examples/fieldpack/fieldpack.py",
+              "verify",
+              "--root",
+              "<RECIPIENT_ROOT>",
+              "--manifest",
+              "docs/evidence/build/flutter-exported.fieldpack.json"
+            ],
+            "exitCode": 0,
+            "output": {
+              "scope": "manifest_entries_only",
+              "files": [
+                {
+                  "name": "attachment-001.bin",
+                  "outcome": "MATCH"
+                },
+                {
+                  "name": "attachment-002.bin",
+                  "outcome": "MATCH"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "case": "same-length-changed",
+          "expectedFirstOutcome": "DIGEST_MISMATCH",
+          "jvm": {
+            "command": [
+              "desktop/cli/build/install/cli/bin/cli",
+              "verify",
+              "--socket",
+              "<PRIVATE_RUNTIME>/host.sock",
+              "--manifest",
+              "docs/evidence/build/flutter-exported.fieldpack.json"
+            ],
+            "exitCode": 1,
+            "output": {
+              "scope": "manifest_entries_only",
+              "files": [
+                {
+                  "name": "attachment-001.bin",
+                  "outcome": "DIGEST_MISMATCH"
+                },
+                {
+                  "name": "attachment-002.bin",
+                  "outcome": "MATCH"
+                }
+              ],
+              "hostPid": 46438,
+              "cliPid": 46458
+            }
+          },
+          "independentPythonReference": {
+            "command": [
+              "python3",
+              "examples/fieldpack/fieldpack.py",
+              "verify",
+              "--root",
+              "<RECIPIENT_ROOT>",
+              "--manifest",
+              "docs/evidence/build/flutter-exported.fieldpack.json"
+            ],
+            "exitCode": 1,
+            "output": {
+              "scope": "manifest_entries_only",
+              "files": [
+                {
+                  "name": "attachment-001.bin",
+                  "outcome": "DIGEST_MISMATCH"
+                },
+                {
+                  "name": "attachment-002.bin",
+                  "outcome": "MATCH"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "case": "truncated",
+          "expectedFirstOutcome": "SIZE_MISMATCH",
+          "jvm": {
+            "command": [
+              "desktop/cli/build/install/cli/bin/cli",
+              "verify",
+              "--socket",
+              "<PRIVATE_RUNTIME>/host.sock",
+              "--manifest",
+              "docs/evidence/build/flutter-exported.fieldpack.json"
+            ],
+            "exitCode": 1,
+            "output": {
+              "scope": "manifest_entries_only",
+              "files": [
+                {
+                  "name": "attachment-001.bin",
+                  "outcome": "SIZE_MISMATCH"
+                },
+                {
+                  "name": "attachment-002.bin",
+                  "outcome": "MATCH"
+                }
+              ],
+              "hostPid": 46438,
+              "cliPid": 46468
+            }
+          },
+          "independentPythonReference": {
+            "command": [
+              "python3",
+              "examples/fieldpack/fieldpack.py",
+              "verify",
+              "--root",
+              "<RECIPIENT_ROOT>",
+              "--manifest",
+              "docs/evidence/build/flutter-exported.fieldpack.json"
+            ],
+            "exitCode": 1,
+            "output": {
+              "scope": "manifest_entries_only",
+              "files": [
+                {
+                  "name": "attachment-001.bin",
+                  "outcome": "SIZE_MISMATCH"
+                },
+                {
+                  "name": "attachment-002.bin",
+                  "outcome": "MATCH"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "case": "missing",
+          "expectedFirstOutcome": "MISSING",
+          "jvm": {
+            "command": [
+              "desktop/cli/build/install/cli/bin/cli",
+              "verify",
+              "--socket",
+              "<PRIVATE_RUNTIME>/host.sock",
+              "--manifest",
+              "docs/evidence/build/flutter-exported.fieldpack.json"
+            ],
+            "exitCode": 1,
+            "output": {
+              "scope": "manifest_entries_only",
+              "files": [
+                {
+                  "name": "attachment-001.bin",
+                  "outcome": "MISSING"
+                },
+                {
+                  "name": "attachment-002.bin",
+                  "outcome": "MATCH"
+                }
+              ],
+              "hostPid": 46438,
+              "cliPid": 46478
+            }
+          },
+          "independentPythonReference": {
+            "command": [
+              "python3",
+              "examples/fieldpack/fieldpack.py",
+              "verify",
+              "--root",
+              "<RECIPIENT_ROOT>",
+              "--manifest",
+              "docs/evidence/build/flutter-exported.fieldpack.json"
+            ],
+            "exitCode": 1,
+            "output": {
+              "scope": "manifest_entries_only",
+              "files": [
+                {
+                  "name": "attachment-001.bin",
+                  "outcome": "MISSING"
+                },
+                {
+                  "name": "attachment-002.bin",
+                  "outcome": "MATCH"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "case": "symlink",
+          "expectedFirstOutcome": "UNREADABLE_OR_UNSUPPORTED",
+          "jvm": {
+            "command": [
+              "desktop/cli/build/install/cli/bin/cli",
+              "verify",
+              "--socket",
+              "<PRIVATE_RUNTIME>/host.sock",
+              "--manifest",
+              "docs/evidence/build/flutter-exported.fieldpack.json"
+            ],
+            "exitCode": 1,
+            "output": {
+              "scope": "manifest_entries_only",
+              "files": [
+                {
+                  "name": "attachment-001.bin",
+                  "outcome": "UNREADABLE_OR_UNSUPPORTED"
+                },
+                {
+                  "name": "attachment-002.bin",
+                  "outcome": "MATCH"
+                }
+              ],
+              "hostPid": 46438,
+              "cliPid": 46487
+            }
+          },
+          "independentPythonReference": {
+            "command": [
+              "python3",
+              "examples/fieldpack/fieldpack.py",
+              "verify",
+              "--root",
+              "<RECIPIENT_ROOT>",
+              "--manifest",
+              "docs/evidence/build/flutter-exported.fieldpack.json"
+            ],
+            "exitCode": 1,
+            "output": {
+              "scope": "manifest_entries_only",
+              "files": [
+                {
+                  "name": "attachment-001.bin",
+                  "outcome": "UNREADABLE_OR_UNSUPPORTED"
+                },
+                {
+                  "name": "attachment-002.bin",
+                  "outcome": "MATCH"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "hostPid": 46438,
+      "hostStopped": true,
+      "temporaryRecipientRemoved": true
+    }
+  ],
+  "limits": [
+    "Desktop recipient execution does not prove broker death mid-pack or fresh-attempt UI behavior.",
+    "This is explicit manual transfer, not automatic sync, authenticity or an atomic snapshot."
+  ],
+  "result": "PASS",
+  "counts": {
+    "producerManifests": 2,
+    "separateHostJvms": 2,
+    "separateCliJvms": 10,
+    "jvmVerificationCases": 10,
+    "independentPythonVerificationCases": 10,
+    "failures": 0
+  }
+}

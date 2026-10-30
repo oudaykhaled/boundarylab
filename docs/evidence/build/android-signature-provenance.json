@@ -1,0 +1,21 @@
+{
+  "signature_verification": "passed",
+  "distinct_signers": true,
+  "private_keys_published": false,
+  "artifacts": [
+    {
+      "apk": "android/broker/build/outputs/apk/debug/broker-debug.apk",
+      "apk_sha256": "902f4318e27e9df5fae1d881d35f426a3c8bb2dbe263867bb984cebe6ee21bbd",
+      "public_certificate_sha256": [
+        "6b9991b39b4ad0faef79f4db866e6b61492adf2391804df8dc6ea78eb9d15450"
+      ]
+    },
+    {
+      "apk": "android/denied-client/build/outputs/apk/debug/denied-client-debug.apk",
+      "apk_sha256": "4b2ed1aeffa1fc430cbadab7344c159b56536461c8ace42109796f8b6909ba12",
+      "public_certificate_sha256": [
+        "49c9863f50d2a00a4275ba6f5fbdfd54ecdfb19388deea61989c65eafc4d4156"
+      ]
+    }
+  ]
+}

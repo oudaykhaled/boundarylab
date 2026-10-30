@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-30",
+  "flutter": "3.38.9",
+  "dart": "3.10.8",
+  "evidenceClass": "local unit/widget and static analysis; no installed-runtime claim",
+  "checks": [
+    {
+      "check": "app-tests",
+      "exitCode": 0,
+      "command": "flutter test --reporter expanded",
+      "cwd": "examples/flutter",
+      "log": "app-tests.log"
+    },
+    {
+      "check": "plugin-tests",
+      "exitCode": 0,
+      "command": "flutter test --reporter expanded",
+      "cwd": "sdk/flutter",
+      "log": "plugin-tests.log"
+    },
+    {
+      "check": "analysis",
+      "exitCode": 0,
+      "command": "dart analyze examples/flutter sdk/flutter",
+      "cwd": ".",
+      "log": "analysis.log"
+    }
+  ],
+  "sourceSha256": {
+    "examples/flutter/lib/pack_controller.dart": "8237a2875e990630439f7eeb75dd828170fddb30e34d602715f4379224615deb",
+    "examples/flutter/test/widget_test.dart": "9ef3f85b3785921637e394dc91bc97d28bebb8368d3edc85a00ae465e9282a16",
+    "sdk/flutter/android/src/main/kotlin/dev/boundarylab/flutter/BoundaryLabPlugin.kt": "eca1a634dd7190e61bea9e7239ab95b93c07a12ca52b9861691649b09861528b"
+  }
+}

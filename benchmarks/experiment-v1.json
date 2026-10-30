@@ -1,0 +1,148 @@
+{
+  "schema": "boundarylab-experiment-v1",
+  "revision": 2,
+  "preregistered_at": "2026-10-30",
+  "status": "preregistered_not_executed",
+  "device": {
+    "class": "physical",
+    "manufacturer": "Samsung",
+    "model": "SM-A336B",
+    "api": 36,
+    "abi": "arm64-v8a",
+    "serial_published": false
+  },
+  "execution_prerequisites": [
+    "Pin tested source commit and APK checksums",
+    "Release APKs with identical optimization and documented compilation/profile state",
+    "Equal native positional reader and SHA-256 implementation for both treatments",
+    "Trace parity and trace-on/off pilot",
+    "Reserve 12\u201324 device-hours without competing test writers"
+  ],
+  "frameworks": [
+    "native",
+    "flutter"
+  ],
+  "treatments": [
+    "in_process",
+    "broker"
+  ],
+  "operations": [
+    "generated-sha256-v1",
+    "regular-file-sha256-v1"
+  ],
+  "file_size_cells": [
+    0,
+    1024,
+    1048576,
+    16777216,
+    134217728
+  ],
+  "file_window_sizes": [
+    1024,
+    1048576,
+    16777216
+  ],
+  "flutter_file_confirmation_sizes": [
+    1048576,
+    16777216
+  ],
+  "pack_cells": [
+    {
+      "entries": 32,
+      "bytes_per_entry": 1024
+    },
+    {
+      "entries": 32,
+      "bytes_per_entry": 4194304
+    }
+  ],
+  "correctness_only_invalid_cells": [
+    "134217729-byte file",
+    "134217729-byte aggregate pack",
+    "33-entry pack",
+    "symlink",
+    "hardlink",
+    "FIFO",
+    "directory"
+  ],
+  "startup_states": [
+    "process_cold",
+    "resident"
+  ],
+  "filesystem_cache_states": [
+    "prewarmed",
+    "uncontrolled"
+  ],
+  "pilot_pairs": 10,
+  "sessions": 3,
+  "load_windows_per_cell_per_session": 5,
+  "load_window_seconds": 60,
+  "concurrency_levels": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "memory_sessions": 3,
+  "memory_session_seconds": 1800,
+  "random_seed": 20261030,
+  "thermal_rule": {
+    "android_status_max": 1,
+    "battery_temperature_c_max": 38,
+    "cooldown_seconds_max": 900,
+    "preserve_excluded_trials": true,
+    "resume_after_two_safe_samples_seconds_apart": 30
+  },
+  "protected_metrics": {
+    "digest_mismatches_max": 0,
+    "leaked_logical_jobs_after_drain_max": 0,
+    "leaked_owned_descriptors_after_drain_max": 0,
+    "cancellation_p95_regression_fraction_max": 0.1,
+    "total_client_and_broker_pss_median_regression_fraction_max": 0.1
+  },
+  "claims": {
+    "universal_throughput_target": null,
+    "speedup": null,
+    "p99_requires_sample_count": 10000
+  },
+  "hypotheses": [
+    "Broker adds admission and observation latency for tiny jobs versus the same in-process reader/hash; quantify rather than assume benefit",
+    "A single shared worker bounds combined work across clients at concurrency 4 and 8; observe queue fairness, BUSY and cancellation without replacing blocked workers",
+    "File/provider cost differs from generated compute and must remain a separately attributed result"
+  ],
+  "fixed_arrival_overload": {
+    "arrival_rate": "freeze after pilot at twice measured completed jobs per second for the chosen fixed generated cell",
+    "duration_seconds": 60,
+    "sessions": 3,
+    "metrics": [
+      "offered",
+      "accepted",
+      "busy",
+      "completed",
+      "cancelled",
+      "deadline_expired",
+      "remaining_at_drain"
+    ]
+  },
+  "blockers": [
+    "M02 equal baseline and trace instrumentation not yet verified",
+    "Pilot calibration and reserved campaign window outstanding"
+  ],
+  "revision_reason": "Actual native/Flutter entrypoints lazy-bind. Default launch is a no-work baseline; interaction connection latency is a separate endpoint. No confirmatory measurements preceded revision.",
+  "launches_per_framework_per_state_per_session": 30,
+  "interactions_per_combination_per_session": 30,
+  "default_launch": {
+    "treatment": "no_work",
+    "assertion": "no broker bind/session/hash before explicit user action",
+    "compare_ipc_delta": false
+  },
+  "interaction_endpoints": [
+    "prepare_or_connect_to_ready_ms",
+    "submit_to_terminal_ms",
+    "submit_to_ui_observed_ms"
+  ],
+  "connection_state_required": [
+    "fresh",
+    "reused"
+  ]
+}

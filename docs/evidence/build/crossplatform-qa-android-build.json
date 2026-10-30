@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "evidenceClass": "host-unit-integration-tests",
+  "androidRuntimeExecuted": false,
+  "timestampUtc": "2026-10-30T13:17:05.638913+00:00",
+  "baseCommit": "2a49ae3c15dafd0d3070bde74c48d2390f286538",
+  "sourceState": "concurrently edited working tree; JUnit artifacts identify only this run",
+  "command": [
+    "./gradlew",
+    "--no-daemon",
+    "--console=plain",
+    ":examples:android-native:assembleDebug",
+    ":examples:android-native:assembleDebugAndroidTest",
+    ":examples:android-native:testDebugUnitTest",
+    ":examples:android-native:lintDebug",
+    ":android:broker:assembleDebug"
+  ],
+  "cwd": ".",
+  "exitCode": 1,
+  "timedOut": false,
+  "durationSeconds": 11.682,
+  "environment": {
+    "os": "Darwin",
+    "osRelease": "25.5.0",
+    "machine": "arm64"
+  },
+  "tests_run": 0,
+  "tests_passed": 0,
+  "tests_failed": 0,
+  "tests_skipped": 0,
+  "coverage": null,
+  "coverageReason": "No coverage instrumentation configured by this runner.",
+  "cases": [],
+  "junitArtifacts": [],
+  "log": "docs/evidence/build/crossplatform-qa-android-build.log",
+  "suiteCompleted": false
+}

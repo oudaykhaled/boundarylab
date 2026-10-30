@@ -1,6 +1,6 @@
 # Local progress board
 
-Sole writer: root/coordinating maintainer. This board tracks planning separately from product implementation. The native middleware is planned; the bounded Python reference is implemented and separately verified. The live delivery board is [GitHub Projects](https://github.com/users/oudaykhaled/projects/3).
+Sole writer: root/coordinating maintainer. This board preserves planning milestones separately from product implementation. Current implemented/runtime results and remaining acceptance are in the [execution board](BUILD-BOARD.md) and [ticket status](EXECUTION-STATUS.md). The live delivery board is [GitHub Projects](https://github.com/users/oudaykhaled/projects/3).
 
 | Work item | Owner | Status | Evidence | Blocker | Next step |
 |---|---|---|---|---|---|
@@ -12,7 +12,7 @@ Sole writer: root/coordinating maintainer. This board tracks planning separately
 | Animated presentation | root + Astra 01/04/10 | Created, reviewed and browser-checked | presentation/index.html; eight scenes; speaker notes | None | Presentation only; no product execution claimed |
 | Detailed backlog revision | root + ten Astra agents | Published and verified | 40 exact issue-body matches; 17 epics; 40 native sub-issue links; 78 prerequisites; live board totals 57 | None | Follow reviewed leaf readiness criteria |
 | FieldPack reference example | root + Astra 10 review | Published and fresh-checkout verified | Issue #21 Done; 12 tests; normal/optimized demos; independent AI review; clean-checkout.json | None | Native integration remains planned |
-| Native product implementation B01–B17 | proposed maintainer | Planned, not started | tickets-v2.json; native evidence absent | Separate implementation task and prerequisites | Start B01 only when implementation requested |
+| Native product implementation B01–B17 | Astra chief + four principal specialist teams | Implemented engineering prototype; full roadmap remains open | [Quality report](../docs/evidence/build/QUALITY.md); 393 host passes,31 physical passes/1 unavailable; five hosted lanes pass | Declared acceptance gaps and conditional AOSP host | Maintain [current ticket evidence](EXECUTION-STATUS.md) |
 | External review/adoption | independent people | No evidence | None | Genuine voluntary participation | Do not treat agents or self-authored samples as adopters |
 
-No installed native application, native middleware runtime verification, physical performance result or commercial shipment is asserted. The separately labeled Python reference has local execution evidence. Package-level owner, status, evidence, blocker and next step are in backlog.json. Root alone writes this board to avoid conflicting status claims.
+Installed native and Flutter middleware execution is evidenced in the scoped quality report. Controlled physical performance, AOSP build/boot, commercial shipment and external adoption remain unproven. `backlog.json` and the original ticket table are planning snapshots; `execution-status.json` records current task state. Root alone writes these boards to avoid conflicting status claims.

@@ -1,0 +1,138 @@
+{
+  "status": "assigned-host-verification-complete-runtime-parent-owned",
+  "timestampUtc": "2026-10-30T14:08:33.525686+00:00",
+  "androidDeviceActionsByThisAgent": false,
+  "suites": [
+    {
+      "label": "Python reference/shared conformance",
+      "receipt": "crossplatform-qa-reference-final.json",
+      "casePrefix": null,
+      "tests_run": 174,
+      "tests_passed": 174,
+      "tests_failed": 0,
+      "tests_skipped": 0
+    },
+    {
+      "label": "Benchmark analysis/schedule",
+      "receipt": "crossplatform-qa-benchmarks-final.json",
+      "casePrefix": null,
+      "tests_run": 9,
+      "tests_passed": 9,
+      "tests_failed": 0,
+      "tests_skipped": 0
+    },
+    {
+      "label": "Kotlin core",
+      "receipt": "crossplatform-qa-core-jvm-r3.json",
+      "casePrefix": "dev.boundarylab.core.",
+      "tests_run": 159,
+      "tests_passed": 159,
+      "tests_failed": 0,
+      "tests_skipped": 0
+    },
+    {
+      "label": "JVM host native/process tests",
+      "receipt": "crossplatform-qa-post-loss-android-desktop.json",
+      "casePrefix": "dev.boundarylab.desktop.",
+      "tests_run": 20,
+      "tests_passed": 20,
+      "tests_failed": 0,
+      "tests_skipped": 0,
+      "caseExcludePrefix": "dev.boundarylab.desktop.cli."
+    },
+    {
+      "label": "JVM CLI process tests",
+      "receipt": "crossplatform-qa-post-loss-android-desktop.json",
+      "casePrefix": "dev.boundarylab.desktop.cli.",
+      "tests_run": 11,
+      "tests_passed": 11,
+      "tests_failed": 0,
+      "tests_skipped": 0
+    },
+    {
+      "label": "Native app unit tests",
+      "receipt": "crossplatform-qa-post-loss-android-desktop.json",
+      "casePrefix": "dev.boundarylab.nativeapp.",
+      "tests_run": 5,
+      "tests_passed": 5,
+      "tests_failed": 0,
+      "tests_skipped": 0
+    },
+    {
+      "label": "Flutter app controller/widget tests",
+      "receipt": "crossplatform-qa-post-loss-flutter-owner-tests.json",
+      "casePrefix": null,
+      "tests_run": 11,
+      "tests_passed": 11,
+      "tests_failed": 0,
+      "tests_skipped": 0,
+      "executionProvenance": "Owner-executed expanded log; parsed by QA, not independently rerun."
+    },
+    {
+      "label": "Flutter SDK Dart channel tests",
+      "receipt": "crossplatform-qa-flutter-sdk.json",
+      "casePrefix": null,
+      "tests_run": 2,
+      "tests_passed": 2,
+      "tests_failed": 0,
+      "tests_skipped": 0
+    },
+    {
+      "label": "Flutter native strict-number unit tests",
+      "receipt": "crossplatform-qa-flutter-native-tests-final.json",
+      "casePrefix": null,
+      "tests_run": 2,
+      "tests_passed": 2,
+      "tests_failed": 0,
+      "tests_skipped": 0
+    }
+  ],
+  "finalSelectedCounts": {
+    "tests_run": 393,
+    "tests_passed": 393,
+    "tests_failed": 0,
+    "tests_skipped": 0
+  },
+  "coverage": null,
+  "coverageReason": "No coverage instrumenter executed; passing cases do not imply code coverage.",
+  "finalBuildReceipts": [
+    "crossplatform-qa-post-loss-android-desktop.json",
+    "crossplatform-qa-post-loss-flutter-apk.json",
+    "crossplatform-qa-post-loss-flutter-test-apk.json",
+    "crossplatform-qa-release-fixtures.json"
+  ],
+  "failedAttempts": [
+    {
+      "receipt": "crossplatform-qa-jvm.json",
+      "cause": "CLI test variable shadowed java package; test compile failed. Owner fixed."
+    },
+    {
+      "receipt": "crossplatform-qa-core-jvm.json",
+      "cause": "CLI main compiled to Void rather than Java-launchable void; 8 tests failed. Owner fixed."
+    },
+    {
+      "receipt": "crossplatform-qa-android-build.json",
+      "cause": "Denied probe preDebugBuild configuration timing. Owner fixed."
+    },
+    {
+      "receipt": "crossplatform-qa-android-build-r2.json",
+      "cause": "API26 declared while safety APIs require27/30. Binding supported minimum changed to30 across Android."
+    },
+    {
+      "receipt": "crossplatform-qa-android-final.json",
+      "cause": "Directory fixture referenced non-public O_DIRECTORY constant. Owner fixed to public Os.open."
+    }
+  ],
+  "limitations": [
+    "Host/controller/channel tests are not installed Android runtime evidence. Parent QA owns physical-device instrumentation, picker/export and handoff evidence.",
+    "JVM suites exercise real local native file adapter and separate JVM processes; no Windows or Linux execution claimed by this macOS run.",
+    "Flutter host tests use controlled gateways/channels; native strict-number unit tests are separate from MethodChannel device tests.",
+    "No perf campaign, blocked-provider interruption, atomic source snapshot, or code coverage measurement claimed.",
+    "Historical success snapshots are retained. FinalSelectedCounts chooses nonoverlapping test classes across final relevant receipts; do not sum all historical reports.",
+    "Latest broker test APK has20 authored cases; parent owns physical execution and explicit unsupported hardlink result. These are not included in host test counts."
+  ],
+  "executionProvenance": {
+    "directlyExecutedByCrossplatformQa": 382,
+    "ownerExecutedFlutterHostCasesWithPreservedLog": 11
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "command": [
+    "adb",
+    "-s",
+    "<allocated-target>",
+    "shell",
+    "am",
+    "instrument",
+    "-w",
+    "-r",
+    "-e",
+    "class",
+    "dev.boundarylab.nativeapp.FieldPackFlowTest#brokerDeathRequiresFreshEpochAndExplicitNewSubmission",
+    "dev.boundarylab.nativeclient.test/androidx.test.runner.AndroidJUnitRunner"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 1.188,
+  "stdout": "INSTRUMENTATION_STATUS: class=dev.boundarylab.nativeapp.FieldPackFlowTest\nINSTRUMENTATION_STATUS: current=1\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=1\nINSTRUMENTATION_STATUS: stream=\ndev.boundarylab.nativeapp.FieldPackFlowTest:\nINSTRUMENTATION_STATUS: test=brokerDeathRequiresFreshEpochAndExplicitNewSubmission\nINSTRUMENTATION_STATUS_CODE: 1\nINSTRUMENTATION_STATUS: class=dev.boundarylab.nativeapp.FieldPackFlowTest\nINSTRUMENTATION_STATUS: current=1\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=1\nINSTRUMENTATION_STATUS: stack=org.junit.ComparisonFailure: expected:<[LOST_OR_UNKNOWN]> but was:<[UNAVAILABLE]>\n\tat org.junit.Assert.assertEquals(Assert.java:117)\n\tat org.junit.Assert.assertEquals(Assert.java:146)\n\tat dev.boundarylab.nativeapp.FieldPackFlowTest.brokerDeathRequiresFreshEpochAndExplicitNewSubmission(FieldPackFlowTest.kt:168)\n\nINSTRUMENTATION_STATUS: stream=\nError in brokerDeathRequiresFreshEpochAndExplicitNewSubmission(dev.boundarylab.nativeapp.FieldPackFlowTest):\norg.junit.ComparisonFailure: expected:<[LOST_OR_UNKNOWN]> but was:<[UNAVAILABLE]>\n\tat org.junit.Assert.assertEquals(Assert.java:117)\n\tat org.junit.Assert.assertEquals(Assert.java:146)\n\tat dev.boundarylab.nativeapp.FieldPackFlowTest.brokerDeathRequiresFreshEpochAndExplicitNewSubmission(FieldPackFlowTest.kt:168)\n\nINSTRUMENTATION_STATUS: test=brokerDeathRequiresFreshEpochAndExplicitNewSubmission\nINSTRUMENTATION_STATUS_CODE: -2\nINSTRUMENTATION_RESULT: stream=\n\nTime: 0,163\nThere was 1 failure:\n1) brokerDeathRequiresFreshEpochAndExplicitNewSubmission(dev.boundarylab.nativeapp.FieldPackFlowTest)\norg.junit.ComparisonFailure: expected:<[LOST_OR_UNKNOWN]> but was:<[UNAVAILABLE]>\n\tat org.junit.Assert.assertEquals(Assert.java:117)\n\tat org.junit.Assert.assertEquals(Assert.java:146)\n\tat dev.boundarylab.nativeapp.FieldPackFlowTest.brokerDeathRequiresFreshEpochAndExplicitNewSubmission(FieldPackFlowTest.kt:168)\n\nFAILURES!!!\nTests run: 1,  Failures: 1\n\n\nINSTRUMENTATION_CODE: -1\n",
+  "stderr": "",
+  "target": "physical Samsung SM-A336B API36",
+  "evidence_class": "installed-device-instrumentation",
+  "tests": [
+    {
+      "class": "dev.boundarylab.nativeapp.FieldPackFlowTest",
+      "test": "brokerDeathRequiresFreshEpochAndExplicitNewSubmission",
+      "code": -2,
+      "status": "failed",
+      "stack": "org.junit.ComparisonFailure: expected:<[LOST_OR_UNKNOWN]> but was:<[UNAVAILABLE]>"
+    }
+  ],
+  "tests_run": 1,
+  "tests_passed": 0,
+  "tests_failed": 1,
+  "tests_skipped": 0,
+  "coverage": null,
+  "suite_completed": true
+}

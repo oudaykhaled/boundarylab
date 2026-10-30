@@ -1,0 +1,26 @@
+{
+  "command": [
+    "adb",
+    "-s",
+    "<allocated-target>",
+    "shell",
+    "am",
+    "instrument",
+    "-w",
+    "-r",
+    "dev.boundarylab.fieldpack_flutter.test/androidx.test.runner.AndroidJUnitRunner"
+  ],
+  "exit_code": 1,
+  "elapsed_seconds": 0.437,
+  "stdout": "onError: commandError=true message=INSTRUMENTATION_FAILED: dev.boundarylab.fieldpack_flutter.test/androidx.test.runner.AndroidJUnitRunner\nINSTRUMENTATION_STATUS: Error=Unable to find instrumentation info for: ComponentInfo{dev.boundarylab.fieldpack_flutter.test/androidx.test.runner.AndroidJUnitRunner}\nINSTRUMENTATION_STATUS: id=ActivityManagerService\nINSTRUMENTATION_STATUS_CODE: -1\n",
+  "stderr": "android.util.AndroidException: INSTRUMENTATION_FAILED: dev.boundarylab.fieldpack_flutter.test/androidx.test.runner.AndroidJUnitRunner\n\tat com.android.commands.am.Instrument.run(Instrument.java:543)\n\tat com.android.commands.am.Am.runInstrument(Am.java:213)\n\tat com.android.commands.am.Am.onRun(Am.java:85)\n\tat com.android.internal.os.BaseCommand.run(BaseCommand.java:63)\n\tat com.android.commands.am.Am.main(Am.java:54)\n\tat com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)\n\tat com.android.internal.os.RuntimeInit.main(RuntimeInit.java:410)\n",
+  "target": "physical Samsung SM-A336B API36",
+  "evidence_class": "installed-device-instrumentation",
+  "tests": [],
+  "tests_run": 0,
+  "tests_passed": 0,
+  "tests_failed": 0,
+  "tests_skipped": 0,
+  "coverage": null,
+  "suite_completed": false
+}

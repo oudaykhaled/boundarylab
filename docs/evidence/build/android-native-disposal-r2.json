@@ -1,0 +1,37 @@
+{
+  "command": [
+    "adb",
+    "-s",
+    "<allocated-target>",
+    "shell",
+    "am",
+    "instrument",
+    "-w",
+    "-r",
+    "-e",
+    "class",
+    "dev.boundarylab.nativeapp.FieldPackFlowTest#disposalClosesDescriptorAlreadyQueuedForMainDelivery",
+    "dev.boundarylab.nativeclient.test/androidx.test.runner.AndroidJUnitRunner"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 1.362,
+  "stdout": "INSTRUMENTATION_STATUS: class=dev.boundarylab.nativeapp.FieldPackFlowTest\nINSTRUMENTATION_STATUS: current=1\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=1\nINSTRUMENTATION_STATUS: stream=\ndev.boundarylab.nativeapp.FieldPackFlowTest:\nINSTRUMENTATION_STATUS: test=disposalClosesDescriptorAlreadyQueuedForMainDelivery\nINSTRUMENTATION_STATUS_CODE: 1\nINSTRUMENTATION_STATUS: class=dev.boundarylab.nativeapp.FieldPackFlowTest\nINSTRUMENTATION_STATUS: current=1\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=1\nINSTRUMENTATION_STATUS: stream=.\nINSTRUMENTATION_STATUS: test=disposalClosesDescriptorAlreadyQueuedForMainDelivery\nINSTRUMENTATION_STATUS_CODE: 0\nINSTRUMENTATION_RESULT: stream=\n\nTime: 0,63\n\nOK (1 test)\n\n\nINSTRUMENTATION_CODE: -1\n",
+  "stderr": "",
+  "target": "physical Samsung SM-A336B API36",
+  "evidence_class": "installed-device-instrumentation",
+  "tests": [
+    {
+      "class": "dev.boundarylab.nativeapp.FieldPackFlowTest",
+      "test": "disposalClosesDescriptorAlreadyQueuedForMainDelivery",
+      "code": 0,
+      "status": "passed",
+      "stack": null
+    }
+  ],
+  "tests_run": 1,
+  "tests_passed": 1,
+  "tests_failed": 0,
+  "tests_skipped": 0,
+  "coverage": null,
+  "suite_completed": true
+}

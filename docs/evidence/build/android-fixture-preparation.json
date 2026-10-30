@@ -1,0 +1,18 @@
+{
+  "scope": "owned synthetic fixtures staged for actual SAF selection, no picker execution yet",
+  "target": "allocated Samsung SM-A336B API36",
+  "remote_directory": "/sdcard/Download/BoundaryLab-20261030",
+  "files": [
+    {
+      "alias_at_source": "inspection-note.txt",
+      "size": 181,
+      "sha256": "d31091d8d9ec0dff457b8f679c1a604aa418fb72f43b50590eda3a5a8929608f"
+    },
+    {
+      "alias_at_source": "sensor-readings.csv",
+      "size": 69,
+      "sha256": "a092da6fa3e3e9af96ad3984b81f904b80b9cbcaade5bea44cca68834bebea10"
+    }
+  ],
+  "device_serial_published": false
+}

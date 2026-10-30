@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <queries><provider android:authorities="dev.boundarylab.nativeclient.test.delayed" /></queries>
+    <application>
+        <service android:name="dev.boundarylab.nativeapp.OwnerFixtureService"
+            android:exported="true" android:permission="dev.boundarylab.permission.BIND_BROKER" />
+    </application>
+</manifest>

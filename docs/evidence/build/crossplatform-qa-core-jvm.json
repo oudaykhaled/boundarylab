@@ -1,0 +1,1099 @@
+{
+  "schemaVersion": 1,
+  "evidenceClass": "host-unit-integration-tests",
+  "androidRuntimeExecuted": false,
+  "timestampUtc": "2026-10-30T13:18:45.816455+00:00",
+  "baseCommit": "2a49ae3c15dafd0d3070bde74c48d2390f286538",
+  "sourceState": "working tree; compare before/after source hashes for concurrent edits",
+  "sourceSha256Before": {
+    "core/build.gradle.kts": "ac5643a5fceee64f82c83c8ee1823c080233c2e5469a2c44b349d641f1629eea",
+    "core/src/main/kotlin/dev/boundarylab/core/PositionalSource.kt": "d6a492fe1e6b9b859b4f5f29a35489bce0ae26c76b7bfc5674edfde734dd4725",
+    "core/src/main/kotlin/dev/boundarylab/core/Models.kt": "878da64de8807d9d2fbceec6aa77a4167ec6979acddf82b3ff4acffd67ea93d5",
+    "core/src/main/kotlin/dev/boundarylab/core/CoreEngine.kt": "2f5c12615fcfd2b99c777a055ff8d4131e07a4a5d8b7aa3797441aa34f133320",
+    "core/src/main/kotlin/dev/boundarylab/core/FieldPack.kt": "01b3e0c575b04df1f8b89befd3654432ece071460f1e39c1f5f1bbf560d03b90",
+    "core/src/test/kotlin/dev/boundarylab/core/FieldPackTest.kt": "3f250c17cb08a037d95c9cb1ae6ca9f843228064c680b01c1af539a2e1b7b1b7",
+    "core/src/test/kotlin/dev/boundarylab/core/CoreEngineTest.kt": "c4330f07ffd1462aa77d034c5b13b56b3618146efb49aee583bdb9254950fe4c",
+    "desktop/host/build.gradle.kts": "9fb2475eb5b96d9f4c3556a30b4717b55e986872f62168502e4117b28a1a31fa",
+    "desktop/cli/build.gradle.kts": "3305038755b53f5c8d2bffbfb503a9d988cfaa241a5998739a90e38977fdf613",
+    "desktop/probe/CapabilityProbe.java": "d91d1c7e750671115b12ef5fa6c55beffa3b80ff86c26c03737152979a44eb5c",
+    "desktop/cli/src/main/kotlin/dev/boundarylab/desktop/cli/Main.kt": "737c8cb1f50a12890e2f1bdd95ccf7f8a97531cffc7e1d32442af980f16c4cd8",
+    "desktop/cli/src/test/kotlin/dev/boundarylab/desktop/cli/DesktopCliIntegrationTest.kt": "77908a8f965c3f7d3d1e6ca714d7012b1ab4d33611168e29b34971f8e162285d",
+    "desktop/host/src/main/c/native_files.c": "dff7979d32ee3151db416390a11d98b8559e70cad3a6906d6168a5340466f953",
+    "desktop/host/src/main/kotlin/dev/boundarylab/desktop/RootedFileProvider.kt": "cafa7436b6de35402af501bbe23268a540512322f53d0be3b0a9d6c408f2964d",
+    "desktop/host/src/main/kotlin/dev/boundarylab/desktop/Wire.kt": "59ade911c32f39ba324fc8b3edf65cd863279443cfe99f921a21b3b2fa14fdb6",
+    "desktop/host/src/main/kotlin/dev/boundarylab/desktop/DesktopClient.kt": "d6bbc0a99d6b11d0ca6516fb5db0ad37aa3fa9e9e3e3281ec52d8b530743b91f",
+    "desktop/host/src/main/kotlin/dev/boundarylab/desktop/Host.kt": "f52b105271d743d2808499acdf50212c216adca8c19bad351c6e82511602fee9",
+    "desktop/host/src/main/java/dev/boundarylab/desktop/NativeFiles.java": "b69bf1707207b19b00e90ecdebb466e13ef25d0897318af35d412886d54170aa",
+    "desktop/host/src/test/kotlin/dev/boundarylab/desktop/WireTest.kt": "d43da9946a04b904c05225340deb8fb0d23fb193dad07648c4d93978f603e2e6",
+    "desktop/host/src/test/kotlin/dev/boundarylab/desktop/HostProcessTest.kt": "c01bd56dfddbb70d13d7b5d9fdde402eb1e620422a4650faa3d81bbda1a9ed09",
+    "desktop/host/src/test/kotlin/dev/boundarylab/desktop/RootedFileProviderTest.kt": "1737e450337acc472df17d7f09391ba18aeb7f9ca0c323775209cde30d78ab42",
+    "android/broker/build.gradle.kts": "86075a355756ee5a56f6369c433dae7db1e91d3534f47ae54dbc6a0f8b81e3d8",
+    "android/denied-client/build.gradle.kts": "45198fb60926c51ec90944d7a1e7f51948fc7ec3d2ae3592e36c540cb9a51d97",
+    "android/denied-client/src/androidTest/java/dev/boundarylab/deniedclient/SignatureDenialTest.kt": "631e1f3416e789872f24d27a873dc11afe1f643114bd3fa8349bcd96001b2544",
+    "android/broker/src/main/kotlin/dev/boundarylab/broker/AndroidFileSource.kt": "c148ecbbc8dc83562b6f54ef72761062214cec15a8476bf88f1287dcc35e90b8",
+    "android/broker/src/main/kotlin/dev/boundarylab/broker/BoundaryBrokerService.kt": "70febf7f639f6e1e780efa554fcb8aba80c12dd81b611f7936b2f766589db44d",
+    "android/broker/src/androidTest/kotlin/dev/boundarylab/broker/AndroidFileSourceTest.kt": "a767c4a31d7af55abfd495333b3c01ebc02c846eee7a57d4912912d993ee07fa",
+    "sdk/kotlin/build.gradle.kts": "56a07184851fe4826aa1d5d436203ca00e06f72bd0f988e1c929656d5e4801c1",
+    "sdk/flutter/test/boundarylab_test.dart": "176a2a1b6030cf8470c6334e4427a212b3c8872d10ffc394cbaee32d302871cd",
+    "sdk/flutter/android/build.gradle": "4e45958c6535198710d2ec47645c9e3cbf8b268dc05b9ad19defee6f81111ca4",
+    "sdk/flutter/lib/boundarylab.dart": "44b9f0654b34174b121c9885429adb533335aa0e8e31f77f815e7d64d07efdfc",
+    "sdk/flutter/android/src/main/kotlin/dev/boundarylab/flutter/BoundaryLabPlugin.kt": "b398b7280171711381d010d3b3dcf16bd91b8baa9046fa71f917be504d6ff87b",
+    "sdk/kotlin/src/main/kotlin/dev/boundarylab/sdk/Models.kt": "3147fd80cfa3a3377d70057a64df39729bec9d5567ef304c45c937d744645639",
+    "sdk/kotlin/src/main/kotlin/dev/boundarylab/sdk/BoundaryClient.kt": "1fa24c94adc65c5145f56e8b92e8949da1143617e220b9f779c47d15ef83da20",
+    "examples/android-native/build.gradle.kts": "95c20ccd2a285ab6492e1a14b595e2890d486f47a1bc125e7b3365d67cc478dc",
+    "examples/android-native/src/main/java/dev/boundarylab/nativeapp/PackAttempt.kt": "9b3d59b8f4088077012d5c2ec4e3d138d01f7a3db04314209e4452caca070a70",
+    "examples/android-native/src/main/java/dev/boundarylab/nativeapp/MainActivity.kt": "573ffed9bc3d955baf7535b3a49103c694165a325f22451814c865cd23b6719e",
+    "examples/android-native/src/main/java/dev/boundarylab/nativeapp/PackController.kt": "4d8ee72287782c67216aabad7f938dfe7aa2306b26d8f85895d388a813d551b5",
+    "examples/android-native/src/test/java/dev/boundarylab/nativeapp/PackAttemptTest.kt": "fde44fa8b29c48f2f30eab1a3740ac0f00567cf8ee8900fc73523cc173204481",
+    "examples/android-native/src/androidTest/java/dev/boundarylab/nativeapp/FieldPackFlowTest.kt": "38ba438562ceeab3275ba90d4dc9f45985db61e1254de0336e4d8b090cb50ee4",
+    "examples/flutter/test/widget_test.dart": "5ed53a7ea0c4f6dfbaff3422be80629aac84f81483519dcf6898085813e99e48",
+    "examples/flutter/android/build.gradle.kts": "6a26dba2cb8dfba1e74f540b0d17a89d96c1301d3c3bfda14348bed257fddcba",
+    "examples/flutter/android/settings.gradle.kts": "2949274652a7d31a11a8797ff31df92003430e950ab6130454c6ec936e62ab9c",
+    "examples/flutter/lib/pack_controller.dart": "8f2987850e79235f42c4c714743867c312dc046bdb6a79c3e3179ddf6540b5f0",
+    "examples/flutter/lib/pack_screen.dart": "5c7c179845a67710757981ba70b1898191804b84f49d282d9610fb86339ac6f9",
+    "examples/flutter/lib/main.dart": "08201d431d8d2180102b18d6286d4ade71a1b87127f940db0d6658fcfd1b6a50",
+    "examples/flutter/lib/theme.dart": "b92069dc4d978bcb40768a0a5b114c2b54f2e89a04a9e5e74f3923edee770988",
+    "examples/flutter/android/app/build.gradle.kts": "948f14068bc0bd0c3e4e940a59107a043b98a40e7507f48818d30960f84a0ad2",
+    "examples/flutter/android/app/src/main/kotlin/dev/boundarylab/fieldpack_flutter/MainActivity.kt": "6c4f217ac74e8052b602bb4f46b18e18d292314c4e8f525d9f3096d349ca29c0",
+    "examples/flutter/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java": "d0f0459bf9e90162d72fceef19cca89b7eedd2a59421fe2ef55264121169ad2f",
+    "conformance/shared/manifest-v1.json": "eed3bbe7280b03f731894a5695f45c1835c5fe5daec95824dcf45739601d23bb",
+    "conformance/shared/build_vectors.py": "12c91f71c007496b4b1a692d59b4ada3146b4e1e9afab3d9f45253b23df92df2",
+    "conformance/shared/file-v1.json": "a3848b0fbcaab95a8f8b33922638f39dd33ba486bf5d46f966745ff6c64db879",
+    "conformance/shared/digest-v1.json": "a2f30c893e26537d63c148366fd818c4f56fdd1e7d04f9aa0d771cf98c68aea6",
+    "conformance/shared/run_reference.py": "d67b65572ac993b52aba4a26b8a93deb3b5edfb0bf2b665fabe21bff6a440974",
+    "conformance/shared/run_suite.py": "678dccfd4c73f6e8cbc5dce10c19320c2abf34d1fd9ea5d5195e223a38c50f60"
+  },
+  "sourceSha256After": {
+    "core/build.gradle.kts": "ac5643a5fceee64f82c83c8ee1823c080233c2e5469a2c44b349d641f1629eea",
+    "core/src/main/kotlin/dev/boundarylab/core/PositionalSource.kt": "d6a492fe1e6b9b859b4f5f29a35489bce0ae26c76b7bfc5674edfde734dd4725",
+    "core/src/main/kotlin/dev/boundarylab/core/Models.kt": "878da64de8807d9d2fbceec6aa77a4167ec6979acddf82b3ff4acffd67ea93d5",
+    "core/src/main/kotlin/dev/boundarylab/core/CoreEngine.kt": "2f5c12615fcfd2b99c777a055ff8d4131e07a4a5d8b7aa3797441aa34f133320",
+    "core/src/main/kotlin/dev/boundarylab/core/FieldPack.kt": "01b3e0c575b04df1f8b89befd3654432ece071460f1e39c1f5f1bbf560d03b90",
+    "core/src/test/kotlin/dev/boundarylab/core/FieldPackTest.kt": "3f250c17cb08a037d95c9cb1ae6ca9f843228064c680b01c1af539a2e1b7b1b7",
+    "core/src/test/kotlin/dev/boundarylab/core/CoreEngineTest.kt": "c4330f07ffd1462aa77d034c5b13b56b3618146efb49aee583bdb9254950fe4c",
+    "desktop/host/build.gradle.kts": "9fb2475eb5b96d9f4c3556a30b4717b55e986872f62168502e4117b28a1a31fa",
+    "desktop/cli/build.gradle.kts": "3305038755b53f5c8d2bffbfb503a9d988cfaa241a5998739a90e38977fdf613",
+    "desktop/probe/CapabilityProbe.java": "d91d1c7e750671115b12ef5fa6c55beffa3b80ff86c26c03737152979a44eb5c",
+    "desktop/cli/src/main/kotlin/dev/boundarylab/desktop/cli/Main.kt": "737c8cb1f50a12890e2f1bdd95ccf7f8a97531cffc7e1d32442af980f16c4cd8",
+    "desktop/cli/src/test/kotlin/dev/boundarylab/desktop/cli/DesktopCliIntegrationTest.kt": "77908a8f965c3f7d3d1e6ca714d7012b1ab4d33611168e29b34971f8e162285d",
+    "desktop/host/src/main/c/native_files.c": "dff7979d32ee3151db416390a11d98b8559e70cad3a6906d6168a5340466f953",
+    "desktop/host/src/main/kotlin/dev/boundarylab/desktop/RootedFileProvider.kt": "cafa7436b6de35402af501bbe23268a540512322f53d0be3b0a9d6c408f2964d",
+    "desktop/host/src/main/kotlin/dev/boundarylab/desktop/Wire.kt": "59ade911c32f39ba324fc8b3edf65cd863279443cfe99f921a21b3b2fa14fdb6",
+    "desktop/host/src/main/kotlin/dev/boundarylab/desktop/DesktopClient.kt": "cc53ce000fb8e07d5b3df744c0688be07a3512d3972e2421560ff2569973b3f3",
+    "desktop/host/src/main/kotlin/dev/boundarylab/desktop/Host.kt": "f52b105271d743d2808499acdf50212c216adca8c19bad351c6e82511602fee9",
+    "desktop/host/src/main/java/dev/boundarylab/desktop/NativeFiles.java": "b69bf1707207b19b00e90ecdebb466e13ef25d0897318af35d412886d54170aa",
+    "desktop/host/src/test/kotlin/dev/boundarylab/desktop/WireTest.kt": "d43da9946a04b904c05225340deb8fb0d23fb193dad07648c4d93978f603e2e6",
+    "desktop/host/src/test/kotlin/dev/boundarylab/desktop/HostProcessTest.kt": "c01bd56dfddbb70d13d7b5d9fdde402eb1e620422a4650faa3d81bbda1a9ed09",
+    "desktop/host/src/test/kotlin/dev/boundarylab/desktop/RootedFileProviderTest.kt": "1737e450337acc472df17d7f09391ba18aeb7f9ca0c323775209cde30d78ab42",
+    "android/broker/build.gradle.kts": "86075a355756ee5a56f6369c433dae7db1e91d3534f47ae54dbc6a0f8b81e3d8",
+    "android/denied-client/build.gradle.kts": "45198fb60926c51ec90944d7a1e7f51948fc7ec3d2ae3592e36c540cb9a51d97",
+    "android/denied-client/src/androidTest/java/dev/boundarylab/deniedclient/SignatureDenialTest.kt": "631e1f3416e789872f24d27a873dc11afe1f643114bd3fa8349bcd96001b2544",
+    "android/broker/src/main/kotlin/dev/boundarylab/broker/AndroidFileSource.kt": "c148ecbbc8dc83562b6f54ef72761062214cec15a8476bf88f1287dcc35e90b8",
+    "android/broker/src/main/kotlin/dev/boundarylab/broker/BoundaryBrokerService.kt": "70febf7f639f6e1e780efa554fcb8aba80c12dd81b611f7936b2f766589db44d",
+    "android/broker/src/androidTest/kotlin/dev/boundarylab/broker/AndroidFileSourceTest.kt": "a767c4a31d7af55abfd495333b3c01ebc02c846eee7a57d4912912d993ee07fa",
+    "sdk/kotlin/build.gradle.kts": "56a07184851fe4826aa1d5d436203ca00e06f72bd0f988e1c929656d5e4801c1",
+    "sdk/flutter/test/boundarylab_test.dart": "176a2a1b6030cf8470c6334e4427a212b3c8872d10ffc394cbaee32d302871cd",
+    "sdk/flutter/android/build.gradle": "4e45958c6535198710d2ec47645c9e3cbf8b268dc05b9ad19defee6f81111ca4",
+    "sdk/flutter/lib/boundarylab.dart": "44b9f0654b34174b121c9885429adb533335aa0e8e31f77f815e7d64d07efdfc",
+    "sdk/flutter/android/src/main/kotlin/dev/boundarylab/flutter/BoundaryLabPlugin.kt": "b398b7280171711381d010d3b3dcf16bd91b8baa9046fa71f917be504d6ff87b",
+    "sdk/kotlin/src/main/kotlin/dev/boundarylab/sdk/Models.kt": "3147fd80cfa3a3377d70057a64df39729bec9d5567ef304c45c937d744645639",
+    "sdk/kotlin/src/main/kotlin/dev/boundarylab/sdk/BoundaryClient.kt": "1fa24c94adc65c5145f56e8b92e8949da1143617e220b9f779c47d15ef83da20",
+    "examples/android-native/build.gradle.kts": "95c20ccd2a285ab6492e1a14b595e2890d486f47a1bc125e7b3365d67cc478dc",
+    "examples/android-native/src/main/java/dev/boundarylab/nativeapp/PackAttempt.kt": "9b3d59b8f4088077012d5c2ec4e3d138d01f7a3db04314209e4452caca070a70",
+    "examples/android-native/src/main/java/dev/boundarylab/nativeapp/MainActivity.kt": "573ffed9bc3d955baf7535b3a49103c694165a325f22451814c865cd23b6719e",
+    "examples/android-native/src/main/java/dev/boundarylab/nativeapp/PackController.kt": "4d8ee72287782c67216aabad7f938dfe7aa2306b26d8f85895d388a813d551b5",
+    "examples/android-native/src/test/java/dev/boundarylab/nativeapp/PackAttemptTest.kt": "fde44fa8b29c48f2f30eab1a3740ac0f00567cf8ee8900fc73523cc173204481",
+    "examples/android-native/src/androidTest/java/dev/boundarylab/nativeapp/FieldPackFlowTest.kt": "38ba438562ceeab3275ba90d4dc9f45985db61e1254de0336e4d8b090cb50ee4",
+    "examples/flutter/test/widget_test.dart": "5ed53a7ea0c4f6dfbaff3422be80629aac84f81483519dcf6898085813e99e48",
+    "examples/flutter/android/build.gradle.kts": "6a26dba2cb8dfba1e74f540b0d17a89d96c1301d3c3bfda14348bed257fddcba",
+    "examples/flutter/android/settings.gradle.kts": "2949274652a7d31a11a8797ff31df92003430e950ab6130454c6ec936e62ab9c",
+    "examples/flutter/lib/pack_controller.dart": "8f2987850e79235f42c4c714743867c312dc046bdb6a79c3e3179ddf6540b5f0",
+    "examples/flutter/lib/pack_screen.dart": "5c7c179845a67710757981ba70b1898191804b84f49d282d9610fb86339ac6f9",
+    "examples/flutter/lib/main.dart": "08201d431d8d2180102b18d6286d4ade71a1b87127f940db0d6658fcfd1b6a50",
+    "examples/flutter/lib/theme.dart": "b92069dc4d978bcb40768a0a5b114c2b54f2e89a04a9e5e74f3923edee770988",
+    "examples/flutter/android/app/build.gradle.kts": "948f14068bc0bd0c3e4e940a59107a043b98a40e7507f48818d30960f84a0ad2",
+    "examples/flutter/android/app/src/main/kotlin/dev/boundarylab/fieldpack_flutter/MainActivity.kt": "6c4f217ac74e8052b602bb4f46b18e18d292314c4e8f525d9f3096d349ca29c0",
+    "examples/flutter/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java": "d0f0459bf9e90162d72fceef19cca89b7eedd2a59421fe2ef55264121169ad2f",
+    "conformance/shared/manifest-v1.json": "eed3bbe7280b03f731894a5695f45c1835c5fe5daec95824dcf45739601d23bb",
+    "conformance/shared/build_vectors.py": "12c91f71c007496b4b1a692d59b4ada3146b4e1e9afab3d9f45253b23df92df2",
+    "conformance/shared/file-v1.json": "a3848b0fbcaab95a8f8b33922638f39dd33ba486bf5d46f966745ff6c64db879",
+    "conformance/shared/digest-v1.json": "a2f30c893e26537d63c148366fd818c4f56fdd1e7d04f9aa0d771cf98c68aea6",
+    "conformance/shared/run_reference.py": "d67b65572ac993b52aba4a26b8a93deb3b5edfb0bf2b665fabe21bff6a440974",
+    "conformance/shared/run_suite.py": "678dccfd4c73f6e8cbc5dce10c19320c2abf34d1fd9ea5d5195e223a38c50f60"
+  },
+  "command": [
+    "./gradlew",
+    "--no-daemon",
+    "--console=plain",
+    ":core:test",
+    ":desktop:host:test",
+    ":desktop:cli:test",
+    "--rerun-tasks"
+  ],
+  "cwd": ".",
+  "exitCode": 1,
+  "timedOut": false,
+  "durationSeconds": 29.102,
+  "environment": {
+    "os": "Darwin",
+    "osRelease": "25.5.0",
+    "machine": "arm64"
+  },
+  "tests_run": 184,
+  "tests_passed": 176,
+  "tests_failed": 8,
+  "tests_skipped": 0,
+  "coverage": null,
+  "coverageReason": "No coverage instrumentation configured by this runner.",
+  "cases": [
+    {
+      "id": "dev.boundarylab.core.CoreEngineTest.session close revokes results and closes queued resources()",
+      "status": "passed",
+      "durationSeconds": "0.045"
+    },
+    {
+      "id": "dev.boundarylab.core.CoreEngineTest.retention bytes evict independently of count and reject indivisible record()",
+      "status": "passed",
+      "durationSeconds": "0.004"
+    },
+    {
+      "id": "dev.boundarylab.core.CoreEngineTest.running cancellation retains physical worker and source until blocked read exits()",
+      "status": "passed",
+      "durationSeconds": "0.002"
+    },
+    {
+      "id": "dev.boundarylab.core.CoreEngineTest.automatic worker completes normal job()",
+      "status": "passed",
+      "durationSeconds": "0.007"
+    },
+    {
+      "id": "dev.boundarylab.core.CoreEngineTest.session cap accepts sixteen and rejects seventeenth()",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.CoreEngineTest.dedup closes incoming descriptor without reading and conflict preserves original()",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.CoreEngineTest.retention evicts oldest at entry cap()",
+      "status": "passed",
+      "durationSeconds": "0.019"
+    },
+    {
+      "id": "dev.boundarylab.core.CoreEngineTest.owner session and epoch bind every handle()",
+      "status": "passed",
+      "durationSeconds": "0.002"
+    },
+    {
+      "id": "dev.boundarylab.core.CoreEngineTest.TTL expiration removes request dedup and never restarts work on query()",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.CoreEngineTest.growth metadata change and close errors reject success()",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.CoreEngineTest.invalid lengths and overflowing input reject before reads()",
+      "status": "passed",
+      "durationSeconds": "0.002"
+    },
+    {
+      "id": "dev.boundarylab.core.CoreEngineTest.round robin selects one queued job per active session turn()",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.CoreEngineTest.all independent Python digest vectors agree()",
+      "status": "passed",
+      "durationSeconds": "2.616"
+    },
+    {
+      "id": "dev.boundarylab.core.CoreEngineTest.new process incarnation gets fresh epoch()",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.CoreEngineTest.queued cancellation performs zero reads and remains terminal()",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.CoreEngineTest.queued deadline does no reads and running deadline waits for cooperative cleanup()",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.CoreEngineTest.outstanding and global queue caps include exact boundaries()",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.CoreEngineTest.positive partial reads hash complete source and premature EOF still fails()",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.CoreEngineTest.file failures never yield a digest and always close()",
+      "status": "passed",
+      "durationSeconds": "0.002"
+    },
+    {
+      "id": "dev.boundarylab.core.CoreEngineTest.completion committed first wins against later cancellation()",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.CoreEngineTest.session loss revokes running handle without closing blocked source early()",
+      "status": "passed",
+      "durationSeconds": "0.002"
+    },
+    {
+      "id": "dev.boundarylab.core.CoreEngineTest.capabilities explicit opt in and protocol rejects before admission()",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.CoreEngineTest.source reads are positional bounded and closed once()",
+      "status": "passed",
+      "durationSeconds": "0.002"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.strict complete schema encoding sorting and byte cap()",
+      "status": "passed",
+      "durationSeconds": "0.007"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.reader accepts whitespace and reordered object keys but rejects malformed JSON()",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.integers are strict and ranges checked before accumulation()",
+      "status": "passed",
+      "durationSeconds": "0.002"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.rejects duplicate keys even when escaped and unknown fields()",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.entry count bounds and writer validation()",
+      "status": "passed",
+      "durationSeconds": "0.004"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.alias corpus rejects traversal reserved names nonascii and uppercase()",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.canonical output sorts and exactly matches shared two file vector()",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.valid-empty-and-abc",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.valid-single-empty",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.valid-alias-64",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.valid-alias-63",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.valid-31-entries",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.valid-32-entries",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.valid-file-limit",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.valid-file-limit-minus-one",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.valid-total-limit",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.valid-total-limit-minus-one",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.valid-not-reserved",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.valid-object-key-order",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.valid-escaped-ascii",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.valid-byte-cap",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.valid-byte-cap-minus-one",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-byte-cap-plus-one",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-version-0",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-version-1",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-version-2",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-version-3",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-version-4",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-version-5",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-version-6",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-version-7",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-format-0",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-format-1",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-format-2",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-format-3",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-algorithm-0",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-algorithm-1",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-algorithm-2",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-algorithm-3",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-files-0",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-files-1",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-files-2",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-files-3",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-files-4",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-missing-format",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-missing-version",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-missing-algorithm",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-missing-files",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-top-unknown-field",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-top-type-0",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-top-type-1",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-top-type-2",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-top-type-3",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-top-type-4",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-entry-missing-name",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-entry-missing-size",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-entry-missing-sha256",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-entry-unknown-field",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-size-0",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-size-1",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-size-2",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-size-3",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-size-4",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-size-5",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-size-6",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-size-7",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-size-8",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-digest-0",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-digest-1",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-digest-2",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-digest-3",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-digest-4",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-digest-5",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-digest-6",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-digest-7",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-0",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-1",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-2",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-3",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-4",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-5",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-6",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-7",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-8",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-9",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-10",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-11",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-12",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-13",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-14",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-15",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-16",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-17",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-18",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-19",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-20",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-21",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-22",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-23",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-24",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-25",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-26",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-27",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-28",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-29",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-30",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-31",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-32",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-33",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-34",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-35",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-36",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-37",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-38",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-name-39",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-unsorted",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-duplicate-alias",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-33-entries",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-total-limit-plus-one",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-duplicate-top",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-duplicate-entry",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-duplicate-escaped-key",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-nan",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-infinity",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-negative-infinity",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-exponent-size",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-bom",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-utf8",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-overlong-utf8",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-lone-surrogate",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-trailing-content",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-trailing-comma",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-truncated",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.core.FieldPackTest.invalid-deep-nesting",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.desktop.HostProcessTest.connection death releases all sessions and process loss is not replayed()",
+      "status": "passed",
+      "durationSeconds": "0.537"
+    },
+    {
+      "id": "dev.boundarylab.desktop.HostProcessTest.socket mode is private and malformed or oversized frames never kill host()",
+      "status": "passed",
+      "durationSeconds": "0.122"
+    },
+    {
+      "id": "dev.boundarylab.desktop.HostProcessTest.invalid protocol numeric booleans and unknown fields reject before work()",
+      "status": "passed",
+      "durationSeconds": "0.13"
+    },
+    {
+      "id": "dev.boundarylab.desktop.HostProcessTest.separate JVM generated vector ownership dedup and closed session()",
+      "status": "passed",
+      "durationSeconds": "0.402"
+    },
+    {
+      "id": "dev.boundarylab.desktop.HostProcessTest.partial frame absolute deadline releases a stalled connection()",
+      "status": "passed",
+      "durationSeconds": "5.134"
+    },
+    {
+      "id": "dev.boundarylab.desktop.HostProcessTest.generated chunks cancel cooperatively and a new host rejects old epochs()",
+      "status": "passed",
+      "durationSeconds": "0.57"
+    },
+    {
+      "id": "dev.boundarylab.desktop.RootedFileProviderTest.one hundred success rejection and closure cycles recover descriptors()",
+      "status": "passed",
+      "durationSeconds": "0.437"
+    },
+    {
+      "id": "dev.boundarylab.desktop.RootedFileProviderTest.output authorization is outside root and rejects existing targets()",
+      "status": "passed",
+      "durationSeconds": "0.002"
+    },
+    {
+      "id": "dev.boundarylab.desktop.RootedFileProviderTest.unsafe types links aliases and missing files have explicit failures()",
+      "status": "passed",
+      "durationSeconds": "0.009"
+    },
+    {
+      "id": "dev.boundarylab.desktop.RootedFileProviderTest.oversized regular file rejected before content read and exact cap supported()",
+      "status": "passed",
+      "durationSeconds": "0.002"
+    },
+    {
+      "id": "dev.boundarylab.desktop.RootedFileProviderTest.native ABI rejects invalid array bounds and alias traversal()",
+      "status": "passed",
+      "durationSeconds": "0.001"
+    },
+    {
+      "id": "dev.boundarylab.desktop.RootedFileProviderTest.pinned source supports empty and positional bounded reads()",
+      "status": "passed",
+      "durationSeconds": "0.002"
+    },
+    {
+      "id": "dev.boundarylab.desktop.RootedFileProviderTest.seventeen total input slots bound opened and pending admission descriptors()",
+      "status": "passed",
+      "durationSeconds": "0.002"
+    },
+    {
+      "id": "dev.boundarylab.desktop.RootedFileProviderTest.mutation growth shrink alias replacement and root replacement reject success()",
+      "status": "passed",
+      "durationSeconds": "0.003"
+    },
+    {
+      "id": "dev.boundarylab.desktop.WireTest.duplicate keys invalid UTF8 BOM nesting and noninteger JSON are rejected()",
+      "status": "passed",
+      "durationSeconds": "0.002"
+    },
+    {
+      "id": "dev.boundarylab.desktop.WireTest.exact frame byte cap is accepted and cap plus one rejected()",
+      "status": "passed",
+      "durationSeconds": "0.005"
+    },
+    {
+      "id": "dev.boundarylab.desktop.WireTest.strict JSON round trip preserves long integers and Unicode()",
+      "status": "passed",
+      "durationSeconds": "0.0"
+    },
+    {
+      "id": "dev.boundarylab.desktop.cli.DesktopCliIntegrationTest.per-file and remaining aggregate budget prevent publication()",
+      "status": "failed",
+      "durationSeconds": "0.211"
+    },
+    {
+      "id": "dev.boundarylab.desktop.cli.DesktopCliIntegrationTest.concurrent publication has exactly one complete winner()",
+      "status": "passed",
+      "durationSeconds": "0.032"
+    },
+    {
+      "id": "dev.boundarylab.desktop.cli.DesktopCliIntegrationTest.atomic publisher refuses existing completed winner()",
+      "status": "passed",
+      "durationSeconds": "0.024"
+    },
+    {
+      "id": "dev.boundarylab.desktop.cli.DesktopCliIntegrationTest.shared strict manifest corpus rejected before socket connect()",
+      "status": "failed",
+      "durationSeconds": "0.133"
+    },
+    {
+      "id": "dev.boundarylab.desktop.cli.DesktopCliIntegrationTest.generated supports empty vector and file capability absent is explicit()",
+      "status": "failed",
+      "durationSeconds": "0.17"
+    },
+    {
+      "id": "dev.boundarylab.desktop.cli.DesktopCliIntegrationTest.separate JVMs create canonical known vectors and verify changes()",
+      "status": "failed",
+      "durationSeconds": "0.174"
+    },
+    {
+      "id": "dev.boundarylab.desktop.cli.DesktopCliIntegrationTest.unsafe aliases return unreadable without hanging or publishing()",
+      "status": "failed",
+      "durationSeconds": "0.165"
+    },
+    {
+      "id": "dev.boundarylab.desktop.cli.DesktopCliIntegrationTest.generated shared corpus crosses read boundaries and exact byte cap()",
+      "status": "failed",
+      "durationSeconds": "0.167"
+    },
+    {
+      "id": "dev.boundarylab.desktop.cli.DesktopCliIntegrationTest.independent Python oracle agrees on host created manifest()",
+      "status": "failed",
+      "durationSeconds": "0.166"
+    },
+    {
+      "id": "dev.boundarylab.desktop.cli.DesktopCliIntegrationTest.publication refuses existing targets symlinks and input root()",
+      "status": "failed",
+      "durationSeconds": "0.164"
+    }
+  ],
+  "junitArtifacts": [
+    {
+      "path": "core/build/test-results/test/TEST-dev.boundarylab.core.CoreEngineTest.xml",
+      "sha256": "a35953433787b1a2e800849a1e40608f84e6f1aca908954744ca5f5e93386f68"
+    },
+    {
+      "path": "core/build/test-results/test/TEST-dev.boundarylab.core.FieldPackTest.xml",
+      "sha256": "be90d54c867d9f30b02958c12ece7c183cb21d1e5d15988a8cb4b920b783b5e5"
+    },
+    {
+      "path": "desktop/host/build/test-results/test/TEST-dev.boundarylab.desktop.HostProcessTest.xml",
+      "sha256": "6557fab15a507cdf075fa222120c3654c3a0facaa4ed09a91ad2fe72a5866cbf"
+    },
+    {
+      "path": "desktop/host/build/test-results/test/TEST-dev.boundarylab.desktop.RootedFileProviderTest.xml",
+      "sha256": "49788f1aab77e6e7c8fe429202f39606feb826379a133d0e1994d6199e09168f"
+    },
+    {
+      "path": "desktop/host/build/test-results/test/TEST-dev.boundarylab.desktop.WireTest.xml",
+      "sha256": "fa5a2c9030db6a7fa73933d78be2e24c7d4b360fa69b53cae2ab4336e8489161"
+    },
+    {
+      "path": "desktop/cli/build/test-results/test/TEST-dev.boundarylab.desktop.cli.DesktopCliIntegrationTest.xml",
+      "sha256": "c5d331ca00e2fc25a20f40553bf8b27a8d590594e0b4b6a6f8af1a2a87fa4fd2"
+    }
+  ],
+  "log": "docs/evidence/build/crossplatform-qa-core-jvm.log",
+  "suiteCompleted": false,
+  "buildCompleted": false
+}

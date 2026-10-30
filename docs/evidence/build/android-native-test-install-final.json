@@ -1,0 +1,21 @@
+{
+  "target": "physical Samsung SM-A336B API36",
+  "installs": [
+    {
+      "command": [
+        "adb",
+        "-s",
+        "<allocated-target>",
+        "install",
+        "-r",
+        "-t",
+        "<repository>/examples/android-native/build/outputs/apk/androidTest/debug/android-native-debug-androidTest.apk"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.506,
+      "stdout": "Performing Streamed Install\nSuccess\n",
+      "stderr": "",
+      "apk_sha256": "897cc4a18ca1d4bd3e65dc9ca1eede50e5b54b5fe9c96feeab98d1103051415a"
+    }
+  ]
+}

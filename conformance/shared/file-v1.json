@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "match-abc",
+      "entry": {
+        "name": "subject.bin",
+        "size": 3,
+        "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+      },
+      "source": {
+        "kind": "regular",
+        "contentBase64": "YWJj"
+      },
+      "outcome": "MATCH"
+    },
+    {
+      "id": "same-size-tamper",
+      "entry": {
+        "name": "subject.bin",
+        "size": 3,
+        "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+      },
+      "source": {
+        "kind": "regular",
+        "contentBase64": "YWJk"
+      },
+      "outcome": "DIGEST_MISMATCH"
+    },
+    {
+      "id": "truncated",
+      "entry": {
+        "name": "subject.bin",
+        "size": 3,
+        "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+      },
+      "source": {
+        "kind": "regular",
+        "contentBase64": "YWI="
+      },
+      "outcome": "SIZE_MISMATCH"
+    },
+    {
+      "id": "grown",
+      "entry": {
+        "name": "subject.bin",
+        "size": 3,
+        "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+      },
+      "source": {
+        "kind": "regular",
+        "contentBase64": "YWJjZA=="
+      },
+      "outcome": "SIZE_MISMATCH"
+    },
+    {
+      "id": "missing",
+      "entry": {
+        "name": "subject.bin",
+        "size": 3,
+        "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+      },
+      "source": {
+        "kind": "missing",
+        "contentBase64": ""
+      },
+      "outcome": "MISSING"
+    },
+    {
+      "id": "directory",
+      "entry": {
+        "name": "subject.bin",
+        "size": 3,
+        "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+      },
+      "source": {
+        "kind": "directory",
+        "contentBase64": ""
+      },
+      "outcome": "UNREADABLE_OR_UNSUPPORTED"
+    },
+    {
+      "id": "symlink",
+      "entry": {
+        "name": "subject.bin",
+        "size": 3,
+        "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+      },
+      "source": {
+        "kind": "symlink",
+        "contentBase64": "YWJj"
+      },
+      "outcome": "UNREADABLE_OR_UNSUPPORTED"
+    },
+    {
+      "id": "hardlink",
+      "entry": {
+        "name": "subject.bin",
+        "size": 3,
+        "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+      },
+      "source": {
+        "kind": "hardlink",
+        "contentBase64": "YWJj"
+      },
+      "outcome": "UNREADABLE_OR_UNSUPPORTED"
+    },
+    {
+      "id": "fifo",
+      "entry": {
+        "name": "subject.bin",
+        "size": 3,
+        "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+      },
+      "source": {
+        "kind": "fifo",
+        "contentBase64": ""
+      },
+      "outcome": "UNREADABLE_OR_UNSUPPORTED"
+    },
+    {
+      "id": "empty",
+      "entry": {
+        "name": "subject.bin",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "source": {
+        "kind": "regular",
+        "contentBase64": ""
+      },
+      "outcome": "MATCH"
+    }
+  ]
+}

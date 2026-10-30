@@ -1,0 +1,16 @@
+{
+  "command": [
+    "adb",
+    "-s",
+    "<allocated-target>",
+    "shell",
+    "dumpsys",
+    "activity",
+    "exit-info",
+    "dev.boundarylab.nativeclient.test"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 0.087,
+  "stdout": "ACTIVITY MANAGER PROCESS EXIT INFO (dumpsys activity exit-info)\nLast Timestamp of Persistence Into Persistent Storage: 2026-10-30 14:15:31.634\n  package: dev.boundarylab.nativeclient.test\n    Historical Process Exit for uid=10698\n        ApplicationExitInfo #0:\n          timestamp=2026-10-30 14:25:47.134 pid=22716 realUid=10698 packageUid=10698 definingUid=10698 user=0\n          process=dev.boundarylab.nativeclient.test reason=4 (APP CRASH(EXCEPTION)) subreason=0 (UNKNOWN) status=0\n          importance=125 pss=0,00 rss=0,00 description=crash state=empty trace=null\n        ApplicationExitInfo #1:\n          timestamp=2026-10-30 14:25:47.127 pid=22716 realUid=10698 packageUid=10698 definingUid=10698 user=0\n          process=dev.boundarylab.nativeclient.test reason=4 (APP CRASH(EXCEPTION)) subreason=0 (UNKNOWN) status=0\n          importance=125 pss=0,00 rss=0,00 description=crash state=empty trace=null\n        ApplicationExitInfo #2:\n          timestamp=2026-10-30 14:25:46.836 pid=22696 realUid=10698 packageUid=10698 definingUid=10698 user=0\n          process=dev.boundarylab.nativeclient.test reason=4 (APP CRASH(EXCEPTION)) subreason=0 (UNKNOWN) status=0\n          importance=125 pss=0,00 rss=0,00 description=crash state=empty trace=null\n",
+  "stderr": ""
+}

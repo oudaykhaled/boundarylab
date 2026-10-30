@@ -1,0 +1,6 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="dev.boundarylab.permission.BIND_BROKER" />
+    <queries><package android:name="dev.boundarylab.broker" /></queries>
+    <application android:label="BoundaryLab Denial Probe" android:allowBackup="false"
+        android:supportsRtl="true" android:testOnly="true" />
+</manifest>

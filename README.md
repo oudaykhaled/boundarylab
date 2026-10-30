@@ -1,59 +1,71 @@
 # BoundaryLab
 
-**Inspectable local middleware, with a runnable file-integrity reference example.**
+**Bounded local middleware for Android, Flutter and a desktop JVM—with a real attachment-integrity example.**
 
-BoundaryLab proposes a small framework for bounded, cancellable local jobs, with native Android and Flutter consumers, a desktop host, and a gated Android platform implementation. Developers should be able to inspect how admission, identity, resource limits, process loss and compatibility behave instead of rebuilding that machinery in each application. A deterministic streaming checksum is the demonstration operation; the reusable asset is the middleware contract, SDK and conformance suite.
+BoundaryLab shares admission, ownership, cancellation, deadlines and process-loss behavior across clients. Android apps call a separately installed Binder broker; the desktop CLI calls a separate JVM host over a local Unix socket. Jobs and sessions are volatile.
 
-**Current status:** the [FieldPack Python reference](examples/fieldpack/README.md) runs on actual local files and has executable tests. Android Binder, Flutter, JVM host and AOSP middleware remain planned. There is no installable native product, measured native performance result or external adopter yet. Original material is licensed under [Apache-2.0](LICENSE).
+**FieldPack** is the example: select inspection attachments, hash them through the broker and explicitly export a SHA-256 manifest. A recipient obtains the attachments separately and checks a local directory. Changed and missing files are reported. Matching bytes establishes consistency, not sender authenticity.
 
-Start with the [live GitHub delivery board](https://github.com/users/oudaykhaled/projects/3), [revised plan](docs/PLAN-V2.md) and [detailed tickets](planning/TICKETS.md). The revised scope supersedes the initial 40h/120h/240h estimates.
+## Build status
+
+Engineering prototype: core, desktop host/CLI, Android broker/SDK, native client and authored Flutter plugin/client are implemented. At source `06b2d4f`, 393 selected host test cases passed; final physical-device suites passed 31 cases with one explicitly unavailable hardlink fixture. Native and Flutter each exported a real manifest, and separate JVM/Python recipients agreed on all five good/changed/missing/unsupported outcomes. An isolated fresh-checkout desktop consumer and all five [hosted CI lanes](https://github.com/oudaykhaled/boundarylab/actions/runs/41068567469) passed. See the [quality report](docs/evidence/build/QUALITY.md), [current ticket status](planning/EXECUTION-STATUS.md) and [requirement evidence map](docs/IMPLEMENTATION-STATUS.md). The conditional AOSP image, compatibility matrix and controlled hardware campaign remain outstanding.
+
+No production release, commercial shipment, external adopter or human implementation review is claimed. [Astra architecture decisions](docs/decisions/BUILD-DECISIONS.md), [security review](docs/evidence/reviews/SECURITY-REVIEW.md) and [reliability review](docs/evidence/reviews/RELIABILITY-REVIEW.md) document the actual AI review scope.
+
+Actual installed-device captures below show explicit successful exports. These are runtime screenshots; the separate animated presentation illustrates the architecture proposal.
+
+<p>
+  <img src="docs/evidence/build/native-exported-post-loss-api36.png" width="300" alt="Native FieldPack client after real manifest export" />
+  <img src="docs/evidence/build/flutter-exported-final-api36.png" width="300" alt="Flutter FieldPack client after real manifest export" />
+</p>
+
+[Real mobile-to-desktop results](conformance/desktop/mobile-handoff.json) · [Observed defect and verified fix](docs/case-studies/broker-loss.md) · [Optional AOSP cloud budget](docs/AOSP-CLOUD-BUDGET.md)
+
+## Run the reference now
+
+Python3.10+ on macOS or Linux/POSIX, standard library only:
 
 ```sh
 python3 -m unittest discover -s examples/fieldpack -v
 python3 examples/fieldpack/demo.py
 ```
 
-FieldPack checks whether separately supplied inspection attachments match a portable manifest. The demo shows matching, changed and missing files. Matching hashes establish byte consistency, not sender authenticity.
+The [reference walkthrough](examples/fieldpack/README.md) uses actual owned note/CSV/PNG files, successful verification, tampering, removal and invalid input. It executes in one process and is independently useful for checking native output.
 
-## Animated presentation
+## Build the implementations
 
-The [eight-scene browser presentation](presentation/README.md) explains the business value, process boundaries, failure semantics and evidence roadmap. Open its `index.html` locally for offline playback, with pause, scene navigation and reduced-motion support. [Speaker notes](presentation/SPEAKER-NOTES.md) accompany the animation. The motion illustrates proposed behavior; it is not recorded middleware execution.
+Use JDK17, Android SDK36/build-tools35.0.0, Flutter3.38.9/Dart3.10.8, and a trusted local C compiler for desktop file support. Gradle8.13/AGP8.11.1/Kotlin2.2.21 are pinned. Android installation minimum is API30 (Android11); actual local device evidence is API36. Broader runtime support is untested. No global SDK upgrade is required.
 
-## Read the plan
+```sh
+# Root checks are intentionally serialized. These do not install or test a device.
+python3 scripts/verify-wrapper.py
+python3 scripts/check.py reference
+python3 scripts/check.py jvm
+python3 scripts/check.py android
 
-| Document | What you can assess |
-|---|---|
-| [Architecture and contract](docs/ARCHITECTURE.md) | Real process boundaries, trust model, lifecycle, failure semantics and platform track |
-| [Revised roadmap](docs/PLAN-V2.md) | Real example, leaf estimates, dependencies, gates and evidence rules |
-| [FieldPack contract](docs/FIELDPACK.md) | Manifest, real-file safety, exact limits and platform boundaries |
-| [Initial roadmap](docs/ROADMAP.md) | Archived original 40h / 120h / 240h hypotheses |
-| [Requirement evidence matrix](docs/REQUIREMENTS.md) | All 22 mapped items from the [target role](https://www.linkedin.com/jobs/view/4476561682/), acceptance and honest gaps |
-| [Executable-work backlog](planning/BACKLOG.md) | Work packages with owners, dependencies and evidence gates |
-| [Benchmark and fault protocol](docs/VERIFICATION.md) | Falsifiable experiments, measurements, failures and reproducibility |
-| [Five-minute reviewer demo](docs/DEMO.md) | What a future reviewer should be able to reproduce |
-| [Independent proposals and decision](planning/DECISION.md) | Ten Astra reports, tradeoffs, selection rubric and synthesis |
-| [Progress board](planning/BOARD.md) | Planning, implementation, review and verification tracked separately |
-
-Track the [GitHub issues](https://github.com/oudaykhaled/boundarylab/issues), [delivery board](https://github.com/users/oudaykhaled/projects/3) and [milestones](https://github.com/oudaykhaled/boundarylab/milestones). Existing work packages are epics; detailed child tickets carry the estimates and acceptance evidence. Only completed, checked work is marked Done.
-
-## Proposed scope
-
-```mermaid
-flowchart LR
-    N[Native Android client] --> K[Kotlin SDK]
-    F[Flutter Android client] --> P[Native plugin]
-    P --> K
-    K --> B[Binder broker APK]
-    B --> C[Bounded Kotlin job core]
-    D[macOS CLI client] --> U[Local Unix socket]
-    U --> J[JVM host and same core]
-    A[Platform-built client] -. conditional platform track .-> S[AOSP native Binder service]
+# Flutter package/widget checks and debug APK build
+python3 scripts/check-flutter.py
 ```
 
-The [revised plan](docs/PLAN-V2.md) adds bounded real-file processing through FieldPack. Generated bytes remain a controlled IPC/scheduler benchmark. The first desktop target is **macOS with a separate JVM host and CLI**; the conditional AOSP service remains generated-only and needs a booted, enforcing image on suitable Linux resources. The reference example proves manifest semantics, not these native boundaries.
+The installed local Flutter SDK's wrapper analyzer is incomplete; local receipts identify the equivalent direct Dart analyzer used. CI uses a complete pinned SDK and retains each command's actual result.
 
-This plan was prepared for the Sparagus **Principal Architect — OS Middleware & System Frameworks** vacancy, reviewed on 30 October 2026. The client is unnamed. The requirement matrix also identifies experience that software cannot manufacture: education, commercial shipment, sustained European employment and genuine partner or international collaboration. No hiring outcome is promised.
+- [Desktop host/CLI quickstart](desktop/README.md): exact tested installDist commands, private socket directory, real files, separate recipient, changed/missing results.
+- [Flutter consumer](examples/flutter/README.md): typed native plugin, real file picker, session lifecycle and developer diagnostics.
+- [Original design](design/DESIGN.md) and [interactive prototype](design/index.html): visual/state source; prototype execution is explicitly simulated.
+- [File/job contract](docs/FIELDPACK.md) and [wire contract](contracts/PROTOCOL-V1.md): strict limits and failure semantics.
 
-## Contribute or assess
+Native debug APKs are built at `android/broker/build/outputs/apk/debug/` and `examples/android-native/build/outputs/apk/debug/`; Flutter at `examples/flutter/build/app/outputs/flutter-apk/app-debug.apk`. Broker and both consumers **must have matching signing certificates**. Build them on the same local signing setup or use the matched three-APK CI bundle. A separately signed denial fixture is intentionally rejected. Private signing keys are never published.
 
-Start with [CONTRIBUTING](CONTRIBUTING.md), [evidence policy](docs/EVIDENCE-POLICY.md), [primary sources](docs/SOURCES.md) and [security scope](SECURITY.md). The Python reference quickstart is executable today. Native source directories and future build commands in the tickets are proposals until the corresponding modules exist. Ten independent GPT-6 Astra agents produced isolated proposals; the coordinating agent selected and reconciled the final scope. Agents are not external adopters or independent human reviewers.
+## What is bounded
+
+32 flat aliases,128MiB per file **and pack**,64KiB reads,16KiB manifest, one worker, fixed queue/session/retention caps. Android accepts the supported read-only regular seekable file profile; arbitrary/cloud-backed providers are not promised. The desktop JNI helper supplies descriptor-relative no-follow opening and same-handle validation that the tested JDK does not expose. Generated work remains available when native file support is unavailable.
+
+Cancellation is cooperative, including storage reads. Broker loss means lost/unknown, a fresh epoch and explicit resubmission. No persistence, atomic multi-file snapshot, automatic transfer/sync, authenticity or exactly-once claim. See [security scope](SECURITY.md).
+
+## Follow the work
+
+[GitHub delivery board](https://github.com/users/oudaykhaled/projects/3) · [FieldPack view](https://github.com/users/oudaykhaled/projects/3/views/2) · [40 detailed tasks](planning/TICKETS.md) · [Planv2](docs/PLAN-V2.md) · [22-item job evidence matrix](docs/REQUIREMENTS.md). The original40/120/240h hypotheses were superseded by the leaf plan; agent concurrency does not substitute for acceptance evidence.
+
+The [animated presentation](presentation/README.md) explains the architecture proposal; it is an illustration rather than recorded middleware execution. Original [research proposals](planning/DECISION.md) and [ten planning reviews](planning/reviews-v2/README.md) remain inspectable.
+
+Prepared for the Principal Architect—OS Middleware & System Frameworks role. Career experience, genuine partners, sustained European work and international collaboration require authentic external evidence; software cannot manufacture them. [Contributing](CONTRIBUTING.md) · [evidence policy](docs/EVIDENCE-POLICY.md) · [Apache-2.0 license](LICENSE).

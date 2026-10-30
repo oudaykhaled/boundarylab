@@ -1,0 +1,16 @@
+{
+  "command": [
+    "adb",
+    "-s",
+    "<allocated-target>",
+    "shell",
+    "dumpsys",
+    "activity",
+    "exit-info",
+    "dev.boundarylab.nativeclient"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 0.09,
+  "stdout": "ACTIVITY MANAGER PROCESS EXIT INFO (dumpsys activity exit-info)\nLast Timestamp of Persistence Into Persistent Storage: 2026-10-30 14:15:31.634\n  package: dev.boundarylab.nativeclient\n    Historical Process Exit for uid=10697\n        ApplicationExitInfo #0:\n          timestamp=2026-10-30 14:25:47.135 pid=22656 realUid=10697 packageUid=10697 definingUid=10697 user=0\n          process=dev.boundarylab.nativeclient reason=12 (DEPENDENCY DIED) subreason=0 (UNKNOWN) status=0\n          importance=125 pss=0,00 rss=0,00 description=depends on provider dev.boundarylab.nativeclient.test/dev.boundarylab.nativeapp.DelayedFixtureProvider in dying proc dev.boundarylab.nativeclient.test (adj -10000) state=empty trace=null\n",
+  "stderr": ""
+}

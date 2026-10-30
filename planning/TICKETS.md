@@ -2,7 +2,7 @@
 
 Revised 2026-10-30 by ten independent Astra planning reviews and root synthesis. [Plan v2](../docs/PLAN-V2.md), [selected file contract](../docs/FIELDPACK.md), [review records](reviews-v2/README.md), [machine-readable tickets](tickets-v2.json), [live board](https://github.com/users/oudaykhaled/projects/3).
 
-40 leaves; 17 epics. All native tasks planned. Only REF01 is verified. Estimates count each child once; parent rollups are not additive. Verification commands marked **proposed** require modules that do not exist yet. Roles are proposed, not accepted assignees.
+40 leaves; 17 epics. This table and `tickets-v2.json` preserve the original planning snapshot, when only REF01 was verified. **Current execution, evidence and unmet acceptance are in [EXECUTION-STATUS.md](EXECUTION-STATUS.md) and [execution-status.json](execution-status.json).** Modules and scoped runtime receipts now exist. Estimates remain planning estimates; parent rollups are not additive. Original verification procedures remain labeled proposed rather than being silently relabeled as executed.
 
 | Task | Parent | Stage | Priority | Effort | Prerequisites | State |
 |---|---|---|---|---:|---|---|

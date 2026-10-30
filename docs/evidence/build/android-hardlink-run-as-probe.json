@@ -1,0 +1,106 @@
+{
+  "scope": "owned app-debug run-as fixture creation only",
+  "results": [
+    {
+      "command": [
+        "adb",
+        "-s",
+        "<allocated-target>",
+        "shell",
+        "run-as",
+        "dev.boundarylab.broker",
+        "mkdir",
+        "cache/qa-hardlink-probe"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.127,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "adb",
+        "-s",
+        "<allocated-target>",
+        "shell",
+        "run-as",
+        "dev.boundarylab.broker",
+        "touch",
+        "cache/qa-hardlink-probe/source"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.128,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "adb",
+        "-s",
+        "<allocated-target>",
+        "shell",
+        "run-as",
+        "dev.boundarylab.broker",
+        "ln",
+        "cache/qa-hardlink-probe/source",
+        "cache/qa-hardlink-probe/alias"
+      ],
+      "exit_code": 1,
+      "elapsed_seconds": 0.113,
+      "stdout": "",
+      "stderr": "ln: cannot create hard link from 'cache/qa-hardlink-probe/source' to 'cache/qa-hardlink-probe/alias': Permission denied\n"
+    },
+    {
+      "command": [
+        "adb",
+        "-s",
+        "<allocated-target>",
+        "shell",
+        "run-as",
+        "dev.boundarylab.broker",
+        "stat",
+        "-c",
+        "%h",
+        "cache/qa-hardlink-probe/source"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.105,
+      "stdout": "1\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "adb",
+        "-s",
+        "<allocated-target>",
+        "shell",
+        "run-as",
+        "dev.boundarylab.broker",
+        "rm",
+        "-f",
+        "cache/qa-hardlink-probe/source",
+        "cache/qa-hardlink-probe/alias"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.104,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "adb",
+        "-s",
+        "<allocated-target>",
+        "shell",
+        "run-as",
+        "dev.boundarylab.broker",
+        "rmdir",
+        "cache/qa-hardlink-probe"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.109,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

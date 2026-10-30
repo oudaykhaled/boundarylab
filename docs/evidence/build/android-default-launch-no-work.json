@@ -1,0 +1,20 @@
+{
+  "target": "physical Samsung API36",
+  "checks": [
+    {
+      "client": "native",
+      "own_ui_visible": true,
+      "broker_process_absent": true,
+      "pidof_exit": 1,
+      "meaning": "functional no-broker-process on default launch; no latency comparison"
+    },
+    {
+      "client": "flutter",
+      "own_ui_visible": true,
+      "broker_process_absent": true,
+      "pidof_exit": 1,
+      "meaning": "functional no-broker-process on default launch; no latency comparison",
+      "initial_ui_snapshot_not_ready": true
+    }
+  ]
+}

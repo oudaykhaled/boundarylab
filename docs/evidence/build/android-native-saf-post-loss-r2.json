@@ -1,0 +1,24 @@
+{
+  "target": "physical Samsung SM-A336B API36",
+  "source_commit": "06b2d4f9d550a7c2b02bcc4d3e8743800ea9eb4c",
+  "apk_sha256": "c81af5811e7a0b2015d3e19c2c3ab5279a7c1493d7e7baf9b8a191db233c0057",
+  "broker_apk_sha256": "d1fce929990b08880bf27f5cb0d194776c3c6c33a5d4df170535b4f48ad25337",
+  "actual_ui_actions": [
+    "ACTION_OPEN_DOCUMENT Downloads/BoundaryLab-20261030 multi-select inspection-note.txt and sensor-readings.csv",
+    "Explicit Prepare pack succeeds first attempt, ready2/2 and export enabled",
+    "ACTION_CREATE_DOCUMENT save native-final.fieldpack.json in same owned folder",
+    "Pull exported file and compare to earlier independently verified manifests"
+  ],
+  "observed_status": [
+    "Manifest exported. Transfer your attachments separately with the listed names."
+  ],
+  "attempts": 1,
+  "manifest_exported": true,
+  "manifest_file": "native-final-exported.fieldpack.json",
+  "manifest_sha256": "80558a687b642ed16d0a8443a3229ad5705fa462d4db21c1a34fbed11135df9f",
+  "byte_identical_to_previous_verified_manifest": true,
+  "screenshots": [
+    "native-ready-post-loss-api36.png",
+    "native-exported-post-loss-api36.png"
+  ]
+}

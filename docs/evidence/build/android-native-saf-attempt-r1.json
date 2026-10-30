@@ -1,0 +1,33 @@
+{
+  "target": "physical Samsung API36",
+  "source_provider": "Android DocumentsUI Downloads, own task subdirectory",
+  "files": [
+    "inspection-note.txt",
+    "sensor-readings.csv"
+  ],
+  "attempts": 2,
+  "observations": [
+    {
+      "text": "Ready to export. All 2 attachments prepared.",
+      "resource-id": "dev.boundarylab.nativeclient:id/pack_status",
+      "enabled": "true"
+    },
+    {
+      "text": "Export manifest",
+      "resource-id": "dev.boundarylab.nativeclient:id/export_manifest",
+      "enabled": "true"
+    }
+  ],
+  "manifest_exported": true,
+  "exported_manifest": "native-exported.fieldpack.json",
+  "manifest_sha256": "80558a687b642ed16d0a8443a3229ad5705fa462d4db21c1a34fbed11135df9f",
+  "export_status": "Manifest exported. Transfer your attachments separately with the listed names.",
+  "first_attempt": "Observed-change failure disabled export; exact cause unproven. An explicit fresh attempt read both stable fixtures successfully.",
+  "actual_ui_actions": [
+    "ACTION_OPEN_DOCUMENT: Downloads / BoundaryLab-20261030; multi-select owned note and CSV",
+    "Prepare pack: explicit fresh attempt after first failure",
+    "ACTION_CREATE_DOCUMENT: save inspection.fieldpack.json in same owned task directory",
+    "adb pull exported manifest for separately executed recipient verification"
+  ],
+  "apk_sha256": "a8b21ed031464ef8c6218cda2a28a3824a264ae72b2188b5dccaf334884bea82"
+}

@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "evidenceClass": "benchmark-analysis-unit-tests",
+  "timestampUtc": "2026-10-30T13:16:23.618551+00:00",
+  "baseCommit": "2a49ae3c15dafd0d3070bde74c48d2390f286538",
+  "sourceState": "working-tree; source SHA-256 recorded below",
+  "command": "python3 conformance/shared/run_reference.py --suite benchmarks --output docs/evidence/build/crossplatform-qa-benchmarks.json",
+  "environment": {
+    "python": "3.14.5",
+    "os": "Darwin",
+    "osRelease": "25.5.0",
+    "machine": "arm64"
+  },
+  "sourceSha256": {
+    "conformance/shared/run_reference.py": "d67b65572ac993b52aba4a26b8a93deb3b5edfb0bf2b665fabe21bff6a440974",
+    "benchmarks/analyze.py": "5e79283d630895ee089657059585c154fe0578dbe3c37cf3fe2f49410c4e5d92",
+    "benchmarks/schedule.py": "92b473ea3fad200ae3cc8097edfb19900ae9e8d53fc378510b7c89240553065f",
+    "benchmarks/test_analysis.py": "0b7650d799dc1db13f23a6709b7c9b310755a2ecf984ae52847a9c7e863c8002"
+  },
+  "tests_run": 9,
+  "tests_passed": 9,
+  "tests_failed": 0,
+  "tests_skipped": 0,
+  "coverage": null,
+  "coverageReason": "No coverage instrumentation run; test counts are not code coverage.",
+  "cases": [
+    {
+      "id": "test_analysis.AnalysisTests.test_duplicate_is_rejected",
+      "status": "passed",
+      "durationSeconds": 7.4e-05
+    },
+    {
+      "id": "test_analysis.AnalysisTests.test_empty_is_not_a_campaign",
+      "status": "passed",
+      "durationSeconds": 2.4e-05
+    },
+    {
+      "id": "test_analysis.AnalysisTests.test_emulator_not_physical_evidence",
+      "status": "passed",
+      "durationSeconds": 1.7e-05
+    },
+    {
+      "id": "test_analysis.AnalysisTests.test_failed_and_excluded_preserved_without_imputation",
+      "status": "passed",
+      "durationSeconds": 4.1e-05
+    },
+    {
+      "id": "test_analysis.AnalysisTests.test_invalid_numeric_values_rejected",
+      "status": "passed",
+      "durationSeconds": 7.7e-05
+    },
+    {
+      "id": "test_analysis.AnalysisTests.test_schedule_is_balanced_and_deterministic",
+      "status": "passed",
+      "durationSeconds": 0.003474
+    },
+    {
+      "id": "test_analysis.AnalysisTests.test_sessions_and_storage_profiles_never_pooled",
+      "status": "passed",
+      "durationSeconds": 4.4e-05
+    },
+    {
+      "id": "test_analysis.AnalysisTests.test_tail_requires_twenty_samples",
+      "status": "passed",
+      "durationSeconds": 8.7e-05
+    },
+    {
+      "id": "test_analysis.AnalysisTests.test_unsupported_or_unattributed_rows_rejected",
+      "status": "passed",
+      "durationSeconds": 5.6e-05
+    }
+  ],
+  "failures": [],
+  "limitations": [
+    "Analysis/schedule code tested with synthetic samples; no latency campaign or performance claim."
+  ]
+}
