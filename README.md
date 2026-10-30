@@ -19,6 +19,8 @@ BoundaryLab proposes a small framework for bounded, cancellable local jobs, with
 | [Independent proposals and decision](planning/DECISION.md) | Ten Astra reports, tradeoffs, selection rubric and synthesis |
 | [Progress board](planning/BOARD.md) | Planning, implementation, review and verification tracked separately |
 
+Track the [16 planned GitHub issues](https://github.com/oudaykhaled/boundarylab/issues) and [three milestones](https://github.com/oudaykhaled/boundarylab/milestones). All implementation issues start open and unchecked.
+
 ## Proposed scope
 
 ```mermaid

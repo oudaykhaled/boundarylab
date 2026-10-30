@@ -4,24 +4,24 @@ All packages are **planned**. Owners describe the proposed maintainer role; no i
 
 Baseline nominal work = 100h plus 20h reserve. Platform extension nominal work = 100h plus 20h reserve. A range exposes uncertainty; all upper bounds do not fit the nominal cap. [Machine-readable backlog](backlog.json).
 
-| ID | Gate | Work | Nominal (range) hours | Dependencies | Requirements |
-|---|---|---|---:|---|---|
-| B01 | G1 | [Feasibility, trust model and contract](#b01) | 6 (4–8) | None | R01, R10 |
-| B02 | G1 | [Bounded deterministic core and state model](#b02) | 8 (6–10) | B01 | R05, R08 |
-| B03 | G1 | [Real Android Binder broker and Kotlin SDK](#b03) | 10 (8–14) | B02 | R14, R16 |
-| B04 | G1 | [Native consumer, denial client and fault smoke](#b04) | 6 (4–8) | B03 | R02, R07 |
-| B05 | G1 | [Flutter plugin and second installed consumer](#b05) | 10 (8–16) | B04 | R02, R15 |
-| B06 | G2 | [Deterministic fault, ownership and overload campaign](#b06) | 10 (8–14) | B05 | R05, R07, R08, R11, R17 |
-| B07 | G2 | [macOS JVM host and CLI conformance](#b07) | 14 (10–20) | B05 | R03, R19 |
-| B08 | G2 | [Compiled compatibility fixtures and quality lanes](#b08) | 8 (6–10) | B06, B07 | R03, R07, R10, R11 |
-| B09 | G2 | [Controlled startup, memory and load experiment](#b09) | 14 (10–20) | B08 | R04, R05, R06, R08 |
-| B10 | G2 | [Fresh consumer, release rehearsal and maintainer docs](#b10) | 8 (6–12) | B09 | R09, R11, R18 |
-| B11 | G2 | [Technology assessment and evidence case study](#b11) | 6 (4–8) | B10 | R01, R04, R12, R17 |
-| B12 | G3 | [Linux/AOSP clean-image feasibility gate](#b12) | 12 (8–20) | B11 | R16 |
-| B13 | G3 | [Image-integrated native Binder service](#b13) | 36 (24–52) | B12 | R14, R16 |
-| B14 | G3 | [Platform-facing facade and executed integration tests](#b14) | 24 (18–34) | B13 | R14, R16, R19 |
-| B15 | G3 | [Deeper measured investigation and bounded soak](#b15) | 16 (10–24) | B14 | R04, R05, R07, R17 |
-| B16 | G3 | [Reproduction, productization gaps and final handoff](#b16) | 12 (10–20) | B15 | R09, R18 |
+| ID | GitHub issue | Gate | Work | Nominal (range) hours | Dependencies | Requirements |
+|---|---|---|---|---:|---|---|
+| B01 | [#1](https://github.com/oudaykhaled/boundarylab/issues/1) | G1 | [Feasibility, trust model and contract](#b01) | 6 (4–8) | None | R01, R10 |
+| B02 | [#2](https://github.com/oudaykhaled/boundarylab/issues/2) | G1 | [Bounded deterministic core and state model](#b02) | 8 (6–10) | B01 | R05, R08 |
+| B03 | [#3](https://github.com/oudaykhaled/boundarylab/issues/3) | G1 | [Real Android Binder broker and Kotlin SDK](#b03) | 10 (8–14) | B02 | R14, R16 |
+| B04 | [#4](https://github.com/oudaykhaled/boundarylab/issues/4) | G1 | [Native consumer, denial client and fault smoke](#b04) | 6 (4–8) | B03 | R02, R07 |
+| B05 | [#5](https://github.com/oudaykhaled/boundarylab/issues/5) | G1 | [Flutter plugin and second installed consumer](#b05) | 10 (8–16) | B04 | R02, R15 |
+| B06 | [#6](https://github.com/oudaykhaled/boundarylab/issues/6) | G2 | [Deterministic fault, ownership and overload campaign](#b06) | 10 (8–14) | B05 | R05, R07, R08, R11, R17 |
+| B07 | [#7](https://github.com/oudaykhaled/boundarylab/issues/7) | G2 | [macOS JVM host and CLI conformance](#b07) | 14 (10–20) | B05 | R03, R19 |
+| B08 | [#8](https://github.com/oudaykhaled/boundarylab/issues/8) | G2 | [Compiled compatibility fixtures and quality lanes](#b08) | 8 (6–10) | B06, B07 | R03, R07, R10, R11 |
+| B09 | [#9](https://github.com/oudaykhaled/boundarylab/issues/9) | G2 | [Controlled startup, memory and load experiment](#b09) | 14 (10–20) | B08 | R04, R05, R06, R08 |
+| B10 | [#10](https://github.com/oudaykhaled/boundarylab/issues/10) | G2 | [Fresh consumer, release rehearsal and maintainer docs](#b10) | 8 (6–12) | B09 | R09, R11, R18 |
+| B11 | [#11](https://github.com/oudaykhaled/boundarylab/issues/11) | G2 | [Technology assessment and evidence case study](#b11) | 6 (4–8) | B10 | R01, R04, R12, R17 |
+| B12 | [#12](https://github.com/oudaykhaled/boundarylab/issues/12) | G3 | [Linux/AOSP clean-image feasibility gate](#b12) | 12 (8–20) | B11 | R16 |
+| B13 | [#13](https://github.com/oudaykhaled/boundarylab/issues/13) | G3 | [Image-integrated native Binder service](#b13) | 36 (24–52) | B12 | R14, R16 |
+| B14 | [#14](https://github.com/oudaykhaled/boundarylab/issues/14) | G3 | [Platform-facing facade and executed integration tests](#b14) | 24 (18–34) | B13 | R14, R16, R19 |
+| B15 | [#15](https://github.com/oudaykhaled/boundarylab/issues/15) | G3 | [Deeper measured investigation and bounded soak](#b15) | 16 (10–24) | B14 | R04, R05, R07, R17 |
+| B16 | [#16](https://github.com/oudaykhaled/boundarylab/issues/16) | G3 | [Reproduction, productization gaps and final handoff](#b16) | 12 (10–20) | B15 | R09, R18 |
 
 ## B01
 

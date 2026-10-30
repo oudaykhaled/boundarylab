@@ -23,7 +23,7 @@
     "evidence": [],
     "blocker": "not started; implementation outside current planning task",
     "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": null
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/1"
   },
   {
     "id": "B02",
@@ -51,7 +51,7 @@
     "evidence": [],
     "blocker": "not started; implementation outside current planning task",
     "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": null
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/2"
   },
   {
     "id": "B03",
@@ -79,7 +79,7 @@
     "evidence": [],
     "blocker": "not started; implementation outside current planning task",
     "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": null
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/3"
   },
   {
     "id": "B04",
@@ -107,7 +107,7 @@
     "evidence": [],
     "blocker": "not started; implementation outside current planning task",
     "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": null
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/4"
   },
   {
     "id": "B05",
@@ -135,7 +135,7 @@
     "evidence": [],
     "blocker": "not started; implementation outside current planning task",
     "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": null
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/5"
   },
   {
     "id": "B06",
@@ -166,7 +166,7 @@
     "evidence": [],
     "blocker": "not started; implementation outside current planning task",
     "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": null
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/6"
   },
   {
     "id": "B07",
@@ -194,7 +194,7 @@
     "evidence": [],
     "blocker": "not started; implementation outside current planning task",
     "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": null
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/7"
   },
   {
     "id": "B08",
@@ -225,7 +225,7 @@
     "evidence": [],
     "blocker": "not started; implementation outside current planning task",
     "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": null
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/8"
   },
   {
     "id": "B09",
@@ -255,7 +255,7 @@
     "evidence": [],
     "blocker": "not started; implementation outside current planning task",
     "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": null
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/9"
   },
   {
     "id": "B10",
@@ -284,7 +284,7 @@
     "evidence": [],
     "blocker": "not started; implementation outside current planning task",
     "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": null
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/10"
   },
   {
     "id": "B11",
@@ -314,7 +314,7 @@
     "evidence": [],
     "blocker": "not started; implementation outside current planning task",
     "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": null
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/11"
   },
   {
     "id": "B12",
@@ -341,7 +341,7 @@
     "evidence": [],
     "blocker": "not started; implementation outside current planning task",
     "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": null
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/12"
   },
   {
     "id": "B13",
@@ -369,7 +369,7 @@
     "evidence": [],
     "blocker": "not started; implementation outside current planning task",
     "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": null
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/13"
   },
   {
     "id": "B14",
@@ -398,7 +398,7 @@
     "evidence": [],
     "blocker": "not started; implementation outside current planning task",
     "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": null
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/14"
   },
   {
     "id": "B15",
@@ -428,7 +428,7 @@
     "evidence": [],
     "blocker": "not started; implementation outside current planning task",
     "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": null
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/15"
   },
   {
     "id": "B16",
@@ -456,6 +456,6 @@
     "evidence": [],
     "blocker": "not started; implementation outside current planning task",
     "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": null
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/16"
   }
 ]

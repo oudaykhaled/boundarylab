@@ -14,6 +14,7 @@ Record exact commit/artifact hashes, dependency/toolchain pins, OS build/API/ABI
 |---|---|---|
 | Broker dies before/after admission | Debug-only checkpoint and external process termination | Clients survive, no false success, ambiguous work visible, new epoch on reconnect |
 | Client dies while another remains | Kill one task-owned client process | Dead session reclaimed; surviving client progresses; no stale owner records |
+| Queued cancellation/deadline | Occupy the worker; cancel or expire a second accepted job | Terminal cancellation or deadline failure without starting the second job; unrelated work continues |
 | Cancel/completion race | Barriers immediately before terminal commit | One authoritative terminal state; cancellation-first cannot later become success |
 | Timeout without cancellation | Observe waiting deadline, then explicit SDK cancellation | Distinguish UI timeout from actual stopped work; count active workers |
 | Flutter engine destruction/recreation | Dispose engine during active request | No calls to disposed engine, retained Activity or leaked session; new engine isolated |
