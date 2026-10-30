@@ -2,6 +2,7 @@ package { default_applicable_licenses: ["Android-Apache-2.0"] }
 
 aidl_interface {
     name: "boundarylab-platform",
+    system_ext_specific: true,
     srcs: ["aidl/dev/boundarylab/platform/*.aidl"],
     local_include_dir: "aidl",
     owner: "boundarylab",
