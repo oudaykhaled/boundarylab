@@ -1,18 +1,18 @@
 # Implementation progress board
 
-Sole writer: root. This execution board supplements the frozen Plan v2 backlog. Implemented, compiled, runtime-verified, reviewed and published are distinct.
+Sole writer: root. Updated 2026-10-30. This execution board supplements the frozen Plan v2 backlog. Implemented, compiled, runtime-verified, reviewed, merged and published are distinct. Current implementation branch: `build/fieldpack-native-20261030`, first published source commit `adc83a1`.
 
 | Work | Owner | Status | Evidence | Blocker | Next step |
 |---|---|---|---|---|---|
-| Critical decisions / C02 | Astra chief | In progress | docs/decisions/BUILD-DECISIONS.md pending | None | Freeze shared API |
-| Feasibility / C01 | Quality head + root | In progress | Android SDK, Flutter3.38.9, JDK17/21 discovered | Build/run not yet proven | Execute repo builds |
-| Core / C03,C04 | Middleware head | In progress | Source implemented; initial157 tests passed; final invariants queued | None | Full deterministic re-run after review fixes |
-| Binder SDK / A01,A02,FP02 | Middleware head | In progress | Owned Android source pending | Core API | Implement boundary/ownership |
-| Native+Flutter / A03,F01,F02,FP03,FP04 | Experience head | In progress | Original prototype checked; Flutter8 tests passed; actual APK/runtime pending | SDK API | Design, implement, compile, execute |
-| Desktop / D01,D02,FP05 | Desktop head | In progress | Native helper reviewed; host initial17 passed; CLI launcher fix rerun queued | Final suite | Verify two-process handoff |
-| Build/CI/conformance / V02,Q01,Q03 | Quality head | In progress | 174 reference/corpus cases; pinned wrapper; serialized builds | Latest API/lifecycle fixes | Run and retain scoped evidence |
-| Conditional AOSP / P01–P09 | Quality head inventory | Resource-gated | Mac arm64; no suitable Linux build host identified | Linux/Cuttlefish resources | Audit exact unblock condition |
-| Physical measurement / M01–M04 | Quality head | Planned | Connected Android target discovered | Functional release and campaign readiness | Preregister then execute when ready |
-| Integration and publication | root | In progress | Clean initial main2a49ae3; explicit file ownership | Team deliverables | Review, integrate, update GitHub truthfully |
+| Critical decisions / C02 | Astra chief | Implemented and AI reviewed | [Build decisions](../docs/decisions/BUILD-DECISIONS.md), frozen shared API and 12 decisions | Cloud host remains a planning decision | Reconcile ticket acceptance and host profile |
+| Feasibility / C01 | Quality head + root | Local runtime verified | [Toolchain](../docs/evidence/build/toolchain.md); actual physical Android, Flutter channel and separate macOS JVM processes | Fresh clone and hosted builds pending | Execute clean consumer and hosted checks |
+| Core / C03,C04 | Middleware head | Implemented, tested and AI reviewed | 159 passing tests: 25 engine and 134 codec; [core guide](../core/README.md) | No known scoped source blocker | Preserve source/test provenance |
+| Binder SDK / A01,A02,FP02 | Middleware head | Implemented; final amendment in verification | [Security review](../docs/evidence/reviews/SECURITY-REVIEW.md); physical broker corpus 18 pass, 1 skip at previous SDK hash | Actual restart test exposed old-handle result classification; nlink=2 fixture unavailable on target | Fix classification and rerun affected physical suites |
+| Native+Flutter / A03,F01,F02,FP03,FP04 | Experience head | Implemented; real SAF exports verified | Native 8/8 and Flutter 3/3 installed tests; both exported matching 299-byte manifests; [visual review](../design/IMPLEMENTATION-REVIEW.md) | New native broker-death ninth test awaits SDK correction | Final suite and source linkage; retain accessibility gaps |
+| Desktop / D01,D02,FP05 | Desktop head | Implemented, tested and AI reviewed on macOS | 20 host and 11 CLI cases; [installed smoke](../conformance/desktop/installed-smoke.json); tested separate-process walkthrough | Hosted Linux lane pending | Verify both actual mobile exports and clean consumer |
+| Build/CI/conformance / V02,Q01,Q03 | Quality head | Implemented; hosted CI under repair | 174 reference/corpus tests; 9 benchmark-tool tests; [QA charter](../docs/evidence/build/QA-CHARTER.md); [first hosted run](https://github.com/oudaykhaled/boundarylab/actions/runs/41066039599) | Android setup action requests removed `tools` package; reference lane passed | Correct supported setup input, run hosted lanes |
+| Conditional AOSP / P01–P09 | Astra chief + quality head | Resource-gated | [Resource audit](../docs/evidence/build/aosp-resource-audit.md); online Intel N2/KVM option researched | No allocated Linux x86_64/KVM host or cloud budget | Prepare host preflight; await resource allocation |
+| Physical measurement / M01–M04 | Quality head | Planned; harness implemented | [Benchmark design](../benchmarks/README.md), 720-trial schedule, functional lazy-bind observation | Controlled campaign not executed; no performance claims | Freeze baseline/device conditions and execute campaign |
+| Integration and publication | root | Branch published; draft PR preparation | Source `adc83a1` pushed; review and local runtime receipts retained | Final SDK amendment, hosted CI and evidence reconciliation | Integrate final receipts, publish reviewable PR, update GitHub board |
 
-No native implementation gate has passed yet. No production deployment, device flashing, commercial shipment or human/external adoption is claimed.
+Known remaining gates include compiled old-consumer compatibility, the Android nlink=2 runtime fixture, controlled performance/memory/startup campaign, broader device/accessibility validation and the conditional AOSP image. No production deployment, device flashing, commercial shipment or human/external adoption is claimed.
