@@ -81,7 +81,7 @@ int main(int argc, char** argv) {
     check(security_getenforce() == 1, "global_enforcing");
     Client client; check(client.connected(), "service_discovery");
     if (mode == "denied") {
-        check(getuid() == 65534, "denied_real_uid", std::to_string(getuid()));
+        check(getuid() == 9999, "denied_real_uid", std::to_string(getuid())); // Android AID_NOBODY
         check(client.open().error == "DENIED", "denied", "DENIED"); return 0;
     }
     check(getuid() == 2000, "authorized_real_uid", std::to_string(getuid()));
