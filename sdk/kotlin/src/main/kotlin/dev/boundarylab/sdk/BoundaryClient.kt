@@ -247,15 +247,16 @@ class BoundaryClient(context: Context) : AutoCloseable {
 
     /** One poll per request at a time, >=250 ms between IPC starts, including request lookup. */
     fun status(handle: JobHandle, callback: (Result<JobSnapshot>) -> Unit) {
-        poll(handle.requestId, callback) { service, caps, session, current ->
+        poll(handle.requestId, callback, expectedGeneration = handle.generation) { service, caps, session, current ->
             checkHandle(handle, caps, session, current)
             snapshot(decode(service.status(caps.epoch, session, handle.jobId)))
         }
     }
 
     private fun <T> poll(requestId: String, callback: (Result<T>) -> Unit,
+                         expectedGeneration: Long = generation,
                          action: (IBoundaryBroker, BrokerCapabilities, String, Long) -> T) {
-        val expected = generation
+        val expected = expectedGeneration
         if (!admit(callback)) return
         val completed = AtomicBoolean(false)
         lateinit var timeout: Runnable
@@ -318,7 +319,7 @@ class BoundaryClient(context: Context) : AutoCloseable {
     }
 
     fun cancel(handle: JobHandle, callback: (Result<JobSnapshot>) -> Unit) {
-        request(callback) { service, caps, session, current ->
+        request(callback, expectedGeneration = handle.generation) { service, caps, session, current ->
             checkHandle(handle, caps, session, current)
             snapshot(decode(service.cancel(caps.epoch, session, handle.jobId)))
         }

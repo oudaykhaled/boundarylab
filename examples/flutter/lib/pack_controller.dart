@@ -203,6 +203,8 @@ final class PackController extends ChangeNotifier {
       'An attachment changed while being checked. Wait for editing to finish and prepare again.',
     'DEADLINE_EXCEEDED' =>
       'The check timed out. Try fewer or smaller files in a new attempt.',
+    'TIMEOUT_UNKNOWN' =>
+      'The request timed out and its outcome is unknown. Start a new attempt to retry; nothing is retried automatically.',
     'BUSY' => 'The service is still busy. Wait for cleanup, then try again.',
     'DENIED' =>
       'This app is not authorized to use the installed service. Install the matching signed apps.',

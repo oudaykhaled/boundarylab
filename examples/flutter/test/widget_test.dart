@@ -112,6 +112,44 @@ void main() {
     expect(controller.phase, PackPhase.lost);
     controller.dispose();
   });
+  test(
+    'unknown timeout is distinct and never retries or enables export',
+    () async {
+      final messages = <String, String>{};
+      for (final code in [
+        'TIMEOUT_UNKNOWN',
+        'DEADLINE_EXCEEDED',
+        'LOST_OR_UNKNOWN',
+      ]) {
+        final gateway = FakeGateway()..pending = Completer<List<DigestEntry>>();
+        final controller = PackController(gateway);
+        await controller.select();
+        final preparing = controller.prepare();
+        await Future<void>.delayed(Duration.zero);
+        gateway.pending!.completeError(PlatformException(code: code));
+        await preparing;
+        messages[code] = controller.message;
+        expect(controller.diagnosticCode, code);
+        expect(controller.canExport, false);
+        expect(controller.entries, isEmpty);
+        expect(gateway.prepares, 1);
+        expect(
+          controller.phase,
+          code == 'LOST_OR_UNKNOWN' ? PackPhase.lost : PackPhase.failed,
+        );
+        controller.dispose();
+      }
+      expect(messages['TIMEOUT_UNKNOWN'], contains('outcome is unknown'));
+      expect(
+        messages['TIMEOUT_UNKNOWN'],
+        contains('nothing is retried automatically'),
+      );
+      expect(messages['TIMEOUT_UNKNOWN'], contains('Start a new attempt'));
+      expect(messages['DEADLINE_EXCEEDED'], contains('The check timed out'));
+      expect(messages['LOST_OR_UNKNOWN'], contains('Connection lost'));
+      expect(messages.values.toSet(), hasLength(3));
+    },
+  );
   test('write failure retains complete pack for explicit retry', () async {
     final gateway = FakeGateway()..writeFails = true;
     final controller = PackController(gateway);

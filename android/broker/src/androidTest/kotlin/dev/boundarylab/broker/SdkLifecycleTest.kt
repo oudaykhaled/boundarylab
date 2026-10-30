@@ -271,6 +271,32 @@ class SdkLifecycleTest {
         } finally { client.close(); file.delete() }
     }
 
+    @Test fun oldHandleStatusAndCancelReportLossWhileRecoveredTransportIsUnavailable() {
+        val client = client(FakeBroker())
+        try {
+            val original = submitted(client)
+            val worker = BoundaryClient::class.java.getDeclaredField("worker").apply { isAccessible = true }
+                .get(client) as java.util.concurrent.ScheduledThreadPoolExecutor
+            val disconnected = CountDownLatch(1)
+            worker.execute {
+                // Deterministically hold the post-loss/pre-rebind state; native instrumentation
+                // separately exercises actual broker force-stop and the onLoss notification.
+                BoundaryClient::class.java.getDeclaredField("generation").apply { isAccessible = true }
+                    .setLong(client, original.generation + 1)
+                BoundaryClient::class.java.getDeclaredField("remote").apply { isAccessible = true }.set(client, null)
+                disconnected.countDown()
+            }
+            assertTrue(disconnected.await(3, TimeUnit.SECONDS))
+            val status = awaitResult<dev.boundarylab.sdk.JobSnapshot> { client.status(original, it) }
+            val cancel = awaitResult<dev.boundarylab.sdk.JobSnapshot> { client.cancel(original, it) }
+            assertEquals("LOST_OR_UNKNOWN", (status.exceptionOrNull() as BoundaryException).code)
+            assertEquals("LOST_OR_UNKNOWN", (cancel.exceptionOrNull() as BoundaryException).code)
+            val pending = BoundaryClient::class.java.getDeclaredField("pending").apply { isAccessible = true }
+                .get(client) as AtomicInteger
+            assertEquals(0, pending.get())
+        } finally { client.close() }
+    }
+
     @Test fun submitTimeoutCompletesOnceWithoutReplayAndOriginalRequestRemainsQueryable() {
         val broker = FakeBroker()
         val client = client(broker)
