@@ -1,0 +1,13 @@
+{
+  "kind": "unchanged_source_boot_and_cleanup",
+  "passed": true,
+  "window": {
+    "started_utc": "2026-10-30T21:36:57.098038+00:00",
+    "deadline_epoch": 1793396817.0980382,
+    "maximum_seconds": 600.0
+  },
+  "ended_utc": "2026-10-30T21:37:50.199501+00:00",
+  "boot_passed": true,
+  "cleanup_verified": true,
+  "error": null
+}

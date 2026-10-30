@@ -1,0 +1,19 @@
+{
+  "observedUtc": "2026-10-30T22:59:31.674455+00:00",
+  "provider": "GitHub Actions",
+  "pullRequest": 59,
+  "candidateBeforeMigration": "5cffa2116c1a2ac0a5733a78b5c8f90eee8e2780",
+  "runId": 41141562437,
+  "jobId": 124356804143,
+  "jobName": "jvm checks (macos-14)",
+  "conclusion": "cancelled",
+  "stepCount": 0,
+  "providerAnnotation": "\"This job failed because of a scheduled macOS 14 runner image brownout. macOS 14 runner images will be retired on November 2, 2026. For migration options and the brownout schedule, see https://github.com/actions/runner-images/issues/13518\"",
+  "officialSources": [
+    "https://github.com/actions/runner-images/issues/13518",
+    "https://docs.github.com/en/actions/reference/runners/github-hosted-runners"
+  ],
+  "scopedAiDecision": "Astra chief approved macos-14 to macos-15; preserve ARM64 architecture, JDK17, Gradle, actions, five lanes, tests and timeouts; require actual full success on new candidate. No physical macOS15 product support inference.",
+  "cloudImpact": "No new AOSP VM, storage or test. Standard public-repository runner only.",
+  "historicalFailurePreserved": true
+}

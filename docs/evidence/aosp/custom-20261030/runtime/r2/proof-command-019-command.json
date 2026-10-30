@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "sudo",
+    "--login",
+    "--user=aosp",
+    "--",
+    "/srv/aosp/source/out/host/linux-x86/bin/adb",
+    "-s",
+    "0.0.0.0:6520",
+    "shell",
+    "stat -c %a:%u:%g /system_ext/bin/boundarylab_probe"
+  ],
+  "started_utc": "2026-10-30T22:09:17.025369+00:00",
+  "ended_utc": "2026-10-30T22:09:17.139532+00:00",
+  "exit_code": 0,
+  "timed_out": false,
+  "error": null,
+  "duration_seconds": 0.11416695500156493
+}

@@ -1,0 +1,2768 @@
+{
+  "schema_version": 1,
+  "serial": "0.0.0.0:6520",
+  "scope": "custom-image-runtime",
+  "checks": [
+    {
+      "case": "profile",
+      "passed": true,
+      "actual": "generic/aosp_cf_x86_64_only_phone/vsoc_x86_64_only:16/BP4A.251205.006/eng.aosp:userdebug/test-keys",
+      "observed_at": "2026-10-30T22:38:51.079686+00:00"
+    },
+    {
+      "case": "enforcing_before",
+      "passed": true,
+      "actual": "Enforcing",
+      "observed_at": "2026-10-30T22:38:51.173735+00:00"
+    },
+    {
+      "case": "adb_uid_shell",
+      "passed": true,
+      "actual": "uid=2000(shell) gid=2000(shell) groups=2000(shell),1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),1078(ext_data_rw),1079(ext_obb_rw),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats),3009(readproc),3011(uhid),3012(readtracefs) context=u:r:shell:s0",
+      "observed_at": "2026-10-30T22:38:51.361801+00:00"
+    },
+    {
+      "case": "probe_command:empty",
+      "passed": true,
+      "actual": {
+        "argv": [
+          "adb",
+          "-s",
+          "0.0.0.0:6520",
+          "shell",
+          "/system_ext/bin/boundarylab_probe empty"
+        ],
+        "started_at": "2026-10-30T22:38:51.362004+00:00",
+        "ended_at": "2026-10-30T22:38:51.410469+00:00",
+        "exit_code": 0,
+        "stdout": "{\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\n{\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\n{\"case\":\"authorized_capabilities\",\"passed\":true,\"detail\":\"07cb39e9-78ed-4d0e-afcb-29080c066eec\"}\n{\"case\":\"resource_baseline\",\"passed\":true,\"detail\":\"\"}\n",
+        "stderr": ""
+      },
+      "observed_at": "2026-10-30T22:38:51.410797+00:00"
+    },
+    {
+      "case": "probe:context_available",
+      "passed": true,
+      "actual": {
+        "case": "context_available",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:51.411014+00:00"
+    },
+    {
+      "case": "probe:authorized_domain",
+      "passed": true,
+      "actual": {
+        "case": "authorized_domain",
+        "passed": true,
+        "detail": "u:r:boundarylab_probe:s0"
+      },
+      "observed_at": "2026-10-30T22:38:51.411718+00:00"
+    },
+    {
+      "case": "probe:global_enforcing",
+      "passed": true,
+      "actual": {
+        "case": "global_enforcing",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:51.412263+00:00"
+    },
+    {
+      "case": "probe:service_discovery",
+      "passed": true,
+      "actual": {
+        "case": "service_discovery",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:51.412706+00:00"
+    },
+    {
+      "case": "probe:authorized_real_uid",
+      "passed": true,
+      "actual": {
+        "case": "authorized_real_uid",
+        "passed": true,
+        "detail": "2000"
+      },
+      "observed_at": "2026-10-30T22:38:51.413175+00:00"
+    },
+    {
+      "case": "probe:authorized_capabilities",
+      "passed": true,
+      "actual": {
+        "case": "authorized_capabilities",
+        "passed": true,
+        "detail": "07cb39e9-78ed-4d0e-afcb-29080c066eec"
+      },
+      "observed_at": "2026-10-30T22:38:51.413571+00:00"
+    },
+    {
+      "case": "probe:resource_baseline",
+      "passed": true,
+      "actual": {
+        "case": "resource_baseline",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:51.413926+00:00"
+    },
+    {
+      "case": "probe_command:known",
+      "passed": true,
+      "actual": {
+        "argv": [
+          "adb",
+          "-s",
+          "0.0.0.0:6520",
+          "shell",
+          "/system_ext/bin/boundarylab_probe known"
+        ],
+        "started_at": "2026-10-30T22:38:51.414260+00:00",
+        "ended_at": "2026-10-30T22:38:51.462433+00:00",
+        "exit_code": 0,
+        "stdout": "{\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\n{\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\n{\"case\":\"authorized_capabilities\",\"passed\":true,\"detail\":\"07cb39e9-78ed-4d0e-afcb-29080c066eec\"}\n{\"case\":\"known_session_open\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"known_job_admitted\",\"passed\":true,\"detail\":\"\"}\n{\"epoch\":\"07cb39e9-78ed-4d0e-afcb-29080c066eec\",\"sessionId\":\"7bc64d69-8bcf-4637-9033-229184479a33\",\"jobId\":\"a3737968-8c32-4c00-ad92-ad88c5f65088\"}\n{\"case\":\"known_job_succeeded\",\"passed\":true,\"detail\":\"6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d\"}\n{\"case\":\"known_session_closed\",\"passed\":true,\"detail\":\"\"}\n",
+        "stderr": ""
+      },
+      "observed_at": "2026-10-30T22:38:51.462788+00:00"
+    },
+    {
+      "case": "probe:context_available",
+      "passed": true,
+      "actual": {
+        "case": "context_available",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:51.463080+00:00"
+    },
+    {
+      "case": "probe:authorized_domain",
+      "passed": true,
+      "actual": {
+        "case": "authorized_domain",
+        "passed": true,
+        "detail": "u:r:boundarylab_probe:s0"
+      },
+      "observed_at": "2026-10-30T22:38:51.463892+00:00"
+    },
+    {
+      "case": "probe:global_enforcing",
+      "passed": true,
+      "actual": {
+        "case": "global_enforcing",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:51.464358+00:00"
+    },
+    {
+      "case": "probe:service_discovery",
+      "passed": true,
+      "actual": {
+        "case": "service_discovery",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:51.464761+00:00"
+    },
+    {
+      "case": "probe:authorized_real_uid",
+      "passed": true,
+      "actual": {
+        "case": "authorized_real_uid",
+        "passed": true,
+        "detail": "2000"
+      },
+      "observed_at": "2026-10-30T22:38:51.465161+00:00"
+    },
+    {
+      "case": "probe:authorized_capabilities",
+      "passed": true,
+      "actual": {
+        "case": "authorized_capabilities",
+        "passed": true,
+        "detail": "07cb39e9-78ed-4d0e-afcb-29080c066eec"
+      },
+      "observed_at": "2026-10-30T22:38:51.465528+00:00"
+    },
+    {
+      "case": "probe:known_session_open",
+      "passed": true,
+      "actual": {
+        "case": "known_session_open",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:51.466007+00:00"
+    },
+    {
+      "case": "probe:known_job_admitted",
+      "passed": true,
+      "actual": {
+        "case": "known_job_admitted",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:51.466389+00:00"
+    },
+    {
+      "case": "probe:known_job_succeeded",
+      "passed": true,
+      "actual": {
+        "case": "known_job_succeeded",
+        "passed": true,
+        "detail": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"
+      },
+      "observed_at": "2026-10-30T22:38:51.466790+00:00"
+    },
+    {
+      "case": "probe:known_session_closed",
+      "passed": true,
+      "actual": {
+        "case": "known_session_closed",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:51.467141+00:00"
+    },
+    {
+      "case": "probe_command:resources",
+      "passed": true,
+      "actual": {
+        "argv": [
+          "adb",
+          "-s",
+          "0.0.0.0:6520",
+          "shell",
+          "/system_ext/bin/boundarylab_probe resources"
+        ],
+        "started_at": "2026-10-30T22:38:51.467619+00:00",
+        "ended_at": "2026-10-30T22:38:51.515364+00:00",
+        "exit_code": 0,
+        "stdout": "{\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\n{\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\n{\"case\":\"authorized_capabilities\",\"passed\":true,\"detail\":\"07cb39e9-78ed-4d0e-afcb-29080c066eec\"}\n{\"resources\":{\"epoch\":\"07cb39e9-78ed-4d0e-afcb-29080c066eec\",\"servicePid\":918,\"liveSessions\":0,\"queuedJobs\":0,\"runningJobs\":0,\"retainedEntries\":0,\"retainedBytes\":0}}\n",
+        "stderr": ""
+      },
+      "observed_at": "2026-10-30T22:38:51.515685+00:00"
+    },
+    {
+      "case": "probe:context_available",
+      "passed": true,
+      "actual": {
+        "case": "context_available",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:51.516046+00:00"
+    },
+    {
+      "case": "probe:authorized_domain",
+      "passed": true,
+      "actual": {
+        "case": "authorized_domain",
+        "passed": true,
+        "detail": "u:r:boundarylab_probe:s0"
+      },
+      "observed_at": "2026-10-30T22:38:51.516764+00:00"
+    },
+    {
+      "case": "probe:global_enforcing",
+      "passed": true,
+      "actual": {
+        "case": "global_enforcing",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:51.517234+00:00"
+    },
+    {
+      "case": "probe:service_discovery",
+      "passed": true,
+      "actual": {
+        "case": "service_discovery",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:51.517635+00:00"
+    },
+    {
+      "case": "probe:authorized_real_uid",
+      "passed": true,
+      "actual": {
+        "case": "authorized_real_uid",
+        "passed": true,
+        "detail": "2000"
+      },
+      "observed_at": "2026-10-30T22:38:51.517997+00:00"
+    },
+    {
+      "case": "probe:authorized_capabilities",
+      "passed": true,
+      "actual": {
+        "case": "authorized_capabilities",
+        "passed": true,
+        "detail": "07cb39e9-78ed-4d0e-afcb-29080c066eec"
+      },
+      "observed_at": "2026-10-30T22:38:51.518407+00:00"
+    },
+    {
+      "case": "cycle_before:resource_record",
+      "passed": true,
+      "actual": [
+        {
+          "epoch": "07cb39e9-78ed-4d0e-afcb-29080c066eec",
+          "servicePid": 918,
+          "liveSessions": 0,
+          "queuedJobs": 0,
+          "runningJobs": 0,
+          "retainedEntries": 0,
+          "retainedBytes": 0
+        }
+      ],
+      "observed_at": "2026-10-30T22:38:51.518749+00:00"
+    },
+    {
+      "case": "cycle_before:resource_shape",
+      "passed": true,
+      "actual": {
+        "epoch": "07cb39e9-78ed-4d0e-afcb-29080c066eec",
+        "servicePid": 918,
+        "liveSessions": 0,
+        "queuedJobs": 0,
+        "runningJobs": 0,
+        "retainedEntries": 0,
+        "retainedBytes": 0
+      },
+      "observed_at": "2026-10-30T22:38:51.519138+00:00"
+    },
+    {
+      "case": "cycle_before:quiescent",
+      "passed": true,
+      "actual": [
+        {
+          "observed_at": "2026-10-30T22:38:51.519464+00:00",
+          "resources": {
+            "epoch": "07cb39e9-78ed-4d0e-afcb-29080c066eec",
+            "servicePid": 918,
+            "liveSessions": 0,
+            "queuedJobs": 0,
+            "runningJobs": 0,
+            "retainedEntries": 0,
+            "retainedBytes": 0
+          }
+        }
+      ],
+      "observed_at": "2026-10-30T22:38:51.519472+00:00"
+    },
+    {
+      "case": "adb_uid_root_for_lifecycle_only",
+      "passed": true,
+      "actual": "uid=0(root) gid=0(root) groups=0(root),1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),1078(ext_data_rw),1079(ext_obb_rw),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats),3009(readproc),3011(uhid),3012(readtracefs) context=u:r:su:s0",
+      "observed_at": "2026-10-30T22:38:51.923801+00:00"
+    },
+    {
+      "case": "cycle_before:pid_matches_metrics",
+      "passed": true,
+      "actual": {
+        "pid": "918",
+        "resources": {
+          "epoch": "07cb39e9-78ed-4d0e-afcb-29080c066eec",
+          "servicePid": 918,
+          "liveSessions": 0,
+          "queuedJobs": 0,
+          "runningJobs": 0,
+          "retainedEntries": 0,
+          "retainedBytes": 0
+        }
+      },
+      "observed_at": "2026-10-30T22:38:51.971681+00:00"
+    },
+    {
+      "case": "cycle_before:fd_listing",
+      "passed": true,
+      "actual": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "observed_at": "2026-10-30T22:38:52.066707+00:00"
+    },
+    {
+      "case": "cycle_before:generation_stable",
+      "passed": true,
+      "actual": {
+        "pid": "918",
+        "start_ticks": 1774
+      },
+      "observed_at": "2026-10-30T22:38:52.210677+00:00"
+    },
+    {
+      "case": "cycle_before:snapshot",
+      "passed": true,
+      "actual": {
+        "observed_at": "2026-10-30T22:38:52.211137+00:00",
+        "pid": 918,
+        "start_ticks": 1774,
+        "resources": {
+          "epoch": "07cb39e9-78ed-4d0e-afcb-29080c066eec",
+          "servicePid": 918,
+          "liveSessions": 0,
+          "queuedJobs": 0,
+          "runningJobs": 0,
+          "retainedEntries": 0,
+          "retainedBytes": 0
+        },
+        "fd_count": 7,
+        "fd_numbers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "fd_listing": "total 0\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 0 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 1 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 2 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 3 -> /dev/binderfs/binder\nl-wx------ 1 nobody nobody 64 2026-10-30 22:38 4 -> /sys/kernel/tracing/trace_marker\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 5 -> socket:[14427]\nl-wx------ 1 nobody nobody 64 2026-10-30 22:38 6 -> /dev/pmsg0"
+      },
+      "observed_at": "2026-10-30T22:38:52.211153+00:00"
+    },
+    {
+      "case": "adb_uid_shell",
+      "passed": true,
+      "actual": "uid=2000(shell) gid=2000(shell) groups=2000(shell),1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),1078(ext_data_rw),1079(ext_obb_rw),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats),3009(readproc),3011(uhid),3012(readtracefs) context=u:r:shell:s0",
+      "observed_at": "2026-10-30T22:38:52.612686+00:00"
+    },
+    {
+      "case": "raw_fd_observation",
+      "passed": true,
+      "actual": [
+        {
+          "pid": 4279,
+          "stdoutInode": 38927,
+          "status": -2147483646,
+          "parsedStatus": -2147483646,
+          "replyDecoded": false,
+          "exceptionCode": 0,
+          "serviceError": 0,
+          "startedEpochMs": 1793399934125,
+          "endedEpochMs": 1793399934125,
+          "classification": "FAILED_TRANSACTION_REQUIRES_AVC"
+        }
+      ],
+      "observed_at": "2026-10-30T22:38:54.281865+00:00"
+    },
+    {
+      "case": "raw_fd_observation_shape",
+      "passed": true,
+      "actual": {
+        "pid": 4279,
+        "stdoutInode": 38927,
+        "status": -2147483646,
+        "parsedStatus": -2147483646,
+        "replyDecoded": false,
+        "exceptionCode": 0,
+        "serviceError": 0,
+        "startedEpochMs": 1793399934125,
+        "endedEpochMs": 1793399934125,
+        "classification": "FAILED_TRANSACTION_REQUIRES_AVC"
+      },
+      "observed_at": "2026-10-30T22:38:54.282324+00:00"
+    },
+    {
+      "case": "raw_fd_identity_shape",
+      "passed": true,
+      "actual": {
+        "pid": 4279,
+        "stdoutInode": 38927,
+        "status": -2147483646,
+        "parsedStatus": -2147483646,
+        "replyDecoded": false,
+        "exceptionCode": 0,
+        "serviceError": 0,
+        "startedEpochMs": 1793399934125,
+        "endedEpochMs": 1793399934125,
+        "classification": "FAILED_TRANSACTION_REQUIRES_AVC"
+      },
+      "observed_at": "2026-10-30T22:38:54.283108+00:00"
+    },
+    {
+      "case": "raw_fd_unique_denial_audit",
+      "passed": true,
+      "actual": {
+        "observation": {
+          "pid": 4279,
+          "stdoutInode": 38927,
+          "status": -2147483646,
+          "parsedStatus": -2147483646,
+          "replyDecoded": false,
+          "exceptionCode": 0,
+          "serviceError": 0,
+          "startedEpochMs": 1793399934125,
+          "endedEpochMs": 1793399934125,
+          "classification": "FAILED_TRANSACTION_REQUIRES_AVC"
+        },
+        "audit_ids": [
+          "202"
+        ],
+        "avcs": [
+          "         1793399934.123  4279  4279 I auditd  : type=1400 audit(0.0:202): avc:  denied  { use } for  comm=\"boundarylab_pro\" path=\"socket:[38927]\" dev=\"sockfs\" ino=38927 scontext=u:r:boundarylab:s0 tcontext=u:r:adbd:s0 tclass=fd permissive=0",
+          "         1793399934.123  4279  4279 W boundarylab_pro: type=1400 audit(0.0:202): avc:  denied  { use } for  path=\"socket:[38927]\" dev=\"sockfs\" ino=38927 scontext=u:r:boundarylab:s0 tcontext=u:r:adbd:s0 tclass=fd permissive=0"
+        ]
+      },
+      "observed_at": "2026-10-30T22:38:54.284157+00:00"
+    },
+    {
+      "case": "raw_fd_rejected",
+      "passed": true,
+      "actual": {
+        "classification": "CORRELATED_SELINUX_FD_USE_DENIAL",
+        "observation": {
+          "pid": 4279,
+          "stdoutInode": 38927,
+          "status": -2147483646,
+          "parsedStatus": -2147483646,
+          "replyDecoded": false,
+          "exceptionCode": 0,
+          "serviceError": 0,
+          "startedEpochMs": 1793399934125,
+          "endedEpochMs": 1793399934125,
+          "classification": "FAILED_TRANSACTION_REQUIRES_AVC"
+        },
+        "audit_id": "202",
+        "avcs": [
+          "         1793399934.123  4279  4279 I auditd  : type=1400 audit(0.0:202): avc:  denied  { use } for  comm=\"boundarylab_pro\" path=\"socket:[38927]\" dev=\"sockfs\" ino=38927 scontext=u:r:boundarylab:s0 tcontext=u:r:adbd:s0 tclass=fd permissive=0",
+          "         1793399934.123  4279  4279 W boundarylab_pro: type=1400 audit(0.0:202): avc:  denied  { use } for  path=\"socket:[38927]\" dev=\"sockfs\" ino=38927 scontext=u:r:boundarylab:s0 tcontext=u:r:adbd:s0 tclass=fd permissive=0"
+        ],
+        "identities": [
+          "         1793399934.123  4279  4279 I auditd  : type=1300 audit(0.0:202): arch=c000003e syscall=16 success=yes exit=0 a0=5 a1=c0306201 a2=7ffd278c9900 a3=7ffd278ca090 items=0 ppid=4262 auid=4294967295 uid=2000 gid=2000 euid=2000 suid=2000 fsuid=2000 egid=2000 sgid=2000 fsgid=2000 tty=(none) ses=4294967295 comm=\"boundarylab_pro\" exe=\"/system_ext/bin/boundarylab_probe\" subj=u:r:boundarylab_probe:s0 key=(null)",
+          "         1793399934.123  4279  4279 W boundarylab_pro: type=1300 audit(0.0:202): arch=c000003e syscall=16 success=yes exit=0 a0=5 a1=c0306201 a2=7ffd278c9900 a3=7ffd278ca090 items=0 ppid=4262 auid=4294967295 uid=2000 gid=2000 euid=2000 suid=2000 fsuid=2000 egid=2000 sgid=2000 fsgid=2000 tty=(none) ses=4294967295 exe=\"/system_ext/bin/boundarylab_probe\" subj=u:r:boundarylab_probe:s0 key=(null)"
+        ],
+        "drivers": [
+          "         1793399934.177     0     0 W rust_binder: Transaction failed: BR_FAILED_REPLY { source: EACCES } my_pid:4279"
+        ]
+      },
+      "observed_at": "2026-10-30T22:38:54.284793+00:00"
+    },
+    {
+      "case": "probe_command:smoke",
+      "passed": true,
+      "actual": {
+        "argv": [
+          "adb",
+          "-s",
+          "0.0.0.0:6520",
+          "shell",
+          "/system_ext/bin/boundarylab_probe smoke"
+        ],
+        "started_at": "2026-10-30T22:38:52.659622+00:00",
+        "ended_at": "2026-10-30T22:38:54.235471+00:00",
+        "exit_code": 0,
+        "stdout": "{\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\n{\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\n{\"case\":\"authorized_capabilities\",\"passed\":true,\"detail\":\"07cb39e9-78ed-4d0e-afcb-29080c066eec\"}\n{\"case\":\"major_2\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"open_session\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"admit_0\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"golden_0\",\"passed\":true,\"detail\":\"SUCCEEDED\"}\n{\"case\":\"isolation_two_live_sessions\",\"passed\":true,\"detail\":\"4b0c6c34-f6f4-4907-bd47-d6340bca100b/84031508-05d7-4da7-b0d2-b898eab8230a\"}\n{\"case\":\"foreign_session_read_denied_empty\",\"passed\":true,\"detail\":\"DENIED\"}\n{\"case\":\"foreign_session_cancel_denied_empty\",\"passed\":true,\"detail\":\"DENIED\"}\n{\"case\":\"isolation_owner_result_unchanged\",\"passed\":true,\"detail\":\"SUCCEEDED\"}\n{\"case\":\"isolation_other_session_closed\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"dedup_0\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"conflict_0\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"success_wins_cancel_0\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"admit_1\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"golden_1\",\"passed\":true,\"detail\":\"SUCCEEDED\"}\n{\"case\":\"dedup_1\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"conflict_1\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"success_wins_cancel_1\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"admit_65535\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"golden_65535\",\"passed\":true,\"detail\":\"SUCCEEDED\"}\n{\"case\":\"dedup_65535\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"conflict_65535\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"success_wins_cancel_65535\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"admit_65536\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"golden_65536\",\"passed\":true,\"detail\":\"SUCCEEDED\"}\n{\"case\":\"dedup_65536\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"conflict_65536\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"success_wins_cancel_65536\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"admit_65537\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"golden_65537\",\"passed\":true,\"detail\":\"SUCCEEDED\"}\n{\"case\":\"dedup_65537\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"conflict_65537\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"success_wins_cancel_65537\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"admit_134217728\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"golden_134217728\",\"passed\":true,\"detail\":\"SUCCEEDED\"}\n{\"case\":\"dedup_134217728\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"conflict_134217728\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"success_wins_cancel_134217728\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"over_cap_-1\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"over_cap_134217729\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"unsupported-file\",\"passed\":true,\"detail\":\"UNSUPPORTED\"}\n{\"case\":\"malformed_uuid\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"submit_major_2\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"raw_fd_parcel_written\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"raw_fd_identity_available\",\"passed\":true,\"detail\":\"\"}\n{\"rawFd\":{\"pid\":4279,\"stdoutInode\":38927,\"status\":-2147483646,\"parsedStatus\":-2147483646,\"replyDecoded\":false,\"exceptionCode\":0,\"serviceError\":0,\"startedEpochMs\":1793399934125,\"endedEpochMs\":1793399934125,\"classification\":\"FAILED_TRANSACTION_REQUIRES_AVC\"}}\n{\"case\":\"raw_metadata_bound\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"cancel_admitted\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"cancel_terminal_order\",\"passed\":true,\"detail\":\"CANCELLED\"}\n{\"case\":\"cancel_terminal_immutable\",\"passed\":true,\"detail\":\"CANCELLED\"}\n{\"case\":\"deadline_admitted\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"deadline\",\"passed\":true,\"detail\":\"DEADLINE_EXCEEDED\"}\n{\"case\":\"close_session\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"close_revokes\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_0\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_1\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_2\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_3\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_4\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_5\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_6\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_7\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_8\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_9\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_10\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_11\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_12\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_13\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_14\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_15\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_bound_16\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_cleanup_recovers\",\"passed\":true,\"detail\":\"\"}\n",
+        "stderr": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.285267+00:00"
+    },
+    {
+      "case": "probe:context_available",
+      "passed": true,
+      "actual": {
+        "case": "context_available",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.285723+00:00"
+    },
+    {
+      "case": "probe:authorized_domain",
+      "passed": true,
+      "actual": {
+        "case": "authorized_domain",
+        "passed": true,
+        "detail": "u:r:boundarylab_probe:s0"
+      },
+      "observed_at": "2026-10-30T22:38:54.286174+00:00"
+    },
+    {
+      "case": "probe:global_enforcing",
+      "passed": true,
+      "actual": {
+        "case": "global_enforcing",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.286696+00:00"
+    },
+    {
+      "case": "probe:service_discovery",
+      "passed": true,
+      "actual": {
+        "case": "service_discovery",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.287229+00:00"
+    },
+    {
+      "case": "probe:authorized_real_uid",
+      "passed": true,
+      "actual": {
+        "case": "authorized_real_uid",
+        "passed": true,
+        "detail": "2000"
+      },
+      "observed_at": "2026-10-30T22:38:54.287684+00:00"
+    },
+    {
+      "case": "probe:authorized_capabilities",
+      "passed": true,
+      "actual": {
+        "case": "authorized_capabilities",
+        "passed": true,
+        "detail": "07cb39e9-78ed-4d0e-afcb-29080c066eec"
+      },
+      "observed_at": "2026-10-30T22:38:54.288159+00:00"
+    },
+    {
+      "case": "probe:major_2",
+      "passed": true,
+      "actual": {
+        "case": "major_2",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.288603+00:00"
+    },
+    {
+      "case": "probe:open_session",
+      "passed": true,
+      "actual": {
+        "case": "open_session",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.289061+00:00"
+    },
+    {
+      "case": "probe:admit_0",
+      "passed": true,
+      "actual": {
+        "case": "admit_0",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.289510+00:00"
+    },
+    {
+      "case": "probe:golden_0",
+      "passed": true,
+      "actual": {
+        "case": "golden_0",
+        "passed": true,
+        "detail": "SUCCEEDED"
+      },
+      "observed_at": "2026-10-30T22:38:54.289977+00:00"
+    },
+    {
+      "case": "probe:isolation_two_live_sessions",
+      "passed": true,
+      "actual": {
+        "case": "isolation_two_live_sessions",
+        "passed": true,
+        "detail": "4b0c6c34-f6f4-4907-bd47-d6340bca100b/84031508-05d7-4da7-b0d2-b898eab8230a"
+      },
+      "observed_at": "2026-10-30T22:38:54.290431+00:00"
+    },
+    {
+      "case": "probe:foreign_session_read_denied_empty",
+      "passed": true,
+      "actual": {
+        "case": "foreign_session_read_denied_empty",
+        "passed": true,
+        "detail": "DENIED"
+      },
+      "observed_at": "2026-10-30T22:38:54.290919+00:00"
+    },
+    {
+      "case": "probe:foreign_session_cancel_denied_empty",
+      "passed": true,
+      "actual": {
+        "case": "foreign_session_cancel_denied_empty",
+        "passed": true,
+        "detail": "DENIED"
+      },
+      "observed_at": "2026-10-30T22:38:54.291389+00:00"
+    },
+    {
+      "case": "probe:isolation_owner_result_unchanged",
+      "passed": true,
+      "actual": {
+        "case": "isolation_owner_result_unchanged",
+        "passed": true,
+        "detail": "SUCCEEDED"
+      },
+      "observed_at": "2026-10-30T22:38:54.291881+00:00"
+    },
+    {
+      "case": "probe:isolation_other_session_closed",
+      "passed": true,
+      "actual": {
+        "case": "isolation_other_session_closed",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.292358+00:00"
+    },
+    {
+      "case": "probe:dedup_0",
+      "passed": true,
+      "actual": {
+        "case": "dedup_0",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.292861+00:00"
+    },
+    {
+      "case": "probe:conflict_0",
+      "passed": true,
+      "actual": {
+        "case": "conflict_0",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.293354+00:00"
+    },
+    {
+      "case": "probe:success_wins_cancel_0",
+      "passed": true,
+      "actual": {
+        "case": "success_wins_cancel_0",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.293874+00:00"
+    },
+    {
+      "case": "probe:admit_1",
+      "passed": true,
+      "actual": {
+        "case": "admit_1",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.294368+00:00"
+    },
+    {
+      "case": "probe:golden_1",
+      "passed": true,
+      "actual": {
+        "case": "golden_1",
+        "passed": true,
+        "detail": "SUCCEEDED"
+      },
+      "observed_at": "2026-10-30T22:38:54.294898+00:00"
+    },
+    {
+      "case": "probe:dedup_1",
+      "passed": true,
+      "actual": {
+        "case": "dedup_1",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.295433+00:00"
+    },
+    {
+      "case": "probe:conflict_1",
+      "passed": true,
+      "actual": {
+        "case": "conflict_1",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.295959+00:00"
+    },
+    {
+      "case": "probe:success_wins_cancel_1",
+      "passed": true,
+      "actual": {
+        "case": "success_wins_cancel_1",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.296476+00:00"
+    },
+    {
+      "case": "probe:admit_65535",
+      "passed": true,
+      "actual": {
+        "case": "admit_65535",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.297102+00:00"
+    },
+    {
+      "case": "probe:golden_65535",
+      "passed": true,
+      "actual": {
+        "case": "golden_65535",
+        "passed": true,
+        "detail": "SUCCEEDED"
+      },
+      "observed_at": "2026-10-30T22:38:54.297651+00:00"
+    },
+    {
+      "case": "probe:dedup_65535",
+      "passed": true,
+      "actual": {
+        "case": "dedup_65535",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.298319+00:00"
+    },
+    {
+      "case": "probe:conflict_65535",
+      "passed": true,
+      "actual": {
+        "case": "conflict_65535",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.298894+00:00"
+    },
+    {
+      "case": "probe:success_wins_cancel_65535",
+      "passed": true,
+      "actual": {
+        "case": "success_wins_cancel_65535",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.299441+00:00"
+    },
+    {
+      "case": "probe:admit_65536",
+      "passed": true,
+      "actual": {
+        "case": "admit_65536",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.300002+00:00"
+    },
+    {
+      "case": "probe:golden_65536",
+      "passed": true,
+      "actual": {
+        "case": "golden_65536",
+        "passed": true,
+        "detail": "SUCCEEDED"
+      },
+      "observed_at": "2026-10-30T22:38:54.300560+00:00"
+    },
+    {
+      "case": "probe:dedup_65536",
+      "passed": true,
+      "actual": {
+        "case": "dedup_65536",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.301121+00:00"
+    },
+    {
+      "case": "probe:conflict_65536",
+      "passed": true,
+      "actual": {
+        "case": "conflict_65536",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.301679+00:00"
+    },
+    {
+      "case": "probe:success_wins_cancel_65536",
+      "passed": true,
+      "actual": {
+        "case": "success_wins_cancel_65536",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.302328+00:00"
+    },
+    {
+      "case": "probe:admit_65537",
+      "passed": true,
+      "actual": {
+        "case": "admit_65537",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.302947+00:00"
+    },
+    {
+      "case": "probe:golden_65537",
+      "passed": true,
+      "actual": {
+        "case": "golden_65537",
+        "passed": true,
+        "detail": "SUCCEEDED"
+      },
+      "observed_at": "2026-10-30T22:38:54.303526+00:00"
+    },
+    {
+      "case": "probe:dedup_65537",
+      "passed": true,
+      "actual": {
+        "case": "dedup_65537",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.304117+00:00"
+    },
+    {
+      "case": "probe:conflict_65537",
+      "passed": true,
+      "actual": {
+        "case": "conflict_65537",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.304702+00:00"
+    },
+    {
+      "case": "probe:success_wins_cancel_65537",
+      "passed": true,
+      "actual": {
+        "case": "success_wins_cancel_65537",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.305298+00:00"
+    },
+    {
+      "case": "probe:admit_134217728",
+      "passed": true,
+      "actual": {
+        "case": "admit_134217728",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.305911+00:00"
+    },
+    {
+      "case": "probe:golden_134217728",
+      "passed": true,
+      "actual": {
+        "case": "golden_134217728",
+        "passed": true,
+        "detail": "SUCCEEDED"
+      },
+      "observed_at": "2026-10-30T22:38:54.306517+00:00"
+    },
+    {
+      "case": "probe:dedup_134217728",
+      "passed": true,
+      "actual": {
+        "case": "dedup_134217728",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.307214+00:00"
+    },
+    {
+      "case": "probe:conflict_134217728",
+      "passed": true,
+      "actual": {
+        "case": "conflict_134217728",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.307854+00:00"
+    },
+    {
+      "case": "probe:success_wins_cancel_134217728",
+      "passed": true,
+      "actual": {
+        "case": "success_wins_cancel_134217728",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.308475+00:00"
+    },
+    {
+      "case": "probe:over_cap_-1",
+      "passed": true,
+      "actual": {
+        "case": "over_cap_-1",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.309102+00:00"
+    },
+    {
+      "case": "probe:over_cap_134217729",
+      "passed": true,
+      "actual": {
+        "case": "over_cap_134217729",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.309724+00:00"
+    },
+    {
+      "case": "probe:unsupported-file",
+      "passed": true,
+      "actual": {
+        "case": "unsupported-file",
+        "passed": true,
+        "detail": "UNSUPPORTED"
+      },
+      "observed_at": "2026-10-30T22:38:54.310364+00:00"
+    },
+    {
+      "case": "probe:malformed_uuid",
+      "passed": true,
+      "actual": {
+        "case": "malformed_uuid",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.311017+00:00"
+    },
+    {
+      "case": "probe:submit_major_2",
+      "passed": true,
+      "actual": {
+        "case": "submit_major_2",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.311656+00:00"
+    },
+    {
+      "case": "probe:raw_fd_parcel_written",
+      "passed": true,
+      "actual": {
+        "case": "raw_fd_parcel_written",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.312905+00:00"
+    },
+    {
+      "case": "probe:raw_fd_identity_available",
+      "passed": true,
+      "actual": {
+        "case": "raw_fd_identity_available",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.313592+00:00"
+    },
+    {
+      "case": "probe:raw_metadata_bound",
+      "passed": true,
+      "actual": {
+        "case": "raw_metadata_bound",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.314281+00:00"
+    },
+    {
+      "case": "probe:cancel_admitted",
+      "passed": true,
+      "actual": {
+        "case": "cancel_admitted",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.314998+00:00"
+    },
+    {
+      "case": "probe:cancel_terminal_order",
+      "passed": true,
+      "actual": {
+        "case": "cancel_terminal_order",
+        "passed": true,
+        "detail": "CANCELLED"
+      },
+      "observed_at": "2026-10-30T22:38:54.315695+00:00"
+    },
+    {
+      "case": "probe:cancel_terminal_immutable",
+      "passed": true,
+      "actual": {
+        "case": "cancel_terminal_immutable",
+        "passed": true,
+        "detail": "CANCELLED"
+      },
+      "observed_at": "2026-10-30T22:38:54.316378+00:00"
+    },
+    {
+      "case": "probe:deadline_admitted",
+      "passed": true,
+      "actual": {
+        "case": "deadline_admitted",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.317151+00:00"
+    },
+    {
+      "case": "probe:deadline",
+      "passed": true,
+      "actual": {
+        "case": "deadline",
+        "passed": true,
+        "detail": "DEADLINE_EXCEEDED"
+      },
+      "observed_at": "2026-10-30T22:38:54.317852+00:00"
+    },
+    {
+      "case": "probe:close_session",
+      "passed": true,
+      "actual": {
+        "case": "close_session",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.318544+00:00"
+    },
+    {
+      "case": "probe:close_revokes",
+      "passed": true,
+      "actual": {
+        "case": "close_revokes",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.319246+00:00"
+    },
+    {
+      "case": "probe:session_0",
+      "passed": true,
+      "actual": {
+        "case": "session_0",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.319955+00:00"
+    },
+    {
+      "case": "probe:session_1",
+      "passed": true,
+      "actual": {
+        "case": "session_1",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.320651+00:00"
+    },
+    {
+      "case": "probe:session_2",
+      "passed": true,
+      "actual": {
+        "case": "session_2",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.321370+00:00"
+    },
+    {
+      "case": "probe:session_3",
+      "passed": true,
+      "actual": {
+        "case": "session_3",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.322096+00:00"
+    },
+    {
+      "case": "probe:session_4",
+      "passed": true,
+      "actual": {
+        "case": "session_4",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.322821+00:00"
+    },
+    {
+      "case": "probe:session_5",
+      "passed": true,
+      "actual": {
+        "case": "session_5",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.323535+00:00"
+    },
+    {
+      "case": "probe:session_6",
+      "passed": true,
+      "actual": {
+        "case": "session_6",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.324266+00:00"
+    },
+    {
+      "case": "probe:session_7",
+      "passed": true,
+      "actual": {
+        "case": "session_7",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.325030+00:00"
+    },
+    {
+      "case": "probe:session_8",
+      "passed": true,
+      "actual": {
+        "case": "session_8",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.325772+00:00"
+    },
+    {
+      "case": "probe:session_9",
+      "passed": true,
+      "actual": {
+        "case": "session_9",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.326522+00:00"
+    },
+    {
+      "case": "probe:session_10",
+      "passed": true,
+      "actual": {
+        "case": "session_10",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.327357+00:00"
+    },
+    {
+      "case": "probe:session_11",
+      "passed": true,
+      "actual": {
+        "case": "session_11",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.328129+00:00"
+    },
+    {
+      "case": "probe:session_12",
+      "passed": true,
+      "actual": {
+        "case": "session_12",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.328900+00:00"
+    },
+    {
+      "case": "probe:session_13",
+      "passed": true,
+      "actual": {
+        "case": "session_13",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.330041+00:00"
+    },
+    {
+      "case": "probe:session_14",
+      "passed": true,
+      "actual": {
+        "case": "session_14",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.330852+00:00"
+    },
+    {
+      "case": "probe:session_15",
+      "passed": true,
+      "actual": {
+        "case": "session_15",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.331650+00:00"
+    },
+    {
+      "case": "probe:session_bound_16",
+      "passed": true,
+      "actual": {
+        "case": "session_bound_16",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.332451+00:00"
+    },
+    {
+      "case": "probe:session_cleanup_recovers",
+      "passed": true,
+      "actual": {
+        "case": "session_cleanup_recovers",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.333239+00:00"
+    },
+    {
+      "case": "probe_command:resources",
+      "passed": true,
+      "actual": {
+        "argv": [
+          "adb",
+          "-s",
+          "0.0.0.0:6520",
+          "shell",
+          "/system_ext/bin/boundarylab_probe resources"
+        ],
+        "started_at": "2026-10-30T22:38:54.334060+00:00",
+        "ended_at": "2026-10-30T22:38:54.379317+00:00",
+        "exit_code": 0,
+        "stdout": "{\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\n{\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\n{\"case\":\"authorized_capabilities\",\"passed\":true,\"detail\":\"07cb39e9-78ed-4d0e-afcb-29080c066eec\"}\n{\"resources\":{\"epoch\":\"07cb39e9-78ed-4d0e-afcb-29080c066eec\",\"servicePid\":918,\"liveSessions\":0,\"queuedJobs\":0,\"runningJobs\":0,\"retainedEntries\":0,\"retainedBytes\":0}}\n",
+        "stderr": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.379561+00:00"
+    },
+    {
+      "case": "probe:context_available",
+      "passed": true,
+      "actual": {
+        "case": "context_available",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.380491+00:00"
+    },
+    {
+      "case": "probe:authorized_domain",
+      "passed": true,
+      "actual": {
+        "case": "authorized_domain",
+        "passed": true,
+        "detail": "u:r:boundarylab_probe:s0"
+      },
+      "observed_at": "2026-10-30T22:38:54.381348+00:00"
+    },
+    {
+      "case": "probe:global_enforcing",
+      "passed": true,
+      "actual": {
+        "case": "global_enforcing",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.382182+00:00"
+    },
+    {
+      "case": "probe:service_discovery",
+      "passed": true,
+      "actual": {
+        "case": "service_discovery",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.383008+00:00"
+    },
+    {
+      "case": "probe:authorized_real_uid",
+      "passed": true,
+      "actual": {
+        "case": "authorized_real_uid",
+        "passed": true,
+        "detail": "2000"
+      },
+      "observed_at": "2026-10-30T22:38:54.383851+00:00"
+    },
+    {
+      "case": "probe:authorized_capabilities",
+      "passed": true,
+      "actual": {
+        "case": "authorized_capabilities",
+        "passed": true,
+        "detail": "07cb39e9-78ed-4d0e-afcb-29080c066eec"
+      },
+      "observed_at": "2026-10-30T22:38:54.384704+00:00"
+    },
+    {
+      "case": "after_smoke:resource_record",
+      "passed": true,
+      "actual": [
+        {
+          "epoch": "07cb39e9-78ed-4d0e-afcb-29080c066eec",
+          "servicePid": 918,
+          "liveSessions": 0,
+          "queuedJobs": 0,
+          "runningJobs": 0,
+          "retainedEntries": 0,
+          "retainedBytes": 0
+        }
+      ],
+      "observed_at": "2026-10-30T22:38:54.385584+00:00"
+    },
+    {
+      "case": "after_smoke:resource_shape",
+      "passed": true,
+      "actual": {
+        "epoch": "07cb39e9-78ed-4d0e-afcb-29080c066eec",
+        "servicePid": 918,
+        "liveSessions": 0,
+        "queuedJobs": 0,
+        "runningJobs": 0,
+        "retainedEntries": 0,
+        "retainedBytes": 0
+      },
+      "observed_at": "2026-10-30T22:38:54.386478+00:00"
+    },
+    {
+      "case": "after_smoke:quiescent",
+      "passed": true,
+      "actual": [
+        {
+          "observed_at": "2026-10-30T22:38:54.387439+00:00",
+          "resources": {
+            "epoch": "07cb39e9-78ed-4d0e-afcb-29080c066eec",
+            "servicePid": 918,
+            "liveSessions": 0,
+            "queuedJobs": 0,
+            "runningJobs": 0,
+            "retainedEntries": 0,
+            "retainedBytes": 0
+          }
+        }
+      ],
+      "observed_at": "2026-10-30T22:38:54.387449+00:00"
+    },
+    {
+      "case": "probe_command:leak",
+      "passed": true,
+      "actual": {
+        "argv": [
+          "adb",
+          "-s",
+          "0.0.0.0:6520",
+          "shell",
+          "/system_ext/bin/boundarylab_probe leak"
+        ],
+        "started_at": "2026-10-30T22:38:54.388369+00:00",
+        "ended_at": "2026-10-30T22:38:54.434288+00:00",
+        "exit_code": 0,
+        "stdout": "{\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\n{\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\n{\"case\":\"authorized_capabilities\",\"passed\":true,\"detail\":\"07cb39e9-78ed-4d0e-afcb-29080c066eec\"}\n{\"case\":\"major_2\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"open_session\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"handle_admitted\",\"passed\":true,\"detail\":\"\"}\n{\"epoch\":\"07cb39e9-78ed-4d0e-afcb-29080c066eec\",\"sessionId\":\"329058db-afee-439d-b564-bb6776b7e2e2\",\"jobId\":\"0a4ebea5-cd76-4d30-9e59-3b7b28d1708b\"}\n",
+        "stderr": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.434530+00:00"
+    },
+    {
+      "case": "probe:context_available",
+      "passed": true,
+      "actual": {
+        "case": "context_available",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.435596+00:00"
+    },
+    {
+      "case": "probe:authorized_domain",
+      "passed": true,
+      "actual": {
+        "case": "authorized_domain",
+        "passed": true,
+        "detail": "u:r:boundarylab_probe:s0"
+      },
+      "observed_at": "2026-10-30T22:38:54.436579+00:00"
+    },
+    {
+      "case": "probe:global_enforcing",
+      "passed": true,
+      "actual": {
+        "case": "global_enforcing",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.437558+00:00"
+    },
+    {
+      "case": "probe:service_discovery",
+      "passed": true,
+      "actual": {
+        "case": "service_discovery",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.438522+00:00"
+    },
+    {
+      "case": "probe:authorized_real_uid",
+      "passed": true,
+      "actual": {
+        "case": "authorized_real_uid",
+        "passed": true,
+        "detail": "2000"
+      },
+      "observed_at": "2026-10-30T22:38:54.439588+00:00"
+    },
+    {
+      "case": "probe:authorized_capabilities",
+      "passed": true,
+      "actual": {
+        "case": "authorized_capabilities",
+        "passed": true,
+        "detail": "07cb39e9-78ed-4d0e-afcb-29080c066eec"
+      },
+      "observed_at": "2026-10-30T22:38:54.440556+00:00"
+    },
+    {
+      "case": "probe:major_2",
+      "passed": true,
+      "actual": {
+        "case": "major_2",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.441513+00:00"
+    },
+    {
+      "case": "probe:open_session",
+      "passed": true,
+      "actual": {
+        "case": "open_session",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.442473+00:00"
+    },
+    {
+      "case": "probe:handle_admitted",
+      "passed": true,
+      "actual": {
+        "case": "handle_admitted",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.443460+00:00"
+    },
+    {
+      "case": "probe_command:resources",
+      "passed": true,
+      "actual": {
+        "argv": [
+          "adb",
+          "-s",
+          "0.0.0.0:6520",
+          "shell",
+          "/system_ext/bin/boundarylab_probe resources"
+        ],
+        "started_at": "2026-10-30T22:38:54.444444+00:00",
+        "ended_at": "2026-10-30T22:38:54.491330+00:00",
+        "exit_code": 0,
+        "stdout": "{\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\n{\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\n{\"case\":\"authorized_capabilities\",\"passed\":true,\"detail\":\"07cb39e9-78ed-4d0e-afcb-29080c066eec\"}\n{\"resources\":{\"epoch\":\"07cb39e9-78ed-4d0e-afcb-29080c066eec\",\"servicePid\":918,\"liveSessions\":0,\"queuedJobs\":0,\"runningJobs\":0,\"retainedEntries\":0,\"retainedBytes\":0}}\n",
+        "stderr": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.491595+00:00"
+    },
+    {
+      "case": "probe:context_available",
+      "passed": true,
+      "actual": {
+        "case": "context_available",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.492709+00:00"
+    },
+    {
+      "case": "probe:authorized_domain",
+      "passed": true,
+      "actual": {
+        "case": "authorized_domain",
+        "passed": true,
+        "detail": "u:r:boundarylab_probe:s0"
+      },
+      "observed_at": "2026-10-30T22:38:54.493767+00:00"
+    },
+    {
+      "case": "probe:global_enforcing",
+      "passed": true,
+      "actual": {
+        "case": "global_enforcing",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.494795+00:00"
+    },
+    {
+      "case": "probe:service_discovery",
+      "passed": true,
+      "actual": {
+        "case": "service_discovery",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.495888+00:00"
+    },
+    {
+      "case": "probe:authorized_real_uid",
+      "passed": true,
+      "actual": {
+        "case": "authorized_real_uid",
+        "passed": true,
+        "detail": "2000"
+      },
+      "observed_at": "2026-10-30T22:38:54.496923+00:00"
+    },
+    {
+      "case": "probe:authorized_capabilities",
+      "passed": true,
+      "actual": {
+        "case": "authorized_capabilities",
+        "passed": true,
+        "detail": "07cb39e9-78ed-4d0e-afcb-29080c066eec"
+      },
+      "observed_at": "2026-10-30T22:38:54.497949+00:00"
+    },
+    {
+      "case": "after_client_death:resource_record",
+      "passed": true,
+      "actual": [
+        {
+          "epoch": "07cb39e9-78ed-4d0e-afcb-29080c066eec",
+          "servicePid": 918,
+          "liveSessions": 0,
+          "queuedJobs": 0,
+          "runningJobs": 0,
+          "retainedEntries": 0,
+          "retainedBytes": 0
+        }
+      ],
+      "observed_at": "2026-10-30T22:38:54.498970+00:00"
+    },
+    {
+      "case": "after_client_death:resource_shape",
+      "passed": true,
+      "actual": {
+        "epoch": "07cb39e9-78ed-4d0e-afcb-29080c066eec",
+        "servicePid": 918,
+        "liveSessions": 0,
+        "queuedJobs": 0,
+        "runningJobs": 0,
+        "retainedEntries": 0,
+        "retainedBytes": 0
+      },
+      "observed_at": "2026-10-30T22:38:54.500003+00:00"
+    },
+    {
+      "case": "after_client_death:quiescent",
+      "passed": true,
+      "actual": [
+        {
+          "observed_at": "2026-10-30T22:38:54.501048+00:00",
+          "resources": {
+            "epoch": "07cb39e9-78ed-4d0e-afcb-29080c066eec",
+            "servicePid": 918,
+            "liveSessions": 0,
+            "queuedJobs": 0,
+            "runningJobs": 0,
+            "retainedEntries": 0,
+            "retainedBytes": 0
+          }
+        }
+      ],
+      "observed_at": "2026-10-30T22:38:54.501058+00:00"
+    },
+    {
+      "case": "probe_command:inspect 07cb39e9-78ed-4d0e-afcb-29080c066eec 329058db-afee-439d-b564-bb6776b7e2e2 0a4ebea5-cd76-4d30-9e59-3b7b28d1708b EXPIRED_OR_UNKNOWN",
+      "passed": true,
+      "actual": {
+        "argv": [
+          "adb",
+          "-s",
+          "0.0.0.0:6520",
+          "shell",
+          "/system_ext/bin/boundarylab_probe inspect 07cb39e9-78ed-4d0e-afcb-29080c066eec 329058db-afee-439d-b564-bb6776b7e2e2 0a4ebea5-cd76-4d30-9e59-3b7b28d1708b EXPIRED_OR_UNKNOWN"
+        ],
+        "started_at": "2026-10-30T22:38:54.502120+00:00",
+        "ended_at": "2026-10-30T22:38:54.526382+00:00",
+        "exit_code": 0,
+        "stdout": "{\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\n{\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\n{\"case\":\"inspect\",\"passed\":true,\"detail\":\"EXPIRED_OR_UNKNOWN\"}\n",
+        "stderr": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.526596+00:00"
+    },
+    {
+      "case": "probe:context_available",
+      "passed": true,
+      "actual": {
+        "case": "context_available",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.527747+00:00"
+    },
+    {
+      "case": "probe:authorized_domain",
+      "passed": true,
+      "actual": {
+        "case": "authorized_domain",
+        "passed": true,
+        "detail": "u:r:boundarylab_probe:s0"
+      },
+      "observed_at": "2026-10-30T22:38:54.528891+00:00"
+    },
+    {
+      "case": "probe:global_enforcing",
+      "passed": true,
+      "actual": {
+        "case": "global_enforcing",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.530027+00:00"
+    },
+    {
+      "case": "probe:service_discovery",
+      "passed": true,
+      "actual": {
+        "case": "service_discovery",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.531133+00:00"
+    },
+    {
+      "case": "probe:authorized_real_uid",
+      "passed": true,
+      "actual": {
+        "case": "authorized_real_uid",
+        "passed": true,
+        "detail": "2000"
+      },
+      "observed_at": "2026-10-30T22:38:54.532245+00:00"
+    },
+    {
+      "case": "probe:inspect",
+      "passed": true,
+      "actual": {
+        "case": "inspect",
+        "passed": true,
+        "detail": "EXPIRED_OR_UNKNOWN"
+      },
+      "observed_at": "2026-10-30T22:38:54.533444+00:00"
+    },
+    {
+      "case": "probe_command:resources",
+      "passed": true,
+      "actual": {
+        "argv": [
+          "adb",
+          "-s",
+          "0.0.0.0:6520",
+          "shell",
+          "/system_ext/bin/boundarylab_probe resources"
+        ],
+        "started_at": "2026-10-30T22:38:54.534596+00:00",
+        "ended_at": "2026-10-30T22:38:54.581417+00:00",
+        "exit_code": 0,
+        "stdout": "{\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\n{\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\n{\"case\":\"authorized_capabilities\",\"passed\":true,\"detail\":\"07cb39e9-78ed-4d0e-afcb-29080c066eec\"}\n{\"resources\":{\"epoch\":\"07cb39e9-78ed-4d0e-afcb-29080c066eec\",\"servicePid\":918,\"liveSessions\":0,\"queuedJobs\":0,\"runningJobs\":0,\"retainedEntries\":0,\"retainedBytes\":0}}\n",
+        "stderr": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.581731+00:00"
+    },
+    {
+      "case": "probe:context_available",
+      "passed": true,
+      "actual": {
+        "case": "context_available",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.583037+00:00"
+    },
+    {
+      "case": "probe:authorized_domain",
+      "passed": true,
+      "actual": {
+        "case": "authorized_domain",
+        "passed": true,
+        "detail": "u:r:boundarylab_probe:s0"
+      },
+      "observed_at": "2026-10-30T22:38:54.584227+00:00"
+    },
+    {
+      "case": "probe:global_enforcing",
+      "passed": true,
+      "actual": {
+        "case": "global_enforcing",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.585399+00:00"
+    },
+    {
+      "case": "probe:service_discovery",
+      "passed": true,
+      "actual": {
+        "case": "service_discovery",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:54.586583+00:00"
+    },
+    {
+      "case": "probe:authorized_real_uid",
+      "passed": true,
+      "actual": {
+        "case": "authorized_real_uid",
+        "passed": true,
+        "detail": "2000"
+      },
+      "observed_at": "2026-10-30T22:38:54.587731+00:00"
+    },
+    {
+      "case": "probe:authorized_capabilities",
+      "passed": true,
+      "actual": {
+        "case": "authorized_capabilities",
+        "passed": true,
+        "detail": "07cb39e9-78ed-4d0e-afcb-29080c066eec"
+      },
+      "observed_at": "2026-10-30T22:38:54.588889+00:00"
+    },
+    {
+      "case": "cycle_after:resource_record",
+      "passed": true,
+      "actual": [
+        {
+          "epoch": "07cb39e9-78ed-4d0e-afcb-29080c066eec",
+          "servicePid": 918,
+          "liveSessions": 0,
+          "queuedJobs": 0,
+          "runningJobs": 0,
+          "retainedEntries": 0,
+          "retainedBytes": 0
+        }
+      ],
+      "observed_at": "2026-10-30T22:38:54.590023+00:00"
+    },
+    {
+      "case": "cycle_after:resource_shape",
+      "passed": true,
+      "actual": {
+        "epoch": "07cb39e9-78ed-4d0e-afcb-29080c066eec",
+        "servicePid": 918,
+        "liveSessions": 0,
+        "queuedJobs": 0,
+        "runningJobs": 0,
+        "retainedEntries": 0,
+        "retainedBytes": 0
+      },
+      "observed_at": "2026-10-30T22:38:54.591172+00:00"
+    },
+    {
+      "case": "cycle_after:quiescent",
+      "passed": true,
+      "actual": [
+        {
+          "observed_at": "2026-10-30T22:38:54.592319+00:00",
+          "resources": {
+            "epoch": "07cb39e9-78ed-4d0e-afcb-29080c066eec",
+            "servicePid": 918,
+            "liveSessions": 0,
+            "queuedJobs": 0,
+            "runningJobs": 0,
+            "retainedEntries": 0,
+            "retainedBytes": 0
+          }
+        }
+      ],
+      "observed_at": "2026-10-30T22:38:54.592329+00:00"
+    },
+    {
+      "case": "adb_uid_root_for_lifecycle_only",
+      "passed": true,
+      "actual": "uid=0(root) gid=0(root) groups=0(root),1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),1078(ext_data_rw),1079(ext_obb_rw),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats),3009(readproc),3011(uhid),3012(readtracefs) context=u:r:su:s0",
+      "observed_at": "2026-10-30T22:38:54.994727+00:00"
+    },
+    {
+      "case": "cycle_after:pid_matches_metrics",
+      "passed": true,
+      "actual": {
+        "pid": "918",
+        "resources": {
+          "epoch": "07cb39e9-78ed-4d0e-afcb-29080c066eec",
+          "servicePid": 918,
+          "liveSessions": 0,
+          "queuedJobs": 0,
+          "runningJobs": 0,
+          "retainedEntries": 0,
+          "retainedBytes": 0
+        }
+      },
+      "observed_at": "2026-10-30T22:38:55.042651+00:00"
+    },
+    {
+      "case": "cycle_after:fd_listing",
+      "passed": true,
+      "actual": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "observed_at": "2026-10-30T22:38:55.137571+00:00"
+    },
+    {
+      "case": "cycle_after:generation_stable",
+      "passed": true,
+      "actual": {
+        "pid": "918",
+        "start_ticks": 1774
+      },
+      "observed_at": "2026-10-30T22:38:55.275418+00:00"
+    },
+    {
+      "case": "cycle_after:snapshot",
+      "passed": true,
+      "actual": {
+        "observed_at": "2026-10-30T22:38:55.276826+00:00",
+        "pid": 918,
+        "start_ticks": 1774,
+        "resources": {
+          "epoch": "07cb39e9-78ed-4d0e-afcb-29080c066eec",
+          "servicePid": 918,
+          "liveSessions": 0,
+          "queuedJobs": 0,
+          "runningJobs": 0,
+          "retainedEntries": 0,
+          "retainedBytes": 0
+        },
+        "fd_count": 7,
+        "fd_numbers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "fd_listing": "total 0\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 0 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 1 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 2 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 3 -> /dev/binderfs/binder\nl-wx------ 1 nobody nobody 64 2026-10-30 22:38 4 -> /sys/kernel/tracing/trace_marker\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 5 -> socket:[14427]\nl-wx------ 1 nobody nobody 64 2026-10-30 22:38 6 -> /dev/pmsg0"
+      },
+      "observed_at": "2026-10-30T22:38:55.276845+00:00"
+    },
+    {
+      "case": "adb_uid_shell",
+      "passed": true,
+      "actual": "uid=2000(shell) gid=2000(shell) groups=2000(shell),1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),1078(ext_data_rw),1079(ext_obb_rw),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats),3009(readproc),3011(uhid),3012(readtracefs) context=u:r:shell:s0",
+      "observed_at": "2026-10-30T22:38:55.679721+00:00"
+    },
+    {
+      "case": "resource_cycle_same_generation",
+      "passed": true,
+      "actual": {
+        "before": {
+          "observed_at": "2026-10-30T22:38:52.211137+00:00",
+          "pid": 918,
+          "start_ticks": 1774,
+          "resources": {
+            "epoch": "07cb39e9-78ed-4d0e-afcb-29080c066eec",
+            "servicePid": 918,
+            "liveSessions": 0,
+            "queuedJobs": 0,
+            "runningJobs": 0,
+            "retainedEntries": 0,
+            "retainedBytes": 0
+          },
+          "fd_count": 7,
+          "fd_numbers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "fd_listing": "total 0\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 0 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 1 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 2 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 3 -> /dev/binderfs/binder\nl-wx------ 1 nobody nobody 64 2026-10-30 22:38 4 -> /sys/kernel/tracing/trace_marker\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 5 -> socket:[14427]\nl-wx------ 1 nobody nobody 64 2026-10-30 22:38 6 -> /dev/pmsg0"
+        },
+        "after": {
+          "observed_at": "2026-10-30T22:38:55.276826+00:00",
+          "pid": 918,
+          "start_ticks": 1774,
+          "resources": {
+            "epoch": "07cb39e9-78ed-4d0e-afcb-29080c066eec",
+            "servicePid": 918,
+            "liveSessions": 0,
+            "queuedJobs": 0,
+            "runningJobs": 0,
+            "retainedEntries": 0,
+            "retainedBytes": 0
+          },
+          "fd_count": 7,
+          "fd_numbers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "fd_listing": "total 0\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 0 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 1 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 2 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 3 -> /dev/binderfs/binder\nl-wx------ 1 nobody nobody 64 2026-10-30 22:38 4 -> /sys/kernel/tracing/trace_marker\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 5 -> socket:[14427]\nl-wx------ 1 nobody nobody 64 2026-10-30 22:38 6 -> /dev/pmsg0"
+        }
+      },
+      "observed_at": "2026-10-30T22:38:55.681237+00:00"
+    },
+    {
+      "case": "resource_cycle_returns_to_baseline",
+      "passed": true,
+      "actual": {
+        "fd_delta": 0,
+        "before": {
+          "observed_at": "2026-10-30T22:38:52.211137+00:00",
+          "pid": 918,
+          "start_ticks": 1774,
+          "resources": {
+            "epoch": "07cb39e9-78ed-4d0e-afcb-29080c066eec",
+            "servicePid": 918,
+            "liveSessions": 0,
+            "queuedJobs": 0,
+            "runningJobs": 0,
+            "retainedEntries": 0,
+            "retainedBytes": 0
+          },
+          "fd_count": 7,
+          "fd_numbers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "fd_listing": "total 0\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 0 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 1 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 2 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 3 -> /dev/binderfs/binder\nl-wx------ 1 nobody nobody 64 2026-10-30 22:38 4 -> /sys/kernel/tracing/trace_marker\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 5 -> socket:[14427]\nl-wx------ 1 nobody nobody 64 2026-10-30 22:38 6 -> /dev/pmsg0"
+        },
+        "after": {
+          "observed_at": "2026-10-30T22:38:55.276826+00:00",
+          "pid": 918,
+          "start_ticks": 1774,
+          "resources": {
+            "epoch": "07cb39e9-78ed-4d0e-afcb-29080c066eec",
+            "servicePid": 918,
+            "liveSessions": 0,
+            "queuedJobs": 0,
+            "runningJobs": 0,
+            "retainedEntries": 0,
+            "retainedBytes": 0
+          },
+          "fd_count": 7,
+          "fd_numbers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "fd_listing": "total 0\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 0 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 1 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 2 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 3 -> /dev/binderfs/binder\nl-wx------ 1 nobody nobody 64 2026-10-30 22:38 4 -> /sys/kernel/tracing/trace_marker\nlrwx------ 1 nobody nobody 64 2026-10-30 22:38 5 -> socket:[14427]\nl-wx------ 1 nobody nobody 64 2026-10-30 22:38 6 -> /dev/pmsg0"
+        }
+      },
+      "observed_at": "2026-10-30T22:38:55.682607+00:00"
+    },
+    {
+      "case": "probe_command:snapshot",
+      "passed": true,
+      "actual": {
+        "argv": [
+          "adb",
+          "-s",
+          "0.0.0.0:6520",
+          "shell",
+          "/system_ext/bin/boundarylab_probe snapshot"
+        ],
+        "started_at": "2026-10-30T22:38:55.684032+00:00",
+        "ended_at": "2026-10-30T22:38:55.730383+00:00",
+        "exit_code": 0,
+        "stdout": "{\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\n{\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\n{\"case\":\"authorized_capabilities\",\"passed\":true,\"detail\":\"07cb39e9-78ed-4d0e-afcb-29080c066eec\"}\n{\"case\":\"major_2\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"open_session\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"handle_admitted\",\"passed\":true,\"detail\":\"\"}\n{\"epoch\":\"07cb39e9-78ed-4d0e-afcb-29080c066eec\",\"sessionId\":\"5e820ae4-f162-462b-9da4-66698276540c\",\"jobId\":\"a4963e39-8663-4425-9f0a-f45d8c9a9bc8\"}\n",
+        "stderr": ""
+      },
+      "observed_at": "2026-10-30T22:38:55.730717+00:00"
+    },
+    {
+      "case": "probe:context_available",
+      "passed": true,
+      "actual": {
+        "case": "context_available",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:55.732237+00:00"
+    },
+    {
+      "case": "probe:authorized_domain",
+      "passed": true,
+      "actual": {
+        "case": "authorized_domain",
+        "passed": true,
+        "detail": "u:r:boundarylab_probe:s0"
+      },
+      "observed_at": "2026-10-30T22:38:55.733673+00:00"
+    },
+    {
+      "case": "probe:global_enforcing",
+      "passed": true,
+      "actual": {
+        "case": "global_enforcing",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:55.735025+00:00"
+    },
+    {
+      "case": "probe:service_discovery",
+      "passed": true,
+      "actual": {
+        "case": "service_discovery",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:55.736392+00:00"
+    },
+    {
+      "case": "probe:authorized_real_uid",
+      "passed": true,
+      "actual": {
+        "case": "authorized_real_uid",
+        "passed": true,
+        "detail": "2000"
+      },
+      "observed_at": "2026-10-30T22:38:55.737714+00:00"
+    },
+    {
+      "case": "probe:authorized_capabilities",
+      "passed": true,
+      "actual": {
+        "case": "authorized_capabilities",
+        "passed": true,
+        "detail": "07cb39e9-78ed-4d0e-afcb-29080c066eec"
+      },
+      "observed_at": "2026-10-30T22:38:55.739052+00:00"
+    },
+    {
+      "case": "probe:major_2",
+      "passed": true,
+      "actual": {
+        "case": "major_2",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:55.740369+00:00"
+    },
+    {
+      "case": "probe:open_session",
+      "passed": true,
+      "actual": {
+        "case": "open_session",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:55.741678+00:00"
+    },
+    {
+      "case": "probe:handle_admitted",
+      "passed": true,
+      "actual": {
+        "case": "handle_admitted",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:38:55.743089+00:00"
+    },
+    {
+      "case": "adb_uid_root_for_lifecycle_only",
+      "passed": true,
+      "actual": "uid=0(root) gid=0(root) groups=0(root),1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),1078(ext_data_rw),1079(ext_obb_rw),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats),3009(readproc),3011(uhid),3012(readtracefs) context=u:r:su:s0",
+      "observed_at": "2026-10-30T22:38:56.147605+00:00"
+    },
+    {
+      "case": "denied_real_uid",
+      "passed": true,
+      "actual": "--------- beginning of main\nI/BoundaryLabProbe( 4347): {\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4347): {\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\nI/BoundaryLabProbe( 4347): {\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4347): {\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4347): {\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\nI/BoundaryLabProbe( 4347): {\"case\":\"authorized_capabilities\",\"passed\":true,\"detail\":\"07cb39e9-78ed-4d0e-afcb-29080c066eec\"}\nI/BoundaryLabProbe( 4347): {\"case\":\"major_2\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4347): {\"case\":\"open_session\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4347): {\"case\":\"handle_admitted\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4371): {\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4371): {\"case\":\"denied_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_denied:s0\"}\nI/BoundaryLabProbe( 4371): {\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4371): {\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4371): {\"case\":\"denied_real_uid\",\"passed\":true,\"detail\":\"9999\"}\nI/BoundaryLabProbe( 4371): {\"case\":\"denied\",\"passed\":true,\"detail\":\"DENIED\"}",
+      "observed_at": "2026-10-30T22:38:57.290723+00:00"
+    },
+    {
+      "case": "denied_domain",
+      "passed": true,
+      "actual": "--------- beginning of main\nI/BoundaryLabProbe( 4347): {\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4347): {\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\nI/BoundaryLabProbe( 4347): {\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4347): {\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4347): {\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\nI/BoundaryLabProbe( 4347): {\"case\":\"authorized_capabilities\",\"passed\":true,\"detail\":\"07cb39e9-78ed-4d0e-afcb-29080c066eec\"}\nI/BoundaryLabProbe( 4347): {\"case\":\"major_2\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4347): {\"case\":\"open_session\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4347): {\"case\":\"handle_admitted\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4371): {\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4371): {\"case\":\"denied_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_denied:s0\"}\nI/BoundaryLabProbe( 4371): {\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4371): {\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4371): {\"case\":\"denied_real_uid\",\"passed\":true,\"detail\":\"9999\"}\nI/BoundaryLabProbe( 4371): {\"case\":\"denied\",\"passed\":true,\"detail\":\"DENIED\"}",
+      "observed_at": "2026-10-30T22:38:57.292332+00:00"
+    },
+    {
+      "case": "denied",
+      "passed": true,
+      "actual": "--------- beginning of main\nI/BoundaryLabProbe( 4347): {\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4347): {\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\nI/BoundaryLabProbe( 4347): {\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4347): {\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4347): {\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\nI/BoundaryLabProbe( 4347): {\"case\":\"authorized_capabilities\",\"passed\":true,\"detail\":\"07cb39e9-78ed-4d0e-afcb-29080c066eec\"}\nI/BoundaryLabProbe( 4347): {\"case\":\"major_2\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4347): {\"case\":\"open_session\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4347): {\"case\":\"handle_admitted\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4371): {\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4371): {\"case\":\"denied_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_denied:s0\"}\nI/BoundaryLabProbe( 4371): {\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4371): {\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4371): {\"case\":\"denied_real_uid\",\"passed\":true,\"detail\":\"9999\"}\nI/BoundaryLabProbe( 4371): {\"case\":\"denied\",\"passed\":true,\"detail\":\"DENIED\"}",
+      "observed_at": "2026-10-30T22:38:57.293784+00:00"
+    },
+    {
+      "case": "daemon_domain",
+      "passed": true,
+      "actual": "LABEL                          USER           PID  PPID        VSZ    RSS WCHAN            ADDR S NAME                       \nu:r:init:s0                    root             1     0   11003612  14280 do_epoll_wait       0 S init\nu:r:kernel:s0                  root             2     0          0      0 kthreadd            0 S [kthreadd]\nu:r:kernel:s0                  root             3     2          0      0 kthread_worker_fn   0 S [pool_workqueue_release]\nu:r:kernel:s0                  root             4     2          0      0 rescuer_thread      0 I [kworker/R-kvfree_rcu_reclaim]\nu:r:kernel:s0                  root             5     2          0      0 rescuer_thread      0 I [kworker/R-rcu_gp]\nu:r:kernel:s0                  root             6     2          0      0 rescuer_thread      0 I [kworker/R-sync_wq]\nu:r:kernel:s0                  root             7     2          0      0 rescuer_thread      0 I [kworker/R-slub_flushwq]\nu:r:kernel:s0                  root             8     2          0      0 rescuer_thread      0 I [kworker/R-netns]\nu:r:kernel:s0                  root             9     2          0      0 worker_thread       0 I [kworker/0:0-mm_percpu_wq]\nu:r:kernel:s0                  root            10     2          0      0 worker_thread       0 I [kworker/0:0H-kverityd]\nu:r:kernel:s0                  root            11     2          0      0 worker_thread       0 I [kworker/0:1-cgroup_bpf_destroy]\nu:r:kernel:s0                  root            12     2          0      0 worker_thread       0 I [kworker/u16:0-events_unbound]\nu:r:kernel:s0                  root            13     2          0      0 rescuer_thread      0 I [kworker/R-mm_percpu_wq]\nu:r:kernel:s0                  root            14     2          0      0 worker_thread       0 I [kworker/u16:1-ipv6_addrconf]\nu:r:kernel:s0                  root            15     2          0      0 rcu_tasks_one_gp    0 I [rcu_tasks_kthread]\nu:r:kernel:s0                  root            16     2          0      0 rcu_tasks_one_gp    0 I [rcu_tasks_trace_kthread]\nu:r:kernel:s0                  root            17     2          0      0 smpboot_thread_fn   0 S [ksoftirqd/0]\nu:r:kernel:s0                  root            18     2          0      0 rcu_gp_kthread      0 I [rcu_preempt]\nu:r:kernel:s0                  root            19     2          0      0 nocb_gp_sleep       0 S [rcuog/0]\nu:r:kernel:s0                  root            20     2          0      0 rcu_nocb_cb_kthread 0 S [rcuop/0]\nu:r:kernel:s0                  root            21     2          0      0 rcu_boost_kthread   0 S [rcub/0]\nu:r:kernel:s0                  root            22     2          0      0 kthread_worker_fn   0 S [rcu_exp_par_gp_kthread_worker/0]\nu:r:kernel:s0                  root            23     2          0      0 kthread_worker_fn   0 S [rcu_exp_gp_kthread_worker]\nu:r:kernel:s0                  root            24     2          0      0 smpboot_thread_fn   0 S [migration/0]\nu:r:kernel:s0                  root            25     2          0      0 smpboot_thread_fn   0 S [idle_inject/0]\nu:r:kernel:s0                  root            26     2          0      0 smpboot_thread_fn   0 S [cpuhp/0]\nu:r:kernel:s0                  root            27     2          0      0 smpboot_thread_fn   0 S [cpuhp/1]\nu:r:kernel:s0                  root            28     2          0      0 smpboot_thread_fn   0 S [idle_inject/1]\nu:r:kernel:s0                  root            29     2          0      0 smpboot_thread_fn   0 S [migration/1]\nu:r:kernel:s0                  root            30     2          0      0 smpboot_thread_fn   0 S [ksoftirqd/1]\nu:r:kernel:s0                  root            31     2          0      0 worker_thread       0 I [kworker/1:0-virtio_vsock]\nu:r:kernel:s0                  root            32     2          0      0 worker_thread       0 I [kworker/1:0H-kverityd]\nu:r:kernel:s0                  root            33     2          0      0 rcu_nocb_cb_kthread 0 S [rcuop/1]\nu:r:kernel:s0                  root            34     2          0      0 smpboot_thread_fn   0 S [cpuhp/2]\nu:r:kernel:s0                  root            35     2          0      0 smpboot_thread_fn   0 S [idle_inject/2]\nu:r:kernel:s0                  root            36     2          0      0 smpboot_thread_fn   0 S [migration/2]\nu:r:kernel:s0                  root            37     2          0      0 smpboot_thread_fn   0 S [ksoftirqd/2]\nu:r:kernel:s0                  root            38     2          0      0 worker_thread       0 I [kworker/2:0-virtio_vsock]\nu:r:kernel:s0                  root            39     2          0      0 worker_thread       0 I [kworker/2:0H-kverityd]\nu:r:kernel:s0                  root            40     2          0      0 nocb_gp_sleep       0 S [rcuog/2]\nu:r:kernel:s0                  root            41     2          0      0 rcu_nocb_cb_kthread 0 S [rcuop/2]\nu:r:kernel:s0                  root            42     2          0      0 smpboot_thread_fn   0 S [cpuhp/3]\nu:r:kernel:s0                  root            43     2          0      0 smpboot_thread_fn   0 S [idle_inject/3]\nu:r:kernel:s0                  root            44     2          0      0 smpboot_thread_fn   0 S [migration/3]\nu:r:kernel:s0                  root            45     2          0      0 smpboot_thread_fn   0 S [ksoftirqd/3]\nu:r:kernel:s0                  root            46     2          0      0 worker_thread       0 I [kworker/3:0-events]\nu:r:kernel:s0                  root            47     2          0      0 worker_thread       0 I [kworker/3:0H-kblockd]\nu:r:kernel:s0                  root            48     2          0      0 rcu_nocb_cb_kthread 0 S [rcuop/3]\nu:r:kernel:s0                  root            49     2          0      0 worker_thread       0 I [kworker/u17:0-flush-253:0]\nu:r:kernel:s0                  root            50     2          0      0 worker_thread       0 I [kworker/u18:0-loop29]\nu:r:kernel:s0                  root            51     2          0      0 worker_thread       0 I [kworker/u19:0-kvfree_rcu_reclaim]\nu:r:kernel:s0                  root            52     2          0      0 worker_thread       0 I [kworker/u20:0-loop96]\nu:r:kernel:s0                  root            53     2          0      0 rescuer_thread      0 I [kworker/R-inet_frag_wq]\nu:r:kernel:s0                  root            54     2          0      0 kauditd_thread      0 S [kauditd]\nu:r:kernel:s0                  root            55     2          0      0 watchdog            0 S [khungtaskd]\nu:r:kernel:s0                  root            56     2          0      0 oom_reaper          0 S [oom_reaper]\nu:r:kernel:s0                  root            57     2          0      0 worker_thread       0 I [kworker/u19:1-loop2]\nu:r:kernel:s0                  root            58     2          0      0 rescuer_thread      0 I [kworker/R-writeback]\nu:r:kernel:s0                  root            59     2          0      0 kcompactd           0 S [kcompactd0]\nu:r:kernel:s0                  root            60     2          0      0 khugepaged          0 S [khugepaged]\nu:r:kernel:s0                  root            61     2          0      0 rescuer_thread      0 I [kworker/R-cryptd]\nu:r:kernel:s0                  root            62     2          0      0 rescuer_thread      0 I [kworker/R-kblockd]\nu:r:kernel:s0                  root            63     2          0      0 irq_thread          0 S [irq/5-acpi]\nu:r:kernel:s0                  root            64     2          0      0 worker_thread       0 I [kworker/1:1-events]\nu:r:kernel:s0                  root            65     2          0      0 worker_thread       0 I [kworker/u17:1-events_unbound]\nu:r:kernel:s0                  root            66     2          0      0 worker_thread       0 I [kworker/3:1-mm_percpu_wq]\nu:r:kernel:s0                  root            67     2          0      0 worker_thread       0 I [kworker/2:1-events]\nu:r:kernel:s0                  root            68     2          0      0 rescuer_thread      0 I [kworker/R-edac-poller]\nu:r:kernel:s0                  root            69     2          0      0 rescuer_thread      0 I [kworker/R-devfreq_wq]\nu:r:kernel:s0                  root            70     2          0      0 kthread_worker_fn   0 S [watchdogd]\nu:r:kernel:s0                  root            71     2          0      0 worker_thread       0 I [kworker/2:1H-kverityd]\nu:r:kernel:s0                  root            72     2          0      0 worker_thread       0 I [kworker/u18:1-events_unbound]\nu:r:kernel:s0                  root            73     2          0      0 kswapd              0 S [kswapd0]\nu:r:kernel:s0                  root            74     2          0      0 worker_thread       0 I [kworker/u21:0]\nu:r:kernel:s0                  root            75     2          0      0 worker_thread       0 I [kworker/u22:0-blk_crypto_wq]\nu:r:kernel:s0                  root            76     2          0      0 worker_thread       0 I [kworker/u23:0-blk_crypto_wq]\nu:r:kernel:s0                  root            77     2          0      0 worker_thread       0 I [kworker/u24:0-blk_crypto_wq]\nu:r:kernel:s0                  root            78     2          0      0 worker_thread       0 I [kworker/u25:0-blk_crypto_wq]\nu:r:kernel:s0                  root            79     2          0      0 irq_thread          0 S [irq/24-pciehp]\nu:r:kernel:s0                  root            80     2          0      0 rescuer_thread      0 I [kworker/R-nvme-wq]\nu:r:kernel:s0                  root            81     2          0      0 rescuer_thread      0 I [kworker/R-nvme-reset-wq]\nu:r:kernel:s0                  root            82     2          0      0 rescuer_thread      0 I [kworker/R-nvme-delete-wq]\nu:r:kernel:s0                  root            83     2          0      0 rescuer_thread      0 I [kworker/R-uas]\nu:r:kernel:s0                  root            84     2          0      0 rescuer_thread      0 I [kworker/R-dm_bufio_cache]\nu:r:kernel:s0                  root            85     2          0      0 rescuer_thread      0 I [kworker/R-mld]\nu:r:kernel:s0                  root            86     2          0      0 rescuer_thread      0 I [kworker/R-ipv6_addrconf]\nu:r:kernel:s0                  root            87     2          0      0 rescuer_thread      0 I [kworker/R-kstrp]\nu:r:kernel:s0                  root            89     2          0      0 worker_thread       0 I [kworker/0:1H-kblockd]\nu:r:kernel:s0                  root            91     2          0      0 rescuer_thread      0 I [kworker/R-cfg80211]\nu:r:kernel:s0                  root            92     2          0      0 worker_thread       0 I [kworker/1:1H-kblockd]\nu:r:kernel:s0                  root            93     2          0      0 khvcd               0 S [khvcd]\nu:r:kernel:s0                  root            94     2          0      0 add_hwgenerator_randomness 0 S [hwrng]\nu:r:kernel:s0                  root            95     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:0]\nu:r:kernel:s0                  root            96     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:1]\nu:r:kernel:s0                  root            97     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:2]\nu:r:kernel:s0                  root            98     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:3]\nu:r:kernel:s0                  root            99     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:4]\nu:r:kernel:s0                  root           100     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:5]\nu:r:kernel:s0                  root           101     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:6]\nu:r:kernel:s0                  root           102     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:7]\nu:r:kernel:s0                  root           103     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:8]\nu:r:kernel:s0                  root           104     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:9]\nu:r:kernel:s0                  root           105     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           106     2          0      0 kthread_worker_fn   0 S [erofs_worker/0]\nu:r:kernel:s0                  root           107     2          0      0 kthread_worker_fn   0 S [erofs_worker/1]\nu:r:kernel:s0                  root           108     2          0      0 kthread_worker_fn   0 S [erofs_worker/2]\nu:r:kernel:s0                  root           109     2          0      0 kthread_worker_fn   0 S [erofs_worker/3]\nu:r:kernel:s0                  root           110     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:10]\nu:r:kernel:s0                  root           111     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           112     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:11]\nu:r:kernel:s0                  root           113     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           114     2          0      0 worker_thread       0 I [kworker/3:1H-kverityd]\nu:r:kernel:s0                  root           115     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:12]\nu:r:kernel:s0                  root           116     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           117     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:13]\nu:r:kernel:s0                  root           118     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           119     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:14]\nu:r:kernel:s0                  root           120     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           121     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:15]\nu:r:kernel:s0                  root           122     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           123     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:16]\nu:r:kernel:s0                  root           124     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           125     2          0      0 worker_thread       0 I [kworker/u17:2-ext4-rsv-conversion]\nu:r:vendor_init:s0             root           128     1   10915380   8224 do_sys_poll         0 S init\nu:r:ueventd:s0                 root           129     1   10942132   9132 do_sys_poll         0 S ueventd\nu:r:kernel:s0                  root           132     2          0      0 worker_thread       0 I [kworker/u20:1-writeback]\nu:r:kernel:s0                  root           182     2          0      0 worker_thread       0 I [kworker/3:2H-kverityd]\nu:r:kernel:s0                  root           192     2          0      0 worker_thread       0 I [kworker/2:2H-kblockd]\nu:r:kernel:s0                  root           197     2          0      0 worker_thread       0 I [kworker/1:2H-kverityd]\nu:r:kernel:s0                  root           264     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:48]\nu:r:kernel:s0                  root           267     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:50]\nu:r:kernel:s0                  root           271     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:54]\nu:r:kernel:s0                  root           274     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:57]\nu:r:kernel:s0                  root           277     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:60]\nu:r:kernel:s0                  root           278     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:61]\nu:r:kernel:s0                  root           279     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:62]\nu:r:kernel:s0                  root           280     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:63]\nu:r:kernel:s0                  root           285     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:68]\nu:r:kernel:s0                  root           286     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:69]\nu:r:kernel:s0                  root           287     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:70]\nu:r:kernel:s0                  root           288     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:71]\nu:r:kernel:s0                  root           290     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:73]\nu:r:kernel:s0                  root           292     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:75]\nu:r:kernel:s0                  root           293     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:76]\nu:r:kernel:s0                  root           294     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:77]\nu:r:kernel:s0                  root           296     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:79]\nu:r:kernel:s0                  root           301     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:84]\nu:r:kernel:s0                  root           304     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:87]\nu:r:kernel:s0                  root           305     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:88]\nu:r:kernel:s0                  root           306     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:89]\nu:r:kernel:s0                  root           307     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:90]\nu:r:kernel:s0                  root           308     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:91]\nu:r:kernel:s0                  root           313     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:96]\nu:r:kernel:s0                  root           317     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:100]\nu:r:kernel:s0                  root           321     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:104]\nu:r:kernel:s0                  root           332     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           333     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           334     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           335     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           336     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           337     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           338     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           339     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           340     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           341     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:prng_seeder:s0             prng_seeder    344     1   10933524   7796 do_epoll_wait       0 S prng_seeder\nu:r:kernel:s0                  root           349     2          0      0 worker_thread       0 I [kworker/1:2-virtio_vsock]\nu:r:kernel:s0                  root           350     2          0      0 kthread_worker_fn   0 S [sugov:0]\nu:r:kernel:s0                  root           351     2          0      0 kthread_worker_fn   0 S [sugov:1]\nu:r:kernel:s0                  root           352     2          0      0 kthread_worker_fn   0 S [sugov:2]\nu:r:kernel:s0                  root           353     2          0      0 kthread_worker_fn   0 S [sugov:3]\nu:r:logd:s0                    logd           354     1   10856776   7700 __x64_sys_rt_sigsuspend 0 S logd\nu:r:lmkd:s0                    lmkd           355     1   10762056   4312 do_epoll_wait       0 S lmkd\nu:r:servicemanager:s0          system         356     1   10821768   7120 do_epoll_wait       0 S servicemanager\nu:r:kernel:s0                  root           357     2          0      0 psi_rtpoll_worker   0 S [psimon]\nu:r:vold:s0                    root           370     1   10773544  10644 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S vold\nu:r:kernel:s0                  root           373     2          0      0 rescuer_thread      0 I [kworker/R-kdmflush/254:105]\nu:r:kernel:s0                  root           381     2          0      0 kjournald2          0 S [jbd2/vda18-8]\nu:r:kernel:s0                  root           382     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:system_suspend:s0          system         386     1   10807420   5840 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.system.suspend-service\nu:r:keystore:s0                keystore       387     1   11013620  15992 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S keystore2\nu:r:suspend_blocker:s0         root           388     1   10893172   6416 __x64_sys_rt_sigsuspend 0 S suspend_blocker\nu:r:hal_bootctl_default:s0     root           390     1   10786588   5160 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.boot-service.default\nu:r:hal_gatekeeper_default:s0  system         391     1   10874736   7976 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.gatekeeper-service.nonsecure\nu:r:hal_keymint_default:s0     nobody         392     1   10985400  13484 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.security.keymint-service.nonsecure\nu:r:kernel:s0                  root           395     2          0      0 worker_thread       0 I [kworker/u18:2-events_unbound]\nu:r:kernel:s0                  root           411     2          0      0 rescuer_thread      0 I [kworker/R-blk_crypto_wq]\nu:r:kernel:s0                  root           413     2          0      0 worker_thread       0 I [kworker/u23:1-blk_crypto_wq]\nu:r:kernel:s0                  root           416     2          0      0 worker_thread       0 I [kworker/u24:1-blk_crypto_wq]\nu:r:kernel:s0                  root           417     2          0      0 issue_flush_thread  0 S [f2fs_flush-254:105]\nu:r:kernel:s0                  root           418     2          0      0 issue_discard_thread 0 S [f2fs_discard-254:105]\nu:r:kernel:s0                  root           419     2          0      0 gc_thread_func      0 S [f2fs_gc-254:105]\nu:r:tombstoned:s0              tombstoned     426     1   10756940   3468 do_epoll_wait       0 S tombstoned\nu:r:kernel:s0                  root           527     2          0      0 worker_thread       0 I [kworker/u22:1-blk_crypto_wq]\nu:r:kernel:s0                  root           528     2          0      0 rescuer_thread      0 I [kworker/R-usbip_event]\nu:r:kernel:s0                  root           529     2          0      0 worker_thread       0 I [kworker/u18:3-events_unbound]\nu:r:kernel:s0                  root           618     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           619     2          0      0 worker_thread       0 I [kworker/u19:2-events_unbound]\nu:r:kernel:s0                  root           620     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           621     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           622     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           623     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           624     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           625     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           626     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           627     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           628     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           629     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           630     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           631     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           632     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           633     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           634     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           635     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           636     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           637     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           638     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           639     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           640     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           641     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           642     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           643     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           644     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           645     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           646     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           647     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           648     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           649     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           650     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           651     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           652     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           653     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           654     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           655     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           656     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           657     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           658     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           659     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           660     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           661     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           662     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           663     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           664     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           665     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           666     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           667     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           668     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           669     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           670     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           671     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           672     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           673     2          0      0 worker_thread       0 I [kworker/u20:2-events_unbound]\nu:r:kernel:s0                  root           674     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           675     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           676     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           677     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           678     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           679     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           680     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           681     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           682     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           683     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           684     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           685     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           686     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           687     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           688     2          0      0 worker_thread       0 I [kworker/u19:3-loop84]\nu:r:kernel:s0                  root           689     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           690     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           691     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           692     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           693     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           694     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           695     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           696     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           697     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           698     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           699     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           700     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           701     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           702     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           703     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           704     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           705     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           706     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           707     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           708     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           709     2          0      0 rescuer_thread      0 I [kworker/R-kverityd]\nu:r:kernel:s0                  root           710     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           711     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           712     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           713     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           714     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           715     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           716     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           717     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           718     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           719     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           720     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           721     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           722     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           723     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           724     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           725     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           726     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           727     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           728     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           729     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           730     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           731     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           732     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           733     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           734     2          0      0 rescuer_thread      0 I [kworker/R-ext4-rsv-conversion]\nu:r:kernel:s0                  root           745     2          0      0 worker_thread       0 I [kworker/3:2-events]\nu:r:kernel:s0                  root           752     2          0      0 worker_thread       0 I [kworker/0:2-events]\nu:r:rpmb_dev_system:s0         system         756     1   10758340   4808 __skb_wait_for_more_packets 0 S rpmb_dev.test.system\nu:r:netd:s0                    root           762     1   11016540  14864 futex_wait_queue    0 S netd\nu:r:statsd:s0                  statsd         763     1   10849376   6972 do_epoll_wait       0 S statsd\nu:r:zygote:s0                  root           764     1   15238460 207740 do_sys_poll         0 S zygote64\nu:r:netd:s0                    root           770   762   10759048   4108 pipe_read           0 S iptables-restore\nu:r:netd:s0                    root           771   762   10773384   3948 pipe_read           0 S ip6tables-restore\nu:r:audio_vendor_parameter_parser:s0 audioserver 773  1   10844844   7572 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.audio.parameter_parser.example_service\nu:r:hal_graphics_composer_default:s0 system   775     1   11007392  21784 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.graphics.composer3-service.ranchu\nu:r:hal_graphics_allocator_default:s0 system  776     1   10902956   8960 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.graphics.allocator-service.minigbm\nu:r:hal_audio_default:s0       audioserver    777     1   10914172  13840 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.audio.service-aidl.example\nu:r:hal_audio_default:s0       audioserver    778     1   10987072  11912 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.audio.effect.service-aidl.example\nu:r:hal_authsecret_default:s0  hsm            779     1   10837472   4828 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.authsecret-service.example\nu:r:hal_cas_default:s0         media          780     1   10872984   4796 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.cas-service.example\nu:r:hal_contexthub_default:s0  context_hub    781     1   10808200   5688 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.contexthub-service.example\nu:r:hal_drm_clearkey_aidl:s0   media          782     1   10783780   7288 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.drm-service.clearkey\nu:r:hal_gnss_default:s0        nobody         784     1   10923876   9804 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.gnss-service.example\nu:r:kernel:s0                  root           785     2          0      0 worker_thread       0 I [kworker/0:2H-kverityd]\nu:r:hal_input_processor_default:s0 nobody     786     1   10816996   4628 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.input.processor-service.example\nu:r:hal_ir_default:s0          system         789     1   10825180   5892 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.ir-service.example\nu:r:hal_memtrack_default:s0    nobody         793     1   10800608   4756 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.memtrack-service.example\nu:r:hal_nlinterceptor_default:s0 root         799     1   10892700   6188 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.net.nlinterceptor-service.default\nu:r:hal_neuralnetworks_sample:s0 system       802     1   10880404  11160 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.neuralnetworks-service-sample-all\nu:r:hal_neuralnetworks_sample:s0 system       804     1   10933120   9428 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.neuralnetworks-service-sample-limited\nu:r:hal_neuralnetworks_sample:s0 system       805     1   10992836  11044 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.neuralnetworks-shim-service-sample\nu:r:hal_power_default:s0       nobody         806     1   10787244   6284 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.power-service.example\nu:r:hal_power_stats_default:s0 system         807     1   10779304   5508 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.power.stats-service.example\nu:r:hal_rebootescrow_default:s0 system        808     1   10940008   4776 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.rebootescrow-service.default\nu:r:hal_secure_element_default:s0 nobody      809     1   10790520   4876 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.secure_element-service.example\nu:r:hal_authgraph_default:s0   nobody         811     1   10871544   6560 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.security.authgraph-service.nonsecure\nu:r:hal_secretkeeper_default:s0 nobody        812     1   10807256   6804 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.security.secretkeeper-service.nonsecure\nu:r:hal_sensors_default:s0     system         813     1   10902780   5684 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.sensors-service.example\nu:r:hal_tetheroffload_default:s0 nobody       814     1   10794484   4976 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.tetheroffload-service.example\nu:r:hal_thermal_default:s0     nobody         817     1   10774144   4928 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.thermal-service.example\nu:r:hal_threadnetwork_default:s0 thread_network 829   1   10854292   4984 do_select           0 S android.hardware.threadnetwork-service\nu:r:hal_usb_default:s0         system         830     1   10831904   5936 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.usb-service.example\nu:r:hal_uwb_default:s0         uwb            831     1   10864332   5712 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.uwb-service\nu:r:hal_vibrator_default:s0    nobody         832     1   10793820   5744 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.vibrator-service.example\nu:r:hal_wifi_default:s0        wifi           833     1   10898004   7012 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.wifi-service\nu:r:hal_bluetooth_default:s0   bluetooth      834     1   10847016   5196 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.bluetooth-service.cuttlefish\nu:r:hal_bluetooth_btlinux:s0   bluetooth      835     1   10798648   6488 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.bluetooth.finder-service.default\nu:r:hal_bluetooth_btlinux:s0   bluetooth      839     1   11001696   6380 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.bluetooth.ranging-service.default\nu:r:hal_bluetooth_btlinux:s0   bluetooth      842     1   10947056   6108 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.bluetooth.lmp_event-service.default\nu:r:hal_bluetooth_btlinux:s0   bluetooth      843     1   10907532   6740 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.bluetooth.socket-service.default\nu:r:hal_health_default:s0      system         844     1   10813268   5124 do_epoll_wait       0 S android.hardware.health-service.cuttlefish\nu:r:hal_identity_remote:s0     nobody         847     1   10845940   6268 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.identity-service.remote\nu:r:hal_light_cuttlefish:s0    nobody         848     1   10806504   5220 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.light-service.cuttlefish\nu:r:hal_nfc_default:s0         nfc            849     1   10856196   5860 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.nfc-service.cuttlefish\nu:r:hal_oemlock_remote:s0      hsm            850     1   10845812   5196 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.oemlock-service.remote\nu:r:hal_camera_default:s0      cameraserver   851     1   10857480  19364 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.camera.provider@2.7-service-google\nu:r:audioserver:s0             audioserver    853     1   11384824  28416 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S audioserver\nu:r:credstore:s0               credstore      854     1   10912312   8448 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S credstore\nu:r:gpuservice:s0              gpu_service    856     1   11016920   9208 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S gpuservice\nu:r:surfaceflinger:s0          system         858     1   11247848  64908 do_epoll_wait       0 S surfaceflinger\nu:r:socket_vsock_proxy:s0      root           867     1   10796860   6148 futex_wait_queue    0 S socket_vsock_proxy\nu:r:hal_confirmationui_cuttlefish:s0 system   868     1   10765216   5052 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.confirmationui-service.cuttlefish\nu:r:mdnsd:s0                   mdnsr          887     1   10757012   3844 do_select           0 S mdnsd\nu:r:drmserver:s0               drm            892     1   10828696   9084 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S drmserver\nu:r:traced_probes:s0           nobody         898     1   10798244   4168 do_sys_poll         0 S traced_probes\nu:r:traced:s0                  nobody         900     1   10818556   4240 do_sys_poll         0 S traced\nu:r:cameraserver:s0            cameraserver   903     1   11257724  28412 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S cameraserver\nu:r:incidentd:s0               incidentd      908     1   10923976   6492 do_epoll_wait       0 S incidentd\nu:r:installd:s0                root           909     1   10901988   8048 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S installd\nu:r:mediaextractor:s0          mediaex        910     1   11270412  30480 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S media.extractor\nu:r:mediametrics:s0            media          912     1   10956572   9836 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S media.metrics\nu:r:mediaserver:s0             media          913     1   11517968  34424 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S mediaserver\nu:r:storaged:s0                root           914     1   10839588   6580 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S storaged\nu:r:wificond:s0                wifi           916     1   10826288   7916 do_epoll_wait       0 S wificond\nu:r:boundarylab:s0             nobody         918     1   10836272   6304 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S boundarylab_service\nu:r:logpersist:s0              logd           920     1   10833420   5292 __skb_wait_for_more_packets 0 S logcat\nu:r:mediaswcodec:s0            mediacodec     922     1   11575156  42520 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S media.swcodec\nu:r:libcuttlefish_rild:s0      radio          924     1   11140932  17884 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S libcuttlefish-rild\nu:r:gatekeeperd:s0             system         925     1   10867320   7092 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S gatekeeperd\nu:r:update_engine:s0           root           930     1   10926036  11968 do_epoll_wait       0 S update_engine\nu:r:tombstone_transmit:s0      root           932     1   10798132   3828 wait_woken          0 S tombstone_transmit\nu:r:system_server:s0           system        1034   764   18932464 410536 do_epoll_wait       0 S system_server\nu:r:artd:s0                    artd          2552     1   10875312  20424 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S artd\nu:r:hal_fingerprint_default:s0 nobody        2768     1   10761276   5252 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.biometrics.fingerprint-service.default\nu:r:hal_face_default:s0        nobody        2776     1   10803712   7660 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S android.hardware.biometrics.face-service.default\nu:r:ot_daemon:s0               thread_network 2791    1   10788512   7824 do_select           0 S ot-daemon\nu:r:ot_rcp:s0                  thread_network 2797  829   10867288   3340 do_select           0 S ot-rcp\nu:r:platform_app:s0:c512,c768  u0_a84        2812   764   16857952 335572 do_epoll_wait       0 S com.android.systemui\nu:r:permissioncontroller_app:s0:c95,c256,c512,c768 u0_a95 2813 764 16459856 154032 do_epoll_wait 0 S com.android.permissioncontroller\nu:r:webview_zygote:s0          webview_zygote 2871  764   34053920 109960 do_sys_poll         0 S webview_zygote\nu:r:network_stack:s0           network_stack 2893   764   16770568 139812 do_epoll_wait       0 S com.android.networkstack.process\nu:r:nfc:s0                     nfc           2931   764   16851280 137828 do_epoll_wait       0 S com.android.nfc\nu:r:secure_element:s0:c44,c260,c512,c768 secure_element 2951 764 16753156 117340 do_epoll_wait 0 S com.android.se\nu:r:radio:s0                   radio         2961   764   16479676 173016 do_epoll_wait       0 S com.android.phone\nu:r:bluetooth:s0               bluetooth     2964   764   16588176 160300 do_epoll_wait       0 S com.android.bluetooth\nu:r:platform_app:s0:c512,c768  u0_a81        2965   764   16852960 146980 do_freezer_trap     0 S com.android.provision\nu:r:system_app:s0              system        3032   764   16701784 200096 do_epoll_wait       0 S com.android.settings\nu:r:priv_app:s0:c512,c768      u0_a80        3167   764   16788824 250132 do_epoll_wait       0 S com.android.launcher3\nu:r:priv_app:s0:c512,c768      u0_a92        3220   764   16438176 143808 do_epoll_wait       0 S com.android.cellbroadcastreceiver.module\nu:r:platform_app:s0:c512,c768  u0_a24        3255   764   16754700 116216 do_epoll_wait       0 S com.android.cellbroadcastreceiver\nu:r:platform_app:s0:c512,c768  u0_a77        3273   764   16752916 116852 do_epoll_wait       0 S com.google.android.telephony.satellite\nu:r:kernel:s0                  root          3311     2          0      0 issue_checkpoint_thread 0 S [f2fs_ckpt-254:105]\nu:r:kernel:s0                  root          3325     2          0      0 worker_thread       0 I [kworker/u25:1-blk_crypto_wq]\nu:r:mediaprovider_app:s0:c114,c256,c512,c768 u0_a114 3375 764 16535376 159392 do_epoll_wait   0 S com.android.providers.media.module\nu:r:kernel:s0                  root          3395     2          0      0 worker_thread       0 I [kworker/2:2-cgroup_bpf_destroy]\nu:r:kernel:s0                  root          3406     2          0      0 worker_thread       0 I [kworker/u23:2-blk_crypto_wq]\nu:r:untrusted_app:s0:c54,c256,c512,c768 u0_a54 3414 764   16755964 115336 do_freezer_trap     0 S com.android.printspooler\nu:r:kernel:s0                  root          3426     2          0      0 worker_thread       0 I [kworker/u23:3-blk_crypto_wq]\nu:r:platform_app:s0:c512,c768  u0_a27        3431   764   16778820 142196 do_epoll_wait       0 S com.android.documentsui\nu:r:kernel:s0                  root          3447     2          0      0 worker_thread       0 I [kworker/u25:2-blk_crypto_wq]\nu:r:system_app:s0              system        3451   764   16815496 118544 do_epoll_wait       0 S com.android.keychain\nu:r:kernel:s0                  root          3462     2          0      0 worker_thread       0 I [kworker/u22:2-blk_crypto_wq]\nu:r:kernel:s0                  root          3473     2          0      0 worker_thread       0 I [kworker/u24:2-blk_crypto_wq]\nu:r:platform_app:s0:c512,c768  u0_a29        3490   764   16754048 115296 do_freezer_trap     0 S com.android.externalstorage\nu:r:mediaprovider:s0:c512,c768 u0_a113       3505   764   16759256 114236 do_freezer_trap     0 S com.android.photopicker\nu:r:mediaprovider:s0:c512,c768 u0_a28        3526   764   16762264 134268 do_epoll_wait       0 S android.process.media\nu:r:platform_app:s0:c512,c768  u0_a32        3542   764   16758596 123996 do_epoll_wait       0 S com.android.managedprovisioning\nu:r:untrusted_app_30:s0:c73,c256,c512,c768 u0_a73 3575 764 16754364 113876 do_freezer_trap    0 S com.android.quicksearchbox\nu:r:platform_app:s0:c512,c768  u0_a78        3593   764   16754296 113264 do_freezer_trap     0 S com.android.carrierconfig\nu:r:priv_app:s0:c512,c768      u0_a23        3615   764   16755704 123864 do_epoll_wait       0 S com.android.providers.calendar\nu:r:priv_app:s0:c512,c768      u0_a21        3631   764   16770856 146760 do_epoll_wait       0 S android.process.acore\nu:r:priv_app:s0:c512,c768      u0_a59        3665   764   16762332 121788 do_epoll_wait       0 S com.android.contacts\nu:r:platform_app:s0:c512,c768  u0_a63        3687   764   16780224 137296 do_epoll_wait       0 S com.android.statementservice\nu:r:traceur_app:s0:c56,c256,c512,c768 u0_a56 3723   764   16758864 119644 do_epoll_wait       0 S com.android.traceur\nu:r:gceservice:s0:c58,c256,c512,c768 u0_a58  3747   764   16761540 121760 do_epoll_wait       0 S com.android.google.gce.gceservice\nu:r:untrusted_app:s0:c65,c256,c512,c768 u0_a65 3766 764   16755948 121864 do_epoll_wait       0 S com.android.calendar\nu:r:priv_app:s0:c512,c768      u0_a61        3790   764   16758736 121720 do_epoll_wait       0 S com.android.imsserviceentitlement\nu:r:priv_app:s0:c512,c768      u0_a106       3805   764   16766056 123496 do_epoll_wait       0 S .adservices\nu:r:priv_app:s0:c512,c768      u0_a106       3817   764   16766044 123224 do_epoll_wait       0 S android.ext.services\nu:r:untrusted_app:s0:c66,c256,c512,c768 u0_a66 3825 764   17418408 119072 do_epoll_wait       0 S com.android.camera2\nu:r:platform_app:s0:c512,c768  u0_a26        3848   764   16766904 121772 do_epoll_wait       0 S com.android.devicediagnostics\nu:r:system_app:s0              system        3859   764   16753044 115152 do_epoll_wait       0 S com.android.dynsystem\nu:r:untrusted_app:s0:c112,c256,c512,c768 u0_a112 3870 764 16753468 115732 do_epoll_wait       0 S com.android.federatedcompute.services\nu:r:system_app:s0              system        3874   764   16753044 116700 do_epoll_wait       0 S com.android.dynsystem:dynsystem\nu:r:system_app:s0              system        3884   764   16754020 116484 do_epoll_wait       0 S com.android.localtransport\nu:r:platform_app:s0:c512,c768  u0_a74        3915   764   16764348 142512 do_epoll_wait       0 S com.android.messaging\nu:r:platform_app:s0:c512,c768  u0_a111       3933   764   16755252 117352 do_epoll_wait       0 S com.android.ondevicepersonalization.services\nu:r:platform_app:s0:c512,c768  u0_a34        3945   764   16756412 117232 do_epoll_wait       0 S com.android.packageinstaller\nu:r:rkpdapp:s0:c115,c256,c512,c768 u0_a115   3956   764   16771564 140832 do_epoll_wait       0 S com.android.rkpdapp\nu:r:shell:s0                   shell         3970   764   16754736 115876 do_epoll_wait       0 S com.android.shell\nu:r:priv_app:s0:c512,c768      u0_a60        3986   764   16769508 128812 do_freezer_trap     0 S com.android.dialer\nu:r:platform_app:s0:c512,c768  u0_a45        3987   764   16753344 114432 do_freezer_trap     0 S com.android.carrierdefaultapp\nu:r:virtualizationservice:s0   system        4059     1   11026128  10400 _RNvMs2_NtCsepCoEf1YMFZ_11rust_binder6threadNtB5_6Thread8get_work 0 S virtualizationservice\nu:r:kernel:s0                  root          4074     2          0      0 worker_thread       0 I [kworker/3:3-events]\nu:r:su:s0                      root          4352     1   10892668  11212 do_epoll_wait       0 S adbd\nu:r:su:s0                      root          4381  4352   10812676   5392 0                   0 R ps",
+      "observed_at": "2026-10-30T22:38:57.850224+00:00"
+    },
+    {
+      "case": "service_client_domains_enforcing",
+      "passed": true,
+      "actual": "su\n",
+      "observed_at": "2026-10-30T22:38:58.033795+00:00"
+    },
+    {
+      "case": "restart_pid_0",
+      "passed": true,
+      "actual": "4396",
+      "observed_at": "2026-10-30T22:38:58.691770+00:00"
+    },
+    {
+      "case": "restart_period_0",
+      "passed": true,
+      "actual": {
+        "previous_pid": "918",
+        "pid": "4396",
+        "start_interval_seconds": 33.230000000000004
+      },
+      "observed_at": "2026-10-30T22:38:58.739657+00:00"
+    },
+    {
+      "case": "restart_pid_1",
+      "passed": true,
+      "actual": "4480",
+      "observed_at": "2026-10-30T22:39:08.595712+00:00"
+    },
+    {
+      "case": "restart_period_1",
+      "passed": true,
+      "actual": {
+        "previous_pid": "4396",
+        "pid": "4480",
+        "start_interval_seconds": 10.009999999999998
+      },
+      "observed_at": "2026-10-30T22:39:08.643654+00:00"
+    },
+    {
+      "case": "restart_pid_2",
+      "passed": true,
+      "actual": "4557",
+      "observed_at": "2026-10-30T22:39:18.500896+00:00"
+    },
+    {
+      "case": "restart_period_2",
+      "passed": true,
+      "actual": {
+        "previous_pid": "4480",
+        "pid": "4557",
+        "start_interval_seconds": 10.000000000000007
+      },
+      "observed_at": "2026-10-30T22:39:18.549880+00:00"
+    },
+    {
+      "case": "adb_uid_shell",
+      "passed": true,
+      "actual": "uid=2000(shell) gid=2000(shell) groups=2000(shell),1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),1078(ext_data_rw),1079(ext_obb_rw),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats),3009(readproc),3011(uhid),3012(readtracefs) context=u:r:shell:s0",
+      "observed_at": "2026-10-30T22:39:18.953685+00:00"
+    },
+    {
+      "case": "probe_command:inspect 07cb39e9-78ed-4d0e-afcb-29080c066eec 5e820ae4-f162-462b-9da4-66698276540c a4963e39-8663-4425-9f0a-f45d8c9a9bc8 STALE_EPOCH",
+      "passed": true,
+      "actual": {
+        "argv": [
+          "adb",
+          "-s",
+          "0.0.0.0:6520",
+          "shell",
+          "/system_ext/bin/boundarylab_probe inspect 07cb39e9-78ed-4d0e-afcb-29080c066eec 5e820ae4-f162-462b-9da4-66698276540c a4963e39-8663-4425-9f0a-f45d8c9a9bc8 STALE_EPOCH"
+        ],
+        "started_at": "2026-10-30T22:39:18.955614+00:00",
+        "ended_at": "2026-10-30T22:39:19.001435+00:00",
+        "exit_code": 0,
+        "stdout": "{\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\n{\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\n{\"case\":\"inspect\",\"passed\":true,\"detail\":\"STALE_EPOCH\"}\n",
+        "stderr": ""
+      },
+      "observed_at": "2026-10-30T22:39:19.001760+00:00"
+    },
+    {
+      "case": "probe:context_available",
+      "passed": true,
+      "actual": {
+        "case": "context_available",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:39:19.003642+00:00"
+    },
+    {
+      "case": "probe:authorized_domain",
+      "passed": true,
+      "actual": {
+        "case": "authorized_domain",
+        "passed": true,
+        "detail": "u:r:boundarylab_probe:s0"
+      },
+      "observed_at": "2026-10-30T22:39:19.005421+00:00"
+    },
+    {
+      "case": "probe:global_enforcing",
+      "passed": true,
+      "actual": {
+        "case": "global_enforcing",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:39:19.007142+00:00"
+    },
+    {
+      "case": "probe:service_discovery",
+      "passed": true,
+      "actual": {
+        "case": "service_discovery",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:39:19.008856+00:00"
+    },
+    {
+      "case": "probe:authorized_real_uid",
+      "passed": true,
+      "actual": {
+        "case": "authorized_real_uid",
+        "passed": true,
+        "detail": "2000"
+      },
+      "observed_at": "2026-10-30T22:39:19.010529+00:00"
+    },
+    {
+      "case": "probe:inspect",
+      "passed": true,
+      "actual": {
+        "case": "inspect",
+        "passed": true,
+        "detail": "STALE_EPOCH"
+      },
+      "observed_at": "2026-10-30T22:39:19.012239+00:00"
+    },
+    {
+      "case": "probe_command:known",
+      "passed": true,
+      "actual": {
+        "argv": [
+          "adb",
+          "-s",
+          "0.0.0.0:6520",
+          "shell",
+          "/system_ext/bin/boundarylab_probe known"
+        ],
+        "started_at": "2026-10-30T22:39:19.013965+00:00",
+        "ended_at": "2026-10-30T22:39:19.060443+00:00",
+        "exit_code": 0,
+        "stdout": "{\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\n{\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\n{\"case\":\"authorized_capabilities\",\"passed\":true,\"detail\":\"bdae40ad-079e-424a-8697-f9ef1a6b26b9\"}\n{\"case\":\"known_session_open\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"known_job_admitted\",\"passed\":true,\"detail\":\"\"}\n{\"epoch\":\"bdae40ad-079e-424a-8697-f9ef1a6b26b9\",\"sessionId\":\"54018ab9-e623-489b-888d-74c67b126227\",\"jobId\":\"c363a833-5a7f-4234-b811-a22e94ce34a5\"}\n{\"case\":\"known_job_succeeded\",\"passed\":true,\"detail\":\"6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d\"}\n{\"case\":\"known_session_closed\",\"passed\":true,\"detail\":\"\"}\n",
+        "stderr": ""
+      },
+      "observed_at": "2026-10-30T22:39:19.060893+00:00"
+    },
+    {
+      "case": "probe:context_available",
+      "passed": true,
+      "actual": {
+        "case": "context_available",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:39:19.062864+00:00"
+    },
+    {
+      "case": "probe:authorized_domain",
+      "passed": true,
+      "actual": {
+        "case": "authorized_domain",
+        "passed": true,
+        "detail": "u:r:boundarylab_probe:s0"
+      },
+      "observed_at": "2026-10-30T22:39:19.064661+00:00"
+    },
+    {
+      "case": "probe:global_enforcing",
+      "passed": true,
+      "actual": {
+        "case": "global_enforcing",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:39:19.066443+00:00"
+    },
+    {
+      "case": "probe:service_discovery",
+      "passed": true,
+      "actual": {
+        "case": "service_discovery",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:39:19.068207+00:00"
+    },
+    {
+      "case": "probe:authorized_real_uid",
+      "passed": true,
+      "actual": {
+        "case": "authorized_real_uid",
+        "passed": true,
+        "detail": "2000"
+      },
+      "observed_at": "2026-10-30T22:39:19.069982+00:00"
+    },
+    {
+      "case": "probe:authorized_capabilities",
+      "passed": true,
+      "actual": {
+        "case": "authorized_capabilities",
+        "passed": true,
+        "detail": "bdae40ad-079e-424a-8697-f9ef1a6b26b9"
+      },
+      "observed_at": "2026-10-30T22:39:19.071711+00:00"
+    },
+    {
+      "case": "probe:known_session_open",
+      "passed": true,
+      "actual": {
+        "case": "known_session_open",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:39:19.073472+00:00"
+    },
+    {
+      "case": "probe:known_job_admitted",
+      "passed": true,
+      "actual": {
+        "case": "known_job_admitted",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:39:19.075253+00:00"
+    },
+    {
+      "case": "probe:known_job_succeeded",
+      "passed": true,
+      "actual": {
+        "case": "known_job_succeeded",
+        "passed": true,
+        "detail": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"
+      },
+      "observed_at": "2026-10-30T22:39:19.077057+00:00"
+    },
+    {
+      "case": "probe:known_session_closed",
+      "passed": true,
+      "actual": {
+        "case": "known_session_closed",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:39:19.078847+00:00"
+    },
+    {
+      "case": "post_restart_new_epoch",
+      "passed": true,
+      "actual": {
+        "old": {
+          "epoch": "07cb39e9-78ed-4d0e-afcb-29080c066eec",
+          "sessionId": "5e820ae4-f162-462b-9da4-66698276540c",
+          "jobId": "a4963e39-8663-4425-9f0a-f45d8c9a9bc8"
+        },
+        "fresh": {
+          "epoch": "bdae40ad-079e-424a-8697-f9ef1a6b26b9",
+          "sessionId": "54018ab9-e623-489b-888d-74c67b126227",
+          "jobId": "c363a833-5a7f-4234-b811-a22e94ce34a5"
+        }
+      },
+      "observed_at": "2026-10-30T22:39:19.080655+00:00"
+    },
+    {
+      "case": "probe_command:resources",
+      "passed": true,
+      "actual": {
+        "argv": [
+          "adb",
+          "-s",
+          "0.0.0.0:6520",
+          "shell",
+          "/system_ext/bin/boundarylab_probe resources"
+        ],
+        "started_at": "2026-10-30T22:39:19.082537+00:00",
+        "ended_at": "2026-10-30T22:39:19.128273+00:00",
+        "exit_code": 0,
+        "stdout": "{\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\n{\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\n{\"case\":\"authorized_capabilities\",\"passed\":true,\"detail\":\"bdae40ad-079e-424a-8697-f9ef1a6b26b9\"}\n{\"resources\":{\"epoch\":\"bdae40ad-079e-424a-8697-f9ef1a6b26b9\",\"servicePid\":4557,\"liveSessions\":0,\"queuedJobs\":0,\"runningJobs\":0,\"retainedEntries\":0,\"retainedBytes\":0}}\n",
+        "stderr": ""
+      },
+      "observed_at": "2026-10-30T22:39:19.128542+00:00"
+    },
+    {
+      "case": "probe:context_available",
+      "passed": true,
+      "actual": {
+        "case": "context_available",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:39:19.130458+00:00"
+    },
+    {
+      "case": "probe:authorized_domain",
+      "passed": true,
+      "actual": {
+        "case": "authorized_domain",
+        "passed": true,
+        "detail": "u:r:boundarylab_probe:s0"
+      },
+      "observed_at": "2026-10-30T22:39:19.132286+00:00"
+    },
+    {
+      "case": "probe:global_enforcing",
+      "passed": true,
+      "actual": {
+        "case": "global_enforcing",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:39:19.134225+00:00"
+    },
+    {
+      "case": "probe:service_discovery",
+      "passed": true,
+      "actual": {
+        "case": "service_discovery",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:39:19.136105+00:00"
+    },
+    {
+      "case": "probe:authorized_real_uid",
+      "passed": true,
+      "actual": {
+        "case": "authorized_real_uid",
+        "passed": true,
+        "detail": "2000"
+      },
+      "observed_at": "2026-10-30T22:39:19.137941+00:00"
+    },
+    {
+      "case": "probe:authorized_capabilities",
+      "passed": true,
+      "actual": {
+        "case": "authorized_capabilities",
+        "passed": true,
+        "detail": "bdae40ad-079e-424a-8697-f9ef1a6b26b9"
+      },
+      "observed_at": "2026-10-30T22:39:19.139836+00:00"
+    },
+    {
+      "case": "final_after_restart:resource_record",
+      "passed": true,
+      "actual": [
+        {
+          "epoch": "bdae40ad-079e-424a-8697-f9ef1a6b26b9",
+          "servicePid": 4557,
+          "liveSessions": 0,
+          "queuedJobs": 0,
+          "runningJobs": 0,
+          "retainedEntries": 0,
+          "retainedBytes": 0
+        }
+      ],
+      "observed_at": "2026-10-30T22:39:19.141676+00:00"
+    },
+    {
+      "case": "final_after_restart:resource_shape",
+      "passed": true,
+      "actual": {
+        "epoch": "bdae40ad-079e-424a-8697-f9ef1a6b26b9",
+        "servicePid": 4557,
+        "liveSessions": 0,
+        "queuedJobs": 0,
+        "runningJobs": 0,
+        "retainedEntries": 0,
+        "retainedBytes": 0
+      },
+      "observed_at": "2026-10-30T22:39:19.143542+00:00"
+    },
+    {
+      "case": "final_after_restart:quiescent",
+      "passed": true,
+      "actual": [
+        {
+          "observed_at": "2026-10-30T22:39:19.145411+00:00",
+          "resources": {
+            "epoch": "bdae40ad-079e-424a-8697-f9ef1a6b26b9",
+            "servicePid": 4557,
+            "liveSessions": 0,
+            "queuedJobs": 0,
+            "runningJobs": 0,
+            "retainedEntries": 0,
+            "retainedBytes": 0
+          }
+        }
+      ],
+      "observed_at": "2026-10-30T22:39:19.145422+00:00"
+    },
+    {
+      "case": "adb_uid_root_for_lifecycle_only",
+      "passed": true,
+      "actual": "uid=0(root) gid=0(root) groups=0(root),1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),1078(ext_data_rw),1079(ext_obb_rw),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats),3009(readproc),3011(uhid),3012(readtracefs) context=u:r:su:s0",
+      "observed_at": "2026-10-30T22:39:19.548829+00:00"
+    },
+    {
+      "case": "final_after_restart:pid_matches_metrics",
+      "passed": true,
+      "actual": {
+        "pid": "4557",
+        "resources": {
+          "epoch": "bdae40ad-079e-424a-8697-f9ef1a6b26b9",
+          "servicePid": 4557,
+          "liveSessions": 0,
+          "queuedJobs": 0,
+          "runningJobs": 0,
+          "retainedEntries": 0,
+          "retainedBytes": 0
+        }
+      },
+      "observed_at": "2026-10-30T22:39:19.597899+00:00"
+    },
+    {
+      "case": "final_after_restart:fd_listing",
+      "passed": true,
+      "actual": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "observed_at": "2026-10-30T22:39:19.692951+00:00"
+    },
+    {
+      "case": "final_after_restart:generation_stable",
+      "passed": true,
+      "actual": {
+        "pid": "4557",
+        "start_ticks": 7098
+      },
+      "observed_at": "2026-10-30T22:39:19.833920+00:00"
+    },
+    {
+      "case": "final_after_restart:snapshot",
+      "passed": true,
+      "actual": {
+        "observed_at": "2026-10-30T22:39:19.836076+00:00",
+        "pid": 4557,
+        "start_ticks": 7098,
+        "resources": {
+          "epoch": "bdae40ad-079e-424a-8697-f9ef1a6b26b9",
+          "servicePid": 4557,
+          "liveSessions": 0,
+          "queuedJobs": 0,
+          "runningJobs": 0,
+          "retainedEntries": 0,
+          "retainedBytes": 0
+        },
+        "fd_count": 7,
+        "fd_numbers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "fd_listing": "total 0\nlrwx------ 1 nobody nobody 64 2026-10-30 22:39 0 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:39 1 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:39 2 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:39 3 -> /dev/binderfs/binder\nl-wx------ 1 nobody nobody 64 2026-10-30 22:39 4 -> /sys/kernel/tracing/trace_marker\nlrwx------ 1 nobody nobody 64 2026-10-30 22:39 5 -> socket:[43579]\nl-wx------ 1 nobody nobody 64 2026-10-30 22:39 6 -> /dev/pmsg0"
+      },
+      "observed_at": "2026-10-30T22:39:19.836095+00:00"
+    },
+    {
+      "case": "adb_uid_shell",
+      "passed": true,
+      "actual": "uid=2000(shell) gid=2000(shell) groups=2000(shell),1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),1078(ext_data_rw),1079(ext_obb_rw),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats),3009(readproc),3011(uhid),3012(readtracefs) context=u:r:shell:s0",
+      "observed_at": "2026-10-30T22:39:20.239825+00:00"
+    },
+    {
+      "case": "final_snapshot_matches_fresh_job",
+      "passed": true,
+      "actual": {
+        "observed_at": "2026-10-30T22:39:19.836076+00:00",
+        "pid": 4557,
+        "start_ticks": 7098,
+        "resources": {
+          "epoch": "bdae40ad-079e-424a-8697-f9ef1a6b26b9",
+          "servicePid": 4557,
+          "liveSessions": 0,
+          "queuedJobs": 0,
+          "runningJobs": 0,
+          "retainedEntries": 0,
+          "retainedBytes": 0
+        },
+        "fd_count": 7,
+        "fd_numbers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "fd_listing": "total 0\nlrwx------ 1 nobody nobody 64 2026-10-30 22:39 0 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:39 1 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:39 2 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:39 3 -> /dev/binderfs/binder\nl-wx------ 1 nobody nobody 64 2026-10-30 22:39 4 -> /sys/kernel/tracing/trace_marker\nlrwx------ 1 nobody nobody 64 2026-10-30 22:39 5 -> socket:[43579]\nl-wx------ 1 nobody nobody 64 2026-10-30 22:39 6 -> /dev/pmsg0"
+      },
+      "observed_at": "2026-10-30T22:39:20.242003+00:00"
+    },
+    {
+      "case": "enforcing_after",
+      "passed": true,
+      "actual": "Enforcing",
+      "observed_at": "2026-10-30T22:39:20.337033+00:00"
+    },
+    {
+      "case": "completed",
+      "passed": true,
+      "actual": "Minimum runtime corpus only; no compatibility-evolution/performance/soak claim",
+      "observed_at": "2026-10-30T22:39:20.339145+00:00"
+    }
+  ]
+}

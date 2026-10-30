@@ -1,0 +1,3 @@
+/system_ext/bin/boundarylab_service u:object_r:boundarylab_exec:s0
+/system_ext/bin/boundarylab_probe u:object_r:boundarylab_probe_exec:s0
+/system_ext/bin/boundarylab_denied_probe u:object_r:boundarylab_denied_exec:s0

@@ -1,0 +1,69 @@
+
+============================================
+PLATFORM_VERSION_CODENAME=REL
+PLATFORM_VERSION=16
+TARGET_PRODUCT=aosp_cf_x86_64_only_phone
+TARGET_BUILD_VARIANT=userdebug
+TARGET_ARCH=x86_64
+TARGET_ARCH_VARIANT=silvermont
+HOST_OS=linux
+HOST_OS_EXTRA=Linux-7.0.0-1014-gcp-x86_64-Ubuntu-24.04.5-LTS
+HOST_CROSS_OS=windows
+BUILD_ID=BP4A.251205.006
+OUT_DIR=out
+SOONG_ONLY=true
+============================================
+Running product configuration...
+============================================
+PLATFORM_VERSION_CODENAME=REL
+PLATFORM_VERSION=16
+TARGET_PRODUCT=aosp_cf_x86_64_only_phone
+TARGET_BUILD_VARIANT=userdebug
+TARGET_ARCH=x86_64
+TARGET_ARCH_VARIANT=silvermont
+HOST_OS=linux
+HOST_OS_EXTRA=Linux-7.0.0-1014-gcp-x86_64-Ubuntu-24.04.5-LTS
+HOST_CROSS_OS=windows
+BUILD_ID=BP4A.251205.006
+OUT_DIR=out
+SOONG_ONLY=true
+============================================
+[100% 1/1] bootstrap blueprint
+Running globs...
+ninja: no work to do.
+No need to regenerate ninja file
+Starting ninja...
+[  6% 2/32] //vendor/boundarylab:libboundarylab_engine static link libboundarylab_engine.a
+[  9% 3/32] //vendor/boundarylab:libboundarylab_platform_client static link libboundarylab_platform_client.a
+[ 12% 4/32] //vendor/boundarylab:libboundarylab_engine static link libboundarylab_engine.a
+[ 15% 5/32] //vendor/boundarylab:boundarylab_engine_test link boundarylab_engine_test
+[ 18% 6/32] cp out/target/product/vsoc_x86_64_only/symbols/data/nativetest64/boundarylab_engine_test/boundarylab_engine_test
+[ 21% 7/32] out/host/linux-x86/bin/symbols_map -elf out/target/product/vsoc_x86_64_only/symbols/data/nativetest64/boundarylab_engine_test/boundarylab_engine_test -write_if_changed out/target/product/vsoc_x86_64_only/obj/PACKAGING/elf_symbol_mapping_intermediates/data/nativetest64/boundarylab_engine_test/boundarylab_engine_test.textproto
+[ 25% 8/32] //vendor/boundarylab:boundarylab_engine_test strip boundarylab_engine_test
+[ 28% 9/32] cp out/target/product/vsoc_x86_64_only/testcases/boundarylab_engine_test/x86_64/boundarylab_engine_test
+[ 31% 10/32] //vendor/boundarylab:boundarylab_engine_test install boundarylab_engine_test
+[ 34% 11/32] //vendor/boundarylab:boundarylab-platform-V1-cpp link boundarylab-platform-V1-cpp.so
+[ 37% 12/32] //vendor/boundarylab:boundarylab-platform-V1-cpp strip boundarylab-platform-V1-cpp.so
+[ 40% 13/32] //vendor/boundarylab:boundarylab-platform-V1-cpp copy boundarylab-platform-V1-cpp.so
+[ 43% 14/32] //vendor/boundarylab:boundarylab-platform-V1-cpp install boundarylab-platform-V1-cpp.so
+[ 46% 15/32] //vendor/boundarylab:boundarylab-platform-V1-cpp generate toc boundarylab-platform-V1-cpp.so
+[ 50% 16/32] //vendor/boundarylab:boundarylab_service link boundarylab_service
+[ 53% 17/32] cp out/target/product/vsoc_x86_64_only/symbols/system_ext/bin/boundarylab_service
+[ 56% 18/32] out/host/linux-x86/bin/symbols_map -elf out/target/product/vsoc_x86_64_only/symbols/system_ext/bin/boundarylab_service -write_if_changed out/target/product/vsoc_x86_64_only/obj/PACKAGING/elf_symbol_mapping_intermediates/system_ext/bin/boundarylab_service.textproto
+[ 59% 19/32] //vendor/boundarylab:boundarylab_service strip boundarylab_service
+[ 62% 20/32] //vendor/boundarylab:boundarylab_service install boundarylab_service
+[ 65% 21/32] //vendor/boundarylab:boundarylab_probe clang++ client/probe.cpp
+[ 68% 22/32] //vendor/boundarylab:boundarylab_denied_probe clang++ client/probe.cpp
+[ 71% 23/32] //vendor/boundarylab:boundarylab_probe link boundarylab_probe
+[ 75% 24/32] cp out/target/product/vsoc_x86_64_only/symbols/system_ext/bin/boundarylab_probe
+[ 78% 25/32] out/host/linux-x86/bin/symbols_map -elf out/target/product/vsoc_x86_64_only/symbols/system_ext/bin/boundarylab_probe -write_if_changed out/target/product/vsoc_x86_64_only/obj/PACKAGING/elf_symbol_mapping_intermediates/system_ext/bin/boundarylab_probe.textproto
+[ 81% 26/32] //vendor/boundarylab:boundarylab_denied_probe link boundarylab_denied_probe
+[ 84% 27/32] cp out/target/product/vsoc_x86_64_only/symbols/system_ext/bin/boundarylab_denied_probe
+[ 87% 28/32] out/host/linux-x86/bin/symbols_map -elf out/target/product/vsoc_x86_64_only/symbols/system_ext/bin/boundarylab_denied_probe -write_if_changed out/target/product/vsoc_x86_64_only/obj/PACKAGING/elf_symbol_mapping_intermediates/system_ext/bin/boundarylab_denied_probe.textproto
+[ 90% 29/32] //vendor/boundarylab:boundarylab_probe strip boundarylab_probe
+[ 93% 30/32] //vendor/boundarylab:boundarylab_probe install boundarylab_probe
+[ 96% 31/32] //vendor/boundarylab:boundarylab_denied_probe strip boundarylab_denied_probe
+[100% 32/32] //vendor/boundarylab:boundarylab_denied_probe install boundarylab_denied_probe
+
+#### build completed successfully (10 seconds) ####
+

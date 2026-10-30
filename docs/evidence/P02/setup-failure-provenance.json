@@ -1,0 +1,38 @@
+[
+  {
+    "stage": "r1-shell-option",
+    "original_private_archive_sha256": "e7aa3958aa180a9187259e7fc4934d5af91fb107693edbe73484b35248c89960",
+    "original_archive_bytes": 44624,
+    "files": {
+      "build.log": "81b04b8c2d7bc5df04a35424c7b4d7012938f77ce6de7ff5538f7e61fa456270",
+      "build-result.json": "a6d546e85fd20fd8095696d2201a760800b5aa57b5a4e2530ed4228bb15756cc",
+      "manifest.xml": "4e8beb5d1b590dff3d631b1dbb957138dbda4e608a3183c625683da4bc84918f",
+      "source-status-before.txt": "3624b3fa2d85cf06be3b449851d1948b281422ced4649cbf4e9c868cf723329b"
+    },
+    "classification": "wrapper/host prerequisite failure before m compilation"
+  },
+  {
+    "stage": "r2-output-directory",
+    "original_private_archive_sha256": "e931ff8167cca4a01d736ec2d36f64c99b919579d4e61935e98d9e6ccfd153df",
+    "original_archive_bytes": 44745,
+    "files": {
+      "build.log": "6b80d45c539c5112d44589fab6458b79fe52050ee395aa1a9a0d7ac94b62350c",
+      "build-result.json": "b51cadc3de88df225b5ddc2417b2d47296471bfeedf29d8e6fcb1bb6b7802b17",
+      "manifest.xml": "4e8beb5d1b590dff3d631b1dbb957138dbda4e608a3183c625683da4bc84918f",
+      "source-status-before.txt": "3624b3fa2d85cf06be3b449851d1948b281422ced4649cbf4e9c868cf723329b"
+    },
+    "classification": "wrapper/host prerequisite failure before m compilation"
+  },
+  {
+    "stage": "r3-absolute-output",
+    "original_private_archive_sha256": "23b5140c7bb12d00843814ffcb7d7b0d3c7ff0475078adfdf4ed6d4f081b97ad",
+    "original_archive_bytes": 49564,
+    "files": {
+      "build.log": "e89222823f752969a2bfce88736e18c6c9aa922e310378b86c46ac00aaf33f71",
+      "build-result.json": "1d551798f2b3f754c54bd5c1ed692771374b41309210c4905147d980ae88b5c5",
+      "manifest.xml": "4e8beb5d1b590dff3d631b1dbb957138dbda4e608a3183c625683da4bc84918f",
+      "source-status-before.txt": "3624b3fa2d85cf06be3b449851d1948b281422ced4649cbf4e9c868cf723329b"
+    },
+    "classification": "unchanged source Soong build failed on upstream absolute output-path assumption; no image boot"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "adb",
+    "-s",
+    "0.0.0.0:6520",
+    "root"
+  ],
+  "started_at": "2026-10-30T22:38:54.593518+00:00",
+  "ended_at": "2026-10-30T22:38:54.899709+00:00",
+  "exit_code": 0,
+  "stdout": "restarting adbd as root\n",
+  "stderr": ""
+}

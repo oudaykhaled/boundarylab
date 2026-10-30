@@ -1,0 +1,2223 @@
+{
+  "schema_version": 1,
+  "serial": "0.0.0.0:6520",
+  "scope": "custom-image-runtime",
+  "checks": [
+    {
+      "case": "profile",
+      "passed": true,
+      "actual": "generic/aosp_cf_x86_64_only_phone/vsoc_x86_64_only:16/BP4A.251205.006/eng.aosp:userdebug/test-keys",
+      "observed_at": "2026-10-30T22:32:04.736598+00:00"
+    },
+    {
+      "case": "enforcing_before",
+      "passed": true,
+      "actual": "Enforcing",
+      "observed_at": "2026-10-30T22:32:04.828696+00:00"
+    },
+    {
+      "case": "adb_uid_shell",
+      "passed": true,
+      "actual": "uid=2000(shell) gid=2000(shell) groups=2000(shell),1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),1078(ext_data_rw),1079(ext_obb_rw),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats),3009(readproc),3011(uhid),3012(readtracefs) context=u:r:shell:s0",
+      "observed_at": "2026-10-30T22:32:05.013720+00:00"
+    },
+    {
+      "case": "probe_command:empty",
+      "passed": true,
+      "actual": {
+        "argv": [
+          "adb",
+          "-s",
+          "0.0.0.0:6520",
+          "shell",
+          "/system_ext/bin/boundarylab_probe empty"
+        ],
+        "started_at": "2026-10-30T22:32:05.013924+00:00",
+        "ended_at": "2026-10-30T22:32:05.059400+00:00",
+        "exit_code": 0,
+        "stdout": "{\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\n{\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\n{\"case\":\"authorized_capabilities\",\"passed\":true,\"detail\":\"43e59047-a99d-4696-95a9-2f492f0dd60b\"}\n{\"case\":\"resource_baseline\",\"passed\":true,\"detail\":\"\"}\n",
+        "stderr": ""
+      },
+      "observed_at": "2026-10-30T22:32:05.059731+00:00"
+    },
+    {
+      "case": "probe:context_available",
+      "passed": true,
+      "actual": {
+        "case": "context_available",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:05.059915+00:00"
+    },
+    {
+      "case": "probe:authorized_domain",
+      "passed": true,
+      "actual": {
+        "case": "authorized_domain",
+        "passed": true,
+        "detail": "u:r:boundarylab_probe:s0"
+      },
+      "observed_at": "2026-10-30T22:32:05.060740+00:00"
+    },
+    {
+      "case": "probe:global_enforcing",
+      "passed": true,
+      "actual": {
+        "case": "global_enforcing",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:05.061132+00:00"
+    },
+    {
+      "case": "probe:service_discovery",
+      "passed": true,
+      "actual": {
+        "case": "service_discovery",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:05.061540+00:00"
+    },
+    {
+      "case": "probe:authorized_real_uid",
+      "passed": true,
+      "actual": {
+        "case": "authorized_real_uid",
+        "passed": true,
+        "detail": "2000"
+      },
+      "observed_at": "2026-10-30T22:32:05.061951+00:00"
+    },
+    {
+      "case": "probe:authorized_capabilities",
+      "passed": true,
+      "actual": {
+        "case": "authorized_capabilities",
+        "passed": true,
+        "detail": "43e59047-a99d-4696-95a9-2f492f0dd60b"
+      },
+      "observed_at": "2026-10-30T22:32:05.062378+00:00"
+    },
+    {
+      "case": "probe:resource_baseline",
+      "passed": true,
+      "actual": {
+        "case": "resource_baseline",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:05.062752+00:00"
+    },
+    {
+      "case": "probe_command:known",
+      "passed": true,
+      "actual": {
+        "argv": [
+          "adb",
+          "-s",
+          "0.0.0.0:6520",
+          "shell",
+          "/system_ext/bin/boundarylab_probe known"
+        ],
+        "started_at": "2026-10-30T22:32:05.063104+00:00",
+        "ended_at": "2026-10-30T22:32:05.109412+00:00",
+        "exit_code": 0,
+        "stdout": "{\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\n{\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\n{\"case\":\"authorized_capabilities\",\"passed\":true,\"detail\":\"43e59047-a99d-4696-95a9-2f492f0dd60b\"}\n{\"case\":\"known_session_open\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"known_job_admitted\",\"passed\":true,\"detail\":\"\"}\n{\"epoch\":\"43e59047-a99d-4696-95a9-2f492f0dd60b\",\"sessionId\":\"25db0fcf-da11-4044-bdcf-22f66281d0e3\",\"jobId\":\"70662c26-e5d1-488a-9610-9fb3d3060182\"}\n{\"case\":\"known_job_succeeded\",\"passed\":true,\"detail\":\"6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d\"}\n{\"case\":\"known_session_closed\",\"passed\":true,\"detail\":\"\"}\n",
+        "stderr": ""
+      },
+      "observed_at": "2026-10-30T22:32:05.109755+00:00"
+    },
+    {
+      "case": "probe:context_available",
+      "passed": true,
+      "actual": {
+        "case": "context_available",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:05.110051+00:00"
+    },
+    {
+      "case": "probe:authorized_domain",
+      "passed": true,
+      "actual": {
+        "case": "authorized_domain",
+        "passed": true,
+        "detail": "u:r:boundarylab_probe:s0"
+      },
+      "observed_at": "2026-10-30T22:32:05.110775+00:00"
+    },
+    {
+      "case": "probe:global_enforcing",
+      "passed": true,
+      "actual": {
+        "case": "global_enforcing",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:05.111209+00:00"
+    },
+    {
+      "case": "probe:service_discovery",
+      "passed": true,
+      "actual": {
+        "case": "service_discovery",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:05.111556+00:00"
+    },
+    {
+      "case": "probe:authorized_real_uid",
+      "passed": true,
+      "actual": {
+        "case": "authorized_real_uid",
+        "passed": true,
+        "detail": "2000"
+      },
+      "observed_at": "2026-10-30T22:32:05.111971+00:00"
+    },
+    {
+      "case": "probe:authorized_capabilities",
+      "passed": true,
+      "actual": {
+        "case": "authorized_capabilities",
+        "passed": true,
+        "detail": "43e59047-a99d-4696-95a9-2f492f0dd60b"
+      },
+      "observed_at": "2026-10-30T22:32:05.112367+00:00"
+    },
+    {
+      "case": "probe:known_session_open",
+      "passed": true,
+      "actual": {
+        "case": "known_session_open",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:05.112786+00:00"
+    },
+    {
+      "case": "probe:known_job_admitted",
+      "passed": true,
+      "actual": {
+        "case": "known_job_admitted",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:05.113122+00:00"
+    },
+    {
+      "case": "probe:known_job_succeeded",
+      "passed": true,
+      "actual": {
+        "case": "known_job_succeeded",
+        "passed": true,
+        "detail": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"
+      },
+      "observed_at": "2026-10-30T22:32:05.113461+00:00"
+    },
+    {
+      "case": "probe:known_session_closed",
+      "passed": true,
+      "actual": {
+        "case": "known_session_closed",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:05.113776+00:00"
+    },
+    {
+      "case": "probe_command:resources",
+      "passed": true,
+      "actual": {
+        "argv": [
+          "adb",
+          "-s",
+          "0.0.0.0:6520",
+          "shell",
+          "/system_ext/bin/boundarylab_probe resources"
+        ],
+        "started_at": "2026-10-30T22:32:05.114127+00:00",
+        "ended_at": "2026-10-30T22:32:05.160455+00:00",
+        "exit_code": 0,
+        "stdout": "{\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\n{\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\n{\"case\":\"authorized_capabilities\",\"passed\":true,\"detail\":\"43e59047-a99d-4696-95a9-2f492f0dd60b\"}\n{\"resources\":{\"epoch\":\"43e59047-a99d-4696-95a9-2f492f0dd60b\",\"servicePid\":921,\"liveSessions\":0,\"queuedJobs\":0,\"runningJobs\":0,\"retainedEntries\":0,\"retainedBytes\":0}}\n",
+        "stderr": ""
+      },
+      "observed_at": "2026-10-30T22:32:05.160783+00:00"
+    },
+    {
+      "case": "probe:context_available",
+      "passed": true,
+      "actual": {
+        "case": "context_available",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:05.161111+00:00"
+    },
+    {
+      "case": "probe:authorized_domain",
+      "passed": true,
+      "actual": {
+        "case": "authorized_domain",
+        "passed": true,
+        "detail": "u:r:boundarylab_probe:s0"
+      },
+      "observed_at": "2026-10-30T22:32:05.161934+00:00"
+    },
+    {
+      "case": "probe:global_enforcing",
+      "passed": true,
+      "actual": {
+        "case": "global_enforcing",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:05.162353+00:00"
+    },
+    {
+      "case": "probe:service_discovery",
+      "passed": true,
+      "actual": {
+        "case": "service_discovery",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:05.162694+00:00"
+    },
+    {
+      "case": "probe:authorized_real_uid",
+      "passed": true,
+      "actual": {
+        "case": "authorized_real_uid",
+        "passed": true,
+        "detail": "2000"
+      },
+      "observed_at": "2026-10-30T22:32:05.163048+00:00"
+    },
+    {
+      "case": "probe:authorized_capabilities",
+      "passed": true,
+      "actual": {
+        "case": "authorized_capabilities",
+        "passed": true,
+        "detail": "43e59047-a99d-4696-95a9-2f492f0dd60b"
+      },
+      "observed_at": "2026-10-30T22:32:05.163444+00:00"
+    },
+    {
+      "case": "cycle_before:resource_record",
+      "passed": true,
+      "actual": [
+        {
+          "epoch": "43e59047-a99d-4696-95a9-2f492f0dd60b",
+          "servicePid": 921,
+          "liveSessions": 0,
+          "queuedJobs": 0,
+          "runningJobs": 0,
+          "retainedEntries": 0,
+          "retainedBytes": 0
+        }
+      ],
+      "observed_at": "2026-10-30T22:32:05.163785+00:00"
+    },
+    {
+      "case": "cycle_before:resource_shape",
+      "passed": true,
+      "actual": {
+        "epoch": "43e59047-a99d-4696-95a9-2f492f0dd60b",
+        "servicePid": 921,
+        "liveSessions": 0,
+        "queuedJobs": 0,
+        "runningJobs": 0,
+        "retainedEntries": 0,
+        "retainedBytes": 0
+      },
+      "observed_at": "2026-10-30T22:32:05.164145+00:00"
+    },
+    {
+      "case": "cycle_before:quiescent",
+      "passed": true,
+      "actual": [
+        {
+          "observed_at": "2026-10-30T22:32:05.164546+00:00",
+          "resources": {
+            "epoch": "43e59047-a99d-4696-95a9-2f492f0dd60b",
+            "servicePid": 921,
+            "liveSessions": 0,
+            "queuedJobs": 0,
+            "runningJobs": 0,
+            "retainedEntries": 0,
+            "retainedBytes": 0
+          }
+        }
+      ],
+      "observed_at": "2026-10-30T22:32:05.164556+00:00"
+    },
+    {
+      "case": "adb_uid_root_for_lifecycle_only",
+      "passed": true,
+      "actual": "uid=0(root) gid=0(root) groups=0(root),1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),1078(ext_data_rw),1079(ext_obb_rw),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats),3009(readproc),3011(uhid),3012(readtracefs) context=u:r:su:s0",
+      "observed_at": "2026-10-30T22:32:05.565589+00:00"
+    },
+    {
+      "case": "cycle_before:pid_matches_metrics",
+      "passed": true,
+      "actual": {
+        "pid": "921",
+        "resources": {
+          "epoch": "43e59047-a99d-4696-95a9-2f492f0dd60b",
+          "servicePid": 921,
+          "liveSessions": 0,
+          "queuedJobs": 0,
+          "runningJobs": 0,
+          "retainedEntries": 0,
+          "retainedBytes": 0
+        }
+      },
+      "observed_at": "2026-10-30T22:32:05.611548+00:00"
+    },
+    {
+      "case": "cycle_before:fd_listing",
+      "passed": true,
+      "actual": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "observed_at": "2026-10-30T22:32:05.707625+00:00"
+    },
+    {
+      "case": "cycle_before:generation_stable",
+      "passed": true,
+      "actual": {
+        "pid": "921",
+        "start_ticks": 1814
+      },
+      "observed_at": "2026-10-30T22:32:05.846622+00:00"
+    },
+    {
+      "case": "cycle_before:snapshot",
+      "passed": true,
+      "actual": {
+        "observed_at": "2026-10-30T22:32:05.847070+00:00",
+        "pid": 921,
+        "start_ticks": 1814,
+        "resources": {
+          "epoch": "43e59047-a99d-4696-95a9-2f492f0dd60b",
+          "servicePid": 921,
+          "liveSessions": 0,
+          "queuedJobs": 0,
+          "runningJobs": 0,
+          "retainedEntries": 0,
+          "retainedBytes": 0
+        },
+        "fd_count": 7,
+        "fd_numbers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "fd_listing": "total 0\nlrwx------ 1 nobody nobody 64 2026-10-30 22:32 0 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:32 1 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:32 2 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:31 3 -> /dev/binderfs/binder\nl-wx------ 1 nobody nobody 64 2026-10-30 22:31 4 -> /sys/kernel/tracing/trace_marker\nlrwx------ 1 nobody nobody 64 2026-10-30 22:31 5 -> socket:[11017]\nl-wx------ 1 nobody nobody 64 2026-10-30 22:31 6 -> /dev/pmsg0"
+      },
+      "observed_at": "2026-10-30T22:32:05.847085+00:00"
+    },
+    {
+      "case": "adb_uid_shell",
+      "passed": true,
+      "actual": "uid=2000(shell) gid=2000(shell) groups=2000(shell),1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),1078(ext_data_rw),1079(ext_obb_rw),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats),3009(readproc),3011(uhid),3012(readtracefs) context=u:r:shell:s0",
+      "observed_at": "2026-10-30T22:32:06.248790+00:00"
+    },
+    {
+      "case": "raw_fd_observation",
+      "passed": true,
+      "actual": [
+        {
+          "pid": 4283,
+          "stdoutInode": 37391,
+          "status": -2147483646,
+          "parsedStatus": -2147483646,
+          "replyDecoded": false,
+          "exceptionCode": 0,
+          "serviceError": 0,
+          "startedEpochMs": 1793399527047,
+          "endedEpochMs": 1793399527047,
+          "classification": "FAILED_TRANSACTION_REQUIRES_AVC"
+        }
+      ],
+      "observed_at": "2026-10-30T22:32:07.663933+00:00"
+    },
+    {
+      "case": "raw_fd_observation_shape",
+      "passed": true,
+      "actual": {
+        "pid": 4283,
+        "stdoutInode": 37391,
+        "status": -2147483646,
+        "parsedStatus": -2147483646,
+        "replyDecoded": false,
+        "exceptionCode": 0,
+        "serviceError": 0,
+        "startedEpochMs": 1793399527047,
+        "endedEpochMs": 1793399527047,
+        "classification": "FAILED_TRANSACTION_REQUIRES_AVC"
+      },
+      "observed_at": "2026-10-30T22:32:07.664390+00:00"
+    },
+    {
+      "case": "raw_fd_identity_shape",
+      "passed": true,
+      "actual": {
+        "pid": 4283,
+        "stdoutInode": 37391,
+        "status": -2147483646,
+        "parsedStatus": -2147483646,
+        "replyDecoded": false,
+        "exceptionCode": 0,
+        "serviceError": 0,
+        "startedEpochMs": 1793399527047,
+        "endedEpochMs": 1793399527047,
+        "classification": "FAILED_TRANSACTION_REQUIRES_AVC"
+      },
+      "observed_at": "2026-10-30T22:32:07.665031+00:00"
+    },
+    {
+      "case": "raw_fd_unique_denial_audit",
+      "passed": true,
+      "actual": {
+        "observation": {
+          "pid": 4283,
+          "stdoutInode": 37391,
+          "status": -2147483646,
+          "parsedStatus": -2147483646,
+          "replyDecoded": false,
+          "exceptionCode": 0,
+          "serviceError": 0,
+          "startedEpochMs": 1793399527047,
+          "endedEpochMs": 1793399527047,
+          "classification": "FAILED_TRANSACTION_REQUIRES_AVC"
+        },
+        "audit_ids": [
+          "198"
+        ],
+        "avcs": [
+          "         1793399527.043  4283  4283 I auditd  : type=1400 audit(0.0:198): avc:  denied  { use } for  comm=\"boundarylab_pro\" path=\"socket:[37391]\" dev=\"sockfs\" ino=37391 scontext=u:r:boundarylab:s0 tcontext=u:r:adbd:s0 tclass=fd permissive=0",
+          "         1793399527.043  4283  4283 W boundarylab_pro: type=1400 audit(0.0:198): avc:  denied  { use } for  path=\"socket:[37391]\" dev=\"sockfs\" ino=37391 scontext=u:r:boundarylab:s0 tcontext=u:r:adbd:s0 tclass=fd permissive=0"
+        ]
+      },
+      "observed_at": "2026-10-30T22:32:07.666117+00:00"
+    },
+    {
+      "case": "raw_fd_rejected",
+      "passed": true,
+      "actual": {
+        "classification": "CORRELATED_SELINUX_FD_USE_DENIAL",
+        "observation": {
+          "pid": 4283,
+          "stdoutInode": 37391,
+          "status": -2147483646,
+          "parsedStatus": -2147483646,
+          "replyDecoded": false,
+          "exceptionCode": 0,
+          "serviceError": 0,
+          "startedEpochMs": 1793399527047,
+          "endedEpochMs": 1793399527047,
+          "classification": "FAILED_TRANSACTION_REQUIRES_AVC"
+        },
+        "audit_id": "198",
+        "avcs": [
+          "         1793399527.043  4283  4283 I auditd  : type=1400 audit(0.0:198): avc:  denied  { use } for  comm=\"boundarylab_pro\" path=\"socket:[37391]\" dev=\"sockfs\" ino=37391 scontext=u:r:boundarylab:s0 tcontext=u:r:adbd:s0 tclass=fd permissive=0",
+          "         1793399527.043  4283  4283 W boundarylab_pro: type=1400 audit(0.0:198): avc:  denied  { use } for  path=\"socket:[37391]\" dev=\"sockfs\" ino=37391 scontext=u:r:boundarylab:s0 tcontext=u:r:adbd:s0 tclass=fd permissive=0"
+        ],
+        "identities": [
+          "         1793399527.043  4283  4283 I auditd  : type=1300 audit(0.0:198): arch=c000003e syscall=16 success=yes exit=0 a0=5 a1=c0306201 a2=7ffe75b6d980 a3=7ffe75b6e110 items=0 ppid=4266 auid=4294967295 uid=2000 gid=2000 euid=2000 suid=2000 fsuid=2000 egid=2000 sgid=2000 fsgid=2000 tty=(none) ses=4294967295 comm=\"boundarylab_pro\" exe=\"/system_ext/bin/boundarylab_probe\" subj=u:r:boundarylab_probe:s0 key=(null)",
+          "         1793399527.043  4283  4283 W boundarylab_pro: type=1300 audit(0.0:198): arch=c000003e syscall=16 success=yes exit=0 a0=5 a1=c0306201 a2=7ffe75b6d980 a3=7ffe75b6e110 items=0 ppid=4266 auid=4294967295 uid=2000 gid=2000 euid=2000 suid=2000 fsuid=2000 egid=2000 sgid=2000 fsgid=2000 tty=(none) ses=4294967295 exe=\"/system_ext/bin/boundarylab_probe\" subj=u:r:boundarylab_probe:s0 key=(null)"
+        ],
+        "drivers": [
+          "         1793399527.104     0     0 W rust_binder: Transaction failed: BR_FAILED_REPLY { source: EACCES } my_pid:4283"
+        ]
+      },
+      "observed_at": "2026-10-30T22:32:07.666736+00:00"
+    },
+    {
+      "case": "probe_command:smoke",
+      "passed": true,
+      "actual": {
+        "argv": [
+          "adb",
+          "-s",
+          "0.0.0.0:6520",
+          "shell",
+          "/system_ext/bin/boundarylab_probe smoke"
+        ],
+        "started_at": "2026-10-30T22:32:06.295846+00:00",
+        "ended_at": "2026-10-30T22:32:07.617472+00:00",
+        "exit_code": 0,
+        "stdout": "{\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\n{\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\n{\"case\":\"authorized_capabilities\",\"passed\":true,\"detail\":\"43e59047-a99d-4696-95a9-2f492f0dd60b\"}\n{\"case\":\"major_2\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"open_session\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"admit_0\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"golden_0\",\"passed\":true,\"detail\":\"SUCCEEDED\"}\n{\"case\":\"isolation_two_live_sessions\",\"passed\":true,\"detail\":\"9c410790-146d-4116-bc81-af4d9c3260ca/114526a6-efbf-41a1-bed3-f4d9eabe8a39\"}\n{\"case\":\"foreign_session_read_denied_empty\",\"passed\":true,\"detail\":\"DENIED\"}\n{\"case\":\"foreign_session_cancel_denied_empty\",\"passed\":true,\"detail\":\"DENIED\"}\n{\"case\":\"isolation_owner_result_unchanged\",\"passed\":true,\"detail\":\"SUCCEEDED\"}\n{\"case\":\"isolation_other_session_closed\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"dedup_0\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"conflict_0\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"success_wins_cancel_0\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"admit_1\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"golden_1\",\"passed\":true,\"detail\":\"SUCCEEDED\"}\n{\"case\":\"dedup_1\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"conflict_1\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"success_wins_cancel_1\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"admit_65535\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"golden_65535\",\"passed\":true,\"detail\":\"SUCCEEDED\"}\n{\"case\":\"dedup_65535\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"conflict_65535\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"success_wins_cancel_65535\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"admit_65536\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"golden_65536\",\"passed\":true,\"detail\":\"SUCCEEDED\"}\n{\"case\":\"dedup_65536\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"conflict_65536\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"success_wins_cancel_65536\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"admit_65537\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"golden_65537\",\"passed\":true,\"detail\":\"SUCCEEDED\"}\n{\"case\":\"dedup_65537\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"conflict_65537\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"success_wins_cancel_65537\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"admit_134217728\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"golden_134217728\",\"passed\":true,\"detail\":\"SUCCEEDED\"}\n{\"case\":\"dedup_134217728\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"conflict_134217728\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"success_wins_cancel_134217728\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"over_cap_-1\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"over_cap_134217729\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"unsupported-file\",\"passed\":true,\"detail\":\"UNSUPPORTED\"}\n{\"case\":\"malformed_uuid\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"submit_major_2\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"raw_fd_parcel_written\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"raw_fd_identity_available\",\"passed\":true,\"detail\":\"\"}\n{\"rawFd\":{\"pid\":4283,\"stdoutInode\":37391,\"status\":-2147483646,\"parsedStatus\":-2147483646,\"replyDecoded\":false,\"exceptionCode\":0,\"serviceError\":0,\"startedEpochMs\":1793399527047,\"endedEpochMs\":1793399527047,\"classification\":\"FAILED_TRANSACTION_REQUIRES_AVC\"}}\n{\"case\":\"raw_metadata_bound\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"cancel_admitted\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"cancel_terminal_order\",\"passed\":true,\"detail\":\"CANCELLED\"}\n{\"case\":\"cancel_terminal_immutable\",\"passed\":true,\"detail\":\"CANCELLED\"}\n{\"case\":\"deadline_admitted\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"deadline\",\"passed\":true,\"detail\":\"DEADLINE_EXCEEDED\"}\n{\"case\":\"close_session\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"close_revokes\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_0\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_1\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_2\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_3\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_4\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_5\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_6\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_7\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_8\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_9\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_10\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_11\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_12\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_13\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_14\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_15\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_bound_16\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"session_cleanup_recovers\",\"passed\":true,\"detail\":\"\"}\n",
+        "stderr": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.667187+00:00"
+    },
+    {
+      "case": "probe:context_available",
+      "passed": true,
+      "actual": {
+        "case": "context_available",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.667641+00:00"
+    },
+    {
+      "case": "probe:authorized_domain",
+      "passed": true,
+      "actual": {
+        "case": "authorized_domain",
+        "passed": true,
+        "detail": "u:r:boundarylab_probe:s0"
+      },
+      "observed_at": "2026-10-30T22:32:07.668093+00:00"
+    },
+    {
+      "case": "probe:global_enforcing",
+      "passed": true,
+      "actual": {
+        "case": "global_enforcing",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.668536+00:00"
+    },
+    {
+      "case": "probe:service_discovery",
+      "passed": true,
+      "actual": {
+        "case": "service_discovery",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.669085+00:00"
+    },
+    {
+      "case": "probe:authorized_real_uid",
+      "passed": true,
+      "actual": {
+        "case": "authorized_real_uid",
+        "passed": true,
+        "detail": "2000"
+      },
+      "observed_at": "2026-10-30T22:32:07.669531+00:00"
+    },
+    {
+      "case": "probe:authorized_capabilities",
+      "passed": true,
+      "actual": {
+        "case": "authorized_capabilities",
+        "passed": true,
+        "detail": "43e59047-a99d-4696-95a9-2f492f0dd60b"
+      },
+      "observed_at": "2026-10-30T22:32:07.669996+00:00"
+    },
+    {
+      "case": "probe:major_2",
+      "passed": true,
+      "actual": {
+        "case": "major_2",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.670440+00:00"
+    },
+    {
+      "case": "probe:open_session",
+      "passed": true,
+      "actual": {
+        "case": "open_session",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.670939+00:00"
+    },
+    {
+      "case": "probe:admit_0",
+      "passed": true,
+      "actual": {
+        "case": "admit_0",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.671413+00:00"
+    },
+    {
+      "case": "probe:golden_0",
+      "passed": true,
+      "actual": {
+        "case": "golden_0",
+        "passed": true,
+        "detail": "SUCCEEDED"
+      },
+      "observed_at": "2026-10-30T22:32:07.671912+00:00"
+    },
+    {
+      "case": "probe:isolation_two_live_sessions",
+      "passed": true,
+      "actual": {
+        "case": "isolation_two_live_sessions",
+        "passed": true,
+        "detail": "9c410790-146d-4116-bc81-af4d9c3260ca/114526a6-efbf-41a1-bed3-f4d9eabe8a39"
+      },
+      "observed_at": "2026-10-30T22:32:07.672382+00:00"
+    },
+    {
+      "case": "probe:foreign_session_read_denied_empty",
+      "passed": true,
+      "actual": {
+        "case": "foreign_session_read_denied_empty",
+        "passed": true,
+        "detail": "DENIED"
+      },
+      "observed_at": "2026-10-30T22:32:07.672876+00:00"
+    },
+    {
+      "case": "probe:foreign_session_cancel_denied_empty",
+      "passed": true,
+      "actual": {
+        "case": "foreign_session_cancel_denied_empty",
+        "passed": true,
+        "detail": "DENIED"
+      },
+      "observed_at": "2026-10-30T22:32:07.673376+00:00"
+    },
+    {
+      "case": "probe:isolation_owner_result_unchanged",
+      "passed": true,
+      "actual": {
+        "case": "isolation_owner_result_unchanged",
+        "passed": true,
+        "detail": "SUCCEEDED"
+      },
+      "observed_at": "2026-10-30T22:32:07.673880+00:00"
+    },
+    {
+      "case": "probe:isolation_other_session_closed",
+      "passed": true,
+      "actual": {
+        "case": "isolation_other_session_closed",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.674368+00:00"
+    },
+    {
+      "case": "probe:dedup_0",
+      "passed": true,
+      "actual": {
+        "case": "dedup_0",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.674889+00:00"
+    },
+    {
+      "case": "probe:conflict_0",
+      "passed": true,
+      "actual": {
+        "case": "conflict_0",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.675399+00:00"
+    },
+    {
+      "case": "probe:success_wins_cancel_0",
+      "passed": true,
+      "actual": {
+        "case": "success_wins_cancel_0",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.675922+00:00"
+    },
+    {
+      "case": "probe:admit_1",
+      "passed": true,
+      "actual": {
+        "case": "admit_1",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.676548+00:00"
+    },
+    {
+      "case": "probe:golden_1",
+      "passed": true,
+      "actual": {
+        "case": "golden_1",
+        "passed": true,
+        "detail": "SUCCEEDED"
+      },
+      "observed_at": "2026-10-30T22:32:07.677146+00:00"
+    },
+    {
+      "case": "probe:dedup_1",
+      "passed": true,
+      "actual": {
+        "case": "dedup_1",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.677682+00:00"
+    },
+    {
+      "case": "probe:conflict_1",
+      "passed": true,
+      "actual": {
+        "case": "conflict_1",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.678220+00:00"
+    },
+    {
+      "case": "probe:success_wins_cancel_1",
+      "passed": true,
+      "actual": {
+        "case": "success_wins_cancel_1",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.678757+00:00"
+    },
+    {
+      "case": "probe:admit_65535",
+      "passed": true,
+      "actual": {
+        "case": "admit_65535",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.679307+00:00"
+    },
+    {
+      "case": "probe:golden_65535",
+      "passed": true,
+      "actual": {
+        "case": "golden_65535",
+        "passed": true,
+        "detail": "SUCCEEDED"
+      },
+      "observed_at": "2026-10-30T22:32:07.679861+00:00"
+    },
+    {
+      "case": "probe:dedup_65535",
+      "passed": true,
+      "actual": {
+        "case": "dedup_65535",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.680409+00:00"
+    },
+    {
+      "case": "probe:conflict_65535",
+      "passed": true,
+      "actual": {
+        "case": "conflict_65535",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.681062+00:00"
+    },
+    {
+      "case": "probe:success_wins_cancel_65535",
+      "passed": true,
+      "actual": {
+        "case": "success_wins_cancel_65535",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.681620+00:00"
+    },
+    {
+      "case": "probe:admit_65536",
+      "passed": true,
+      "actual": {
+        "case": "admit_65536",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.682186+00:00"
+    },
+    {
+      "case": "probe:golden_65536",
+      "passed": true,
+      "actual": {
+        "case": "golden_65536",
+        "passed": true,
+        "detail": "SUCCEEDED"
+      },
+      "observed_at": "2026-10-30T22:32:07.682741+00:00"
+    },
+    {
+      "case": "probe:dedup_65536",
+      "passed": true,
+      "actual": {
+        "case": "dedup_65536",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.683308+00:00"
+    },
+    {
+      "case": "probe:conflict_65536",
+      "passed": true,
+      "actual": {
+        "case": "conflict_65536",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.683887+00:00"
+    },
+    {
+      "case": "probe:success_wins_cancel_65536",
+      "passed": true,
+      "actual": {
+        "case": "success_wins_cancel_65536",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.684453+00:00"
+    },
+    {
+      "case": "probe:admit_65537",
+      "passed": true,
+      "actual": {
+        "case": "admit_65537",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.685050+00:00"
+    },
+    {
+      "case": "probe:golden_65537",
+      "passed": true,
+      "actual": {
+        "case": "golden_65537",
+        "passed": true,
+        "detail": "SUCCEEDED"
+      },
+      "observed_at": "2026-10-30T22:32:07.685627+00:00"
+    },
+    {
+      "case": "probe:dedup_65537",
+      "passed": true,
+      "actual": {
+        "case": "dedup_65537",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.686217+00:00"
+    },
+    {
+      "case": "probe:conflict_65537",
+      "passed": true,
+      "actual": {
+        "case": "conflict_65537",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.686822+00:00"
+    },
+    {
+      "case": "probe:success_wins_cancel_65537",
+      "passed": true,
+      "actual": {
+        "case": "success_wins_cancel_65537",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.687411+00:00"
+    },
+    {
+      "case": "probe:admit_134217728",
+      "passed": true,
+      "actual": {
+        "case": "admit_134217728",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.688016+00:00"
+    },
+    {
+      "case": "probe:golden_134217728",
+      "passed": true,
+      "actual": {
+        "case": "golden_134217728",
+        "passed": true,
+        "detail": "SUCCEEDED"
+      },
+      "observed_at": "2026-10-30T22:32:07.688631+00:00"
+    },
+    {
+      "case": "probe:dedup_134217728",
+      "passed": true,
+      "actual": {
+        "case": "dedup_134217728",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.689253+00:00"
+    },
+    {
+      "case": "probe:conflict_134217728",
+      "passed": true,
+      "actual": {
+        "case": "conflict_134217728",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.689907+00:00"
+    },
+    {
+      "case": "probe:success_wins_cancel_134217728",
+      "passed": true,
+      "actual": {
+        "case": "success_wins_cancel_134217728",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.690534+00:00"
+    },
+    {
+      "case": "probe:over_cap_-1",
+      "passed": true,
+      "actual": {
+        "case": "over_cap_-1",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.691172+00:00"
+    },
+    {
+      "case": "probe:over_cap_134217729",
+      "passed": true,
+      "actual": {
+        "case": "over_cap_134217729",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.691828+00:00"
+    },
+    {
+      "case": "probe:unsupported-file",
+      "passed": true,
+      "actual": {
+        "case": "unsupported-file",
+        "passed": true,
+        "detail": "UNSUPPORTED"
+      },
+      "observed_at": "2026-10-30T22:32:07.692463+00:00"
+    },
+    {
+      "case": "probe:malformed_uuid",
+      "passed": true,
+      "actual": {
+        "case": "malformed_uuid",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.693119+00:00"
+    },
+    {
+      "case": "probe:submit_major_2",
+      "passed": true,
+      "actual": {
+        "case": "submit_major_2",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.693768+00:00"
+    },
+    {
+      "case": "probe:raw_fd_parcel_written",
+      "passed": true,
+      "actual": {
+        "case": "raw_fd_parcel_written",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.694420+00:00"
+    },
+    {
+      "case": "probe:raw_fd_identity_available",
+      "passed": true,
+      "actual": {
+        "case": "raw_fd_identity_available",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.695717+00:00"
+    },
+    {
+      "case": "probe:raw_metadata_bound",
+      "passed": true,
+      "actual": {
+        "case": "raw_metadata_bound",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.696448+00:00"
+    },
+    {
+      "case": "probe:cancel_admitted",
+      "passed": true,
+      "actual": {
+        "case": "cancel_admitted",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.697165+00:00"
+    },
+    {
+      "case": "probe:cancel_terminal_order",
+      "passed": true,
+      "actual": {
+        "case": "cancel_terminal_order",
+        "passed": true,
+        "detail": "CANCELLED"
+      },
+      "observed_at": "2026-10-30T22:32:07.698045+00:00"
+    },
+    {
+      "case": "probe:cancel_terminal_immutable",
+      "passed": true,
+      "actual": {
+        "case": "cancel_terminal_immutable",
+        "passed": true,
+        "detail": "CANCELLED"
+      },
+      "observed_at": "2026-10-30T22:32:07.698824+00:00"
+    },
+    {
+      "case": "probe:deadline_admitted",
+      "passed": true,
+      "actual": {
+        "case": "deadline_admitted",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.699548+00:00"
+    },
+    {
+      "case": "probe:deadline",
+      "passed": true,
+      "actual": {
+        "case": "deadline",
+        "passed": true,
+        "detail": "DEADLINE_EXCEEDED"
+      },
+      "observed_at": "2026-10-30T22:32:07.700275+00:00"
+    },
+    {
+      "case": "probe:close_session",
+      "passed": true,
+      "actual": {
+        "case": "close_session",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.700996+00:00"
+    },
+    {
+      "case": "probe:close_revokes",
+      "passed": true,
+      "actual": {
+        "case": "close_revokes",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.701720+00:00"
+    },
+    {
+      "case": "probe:session_0",
+      "passed": true,
+      "actual": {
+        "case": "session_0",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.702459+00:00"
+    },
+    {
+      "case": "probe:session_1",
+      "passed": true,
+      "actual": {
+        "case": "session_1",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.703181+00:00"
+    },
+    {
+      "case": "probe:session_2",
+      "passed": true,
+      "actual": {
+        "case": "session_2",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.703970+00:00"
+    },
+    {
+      "case": "probe:session_3",
+      "passed": true,
+      "actual": {
+        "case": "session_3",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.704724+00:00"
+    },
+    {
+      "case": "probe:session_4",
+      "passed": true,
+      "actual": {
+        "case": "session_4",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.705474+00:00"
+    },
+    {
+      "case": "probe:session_5",
+      "passed": true,
+      "actual": {
+        "case": "session_5",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.706219+00:00"
+    },
+    {
+      "case": "probe:session_6",
+      "passed": true,
+      "actual": {
+        "case": "session_6",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.706970+00:00"
+    },
+    {
+      "case": "probe:session_7",
+      "passed": true,
+      "actual": {
+        "case": "session_7",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.707716+00:00"
+    },
+    {
+      "case": "probe:session_8",
+      "passed": true,
+      "actual": {
+        "case": "session_8",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.708494+00:00"
+    },
+    {
+      "case": "probe:session_9",
+      "passed": true,
+      "actual": {
+        "case": "session_9",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.709260+00:00"
+    },
+    {
+      "case": "probe:session_10",
+      "passed": true,
+      "actual": {
+        "case": "session_10",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.710033+00:00"
+    },
+    {
+      "case": "probe:session_11",
+      "passed": true,
+      "actual": {
+        "case": "session_11",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.710788+00:00"
+    },
+    {
+      "case": "probe:session_12",
+      "passed": true,
+      "actual": {
+        "case": "session_12",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.711558+00:00"
+    },
+    {
+      "case": "probe:session_13",
+      "passed": true,
+      "actual": {
+        "case": "session_13",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.712331+00:00"
+    },
+    {
+      "case": "probe:session_14",
+      "passed": true,
+      "actual": {
+        "case": "session_14",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.713227+00:00"
+    },
+    {
+      "case": "probe:session_15",
+      "passed": true,
+      "actual": {
+        "case": "session_15",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.714047+00:00"
+    },
+    {
+      "case": "probe:session_bound_16",
+      "passed": true,
+      "actual": {
+        "case": "session_bound_16",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.714850+00:00"
+    },
+    {
+      "case": "probe:session_cleanup_recovers",
+      "passed": true,
+      "actual": {
+        "case": "session_cleanup_recovers",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.715660+00:00"
+    },
+    {
+      "case": "probe_command:resources",
+      "passed": true,
+      "actual": {
+        "argv": [
+          "adb",
+          "-s",
+          "0.0.0.0:6520",
+          "shell",
+          "/system_ext/bin/boundarylab_probe resources"
+        ],
+        "started_at": "2026-10-30T22:32:07.716492+00:00",
+        "ended_at": "2026-10-30T22:32:07.762419+00:00",
+        "exit_code": 0,
+        "stdout": "{\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\n{\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\n{\"case\":\"authorized_capabilities\",\"passed\":true,\"detail\":\"43e59047-a99d-4696-95a9-2f492f0dd60b\"}\n{\"resources\":{\"epoch\":\"43e59047-a99d-4696-95a9-2f492f0dd60b\",\"servicePid\":921,\"liveSessions\":0,\"queuedJobs\":0,\"runningJobs\":0,\"retainedEntries\":0,\"retainedBytes\":0}}\n",
+        "stderr": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.762719+00:00"
+    },
+    {
+      "case": "probe:context_available",
+      "passed": true,
+      "actual": {
+        "case": "context_available",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.763713+00:00"
+    },
+    {
+      "case": "probe:authorized_domain",
+      "passed": true,
+      "actual": {
+        "case": "authorized_domain",
+        "passed": true,
+        "detail": "u:r:boundarylab_probe:s0"
+      },
+      "observed_at": "2026-10-30T22:32:07.764586+00:00"
+    },
+    {
+      "case": "probe:global_enforcing",
+      "passed": true,
+      "actual": {
+        "case": "global_enforcing",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.765467+00:00"
+    },
+    {
+      "case": "probe:service_discovery",
+      "passed": true,
+      "actual": {
+        "case": "service_discovery",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.766350+00:00"
+    },
+    {
+      "case": "probe:authorized_real_uid",
+      "passed": true,
+      "actual": {
+        "case": "authorized_real_uid",
+        "passed": true,
+        "detail": "2000"
+      },
+      "observed_at": "2026-10-30T22:32:07.767237+00:00"
+    },
+    {
+      "case": "probe:authorized_capabilities",
+      "passed": true,
+      "actual": {
+        "case": "authorized_capabilities",
+        "passed": true,
+        "detail": "43e59047-a99d-4696-95a9-2f492f0dd60b"
+      },
+      "observed_at": "2026-10-30T22:32:07.768095+00:00"
+    },
+    {
+      "case": "after_smoke:resource_record",
+      "passed": true,
+      "actual": [
+        {
+          "epoch": "43e59047-a99d-4696-95a9-2f492f0dd60b",
+          "servicePid": 921,
+          "liveSessions": 0,
+          "queuedJobs": 0,
+          "runningJobs": 0,
+          "retainedEntries": 0,
+          "retainedBytes": 0
+        }
+      ],
+      "observed_at": "2026-10-30T22:32:07.768949+00:00"
+    },
+    {
+      "case": "after_smoke:resource_shape",
+      "passed": true,
+      "actual": {
+        "epoch": "43e59047-a99d-4696-95a9-2f492f0dd60b",
+        "servicePid": 921,
+        "liveSessions": 0,
+        "queuedJobs": 0,
+        "runningJobs": 0,
+        "retainedEntries": 0,
+        "retainedBytes": 0
+      },
+      "observed_at": "2026-10-30T22:32:07.769803+00:00"
+    },
+    {
+      "case": "after_smoke:quiescent",
+      "passed": true,
+      "actual": [
+        {
+          "observed_at": "2026-10-30T22:32:07.770671+00:00",
+          "resources": {
+            "epoch": "43e59047-a99d-4696-95a9-2f492f0dd60b",
+            "servicePid": 921,
+            "liveSessions": 0,
+            "queuedJobs": 0,
+            "runningJobs": 0,
+            "retainedEntries": 0,
+            "retainedBytes": 0
+          }
+        }
+      ],
+      "observed_at": "2026-10-30T22:32:07.770680+00:00"
+    },
+    {
+      "case": "probe_command:leak",
+      "passed": true,
+      "actual": {
+        "argv": [
+          "adb",
+          "-s",
+          "0.0.0.0:6520",
+          "shell",
+          "/system_ext/bin/boundarylab_probe leak"
+        ],
+        "started_at": "2026-10-30T22:32:07.771640+00:00",
+        "ended_at": "2026-10-30T22:32:07.817329+00:00",
+        "exit_code": 0,
+        "stdout": "{\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\n{\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\n{\"case\":\"authorized_capabilities\",\"passed\":true,\"detail\":\"43e59047-a99d-4696-95a9-2f492f0dd60b\"}\n{\"case\":\"major_2\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"open_session\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"handle_admitted\",\"passed\":true,\"detail\":\"\"}\n{\"epoch\":\"43e59047-a99d-4696-95a9-2f492f0dd60b\",\"sessionId\":\"84f9d227-10bf-40b8-8579-7a0861e70981\",\"jobId\":\"be554211-96c7-4a3a-a998-e4f0d30a270a\"}\n",
+        "stderr": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.817599+00:00"
+    },
+    {
+      "case": "probe:context_available",
+      "passed": true,
+      "actual": {
+        "case": "context_available",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.818643+00:00"
+    },
+    {
+      "case": "probe:authorized_domain",
+      "passed": true,
+      "actual": {
+        "case": "authorized_domain",
+        "passed": true,
+        "detail": "u:r:boundarylab_probe:s0"
+      },
+      "observed_at": "2026-10-30T22:32:07.819631+00:00"
+    },
+    {
+      "case": "probe:global_enforcing",
+      "passed": true,
+      "actual": {
+        "case": "global_enforcing",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.820628+00:00"
+    },
+    {
+      "case": "probe:service_discovery",
+      "passed": true,
+      "actual": {
+        "case": "service_discovery",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.821598+00:00"
+    },
+    {
+      "case": "probe:authorized_real_uid",
+      "passed": true,
+      "actual": {
+        "case": "authorized_real_uid",
+        "passed": true,
+        "detail": "2000"
+      },
+      "observed_at": "2026-10-30T22:32:07.822543+00:00"
+    },
+    {
+      "case": "probe:authorized_capabilities",
+      "passed": true,
+      "actual": {
+        "case": "authorized_capabilities",
+        "passed": true,
+        "detail": "43e59047-a99d-4696-95a9-2f492f0dd60b"
+      },
+      "observed_at": "2026-10-30T22:32:07.823605+00:00"
+    },
+    {
+      "case": "probe:major_2",
+      "passed": true,
+      "actual": {
+        "case": "major_2",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.824585+00:00"
+    },
+    {
+      "case": "probe:open_session",
+      "passed": true,
+      "actual": {
+        "case": "open_session",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.825552+00:00"
+    },
+    {
+      "case": "probe:handle_admitted",
+      "passed": true,
+      "actual": {
+        "case": "handle_admitted",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.826519+00:00"
+    },
+    {
+      "case": "probe_command:resources",
+      "passed": true,
+      "actual": {
+        "argv": [
+          "adb",
+          "-s",
+          "0.0.0.0:6520",
+          "shell",
+          "/system_ext/bin/boundarylab_probe resources"
+        ],
+        "started_at": "2026-10-30T22:32:07.827510+00:00",
+        "ended_at": "2026-10-30T22:32:07.873336+00:00",
+        "exit_code": 0,
+        "stdout": "{\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\n{\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\n{\"case\":\"authorized_capabilities\",\"passed\":true,\"detail\":\"43e59047-a99d-4696-95a9-2f492f0dd60b\"}\n{\"resources\":{\"epoch\":\"43e59047-a99d-4696-95a9-2f492f0dd60b\",\"servicePid\":921,\"liveSessions\":0,\"queuedJobs\":0,\"runningJobs\":0,\"retainedEntries\":0,\"retainedBytes\":0}}\n",
+        "stderr": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.873648+00:00"
+    },
+    {
+      "case": "probe:context_available",
+      "passed": true,
+      "actual": {
+        "case": "context_available",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.874789+00:00"
+    },
+    {
+      "case": "probe:authorized_domain",
+      "passed": true,
+      "actual": {
+        "case": "authorized_domain",
+        "passed": true,
+        "detail": "u:r:boundarylab_probe:s0"
+      },
+      "observed_at": "2026-10-30T22:32:07.875894+00:00"
+    },
+    {
+      "case": "probe:global_enforcing",
+      "passed": true,
+      "actual": {
+        "case": "global_enforcing",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.876955+00:00"
+    },
+    {
+      "case": "probe:service_discovery",
+      "passed": true,
+      "actual": {
+        "case": "service_discovery",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.877994+00:00"
+    },
+    {
+      "case": "probe:authorized_real_uid",
+      "passed": true,
+      "actual": {
+        "case": "authorized_real_uid",
+        "passed": true,
+        "detail": "2000"
+      },
+      "observed_at": "2026-10-30T22:32:07.879026+00:00"
+    },
+    {
+      "case": "probe:authorized_capabilities",
+      "passed": true,
+      "actual": {
+        "case": "authorized_capabilities",
+        "passed": true,
+        "detail": "43e59047-a99d-4696-95a9-2f492f0dd60b"
+      },
+      "observed_at": "2026-10-30T22:32:07.880180+00:00"
+    },
+    {
+      "case": "after_client_death:resource_record",
+      "passed": true,
+      "actual": [
+        {
+          "epoch": "43e59047-a99d-4696-95a9-2f492f0dd60b",
+          "servicePid": 921,
+          "liveSessions": 0,
+          "queuedJobs": 0,
+          "runningJobs": 0,
+          "retainedEntries": 0,
+          "retainedBytes": 0
+        }
+      ],
+      "observed_at": "2026-10-30T22:32:07.881272+00:00"
+    },
+    {
+      "case": "after_client_death:resource_shape",
+      "passed": true,
+      "actual": {
+        "epoch": "43e59047-a99d-4696-95a9-2f492f0dd60b",
+        "servicePid": 921,
+        "liveSessions": 0,
+        "queuedJobs": 0,
+        "runningJobs": 0,
+        "retainedEntries": 0,
+        "retainedBytes": 0
+      },
+      "observed_at": "2026-10-30T22:32:07.882343+00:00"
+    },
+    {
+      "case": "after_client_death:quiescent",
+      "passed": true,
+      "actual": [
+        {
+          "observed_at": "2026-10-30T22:32:07.883417+00:00",
+          "resources": {
+            "epoch": "43e59047-a99d-4696-95a9-2f492f0dd60b",
+            "servicePid": 921,
+            "liveSessions": 0,
+            "queuedJobs": 0,
+            "runningJobs": 0,
+            "retainedEntries": 0,
+            "retainedBytes": 0
+          }
+        }
+      ],
+      "observed_at": "2026-10-30T22:32:07.883427+00:00"
+    },
+    {
+      "case": "probe_command:inspect 43e59047-a99d-4696-95a9-2f492f0dd60b 84f9d227-10bf-40b8-8579-7a0861e70981 be554211-96c7-4a3a-a998-e4f0d30a270a EXPIRED_OR_UNKNOWN",
+      "passed": true,
+      "actual": {
+        "argv": [
+          "adb",
+          "-s",
+          "0.0.0.0:6520",
+          "shell",
+          "/system_ext/bin/boundarylab_probe inspect 43e59047-a99d-4696-95a9-2f492f0dd60b 84f9d227-10bf-40b8-8579-7a0861e70981 be554211-96c7-4a3a-a998-e4f0d30a270a EXPIRED_OR_UNKNOWN"
+        ],
+        "started_at": "2026-10-30T22:32:07.884527+00:00",
+        "ended_at": "2026-10-30T22:32:07.931437+00:00",
+        "exit_code": 0,
+        "stdout": "{\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\n{\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\n{\"case\":\"inspect\",\"passed\":true,\"detail\":\"EXPIRED_OR_UNKNOWN\"}\n",
+        "stderr": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.931767+00:00"
+    },
+    {
+      "case": "probe:context_available",
+      "passed": true,
+      "actual": {
+        "case": "context_available",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.933056+00:00"
+    },
+    {
+      "case": "probe:authorized_domain",
+      "passed": true,
+      "actual": {
+        "case": "authorized_domain",
+        "passed": true,
+        "detail": "u:r:boundarylab_probe:s0"
+      },
+      "observed_at": "2026-10-30T22:32:07.934222+00:00"
+    },
+    {
+      "case": "probe:global_enforcing",
+      "passed": true,
+      "actual": {
+        "case": "global_enforcing",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.935378+00:00"
+    },
+    {
+      "case": "probe:service_discovery",
+      "passed": true,
+      "actual": {
+        "case": "service_discovery",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.936492+00:00"
+    },
+    {
+      "case": "probe:authorized_real_uid",
+      "passed": true,
+      "actual": {
+        "case": "authorized_real_uid",
+        "passed": true,
+        "detail": "2000"
+      },
+      "observed_at": "2026-10-30T22:32:07.937603+00:00"
+    },
+    {
+      "case": "probe:inspect",
+      "passed": true,
+      "actual": {
+        "case": "inspect",
+        "passed": true,
+        "detail": "EXPIRED_OR_UNKNOWN"
+      },
+      "observed_at": "2026-10-30T22:32:07.938711+00:00"
+    },
+    {
+      "case": "probe_command:resources",
+      "passed": true,
+      "actual": {
+        "argv": [
+          "adb",
+          "-s",
+          "0.0.0.0:6520",
+          "shell",
+          "/system_ext/bin/boundarylab_probe resources"
+        ],
+        "started_at": "2026-10-30T22:32:07.939922+00:00",
+        "ended_at": "2026-10-30T22:32:07.986398+00:00",
+        "exit_code": 0,
+        "stdout": "{\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\n{\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\n{\"case\":\"authorized_capabilities\",\"passed\":true,\"detail\":\"43e59047-a99d-4696-95a9-2f492f0dd60b\"}\n{\"resources\":{\"epoch\":\"43e59047-a99d-4696-95a9-2f492f0dd60b\",\"servicePid\":921,\"liveSessions\":0,\"queuedJobs\":0,\"runningJobs\":0,\"retainedEntries\":0,\"retainedBytes\":0}}\n",
+        "stderr": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.986752+00:00"
+    },
+    {
+      "case": "probe:context_available",
+      "passed": true,
+      "actual": {
+        "case": "context_available",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.988087+00:00"
+    },
+    {
+      "case": "probe:authorized_domain",
+      "passed": true,
+      "actual": {
+        "case": "authorized_domain",
+        "passed": true,
+        "detail": "u:r:boundarylab_probe:s0"
+      },
+      "observed_at": "2026-10-30T22:32:07.989280+00:00"
+    },
+    {
+      "case": "probe:global_enforcing",
+      "passed": true,
+      "actual": {
+        "case": "global_enforcing",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.990427+00:00"
+    },
+    {
+      "case": "probe:service_discovery",
+      "passed": true,
+      "actual": {
+        "case": "service_discovery",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:07.991584+00:00"
+    },
+    {
+      "case": "probe:authorized_real_uid",
+      "passed": true,
+      "actual": {
+        "case": "authorized_real_uid",
+        "passed": true,
+        "detail": "2000"
+      },
+      "observed_at": "2026-10-30T22:32:07.992722+00:00"
+    },
+    {
+      "case": "probe:authorized_capabilities",
+      "passed": true,
+      "actual": {
+        "case": "authorized_capabilities",
+        "passed": true,
+        "detail": "43e59047-a99d-4696-95a9-2f492f0dd60b"
+      },
+      "observed_at": "2026-10-30T22:32:07.993874+00:00"
+    },
+    {
+      "case": "cycle_after:resource_record",
+      "passed": true,
+      "actual": [
+        {
+          "epoch": "43e59047-a99d-4696-95a9-2f492f0dd60b",
+          "servicePid": 921,
+          "liveSessions": 0,
+          "queuedJobs": 0,
+          "runningJobs": 0,
+          "retainedEntries": 0,
+          "retainedBytes": 0
+        }
+      ],
+      "observed_at": "2026-10-30T22:32:07.995036+00:00"
+    },
+    {
+      "case": "cycle_after:resource_shape",
+      "passed": true,
+      "actual": {
+        "epoch": "43e59047-a99d-4696-95a9-2f492f0dd60b",
+        "servicePid": 921,
+        "liveSessions": 0,
+        "queuedJobs": 0,
+        "runningJobs": 0,
+        "retainedEntries": 0,
+        "retainedBytes": 0
+      },
+      "observed_at": "2026-10-30T22:32:07.996214+00:00"
+    },
+    {
+      "case": "cycle_after:quiescent",
+      "passed": true,
+      "actual": [
+        {
+          "observed_at": "2026-10-30T22:32:07.997376+00:00",
+          "resources": {
+            "epoch": "43e59047-a99d-4696-95a9-2f492f0dd60b",
+            "servicePid": 921,
+            "liveSessions": 0,
+            "queuedJobs": 0,
+            "runningJobs": 0,
+            "retainedEntries": 0,
+            "retainedBytes": 0
+          }
+        }
+      ],
+      "observed_at": "2026-10-30T22:32:07.997386+00:00"
+    },
+    {
+      "case": "adb_uid_root_for_lifecycle_only",
+      "passed": true,
+      "actual": "uid=0(root) gid=0(root) groups=0(root),1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),1078(ext_data_rw),1079(ext_obb_rw),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats),3009(readproc),3011(uhid),3012(readtracefs) context=u:r:su:s0",
+      "observed_at": "2026-10-30T22:32:13.306683+00:00"
+    },
+    {
+      "case": "cycle_after:pid_matches_metrics",
+      "passed": true,
+      "actual": {
+        "pid": "921",
+        "resources": {
+          "epoch": "43e59047-a99d-4696-95a9-2f492f0dd60b",
+          "servicePid": 921,
+          "liveSessions": 0,
+          "queuedJobs": 0,
+          "runningJobs": 0,
+          "retainedEntries": 0,
+          "retainedBytes": 0
+        }
+      },
+      "observed_at": "2026-10-30T22:32:13.354728+00:00"
+    },
+    {
+      "case": "cycle_after:fd_listing",
+      "passed": true,
+      "actual": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "observed_at": "2026-10-30T22:32:13.448711+00:00"
+    },
+    {
+      "case": "cycle_after:generation_stable",
+      "passed": true,
+      "actual": {
+        "pid": "921",
+        "start_ticks": 1814
+      },
+      "observed_at": "2026-10-30T22:32:13.587600+00:00"
+    },
+    {
+      "case": "cycle_after:snapshot",
+      "passed": true,
+      "actual": {
+        "observed_at": "2026-10-30T22:32:13.589045+00:00",
+        "pid": 921,
+        "start_ticks": 1814,
+        "resources": {
+          "epoch": "43e59047-a99d-4696-95a9-2f492f0dd60b",
+          "servicePid": 921,
+          "liveSessions": 0,
+          "queuedJobs": 0,
+          "runningJobs": 0,
+          "retainedEntries": 0,
+          "retainedBytes": 0
+        },
+        "fd_count": 7,
+        "fd_numbers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "fd_listing": "total 0\nlrwx------ 1 nobody nobody 64 2026-10-30 22:32 0 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:32 1 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:32 2 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:31 3 -> /dev/binderfs/binder\nl-wx------ 1 nobody nobody 64 2026-10-30 22:31 4 -> /sys/kernel/tracing/trace_marker\nlrwx------ 1 nobody nobody 64 2026-10-30 22:31 5 -> socket:[11017]\nl-wx------ 1 nobody nobody 64 2026-10-30 22:31 6 -> /dev/pmsg0"
+      },
+      "observed_at": "2026-10-30T22:32:13.589063+00:00"
+    },
+    {
+      "case": "adb_uid_shell",
+      "passed": true,
+      "actual": "uid=2000(shell) gid=2000(shell) groups=2000(shell),1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),1078(ext_data_rw),1079(ext_obb_rw),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats),3009(readproc),3011(uhid),3012(readtracefs) context=u:r:shell:s0",
+      "observed_at": "2026-10-30T22:32:13.990700+00:00"
+    },
+    {
+      "case": "resource_cycle_same_generation",
+      "passed": true,
+      "actual": {
+        "before": {
+          "observed_at": "2026-10-30T22:32:05.847070+00:00",
+          "pid": 921,
+          "start_ticks": 1814,
+          "resources": {
+            "epoch": "43e59047-a99d-4696-95a9-2f492f0dd60b",
+            "servicePid": 921,
+            "liveSessions": 0,
+            "queuedJobs": 0,
+            "runningJobs": 0,
+            "retainedEntries": 0,
+            "retainedBytes": 0
+          },
+          "fd_count": 7,
+          "fd_numbers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "fd_listing": "total 0\nlrwx------ 1 nobody nobody 64 2026-10-30 22:32 0 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:32 1 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:32 2 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:31 3 -> /dev/binderfs/binder\nl-wx------ 1 nobody nobody 64 2026-10-30 22:31 4 -> /sys/kernel/tracing/trace_marker\nlrwx------ 1 nobody nobody 64 2026-10-30 22:31 5 -> socket:[11017]\nl-wx------ 1 nobody nobody 64 2026-10-30 22:31 6 -> /dev/pmsg0"
+        },
+        "after": {
+          "observed_at": "2026-10-30T22:32:13.589045+00:00",
+          "pid": 921,
+          "start_ticks": 1814,
+          "resources": {
+            "epoch": "43e59047-a99d-4696-95a9-2f492f0dd60b",
+            "servicePid": 921,
+            "liveSessions": 0,
+            "queuedJobs": 0,
+            "runningJobs": 0,
+            "retainedEntries": 0,
+            "retainedBytes": 0
+          },
+          "fd_count": 7,
+          "fd_numbers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "fd_listing": "total 0\nlrwx------ 1 nobody nobody 64 2026-10-30 22:32 0 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:32 1 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:32 2 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:31 3 -> /dev/binderfs/binder\nl-wx------ 1 nobody nobody 64 2026-10-30 22:31 4 -> /sys/kernel/tracing/trace_marker\nlrwx------ 1 nobody nobody 64 2026-10-30 22:31 5 -> socket:[11017]\nl-wx------ 1 nobody nobody 64 2026-10-30 22:31 6 -> /dev/pmsg0"
+        }
+      },
+      "observed_at": "2026-10-30T22:32:13.992342+00:00"
+    },
+    {
+      "case": "resource_cycle_returns_to_baseline",
+      "passed": true,
+      "actual": {
+        "fd_delta": 0,
+        "before": {
+          "observed_at": "2026-10-30T22:32:05.847070+00:00",
+          "pid": 921,
+          "start_ticks": 1814,
+          "resources": {
+            "epoch": "43e59047-a99d-4696-95a9-2f492f0dd60b",
+            "servicePid": 921,
+            "liveSessions": 0,
+            "queuedJobs": 0,
+            "runningJobs": 0,
+            "retainedEntries": 0,
+            "retainedBytes": 0
+          },
+          "fd_count": 7,
+          "fd_numbers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "fd_listing": "total 0\nlrwx------ 1 nobody nobody 64 2026-10-30 22:32 0 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:32 1 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:32 2 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:31 3 -> /dev/binderfs/binder\nl-wx------ 1 nobody nobody 64 2026-10-30 22:31 4 -> /sys/kernel/tracing/trace_marker\nlrwx------ 1 nobody nobody 64 2026-10-30 22:31 5 -> socket:[11017]\nl-wx------ 1 nobody nobody 64 2026-10-30 22:31 6 -> /dev/pmsg0"
+        },
+        "after": {
+          "observed_at": "2026-10-30T22:32:13.589045+00:00",
+          "pid": 921,
+          "start_ticks": 1814,
+          "resources": {
+            "epoch": "43e59047-a99d-4696-95a9-2f492f0dd60b",
+            "servicePid": 921,
+            "liveSessions": 0,
+            "queuedJobs": 0,
+            "runningJobs": 0,
+            "retainedEntries": 0,
+            "retainedBytes": 0
+          },
+          "fd_count": 7,
+          "fd_numbers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "fd_listing": "total 0\nlrwx------ 1 nobody nobody 64 2026-10-30 22:32 0 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:32 1 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:32 2 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:31 3 -> /dev/binderfs/binder\nl-wx------ 1 nobody nobody 64 2026-10-30 22:31 4 -> /sys/kernel/tracing/trace_marker\nlrwx------ 1 nobody nobody 64 2026-10-30 22:31 5 -> socket:[11017]\nl-wx------ 1 nobody nobody 64 2026-10-30 22:31 6 -> /dev/pmsg0"
+        }
+      },
+      "observed_at": "2026-10-30T22:32:13.993731+00:00"
+    },
+    {
+      "case": "probe_command:snapshot",
+      "passed": true,
+      "actual": {
+        "argv": [
+          "adb",
+          "-s",
+          "0.0.0.0:6520",
+          "shell",
+          "/system_ext/bin/boundarylab_probe snapshot"
+        ],
+        "started_at": "2026-10-30T22:32:13.995184+00:00",
+        "ended_at": "2026-10-30T22:32:14.041401+00:00",
+        "exit_code": 0,
+        "stdout": "{\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}\n{\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}\n{\"case\":\"authorized_capabilities\",\"passed\":true,\"detail\":\"43e59047-a99d-4696-95a9-2f492f0dd60b\"}\n{\"case\":\"major_2\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"open_session\",\"passed\":true,\"detail\":\"\"}\n{\"case\":\"handle_admitted\",\"passed\":true,\"detail\":\"\"}\n{\"epoch\":\"43e59047-a99d-4696-95a9-2f492f0dd60b\",\"sessionId\":\"cc2663e0-a98a-4665-bda4-e18cd29c2cb4\",\"jobId\":\"d360694f-e7dd-4896-b47f-ed98dbbbff95\"}\n",
+        "stderr": ""
+      },
+      "observed_at": "2026-10-30T22:32:14.041770+00:00"
+    },
+    {
+      "case": "probe:context_available",
+      "passed": true,
+      "actual": {
+        "case": "context_available",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:14.043449+00:00"
+    },
+    {
+      "case": "probe:authorized_domain",
+      "passed": true,
+      "actual": {
+        "case": "authorized_domain",
+        "passed": true,
+        "detail": "u:r:boundarylab_probe:s0"
+      },
+      "observed_at": "2026-10-30T22:32:14.044888+00:00"
+    },
+    {
+      "case": "probe:global_enforcing",
+      "passed": true,
+      "actual": {
+        "case": "global_enforcing",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:14.046227+00:00"
+    },
+    {
+      "case": "probe:service_discovery",
+      "passed": true,
+      "actual": {
+        "case": "service_discovery",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:14.047573+00:00"
+    },
+    {
+      "case": "probe:authorized_real_uid",
+      "passed": true,
+      "actual": {
+        "case": "authorized_real_uid",
+        "passed": true,
+        "detail": "2000"
+      },
+      "observed_at": "2026-10-30T22:32:14.048934+00:00"
+    },
+    {
+      "case": "probe:authorized_capabilities",
+      "passed": true,
+      "actual": {
+        "case": "authorized_capabilities",
+        "passed": true,
+        "detail": "43e59047-a99d-4696-95a9-2f492f0dd60b"
+      },
+      "observed_at": "2026-10-30T22:32:14.050271+00:00"
+    },
+    {
+      "case": "probe:major_2",
+      "passed": true,
+      "actual": {
+        "case": "major_2",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:14.051621+00:00"
+    },
+    {
+      "case": "probe:open_session",
+      "passed": true,
+      "actual": {
+        "case": "open_session",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:14.052981+00:00"
+    },
+    {
+      "case": "probe:handle_admitted",
+      "passed": true,
+      "actual": {
+        "case": "handle_admitted",
+        "passed": true,
+        "detail": ""
+      },
+      "observed_at": "2026-10-30T22:32:14.054511+00:00"
+    },
+    {
+      "case": "adb_uid_root_for_lifecycle_only",
+      "passed": true,
+      "actual": "uid=0(root) gid=0(root) groups=0(root),1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),1078(ext_data_rw),1079(ext_obb_rw),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats),3009(readproc),3011(uhid),3012(readtracefs) context=u:r:su:s0",
+      "observed_at": "2026-10-30T22:32:14.455689+00:00"
+    },
+    {
+      "case": "denied_real_uid",
+      "passed": false,
+      "actual": "--------- beginning of main\nI/BoundaryLabProbe( 4382): {\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4382): {\"case\":\"denied_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_denied:s0\"}\nI/BoundaryLabProbe( 4382): {\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4382): {\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4382): {\"case\":\"denied_real_uid\",\"passed\":false,\"detail\":\"9999\"}",
+      "observed_at": "2026-10-30T22:32:15.596692+00:00"
+    }
+  ]
+}

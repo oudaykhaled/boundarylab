@@ -1,0 +1,12 @@
+diff --git a/aosp/sepolicy/private/boundarylab.te b/aosp/sepolicy/private/boundarylab.te
+index f86023b..64dab0d 100644
+--- a/aosp/sepolicy/private/boundarylab.te
++++ b/aosp/sepolicy/private/boundarylab.te
+@@ -31,3 +31,7 @@ binder_use(boundarylab_denied)
+ binder_call(boundarylab_denied, boundarylab)
+ allow boundarylab_denied boundarylab_service:service_manager find;
+ write_logd(boundarylab_denied)
++
++# Both probes call security_getenforce(), which opens and reads selinuxfs/enforce.
++# Base domain policy already grants directory search and metadata access.
++allow { boundarylab_probe boundarylab_denied } selinuxfs:file { open read };

@@ -1,0 +1,2 @@
+[   46.336193] rust_binder: Transaction failed: BR_FAILED_REPLY { source: EACCES } my_pid:4283
+[   46.336194] type=1400 audit(1793399527.043:198): avc:  denied  { use } for  comm="boundarylab_pro" path="socket:[37391]" dev="sockfs" ino=37391 scontext=u:r:boundarylab:s0 tcontext=u:r:adbd:s0 tclass=fd permissive=0

@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "sysctl",
+    "-n",
+    "kernel.apparmor_restrict_unprivileged_userns"
+  ],
+  "started_utc": "2026-10-30T22:39:21.403579+00:00",
+  "ended_utc": "2026-10-30T22:39:21.405177+00:00",
+  "exit_code": 0,
+  "timed_out": false,
+  "error": null,
+  "duration_seconds": 0.0015994629975466523
+}

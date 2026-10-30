@@ -1,0 +1,58 @@
+{
+  "kind": "byte_preserved_failed_unchanged_source_build",
+  "build_passed": false,
+  "original_archive": {
+    "archive": "baseline-nsjail-failure.tar.gz",
+    "bytes": 2341036,
+    "sha256": "a889e5ccfd1c0ac55dcb561a2e491db07592cf9e9005f6887f4de926cdb91cb6",
+    "file_count": 4
+  },
+  "all_original_file_hashes_verified_locally": true,
+  "files": [
+    {
+      "path": "build-result.json",
+      "bytes": 608,
+      "sha256": "5c4c24d9d60642e3e41f8a80c2379a42f9d615faf1e4df528cd3ed1e63302f90",
+      "uncompressed_original": {
+        "path": "build-result.json",
+        "bytes": 608,
+        "sha256": "5c4c24d9d60642e3e41f8a80c2379a42f9d615faf1e4df528cd3ed1e63302f90"
+      },
+      "transformation": "none; original bytes"
+    },
+    {
+      "path": "build.log.gz",
+      "bytes": 2298512,
+      "sha256": "ab53cf320aec9b306a48dd4859f150e08465d8e2ec54ac35c3e001ecaf063b45",
+      "uncompressed_original": {
+        "path": "build.log",
+        "bytes": 25259499,
+        "sha256": "e110eb55d333981a1227b80122f10c50f2bcf1dad3be4c324b9835a7d197359e"
+      },
+      "transformation": "lossless gzip, mtime0"
+    },
+    {
+      "path": "manifest.xml",
+      "bytes": 233871,
+      "sha256": "4e8beb5d1b590dff3d631b1dbb957138dbda4e608a3183c625683da4bc84918f",
+      "uncompressed_original": {
+        "path": "manifest.xml",
+        "bytes": 233871,
+        "sha256": "4e8beb5d1b590dff3d631b1dbb957138dbda4e608a3183c625683da4bc84918f"
+      },
+      "transformation": "none; original bytes"
+    },
+    {
+      "path": "source-status-before.txt",
+      "bytes": 44,
+      "sha256": "3624b3fa2d85cf06be3b449851d1948b281422ced4649cbf4e9c868cf723329b",
+      "uncompressed_original": {
+        "path": "source-status-before.txt",
+        "bytes": 44,
+        "sha256": "3624b3fa2d85cf06be3b449851d1948b281422ced4649cbf4e9c868cf723329b"
+      },
+      "transformation": "none; original bytes"
+    }
+  ],
+  "limitation": "Operator-collected execution evidence and integrity linkage, not independent provider attestation. Build failed; no boot or custom service result."
+}

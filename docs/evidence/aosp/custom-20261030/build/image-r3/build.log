@@ -1,0 +1,99 @@
+
+============================================
+PLATFORM_VERSION_CODENAME=REL
+PLATFORM_VERSION=16
+TARGET_PRODUCT=aosp_cf_x86_64_only_phone
+TARGET_BUILD_VARIANT=userdebug
+TARGET_ARCH=x86_64
+TARGET_ARCH_VARIANT=silvermont
+HOST_OS=linux
+HOST_OS_EXTRA=Linux-7.0.0-1014-gcp-x86_64-Ubuntu-24.04.5-LTS
+HOST_CROSS_OS=windows
+BUILD_ID=BP4A.251205.006
+OUT_DIR=out
+SOONG_ONLY=true
+============================================
+Running product configuration...
+============================================
+PLATFORM_VERSION_CODENAME=REL
+PLATFORM_VERSION=16
+TARGET_PRODUCT=aosp_cf_x86_64_only_phone
+TARGET_BUILD_VARIANT=userdebug
+TARGET_ARCH=x86_64
+TARGET_ARCH_VARIANT=silvermont
+HOST_OS=linux
+HOST_OS_EXTRA=Linux-7.0.0-1014-gcp-x86_64-Ubuntu-24.04.5-LTS
+HOST_CROSS_OS=windows
+BUILD_ID=BP4A.251205.006
+OUT_DIR=out
+SOONG_ONLY=true
+============================================
+[100% 1/1] bootstrap blueprint
+Running globs...
+ninja: no work to do.
+No need to regenerate ninja file
+Starting ninja...
+[  7% 2/27 10s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_ext_image Assemble filesystem staging dir aosp_cf_x86_64_only_phone_generated_system_ext_image [common]
+[ 11% 3/27 10s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/com.android.extensions.appfunctions.jar.fsv_meta
+[ 14% 4/27 10s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/androidx.window.sidecar.jar.fsv_meta
+[ 18% 5/27 10s remaining] cp 'out/target/product/vsoc_x86_64_only/system_ext/framework/oat/x86_64/apex@com.android.compos@javalib@service-compos.jar@classes.odex.fsv_meta'
+[ 22% 6/27 10s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/androidx.window.extensions.jar.fsv_meta
+[ 25% 7/27 10s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/oat/x86_64/SatelliteClient.vdex.fsv_meta
+[ 29% 8/27 10s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/oat/x86_64/SatelliteClient.odex.fsv_meta
+[ 33% 9/27 10s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/oat/x86_64/androidx.window.extensions.vdex.fsv_meta
+[ 37% 10/27 10s remaining] cp 'out/target/product/vsoc_x86_64_only/system_ext/framework/oat/x86_64/apex@com.android.compos@javalib@service-compos.jar@classes.vdex.fsv_meta'
+[ 40% 11/27 10s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/oat/x86_64/androidx.window.sidecar.odex.fsv_meta
+[ 44% 12/27 10s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/oat/x86_64/androidx.window.sidecar.vdex.fsv_meta
+[ 48% 13/27 10s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/SatelliteClient.jar.fsv_meta
+[ 51% 14/27 10s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/oat/x86_64/androidx.window.extensions.odex.fsv_meta
+[ 55% 15/27 7s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_ext_image Creating filesystem aosp_cf_x86_64_only_phone_generated_system_ext_image [common]
+[ 59% 16/27 7s remaining] //.:aosp_cf_x86_64_only_phone_generated_vbmeta_system_image vbmeta aosp_cf_x86_64_only_phone_generated_vbmeta_system_image [common]
+[ 62% 17/27 7s remaining] cp out/target/product/vsoc_x86_64_only/vbmeta_system.img
+[ 66% 18/27 7s remaining] cp out/target/product/vsoc_x86_64_only/system_ext.img
+[ 70% 19/27 7s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device Check partition sizes
+2026-10-30 22:30:28 - check_partition_sizes.py - INFO    : sum of sizes of ['odm', 'odm_dlkm', 'product', 'system', 'system_dlkm', 'system_ext', 'vendor', 'vendor_dlkm', 'system_other'] is less than or equal to BOARD_SUPER_PARTITION_SIZE:
+471040+348160+250114048+729563136+8359936+257490944+303558656+1441792+4399104 == 1555746816 <= 8589934592 == 8589934592
+2026-10-30 22:30:28 - check_partition_sizes.py - INFO    : sum of sizes of ['odm', 'odm_dlkm', 'product', 'system', 'system_dlkm', 'system_ext', 'vendor', 'vendor_dlkm', 'system_other'] is less than or equal to BOARD_SUPER_PARTITION_ERROR_LIMIT:
+471040+348160+250114048+729563136+8359936+257490944+303558656+1441792+4399104 == 1555746816 <= 8589934592 == 8589934592
+2026-10-30 22:30:28 - check_partition_sizes.py - INFO    : sum of sizes of ['odm', 'odm_dlkm', 'product', 'system', 'system_dlkm', 'system_ext', 'vendor', 'vendor_dlkm', 'system_other'] is less than or equal to BOARD_SUPER_PARTITION_WARN_LIMIT:
+471040+348160+250114048+729563136+8359936+257490944+303558656+1441792+4399104 == 1555746816 <= 8160437862 == 8160437862
+2026-10-30 22:30:28 - check_partition_sizes.py - INFO    : sum of sizes of ['product', 'system', 'system_ext', 'system_dlkm'] is less than or equal to BOARD_google_system_dynamic_partitions_SIZE:
+250114048+729563136+257490944+8359936 == 1245528064 <= 6845104128 == 6845104128
+2026-10-30 22:30:28 - check_partition_sizes.py - INFO    : sum of sizes of ['odm', 'vendor', 'vendor_dlkm', 'odm_dlkm'] is less than or equal to BOARD_google_vendor_dynamic_partitions_SIZE:
+471040+303558656+1441792+348160 == 305819648 <= 1472200704 == 1472200704
+2026-10-30 22:30:28 - check_partition_sizes.py - INFO    : sum of sizes of ['google_system_dynamic_partitions', 'google_vendor_dynamic_partitions'] is less than BOARD_SUPER_PARTITION_SIZE:
+6845104128+1472200704 == 8317304832 < 8589934592 == 8589934592
+2026-10-30 22:30:28 - check_partition_sizes.py - INFO    : sum of sizes of ['google_system_dynamic_partitions', 'google_vendor_dynamic_partitions'] plus 1M metadata is less than or equal to BOARD_SUPER_PARTITION_SIZE:
+6845104128+1472200704+1048576 == 8318353408 <= 8589934592 == 8589934592
+[ 74% 20/27 7s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_ext_image Installed file list json [common]
+[ 77% 21/27 7s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-system_ext.json
+[ 81% 22/27 7s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_ext_image Installed file list txt [common]
+[ 85% 23/27 7s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-system_ext.txt
+[ 88% 24/27 6s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_super_image Creating super image aosp_cf_x86_64_only_phone_generated_super_image [common]
+2026-10-30 22:30:28 - build_super_image.py - INFO    : Building super image from info dict...
+2026-10-30 22:30:28 - common.py - INFO    :   Running: "/srv/aosp/source/out/host/linux-x86/bin/lpmake --metadata-size 65536 --super-name super --metadata-slots 3 --virtual-ab --device super:8589934592 --group google_system_dynamic_partitions_a:6845104128 --group google_system_dynamic_partitions_b:6845104128 --partition product_a:readonly:250114048:google_system_dynamic_partitions_a --image product_a=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_product_image/android_common/product.img --partition product_b:readonly:0:google_system_dynamic_partitions_b --partition system_a:readonly:729563136:google_system_dynamic_partitions_a --image system_a=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_system_image/android_common/system.img --partition system_b:readonly:4399104:google_system_dynamic_partitions_b --image system_b=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_system_other_image/android_common/system_other.img --partition system_ext_a:readonly:257490944:google_system_dynamic_partitions_a --image system_ext_a=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_system_ext_image/android_common/system_ext.img --partition system_ext_b:readonly:0:google_system_dynamic_partitions_b --partition system_dlkm_a:readonly:8359936:google_system_dynamic_partitions_a --image system_dlkm_a=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_system_dlkm_image/android_common/system_dlkm.img --partition system_dlkm_b:readonly:0:google_system_dynamic_partitions_b --group google_vendor_dynamic_partitions_a:1472200704 --group google_vendor_dynamic_partitions_b:1472200704 --partition odm_a:readonly:471040:google_vendor_dynamic_partitions_a --image odm_a=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_odm_image/android_common/odm.img --partition odm_b:readonly:0:google_vendor_dynamic_partitions_b --partition vendor_a:readonly:303558656:google_vendor_dynamic_partitions_a --image vendor_a=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_vendor_image/android_common/vendor.img --partition vendor_b:readonly:0:google_vendor_dynamic_partitions_b --partition vendor_dlkm_a:readonly:1441792:google_vendor_dynamic_partitions_a --image vendor_dlkm_a=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_vendor_dlkm_image/android_common/vendor_dlkm.img --partition vendor_dlkm_b:readonly:0:google_vendor_dynamic_partitions_b --partition odm_dlkm_a:readonly:348160:google_vendor_dynamic_partitions_a --image odm_dlkm_a=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_odm_dlkm_image/android_common/odm_dlkm.img --partition odm_dlkm_b:readonly:0:google_vendor_dynamic_partitions_b --sparse --output out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_super_image/android_common/super.img"
+2026-10-30 22:30:29 - common.py - INFO    : 10-30 22:30:28.417   400   400 I lpmake  : builder.cpp:1027 [liblp] Partition product_a will resize from 0 bytes to 250114048 bytes
+10-30 22:30:28.417   400   400 I lpmake  : builder.cpp:1027 [liblp] Partition system_a will resize from 0 bytes to 729563136 bytes
+10-30 22:30:28.417   400   400 I lpmake  : builder.cpp:1027 [liblp] Partition system_b will resize from 0 bytes to 4399104 bytes
+10-30 22:30:28.417   400   400 I lpmake  : builder.cpp:1027 [liblp] Partition system_ext_a will resize from 0 bytes to 257490944 bytes
+10-30 22:30:28.417   400   400 I lpmake  : builder.cpp:1027 [liblp] Partition system_dlkm_a will resize from 0 bytes to 8359936 bytes
+10-30 22:30:28.417   400   400 I lpmake  : builder.cpp:1027 [liblp] Partition odm_a will resize from 0 bytes to 471040 bytes
+10-30 22:30:28.417   400   400 I lpmake  : builder.cpp:1027 [liblp] Partition vendor_a will resize from 0 bytes to 303558656 bytes
+10-30 22:30:28.417   400   400 I lpmake  : builder.cpp:1027 [liblp] Partition vendor_dlkm_a will resize from 0 bytes to 1441792 bytes
+10-30 22:30:28.417   400   400 I lpmake  : builder.cpp:1027 [liblp] Partition odm_dlkm_a will resize from 0 bytes to 348160 bytes
+Invalid sparse file format at header magic
+Invalid sparse file format at header magic
+Invalid sparse file format at header magic
+Invalid sparse file format at header magic
+Invalid sparse file format at header magic
+Invalid sparse file format at header magic
+Invalid sparse file format at header magic
+Invalid sparse file format at header magic
+Invalid sparse file format at header magic
+2026-10-30 22:30:29 - build_super_image.py - INFO    : Done writing image out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_super_image/android_common/super.img
+[ 92% 25/27 5s remaining] cp out/target/product/vsoc_x86_64_only/super.img
+[ 96% 26/27 5s remaining] touch out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_device/android_x86_64_silvermont/product_out_copy_timestamp
+[100% 27/27 5s remaining] touch out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_device/android_x86_64_silvermont/all_images_stamp
+
+#### build completed successfully (16 seconds) ####
+

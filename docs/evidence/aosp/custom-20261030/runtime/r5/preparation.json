@@ -1,0 +1,183 @@
+{
+  "kind": "custom_source_boot_prepared",
+  "prepared": true,
+  "utc": "2026-10-30T22:31:08.811247+00:00",
+  "checkpoint_sha256": "4f9f7760dcc098f5b4c87243e9c9d59bfa23e47854f5fbf9c73f9fb46e280f39",
+  "source_commit": "308b30744ad56440a73e268cab5c06b0a482f080",
+  "target": "aosp_cf_x86_64_only_phone-bp4a-userdebug",
+  "host_out": "/srv/aosp/source/out/host/linux-x86",
+  "product_out": "/srv/aosp/source/out/target/product/vsoc_x86_64_only",
+  "apparmor_profile_sha256": "6ea102a780924cdc07876019eed66e13a4a2cf748909f2dce101a64416fc6de5",
+  "crosvm_elf": "/srv/aosp/source/out/host/linux-x86/bin/x86_64-linux-gnu/crosvm",
+  "artifacts": [
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/boot.img",
+      "sha256": "ba39570697f83d28b935c660099fde06f735f8240a9df545edac0d09fc591412",
+      "bytes": 67108864
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/init_boot.img",
+      "sha256": "2cbaf80dc054c3dd3efbcfb539e6c973b0b3f52a6ab948bf1f1eeaf5617de12d",
+      "bytes": 8388608
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/odm.img",
+      "sha256": "a1447e72b64ef009f72f79a250d670b6da23c929d634a1a019bcf5f4e045d5d4",
+      "bytes": 471040
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/odm_dlkm.img",
+      "sha256": "f91bd69045c8506a5780e93aeee502ddaf49bb5fe1f602fe7f7df9446a4e6bef",
+      "bytes": 348160
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/product.img",
+      "sha256": "f803c473f15643fe3defa818d646b152c0cee8e3c558006ff1a4e9f82f4827ed",
+      "bytes": 250114048
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/ramdisk.img",
+      "sha256": "ad8dc481d3eb8205afec259b201f3b5fdfecedf547b2f17797d35c880efa3afd",
+      "bytes": 2965240
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/super.img",
+      "sha256": "8ca3725134ca9e4f594376b448d97b3a31a51e7cee5cc425256a776524028734",
+      "bytes": 1547370456
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/super_empty.img",
+      "sha256": "962248d123bee34452f053fe0cbabd1422fdb69efe425839580bcc077e26975d",
+      "bytes": 5488
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/system.img",
+      "sha256": "1cbd23dbddcd13b1bf89086cd07c0f3744468de9b61979805e9942fbac128b08",
+      "bytes": 729563136
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/system_dlkm.img",
+      "sha256": "f8bd9d1a5c168efc6a541e48804ee0775fec318ff2ff4509c4f7e7b36dd34ea2",
+      "bytes": 8359936
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/system_ext.img",
+      "sha256": "6bc7b0c445bc9789304e033f2a081dee54c6270b38b9c67fbd8c4cc9e643c7f8",
+      "bytes": 257490944
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/system_other.img",
+      "sha256": "0688bffe7d3b5920cfc96627073a8b360d129a98c81e0e4b756c0612979ec75f",
+      "bytes": 4399104
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/userdata.img",
+      "sha256": "870ae2348ba6c41ee36cad1e700c8d8c5c18b047286aa2a3fd307c02e3481fc7",
+      "bytes": 8589934592
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/vbmeta.img",
+      "sha256": "235bd7a2a981b5344d0df9b9cf0dab7a82a9f20d52cc926afeb7f8a96991ef82",
+      "bytes": 65536
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/vbmeta_system.img",
+      "sha256": "6e2809c95904679f53fb69ca0dc378e292c1acd66e868c71fdca52d94c046ec4",
+      "bytes": 65536
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/vbmeta_system_dlkm.img",
+      "sha256": "15a0a08a2abc50ec31b70c6c6a88b4125266bd54fb06c175ea3a4436a98bda1e",
+      "bytes": 65536
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/vbmeta_vendor_dlkm.img",
+      "sha256": "b375e25437bffff85a49ec6fe3b351fe8a67d864c0680d025c216535ad42c062",
+      "bytes": 65536
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/vendor.img",
+      "sha256": "295184b5053699f3ba185c7c08c8231412b97899ecc9489c7e52c5ec8c75b740",
+      "bytes": 303558656
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/vendor_boot.img",
+      "sha256": "022e63a17ae66e54e5281bec3a8f0c62b86e0eabec495242f970a9549144e840",
+      "bytes": 67108864
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/vendor_dlkm.img",
+      "sha256": "15fd36506609c0fe3ee193129d02a7bfab58dcb7fe21177e60419857a5c243da",
+      "bytes": 1441792
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/vendor_ramdisk.img",
+      "sha256": "4f62c8f711565aa86d29a62190a998f85757b71158c40823593658eeecc5945d",
+      "bytes": 18710512
+    },
+    {
+      "path": "/srv/aosp/source/out/host/linux-x86/bin/cvd_internal_start",
+      "sha256": "2021b5e8efc755fc6826b050e075bac2949e3538040d32655a210a1fae27e60a",
+      "bytes": 678704
+    },
+    {
+      "path": "/srv/aosp/source/out/host/linux-x86/bin/cvd_internal_stop",
+      "sha256": "5873bdeac0f8fa126435616b04b50cfe55eaf7c9d68138e22384c4e636031889",
+      "bytes": 462024
+    },
+    {
+      "path": "/srv/aosp/source/out/host/linux-x86/bin/adb",
+      "sha256": "28dd15cad9b6bfcec8bccde77bdd96b2a1c862c51a8df9ea0a968cb42cf3ea6d",
+      "bytes": 31924824
+    },
+    {
+      "path": "/srv/aosp/source/out/host/linux-x86/bin/sepolicy-analyze",
+      "sha256": "a271e82042286276651db28a34928bd149c745ccb6ba7cacf18b51258b909669",
+      "bytes": 543160
+    },
+    {
+      "path": "/srv/aosp/source/out/host/linux-x86/bin/x86_64-linux-gnu/crosvm",
+      "sha256": "d82928e2e1c68094e4c3d2f55842554da1334088450ec6a8ca56afa3e92d879f",
+      "bytes": 21014440
+    }
+  ],
+  "binaries": {
+    "boundarylab_service": {
+      "host_path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/system_ext/bin/boundarylab_service",
+      "device_path": "/system_ext/bin/boundarylab_service",
+      "sha256": "8c575b2e10b7c23c661ca0f74659afe185377be5e206770cff0087d568685b5c",
+      "bytes": 102944
+    },
+    "boundarylab_probe": {
+      "host_path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/system_ext/bin/boundarylab_probe",
+      "device_path": "/system_ext/bin/boundarylab_probe",
+      "sha256": "5cd9658526248e803ad1376b136156ec9134b08004f643dd7a7575a63802d7b2",
+      "bytes": 85024
+    },
+    "boundarylab_denied_probe": {
+      "host_path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/system_ext/bin/boundarylab_denied_probe",
+      "device_path": "/system_ext/bin/boundarylab_denied_probe",
+      "sha256": "5cd9658526248e803ad1376b136156ec9134b08004f643dd7a7575a63802d7b2",
+      "bytes": 85024
+    },
+    "boundarylab_engine_test": {
+      "host_path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/data/nativetest64/boundarylab_engine_test/boundarylab_engine_test",
+      "device_path": "/data/nativetest64/boundarylab_engine_test/boundarylab_engine_test",
+      "sha256": "aae13062a147b97c9859feb96833459d4b6fdb8087533af29582c0187a8849bd",
+      "bytes": 102792
+    }
+  },
+  "operator_scripts_sha256": {
+    "custom-proof-common.py": "f534b11936dc445cdce6558887d7001fa04c3897cc8f53eb2c678945d2313e41",
+    "custom-proof-launch.sh": "bfb1caceba884518f2da18e17c15cd144e94a424f3405c369fa7c67f84f981f9",
+    "custom-proof-prepare.py": "a65baef750db44c95b44255349b4b4cd7d9dfdd67b87edffb0840e72bc775306",
+    "custom-proof-run-original-r1.py": "c25d558c9e6fa8db35d3fda2a9ea2a3ad817c01d268da07988f78e1e78000f19",
+    "custom-proof-run-original-r2.py": "141b03f57f27d8914cc73c9cdeb543caa15d150b3da5f83e98268de367c842d9",
+    "custom-proof-run.py": "d275492c6f733c23016c038069176019340bf6966d09ff93f1380707018a6445"
+  },
+  "baseline_export_reference": {
+    "path": "baseline-local-export-integrity.json",
+    "sha256": "233634f7c3c942ce889d6999eb0a7902e9208dcd8cc3a4366df83944b60434bd"
+  },
+  "guest_boot_proven": false
+}

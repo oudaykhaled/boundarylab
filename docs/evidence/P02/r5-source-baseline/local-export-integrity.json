@@ -1,0 +1,13 @@
+{
+  "kind": "baseline_local_export_integrity",
+  "utc": "2026-10-30T21:37:55.939014+00:00",
+  "archive": "baseline-final.tar.gz",
+  "bytes": 2659393,
+  "sha256": "cf78a18d8a4eea1f11654187136aa2b03edcde2c826df7b6c8b512a2a0fe6688",
+  "all_file_hashes_match": true,
+  "file_count": 39,
+  "baseline_boot_passed": true,
+  "cleanup_verified": true,
+  "screenshot_sha256": "e0afeb9a7c7cd1e98efc09c71d49e40c442ece7f481b2c4b8ed9d47d22ec6be5",
+  "screenshot_visual_review_pending": true
+}

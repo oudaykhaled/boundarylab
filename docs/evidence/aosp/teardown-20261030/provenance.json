@@ -1,0 +1,145 @@
+{
+  "selection": "Raw capture commands/stderr remain private because they include cloud account and SSH metadata. Empty provider stdout lists are byte-preserved; teardown/cost JSON above are explicitly selected fields from the named private receipts.",
+  "private_receipts": [
+    {
+      "private_receipt_basename": "teardown-delete-deadline-queue.json",
+      "bytes": 472,
+      "sha256": "2d9fda6d73a51bf98cd6ac7a3f851f23814e0f0724d89799e05f8bc53df61b1d",
+      "exit_code": 0,
+      "started_utc": "2026-10-30T22:41:46.890461+00:00",
+      "ended_utc": "2026-10-30T22:41:47.692217+00:00"
+    },
+    {
+      "private_receipt_basename": "teardown-delete-deadline-role.json",
+      "bytes": 717,
+      "sha256": "d1329bc257551eb028f0aa67713682b6e65880b5b08322f232fd2a69e0f15ec1",
+      "exit_code": 0,
+      "started_utc": "2026-10-30T22:41:50.399919+00:00",
+      "ended_utc": "2026-10-30T22:41:51.923477+00:00"
+    },
+    {
+      "private_receipt_basename": "teardown-delete-deadline-service-account.json",
+      "bytes": 537,
+      "sha256": "630e21020a8de3e92ef569a14473276ae437eef0dab009f9af0d0a28f43640d1",
+      "exit_code": 0,
+      "started_utc": "2026-10-30T22:41:51.924065+00:00",
+      "ended_utc": "2026-10-30T22:41:53.119237+00:00"
+    },
+    {
+      "private_receipt_basename": "teardown-delete-deadline-task.json",
+      "bytes": 465,
+      "sha256": "5e5a4a8abdfe19e7ad89dc161c3deb0ec7a685156a7a0abca65419fa40272081",
+      "exit_code": 0,
+      "started_utc": "2026-10-30T22:41:46.211560+00:00",
+      "ended_utc": "2026-10-30T22:41:46.889915+00:00"
+    },
+    {
+      "private_receipt_basename": "teardown-delete-iap-firewall.json",
+      "bytes": 520,
+      "sha256": "88665c804249a7e80927082f01c2eb5c03bb379d2b66af9a6d3e4624c611b0f6",
+      "exit_code": 0,
+      "started_utc": "2026-10-30T22:41:53.119800+00:00",
+      "ended_utc": "2026-10-30T22:41:59.078711+00:00"
+    },
+    {
+      "private_receipt_basename": "teardown-delete-network.json",
+      "bytes": 505,
+      "sha256": "f9f9ebbcf2ac501484a0f5eb53928779b2fc7591d3c950b5897d4b0cc4519970",
+      "exit_code": 0,
+      "started_utc": "2026-10-30T22:42:11.625192+00:00",
+      "ended_utc": "2026-10-30T22:42:27.425778+00:00"
+    },
+    {
+      "private_receipt_basename": "teardown-delete-private-subnet.json",
+      "bytes": 572,
+      "sha256": "ac67405895c811ee5c31f8b3d8be677969833e8ea92f6f2570afa95800d029a8",
+      "exit_code": 0,
+      "started_utc": "2026-10-30T22:41:59.079250+00:00",
+      "ended_utc": "2026-10-30T22:42:11.624608+00:00"
+    },
+    {
+      "private_receipt_basename": "teardown-delete-vm.json",
+      "bytes": 586,
+      "sha256": "ee081fc0b3e83602598808e383ec88ab822f2fbc0610641807a4b6dbfb3e47ef",
+      "exit_code": 0,
+      "started_utc": "2026-10-30T22:40:48.527407+00:00",
+      "ended_utc": "2026-10-30T22:41:44.273350+00:00"
+    },
+    {
+      "private_receipt_basename": "teardown-final-deadline-queues.json",
+      "bytes": 513,
+      "sha256": "30ed08a72ed8d0f0e9929d604e93a1a2104d40e231b6cdf150a5ce70884ebd06",
+      "exit_code": 0,
+      "started_utc": "2026-10-30T22:42:32.116460+00:00",
+      "ended_utc": "2026-10-30T22:42:33.520278+00:00"
+    },
+    {
+      "private_receipt_basename": "teardown-final-disks.json",
+      "bytes": 360,
+      "sha256": "867833db831de7e105984f136f4ed8e99677f37656b57b1f2a1faef57963b53b",
+      "exit_code": 0,
+      "started_utc": "2026-10-30T22:42:28.519796+00:00",
+      "ended_utc": "2026-10-30T22:42:29.463546+00:00"
+    },
+    {
+      "private_receipt_basename": "teardown-final-instances.json",
+      "bytes": 364,
+      "sha256": "91bc59d7881e8c7ac65f0306cb1b59c7e36bdce2709fca86bd676bcf99e41cc4",
+      "exit_code": 0,
+      "started_utc": "2026-10-30T22:42:27.426261+00:00",
+      "ended_utc": "2026-10-30T22:42:28.519076+00:00"
+    },
+    {
+      "private_receipt_basename": "teardown-final-networks.json",
+      "bytes": 405,
+      "sha256": "3116cd4139db7bbd0fc793607f06bbc0a474ddc116e2ad79e19821e7db83ae6a",
+      "exit_code": 0,
+      "started_utc": "2026-10-30T22:42:31.219443+00:00",
+      "ended_utc": "2026-10-30T22:42:32.115775+00:00"
+    },
+    {
+      "private_receipt_basename": "teardown-final-reserved-addresses.json",
+      "bytes": 364,
+      "sha256": "e70f16cd480e268013c4299ca4198526ebc09b0d79876fcd2c53122488f6a230",
+      "exit_code": 0,
+      "started_utc": "2026-10-30T22:42:29.464079+00:00",
+      "ended_utc": "2026-10-30T22:42:30.374881+00:00"
+    },
+    {
+      "private_receipt_basename": "teardown-final-snapshots.json",
+      "bytes": 364,
+      "sha256": "7e40a2d6dfa27162c48cb7266dbc2aa4a44e8c6a04a02ea509fe7fbbe486df1e",
+      "exit_code": 0,
+      "started_utc": "2026-10-30T22:42:30.375467+00:00",
+      "ended_utc": "2026-10-30T22:42:31.218901+00:00"
+    },
+    {
+      "private_receipt_basename": "teardown-remove-deadline-project-binding.json",
+      "bytes": 1604,
+      "sha256": "abd53648602291783edeb501727bb0dc345213b1cbe64752a7eaf75dd95e0489",
+      "exit_code": 0,
+      "started_utc": "2026-10-30T22:41:47.692721+00:00",
+      "ended_utc": "2026-10-30T22:41:50.399337+00:00"
+    },
+    {
+      "private_receipt_basename": "teardown-verify-disks-after-vm-delete.json",
+      "bytes": 520,
+      "sha256": "4ad625d791d0dbc96b37ccb45fd08a27c742daad400e2b99077f0917ad53caa5",
+      "exit_code": 0,
+      "started_utc": "2026-10-30T22:41:45.260396+00:00",
+      "ended_utc": "2026-10-30T22:41:46.210767+00:00"
+    },
+    {
+      "private_receipt_basename": "teardown-verify-vm-absent.json",
+      "bytes": 487,
+      "sha256": "46ab98f8b554746cb9c8d66d9d1500287c5e4a033eb014f764e3223bedf039a7",
+      "exit_code": 0,
+      "started_utc": "2026-10-30T22:41:44.273934+00:00",
+      "ended_utc": "2026-10-30T22:41:45.259817+00:00"
+    }
+  ],
+  "cost_private_basename": "cost-estimate-224232025708.json",
+  "cost_private_sha256": "844a466a690c873c98afc1de3b5925c240f400958ee899cb73c452c57d143edd",
+  "complete_teardown_receipt_sha256": "3302ef8a72b873c01a78eb3ad66f3345f00d2941f032f84f2bade47706413255",
+  "charged_resource_receipt_sha256": "c60caa380b5019344d72d4fa95071a65ae33c4dba444da23041c084f231f04f8"
+}

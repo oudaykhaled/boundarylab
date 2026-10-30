@@ -1,0 +1,203 @@
+{
+  "kind": "completed_unchanged_source_baseline_export",
+  "utc": "2026-10-30T21:37:52.935482+00:00",
+  "baseline_boot_passed": true,
+  "cleanup_verified": true,
+  "files": [
+    {
+      "path": "baseline/apparmor-profile-applied.txt",
+      "bytes": 165,
+      "sha256": "6ea102a780924cdc07876019eed66e13a4a2cf748909f2dce101a64416fc6de5"
+    },
+    {
+      "path": "baseline/apparmor-profile-before.txt",
+      "bytes": 152,
+      "sha256": "dc2f2e749aa86419452ef4995a39124dfb6ac34e82abe985d981a52070992643"
+    },
+    {
+      "path": "baseline/boot/boot.png",
+      "bytes": 711757,
+      "sha256": "e0afeb9a7c7cd1e98efc09c71d49e40c442ece7f481b2c4b8ed9d47d22ec6be5"
+    },
+    {
+      "path": "baseline/boot/checks.json",
+      "bytes": 3327,
+      "sha256": "a53d533418e249c0819614f6e09772a7daad3a7dc3befcf50dbaed0a5ba51dcb"
+    },
+    {
+      "path": "baseline/boot/commands.json",
+      "bytes": 38633,
+      "sha256": "61245e2f17b9d9947a7a13b4286cf0565673788fefd5eb8e53eb4914966a4e92"
+    },
+    {
+      "path": "baseline/boot/effective-config.json",
+      "bytes": 10113,
+      "sha256": "436da5551f78c2e2e44409e1e3d00f8bd63020848f3dd31080eb49d0b7a584be"
+    },
+    {
+      "path": "baseline/boot/result.json",
+      "bytes": 3800,
+      "sha256": "33d7c2f3d2d890fb5cb10cfeca6d453387f451cfc5f9306b48dc9b709becc3da"
+    },
+    {
+      "path": "baseline/boot-preparation.json",
+      "bytes": 5618,
+      "sha256": "6f4457e188b914f9f994caeaec7458a126e7b98106d7a1c4b9563c13549f5351"
+    },
+    {
+      "path": "baseline/boot-run-result.json",
+      "bytes": 331,
+      "sha256": "345a38b0667a523bc9f38f404988e0673766e51d2e96f8ae3e8aec90d7f73ce1"
+    },
+    {
+      "path": "baseline/boot-window.json",
+      "bytes": 124,
+      "sha256": "b4ce3b905bf1efe82c4433046e86571954d15eb0e4e43e7e1fde60080c251423"
+    },
+    {
+      "path": "baseline/build-result.json",
+      "bytes": 607,
+      "sha256": "a26b7e8fe4cb25ce87c8bc6140642594b2402822717a8cec6b8c5132d0ee168b"
+    },
+    {
+      "path": "baseline/build.log",
+      "bytes": 3937178,
+      "sha256": "4d5fc02309b039e810f5f33038c060c064d0931e6662f92653d0012d47bc10f3"
+    },
+    {
+      "path": "baseline/manifest.xml",
+      "bytes": 233871,
+      "sha256": "4e8beb5d1b590dff3d631b1dbb957138dbda4e608a3183c625683da4bc84918f"
+    },
+    {
+      "path": "baseline/previous-prebuilt-state-logs.tar.gz",
+      "bytes": 772590,
+      "sha256": "b8af251635223e3c44e1a924394cddb0af47cd1c47770ca83a8cb881fb9c18ea"
+    },
+    {
+      "path": "baseline/source-adb-stop-command.json",
+      "bytes": 348,
+      "sha256": "4fd3633a2f8a970ef435d8025cd23b451e4dd74e04c81d433144ec7075d5ecec"
+    },
+    {
+      "path": "baseline/source-adb-stop.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "baseline/source-adb-stop.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "baseline/source-launch-command.json",
+      "bytes": 326,
+      "sha256": "a05c12f822085abedf14682cc8f7026b9bb3944af00b140c95c1c59eaf1dfbee"
+    },
+    {
+      "path": "baseline/source-launch.stderr.log",
+      "bytes": 1015,
+      "sha256": "50c7d50a3aa39a44397bd9d2f4363b27437bb1f07b5d6986a51db88ced062d94"
+    },
+    {
+      "path": "baseline/source-launch.stdout.log",
+      "bytes": 401,
+      "sha256": "0620ee854e9dc0259ffb2b8179b53238eb64ad7f4622a17f387ee53f6e36fc91"
+    },
+    {
+      "path": "baseline/source-status-before.txt",
+      "bytes": 44,
+      "sha256": "3624b3fa2d85cf06be3b449851d1948b281422ced4649cbf4e9c868cf723329b"
+    },
+    {
+      "path": "baseline/source-stop-command.json",
+      "bytes": 333,
+      "sha256": "fb59076d35ea231b0e68b3184a8aea3331360da0921bfcf69afff73a12345205"
+    },
+    {
+      "path": "baseline/source-stop-processes.json",
+      "bytes": 307,
+      "sha256": "963c5f0ad9f816163fb34e59e34f79767aa9ffa4da7985fcbe1a9617ccff16ea"
+    },
+    {
+      "path": "baseline/source-stop.stderr.log",
+      "bytes": 182,
+      "sha256": "530a66976e739e553becbef6986bf855f6364a5ac3b3a5a2cf371b02ba695fd2"
+    },
+    {
+      "path": "baseline/source-stop.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "baseline/source-verify-command.json",
+      "bytes": 379,
+      "sha256": "38dfeaf4cc7f40a92d2d79ea08a1df96306a15d011047080cb21dc96c2bea43e"
+    },
+    {
+      "path": "baseline/source-verify.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "baseline/source-verify.stdout.log",
+      "bytes": 3105,
+      "sha256": "589b88319088f111757ce30197a1fce4a436c292597254f3c4ab02d82b97fcc2"
+    },
+    {
+      "path": "baseline/toolchains.json",
+      "bytes": 23956,
+      "sha256": "2dd66d1d93dc661d524113466dabe6de6749658b3a54b1c16da5a503dceeee58"
+    },
+    {
+      "path": "baseline-stopped-runtime/assembly/assemble_cvd.log",
+      "bytes": 30934,
+      "sha256": "cfbae365a4ebbe50d41ceb1f69d59e166ae01ec24063c80a3fc07444df66517f"
+    },
+    {
+      "path": "baseline-stopped-runtime/assembly/cuttlefish_config.json",
+      "bytes": 9684,
+      "sha256": "cca3ddf90fcbde2f7e08b9ecd78cea97f5ed4b9a610d6b5f586ec5df99b686cd"
+    },
+    {
+      "path": "baseline-stopped-runtime/instances/cvd-1/cuttlefish_config.json",
+      "bytes": 9684,
+      "sha256": "cca3ddf90fcbde2f7e08b9ecd78cea97f5ed4b9a610d6b5f586ec5df99b686cd"
+    },
+    {
+      "path": "baseline-stopped-runtime/instances/cvd-1/logs/crosvm_openwrt.log",
+      "bytes": 13441,
+      "sha256": "175320934961b2137aa3100cca1d67aa71e67fcf309f7c5567764b4631a0bf19"
+    },
+    {
+      "path": "baseline-stopped-runtime/instances/cvd-1/logs/crosvm_openwrt_boot.log",
+      "bytes": 15562,
+      "sha256": "9a68b85707c617e6acaff239b0b3d6640fef0b63c1d718bdca93eda2acda3479"
+    },
+    {
+      "path": "baseline-stopped-runtime/instances/cvd-1/logs/kernel.log",
+      "bytes": 421447,
+      "sha256": "9289b8328cc22c5175d96b722acd32c4dd4f0b8ec7e25b784031e766d42ca7a0"
+    },
+    {
+      "path": "baseline-stopped-runtime/instances/cvd-1/logs/launcher.log",
+      "bytes": 157795,
+      "sha256": "3cf85e0cf21adb508a3835c8469cf1b014bd0021c86c6a48dfb7adf73331eb65"
+    },
+    {
+      "path": "baseline-stopped-runtime/instances/cvd-1/logs/logcat",
+      "bytes": 5091654,
+      "sha256": "799a051a91f891647bca6c9ff3872d4e37b10f05b6d127799df83e583058605c"
+    },
+    {
+      "path": "baseline-stopped-runtime/instances/cvd-1/logs/modem_simulator.log",
+      "bytes": 438,
+      "sha256": "7b7ef29b740898847ce69b8470aa7c841cf8d4cb433708fd03f10677e6ef604d"
+    },
+    {
+      "path": "baseline-stopped-runtime/instances/cvd-1/modem_nvram.json",
+      "bytes": 164,
+      "sha256": "43a40c54f1fa73a60647f48d3a4517ef11630ba8f0e38ae64f004676ae34e2e5"
+    }
+  ]
+}

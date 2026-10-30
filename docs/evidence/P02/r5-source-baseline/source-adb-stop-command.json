@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "sudo",
+    "--login",
+    "--user=aosp",
+    "--",
+    "/srv/aosp/source/out/host/linux-x86/bin/adb",
+    "kill-server"
+  ],
+  "started_utc": "2026-10-30T21:37:50.157636+00:00",
+  "ended_utc": "2026-10-30T21:37:50.189471+00:00",
+  "duration_seconds": 0.03185248374938965,
+  "exit_code": 0,
+  "timed_out": false,
+  "error": null
+}

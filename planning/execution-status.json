@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-10-30",
+  "updated": "2026-10-30T22:57:53.792722+00:00",
   "sourceCommit": "06b2d4f9d550a7c2b02bcc4d3e8743800ea9eb4c",
   "reviewMethod": "Astra specialist implementation and independent scoped AI security/reliability reviews; root acceptance reconciliation; no human review claimed",
   "notes": [
     "tickets-v2.json is the immutable original planning snapshot; this file records current execution without rewriting original acceptance.",
     "Done is scoped task acceptance, not completion of every G1/G2/G3 gate or production release.",
     "In Review identifies implemented work with specific remaining acceptance; it is not a pass.",
-    "Blocked AOSP items need host allocation and their own runtime proof; no spending authorized."
+    "AOSP attempt completed within authorized totalUS$50 with minimum tests/evidence. Actual Android16r4 unchanged baseline and custom native image built and booted; P03-P05 each passed all6 original acceptance clauses. Source/evidence published and actual GitHub board verified; ADR-B14-B18 preserve authorization, failure corrections and scoped limits. Full40-leaf roadmap remains open."
   ],
   "tickets": [
     {
@@ -226,9 +226,9 @@
       ],
       "result": "CLI11 tests and macOS generated corpus; hosted Linux/macOS lanes pass.",
       "remainingAcceptance": [
-        "AC2\u20133: full shared generated/lifecycle/error parity through both actual Android and macOS transports."
+        "AC2–3: full shared generated/lifecycle/error parity through both actual Android and macOS transports."
       ],
-      "nextStep": "AC2\u20133: full shared generated/lifecycle/error parity through both actual Android and macOS transports."
+      "nextStep": "AC2–3: full shared generated/lifecycle/error parity through both actual Android and macOS transports."
     },
     {
       "key": "V01",
@@ -397,85 +397,85 @@
       "issue": "https://github.com/oudaykhaled/boundarylab/issues/20",
       "parent": "B12",
       "title": "Audit authorized Linux/AOSP resources and pin baseline target",
-      "status": "Blocked",
-      "owner": "AOSP team",
+      "status": "Done",
+      "owner": "Root + Astra chief",
       "evidence": [
-        "docs/AOSP-CLOUD-BUDGET.md"
+        "docs/evidence/P01/README.md",
+        "docs/evidence/P01/results.json",
+        "docs/evidence/aosp/attempt-20261030/README.md"
       ],
-      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
-      "remainingAcceptance": [
-        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
-        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
-      ],
-      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+      "result": "Authorized N2/Linux/KVM inventory, prerequisites, exact Android16r4 manifest/target and cumulative budget/deadlines verified. Original no-purchase constraint explicitly superseded by user US$50 authorization; no flashing. Public prebuilt boot is extra host evidence only.",
+      "remainingAcceptance": [],
+      "nextStep": "Disposable resources deleted; preserve verified inventory/target, cost and teardown evidence."
     },
     {
       "key": "P02",
       "issue": "https://github.com/oudaykhaled/boundarylab/issues/23",
       "parent": "B12",
       "title": "Build and boot unchanged AOSP baseline image",
-      "status": "Blocked",
-      "owner": "AOSP team",
+      "status": "Done",
+      "owner": "Root + Astra chief",
       "evidence": [
-        "docs/AOSP-CLOUD-BUDGET.md"
+        "docs/evidence/P02/README.md",
+        "docs/evidence/P02/r5-source-baseline/README.md"
       ],
-      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
-      "remainingAcceptance": [
-        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
-        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
-      ],
-      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+      "result": "Pinned unchanged Android16r4 source build and matching sandboxed guest boot passed; all18 readiness/fingerprint/Enforcing checks and process cleanup passed, actual PNG viewed, all39 exported evidence file hashes verified. Four earlier failures remain preserved.",
+      "remainingAcceptance": [],
+      "nextStep": "Preserve unchanged baseline and its retained failures; P09 fresh final-image reproduction remains separate and unrun."
     },
     {
       "key": "P03",
       "issue": "https://github.com/oudaykhaled/boundarylab/issues/29",
       "parent": "B13",
       "title": "Implement generated-only native AIDL service and core vectors",
-      "status": "Blocked",
+      "status": "Done",
       "owner": "AOSP team",
       "evidence": [
-        "docs/AOSP-CLOUD-BUDGET.md"
+        "docs/evidence/aosp/custom-20261030/README.md",
+        "docs/evidence/aosp/custom-20261030/actual-results.json",
+        "docs/evidence/reviews/AOSP-ACCEPTANCE-MAP.md",
+        "docs/evidence/P03/api-freeze/README.md",
+        "docs/AOSP-LAYERS.md"
       ],
-      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
-      "remainingAcceptance": [
-        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
-        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
-      ],
-      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+      "result": "Final source444ae29 native/image/runtime passed:61 unique native assertions,236 harness observations and34 operator checks. All6 original ticket clauses independently AI audited; exact source/evidence published at83f99f1, issue closed and actual Chrome board verified. Five earlier failed proofs retained.",
+      "remainingAcceptance": [],
+      "nextStep": "Preserve scoped native proof and source/API/image lineage; final PR integration tracked separately. P06-P09 wider acceptance remains open."
     },
     {
       "key": "P04",
       "issue": "https://github.com/oudaykhaled/boundarylab/issues/32",
       "parent": "B13",
       "title": "Integrate service boot, supervision and enforcing SELinux policy",
-      "status": "Blocked",
+      "status": "Done",
       "owner": "AOSP team",
       "evidence": [
-        "docs/AOSP-CLOUD-BUDGET.md"
+        "docs/evidence/aosp/custom-20261030/README.md",
+        "docs/evidence/aosp/custom-20261030/actual-results.json",
+        "docs/evidence/reviews/AOSP-ACCEPTANCE-MAP.md",
+        "docs/evidence/P03/api-freeze/README.md",
+        "docs/AOSP-LAYERS.md"
       ],
-      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
-      "remainingAcceptance": [
-        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
-        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
-      ],
-      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+      "result": "Final source444ae29 native/image/runtime passed:61 unique native assertions,236 harness observations and34 operator checks. All6 original ticket clauses independently AI audited; exact source/evidence published at83f99f1, issue closed and actual Chrome board verified. Five earlier failed proofs retained.",
+      "remainingAcceptance": [],
+      "nextStep": "Preserve scoped native proof and source/API/image lineage; final PR integration tracked separately. P06-P09 wider acceptance remains open."
     },
     {
       "key": "P05",
       "issue": "https://github.com/oudaykhaled/boundarylab/issues/37",
       "parent": "B14",
       "title": "Implement platform-built facade and deliberate API client",
-      "status": "Blocked",
+      "status": "Done",
       "owner": "AOSP team",
       "evidence": [
-        "docs/AOSP-CLOUD-BUDGET.md"
+        "docs/evidence/aosp/custom-20261030/README.md",
+        "docs/evidence/aosp/custom-20261030/actual-results.json",
+        "docs/evidence/reviews/AOSP-ACCEPTANCE-MAP.md",
+        "docs/evidence/P03/api-freeze/README.md",
+        "docs/AOSP-LAYERS.md"
       ],
-      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
-      "remainingAcceptance": [
-        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
-        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
-      ],
-      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+      "result": "Final source444ae29 native/image/runtime passed:61 unique native assertions,236 harness observations and34 operator checks. All6 original ticket clauses independently AI audited; exact source/evidence published at83f99f1, issue closed and actual Chrome board verified. Five earlier failed proofs retained.",
+      "remainingAcceptance": [],
+      "nextStep": "Preserve scoped native proof and source/API/image lineage; final PR integration tracked separately. P06-P09 wider acceptance remains open."
     },
     {
       "key": "P06",
@@ -485,14 +485,15 @@
       "status": "Blocked",
       "owner": "AOSP team",
       "evidence": [
-        "docs/AOSP-CLOUD-BUDGET.md"
+        "docs/evidence/reviews/AOSP-ACCEPTANCE-MAP.md",
+        "docs/evidence/aosp/custom-20261030/README.md"
       ],
-      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
+      "result": "Minimum image identity, boot/denial/restart and generated-only capability portions are evidenced. Supported interface evolution was not executed.",
       "remainingAcceptance": [
-        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
-        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
+        "V01 remains open.",
+        "AC4: run supported interface evolution through a previously compiled unchanged platform consumer; frozenV1 alone does not establish this."
       ],
-      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+      "nextStep": "Resolve stated prerequisites and separately plan the original campaign; disposable cloud host has been deleted."
     },
     {
       "key": "P07",
@@ -502,14 +503,15 @@
       "status": "Blocked",
       "owner": "AOSP team",
       "evidence": [
-        "docs/AOSP-CLOUD-BUDGET.md"
+        "docs/evidence/reviews/AOSP-ACCEPTANCE-MAP.md",
+        "docs/evidence/aosp/custom-20261030/README.md"
       ],
-      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
+      "result": "No matched baseline/candidate trace-backed scheduling, IPC, compute or memory experiment executed; restart timings establish no performance improvement.",
       "remainingAcceptance": [
-        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
-        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
+        "P06 and measurement readiness remain open.",
+        "Execute the original matched baseline/candidate controlled investigation with traces and uncertainty."
       ],
-      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+      "nextStep": "Resolve stated prerequisites and separately plan the original campaign; disposable cloud host has been deleted."
     },
     {
       "key": "P08",
@@ -519,14 +521,15 @@
       "status": "Blocked",
       "owner": "AOSP team",
       "evidence": [
-        "docs/AOSP-CLOUD-BUDGET.md"
+        "docs/evidence/reviews/AOSP-ACCEPTANCE-MAP.md",
+        "docs/evidence/aosp/custom-20261030/README.md"
       ],
-      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
+      "result": "The declared two-hour workload and memory-trend campaign did not run. Short recovery checks and three restarts are narrower evidence.",
       "remainingAcceptance": [
-        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
-        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
+        "P06 remains open.",
+        "Run original two-hour offered/admitted/rejected/completed/lost accounting, bounded-resource and memory-trend acceptance."
       ],
-      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+      "nextStep": "Resolve stated prerequisites and separately plan the original campaign; disposable cloud host has been deleted."
     },
     {
       "key": "P09",
@@ -536,14 +539,15 @@
       "status": "Blocked",
       "owner": "AOSP team",
       "evidence": [
-        "docs/AOSP-CLOUD-BUDGET.md"
+        "docs/evidence/reviews/AOSP-ACCEPTANCE-MAP.md",
+        "docs/evidence/aosp/custom-20261030/README.md"
       ],
-      "result": "Resource audit and concrete GCE host/preflight/budget plan exist; no image/service execution.",
+      "result": "Recipe, actual requirement ledger and scoped AI review limits are documented. Fresh final-image/client reproduction did not run.",
       "remainingAcceptance": [
-        "No allocated authorized Linux x86_64/KVM host or approved cloud budget.",
-        "Prerequisite enforcing Cuttlefish baseline/build and the ticket's own executed platform acceptance remain open."
+        "P07, P08 and L02 dependencies remain open.",
+        "Reproduce final image/client from a fresh environment; initial baseline plus incremental custom builds are not independent final reproduction."
       ],
-      "nextStep": "No allocated authorized Linux x86_64/KVM host or approved cloud budget."
+      "nextStep": "Resolve stated prerequisites and separately plan the original campaign; disposable cloud host has been deleted."
     },
     {
       "key": "FP01",
@@ -600,7 +604,7 @@
       "evidence": [
         "docs/evidence/build/android-native-saf-post-loss-r2.json"
       ],
-      "result": "Final native real picker\u2192broker\u21922/2 prepare\u2192explicit destination export; native9 installed cases.",
+      "result": "Final native real picker→broker→2/2 prepare→explicit destination export; native9 installed cases.",
       "remainingAcceptance": [
         "Revoked/null/cancelled/delayed provider matrix.",
         "Actual broker loss mid-file/pack and destination cancellation/write-error UI."
@@ -760,7 +764,7 @@
     {
       "key": "B12",
       "issue": "https://github.com/oudaykhaled/boundarylab/issues/12",
-      "status": "Blocked",
+      "status": "Done",
       "children": [
         "P01",
         "P02"
@@ -769,7 +773,7 @@
     {
       "key": "B13",
       "issue": "https://github.com/oudaykhaled/boundarylab/issues/13",
-      "status": "Blocked",
+      "status": "Done",
       "children": [
         "P03",
         "P04"
@@ -778,7 +782,7 @@
     {
       "key": "B14",
       "issue": "https://github.com/oudaykhaled/boundarylab/issues/14",
-      "status": "Blocked",
+      "status": "In Progress",
       "children": [
         "P05",
         "P06"
@@ -817,17 +821,68 @@
     }
   ],
   "counts": {
-    "Done": 8,
+    "Done": 13,
     "In Review": 11,
     "In Progress": 8,
     "Planned": 4,
-    "Blocked": 9
+    "Blocked": 4
   },
   "boardCounts": {
-    "Done": 10,
+    "Done": 17,
     "In Review": 15,
-    "In Progress": 14,
+    "In Progress": 15,
     "Planned": 4,
-    "Blocked": 14
-  }
+    "Blocked": 6
+  },
+  "aospAttempt": {
+    "sourcePreparationCommit": "5663baa0bcdefb5b82f6a219995129d6c91bd48f",
+    "authorizedTotalUsd": 50,
+    "budgetScopeAmendment": "ADR-B14; user explicitly authorized cloud testing/evidence after original P01 no-purchase text",
+    "hostGate": "Actual non-root KVM and paired public prebuilt boot completed with SELinux Enforcing; source baseline remains separate",
+    "sourceBaseline": "Verified Android16r4 unchanged source build21:36:20UTC and enforcing/sandboxed boot+cleanup21:37:50UTC; fingerprint matches actual built system. All39 exported file hashes verified and actual PNG visually inspected.",
+    "evidence": "docs/evidence/aosp/attempt-20261030/README.md",
+    "settledCostUsd": null,
+    "reviewedNativeCheckpoint": "735ebba107a4b0ab82fa4f243cd8c3c350236a8d",
+    "customIntegration": "Actual pinned Soong frozenV1 API, native-r5/image-r4 compile and complete custom runtime at444ae29 verified. Three BoundaryLab domains nonpermissive in loaded policy, global Enforcing before/after; engineunit process su is separately permissive.",
+    "sourceBaselineEvidence": "docs/evidence/P02/README.md",
+    "apiPartitionFixCommit": "e50a8e24dc218790e80e84c80677addb16a4b033",
+    "frozenV1Hash": "6a6258db03acac4a2fa4bd1abecbcf528d7348ea",
+    "realApiExportSha256": "a920dd1d8a9648ead13271791593bb59c54e814e95deb251461c88cee39bf758",
+    "customCompiledSource": "df4f293b611ccc60f685e08e9a6a5b873860872e",
+    "runtimeProof": "Finalr6 source444ae29 passed34 operator checks/236 harness observations/61 unique native assertions. All original P03-P05 clauses independently AI audited6/6 each; source/evidence published, issues closed and actual Chrome board verified. Five earlier failed proof attempts preserved.",
+    "reviewedPolicyCorrectionCommit": "0d484a0ec7e3b60ce3394440d436f78108bce379",
+    "finalBoundedSourceCommit": "444ae29a31833616c465e155a3dc1335d061cda6",
+    "finalRuntimeEvidence": "docs/evidence/aosp/custom-20261030/actual-results.json",
+    "teardownVerified": true,
+    "teardownEvidence": "docs/evidence/aosp/teardown-20261030/teardown.json",
+    "estimatedInfrastructureUsd": 6.1723,
+    "conservativeEstimateWithReserveUsd": 11.4413,
+    "chargedResourcesAbsentSinceUtc": "2026-10-30T22:41:46.211288+00:00",
+    "sourceEvidencePublicationCommit": "83f99f1455e6b803403c26877c54c2ae431eaca9",
+    "sourceEvidencePublication": "Verified on GitHub: all1024 curated custom proof files tracked, local and remote commit trees identical. Final PR integration remains separate."
+  },
+  "lastPublishedBoardCounts": {
+    "Done": 17,
+    "In Review": 15,
+    "In Progress": 15,
+    "Planned": 4,
+    "Blocked": 6
+  },
+  "boardSync": {
+    "status": "verified",
+    "verifiedUtc": "2026-10-30T22:57:53.792722+00:00",
+    "method": "Chrome rendered DOM and reload; issue REST receipts; no inference from issue closure alone",
+    "projectUrl": "https://github.com/users/oudaykhaled/projects/3",
+    "g3Counts": {
+      "Planned": 0,
+      "Ready": 0,
+      "In Progress": 1,
+      "In Review": 0,
+      "Done": 7,
+      "Blocked": 6
+    },
+    "note": "P03-P05 and B13 Done only after published exact source/evidence and independent18-clause AI audit; B14 remains In Progress1/2, P06-P09/B15/B16 Blocked. Final PR merge is separate from scoped ticket acceptance."
+  },
+  "integrationPullRequest": "https://github.com/oudaykhaled/boundarylab/pull/59",
+  "ciRunnerMigrationEvidence": "docs/evidence/build/ci-macos14-brownout-20261030.json"
 }

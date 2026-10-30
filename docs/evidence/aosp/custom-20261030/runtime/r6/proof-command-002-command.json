@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "sysctl",
+    "-n",
+    "kernel.unprivileged_userns_clone"
+  ],
+  "started_utc": "2026-10-30T22:37:58.804188+00:00",
+  "ended_utc": "2026-10-30T22:37:58.805620+00:00",
+  "exit_code": 0,
+  "timed_out": false,
+  "error": null,
+  "duration_seconds": 0.0014350259989441838
+}

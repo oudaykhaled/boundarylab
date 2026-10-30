@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "adb",
+    "-s",
+    "0.0.0.0:6520",
+    "shell",
+    "logcat -d -v brief -T '10-30 22:32:14.000' -s BoundaryLabProbe:I '*:S'"
+  ],
+  "started_at": "2026-10-30T22:32:15.549847+00:00",
+  "ended_at": "2026-10-30T22:32:15.596395+00:00",
+  "exit_code": 0,
+  "stdout": "--------- beginning of main\nI/BoundaryLabProbe( 4382): {\"case\":\"context_available\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4382): {\"case\":\"denied_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_denied:s0\"}\nI/BoundaryLabProbe( 4382): {\"case\":\"global_enforcing\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4382): {\"case\":\"service_discovery\",\"passed\":true,\"detail\":\"\"}\nI/BoundaryLabProbe( 4382): {\"case\":\"denied_real_uid\",\"passed\":false,\"detail\":\"9999\"}\n",
+  "stderr": ""
+}

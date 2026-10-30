@@ -1,0 +1,106 @@
+{
+  "kind": "real_soong_api_freeze_export",
+  "utc": "2026-10-30T21:50:22.004728+00:00",
+  "successful_update_attempt": 2,
+  "successful_freeze_attempt": 1,
+  "original_failed_update_preserved": true,
+  "files": [
+    {
+      "path": "Android.bp",
+      "bytes": 2869,
+      "sha256": "2823bd4cfaaead8654b3be027a754babf6e847a0de4e73c5d44ed79d7bcd394d"
+    },
+    {
+      "path": "aidl_api/boundarylab-platform/1/.hash",
+      "bytes": 41,
+      "sha256": "5af33e491e67fce275b3ba9d42257d4074e175cf698c0f5e196c2e3d0afa5312"
+    },
+    {
+      "path": "aidl_api/boundarylab-platform/1/dev/boundarylab/platform/Capabilities.aidl",
+      "bytes": 1849,
+      "sha256": "995e8577b632a7d020267c733e27fcfa116460c6cef6a8631192aaf9d8b4c513"
+    },
+    {
+      "path": "aidl_api/boundarylab-platform/1/dev/boundarylab/platform/IBoundaryLab.aidl",
+      "bytes": 1909,
+      "sha256": "699ff1f3b4db472671c0c5e1501c97dffc7d08d312e10f4ec41b27f639662fb4"
+    },
+    {
+      "path": "aidl_api/boundarylab-platform/1/dev/boundarylab/platform/Request.aidl",
+      "bytes": 1325,
+      "sha256": "7e312560dd9ec12101cee5fd2453c960c0a356e2083c634ab02c944de0ae91a4"
+    },
+    {
+      "path": "aidl_api/boundarylab-platform/1/dev/boundarylab/platform/Result.aidl",
+      "bytes": 1402,
+      "sha256": "f3fa5989b9253411f1d2b683fe40811ec1ae16312ab07de799719ab0382caf74"
+    },
+    {
+      "path": "aidl_api/boundarylab-platform/current/dev/boundarylab/platform/Capabilities.aidl",
+      "bytes": 1849,
+      "sha256": "995e8577b632a7d020267c733e27fcfa116460c6cef6a8631192aaf9d8b4c513"
+    },
+    {
+      "path": "aidl_api/boundarylab-platform/current/dev/boundarylab/platform/IBoundaryLab.aidl",
+      "bytes": 1909,
+      "sha256": "699ff1f3b4db472671c0c5e1501c97dffc7d08d312e10f4ec41b27f639662fb4"
+    },
+    {
+      "path": "aidl_api/boundarylab-platform/current/dev/boundarylab/platform/Request.aidl",
+      "bytes": 1325,
+      "sha256": "7e312560dd9ec12101cee5fd2453c960c0a356e2083c634ab02c944de0ae91a4"
+    },
+    {
+      "path": "aidl_api/boundarylab-platform/current/dev/boundarylab/platform/Result.aidl",
+      "bytes": 1402,
+      "sha256": "f3fa5989b9253411f1d2b683fe40811ec1ae16312ab07de799719ab0382caf74"
+    },
+    {
+      "path": "freeze-api-r1/build-result.json",
+      "bytes": 648,
+      "sha256": "f0459e722703f1fdd64c882b874d129762b0a45dc2ffff320ce0a5c730ac8799"
+    },
+    {
+      "path": "freeze-api-r1/build.log",
+      "bytes": 1744,
+      "sha256": "680831f941586228653d086bab81833e0474e0172cd65b239127cd8e80bf6188"
+    },
+    {
+      "path": "integration-cuttlefish.diff",
+      "bytes": 908,
+      "sha256": "7afd1d92bc55752196223b74cc6c0df4e3c94c5e17dce82f8feec2927773c14a"
+    },
+    {
+      "path": "manifest.xml",
+      "bytes": 233871,
+      "sha256": "4e8beb5d1b590dff3d631b1dbb957138dbda4e608a3183c625683da4bc84918f"
+    },
+    {
+      "path": "source-status-after-overlay.txt",
+      "bytes": 142,
+      "sha256": "8ec03b4b06f71b569b0c66a9a35feadd96e325bfcb0c9f1daa07a84cd1a216bd"
+    },
+    {
+      "path": "update-api-r1/build-result.json",
+      "bytes": 648,
+      "sha256": "edce0348e495e24c8e805f54316474af43572aaf411c5fb3b039f84452476e8f"
+    },
+    {
+      "path": "update-api-r1/build.log",
+      "bytes": 2059,
+      "sha256": "87a7f58105ff9edb90ca4bd7fb75fa56615a92ac2dfea5859ea8002d38a1f1b6"
+    },
+    {
+      "path": "update-api-r2/build-result.json",
+      "bytes": 648,
+      "sha256": "b7c78ac7754aaf346f214b2943bfe7d1f4cb534313ab09a441a786a64852f73b"
+    },
+    {
+      "path": "update-api-r2/build.log",
+      "bytes": 2661,
+      "sha256": "967e2016ad65c6b4bfe0f64ecb267f5c29a247b82ce0eaaf9cf1027a4ab74a54"
+    }
+  ],
+  "frozen_v1_hash_bytes": "6a6258db03acac4a2fa4bd1abecbcf528d7348ea\n",
+  "custom_image_or_runtime_proven": false
+}

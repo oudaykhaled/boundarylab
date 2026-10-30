@@ -1,0 +1,30 @@
+{
+  "kind": "byte_preserved_exact_program_host_recovery",
+  "source_archive_sha256": "5ec251cd542f89a6c6c21ce6a89e80cbbe14422bc5e74d16dc90213a8c384cc8",
+  "source_archive_bytes": 1147,
+  "archive_hash_verified_locally": true,
+  "files": [
+    {
+      "path": "result.json",
+      "bytes": 901,
+      "sha256": "539b6d091d30ec6d2b2fea07900a5c038549a73865a85112cd69f9b9e87cb7f4"
+    },
+    {
+      "path": "commands.json",
+      "bytes": 2081,
+      "sha256": "ee71ebc2d09cf8f990b0fdd884c16077fc7d28bfed18de2ec5006b39b5779af9"
+    },
+    {
+      "path": "profile-before.json",
+      "bytes": 39,
+      "sha256": "b8102a6636d55183009c43bbe6f2acd155dbe3b449138fc2122d24622baf992f"
+    },
+    {
+      "path": "profile-applied.txt",
+      "bytes": 161,
+      "sha256": "c4a587b1ff1aa8a1e4a5157fb5ca32763c0b49eeefcefe03afe2d9b87d5ffb5f"
+    }
+  ],
+  "transformation": "none; original bytes",
+  "limitation": "Applied host compatibility controls only; no successful image/build/runtime is inferred."
+}

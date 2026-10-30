@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/srv/aosp/source/vendor/boundarylab/scripts/device-smoke.py", line 229, in <module>
+    check('denied_real_uid', '"case":"denied_real_uid","passed":true' in denied_logs, denied_logs)
+  File "/srv/aosp/source/vendor/boundarylab/scripts/device-smoke.py", line 40, in check
+    raise RuntimeError(f'Failed: {name}: {actual}')
+RuntimeError: Failed: denied_real_uid: --------- beginning of main
+I/BoundaryLabProbe( 4382): {"case":"context_available","passed":true,"detail":""}
+I/BoundaryLabProbe( 4382): {"case":"denied_domain","passed":true,"detail":"u:r:boundarylab_denied:s0"}
+I/BoundaryLabProbe( 4382): {"case":"global_enforcing","passed":true,"detail":""}
+I/BoundaryLabProbe( 4382): {"case":"service_discovery","passed":true,"detail":""}
+I/BoundaryLabProbe( 4382): {"case":"denied_real_uid","passed":false,"detail":"9999"}

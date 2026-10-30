@@ -1,0 +1,22 @@
+diff --git a/vsoc_x86_64_only/BoardConfig.mk b/vsoc_x86_64_only/BoardConfig.mk
+index 7b2de1e..fe5b15d 100644
+--- a/vsoc_x86_64_only/BoardConfig.mk
++++ b/vsoc_x86_64_only/BoardConfig.mk
+@@ -45,3 +45,6 @@ AUDIOSERVER_MULTILIB := first
+ ifneq ($(BOARD_IS_AUTOMOTIVE), true)
+ -include device/google/cuttlefish/shared/virgl/BoardConfig.mk
+ endif
++
++# BoundaryLab generated-only platform proof
++include vendor/boundarylab/BoardConfigBoundaryLab.mk
+diff --git a/vsoc_x86_64_only/phone/aosp_cf.mk b/vsoc_x86_64_only/phone/aosp_cf.mk
+index ab01b8a..5b4705b 100644
+--- a/vsoc_x86_64_only/phone/aosp_cf.mk
++++ b/vsoc_x86_64_only/phone/aosp_cf.mk
+@@ -68,3 +68,6 @@ PRODUCT_IGNORE_ALL_ANDROIDMK := true
+ ifeq ($(TARGET_PRODUCT),aosp_cf_x86_64_only_phone)
+ PRODUCT_SOONG_ONLY := $(RELEASE_SOONG_ONLY_CUTTLEFISH)
+ endif
++
++# BoundaryLab generated-only platform proof
++$(call inherit-product, vendor/boundarylab/product.mk)

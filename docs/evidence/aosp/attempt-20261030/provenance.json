@@ -1,0 +1,91 @@
+{
+  "kind": "curated_public_evidence",
+  "limitation": "Derived from root-collected receipts; hashes preserve linkage to retained originals, not independent provider attestation. No automated JSON probe was used for prebuilt boot; root checked exact stdout assertions.",
+  "commands": [
+    {
+      "label": "kvm-preflight",
+      "scope": "resource-preflight",
+      "started_utc": "2026-10-30T16:33:07.835245+00:00",
+      "ended_utc": "2026-10-30T16:33:10.115056+00:00",
+      "exit_code": 0,
+      "timed_out": false,
+      "original_private_receipt_sha256": "d74d077441bf482cc685dd195ba0d3e0d6da3fc1a4e0f4435ab5dda66140a1f3",
+      "original_collected_stdout_sha256": "3b6a6a27a54084534f92ca50d12f37d77b71bde21507887644a907c7f119204c",
+      "public_file": "host-kvm.json",
+      "redactions": [
+        "genericADBendpoint",
+        "ephemeralattemptname"
+      ],
+      "command_expectation_met": true,
+      "probe_assertions_passed": false
+    },
+    {
+      "label": "public-boot-verification-and-screenshot",
+      "scope": "prebuilt-baseline",
+      "started_utc": "2026-10-30T16:53:58.777438+00:00",
+      "ended_utc": "2026-10-30T16:54:01.917057+00:00",
+      "exit_code": 0,
+      "timed_out": false,
+      "original_private_receipt_sha256": "ddfae42a53154acd7cc533b4bf4fad2a4401c84fc318b0787d3310ed629e359d",
+      "original_collected_stdout_sha256": "45f8308a26102e5d18101301265d56dc17e6acb69082039d75e6f9e091c28d0c",
+      "public_file": "prebuilt-boot.txt",
+      "redactions": [
+        "genericADBendpoint",
+        "ephemeralattemptname"
+      ],
+      "command_expectation_met": true,
+      "probe_assertions_passed": false
+    },
+    {
+      "label": "public-boot-failure-diagnosis",
+      "scope": "prebuilt-baseline",
+      "started_utc": "2026-10-30T16:39:23.293809+00:00",
+      "ended_utc": "2026-10-30T16:39:25.769271+00:00",
+      "exit_code": 0,
+      "timed_out": false,
+      "original_private_receipt_sha256": "dd67999bd1c9ad4d744a4d8b1d986e6d18c8235aa0429f5a28c3a1a6aedf7e40",
+      "original_collected_stdout_sha256": "94eb816432e0bd8deca7ff57146fb442f0e734f36ce2065effcdf82c0980a9af",
+      "public_file": "first-failure-and-controls.txt",
+      "redactions": [
+        "genericADBendpoint",
+        "ephemeralattemptname"
+      ],
+      "command_expectation_met": true,
+      "probe_assertions_passed": false
+    },
+    {
+      "label": "scoped-crosvm-userns-profile",
+      "scope": "prebuilt-baseline",
+      "started_utc": "2026-10-30T16:41:32.960194+00:00",
+      "ended_utc": "2026-10-30T16:41:35.208453+00:00",
+      "exit_code": 0,
+      "timed_out": false,
+      "original_private_receipt_sha256": "4a567df3bac740fc667eb7d033275b59ec5c43fae63a73edbe5f48d3046830ed",
+      "original_collected_stdout_sha256": "d36b58978944119b10d00b61e14261136bf6353d42e0f0983faa98fe65b6433c",
+      "public_file": "scoped-host-profile.txt",
+      "redactions": [
+        "genericADBendpoint",
+        "ephemeralattemptname"
+      ],
+      "command_expectation_met": true,
+      "probe_assertions_passed": false
+    },
+    {
+      "label": "public-graphics-helper-state",
+      "scope": "prebuilt-baseline",
+      "started_utc": "2026-10-30T16:51:58.678131+00:00",
+      "ended_utc": "2026-10-30T16:52:00.972364+00:00",
+      "exit_code": 0,
+      "timed_out": false,
+      "original_private_receipt_sha256": "932747e0919e6c4a9da95dd02f65e9426ecc56299714b55625cd03e5e14e2674",
+      "original_collected_stdout_sha256": "81ecf62035b35802f6013b8bf525af24eafe6e62b779f13892860339d68f4266",
+      "public_file": "graphics-helper-state.txt",
+      "redactions": [
+        "genericADBendpoint",
+        "ephemeralattemptname"
+      ],
+      "command_expectation_met": true,
+      "probe_assertions_passed": false
+    }
+  ]
+}

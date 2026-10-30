@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/srv/aosp/source/vendor/boundarylab/scripts/device-smoke.py", line 141, in <module>
+    run_probe('empty')
+  File "/srv/aosp/source/vendor/boundarylab/scripts/device-smoke.py", line 69, in run_probe
+    out = shell(probe, *args, timeout=timeout)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/aosp/source/vendor/boundarylab/scripts/device-smoke.py", line 65, in shell
+    return adb('shell', shlex.join(args), **kwargs)['stdout'].strip()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/aosp/source/vendor/boundarylab/scripts/device-smoke.py", line 60, in adb
+    check(f'command_{sequence}', False, receipt)
+  File "/srv/aosp/source/vendor/boundarylab/scripts/device-smoke.py", line 39, in check
+    raise RuntimeError(f'Failed: {name}: {actual}')
+RuntimeError: Failed: command_11: {'argv': ['adb', '-s', '0.0.0.0:6520', 'shell', '/system_ext/bin/boundarylab_probe empty'], 'started_at': '2026-10-30T22:12:43.310875+00:00', 'ended_at': '2026-10-30T22:12:43.356352+00:00', 'exit_code': 1, 'stdout': '{"case":"context_available","passed":true,"detail":""}\n{"case":"authorized_domain","passed":true,"detail":"u:r:boundarylab_probe:s0"}\n{"case":"global_enforcing","passed":false,"detail":""}\n', 'stderr': ''}

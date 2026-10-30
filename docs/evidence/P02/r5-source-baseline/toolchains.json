@@ -1,0 +1,285 @@
+{
+  "kind": "pinned_checkout_toolchain_inventory",
+  "utc": "2026-10-30T21:31:34.288088+00:00",
+  "records": [
+    {
+      "path": "prebuilts/clang/host/linux-x86/clang-r547379/bin/clang",
+      "resolved_path": "/srv/aosp/source/prebuilts/clang/host/linux-x86/clang-r547379/bin/clang",
+      "sha256": "55d80d777d85327543868817fb836231691eae2e13030ab31a01a769a820bf2f",
+      "argv": [
+        "/srv/aosp/source/prebuilts/clang/host/linux-x86/clang-r547379/bin/clang",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "Android (13290119, +pgo, +bolt, +lto, +mlgo, based on r547379) clang version 20.0.0 (https://android.googlesource.com/toolchain/llvm-project b718bcaf8c198c82f3021447d943401e3ab5bd54)\nTarget: x86_64-unknown-linux-gnu\nThread model: posix\nInstalledDir: /srv/aosp/source/prebuilts/clang/host/linux-x86/clang-r547379/bin\n",
+      "stderr": "",
+      "started_utc": "2026-10-30T21:31:32.201191+00:00",
+      "ended_utc": "2026-10-30T21:31:32.491602+00:00"
+    },
+    {
+      "path": "prebuilts/clang/host/linux-x86/clang-r563880/bin/clang",
+      "resolved_path": "/srv/aosp/source/prebuilts/clang/host/linux-x86/clang-r563880/bin/clang",
+      "sha256": "af0f25ca6818aed54c1cab03dc591acd549f385b8447148326a413e3e59c22b7",
+      "argv": [
+        "/srv/aosp/source/prebuilts/clang/host/linux-x86/clang-r563880/bin/clang",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "Android (13783749, +pgo, +bolt, +lto, +mlgo, based on r563880) clang version 21.0.0 (https://android.googlesource.com/toolchain/llvm-project 5e96669f06077099aa41290cdb4c5e6fa0f59349)\nTarget: x86_64-unknown-linux-gnu\nThread model: posix\nInstalledDir: /srv/aosp/source/prebuilts/clang/host/linux-x86/clang-r563880/bin\n",
+      "stderr": "",
+      "started_utc": "2026-10-30T21:31:32.491627+00:00",
+      "ended_utc": "2026-10-30T21:31:32.538361+00:00"
+    },
+    {
+      "path": "prebuilts/clang/host/linux-x86/clang-r563880c/bin/clang",
+      "resolved_path": "/srv/aosp/source/prebuilts/clang/host/linux-x86/clang-r563880c/bin/clang",
+      "sha256": "af0f25ca6818aed54c1cab03dc591acd549f385b8447148326a413e3e59c22b7",
+      "argv": [
+        "/srv/aosp/source/prebuilts/clang/host/linux-x86/clang-r563880c/bin/clang",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "Android (14054515, +pgo, +bolt, +lto, +mlgo, based on r563880c) clang version 21.0.0 (https://android.googlesource.com/toolchain/llvm-project 5e96669f06077099aa41290cdb4c5e6fa0f59349)\nTarget: x86_64-unknown-linux-gnu\nThread model: posix\nInstalledDir: /srv/aosp/source/prebuilts/clang/host/linux-x86/clang-r563880c/bin\n",
+      "stderr": "",
+      "started_utc": "2026-10-30T21:31:32.538384+00:00",
+      "ended_utc": "2026-10-30T21:31:32.575019+00:00"
+    },
+    {
+      "path": "prebuilts/clang/host/linux-x86/clang-r574158/bin/clang",
+      "resolved_path": "/srv/aosp/source/prebuilts/clang/host/linux-x86/clang-r574158/bin/clang",
+      "sha256": "299652998a01e2ecd22b743b62e63311662ed05a9aabf6cd329e85f43fc65089",
+      "argv": [
+        "/srv/aosp/source/prebuilts/clang/host/linux-x86/clang-r574158/bin/clang",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "Android (14054843, +pgo, +bolt, +lto, +mlgo, based on r574158) clang version 21.0.0 (https://android.googlesource.com/toolchain/llvm-project 9f872551d3c681d06fd303b36f16ed5c274735eb)\nTarget: x86_64-unknown-linux-gnu\nThread model: posix\nInstalledDir: /srv/aosp/source/prebuilts/clang/host/linux-x86/clang-r574158/bin\n",
+      "stderr": "",
+      "started_utc": "2026-10-30T21:31:32.575046+00:00",
+      "ended_utc": "2026-10-30T21:31:32.759484+00:00"
+    },
+    {
+      "path": "prebuilts/rust/linux-x86/1.88.0/bin/rustc",
+      "resolved_path": "/srv/aosp/source/prebuilts/rust/linux-x86/1.88.0/bin/rustc",
+      "sha256": "af784f8029855672c6b51b74033238b45effed201d1ba5023f65f3f4395605f1",
+      "argv": [
+        "/srv/aosp/source/prebuilts/rust/linux-x86/1.88.0/bin/rustc",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "rustc 1.88.0-dev (6b00bc388 2025-06-23) (Android Rust Toolchain version 13951379-linux-x86)\n",
+      "stderr": "",
+      "started_utc": "2026-10-30T21:31:32.759508+00:00",
+      "ended_utc": "2026-10-30T21:31:32.798134+00:00"
+    },
+    {
+      "path": "prebuilts/jdk/jdk21/linux-x86/bin/java",
+      "resolved_path": "/srv/aosp/source/prebuilts/jdk/jdk21/linux-x86/bin/java",
+      "sha256": "cfa21aeadd00925925c9e1287f5c08f3e04ee7f26a9e23d9dbfb16149153d842",
+      "argv": [
+        "/srv/aosp/source/prebuilts/jdk/jdk21/linux-x86/bin/java",
+        "-version"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "openjdk version \"21.0.4\" 2024-07-16\nOpenJDK Runtime Environment Android_PDK (build 21.0.4+-12414455)\nOpenJDK 64-Bit Server VM Android_PDK (build 21.0.4+-12414455, mixed mode, sharing)\n",
+      "started_utc": "2026-10-30T21:31:32.798159+00:00",
+      "ended_utc": "2026-10-30T21:31:32.867040+00:00"
+    },
+    {
+      "path": "prebuilts/jdk/jdk25/linux-x86/bin/java",
+      "resolved_path": "/srv/aosp/source/prebuilts/jdk/jdk25/linux-x86/bin/java",
+      "sha256": "48880bfbbd7c37c7f89c27eeef9a6d22a8be37e071accf39fafad0f0cec9d968",
+      "argv": [
+        "/srv/aosp/source/prebuilts/jdk/jdk25/linux-x86/bin/java",
+        "-version"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "openjdk version \"25\" 2025-09-16\nOpenJDK Runtime Environment Android_PDK (build 25+-13900132)\nOpenJDK 64-Bit Server VM Android_PDK (build 25+-13900132, mixed mode, sharing)\n",
+      "started_utc": "2026-10-30T21:31:32.867056+00:00",
+      "ended_utc": "2026-10-30T21:31:33.095613+00:00"
+    },
+    {
+      "path": "prebuilts/jdk/jdk8/linux-x86/bin/java",
+      "resolved_path": "/srv/aosp/source/prebuilts/jdk/jdk8/linux-x86/bin/java",
+      "sha256": "abb55fd32efe5f104615cbc34b15180af0a18d1adc98892d5a6ce379df778c90",
+      "argv": [
+        "/srv/aosp/source/prebuilts/jdk/jdk8/linux-x86/bin/java",
+        "-version"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "openjdk version \"1.8.0_152-android\"\nOpenJDK Runtime Environment (build 1.8.0_152-android-4627429-1)\nOpenJDK 64-Bit Server VM (build 25.152-b1, mixed mode)\n",
+      "started_utc": "2026-10-30T21:31:33.095627+00:00",
+      "ended_utc": "2026-10-30T21:31:33.397938+00:00"
+    },
+    {
+      "path": "prebuilts/jdk/jdk21/linux-x86/bin/javac",
+      "resolved_path": "/srv/aosp/source/prebuilts/jdk/jdk21/linux-x86/bin/javac",
+      "sha256": "18351d7a271f6b8bd17f9e8fef6bb04baa7cf008cbc8a3a782a93a2f5c48ecfa",
+      "argv": [
+        "/srv/aosp/source/prebuilts/jdk/jdk21/linux-x86/bin/javac",
+        "-version"
+      ],
+      "exit_code": 0,
+      "stdout": "javac 21.0.4\n",
+      "stderr": "",
+      "started_utc": "2026-10-30T21:31:33.397957+00:00",
+      "ended_utc": "2026-10-30T21:31:33.639003+00:00"
+    },
+    {
+      "path": "prebuilts/jdk/jdk25/linux-x86/bin/javac",
+      "resolved_path": "/srv/aosp/source/prebuilts/jdk/jdk25/linux-x86/bin/javac",
+      "sha256": "39ae135fc81306d07752c67fb9a4c38250976405510a170f7c328269a869603b",
+      "argv": [
+        "/srv/aosp/source/prebuilts/jdk/jdk25/linux-x86/bin/javac",
+        "-version"
+      ],
+      "exit_code": 0,
+      "stdout": "javac 25\n",
+      "stderr": "",
+      "started_utc": "2026-10-30T21:31:33.639022+00:00",
+      "ended_utc": "2026-10-30T21:31:33.986462+00:00"
+    },
+    {
+      "path": "prebuilts/jdk/jdk8/linux-x86/bin/javac",
+      "resolved_path": "/srv/aosp/source/prebuilts/jdk/jdk8/linux-x86/bin/javac",
+      "sha256": "8b877cd3f5d440e285917d7f705213313976dbb944448d90601baec5023da4e1",
+      "argv": [
+        "/srv/aosp/source/prebuilts/jdk/jdk8/linux-x86/bin/javac",
+        "-version"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "javac 1.8.0_152-android\n",
+      "started_utc": "2026-10-30T21:31:33.986480+00:00",
+      "ended_utc": "2026-10-30T21:31:34.270148+00:00"
+    },
+    {
+      "path": "prebuilts/build-tools/linux-x86/bin/ninja",
+      "resolved_path": "/srv/aosp/source/prebuilts/build-tools/linux-x86/bin/ninja",
+      "sha256": "b3c53a693d6496f3214464fac05fe53ba155489cc071861d9414e2128913c1a2",
+      "argv": [
+        "/srv/aosp/source/prebuilts/build-tools/linux-x86/bin/ninja",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "1.9.0.git\n",
+      "stderr": "",
+      "started_utc": "2026-10-30T21:31:34.270166+00:00",
+      "ended_utc": "2026-10-30T21:31:34.276997+00:00"
+    },
+    {
+      "path": "prebuilts/build-tools/linux-x86/bin/nsjail",
+      "resolved_path": "/srv/aosp/source/prebuilts/build-tools/linux-x86/bin/nsjail",
+      "sha256": "3f97556c3cf8a83d3f5ae854e6dfc2f345355ead547dd661d07a369b6c2ba280",
+      "argv": [
+        "/srv/aosp/source/prebuilts/build-tools/linux-x86/bin/nsjail",
+        "--version"
+      ],
+      "exit_code": 255,
+      "stdout": "",
+      "stderr": "/srv/aosp/source/prebuilts/build-tools/linux-x86/bin/nsjail: unrecognized option '--version'\n Usage: /srv/aosp/source/prebuilts/build-tools/linux-x86/bin/nsjail [options] -- path_to_command [args]\n Options:\n  --help|-h \n \tHelp plz..\n\n  --mode|-M VALUE\n \tExecution mode (default: 'o' [MODE_STANDALONE_ONCE]):\n\t  l: [MODE_LISTEN_TCP]\n\t\tWait for connections on a TCP port (specified with --port)\n\t  o: [MODE_STANDALONE_ONCE]\n\t\tLaunch a single process on the console using clone/execve\n\t  e: [MODE_STANDALONE_EXECVE]\n\t\tLaunch a single process on the console using execve\n\t  r: [MODE_STANDALONE_RERUN]\n\t\tLaunch a single process on the console with clone/execve, keep\n\t\tdoing it forever\n\n  --config|-C VALUE\n \tConfiguration file in the config.proto ProtoBuf format (see configs/\n\tdirectory for examples)\n\n  --exec_file|-x VALUE\n \tFile to exec (default: argv[0])\n\n  --execute_fd \n \tUse execveat() to execute a file-descriptor instead of executing the\n\tbinary path. In such case argv[0]/exec_file denotes a file path before\n\tmount namespacing\n\n  --chroot|-c VALUE\n \tDirectory containing / of the jail (default: none)\n\n  --no_pivotroot \n \tWhen creating a mount namespace, use mount(MS_MOVE) and chroot rather\n\tthan pivot_root. Usefull when pivot_root is disallowed (e.g.\n\tinitramfs). Note: escapable is some configuration\n\n  --rw \n \tMount chroot dir (/) R/W (default: R/O)\n\n  --user|-u VALUE\n \tUsername/uid of processes inside the jail (default: your current uid).\n\tYou can also use inside_ns_uid:outside_ns_uid:count convention here.\n\tCan be specified multiple times\n\n  --group|-g VALUE\n \tGroupname/gid of processes inside the jail (default: your current gid).\n\tYou can also use inside_ns_gid:global_ns_gid:count convention here. Can\n\tbe specified multiple times\n\n  --hostname|-H VALUE\n \tUTS name (hostname) of the jail (default: 'NSJAIL')\n\n  --cwd|-D VALUE\n \tDirectory in the namespace the process will run (default: '/')\n\n  --port|-p VALUE\n \tTCP port to bind to (enables MODE_LISTEN_TCP) (default: 0)\n\n  --bindhost VALUE\n \tIP address to bind the port to (only in [MODE_LISTEN_TCP]), (default:\n\t'::')\n\n  --max_conns VALUE\n \tMaximum number of connections across all IPs (only in\n\t[MODE_LISTEN_TCP]), (default: 0 (unlimited))\n\n  --max_conns_per_ip|-i VALUE\n \tMaximum number of connections per one IP (only in [MODE_LISTEN_TCP]),\n\t(default: 0 (unlimited))\n\n  --log|-l VALUE\n \tLog file (default: use log_fd)\n\n  --log_fd|-L VALUE\n \tLog FD (default: 2)\n\n  --time_limit|-t VALUE\n \tMaximum time that a jail can exist, in seconds (default: 600)\n\n  --max_cpus VALUE\n \tMaximum number of CPUs a single jailed process can use (default: 0 'no\n\tlimit')\n\n  --daemon|-d \n \tDaemonize after start\n\n  --verbose|-v \n \tVerbose output\n\n  --quiet|-q \n \tLog warning and more important messages only\n\n  --really_quiet|-Q \n \tLog fatal messages only\n\n  --keep_env|-e \n \tPass all environment variables to the child process (default: all\n\tenvars are cleared)\n\n  --env|-E VALUE\n \tAdditional environment variable (can be used multiple times). If the\n\tenvar doesn't contain '=' (e.g. just the 'DISPLAY' string), the current\n\tenvar value will be used\n\n  --keep_caps \n \tDon't drop any capabilities\n\n  --cap VALUE\n \tRetain this capability, e.g. CAP_PTRACE (can be specified multiple\n\ttimes)\n\n  --silent \n \tRedirect child process' fd:0/1/2 to /dev/null\n\n  --stderr_to_null \n \tRedirect child process' fd:2 (STDERR_FILENO) to /dev/null\n\n  --skip_setsid \n \tDon't call setsid(), allows for terminal signal handling in the\n\tsandboxed process. Dangerous\n\n  --pass_fd VALUE\n \tDon't close this FD before executing the child process (can be\n\tspecified multiple times), by default: 0/1/2 are kept open\n\n  --disable_no_new_privs \n \tDon't set the prctl(NO_NEW_PRIVS, 1) (DANGEROUS)\n\n  --rlimit_as VALUE\n \tRLIMIT_AS in MB, 'max' or 'hard' for the current hard limit, 'def' or\n\t'soft' for the current soft limit, 'inf' for RLIM64_INFINITY (default:\n\t4096)\n\n  --rlimit_core VALUE\n \tRLIMIT_CORE in MB, 'max' or 'hard' for the current hard limit, 'def' or\n\t'soft' for the current soft limit, 'inf' for RLIM64_INFINITY (default:\n\t0)\n\n  --rlimit_cpu VALUE\n \tRLIMIT_CPU, 'max' or 'hard' for the current hard limit, 'def' or 'soft'\n\tfor the current soft limit, 'inf' for RLIM64_INFINITY (default: 600)\n\n  --rlimit_fsize VALUE\n \tRLIMIT_FSIZE in MB, 'max' or 'hard' for the current hard limit, 'def'\n\tor 'soft' for the current soft limit, 'inf' for RLIM64_INFINITY\n\t(default: 1)\n\n  --rlimit_nofile VALUE\n \tRLIMIT_NOFILE, 'max' or 'hard' for the current hard limit, 'def' or\n\t'soft' for the current soft limit, 'inf' for RLIM64_INFINITY (default:\n\t32)\n\n  --rlimit_nproc VALUE\n \tRLIMIT_NPROC, 'max' or 'hard' for the current hard limit, 'def' or\n\t'soft' for the current soft limit, 'inf' for RLIM64_INFINITY (default:\n\t'soft')\n\n  --rlimit_stack VALUE\n \tRLIMIT_STACK in MB, 'max' or 'hard' for the current hard limit, 'def'\n\tor 'soft' for the current soft limit, 'inf' for RLIM64_INFINITY\n\t(default: 'soft')\n\n  --rlimit_memlock VALUE\n \tRLIMIT_MEMLOCK in KB, 'max' or 'hard' for the current hard limit, 'def'\n\tor 'soft' for the current soft limit, 'inf' for RLIM64_INFINITY\n\t(default: 'soft')\n\n  --rlimit_rtprio VALUE\n \tRLIMIT_RTPRIO, 'max' or 'hard' for the current hard limit, 'def' or\n\t'soft' for the current soft limit, 'inf' for RLIM64_INFINITY (default:\n\t'soft')\n\n  --rlimit_msgqueue VALUE\n \tRLIMIT_MSGQUEUE in bytes, 'max' or 'hard' for the current hard limit,\n\t'def' or 'soft' for the current soft limit, 'inf' for RLIM64_INFINITY\n\t(default: 'soft')\n\n  --disable_rlimits \n \tDisable all rlimits, default to limits set by parent\n\n  --persona_addr_compat_layout \n \tpersonality(ADDR_COMPAT_LAYOUT)\n\n  --persona_mmap_page_zero \n \tpersonality(MMAP_PAGE_ZERO)\n\n  --persona_read_implies_exec \n \tpersonality(READ_IMPLIES_EXEC)\n\n  --persona_addr_limit_3gb \n \tpersonality(ADDR_LIMIT_3GB)\n\n  --persona_addr_no_randomize \n \tpersonality(ADDR_NO_RANDOMIZE)\n\n  --disable_clone_newnet|-N \n \tDon't use CLONE_NEWNET. Enable global networking inside the jail\n\n  --disable_clone_newuser \n \tDon't use CLONE_NEWUSER. Requires euid==0\n\n  --disable_clone_newns \n \tDon't use CLONE_NEWNS\n\n  --disable_clone_newpid \n \tDon't use CLONE_NEWPID\n\n  --disable_clone_newipc \n \tDon't use CLONE_NEWIPC\n\n  --disable_clone_newuts \n \tDon't use CLONE_NEWUTS\n\n  --disable_clone_newcgroup \n \tDon't use CLONE_NEWCGROUP. Might be required for kernel versions < 4.6\n\n  --enable_clone_newtime \n \tUse CLONE_NEWTIME. Supported with kernel versions >= 5.3\n\n  --uid_mapping|-U VALUE\n \tAdd a custom uid mapping of the form inside_uid:outside_uid:count.\n\tSetting this requires newuidmap (set-uid) to be present\n\n  --gid_mapping|-G VALUE\n \tAdd a custom gid mapping of the form inside_gid:outside_gid:count.\n\tSetting this requires newgidmap (set-uid) to be present\n\n  --bindmount_ro|-R VALUE\n \tList of mountpoints to be mounted --bind (ro) inside the container. Can\n\tbe specified multiple times. Supports 'source' syntax, or 'source:dest'\n\n  --bindmount|-B VALUE\n \tList of mountpoints to be mounted --bind (rw) inside the container. Can\n\tbe specified multiple times. Supports 'source' syntax, or 'source:dest'\n\n  --tmpfsmount|-T VALUE\n \tList of mountpoints to be mounted as tmpfs (R/W) inside the container.\n\tCan be specified multiple times. Supports 'dest' syntax. Alternatively,\n\tuse '-m none:dest:tmpfs:size=8388608'\n\n  --mount|-m VALUE\n \tArbitrary mount, format src:dst:fs_type:options\n\n  --symlink|-s VALUE\n \tSymlink, format src:dst\n\n  --disable_proc \n \tDisable mounting procfs in the jail\n\n  --proc_path VALUE\n \tPath used to mount procfs (default: '/proc')\n\n  --proc_rw \n \tIs procfs mounted as R/W (default: R/O)\n\n  --seccomp_policy|-P VALUE\n \tPath to file containing seccomp-bpf policy (see kafel/)\n\n  --seccomp_string VALUE\n \tString with kafel seccomp-bpf policy (see kafel/)\n\n  --seccomp_log \n \tUse SECCOMP_FILTER_FLAG_LOG. Log all actions except SECCOMP_RET_ALLOW).\n\tSupported since kernel version 4.14\n\n  --nice_level VALUE\n \tSet jailed process niceness (-20 is highest -priority, 19 is lowest).\n\tBy default, set to 19\n\n  --cgroup_mem_max VALUE\n \tMaximum number of bytes to use in the group (default: '0' - disabled)\n\n  --cgroup_mem_memsw_max VALUE\n \tMaximum number of memory+swap bytes to use (default: '0' - disabled)\n\n  --cgroup_mem_swap_max VALUE\n \tMaximum number of swap bytes to use (default: '-1' - disabled)\n\n  --cgroup_mem_mount VALUE\n \tLocation of memory cgroup FS (default: '/sys/fs/cgroup/memory')\n\n  --cgroup_mem_parent VALUE\n \tWhich pre-existing memory cgroup to use as a parent (default: 'NSJAIL')\n\n  --cgroup_pids_max VALUE\n \tMaximum number of pids in a cgroup (default: '0' - disabled)\n\n  --cgroup_pids_mount VALUE\n \tLocation of pids cgroup FS (default: '/sys/fs/cgroup/pids')\n\n  --cgroup_pids_parent VALUE\n \tWhich pre-existing pids cgroup to use as a parent (default: 'NSJAIL')\n\n  --cgroup_net_cls_classid VALUE\n \tClass identifier of network packets in the group (default: '0' -\n\tdisabled)\n\n  --cgroup_net_cls_mount VALUE\n \tLocation of net_cls cgroup FS (default: '/sys/fs/cgroup/net_cls')\n\n  --cgroup_net_cls_parent VALUE\n \tWhich pre-existing net_cls cgroup to use as a parent (default:\n\t'NSJAIL')\n\n  --cgroup_cpu_ms_per_sec VALUE\n \tNumber of milliseconds of CPU time per second that the process group\n\tcan use (default: '0' - no limit)\n\n  --cgroup_cpu_mount VALUE\n \tLocation of cpu cgroup FS (default: '/sys/fs/cgroup/cpu')\n\n  --cgroup_cpu_parent VALUE\n \tWhich pre-existing cpu cgroup to use as a parent (default: 'NSJAIL')\n\n  --cgroupv2_mount VALUE\n \tLocation of cgroupv2 directory (default: '/sys/fs/cgroup')\n\n  --use_cgroupv2 \n \tUse cgroup v2\n\n  --detect_cgroupv2 \n \tUse cgroupv2, if it is available. (Specify instead of use_cgroupv2)\n\n  --iface_no_lo \n \tDon't bring the 'lo' interface up\n\n  --iface_own VALUE\n \tMove this existing network interface into the new NET namespace. Can be\n\tspecified multiple times\n\n  --macvlan_iface|-I VALUE\n \tInterface which will be cloned (MACVLAN) and put inside the subprocess'\n\tnamespace as 'vs'\n\n  --macvlan_vs_ip VALUE\n \tIP of the 'vs' interface (e.g. \"192.168.0.1\")\n\n  --macvlan_vs_nm VALUE\n \tNetmask of the 'vs' interface (e.g. \"255.255.255.0\")\n\n  --macvlan_vs_gw VALUE\n \tDefault GW for the 'vs' interface (e.g. \"192.168.0.1\")\n\n  --macvlan_vs_ma VALUE\n \tMAC-address of the 'vs' interface (e.g. \"ba:ad:ba:be:45:00\")\n\n  --macvlan_vs_mo VALUE\n \tMode of the 'vs' interface. Can be either 'private', 'vepa', 'bridge'\n\tor 'passthru' (default: 'private')\n\n  --disable_tsc \n \tDisable rdtsc and rdtscp instructions. WARNING: To make it effective,\n\tyou also need to forbid `prctl(PR_SET_TSC, PR_TSC_ENABLE, ...)` in\n\tseccomp rules! (x86 and x86_64 only). Dynamic binaries produced by GCC\n\tseem to rely on RDTSC, but static ones should work.\n\n  --forward_signals \n \tForward fatal signals to the child process instead of always using\n\tSIGKILL.\n\n \n Examples: \n  Wait on a port 31337 for connections, and run /bin/sh\n   nsjail -Ml --port 31337 --chroot / -- /bin/sh -i\n  Re-run echo command as a sub-process\n   nsjail -Mr --chroot / -- /bin/echo \"ABC\"\n  Run echo command once only, as a sub-process\n   nsjail -Mo --chroot / -- /bin/echo \"ABC\"\n  Execute echo command directly, without a supervising process\n   nsjail -Me --chroot / --disable_proc -- /bin/echo \"ABC\"\n[F][2026-10-30T21:31:34+0000][1844422] main():334 Couldn't parse cmdline options\n",
+      "started_utc": "2026-10-30T21:31:34.277017+00:00",
+      "ended_utc": "2026-10-30T21:31:34.285056+00:00"
+    }
+  ],
+  "selection_config": [
+    {
+      "path": "build/soong/cc/config/global.go",
+      "sha256": "4f480f21059dc067823e5cec0d3cc19acced992f0d34233e17ed4d81d0259881",
+      "selection_lines": [
+        {
+          "line": 416,
+          "text": "\tClangDefaultBase = \"prebuilts/clang/host\""
+        },
+        {
+          "line": 419,
+          "text": "\tClangDefaultVersion = \"clang-r563880c\""
+        },
+        {
+          "line": 536,
+          "text": "\tpctx.StaticVariableWithEnvOverride(\"ClangBase\", \"LLVM_PREBUILTS_BASE\", ClangDefaultBase)"
+        },
+        {
+          "line": 541,
+          "text": "\t\treturn ctx.Config().ReleaseBuildClangVersion(ClangDefaultVersion)"
+        },
+        {
+          "line": 602,
+          "text": "\t\tclangBase := ClangDefaultBase"
+        },
+        {
+          "line": 606,
+          "text": "\t\tclangVersion := ctx.Config().ReleaseBuildClangVersion(ClangDefaultVersion)"
+        },
+        {
+          "line": 615,
+          "text": "\treturn ctx.Config().ReleaseBuildClangVersion(ClangDefaultVersion)"
+        }
+      ]
+    },
+    {
+      "path": "build/soong/java/config/config.go",
+      "sha256": "8a448728200f3956a7dd5b2e22bf30f4a5acf2ca4cbc38e37e4cdae338a8a372",
+      "selection_lines": [
+        {
+          "line": 110,
+          "text": "\tpctx.StaticVariable(\"CommonJdkFlags\", strings.Join([]string{"
+        },
+        {
+          "line": 134,
+          "text": "\tpctx.VariableFunc(\"JavaHome\", func(ctx android.PackageVarContext) string {"
+        },
+        {
+          "line": 142,
+          "text": "\t\tif ctx.Config().BuildWithJdk25() {"
+        },
+        {
+          "line": 148,
+          "text": "\tpctx.SourcePathVariable(\"JavaToolchain\", \"${JavaHome}/bin\")"
+        },
+        {
+          "line": 156,
+          "text": "\tpctx.SourcePathVariable(\"JrtFsJar\", \"${JavaHome}/lib/jrt-fs.jar\")"
+        }
+      ]
+    },
+    {
+      "path": "build/soong/rust/config/global.go",
+      "sha256": "3099eb5c80da40aaf16ce7529a500971788d0f2c06320fae0bba4d82cf02ae6a",
+      "selection_lines": [
+        {
+          "line": 30,
+          "text": "\tRustDefaultVersion = \"1.88.0\""
+        },
+        {
+          "line": 31,
+          "text": "\tRustDefaultBase    = \"prebuilts/rust/\""
+        },
+        {
+          "line": 117,
+          "text": "\tvar RustBase string = RustDefaultBase"
+        },
+        {
+          "line": 125,
+          "text": "\tpctx.SourcePathVariable(\"RustDefaultBase\", RustDefaultBase)"
+        },
+        {
+          "line": 132,
+          "text": "\t\treturn \"${RustDefaultBase}\""
+        },
+        {
+          "line": 146,
+          "text": "\tpctx.StaticVariable(\"RUST_DEFAULT_VERSION\", RustDefaultVersion)"
+        },
+        {
+          "line": 194,
+          "text": "\treturn RustDefaultVersion"
+        }
+      ]
+    }
+  ],
+  "limitation": "Inventory of available pinned checkout executables and selection configuration. Build logs and locked manifest establish actual build provenance; this is not a build or test result."
+}

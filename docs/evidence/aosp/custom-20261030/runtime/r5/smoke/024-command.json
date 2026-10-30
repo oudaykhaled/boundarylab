@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "adb",
+    "-s",
+    "0.0.0.0:6520",
+    "unroot"
+  ],
+  "started_at": "2026-10-30T22:32:05.847855+00:00",
+  "ended_at": "2026-10-30T22:32:06.153707+00:00",
+  "exit_code": 0,
+  "stdout": "restarting adbd as non root\n",
+  "stderr": ""
+}

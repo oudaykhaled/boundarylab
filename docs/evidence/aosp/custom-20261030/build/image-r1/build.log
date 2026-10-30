@@ -1,0 +1,1199 @@
+
+============================================
+PLATFORM_VERSION_CODENAME=REL
+PLATFORM_VERSION=16
+TARGET_PRODUCT=aosp_cf_x86_64_only_phone
+TARGET_BUILD_VARIANT=userdebug
+TARGET_ARCH=x86_64
+TARGET_ARCH_VARIANT=silvermont
+HOST_OS=linux
+HOST_OS_EXTRA=Linux-7.0.0-1014-gcp-x86_64-Ubuntu-24.04.5-LTS
+HOST_CROSS_OS=windows
+BUILD_ID=BP4A.251205.006
+OUT_DIR=out
+SOONG_ONLY=true
+============================================
+Running product configuration...
+============================================
+PLATFORM_VERSION_CODENAME=REL
+PLATFORM_VERSION=16
+TARGET_PRODUCT=aosp_cf_x86_64_only_phone
+TARGET_BUILD_VARIANT=userdebug
+TARGET_ARCH=x86_64
+TARGET_ARCH_VARIANT=silvermont
+HOST_OS=linux
+HOST_OS_EXTRA=Linux-7.0.0-1014-gcp-x86_64-Ubuntu-24.04.5-LTS
+HOST_CROSS_OS=windows
+BUILD_ID=BP4A.251205.006
+OUT_DIR=out
+SOONG_ONLY=true
+============================================
+[100% 1/1] bootstrap blueprint
+Running globs...
+ninja: no work to do.
+No need to regenerate ninja file
+Starting ninja...
+[  0% 2/1402 10m7s remaining] raw make_metadata.csv
+[  0% 3/1402 10m7s remaining] raw product_packages.txt
+[  0% 4/1402 10m7s remaining] AIDL metadata: out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/metadata_boundarylab-platform
+[  0% 5/1402 10m7s remaining] //system/sepolicy/contexts:system_ext_service_contexts.recovery building contexts: system_ext_service_contexts.recovery [common]
+[  0% 6/1402 10m7s remaining] //system/sepolicy/contexts:system_ext_file_contexts.recovery building contexts: system_ext_file_contexts.recovery [common]
+[  0% 7/1402 10m7s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_image raw 822447109d602bce837b23103da312ef5525922e90765b7d2b3d0c865fd225e8.sh [common]
+[  0% 8/1402 10m7s remaining] //system/sepolicy/contexts:system_ext_file_contexts building contexts: system_ext_file_contexts [common]
+[  0% 9/1402 10m7s remaining] //packages/apps/KeyChain:KeyChain dexpreopt product_packages [common]
+[  0% 10/1399 10m7s remaining] //frameworks/base/cmds/uiautomator/cmds/uiautomator:uiautomator dexpreopt product_packages [common]
+[  0% 11/1394 10m7s remaining] //frameworks/base/test-runner:android.test.runner.impl dexpreopt product_packages [common]
+[  0% 12/1385 10m7s remaining] //frameworks/base/packages/CredentialManager:CredentialManager dexpreopt product_packages [common]
+[  0% 13/1380 10m7s remaining] //packages/services/Telecomm:Telecom dexpreopt product_packages [common]
+[  1% 14/1377 10m7s remaining] //frameworks/base/packages/SettingsProvider:SettingsProvider dexpreopt product_packages [common]
+[  1% 15/1374 10m7s remaining] //frameworks/base/packages/WallpaperBackup:WallpaperBackup dexpreopt product_packages [common]
+[  1% 16/1371 10m7s remaining] //system/sepolicy/contexts:system_ext_file_contexts.recovery copy system_ext_file_contexts [common]
+[  1% 17/1371 10m7s remaining] //frameworks/base/packages/FusedLocation:FusedLocation dexpreopt product_packages [common]
+[  1% 18/1368 10m7s remaining] //frameworks/base/packages/InputDevices:InputDevices dexpreopt product_packages [common]
+[  1% 19/1365 10m7s remaining] //frameworks/base/packages/SystemUI:SystemUI dexpreopt product_packages [common]
+[  1% 20/1362 10m7s remaining] //system/sepolicy/contexts:system_ext_service_contexts.recovery copy system_ext_service_contexts [common]
+[  1% 21/1362 10m7s remaining] //system/sepolicy/contexts:system_ext_file_contexts copy system_ext_file_contexts [common]
+[  1% 22/1362 10m7s remaining] //system/sepolicy:file_contexts.local.tmp generate file_contexts.local.tmp [common]
+[  1% 23/1362 10m7s remaining] //build/soong:product_config building product_config.json
+Duplicate key 'BoardPlatform' with identical values found.
+Duplicate key 'ProductModel' with identical values found.
+[  1% 24/1362 10m7s remaining] //packages/apps/ThemePicker:ThemePicker dexpreopt product_packages [common]
+[  1% 25/1359 10m7s remaining] //packages/apps/Settings:Settings dexpreopt product_packages [common]
+[  1% 26/1356 10m7s remaining] //packages/apps/Launcher3:Launcher3QuickStep dexpreopt product_packages [common]
+[  1% 27/1353 10m7s remaining] //device/google/cuttlefish/guest/monitoring/cuttlefish_service:CuttlefishService dexpreopt product_packages [common]
+[  2% 28/1350 10m7s remaining] //packages/apps/DeviceDiagnostics/app/src/main:DeviceDiagnostics dexpreopt product_packages [common]
+[  2% 29/1347 10m7s remaining] //system/sepolicy:product_sepolicy.conf Transform policy to conf: product_sepolicy.conf [common]
+[  2% 30/1347 10m7s remaining] //system/sepolicy:system_ext_sepolicy.conf Transform policy to conf: system_ext_sepolicy.conf [common]
+[  2% 31/1347 10m7s remaining] //system/sepolicy:recovery_sepolicy.conf Transform policy to conf: recovery_sepolicy.conf [common]
+[  2% 32/1347 10m7s remaining] //packages/apps/Messaging:messaging dexpreopt product_packages [common]
+[  2% 33/1344 10m7s remaining] //packages/apps/AvatarPicker:AvatarPicker dexpreopt product_packages [common]
+[  2% 34/1341 10m7s remaining] //packages/apps/StorageManager:StorageManager dexpreopt product_packages [common]
+[  2% 35/1338 10m7s remaining] //system/sepolicy/contexts:system_ext_service_contexts building contexts: system_ext_service_contexts [common]
+[  2% 36/1338 10m7s remaining] //system/sepolicy/contexts:system_ext_service_contexts copy system_ext_service_contexts [common]
+[  2% 37/1338 10m7s remaining] raw modules.csv
+[  2% 38/1338 10m7s remaining] //build/soong:product-build.prop generating build.prop [common]
+[  2% 39/1338 10m7s remaining] //build/soong:system_ext-build.prop generating build.prop [common]
+[  2% 40/1338 10m7s remaining] //build/soong:system-build.prop generating build.prop [common]
+[  3% 41/1338 10m7s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor-build.prop generating build.prop [common]
+[  3% 42/1338 10m7s remaining] //build/soong:odm-build.prop generating build.prop [common]
+[  3% 43/1338 10m7s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_recovery-prop.default generating recovery prop.default [common]
+[  3% 44/1338 10m7s remaining] //packages/apps/EmergencyInfo:EmergencyInfo dexpreopt product_packages [common]
+[  3% 45/1335 10m7s remaining] Joining JSON objects into array out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json
+[  3% 46/1335 10m7s remaining] //build/soong:system_dlkm-build.prop generating build.prop [common]
+[  3% 47/1335 10m7s remaining] //packages/modules/Virtualization/build/microdroid:microdroid_build_prop_gen_x86_64 generate build.prop.out [common]
+[  3% 48/1335 10m7s remaining] cp out/soong/.intermediates/packages/modules/Virtualization/build/microdroid/microdroid_build_prop/android_x86_64_silvermont/build.prop
+[  3% 49/1335 10m7s remaining] //system/tools/aidl/metadata:aidl_metadata_in_cpp generate metadata.cpp [linux_glibc]
+[  3% 50/1335 10m7s remaining] //system/sepolicy:recovery_sepolicy.cil Building cil for recovery_sepolicy.cil [common]
+[  3% 51/1335 10m7s remaining] //packages/services/Telephony:TeleService dexpreopt product_packages [common]
+[  3% 52/1332 10m7s remaining] //packages/apps/Dialer:Dialer dexpreopt product_packages [common]
+[  3% 53/1329 10m7s remaining] //packages/apps/Contacts:Contacts dexpreopt product_packages [common]
+[  4% 54/1326 10m7s remaining] //external/chromium-webview:webview dexpreopt product_packages [common]
+[  4% 55/1323 10m7s remaining] //packages/apps/DocumentsUI:DocumentsUI dexpreopt product_packages [common]
+[  4% 56/1320 10m7s remaining] //packages/apps/Traceur:Traceur dexpreopt product_packages [common]
+[  4% 57/1317 10m7s remaining] //packages/modules/Connectivity/thread/demoapp:ThreadNetworkDemoApp dexpreopt product_packages [common]
+[  4% 58/1314 10m7s remaining] //frameworks/base/packages/SystemUI/accessibility/accessibilitymenu:AccessibilityMenu dexpreopt product_packages [common]
+[  4% 59/1311 10m7s remaining] //packages/modules/IntentResolver:IntentResolver dexpreopt product_packages [common]
+[  4% 60/1308 10m7s remaining] //packages/apps/ImsServiceEntitlement:ImsServiceEntitlement dexpreopt product_packages [common]
+[  4% 61/1305 10m6s remaining] //packages/apps/DeskClock:DeskClock dexpreopt product_packages [common]
+[  4% 62/1302 10m6s remaining] //packages/apps/ManagedProvisioning:ManagedProvisioning dexpreopt product_packages [common]
+[  4% 63/1299 10m6s remaining] //packages/apps/SettingsIntelligence:SettingsIntelligence dexpreopt product_packages [common]
+[  4% 64/1296 10m6s remaining] //packages/apps/Stk:Stk dexpreopt product_packages [common]
+[  5% 65/1293 10m6s remaining] //frameworks/base/packages/EasterEgg:EasterEgg dexpreopt product_packages [common]
+[  5% 66/1290 10m6s remaining] //packages/apps/PrivateSpace:PrivateSpace dexpreopt product_packages [common]
+[  5% 67/1287 10m6s remaining] //packages/wallpapers/LivePicker:LiveWallpapersPicker dexpreopt product_packages [common]
+[  5% 68/1284 10m6s remaining] //packages/services/BuiltInPrintService:BuiltInPrintService dexpreopt product_packages [common]
+[  5% 69/1281 10m6s remaining] //frameworks/base/packages/PackageInstaller:PackageInstaller dexpreopt product_packages [common]
+[  5% 70/1278 10m6s remaining] //packages/apps/Gallery2:Gallery2 dexpreopt product_packages [common]
+[  5% 71/1275 10m6s remaining] //packages/apps/Camera2:Camera2 dexpreopt product_packages [common]
+[  5% 72/1272 10m6s remaining] //frameworks/base/packages/StatementService:StatementService dexpreopt product_packages [common]
+[  5% 73/1269 10m6s remaining] //packages/services/DeviceAsWebcam/impl:DeviceAsWebcam dexpreopt product_packages [common]
+[  5% 74/1266 10m6s remaining] //packages/modules/NetworkStack:NetworkStack dexpreopt product_packages [common]
+[  5% 75/1263 10m6s remaining] //packages/services/QualifiedNetworksService:QualifiedNetworksService dexpreopt product_packages [common]
+[  6% 76/1260 10m6s remaining] //packages/providers/ContactsProvider:ContactsProvider dexpreopt product_packages [common]
+[  6% 77/1257 10m6s remaining] //frameworks/base/packages/BackupRestoreConfirmation:BackupRestoreConfirmation dexpreopt product_packages [common]
+[  6% 78/1254 10m6s remaining] //frameworks/base/packages/SoundPicker:SoundPicker dexpreopt product_packages [common]
+[  6% 79/1251 10m6s remaining] //packages/services/AlternativeNetworkAccess:ONS dexpreopt product_packages [common]
+[  6% 80/1248 10m6s remaining] //packages/screensavers/Basic:BasicDreams dexpreopt product_packages [common]
+[  6% 81/1245 10m6s remaining] //frameworks/base/media/packages/BluetoothMidiService:BluetoothMidiService dexpreopt product_packages [common]
+[  6% 82/1242 10m6s remaining] //frameworks/base/packages/services/PacProcessor:PacProcessor dexpreopt product_packages [common]
+[  6% 83/1239 10m6s remaining] //frameworks/base/packages/PrintSpooler:PrintSpooler dexpreopt product_packages [common]
+[  6% 84/1236 10m6s remaining] //packages/apps/QuickSearchBox:QuickSearchBox dexpreopt product_packages [common]
+[  6% 85/1233 10m6s remaining] //packages/apps/Tag:Tag dexpreopt product_packages [common]
+[  6% 86/1230 10m6s remaining] //packages/screensavers/PhotoTable:PhotoTable dexpreopt product_packages [common]
+[  7% 87/1227 10m6s remaining] //packages/providers/PartnerBookmarksProvider:PartnerBookmarksProvider dexpreopt product_packages [common]
+[  7% 88/1224 10m6s remaining] //packages/providers/BlockedNumberProvider:BlockedNumberProvider dexpreopt product_packages [common]
+[  7% 89/1221 10m6s remaining] //packages/providers/MediaProvider/legacy:MediaProviderLegacy dexpreopt product_packages [common]
+[  7% 90/1218 10m6s remaining] //packages/services/Mtp:MtpService dexpreopt product_packages [common]
+[  7% 91/1215 10m6s remaining] //packages/inputmethods/LatinIME/java:LatinIME dexpreopt product_packages [common]
+[  7% 92/1212 10m6s remaining] //packages/apps/Browser2:Browser2 dexpreopt product_packages [common]
+[  7% 93/1209 10m6s remaining] //frameworks/base/packages/CompanionDeviceManager:CompanionDeviceManager dexpreopt product_packages [common]
+[  7% 94/1206 10m6s remaining] //frameworks/base/packages/PrintRecommendationService:PrintRecommendationService dexpreopt product_packages [common]
+[  7% 95/1203 10m6s remaining] //frameworks/base/packages/Shell:Shell dexpreopt product_packages [common]
+[  8% 96/1200 10m6s remaining] //packages/apps/CellBroadcastReceiver/legacy:CellBroadcastLegacyApp dexpreopt product_packages [common]
+[  8% 97/1197 10m6s remaining] //frameworks/base/packages/SimAppDialog:SimAppDialog dexpreopt product_packages [common]
+[  8% 98/1194 10m6s remaining] //packages/providers/TelephonyProvider:TelephonyProvider dexpreopt product_packages [common]
+[  8% 99/1191 10m6s remaining] //packages/apps/Calendar:Calendar dexpreopt product_packages [common]
+[  8% 100/1188 10m6s remaining] //packages/providers/UserDictionaryProvider:UserDictionaryProvider dexpreopt product_packages [common]
+[  8% 101/1185 10m6s remaining] //packages/modules/CaptivePortalLogin:CaptivePortalLogin dexpreopt product_packages [common]
+[  8% 102/1182 10m6s remaining] //frameworks/base/packages/WallpaperCropper:WallpaperCropper dexpreopt product_packages [common]
+[  8% 103/1179 10m6s remaining] //packages/providers/BookmarkProvider:BookmarkProvider dexpreopt product_packages [common]
+[  8% 104/1176 10m6s remaining] //frameworks/base/packages/VpnDialogs:VpnDialogs dexpreopt product_packages [common]
+[  8% 105/1173 10m6s remaining] //packages/apps/SecureElement:SecureElement dexpreopt product_packages [common]
+[  9% 106/1170 10m6s remaining] //packages/services/Mms:MmsService dexpreopt product_packages [common]
+[  9% 107/1167 10m6s remaining] //packages/apps/Provision:Provision dexpreopt product_packages [common]
+[  9% 108/1164 10m6s remaining] //frameworks/base/packages/SharedStorageBackup:SharedStorageBackup dexpreopt product_packages [common]
+[  9% 109/1161 10m6s remaining] //packages/apps/MusicFX:MusicFX dexpreopt product_packages [common]
+[  9% 110/1158 10m6s remaining] //packages/apps/HTMLViewer:HTMLViewer dexpreopt product_packages [common]
+[  9% 111/1155 10m6s remaining] //packages/apps/CarrierConfig:CarrierConfig dexpreopt product_packages [common]
+[  9% 112/1152 10m6s remaining] //frameworks/base/packages/services/CameraExtensionsProxy:CameraExtensionsProxy dexpreopt product_packages [common]
+[  9% 113/1149 10m6s remaining] //frameworks/base/packages/LocalTransport:LocalTransport dexpreopt product_packages [common]
+[  9% 114/1146 10m6s remaining] //frameworks/base/packages/services/Proxy:ProxyHandler dexpreopt product_packages [common]
+[ 10% 115/1143 10m6s remaining] //packages/providers/CallLogProvider:CallLogBackup dexpreopt product_packages [common]
+[ 10% 116/1140 10m6s remaining] //packages/providers/CalendarProvider:CalendarProvider dexpreopt product_packages [common]
+[ 10% 117/1137 10m6s remaining] //frameworks/base/packages/ExternalStorageProvider:ExternalStorageProvider dexpreopt product_packages [common]
+[ 10% 118/1134 10m6s remaining] //packages/providers/DownloadProvider:DownloadProvider dexpreopt product_packages [common]
+[ 10% 119/1131 10m6s remaining] //frameworks/base/packages/CarrierDefaultApp:CarrierDefaultApp dexpreopt product_packages [common]
+[ 10% 120/1128 10m6s remaining] //packages/providers/ContactsKeysProvider:E2eeContactKeysProvider dexpreopt product_packages [common]
+[ 10% 121/1125 10m6s remaining] //frameworks/base/packages/ExtShared:ExtShared dexpreopt product_packages [common]
+[ 10% 122/1122 10m6s remaining] //device/google/cuttlefish/guest/services/cf_satellite_service:CFSatelliteService dexpreopt product_packages [common]
+[ 10% 123/1119 10m6s remaining] //packages/modules/Virtualization/build/microdroid:microdroid Assemble filesystem staging dir microdroid [common]
+[ 11% 124/1119 10m6s remaining] //packages/apps/Music:Music dexpreopt product_packages [common]
+[ 11% 125/1116 10m6s remaining] //packages/providers/DownloadProvider/ui:DownloadProviderUi dexpreopt product_packages [common]
+[ 11% 126/1113 10m6s remaining] //packages/apps/CertInstaller:CertInstaller dexpreopt product_packages [common]
+[ 11% 127/1110 10m6s remaining] //frameworks/base/packages/DynamicSystemInstallationService:DynamicSystemInstallationService dexpreopt product_packages [common]
+[ 11% 128/1105 10m6s remaining] //build/soong:odm-build.prop install build.prop [common]
+[ 11% 129/1105 10m6s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_userdata_image Assemble filesystem staging dir aosp_cf_x86_64_only_phone_generated_userdata_image [common]
+[ 11% 130/1105 10m6s remaining] //build/soong:product-build.prop install build.prop [common]
+[ 11% 131/1105 10m6s remaining] //build/soong:system_dlkm-build.prop install build.prop [common]
+[ 11% 132/1105 10m6s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor-build.prop install build.prop [common]
+[ 12% 133/1105 10m6s remaining] //build/soong:system-build.prop install build.prop [common]
+[ 12% 134/1105 10m6s remaining] //build/soong:system_ext-build.prop install build.prop [common]
+[ 12% 135/1105 10m6s remaining] //system/sepolicy/contexts:system_ext_file_contexts install system_ext_file_contexts [common]
+[ 12% 136/1105 10m6s remaining] //system/sepolicy/contexts:system_ext_service_contexts install system_ext_service_contexts [common]
+[ 12% 137/1105 10m6s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/etc/init/boundarylab.rc
+[ 12% 138/1105 10m6s remaining] cp out/target/product/vsoc_x86_64_only/symbols/system_ext/lib64/boundarylab-platform-V1-cpp.so
+[ 12% 139/1105 10m6s remaining] out/host/linux-x86/bin/symbols_map -elf out/target/product/vsoc_x86_64_only/symbols/system_ext/lib64/boundarylab-platform-V1-cpp.so -write_if_changed out/target/product/vsoc_x86_64_only/obj/PACKAGING/elf_symbol_mapping_intermediates/system_ext/lib64/boundarylab-platform-V1-cpp.so.textproto
+[ 12% 140/1105 10m6s remaining] //build/soong:vendor_dlkm-build.prop generating build.prop [common]
+[ 12% 141/1105 10m6s remaining] //build/soong:odm_dlkm-build.prop generating build.prop [common]
+[ 12% 142/1105 10m6s remaining] //build/soong:vendor_dlkm-build.prop install build.prop [common]
+[ 12% 143/1105 10m6s remaining] //build/soong:odm_dlkm-build.prop install build.prop [common]
+[ 13% 144/1105 10m6s remaining] raw module_info_pre_merging.json
+[ 13% 145/1105 10m6s remaining] //build/soong:ramdisk-build.prop generating build.prop [common]
+[ 13% 146/1105 10m6s remaining] //build/soong:ramdisk-build.prop install build.prop [common]
+[ 13% 147/1105 10m6s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_ramdisk_image Assemble filesystem staging dir aosp_cf_x86_64_only_phone_generated_ramdisk_image [common]
+[ 13% 148/1105 10m5s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_ramdisk_image Creating filesystem aosp_cf_x86_64_only_phone_generated_ramdisk_image [common]
+[ 13% 149/1105 10m5s remaining] cp out/target/product/vsoc_x86_64_only/ramdisk.img
+[ 13% 150/1105 10m5s remaining] rm -rf out/soong/compliance-metadata/aosp_cf_x86_64_only_phone/compliance-metadata.db && cat out/soong/compliance-metadata/aosp_cf_x86_64_only_phone/compliance-metadata.db.rsp | tr ' ' '\n' | while read -r file || [ -n "$file" ]; do out/host/linux-x86/bin/sqlite3_noicu out/soong/compliance-metadata/aosp_cf_x86_64_only_phone/compliance-metadata.db ".import --csv ${file} $(basename ${file} .csv)"; done
+[ 13% 151/1105 10m5s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_ramdisk_image Installed file list json [common]
+[ 13% 152/1105 10m5s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_init_boot_image Creating aosp_cf_x86_64_only_phone_generated_init_boot_image
+[ 13% 153/1105 10m5s remaining] //system/tools/aidl/metadata:libaidlmetadata clang++ metadata.cpp [linux_glibc]
+[ 13% 154/1105 10m5s remaining] //system/tools/aidl/metadata:libaidlmetadata static link libaidlmetadata.a [linux_glibc]
+[ 14% 155/1105 10m5s remaining] //system/libvintf:assemble_vintf link assemble_vintf [linux_glibc]
+[ 14% 156/1105 10m5s remaining] //system/libvintf:assemble_vintf install assemble_vintf [linux_glibc]
+[ 14% 157/1105 10m5s remaining] run assemble_vintf
+[ 14% 158/1105 10m4s remaining] //hardware/interfaces/compatibility_matrices:framework_compatibility_matrix.device.xml Framework Compatibility Matrix [common]
+[ 14% 159/1105 10m4s remaining] //kernel/configs/s/android-4.19:kernel_config_s_4.19 Framework Compatibility Matrix kernel fragment
+[ 14% 160/1105 10m4s remaining] //kernel/configs/s/android-5.10:kernel_config_s_5.10 Framework Compatibility Matrix kernel fragment
+[ 14% 161/1105 10m4s remaining] //kernel/configs/s/android-5.4:kernel_config_s_5.4 Framework Compatibility Matrix kernel fragment
+[ 14% 162/1105 10m4s remaining] run assemble_vintf
+[ 14% 163/1105 10m4s remaining] //kernel/configs/t/android-5.10:kernel_config_t_5.10 Framework Compatibility Matrix kernel fragment
+[ 14% 164/1105 10m4s remaining] //kernel/configs/t/android-5.15:kernel_config_t_5.15 Framework Compatibility Matrix kernel fragment
+[ 14% 165/1105 10m4s remaining] //kernel/configs/v/android-6.6:kernel_config_v_6.6 Framework Compatibility Matrix kernel fragment
+[ 15% 166/1105 10m4s remaining] //kernel/configs/v/android-6.1:kernel_config_v_6.1 Framework Compatibility Matrix kernel fragment
+[ 15% 167/1105 10m4s remaining] //kernel/configs/u/android-5.15:kernel_config_u_5.15 Framework Compatibility Matrix kernel fragment
+[ 15% 168/1105 10m4s remaining] //kernel/configs/u/android-6.1:kernel_config_u_6.1 Framework Compatibility Matrix kernel fragment
+[ 15% 169/1105 10m4s remaining] //hardware/interfaces/compatibility_matrices:framework_compatibility_matrix.6.xml Framework Compatibility Matrix [common]
+[ 15% 170/1105 10m4s remaining] //kernel/configs/b/android-6.12:kernel_config_b_6.12 Framework Compatibility Matrix kernel fragment
+[ 15% 171/1105 10m4s remaining] //hardware/interfaces/compatibility_matrices:framework_compatibility_matrix.7.xml Framework Compatibility Matrix [common]
+[ 15% 172/1105 10m4s remaining] run assemble_vintf
+[ 15% 173/1105 10m4s remaining] //hardware/interfaces/compatibility_matrices:framework_compatibility_matrix.202404.xml Framework Compatibility Matrix [common]
+[ 15% 174/1105 10m4s remaining] //kernel/configs/r/android-5.4:kernel_config_r_5.4 Framework Compatibility Matrix kernel fragment
+[ 15% 175/1105 10m4s remaining] //hardware/interfaces/compatibility_matrices:framework_compatibility_matrix.8.xml Framework Compatibility Matrix [common]
+[ 15% 176/1105 10m4s remaining] run assemble_vintf
+[ 16% 177/1105 10m4s remaining] //hardware/interfaces/compatibility_matrices:framework_compatibility_matrix.202504.xml Framework Compatibility Matrix [common]
+[ 16% 178/1105 10m4s remaining] //hardware/interfaces/compatibility_matrices:framework_compatibility_matrix.5.xml Framework Compatibility Matrix [common]
+[ 16% 179/1105 10m4s remaining] run assemble_vintf
+[ 16% 180/1105 10m4s remaining] run assemble_vintf
+[ 16% 181/1105 10m4s remaining] run assemble_vintf
+[ 16% 182/1105 10m4s remaining] run assemble_vintf
+[ 16% 183/1105 10m4s remaining] run assemble_vintf
+[ 16% 184/1105 10m4s remaining] run assemble_vintf
+[ 16% 185/1105 10m4s remaining] run assemble_vintf
+[ 16% 186/1105 10m4s remaining] //system/libhidl/vintfdata:system_manifest.xml Process vintf data out/soong/.intermediates/system/libhidl/vintfdata/system_manifest.xml/android_x86_64_silvermont/manifest.xml
+[ 16% 187/1105 10m4s remaining] run assemble_vintf
+[ 17% 188/1105 10m4s remaining] run assemble_vintf
+[ 17% 189/1105 10m4s remaining] //hardware/interfaces/audio/aidl/default/apex/com.android.hardware.audio:com.android.hardware.audio run assemble_vintf for VINTF in APEX [common]
+INFO: Downgrading HAL android.hardware.audio.core in the manifest from V4 to V3 because it is unfrozen and unfrozen interfaces are not allowed in this release configuration.
+INFO: Downgrading HAL android.hardware.audio.core in the manifest from V4 to V3 because it is unfrozen and unfrozen interfaces are not allowed in this release configuration.
+INFO: Downgrading HAL android.hardware.audio.core in the manifest from V4 to V3 because it is unfrozen and unfrozen interfaces are not allowed in this release configuration.
+INFO: Downgrading HAL android.hardware.audio.core in the manifest from V4 to V3 because it is unfrozen and unfrozen interfaces are not allowed in this release configuration.
+[ 17% 190/1105 10m4s remaining] //hardware/interfaces/audio/aidl/default/apex/com.android.hardware.audio:com.android.hardware.audio run assemble_vintf for VINTF in APEX [common]
+[ 17% 191/1105 10m4s remaining] //packages/modules/Virtualization/build/microdroid:microdroid Creating filesystem microdroid [common]
+[ 17% 192/1105 10m4s remaining] //packages/modules/Virtualization/build/microdroid:microdroid_vbmeta vbmeta microdroid_vbmeta [common]
+[ 17% 193/1105 10m3s remaining] merge module info json
+[ 17% 194/1105 10m3s remaining] //packages/modules/Virtualization/build/microdroid/initrd:microdroid_vbmeta_bootconfig_gen generate bootconfig_microdroid_vbmeta [common]
+[ 17% 195/1105 10m3s remaining] //packages/modules/Virtualization/build/microdroid/initrd:microdroid_initrd_normal_x86_64 generate microdroid_initrd_normal_x86_64 [common]
+[ 17% 196/1105 10m3s remaining] //packages/modules/Virtualization/build/microdroid/initrd:microdroid_initrd_debuggable_x86_64 generate microdroid_initrd_debuggable_x86_64 [common]
+[ 17% 197/1105 10m3s remaining] cp out/soong/.intermediates/packages/modules/Virtualization/build/microdroid/initrd/microdroid_initrd_normal/android_x86_64_silvermont/microdroid_initrd_normal.img
+[ 17% 198/1105 10m3s remaining] //packages/modules/Virtualization/build/microdroid:microdroid_initrd_normal_hashdesc avbGenVbmetaImage microdroid_initrd_normal_hashdesc
+[ 18% 199/1105 10m3s remaining] cp out/soong/.intermediates/packages/modules/Virtualization/build/microdroid/initrd/microdroid_initrd_debuggable/android_x86_64_silvermont/microdroid_initrd_debuggable.img
+[ 18% 200/1105 10m3s remaining] //packages/modules/Virtualization/build/microdroid:microdroid_initrd_debug_hashdesc avbGenVbmetaImage microdroid_initrd_debug_hashdesc
+[ 18% 201/1105 10m3s remaining] //packages/modules/Virtualization/build/microdroid:microdroid_super Creating microdroid_super
+10-30 22:00:40.224  4732  4732 I lpmake  : builder.cpp:1027 [liblp] Partition system_a will resize from 0 bytes to 44240896 bytes
+[ 18% 202/1105 10m3s remaining] //hardware/google/camera/devices/EmulatedCamera/hwl/apex:com.google.emulated.camera.provider.hal.fastscenecycle run assemble_vintf for VINTF in APEX [common]
+[ 18% 203/1105 10m3s remaining] //packages/modules/Virtualization/build/microdroid:microdroid_kernel_signed avbAddHashFooter microdroid_kernel_signed
+[ 18% 204/1105 10m3s remaining] cp out/soong/.intermediates/packages/modules/Virtualization/build/microdroid/microdroid_kernel/android_x86_64_silvermont/microdroid_kernel
+[ 18% 205/1105 10m3s remaining] rm -rf out/soong/.intermediates/build/soong/compliance/notice_xml_system_dlkm/android_x86_64_silvermont/NOTICE.xml.gz && out/host/linux-x86/bin/gen_notice_xml --output_file out/soong/.intermediates/build/soong/compliance/notice_xml_system_dlkm/android_x86_64_silvermont/NOTICE.xml.gz --metadata out/soong/compliance-metadata/aosp_cf_x86_64_only_phone/compliance-metadata.db --partition system_dlkm --product_out out/target/product/vsoc_x86_64_only --soong_out out/soong
+[ 18% 206/1105 10m2s remaining] //hardware/google/camera/devices/EmulatedCamera/hwl/apex:com.google.emulated.camera.provider.hal run assemble_vintf for VINTF in APEX [common]
+[ 18% 207/1105 10m2s remaining] rm -rf out/soong/.intermediates/build/soong/compliance/notice_xml_odm_dlkm/android_x86_64_silvermont/NOTICE.xml.gz && out/host/linux-x86/bin/gen_notice_xml --output_file out/soong/.intermediates/build/soong/compliance/notice_xml_odm_dlkm/android_x86_64_silvermont/NOTICE.xml.gz --metadata out/soong/compliance-metadata/aosp_cf_x86_64_only_phone/compliance-metadata.db --partition odm_dlkm --product_out out/target/product/vsoc_x86_64_only --soong_out out/soong
+[ 18% 208/1105 10m2s remaining] //device/generic/goldfish/hals/hwc3:com.android.hardware.graphics.composer.ranchu run assemble_vintf for VINTF in APEX [common]
+[ 18% 209/1105 10m2s remaining] rm -rf out/soong/.intermediates/build/soong/compliance/notice_xml_product/android_x86_64_silvermont/NOTICE.xml.gz && out/host/linux-x86/bin/gen_notice_xml --output_file out/soong/.intermediates/build/soong/compliance/notice_xml_product/android_x86_64_silvermont/NOTICE.xml.gz --metadata out/soong/compliance-metadata/aosp_cf_x86_64_only_phone/compliance-metadata.db --partition product --product_out out/target/product/vsoc_x86_64_only --soong_out out/soong
+[ 19% 210/1105 10m2s remaining] //packages/modules/NeuralNetworks/driver:com.android.hardware.neuralnetworks run assemble_vintf for VINTF in APEX [common]
+[ 19% 211/1105 10m2s remaining] //packages/modules/NeuralNetworks/driver:com.android.hardware.neuralnetworks run assemble_vintf for VINTF in APEX [common]
+[ 19% 212/1105 10m2s remaining] //packages/modules/NeuralNetworks/driver:com.android.hardware.neuralnetworks run assemble_vintf for VINTF in APEX [common]
+[ 19% 213/1105 10m2s remaining] rm -rf out/soong/.intermediates/build/soong/compliance/notice_xml_vendor/android_x86_64_silvermont/NOTICE.xml.gz && out/host/linux-x86/bin/gen_notice_xml --output_file out/soong/.intermediates/build/soong/compliance/notice_xml_vendor/android_x86_64_silvermont/NOTICE.xml.gz --metadata out/soong/compliance-metadata/aosp_cf_x86_64_only_phone/compliance-metadata.db --partition vendor --product_out out/target/product/vsoc_x86_64_only --soong_out out/soong
+[ 19% 214/1105 10m2s remaining] run assemble_vintf
+[ 19% 215/1105 10m2s remaining] //device/google/cuttlefish/apex/com.google.cf.rild:com.google.cf.rild run assemble_vintf for VINTF in APEX [common]
+INFO: Downgrading HAL android.hardware.radio.config in the manifest from V5 to V4 because it is unfrozen and unfrozen interfaces are not allowed in this release configuration.
+INFO: Downgrading HAL android.hardware.radio.data in the manifest from V5 to V4 because it is unfrozen and unfrozen interfaces are not allowed in this release configuration.
+INFO: Downgrading HAL android.hardware.radio.ims in the manifest from V4 to V3 because it is unfrozen and unfrozen interfaces are not allowed in this release configuration.
+INFO: Downgrading HAL android.hardware.radio.ims.media in the manifest from V4 to V3 because it is unfrozen and unfrozen interfaces are not allowed in this release configuration.
+INFO: Downgrading HAL android.hardware.radio.messaging in the manifest from V5 to V4 because it is unfrozen and unfrozen interfaces are not allowed in this release configuration.
+INFO: Downgrading HAL android.hardware.radio.modem in the manifest from V5 to V4 because it is unfrozen and unfrozen interfaces are not allowed in this release configuration.
+INFO: Downgrading HAL android.hardware.radio.network in the manifest from V5 to V4 because it is unfrozen and unfrozen interfaces are not allowed in this release configuration.
+INFO: Downgrading HAL android.hardware.radio.sim in the manifest from V5 to V4 because it is unfrozen and unfrozen interfaces are not allowed in this release configuration.
+INFO: Downgrading HAL android.hardware.radio.voice in the manifest from V5 to V4 because it is unfrozen and unfrozen interfaces are not allowed in this release configuration.
+[ 19% 216/1105 10m1s remaining] //hardware/google/camera/devices/EmulatedCamera/hwl/apex:com.google.emulated.camera.provider.hal.fastscenecycle apex [common]
+[ 19% 217/1105 10m1s remaining] run assemble_vintf
+[ 19% 218/1105 10m1s remaining] run assemble_vintf
+[ 19% 219/1105 10m1s remaining] //device/generic/goldfish/hals/hwc3:com.android.hardware.graphics.composer.ranchu apex [common]
+[ 19% 220/1105 10m1s remaining] //device/google/cuttlefish/guest/hals/gatekeeper/remote:com.android.hardware.gatekeeper.cf_remote run assemble_vintf for VINTF in APEX [common]
+[ 20% 221/1105 10m1s remaining] //hardware/google/camera/devices/EmulatedCamera/hwl/apex:com.google.emulated.camera.provider.hal apex [common]
+[ 20% 222/1105 10m1s remaining] //external/drm_hwcomposer:com.android.hardware.graphics.composer.drm_hwcomposer run assemble_vintf for VINTF in APEX [common]
+[ 20% 223/1105 10m1s remaining] rm -rf out/soong/.intermediates/build/soong/compliance/notice_xml_system_ext/android_x86_64_silvermont/NOTICE.xml.gz && out/host/linux-x86/bin/gen_notice_xml --output_file out/soong/.intermediates/build/soong/compliance/notice_xml_system_ext/android_x86_64_silvermont/NOTICE.xml.gz --metadata out/soong/compliance-metadata/aosp_cf_x86_64_only_phone/compliance-metadata.db --partition system_ext --product_out out/target/product/vsoc_x86_64_only --soong_out out/soong
+[ 20% 224/1105 10m1s remaining] //hardware/interfaces/audio/aidl/default/apex/com.android.hardware.audio:com.android.hardware.audio apex [common]
+[ 20% 225/1105 10m1s remaining] //hardware/interfaces/gnss/aidl/default:com.android.hardware.gnss run assemble_vintf for VINTF in APEX [common]
+INFO: Downgrading HAL android.hardware.gnss in the manifest from V7 to V6 because it is unfrozen and unfrozen interfaces are not allowed in this release configuration.
+[ 20% 226/1105 10m1s remaining] //device/google/cuttlefish/apex/com.google.cf.bt:com.google.cf.bt run assemble_vintf for VINTF in APEX [common]
+[ 20% 227/1105 10m1s remaining] //device/google/cuttlefish/apex/com.google.cf.bt:com.google.cf.bt run assemble_vintf for VINTF in APEX [common]
+[ 20% 228/1105 10m1s remaining] //device/google/cuttlefish/apex/com.google.cf.bt:com.google.cf.bt run assemble_vintf for VINTF in APEX [common]
+[ 20% 229/1105 10m1s remaining] //device/google/cuttlefish/apex/com.google.cf.bt:com.google.cf.bt run assemble_vintf for VINTF in APEX [common]
+[ 20% 230/1105 10m1s remaining] //device/google/cuttlefish/apex/com.google.cf.bt:com.google.cf.bt run assemble_vintf for VINTF in APEX [common]
+[ 20% 231/1105 10m1s remaining] rm -rf out/soong/.intermediates/build/soong/compliance/notice_xml_system/android_x86_64_silvermont/NOTICE.xml.gz && out/host/linux-x86/bin/gen_notice_xml --output_file out/soong/.intermediates/build/soong/compliance/notice_xml_system/android_x86_64_silvermont/NOTICE.xml.gz --metadata out/soong/compliance-metadata/aosp_cf_x86_64_only_phone/compliance-metadata.db --partition system --product_out out/target/product/vsoc_x86_64_only --soong_out out/soong
+[ 20% 232/1105 10m1s remaining] //hardware/interfaces/wifi/netlinkinterceptor/aidl/default:com.android.hardware.net.nlinterceptor run assemble_vintf for VINTF in APEX [common]
+[ 21% 233/1105 10m1s remaining] //hardware/interfaces/cas/aidl/default:com.android.hardware.cas run assemble_vintf for VINTF in APEX [common]
+[ 21% 234/1105 10m0s remaining] //device/google/cuttlefish/guest/hals/gatekeeper/remote:com.android.hardware.gatekeeper.cf_remote apex [common]
+[ 21% 235/1105 10m0s remaining] //device/google/cuttlefish/apex/com.google.cf.wpa_supplicant:com.google.cf.wpa_supplicant run assemble_vintf for VINTF in APEX [common]
+[ 21% 236/1105 10m0s remaining] //device/google/cuttlefish/apex/com.google.cf.wpa_supplicant:com.google.cf.wpa_supplicant run assemble_vintf for VINTF in APEX [common]
+INFO: Downgrading HAL android.hardware.wifi.supplicant in the manifest from V5 to V4 because it is unfrozen and unfrozen interfaces are not allowed in this release configuration.
+[ 21% 237/1105 10m0s remaining] //packages/modules/NeuralNetworks/driver:com.android.hardware.neuralnetworks apex [common]
+[ 21% 238/1105 10m0s remaining] //external/drm_hwcomposer:com.android.hardware.graphics.composer.drm_hwcomposer apex [common]
+[ 21% 239/1105 10m0s remaining] //device/google/cuttlefish/guest/hals/keymint/rust:com.android.hardware.keymint.rust_cf_remote run assemble_vintf for VINTF in APEX [common]
+[ 21% 240/1105 10m0s remaining] //frameworks/av/drm/mediadrm/plugins/clearkey/aidl:com.android.hardware.drm.clearkey run assemble_vintf for VINTF in APEX [common]
+INFO: Downgrading HAL android.hardware.drm in the manifest from V2 to V1 because it is unfrozen and unfrozen interfaces are not allowed in this release configuration.
+[ 21% 241/1105 10m0s remaining] //device/google/cuttlefish/guest/hals/keymint/rust:com.android.hardware.keymint.rust_cf_remote run assemble_vintf for VINTF in APEX [common]
+[ 21% 242/1105 10m0s remaining] //device/google/cuttlefish/guest/hals/keymint/rust:com.android.hardware.keymint.rust_cf_remote run assemble_vintf for VINTF in APEX [common]
+[ 21% 243/1105 10m0s remaining] //hardware/interfaces/security/keymint/aidl/default:com.android.hardware.keymint.rust_nonsecure apex [common]
+[ 22% 244/1105 10m0s remaining] //hardware/interfaces/gnss/aidl/default:com.android.hardware.gnss apex [common]
+[ 22% 245/1105 10m0s remaining] //hardware/interfaces/wifi/netlinkinterceptor/aidl/default:com.android.hardware.net.nlinterceptor apex [common]
+[ 22% 246/1105 10m0s remaining] //hardware/interfaces/gatekeeper/aidl/software:com.android.hardware.gatekeeper.nonsecure run assemble_vintf for VINTF in APEX [common]
+[ 22% 247/1105 10m0s remaining] //hardware/interfaces/gatekeeper/aidl/software:com.android.hardware.gatekeeper.nonsecure run assemble_vintf for VINTF in APEX [common]
+[ 22% 248/1105 10m0s remaining] //device/google/cuttlefish/guest/hals/gralloc:com.google.cf.gralloc run assemble_vintf for VINTF in APEX [common]
+[ 22% 249/1105 10m0s remaining] //hardware/interfaces/contexthub/aidl/default:com.android.hardware.contexthub run assemble_vintf for VINTF in APEX [common]
+[ 22% 250/1105 10m0s remaining] //hardware/interfaces/input/processor/aidl/default:com.android.hardware.input.processor run assemble_vintf for VINTF in APEX [common]
+[ 22% 251/1105 10m0s remaining] //device/google/cuttlefish/apex/com.google.cf.rild:com.google.cf.rild apex [common]
+[ 22% 252/1105 10m0s remaining] //device/google/cuttlefish/apex/com.google.cf.bt:com.google.cf.bt apex [common]
+[ 22% 253/1105 10m0s remaining] //packages/modules/Virtualization/build/apex:com.android.virt apex [common]
+[ 22% 254/1105 9m59s remaining] //hardware/interfaces/cas/aidl/default:com.android.hardware.cas apex [common]
+[ 23% 255/1105 9m59s remaining] //hardware/interfaces/security/secretkeeper/default:com.android.hardware.security.secretkeeper run assemble_vintf for VINTF in APEX [common]
+[ 23% 256/1105 9m59s remaining] //frameworks/av/drm/mediadrm/plugins/clearkey/aidl:com.android.hardware.drm.clearkey apex [common]
+[ 23% 257/1105 9m59s remaining] //hardware/interfaces/power/aidl/default/apex:com.android.hardware.power run assemble_vintf for VINTF in APEX [common]
+[ 23% 258/1105 9m59s remaining] //hardware/interfaces/input/processor/aidl/default:com.android.hardware.input.processor apex [common]
+[ 23% 259/1105 9m59s remaining] //hardware/interfaces/power/aidl/default/apex:com.android.hardware.power run assemble_vintf for VINTF in APEX [common]
+[ 23% 260/1105 9m59s remaining] //hardware/interfaces/tetheroffload/aidl/default:com.android.hardware.tetheroffload run assemble_vintf for VINTF in APEX [common]
+[ 23% 261/1105 9m59s remaining] //device/google/cuttlefish/apex/com.google.cf.wpa_supplicant:com.google.cf.wpa_supplicant apex [common]
+[ 23% 262/1105 9m59s remaining] run assemble_vintf
+INFO: Downgrading HAL android.hardware.wifi in the manifest from V4 to V3 because it is unfrozen and unfrozen interfaces are not allowed in this release configuration.
+[ 23% 263/1105 9m59s remaining] //hardware/interfaces/memtrack/aidl/default:com.android.hardware.memtrack run assemble_vintf for VINTF in APEX [common]
+[ 23% 264/1105 9m59s remaining] //device/google/cuttlefish/guest/hals/gralloc:com.google.cf.gralloc apex [common]
+[ 23% 265/1105 9m59s remaining] //hardware/interfaces/contexthub/aidl/default:com.android.hardware.contexthub apex [common]
+[ 24% 266/1105 9m59s remaining] //hardware/interfaces/rebootescrow/aidl/default:com.android.hardware.rebootescrow run assemble_vintf for VINTF in APEX [common]
+[ 24% 267/1105 9m59s remaining] //device/google/cuttlefish/guest/hals/keymint/rust:com.android.hardware.keymint.rust_cf_remote apex [common]
+[ 24% 268/1105 9m59s remaining] //hardware/interfaces/secure_element/aidl/default:com.android.hardware.secure_element run assemble_vintf for VINTF in APEX [common]
+[ 24% 269/1105 9m59s remaining] //hardware/interfaces/gatekeeper/aidl/software:com.android.hardware.gatekeeper.nonsecure apex [common]
+[ 24% 270/1105 9m59s remaining] //hardware/interfaces/thermal/aidl/default:com.android.hardware.thermal run assemble_vintf for VINTF in APEX [common]
+[ 24% 271/1105 9m59s remaining] //device/google/cuttlefish/guest/hals/confirmationui:com.google.cf.confirmationui run assemble_vintf for VINTF in APEX [common]
+[ 24% 272/1105 9m59s remaining] //hardware/interfaces/security/secretkeeper/default:com.android.hardware.security.secretkeeper apex [common]
+[ 24% 273/1105 9m58s remaining] //packages/modules/Virtualization/build/apex:com.android.virt signapk [common]
+[ 24% 274/1105 9m58s remaining] //hardware/interfaces/tetheroffload/aidl/default:com.android.hardware.tetheroffload apex [common]
+[ 24% 275/1105 9m58s remaining] //hardware/interfaces/wifi/apex:com.android.hardware.wifi apex [common]
+[ 24% 276/1105 9m58s remaining] //device/google/cuttlefish/guest/hals/nfc:com.google.cf.nfc run assemble_vintf for VINTF in APEX [common]
+[ 25% 277/1105 9m58s remaining] //hardware/interfaces/power/aidl/default/apex:com.android.hardware.power apex [common]
+[ 25% 278/1105 9m58s remaining] //hardware/interfaces/usb/aidl/default/apex:com.android.hardware.usb run assemble_vintf for VINTF in APEX [common]
+[ 25% 279/1105 9m58s remaining] //device/google/cuttlefish/guest/hals/identity:com.google.cf.identity run assemble_vintf for VINTF in APEX [common]
+[ 25% 280/1105 9m58s remaining] //device/google/cuttlefish/guest/hals/health/storage:com.google.cf.health.storage run assemble_vintf for VINTF in APEX [common]
+[ 25% 281/1105 9m58s remaining] //hardware/interfaces/rebootescrow/aidl/default:com.android.hardware.rebootescrow apex [common]
+[ 25% 282/1105 9m58s remaining] //device/google/cuttlefish/guest/hals/ir:com.google.cf.ir run assemble_vintf for VINTF in APEX [common]
+[ 25% 283/1105 9m58s remaining] //hardware/interfaces/authsecret/aidl/default:com.android.hardware.authsecret run assemble_vintf for VINTF in APEX [common]
+[ 25% 284/1105 9m58s remaining] //hardware/interfaces/memtrack/aidl/default:com.android.hardware.memtrack apex [common]
+[ 25% 285/1105 9m58s remaining] //hardware/interfaces/secure_element/aidl/default:com.android.hardware.secure_element apex [common]
+[ 25% 286/1105 9m58s remaining] //hardware/interfaces/threadnetwork/aidl/default:com.android.hardware.threadnetwork run assemble_vintf for VINTF in APEX [common]
+[ 25% 287/1105 9m58s remaining] //device/google/cuttlefish/guest/hals/confirmationui:com.google.cf.confirmationui apex [common]
+[ 26% 288/1105 9m58s remaining] run assemble_vintf
+[ 26% 289/1105 9m58s remaining] //hardware/interfaces/thermal/aidl/default:com.android.hardware.thermal apex [common]
+[ 26% 290/1105 9m58s remaining] //hardware/interfaces/authsecret/aidl/default:com.android.hardware.authsecret apex [common]
+[ 26% 291/1105 9m58s remaining] run assemble_vintf
+[ 26% 292/1105 9m58s remaining] //hardware/interfaces/dumpstate/aidl/default:com.android.hardware.dumpstate run assemble_vintf for VINTF in APEX [common]
+[ 26% 293/1105 9m58s remaining] //device/google/cuttlefish/guest/hals/health/storage:com.google.cf.health.storage apex [common]
+[ 26% 294/1105 9m58s remaining] //device/google/cuttlefish/guest/hals/keymint/rust:com.android.hardware.keymint.rust_cf_guest_trusty_nonsecure run assemble_vintf for VINTF in APEX [common]
+[ 26% 295/1105 9m58s remaining] //hardware/interfaces/security/authgraph/default:com.android.hardware.security.authgraph run assemble_vintf for VINTF in APEX [common]
+[ 26% 296/1105 9m58s remaining] //hardware/interfaces/uwb/aidl/default:com.android.hardware.uwb run assemble_vintf for VINTF in APEX [common]
+[ 26% 297/1105 9m58s remaining] //device/google/cuttlefish/guest/hals/nfc:com.google.cf.nfc apex [common]
+[ 26% 298/1105 9m58s remaining] //hardware/interfaces/sensors/aidl/default:com.android.hardware.sensors run assemble_vintf for VINTF in APEX [common]
+[ 27% 299/1105 9m58s remaining] //device/google/cuttlefish/guest/hals/identity:com.google.cf.identity apex [common]
+[ 27% 300/1105 9m58s remaining] //hardware/interfaces/threadnetwork/aidl/default:com.android.hardware.threadnetwork apex [common]
+[ 27% 301/1105 9m58s remaining] //hardware/interfaces/usb/aidl/default/apex:com.android.hardware.usb apex [common]
+[ 27% 302/1105 9m58s remaining] //device/google/cuttlefish/guest/hals/ir:com.google.cf.ir apex [common]
+[ 27% 303/1105 9m58s remaining] //hardware/interfaces/vibrator/aidl/default/apex:com.android.hardware.vibrator run assemble_vintf for VINTF in APEX [common]
+INFO: Downgrading HAL android.hardware.vibrator in the manifest from V4 to V3 because it is unfrozen and unfrozen interfaces are not allowed in this release configuration.
+INFO: Downgrading HAL android.hardware.vibrator in the manifest from V4 to V3 because it is unfrozen and unfrozen interfaces are not allowed in this release configuration.
+[ 27% 304/1105 9m57s remaining] //hardware/interfaces/boot/aidl/default:com.android.hardware.boot apex [common]
+[ 27% 305/1105 9m57s remaining] //device/google/cuttlefish/guest/hals/light:com.google.cf.light run assemble_vintf for VINTF in APEX [common]
+[ 27% 306/1105 9m57s remaining] //device/google/cuttlefish/guest/hals/health:com.google.cf.health apex [common]
+[ 27% 307/1105 9m57s remaining] //device/google/cuttlefish/guest/hals/oemlock/remote:com.google.cf.oemlock run assemble_vintf for VINTF in APEX [common]
+[ 27% 308/1105 9m57s remaining] //device/google/cuttlefish/guest/hals/keymint/rust:com.android.hardware.keymint.rust_cf_guest_trusty_nonsecure apex [common]
+[ 27% 309/1105 9m57s remaining] //hardware/interfaces/dumpstate/aidl/default:com.android.hardware.dumpstate apex [common]
+[ 28% 310/1105 9m57s remaining] //hardware/interfaces/uwb/aidl/default:com.android.hardware.uwb apex [common]
+[ 28% 311/1105 9m57s remaining] //hardware/interfaces/security/authgraph/default:com.android.hardware.security.authgraph apex [common]
+[ 28% 312/1105 9m57s remaining] //hardware/interfaces/sensors/aidl/default:com.android.hardware.sensors apex [common]
+[ 28% 313/1105 9m57s remaining] //hardware/interfaces/vibrator/aidl/default/apex:com.android.hardware.vibrator apex [common]
+[ 28% 314/1105 9m56s remaining] //device/google/cuttlefish/guest/hals/light:com.google.cf.light apex [common]
+[ 28% 315/1105 9m56s remaining] //device/google/cuttlefish/guest/hals/gatekeeper/remote:com.android.hardware.gatekeeper.cf_remote signapk [common]
+[ 28% 316/1105 9m56s remaining] //device/google/cuttlefish/guest/hals/oemlock/remote:com.google.cf.oemlock apex [common]
+[ 28% 317/1105 9m56s remaining] //device/generic/goldfish/hals/hwc3:com.android.hardware.graphics.composer.ranchu signapk [common]
+[ 28% 318/1105 9m56s remaining] //device/google/cuttlefish/apex/com.google.cf.wpa_supplicant:com.google.cf.wpa_supplicant signapk [common]
+[ 28% 319/1105 9m56s remaining] //hardware/google/camera/devices/EmulatedCamera/hwl/apex:com.google.emulated.camera.provider.hal signapk [common]
+[ 28% 320/1105 9m56s remaining] //hardware/google/camera/devices/EmulatedCamera/hwl/apex:com.google.emulated.camera.provider.hal.fastscenecycle signapk [common]
+[ 29% 321/1105 9m56s remaining] //hardware/interfaces/audio/aidl/default/apex/com.android.hardware.audio:com.android.hardware.audio signapk [common]
+[ 29% 322/1105 9m55s remaining] //packages/modules/NeuralNetworks/driver:com.android.hardware.neuralnetworks signapk [common]
+[ 29% 323/1105 9m55s remaining] //device/google/cuttlefish/apex/com.google.cf.bt:com.google.cf.bt signapk [common]
+[ 29% 324/1105 9m55s remaining] //hardware/interfaces/contexthub/aidl/default:com.android.hardware.contexthub signapk [common]
+[ 29% 325/1105 9m55s remaining] //external/drm_hwcomposer:com.android.hardware.graphics.composer.drm_hwcomposer signapk [common]
+[ 29% 326/1105 9m55s remaining] //hardware/interfaces/gnss/aidl/default:com.android.hardware.gnss signapk [common]
+[ 29% 327/1105 9m55s remaining] //frameworks/av/drm/mediadrm/plugins/clearkey/aidl:com.android.hardware.drm.clearkey signapk [common]
+[ 29% 328/1105 9m55s remaining] //device/google/cuttlefish/apex/com.google.cf.rild:com.google.cf.rild signapk [common]
+[ 29% 329/1105 9m55s remaining] //hardware/interfaces/input/processor/aidl/default:com.android.hardware.input.processor signapk [common]
+[ 29% 330/1105 9m55s remaining] //hardware/interfaces/cas/aidl/default:com.android.hardware.cas signapk [common]
+[ 29% 331/1105 9m55s remaining] //hardware/interfaces/rebootescrow/aidl/default:com.android.hardware.rebootescrow signapk [common]
+[ 30% 332/1105 9m55s remaining] //device/google/cuttlefish/guest/hals/keymint/rust:com.android.hardware.keymint.rust_cf_remote signapk [common]
+[ 30% 333/1105 9m55s remaining] //hardware/interfaces/security/keymint/aidl/default:com.android.hardware.keymint.rust_nonsecure signapk [common]
+[ 30% 334/1105 9m55s remaining] //hardware/interfaces/gatekeeper/aidl/software:com.android.hardware.gatekeeper.nonsecure signapk [common]
+[ 30% 335/1105 9m55s remaining] //hardware/interfaces/wifi/apex:com.android.hardware.wifi signapk [common]
+[ 30% 336/1105 9m54s remaining] //device/google/cuttlefish/guest/hals/nfc:com.google.cf.nfc signapk [common]
+[ 30% 337/1105 9m54s remaining] //device/google/cuttlefish/guest/hals/light:com.google.cf.light signapk [common]
+[ 30% 338/1105 9m54s remaining] //device/google/cuttlefish/guest/hals/gralloc:com.google.cf.gralloc signapk [common]
+[ 30% 339/1105 9m54s remaining] //trusty/vendor/google/aosp/scripts:trusty_security_vm_x86_64.elf generate
+[ 30% 340/1105 9m54s remaining] //hardware/interfaces/wifi/netlinkinterceptor/aidl/default:com.android.hardware.net.nlinterceptor signapk [common]
+[ 30% 341/1105 9m54s remaining] //device/google/cuttlefish/guest/hals/confirmationui:com.google.cf.confirmationui signapk [common]
+[ 30% 342/1105 9m54s remaining] //hardware/interfaces/usb/aidl/default/apex:com.android.hardware.usb signapk [common]
+[ 31% 343/1105 9m54s remaining] //device/google/cuttlefish/guest/hals/ir:com.google.cf.ir signapk [common]
+[ 31% 344/1105 9m54s remaining] //hardware/interfaces/security/secretkeeper/default:com.android.hardware.security.secretkeeper signapk [common]
+[ 31% 345/1105 9m54s remaining] //hardware/interfaces/secure_element/aidl/default:com.android.hardware.secure_element signapk [common]
+[ 31% 346/1105 9m54s remaining] //device/google/cuttlefish/guest/hals/health/storage:com.google.cf.health.storage signapk [common]
+[ 31% 347/1105 9m53s remaining] //hardware/interfaces/dumpstate/aidl/default:com.android.hardware.dumpstate signapk [common]
+[ 31% 348/1105 9m53s remaining] //hardware/interfaces/sensors/aidl/default:com.android.hardware.sensors signapk [common]
+[ 31% 349/1105 9m53s remaining] //device/google/cuttlefish/guest/hals/identity:com.google.cf.identity signapk [common]
+[ 31% 350/1105 9m53s remaining] //device/google/cuttlefish/guest/hals/keymint/rust:com.android.hardware.keymint.rust_cf_guest_trusty_nonsecure signapk [common]
+[ 31% 351/1105 9m53s remaining] //hardware/interfaces/uwb/aidl/default:com.android.hardware.uwb signapk [common]
+[ 31% 352/1105 9m53s remaining] //hardware/interfaces/security/authgraph/default:com.android.hardware.security.authgraph signapk [common]
+[ 31% 353/1105 9m53s remaining] //hardware/interfaces/tetheroffload/aidl/default:com.android.hardware.tetheroffload signapk [common]
+[ 32% 354/1105 9m53s remaining] //hardware/interfaces/boot/aidl/default:com.android.hardware.boot signapk [common]
+[ 32% 355/1105 9m53s remaining] run assemble_vintf
+[ 32% 356/1105 9m53s remaining] //system/libhidl/vintfdata:vendor_manifest.xml Process vintf data out/soong/.intermediates/system/libhidl/vintfdata/vendor_manifest.xml/android_x86_64_silvermont/manifest.xml
+[ 32% 357/1105 9m53s remaining] run assemble_vintf
+[ 32% 358/1105 9m53s remaining] run assemble_vintf
+[ 32% 359/1105 9m53s remaining] //system/libhidl/vintfdata:vendor_compatibility_matrix.xml Process vintf data out/soong/.intermediates/system/libhidl/vintfdata/vendor_compatibility_matrix.xml/android_x86_64_silvermont/manifest.xml
+[ 32% 360/1105 9m53s remaining] //system/libhidl/vintfdata:product_manifest.xml Process vintf data out/soong/.intermediates/system/libhidl/vintfdata/product_manifest.xml/android_x86_64_silvermont/manifest.xml
+[ 32% 361/1105 9m53s remaining] //device/google/cuttlefish/guest/hals/health:com.google.cf.health signapk [common]
+[ 32% 362/1105 9m53s remaining] //hardware/interfaces/thermal/aidl/default:com.android.hardware.thermal signapk [common]
+[ 32% 363/1105 9m53s remaining] cp out/soong/.intermediates/trusty/vendor/google/aosp/scripts/trusty_security_vm_unsigned/android_x86_64_silvermont/trusty_security_vm_unsigned.elf
+[ 32% 364/1105 9m53s remaining] run assemble_vintf
+[ 33% 365/1105 9m53s remaining] //system/libhidl/vintfdata:system_ext_manifest.xml Process vintf data out/soong/.intermediates/system/libhidl/vintfdata/system_ext_manifest.xml/android_x86_64_silvermont/manifest.xml
+[ 33% 366/1105 9m53s remaining] cp out/soong/.intermediates/packages/modules/Virtualization/guest/trusty/security_vm/vm/trusty_security_vm.elf/android_x86_64_silvermont/trusty_security_vm.elf
+[ 33% 367/1105 9m53s remaining] //hardware/interfaces/vibrator/aidl/default/apex:com.android.hardware.vibrator signapk [common]
+[ 33% 368/1105 9m53s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_odm_dlkm_image Assemble filesystem staging dir aosp_cf_x86_64_only_phone_generated_odm_dlkm_image [common]
+[ 33% 369/1105 9m53s remaining] //hardware/interfaces/power/aidl/default/apex:com.android.hardware.power signapk [common]
+[ 33% 370/1105 9m53s remaining] //device/google/cuttlefish/apex/com.google.cf.wpa_supplicant:com.google.cf.wpa_supplicant install com.google.cf.wpa_supplicant.apex [common]
+[ 33% 371/1105 9m53s remaining] //build/soong/compliance:notice_xml_system_dlkm install NOTICE.xml.gz
+[ 33% 372/1105 9m53s remaining] //build/soong/compliance:notice_xml_system_ext install NOTICE.xml.gz
+[ 33% 373/1105 9m53s remaining] //build/soong/compliance:notice_xml_vendor install NOTICE.xml.gz
+[ 33% 374/1105 9m53s remaining] //system/libhidl/vintfdata:product_manifest.xml install manifest.xml
+[ 33% 375/1105 9m53s remaining] //hardware/interfaces/memtrack/aidl/default:com.android.hardware.memtrack signapk [common]
+[ 34% 376/1105 9m53s remaining] //hardware/interfaces/compatibility_matrices:framework_compatibility_matrix.202504.xml install compatibility_matrix.202504.xml [common]
+[ 34% 377/1105 9m53s remaining] //hardware/interfaces/threadnetwork/aidl/default:com.android.hardware.threadnetwork signapk [common]
+[ 34% 378/1105 9m53s remaining] //hardware/interfaces/compatibility_matrices:framework_compatibility_matrix.5.xml install compatibility_matrix.5.xml [common]
+[ 34% 379/1105 9m53s remaining] //hardware/interfaces/compatibility_matrices:framework_compatibility_matrix.7.xml install compatibility_matrix.7.xml [common]
+[ 34% 380/1105 9m53s remaining] //hardware/interfaces/compatibility_matrices:framework_compatibility_matrix.6.xml install compatibility_matrix.6.xml [common]
+[ 34% 381/1105 9m53s remaining] //hardware/interfaces/compatibility_matrices:framework_compatibility_matrix.202404.xml install compatibility_matrix.202404.xml [common]
+[ 34% 382/1105 9m53s remaining] //hardware/interfaces/authsecret/aidl/default:com.android.hardware.authsecret signapk [common]
+[ 34% 383/1105 9m53s remaining] //device/google/cuttlefish/guest/hals/oemlock/remote:com.google.cf.oemlock signapk [common]
+[ 34% 384/1105 9m53s remaining] //packages/modules/Virtualization/build/apex:com.android.virt install com.android.virt.apex [common]
+[ 34% 385/1105 9m53s remaining] //build/soong/compliance:notice_xml_odm_dlkm install NOTICE.xml.gz
+[ 34% 386/1105 9m53s remaining] //hardware/interfaces/compatibility_matrices:framework_compatibility_matrix.device.xml install compatibility_matrix.device.xml [common]
+[ 35% 387/1105 9m53s remaining] //build/soong/compliance:notice_xml_product install NOTICE.xml.gz
+[ 35% 388/1105 9m52s remaining] //build/soong/compliance:notice_xml_system install NOTICE.xml.gz
+[ 35% 389/1105 9m52s remaining] //hardware/interfaces/compatibility_matrices:framework_compatibility_matrix.8.xml install compatibility_matrix.8.xml [common]
+[ 35% 390/1105 9m52s remaining] //packages/modules/NeuralNetworks/driver:com.android.hardware.neuralnetworks install com.android.hardware.neuralnetworks.apex [common]
+[ 35% 391/1105 9m52s remaining] //packages/modules/Virtualization/guest/trusty/security_vm/vm:trusty_security_vm.elf install trusty_security_vm.elf
+[ 35% 392/1105 9m52s remaining] //device/google/cuttlefish/apex/com.google.cf.rild:com.google.cf.rild install com.google.cf.rild.apex [common]
+[ 35% 393/1105 9m52s remaining] //hardware/interfaces/audio/aidl/default/apex/com.android.hardware.audio:com.android.hardware.audio install com.android.hardware.audio.apex [common]
+[ 35% 394/1105 9m52s remaining] //hardware/google/camera/devices/EmulatedCamera/hwl/apex:com.google.emulated.camera.provider.hal install com.google.emulated.camera.provider.hal.apex [common]
+[ 35% 395/1105 9m52s remaining] //hardware/interfaces/sensors/aidl/default:com.android.hardware.sensors install com.android.hardware.sensors.apex [common]
+[ 35% 396/1105 9m52s remaining] //hardware/google/camera/devices/EmulatedCamera/hwl/apex:com.google.emulated.camera.provider.hal.fastscenecycle install com.google.emulated.camera.provider.hal.fastscenecycle.apex [common]
+[ 35% 397/1105 9m52s remaining] //hardware/interfaces/security/keymint/aidl/default:com.android.hardware.keymint.rust_nonsecure install com.android.hardware.keymint.rust_nonsecure.apex [common]
+[ 36% 398/1105 9m52s remaining] //device/google/cuttlefish/guest/hals/gralloc:com.google.cf.gralloc install com.google.cf.gralloc.apex [common]
+[ 36% 399/1105 9m52s remaining] //frameworks/av/drm/mediadrm/plugins/clearkey/aidl:com.android.hardware.drm.clearkey install com.android.hardware.drm.clearkey.apex [common]
+[ 36% 400/1105 9m52s remaining] //hardware/interfaces/wifi/netlinkinterceptor/aidl/default:com.android.hardware.net.nlinterceptor install com.android.hardware.net.nlinterceptor.apex [common]
+[ 36% 401/1105 9m52s remaining] //device/generic/goldfish/hals/hwc3:com.android.hardware.graphics.composer.ranchu install com.android.hardware.graphics.composer.ranchu.apex [common]
+[ 36% 402/1105 9m52s remaining] //hardware/interfaces/threadnetwork/aidl/default:com.android.hardware.threadnetwork install com.android.hardware.threadnetwork.apex [common]
+[ 36% 403/1105 9m52s remaining] //hardware/interfaces/security/authgraph/default:com.android.hardware.security.authgraph install com.android.hardware.security.authgraph.apex [common]
+[ 36% 404/1105 9m52s remaining] //hardware/interfaces/usb/aidl/default/apex:com.android.hardware.usb install com.android.hardware.usb.apex [common]
+[ 36% 405/1105 9m52s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_ramdisk_image Installed file list txt [common]
+[ 36% 406/1105 9m52s remaining] //hardware/interfaces/authsecret/aidl/default:com.android.hardware.authsecret install com.android.hardware.authsecret.apex [common]
+[ 36% 407/1105 9m52s remaining] //hardware/interfaces/wifi/apex:com.android.hardware.wifi install com.android.hardware.wifi.apex [common]
+[ 36% 408/1105 9m52s remaining] //hardware/interfaces/dumpstate/aidl/default:com.android.hardware.dumpstate install com.android.hardware.dumpstate.apex [common]
+[ 37% 409/1105 9m52s remaining] //device/google/cuttlefish/guest/hals/gatekeeper/remote:com.android.hardware.gatekeeper.cf_remote install com.android.hardware.gatekeeper.cf_remote.apex [common]
+[ 37% 410/1105 9m52s remaining] //external/drm_hwcomposer:com.android.hardware.graphics.composer.drm_hwcomposer install com.android.hardware.graphics.composer.drm_hwcomposer.apex [common]
+[ 37% 411/1105 9m52s remaining] //hardware/interfaces/tetheroffload/aidl/default:com.android.hardware.tetheroffload install com.android.hardware.tetheroffload.apex [common]
+[ 37% 412/1105 9m52s remaining] //hardware/interfaces/gnss/aidl/default:com.android.hardware.gnss install com.android.hardware.gnss.apex [common]
+[ 37% 413/1105 9m52s remaining] //hardware/interfaces/security/secretkeeper/default:com.android.hardware.security.secretkeeper install com.android.hardware.security.secretkeeper.apex [common]
+[ 37% 414/1105 9m52s remaining] //hardware/interfaces/uwb/aidl/default:com.android.hardware.uwb install com.android.hardware.uwb.apex [common]
+[ 37% 415/1105 9m52s remaining] //device/google/cuttlefish/guest/hals/health:com.google.cf.health install com.google.cf.health.apex [common]
+[ 37% 416/1105 9m52s remaining] //hardware/interfaces/cas/aidl/default:com.android.hardware.cas install com.android.hardware.cas.apex [common]
+[ 37% 417/1105 9m52s remaining] //device/google/cuttlefish/guest/hals/light:com.google.cf.light install com.google.cf.light.apex [common]
+[ 37% 418/1105 9m52s remaining] //device/google/cuttlefish/apex/com.google.cf.bt:com.google.cf.bt install com.google.cf.bt.apex [common]
+[ 37% 419/1105 9m52s remaining] //hardware/interfaces/contexthub/aidl/default:com.android.hardware.contexthub install com.android.hardware.contexthub.apex [common]
+[ 38% 420/1105 9m52s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_init_boot_image Adding avb footer to aosp_cf_x86_64_only_phone_generated_init_boot_image
+[ 38% 421/1105 9m52s remaining] //hardware/interfaces/memtrack/aidl/default:com.android.hardware.memtrack install com.android.hardware.memtrack.apex [common]
+[ 38% 422/1105 9m52s remaining] //hardware/interfaces/power/aidl/default/apex:com.android.hardware.power install com.android.hardware.power.apex [common]
+[ 38% 423/1105 9m52s remaining] //hardware/interfaces/gatekeeper/aidl/software:com.android.hardware.gatekeeper.nonsecure install com.android.hardware.gatekeeper.nonsecure.apex [common]
+[ 38% 424/1105 9m52s remaining] //device/google/cuttlefish/guest/hals/keymint/rust:com.android.hardware.keymint.rust_cf_remote install com.android.hardware.keymint.rust_cf_remote.apex [common]
+[ 38% 425/1105 9m52s remaining] //device/google/cuttlefish/guest/hals/ir:com.google.cf.ir install com.google.cf.ir.apex [common]
+[ 38% 426/1105 9m52s remaining] //system/libhidl/vintfdata:vendor_compatibility_matrix.xml install compatibility_matrix.xml
+[ 38% 427/1105 9m52s remaining] //hardware/interfaces/biometrics/fingerprint/aidl/default:android.hardware.biometrics.fingerprint-service.default.vintf install fingerprint-default.xml [common]
+[ 38% 428/1105 9m52s remaining] //system/netd/server:android.system.net.netd-service.xml install android.system.net.netd-service.xml [common]
+[ 38% 429/1105 9m52s remaining] //hardware/interfaces/boot/aidl/default:com.android.hardware.boot install com.android.hardware.boot.apex [common]
+[ 38% 430/1105 9m52s remaining] cp out/target/product/vsoc_x86_64_only/init_boot.img
+[ 39% 431/1105 9m52s remaining] //hardware/interfaces/input/processor/aidl/default:com.android.hardware.input.processor install com.android.hardware.input.processor.apex [common]
+[ 39% 432/1105 9m52s remaining] //hardware/interfaces/rebootescrow/aidl/default:com.android.hardware.rebootescrow install com.android.hardware.rebootescrow.apex [common]
+[ 39% 433/1105 9m52s remaining] //hardware/interfaces/secure_element/aidl/default:com.android.hardware.secure_element install com.android.hardware.secure_element.apex [common]
+[ 39% 434/1105 9m52s remaining] //device/google/cuttlefish/guest/hals/health/storage:com.google.cf.health.storage install com.google.cf.health.storage.apex [common]
+[ 39% 435/1105 9m52s remaining] //hardware/interfaces/thermal/aidl/default:com.android.hardware.thermal install com.android.hardware.thermal.apex [common]
+[ 39% 436/1105 9m52s remaining] //hardware/interfaces/vibrator/aidl/default/apex:com.android.hardware.vibrator install com.android.hardware.vibrator.apex [common]
+[ 39% 437/1105 9m52s remaining] //device/google/cuttlefish/guest/hals/identity:com.google.cf.identity install com.google.cf.identity.apex [common]
+[ 39% 438/1105 9m52s remaining] //device/google/cuttlefish/guest/hals/nfc:com.google.cf.nfc install com.google.cf.nfc.apex [common]
+[ 39% 439/1105 9m52s remaining] //system/libhidl/vintfdata:system_ext_manifest.xml install manifest.xml
+[ 39% 440/1105 9m52s remaining] //system/libhidl/vintfdata:system_manifest.xml install manifest.xml
+[ 39% 441/1105 9m52s remaining] //system/libhidl/vintfdata:vendor_manifest.xml install manifest.xml
+[ 40% 442/1105 9m52s remaining] //hardware/interfaces/biometrics/face/aidl/default:android.hardware.biometrics.face-service.default.vintf install face-default.xml [common]
+[ 40% 443/1105 9m52s remaining] //system/libhidl/transport/allocator/1.0/default:android.hidl.allocator@1.0-service.xml install android.hidl.allocator@1.0-service.xml [common]
+[ 40% 444/1105 9m52s remaining] //system/security/keystore2:android.system.keystore2-service.xml install android.system.keystore2-service.xml [common]
+[ 40% 445/1105 9m52s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_dlkm_image Assemble filesystem staging dir aosp_cf_x86_64_only_phone_generated_system_dlkm_image [common]
+[ 40% 446/1105 9m52s remaining] //system/hardware/interfaces/suspend/1.0/default:android.system.suspend-service.xml install android.system.suspend-service.xml [common]
+[ 40% 447/1105 9m52s remaining] //system/vold:android.system.vold-service.xml install android.system.vold-service.xml [common]
+[ 40% 448/1105 9m52s remaining] cp out/target/product/vsoc_x86_64_only/vendor/etc/vintf/manifest/mapper.minigbm.xml
+[ 40% 449/1105 9m52s remaining] //device/google/cuttlefish/guest/hals/keymint/rust:com.android.hardware.keymint.rust_cf_guest_trusty_nonsecure install com.android.hardware.keymint.rust_cf_guest_trusty_nonsecure.apex [common]
+[ 40% 450/1105 9m52s remaining] //device/google/cuttlefish/guest/hals/confirmationui:com.google.cf.confirmationui install com.google.cf.confirmationui.apex [common]
+[ 40% 451/1105 9m52s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-ramdisk.txt
+[ 40% 452/1105 9m52s remaining] //device/google/cuttlefish/guest/hals/oemlock/remote:com.google.cf.oemlock install com.google.cf.oemlock.apex [common]
+[ 40% 453/1105 9m52s remaining] //frameworks/native/services/stats:android.frameworks.stats-service.xml install android.frameworks.stats-service.xml [common]
+[ 41% 454/1105 9m52s remaining] //frameworks/av/camera/cameraserver:manifest_android.frameworks.cameraservice.service.xml install manifest_android.frameworks.cameraservice.service.xml [common]
+[ 41% 455/1105 9m52s remaining] //frameworks/av/media/mediaserver:manifest_media_c2_software.xml install manifest_media_c2_software.xml [common]
+[ 41% 456/1105 9m52s remaining] //frameworks/base/services:manifest_services_android.frameworks.location.xml install manifest_services_android.frameworks.location.xml [common]
+[ 41% 457/1105 9m52s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-ramdisk.json
+[ 41% 458/1105 9m52s remaining] //frameworks/base/services:manifest_services_android.frameworks.devicestate.xml install manifest_services_android.frameworks.devicestate.xml [common]
+[ 41% 459/1105 9m52s remaining] //frameworks/base/services:manifest_services_android.frameworks.vibrator.xml install manifest_services_android.frameworks.vibrator.xml [common]
+[ 41% 460/1105 9m52s remaining] run apex_linkerconfig_validation
+[ 41% 461/1105 9m52s remaining] run apex_linkerconfig_validation
+[ 41% 462/1105 9m52s remaining] run apex_linkerconfig_validation
+[ 41% 463/1105 9m52s remaining] run apex_linkerconfig_validation
+[ 41% 464/1105 9m52s remaining] run apex_linkerconfig_validation
+[ 42% 465/1105 9m52s remaining] run apex_linkerconfig_validation
+[ 42% 466/1105 9m52s remaining] run apex_linkerconfig_validation
+[ 42% 467/1105 9m52s remaining] run host_apex_verifier
+[ 42% 468/1105 9m52s remaining] run host_apex_verifier
+[ 42% 469/1105 9m52s remaining] run apex_linkerconfig_validation
+[ 42% 470/1105 9m52s remaining] run host_apex_verifier
+[ 42% 471/1105 9m52s remaining] run host_apex_verifier
+[ 42% 472/1105 9m52s remaining] run apex_linkerconfig_validation
+[ 42% 473/1105 9m52s remaining] run apex_linkerconfig_validation
+[ 42% 474/1105 9m52s remaining] run host_apex_verifier
+[ 42% 475/1105 9m51s remaining] run apex_linkerconfig_validation
+[ 43% 476/1105 9m51s remaining] run host_apex_verifier
+[ 43% 477/1105 9m51s remaining] run host_apex_verifier
+[ 43% 478/1105 9m51s remaining] run host_apex_verifier
+[ 43% 479/1105 9m51s remaining] run host_apex_verifier
+[ 43% 480/1105 9m51s remaining] run apex_linkerconfig_validation
+[ 43% 481/1105 9m51s remaining] run apex_linkerconfig_validation
+[ 43% 482/1105 9m51s remaining] run host_apex_verifier
+[ 43% 483/1105 9m51s remaining] run apex_linkerconfig_validation
+[ 43% 484/1105 9m51s remaining] run host_apex_verifier
+[ 43% 485/1105 9m51s remaining] run apex_linkerconfig_validation
+[ 43% 486/1105 9m51s remaining] run apex_linkerconfig_validation
+[ 44% 487/1105 9m51s remaining] run host_apex_verifier
+[ 44% 488/1105 9m51s remaining] run apex_linkerconfig_validation
+[ 44% 489/1105 9m51s remaining] run host_apex_verifier
+[ 44% 490/1105 9m51s remaining] run host_apex_verifier
+[ 44% 491/1105 9m51s remaining] run apex_linkerconfig_validation
+[ 44% 492/1105 9m51s remaining] run host_apex_verifier
+[ 44% 493/1105 9m51s remaining] run host_apex_verifier
+[ 44% 494/1105 9m51s remaining] run apex_linkerconfig_validation
+[ 44% 495/1105 9m51s remaining] run apex_linkerconfig_validation
+[ 44% 496/1105 9m51s remaining] run host_apex_verifier
+[ 44% 497/1105 9m51s remaining] run host_apex_verifier
+[ 45% 498/1105 9m51s remaining] run apex_linkerconfig_validation
+[ 45% 499/1105 9m51s remaining] run apex_linkerconfig_validation
+[ 45% 500/1105 9m51s remaining] run host_apex_verifier
+[ 45% 501/1105 9m51s remaining] run apex_linkerconfig_validation
+[ 45% 502/1105 9m51s remaining] run apex_linkerconfig_validation
+[ 45% 503/1105 9m50s remaining] run apex_linkerconfig_validation
+[ 45% 504/1105 9m50s remaining] run host_apex_verifier
+[ 45% 505/1105 9m50s remaining] run host_apex_verifier
+[ 45% 506/1105 9m50s remaining] run host_apex_verifier
+[ 45% 507/1105 9m50s remaining] rm -rf out/soong/.intermediates/build/soong/compliance/notice_xml_vendor_dlkm/android_x86_64_silvermont/NOTICE.xml.gz && out/host/linux-x86/bin/gen_notice_xml --output_file out/soong/.intermediates/build/soong/compliance/notice_xml_vendor_dlkm/android_x86_64_silvermont/NOTICE.xml.gz --metadata out/soong/compliance-metadata/aosp_cf_x86_64_only_phone/compliance-metadata.db --partition vendor_dlkm --product_out out/target/product/vsoc_x86_64_only --soong_out out/soong
+[ 45% 508/1105 9m50s remaining] run host_apex_verifier
+[ 46% 509/1105 9m50s remaining] //build/soong/compliance:notice_xml_vendor_dlkm install NOTICE.xml.gz
+[ 46% 510/1105 9m50s remaining] rm -rf out/soong/.intermediates/build/soong/compliance/notice_xml_odm/android_x86_64_silvermont/NOTICE.xml.gz && out/host/linux-x86/bin/gen_notice_xml --output_file out/soong/.intermediates/build/soong/compliance/notice_xml_odm/android_x86_64_silvermont/NOTICE.xml.gz --metadata out/soong/compliance-metadata/aosp_cf_x86_64_only_phone/compliance-metadata.db --partition odm --product_out out/target/product/vsoc_x86_64_only --soong_out out/soong
+[ 46% 511/1105 9m50s remaining] //build/soong/compliance:notice_xml_odm install NOTICE.xml.gz
+[ 46% 512/1105 9m50s remaining] run apex_linkerconfig_validation
+[ 46% 513/1105 9m50s remaining] run host_apex_verifier
+[ 46% 514/1105 9m50s remaining] run apex_linkerconfig_validation
+[ 46% 515/1105 9m50s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_dlkm_image Assemble filesystem staging dir aosp_cf_x86_64_only_phone_generated_vendor_dlkm_image [common]
+[ 46% 516/1105 9m50s remaining] run apex_linkerconfig_validation
+[ 46% 517/1105 9m50s remaining] run host_apex_verifier
+[ 46% 518/1105 9m50s remaining] run host_apex_verifier
+[ 46% 519/1105 9m50s remaining] run apex_linkerconfig_validation
+[ 47% 520/1105 9m50s remaining] run host_apex_verifier
+[ 47% 521/1105 9m50s remaining] run apex_linkerconfig_validation
+[ 47% 522/1105 9m50s remaining] run host_apex_verifier
+[ 47% 523/1105 9m50s remaining] run host_apex_verifier
+[ 47% 524/1105 9m50s remaining] run apex_linkerconfig_validation
+[ 47% 525/1105 9m50s remaining] run apex_linkerconfig_validation
+[ 47% 526/1105 9m50s remaining] run apex_linkerconfig_validation
+[ 47% 527/1105 9m50s remaining] run host_apex_verifier
+[ 47% 528/1105 9m50s remaining] run apex_linkerconfig_validation
+[ 47% 529/1105 9m50s remaining] run apex_linkerconfig_validation
+[ 47% 530/1105 9m50s remaining] run host_apex_verifier
+[ 48% 531/1105 9m50s remaining] run host_apex_verifier
+[ 48% 532/1105 9m50s remaining] run apex_linkerconfig_validation
+[ 48% 533/1105 9m50s remaining] run host_apex_verifier
+[ 48% 534/1105 9m50s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_image Assemble filesystem staging dir aosp_cf_x86_64_only_phone_generated_system_image [common]
+[ 48% 535/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/bmgr.jar.fsv_meta
+[ 48% 536/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-framework-location.art.fsv_meta
+[ 48% 537/1105 9m50s remaining] run apex_linkerconfig_validation
+[ 48% 538/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/ims-common.jar.fsv_meta
+[ 48% 539/1105 9m50s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.appsearch@javalib@service-appsearch.jar@classes.vdex.fsv_meta'
+[ 48% 540/1105 9m50s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.art@javalib@service-art.jar@classes.odex.fsv_meta'
+[ 48% 541/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/bmgr.odex.fsv_meta
+[ 49% 542/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/requestsync.odex.fsv_meta
+[ 49% 543/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/telecom.vdex.fsv_meta
+[ 49% 544/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/etc/linker.config.pb
+[ 49% 545/1105 9m50s remaining] run apex_linkerconfig_validation
+[ 49% 546/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/etc/preloaded-classes.fsv_meta
+[ 49% 547/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/am.jar.fsv_meta
+[ 49% 548/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/android.hidl.base-V1.0-java.jar.fsv_meta
+[ 49% 549/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/android.test.mock.jar.fsv_meta
+[ 49% 550/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/android.test.runner.jar.fsv_meta
+[ 49% 551/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/boot-bouncycastle.vdex.fsv_meta
+[ 49% 552/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/boot-framework-adservices.vdex.fsv_meta
+[ 50% 553/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/boot-framework-ondeviceintelligence-platform.vdex.fsv_meta
+[ 50% 554/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/boot-framework.vdex.fsv_meta
+[ 50% 555/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/com.android.mediadrm.signer.jar.fsv_meta
+[ 50% 556/1105 9m50s remaining] run apex_linkerconfig_validation
+[ 50% 557/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/ext.jar.fsv_meta
+[ 50% 558/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/framework-res.apk.fsv_meta
+[ 50% 559/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/framework.jar.fsv_meta
+[ 50% 560/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/incident-helper-cmd.jar.fsv_meta
+[ 50% 561/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/am.odex.fsv_meta
+[ 50% 562/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/abx.vdex.fsv_meta
+[ 50% 563/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/am.vdex.fsv_meta
+[ 51% 564/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/android.hidl.manager-V1.0-java.odex.fsv_meta
+[ 51% 565/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/android.test.base.odex.fsv_meta
+[ 51% 566/1105 9m50s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.adservices@javalib@service-sdksandbox.jar@classes.odex.fsv_meta'
+[ 51% 567/1105 9m50s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.adservices@javalib@service-sdksandbox.jar@classes.vdex.fsv_meta'
+[ 51% 568/1105 9m50s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.crashrecovery@javalib@service-crashrecovery.jar@classes.vdex.fsv_meta'
+[ 51% 569/1105 9m50s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.os.statsd@javalib@service-statsd.jar@classes.vdex.fsv_meta'
+[ 51% 570/1105 9m50s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.uwb@javalib@service-uwb.jar@classes.odex.fsv_meta'
+[ 51% 571/1105 9m50s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.uwb@javalib@service-uwb.jar@classes.vdex.fsv_meta'
+[ 51% 572/1105 9m50s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.virt@javalib@service-virtualization.jar@classes.odex.fsv_meta'
+[ 51% 573/1105 9m50s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.virt@javalib@service-virtualization.jar@classes.vdex.fsv_meta'
+[ 51% 574/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/bmgr.vdex.fsv_meta
+[ 52% 575/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/bu.vdex.fsv_meta
+[ 52% 576/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/com.android.media.remotedisplay.odex.fsv_meta
+[ 52% 577/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/com.android.nfc_extras.vdex.fsv_meta
+[ 52% 578/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/content.odex.fsv_meta
+[ 52% 579/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/javax.obex.vdex.fsv_meta
+[ 52% 580/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/hid.vdex.fsv_meta
+[ 52% 581/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/services.art.fsv_meta
+[ 52% 582/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/telephony-common.jar.fsv_meta
+[ 52% 583/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/uiautomator.jar.fsv_meta
+[ 52% 584/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-core-icu4j.art.fsv_meta
+[ 52% 585/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-framework-adservices.oat.fsv_meta
+[ 53% 586/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-framework.art.fsv_meta
+[ 53% 587/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/etc/classpaths/bootclasspath.pb.fsv_meta
+[ 53% 588/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/etc/boot-image.prof.fsv_meta
+[ 53% 589/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/etc/classpaths/systemserverclasspath.pb.fsv_meta
+[ 53% 590/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/etc/dirty-image-objects.fsv_meta
+[ 53% 591/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/abx.jar.fsv_meta
+[ 53% 592/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/android.hidl.manager-V1.0-java.jar.fsv_meta
+[ 53% 593/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/android.test.base.jar.fsv_meta
+[ 53% 594/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/appwidget.jar.fsv_meta
+[ 53% 595/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/boot-apache-xml.vdex.fsv_meta
+[ 53% 596/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/boot-core-icu4j.vdex.fsv_meta
+[ 54% 597/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/boot-core-libart.vdex.fsv_meta
+[ 54% 598/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/boot-ext.vdex.fsv_meta
+[ 54% 599/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/boot-framework-graphics.vdex.fsv_meta
+[ 54% 600/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/boot-framework-location.vdex.fsv_meta
+[ 54% 601/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/boot-okhttp.vdex.fsv_meta
+[ 54% 602/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/boot-telephony-common.vdex.fsv_meta
+[ 54% 603/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/bu.jar.fsv_meta
+[ 54% 604/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/boot.vdex.fsv_meta
+[ 54% 605/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/com.android.future.usb.accessory.jar.fsv_meta
+[ 54% 606/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/com.android.location.provider.jar.fsv_meta
+[ 54% 607/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/com.android.media.remotedisplay.jar.fsv_meta
+[ 55% 608/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/com.android.nfc_extras.jar.fsv_meta
+[ 55% 609/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/content.jar.fsv_meta
+[ 55% 610/1105 9m50s remaining] run host_apex_verifier
+[ 55% 611/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/framework-graphics.jar.fsv_meta
+[ 55% 612/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/framework-location.jar.fsv_meta
+[ 55% 613/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/framework-ondeviceintelligence-platform.jar.fsv_meta
+[ 55% 614/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/hid.jar.fsv_meta
+[ 55% 615/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/javax.obex.jar.fsv_meta
+[ 55% 616/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/lockagent.jar.fsv_meta
+[ 55% 617/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/monkey.jar.fsv_meta
+[ 55% 618/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/abx.odex.fsv_meta
+[ 56% 619/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/android.hidl.base-V1.0-java.odex.fsv_meta
+[ 56% 620/1105 9m50s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/android.hidl.base-V1.0-java.vdex.fsv_meta
+[ 56% 621/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/android.hidl.manager-V1.0-java.vdex.fsv_meta
+[ 56% 622/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/android.test.base.vdex.fsv_meta
+[ 56% 623/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/android.test.mock.odex.fsv_meta
+[ 56% 624/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/android.test.mock.vdex.fsv_meta
+[ 56% 625/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/android.test.runner.odex.fsv_meta
+[ 56% 626/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/android.test.runner.vdex.fsv_meta
+[ 56% 627/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.adservices@javalib@service-adservices.jar@classes.odex.fsv_meta'
+[ 56% 628/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.adservices@javalib@service-adservices.jar@classes.vdex.fsv_meta'
+[ 56% 629/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.appsearch@javalib@service-appsearch.jar@classes.odex.fsv_meta'
+[ 57% 630/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.art@javalib@service-art.jar@classes.art.fsv_meta'
+[ 57% 631/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.bt@javalib@service-bluetooth.jar@classes.vdex.fsv_meta'
+[ 57% 632/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.configinfrastructure@javalib@service-configinfrastructure.jar@classes.odex.fsv_meta'
+[ 57% 633/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.crashrecovery@javalib@service-crashrecovery.jar@classes.odex.fsv_meta'
+[ 57% 634/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.devicelock@javalib@service-devicelock.jar@classes.odex.fsv_meta'
+[ 57% 635/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.devicelock@javalib@service-devicelock.jar@classes.vdex.fsv_meta'
+[ 57% 636/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.healthfitness@javalib@service-healthfitness.jar@classes.odex.fsv_meta'
+[ 57% 637/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.healthfitness@javalib@service-healthfitness.jar@classes.vdex.fsv_meta'
+[ 57% 638/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.media@javalib@service-media-s.jar@classes.odex.fsv_meta'
+[ 57% 639/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.ondevicepersonalization@javalib@service-ondevicepersonalization.jar@classes.odex.fsv_meta'
+[ 57% 640/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.ondevicepersonalization@javalib@service-ondevicepersonalization.jar@classes.vdex.fsv_meta'
+[ 58% 641/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.os.statsd@javalib@service-statsd.jar@classes.odex.fsv_meta'
+[ 58% 642/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.permission@javalib@service-permission.jar@classes.odex.fsv_meta'
+[ 58% 643/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.permission@javalib@service-permission.jar@classes.vdex.fsv_meta'
+[ 58% 644/1105 9m49s remaining] run host_apex_verifier
+[ 58% 645/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.profiling@javalib@service-profiling.jar@classes.odex.fsv_meta'
+[ 58% 646/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.profiling@javalib@service-profiling.jar@classes.vdex.fsv_meta'
+[ 58% 647/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.rkpd@javalib@service-rkp.jar@classes.odex.fsv_meta'
+[ 58% 648/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.rkpd@javalib@service-rkp.jar@classes.vdex.fsv_meta'
+[ 58% 649/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.scheduling@javalib@service-scheduling.jar@classes.odex.fsv_meta'
+[ 58% 650/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.scheduling@javalib@service-scheduling.jar@classes.vdex.fsv_meta'
+[ 58% 651/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.tethering@javalib@service-connectivity.jar@classes.odex.fsv_meta'
+[ 59% 652/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.tethering@javalib@service-connectivity.jar@classes.vdex.fsv_meta'
+[ 59% 653/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.uwb@javalib@service-ranging.jar@classes.odex.fsv_meta'
+[ 59% 654/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.uwb@javalib@service-ranging.jar@classes.vdex.fsv_meta'
+[ 59% 655/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.wifi@javalib@service-wifi.jar@classes.odex.fsv_meta'
+[ 59% 656/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.wifi@javalib@service-wifi.jar@classes.vdex.fsv_meta'
+[ 59% 657/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/appwidget.odex.fsv_meta
+[ 59% 658/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/appwidget.vdex.fsv_meta
+[ 59% 659/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/bu.odex.fsv_meta
+[ 59% 660/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/com.android.future.usb.accessory.odex.fsv_meta
+[ 59% 661/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/com.android.future.usb.accessory.vdex.fsv_meta
+[ 59% 662/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/com.android.location.provider.odex.fsv_meta
+[ 60% 663/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/com.android.location.provider.vdex.fsv_meta
+[ 60% 664/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/com.android.media.remotedisplay.vdex.fsv_meta
+[ 60% 665/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/com.android.mediadrm.signer.odex.fsv_meta
+[ 60% 666/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/com.android.mediadrm.signer.vdex.fsv_meta
+[ 60% 667/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/com.android.nfc_extras.odex.fsv_meta
+[ 60% 668/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/content.vdex.fsv_meta
+[ 60% 669/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/hid.odex.fsv_meta
+[ 60% 670/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/incident-helper-cmd.odex.fsv_meta
+[ 60% 671/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/incident-helper-cmd.vdex.fsv_meta
+[ 60% 672/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/javax.obex.odex.fsv_meta
+[ 60% 673/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/monkey.odex.fsv_meta
+[ 60% 674/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/monkey.vdex.fsv_meta
+[ 61% 675/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/org.apache.http.legacy.odex.fsv_meta
+[ 61% 676/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/org.apache.http.legacy.vdex.fsv_meta
+[ 61% 677/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/requestsync.vdex.fsv_meta
+[ 61% 678/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/services.odex.fsv_meta
+[ 61% 679/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/services.vdex.fsv_meta
+[ 61% 680/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/sm.odex.fsv_meta
+[ 61% 681/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/sm.vdex.fsv_meta
+[ 61% 682/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/svc.odex.fsv_meta
+[ 61% 683/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/svc.vdex.fsv_meta
+[ 61% 684/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/telecom.odex.fsv_meta
+[ 61% 685/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/uiautomator.odex.fsv_meta
+[ 62% 686/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/uiautomator.vdex.fsv_meta
+[ 62% 687/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/uinput.odex.fsv_meta
+[ 62% 688/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/uinput.vdex.fsv_meta
+[ 62% 689/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/vr.vdex.fsv_meta
+[ 62% 690/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/vr.odex.fsv_meta
+[ 62% 691/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/org.apache.http.legacy.jar.fsv_meta
+[ 62% 692/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/org.apache.http.legacy.jar.prof.fsv_meta
+[ 62% 693/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/services.jar.fsv_meta
+[ 62% 694/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/sm.jar.fsv_meta
+[ 62% 695/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/services.jar.prof.fsv_meta
+[ 62% 696/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/svc.jar.fsv_meta
+[ 63% 697/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/telecom.jar.fsv_meta
+[ 63% 698/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/tradeinmode.jar.fsv_meta
+[ 63% 699/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/uinput.jar.fsv_meta
+[ 63% 700/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/voip-common.jar.fsv_meta
+[ 63% 701/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/vr.jar.fsv_meta
+[ 63% 702/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-apache-xml.art.fsv_meta
+[ 63% 703/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-apache-xml.oat.fsv_meta
+[ 63% 704/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-bouncycastle.oat.fsv_meta
+[ 63% 705/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-core-icu4j.oat.fsv_meta
+[ 63% 706/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-core-libart.art.fsv_meta
+[ 63% 707/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-core-libart.oat.fsv_meta
+[ 64% 708/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-ext.art.fsv_meta
+[ 64% 709/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-ext.oat.fsv_meta
+[ 64% 710/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-framework-adservices.art.fsv_meta
+[ 64% 711/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-framework-graphics.art.fsv_meta
+[ 64% 712/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-framework-graphics.oat.fsv_meta
+[ 64% 713/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-framework-location.oat.fsv_meta
+[ 64% 714/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-framework-ondeviceintelligence-platform.art.fsv_meta
+[ 64% 715/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-framework.oat.fsv_meta
+[ 64% 716/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-ims-common.art.fsv_meta
+[ 64% 717/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-ims-common.oat.fsv_meta
+[ 64% 718/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-okhttp.art.fsv_meta
+[ 65% 719/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-okhttp.oat.fsv_meta
+[ 65% 720/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-telephony-common.art.fsv_meta
+[ 65% 721/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-telephony-common.oat.fsv_meta
+[ 65% 722/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-voip-common.art.fsv_meta
+[ 65% 723/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-voip-common.oat.fsv_meta
+[ 65% 724/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot.oat.fsv_meta
+[ 65% 725/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot.art.fsv_meta
+[ 65% 726/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/boot-ims-common.vdex.fsv_meta
+[ 65% 727/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/boot-voip-common.vdex.fsv_meta
+[ 65% 728/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.art@javalib@service-art.jar@classes.vdex.fsv_meta'
+[ 65% 729/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.bt@javalib@service-bluetooth.jar@classes.odex.fsv_meta'
+[ 66% 730/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.configinfrastructure@javalib@service-configinfrastructure.jar@classes.vdex.fsv_meta'
+[ 66% 731/1105 9m49s remaining] cp 'out/target/product/vsoc_x86_64_only/system/framework/oat/x86_64/apex@com.android.media@javalib@service-media-s.jar@classes.vdex.fsv_meta'
+[ 66% 732/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/requestsync.jar.fsv_meta
+[ 66% 733/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-bouncycastle.art.fsv_meta
+[ 66% 734/1105 9m49s remaining] cp out/target/product/vsoc_x86_64_only/system/framework/x86_64/boot-framework-ondeviceintelligence-platform.oat.fsv_meta
+[ 66% 735/1105 9m49s remaining] run apex_linkerconfig_validation
+[ 66% 736/1105 9m49s remaining] run host_apex_verifier
+[ 66% 737/1105 9m49s remaining] run apex_linkerconfig_validation
+[ 66% 738/1105 9m49s remaining] run apex_linkerconfig_validation
+[ 66% 739/1105 9m49s remaining] run host_apex_verifier
+[ 66% 740/1105 9m49s remaining] run host_apex_verifier
+[ 67% 741/1105 9m49s remaining] run host_apex_verifier
+[ 67% 742/1105 9m49s remaining] run apex_linkerconfig_validation
+[ 67% 743/1105 9m49s remaining] run host_apex_verifier
+[ 67% 744/1105 9m49s remaining] run apex_linkerconfig_validation
+[ 67% 745/1105 9m49s remaining] run apex_linkerconfig_validation
+[ 67% 746/1105 9m49s remaining] run host_apex_verifier
+[ 67% 747/1105 9m49s remaining] run host_apex_verifier
+[ 67% 748/1105 9m49s remaining] run apex_linkerconfig_validation
+[ 67% 749/1105 9m49s remaining] //hardware/interfaces/compatibility_matrices:framework_compatibility_matrix.202504.xml xmllint-xsd [common]
+[ 67% 750/1105 9m49s remaining] //hardware/interfaces/compatibility_matrices:framework_compatibility_matrix.202404.xml xmllint-xsd [common]
+[ 67% 751/1105 9m49s remaining] //hardware/interfaces/compatibility_matrices:framework_compatibility_matrix.5.xml xmllint-xsd [common]
+[ 68% 752/1105 9m49s remaining] //hardware/interfaces/compatibility_matrices:framework_compatibility_matrix.6.xml xmllint-xsd [common]
+[ 68% 753/1105 9m49s remaining] //hardware/interfaces/compatibility_matrices:framework_compatibility_matrix.7.xml xmllint-xsd [common]
+[ 68% 754/1105 9m49s remaining] //hardware/interfaces/compatibility_matrices:framework_compatibility_matrix.device.xml xmllint-xsd [common]
+[ 68% 755/1105 9m49s remaining] //hardware/interfaces/compatibility_matrices:framework_compatibility_matrix.8.xml xmllint-xsd [common]
+[ 68% 756/1105 9m49s remaining] run apex_elf_checker --unwanted
+[ 68% 757/1105 9m49s remaining] run host_apex_verifier
+[ 68% 758/1105 9m49s remaining] run host_apex_verifier
+[ 68% 759/1105 9m49s remaining] run host_apex_verifier
+[ 68% 760/1105 9m49s remaining] run apex_linkerconfig_validation
+[ 68% 761/1105 9m49s remaining] run apex_elf_checker --unwanted
+[ 68% 762/1105 9m49s remaining] run host_apex_verifier
+[ 69% 763/1105 9m48s remaining] run host_apex_verifier
+[ 69% 764/1105 9m48s remaining] //system/sepolicy:sepolicy.recovery Compiling cil files for sepolicy.recovery [common]
+[ 69% 765/1105 9m47s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_recovery_image Assemble filesystem staging dir aosp_cf_x86_64_only_phone_generated_recovery_image [common]
+[ 69% 766/1105 9m46s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_recovery_image Creating filesystem aosp_cf_x86_64_only_phone_generated_recovery_image [common]
+[ 69% 767/1105 9m46s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_recovery_image Installed file list json [common]
+[ 69% 768/1105 9m46s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-recovery.json
+[ 69% 769/1105 9m46s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_recovery_image Installed file list txt [common]
+[ 69% 770/1105 9m46s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-recovery.txt
+[ 69% 771/1105 9m40s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_ramdisk_image Creating filesystem aosp_cf_x86_64_only_phone_generated_vendor_ramdisk_image [common]
+[ 69% 772/1105 9m40s remaining] cp out/target/product/vsoc_x86_64_only/vendor_ramdisk.img
+[ 69% 773/1105 9m40s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_ramdisk_image Installed file list json [common]
+[ 70% 774/1105 9m40s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-vendor-ramdisk.json
+[ 70% 775/1105 9m40s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_ramdisk_image Installed file list txt [common]
+[ 70% 776/1105 9m40s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-vendor-ramdisk.txt
+[ 70% 777/1105 9m40s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_boot_image Creating aosp_cf_x86_64_only_phone_generated_vendor_boot_image
+[ 70% 778/1105 9m40s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_boot_image Adding avb footer to aosp_cf_x86_64_only_phone_generated_vendor_boot_image
+[ 70% 779/1105 9m39s remaining] cp out/target/product/vsoc_x86_64_only/vendor_boot.img
+[ 70% 780/1105 9m34s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_ramdisk-test-harness_image Creating filesystem aosp_cf_x86_64_only_phone_generated_vendor_ramdisk-test-harness_image [common]
+[ 70% 781/1105 9m34s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_ramdisk-debug_image Creating filesystem aosp_cf_x86_64_only_phone_generated_vendor_ramdisk-debug_image [common]
+[ 70% 782/1105 9m34s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_boot-debug_image Creating aosp_cf_x86_64_only_phone_generated_vendor_boot-debug_image
+[ 70% 783/1105 9m34s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_boot-test-harness_image Creating aosp_cf_x86_64_only_phone_generated_vendor_boot-test-harness_image
+[ 70% 784/1105 9m33s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_boot-debug_image Adding avb footer to aosp_cf_x86_64_only_phone_generated_vendor_boot-debug_image
+[ 71% 785/1105 9m33s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_boot-test-harness_image Adding avb footer to aosp_cf_x86_64_only_phone_generated_vendor_boot-test-harness_image
+[ 71% 786/1105 9m26s remaining] //system/sepolicy:system_ext_sepolicy.cil Building cil for system_ext_sepolicy.cil [common]
+[ 71% 787/1105 9m26s remaining] //system/sepolicy:system_ext_sepolicy.cil install system_ext_sepolicy.cil [common]
+[ 71% 788/1105 9m26s remaining] //system/sepolicy:system_ext_sepolicy_and_mapping.sha256_gen generate system_ext_sepolicy_and_mapping.sha256 [common]
+[ 71% 789/1105 9m26s remaining] cp out/soong/.intermediates/system/sepolicy/system_ext_sepolicy_and_mapping.sha256/android_x86_64_silvermont/system_ext_sepolicy_and_mapping.sha256
+[ 71% 790/1105 9m26s remaining] cp out/soong/.intermediates/system/sepolicy/precompiled_sepolicy.system_ext_sepolicy_and_mapping.sha256/android_vendor_x86_64_silvermont/precompiled_sepolicy.system_ext_sepolicy_and_mapping.sha256
+[ 71% 791/1105 9m26s remaining] //system/sepolicy:system_ext_sepolicy_and_mapping.sha256 install system_ext_sepolicy_and_mapping.sha256
+[ 71% 792/1105 9m26s remaining] //system/sepolicy:precompiled_sepolicy.system_ext_sepolicy_and_mapping.sha256 install precompiled_sepolicy.system_ext_sepolicy_and_mapping.sha256
+[ 71% 793/1105 8m52s remaining] //system/sepolicy:product_sepolicy.cil Building cil for product_sepolicy.cil [common]
+[ 71% 794/1105 8m52s remaining] //system/sepolicy:product_sepolicy.cil install product_sepolicy.cil [common]
+[ 71% 795/1105 8m52s remaining] //system/sepolicy:product_sepolicy_and_mapping.sha256_gen generate product_sepolicy_and_mapping.sha256 [common]
+[ 72% 796/1105 8m52s remaining] cp out/soong/.intermediates/system/sepolicy/product_sepolicy_and_mapping.sha256/android_x86_64_silvermont/product_sepolicy_and_mapping.sha256
+[ 72% 797/1105 8m52s remaining] cp out/soong/.intermediates/system/sepolicy/precompiled_sepolicy.product_sepolicy_and_mapping.sha256/android_vendor_x86_64_silvermont/precompiled_sepolicy.product_sepolicy_and_mapping.sha256
+[ 72% 798/1105 8m52s remaining] //system/sepolicy:product_sepolicy_and_mapping.sha256 install product_sepolicy_and_mapping.sha256
+[ 72% 799/1105 8m52s remaining] //system/sepolicy:precompiled_sepolicy.product_sepolicy_and_mapping.sha256 install precompiled_sepolicy.product_sepolicy_and_mapping.sha256
+[ 72% 800/1105 8m51s remaining] //system/sepolicy:vendor_sepolicy.cil Versioning mapping file vendor_sepolicy.cil [common]
+[ 72% 801/1105 8m51s remaining] //system/sepolicy:vendor_sepolicy.cil install vendor_sepolicy.cil [common]
+[ 72% 802/1105 8m51s remaining] //system/sepolicy:odm_sepolicy.cil Versioning mapping file odm_sepolicy.cil [common]
+[ 72% 803/1105 8m51s remaining] //system/sepolicy:odm_sepolicy.cil install odm_sepolicy.cil [common]
+[ 72% 804/1105 8m37s remaining] //system/sepolicy:precompiled_sepolicy Compiling cil files for precompiled_sepolicy [common]
+[ 72% 805/1105 8m37s remaining] //system/sepolicy:precompiled_sepolicy install precompiled_sepolicy [common]
+[ 72% 806/1105 8m37s remaining] //system/sepolicy/contexts:vendor_seapp_contexts Building seapp_contexts: vendor_seapp_contexts [common]
+[ 73% 807/1105 8m37s remaining] //system/sepolicy/contexts:product_seapp_contexts Building seapp_contexts: product_seapp_contexts [common]
+[ 73% 808/1105 8m37s remaining] //system/sepolicy/contexts:vendor_seapp_contexts copy vendor_seapp_contexts [common]
+[ 73% 809/1105 8m37s remaining] //system/sepolicy/contexts:odm_seapp_contexts Building seapp_contexts: odm_seapp_contexts [common]
+[ 73% 810/1105 8m37s remaining] //system/sepolicy/contexts:product_seapp_contexts copy product_seapp_contexts [common]
+[ 73% 811/1105 8m37s remaining] //system/sepolicy/contexts:system_ext_seapp_contexts Building seapp_contexts: system_ext_seapp_contexts [common]
+[ 73% 812/1105 8m37s remaining] //system/sepolicy/contexts:odm_seapp_contexts copy odm_seapp_contexts [common]
+[ 73% 813/1105 8m37s remaining] //system/sepolicy/contexts:vendor_seapp_contexts install vendor_seapp_contexts [common]
+[ 73% 814/1105 8m37s remaining] //system/sepolicy/contexts:system_ext_seapp_contexts copy system_ext_seapp_contexts [common]
+[ 73% 815/1105 8m37s remaining] //system/sepolicy/contexts:product_seapp_contexts install product_seapp_contexts [common]
+[ 73% 816/1105 8m37s remaining] //system/sepolicy/contexts:odm_seapp_contexts install odm_seapp_contexts [common]
+[ 73% 817/1105 8m37s remaining] //system/sepolicy/contexts:system_ext_seapp_contexts install system_ext_seapp_contexts [common]
+[ 74% 818/1105 8m37s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_odm_image Assemble filesystem staging dir aosp_cf_x86_64_only_phone_generated_odm_image [common]
+[ 74% 819/1105 8m37s remaining] //system/sepolicy/tests:apex_sepolicy_tests python library archive [linux_glibc]
+[ 74% 820/1105 8m37s remaining] //system/sepolicy:file_contexts.device.sorted.tmp generate file_contexts.device.sorted.tmp [common]
+[ 74% 821/1105 8m37s remaining] //system/sepolicy:file_contexts.concat.tmp generate file_contexts.concat.tmp [common]
+[ 74% 822/1105 8m37s remaining] //system/sepolicy:file_contexts_bin_gen generate file_contexts.bin [common]
+[ 74% 823/1105 8m37s remaining] //system/sepolicy/tests:apex_sepolicy_tests Precompile the python sources of apex_sepolicy_tests [linux_glibc]
+[ 74% 824/1105 8m37s remaining] //system/sepolicy/tests:apex_sepolicy_tests embedded python archive [linux_glibc]
+[ 74% 825/1105 8m37s remaining] //system/sepolicy/tests:apex_sepolicy_tests install apex_sepolicy_tests [linux_glibc]
+[ 74% 826/1105 8m36s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_ext_image Assemble filesystem staging dir aosp_cf_x86_64_only_phone_generated_system_ext_image [common]
+[ 74% 827/1105 8m36s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_image Assemble filesystem staging dir aosp_cf_x86_64_only_phone_generated_vendor_image [common]
+[ 74% 828/1105 8m36s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_other_image build system other [common]
+[ 75% 829/1105 8m35s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_odm_image Creating filesystem aosp_cf_x86_64_only_phone_generated_odm_image [common]
+[ 75% 830/1105 8m35s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_odm_dlkm_image Creating filesystem aosp_cf_x86_64_only_phone_generated_odm_dlkm_image [common]
+[ 75% 831/1105 8m35s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_dlkm_image Creating filesystem aosp_cf_x86_64_only_phone_generated_vendor_dlkm_image [common]
+[ 75% 832/1105 8m34s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_product_image Assemble filesystem staging dir aosp_cf_x86_64_only_phone_generated_product_image [common]
+[ 75% 833/1105 8m33s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_dlkm_image Creating filesystem aosp_cf_x86_64_only_phone_generated_system_dlkm_image [common]
+[ 75% 834/1105 8m33s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.adbd
+[ 75% 835/1105 8m32s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.conscrypt
+[ 75% 836/1105 8m31s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_ext_image Creating filesystem aosp_cf_x86_64_only_phone_generated_system_ext_image [common]
+[ 75% 837/1105 8m31s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.art
+[ 75% 838/1105 8m31s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.appsearch
+[ 75% 839/1105 8m30s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.extservices
+[ 76% 840/1105 8m30s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.adservices
+[ 76% 841/1105 8m30s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_image Creating filesystem aosp_cf_x86_64_only_phone_generated_vendor_image [common]
+[ 76% 842/1105 8m30s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.cellbroadcast
+[ 76% 843/1105 8m30s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.gnss
+[ 76% 844/1105 8m30s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.devicelock
+[ 76% 845/1105 8m29s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_product_image Creating filesystem aosp_cf_x86_64_only_phone_generated_product_image [common]
+[ 76% 846/1105 8m29s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.authsecret
+[ 76% 847/1105 8m29s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.gatekeeper.cf_remote
+[ 76% 848/1105 8m28s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.keymint.rust_nonsecure
+[ 76% 849/1105 8m28s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.graphics.composer.ranchu
+[ 76% 850/1105 8m28s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.bt
+[ 77% 851/1105 8m28s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.keymint.rust_cf_remote
+[ 77% 852/1105 8m28s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.configinfrastructure
+[ 77% 853/1105 8m28s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.contexthub
+[ 77% 854/1105 8m28s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.audio
+[ 77% 855/1105 8m27s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.biometrics.fingerprint.virtual
+[ 77% 856/1105 8m27s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.gatekeeper.nonsecure
+[ 77% 857/1105 8m27s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.cas
+[ 77% 858/1105 8m27s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.net.nlinterceptor
+[ 77% 859/1105 8m27s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.boot
+[ 77% 860/1105 8m26s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.vndk.v33
+[ 77% 861/1105 8m26s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.drm.clearkey
+[ 78% 862/1105 8m26s remaining] //system/sepolicy:sepolicy_dev_type_test generate sepolicy_dev_type_test [common]
+[ 78% 863/1105 8m26s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.memtrack
+[ 78% 864/1105 8m26s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.power
+[ 78% 865/1105 8m26s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.neuralnetworks
+[ 78% 866/1105 8m25s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.keymint.rust_cf_guest_trusty_nonsecure
+[ 78% 867/1105 8m25s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.graphics.composer.drm_hwcomposer
+[ 78% 868/1105 8m25s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.mediaprovider
+[ 78% 869/1105 8m25s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.vndk.v31
+[ 78% 870/1105 8m24s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.emulated.camera.provider.hal.fastscenecycle
+[ 78% 871/1105 8m24s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.permission
+[ 78% 872/1105 8m24s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.tethering
+[ 79% 873/1105 8m24s remaining] //system/sepolicy:sepolicy_test generate sepolicy_test [common]
+[ 79% 874/1105 8m24s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.rebootescrow
+[ 79% 875/1105 8m24s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.media.swcodec
+[ 79% 876/1105 8m23s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.rild
+[ 79% 877/1105 8m23s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.bt
+[ 79% 878/1105 8m23s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_product_image Installed file list json [common]
+[ 79% 879/1105 8m23s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.usb
+[ 79% 880/1105 8m23s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_image Creating filesystem aosp_cf_x86_64_only_phone_generated_system_image [common]
+[ 79% 881/1105 8m23s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.threadnetwork
+[ 79% 882/1105 8m23s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.ir
+[ 79% 883/1105 8m22s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.identity
+[ 80% 884/1105 8m22s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.uwb
+[ 80% 885/1105 8m22s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.wifi
+[ 80% 886/1105 8m22s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.input.processor
+[ 80% 887/1105 8m22s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.dumpstate
+[ 80% 888/1105 8m22s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.ondevicepersonalization
+[ 80% 889/1105 8m22s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.wifi
+[ 80% 890/1105 8m22s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.vibrator
+[ 80% 891/1105 8m22s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.emulated.camera.provider.hal
+[ 80% 892/1105 8m22s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.crashrecovery
+[ 80% 893/1105 8m22s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.security.secretkeeper
+[ 80% 894/1105 8m21s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.media
+[ 80% 895/1105 8m21s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.light
+[ 81% 896/1105 8m21s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.tetheroffload
+[ 81% 897/1105 8m21s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.secure_element
+[ 81% 898/1105 8m21s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_super_image Creating super image aosp_cf_x86_64_only_phone_generated_super_image [common]
+2026-10-30 22:02:20 - build_super_image.py - INFO    : Building super image from info dict...
+2026-10-30 22:02:20 - common.py - INFO    :   Running: "/srv/aosp/source/out/host/linux-x86/bin/lpmake --metadata-size 65536 --super-name super --metadata-slots 3 --virtual-ab --device super:8589934592 --group google_system_dynamic_partitions_a:6845104128 --group google_system_dynamic_partitions_b:6845104128 --partition product_a:readonly:250114048:google_system_dynamic_partitions_a --image product_a=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_product_image/android_common/product.img --partition product_b:readonly:0:google_system_dynamic_partitions_b --partition system_a:readonly:729563136:google_system_dynamic_partitions_a --image system_a=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_system_image/android_common/system.img --partition system_b:readonly:4399104:google_system_dynamic_partitions_b --image system_b=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_system_other_image/android_common/system_other.img --partition system_ext_a:readonly:257482752:google_system_dynamic_partitions_a --image system_ext_a=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_system_ext_image/android_common/system_ext.img --partition system_ext_b:readonly:0:google_system_dynamic_partitions_b --partition system_dlkm_a:readonly:8359936:google_system_dynamic_partitions_a --image system_dlkm_a=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_system_dlkm_image/android_common/system_dlkm.img --partition system_dlkm_b:readonly:0:google_system_dynamic_partitions_b --group google_vendor_dynamic_partitions_a:1472200704 --group google_vendor_dynamic_partitions_b:1472200704 --partition odm_a:readonly:471040:google_vendor_dynamic_partitions_a --image odm_a=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_odm_image/android_common/odm.img --partition odm_b:readonly:0:google_vendor_dynamic_partitions_b --partition vendor_a:readonly:303558656:google_vendor_dynamic_partitions_a --image vendor_a=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_vendor_image/android_common/vendor.img --partition vendor_b:readonly:0:google_vendor_dynamic_partitions_b --partition vendor_dlkm_a:readonly:1441792:google_vendor_dynamic_partitions_a --image vendor_dlkm_a=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_vendor_dlkm_image/android_common/vendor_dlkm.img --partition vendor_dlkm_b:readonly:0:google_vendor_dynamic_partitions_b --partition odm_dlkm_a:readonly:348160:google_vendor_dynamic_partitions_a --image odm_dlkm_a=out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_odm_dlkm_image/android_common/odm_dlkm.img --partition odm_dlkm_b:readonly:0:google_vendor_dynamic_partitions_b --sparse --output out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_super_image/android_common/super.img"
+2026-10-30 22:02:22 - common.py - INFO    : 10-30 22:02:20.886 40275 40275 I lpmake  : builder.cpp:1027 [liblp] Partition product_a will resize from 0 bytes to 250114048 bytes
+10-30 22:02:20.886 40275 40275 I lpmake  : builder.cpp:1027 [liblp] Partition system_a will resize from 0 bytes to 729563136 bytes
+10-30 22:02:20.886 40275 40275 I lpmake  : builder.cpp:1027 [liblp] Partition system_b will resize from 0 bytes to 4399104 bytes
+10-30 22:02:20.886 40275 40275 I lpmake  : builder.cpp:1027 [liblp] Partition system_ext_a will resize from 0 bytes to 257482752 bytes
+10-30 22:02:20.886 40275 40275 I lpmake  : builder.cpp:1027 [liblp] Partition system_dlkm_a will resize from 0 bytes to 8359936 bytes
+10-30 22:02:20.886 40275 40275 I lpmake  : builder.cpp:1027 [liblp] Partition odm_a will resize from 0 bytes to 471040 bytes
+10-30 22:02:20.886 40275 40275 I lpmake  : builder.cpp:1027 [liblp] Partition vendor_a will resize from 0 bytes to 303558656 bytes
+10-30 22:02:20.886 40275 40275 I lpmake  : builder.cpp:1027 [liblp] Partition vendor_dlkm_a will resize from 0 bytes to 1441792 bytes
+10-30 22:02:20.886 40275 40275 I lpmake  : builder.cpp:1027 [liblp] Partition odm_dlkm_a will resize from 0 bytes to 348160 bytes
+Invalid sparse file format at header magic
+Invalid sparse file format at header magic
+Invalid sparse file format at header magic
+Invalid sparse file format at header magic
+Invalid sparse file format at header magic
+Invalid sparse file format at header magic
+Invalid sparse file format at header magic
+Invalid sparse file format at header magic
+Invalid sparse file format at header magic
+2026-10-30 22:02:22 - build_super_image.py - INFO    : Done writing image out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_super_image/android_common/super.img
+[ 81% 899/1105 8m21s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.apex.cts.shim.v1_prebuilt
+[ 81% 900/1105 8m21s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.wpa_supplicant
+[ 81% 901/1105 8m21s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.thermal
+[ 81% 902/1105 8m21s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.virt
+[ 81% 903/1105 8m20s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.security.authgraph
+[ 81% 904/1105 8m20s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.wifi
+[ 81% 905/1105 8m20s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.uwb
+[ 81% 906/1105 8m20s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.nfcservices
+[ 82% 907/1105 8m20s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.vndk.v34
+[ 82% 908/1105 8m20s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_image Installed file list json [common]
+[ 82% 909/1105 8m20s remaining] cp out/target/product/vsoc_x86_64_only/super.img
+[ 82% 910/1105 8m20s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.compos
+[ 82% 911/1105 8m20s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.health
+[ 82% 912/1105 8m20s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.neuralnetworks
+[ 82% 913/1105 8m20s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.vulkan
+[ 82% 914/1105 8m19s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.biometrics.face.virtual
+[ 82% 915/1105 8m19s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.uprobestats
+[ 82% 916/1105 8m19s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.sdkext
+[ 82% 917/1105 8m19s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.resolv
+[ 83% 918/1105 8m19s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.healthfitness
+[ 83% 919/1105 8m19s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.runtime
+[ 83% 920/1105 8m19s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.health.storage
+[ 83% 921/1105 8m19s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.rkpd
+[ 83% 922/1105 8m19s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.vndk.v32
+[ 83% 923/1105 8m19s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_ext_image Installed file list json [common]
+[ 83% 924/1105 8m19s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.i18n
+[ 83% 925/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.telephonycore
+[ 83% 926/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.tzdata
+[ 83% 927/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.hardware.sensors
+[ 83% 928/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.confirmationui
+[ 84% 929/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.nfc
+[ 84% 930/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/vendor.img
+[ 84% 931/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_userdata_image Creating filesystem aosp_cf_x86_64_only_phone_generated_userdata_image [common]
+[ 84% 932/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_image Installed file list json [common]
+[ 84% 933/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/system.img
+[ 84% 934/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.scheduling
+[ 84% 935/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/system_ext.img
+[ 84% 936/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/product.img
+[ 84% 937/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.oemlock
+[ 84% 938/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.gralloc
+[ 84% 939/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_image Construct system partition root dir [common]
+[ 85% 940/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_other_image Installed file list json [common]
+[ 85% 941/1105 8m18s remaining] //.:aosp_cf_x86_64_only_phone_generated_vbmeta_system_dlkm_image vbmeta aosp_cf_x86_64_only_phone_generated_vbmeta_system_dlkm_image [common]
+[ 85% 942/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_odm_image Installed file list json [common]
+[ 85% 943/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.ipsec
+[ 85% 944/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_odm_dlkm_image Installed file list json [common]
+[ 85% 945/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_dlkm_image Installed file list json [common]
+[ 85% 946/1105 8m18s remaining] //.:aosp_cf_x86_64_only_phone_generated_vbmeta_system_image vbmeta aosp_cf_x86_64_only_phone_generated_vbmeta_system_image [common]
+[ 85% 947/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_dlkm_image Installed file list json [common]
+[ 85% 948/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.disabled
+[ 85% 949/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_image Installed file list txt [common]
+[ 85% 950/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.os.statsd
+[ 86% 951/1105 8m18s remaining] //.:aosp_cf_x86_64_only_phone_generated_vbmeta_vendor_dlkm_image vbmeta aosp_cf_x86_64_only_phone_generated_vbmeta_vendor_dlkm_image [common]
+[ 86% 952/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_image Installed file list json [common]
+[ 86% 953/1105 8m18s remaining] //.:aosp_cf_x86_64_only_phone_generated_vbmeta_image vbmeta aosp_cf_x86_64_only_phone_generated_vbmeta_image [common]
+[ 86% 954/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.google.cf.input.config
+[ 86% 955/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_userdata_image Installed file list json [common]
+[ 86% 956/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_image Installed file list txt [common]
+[ 86% 957/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_product_image Installed file list txt [common]
+[ 86% 958/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_odm_image Installed file list txt [common]
+[ 86% 959/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_odm_dlkm_image Installed file list txt [common]
+[ 86% 960/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/oat/x86_64/androidx.window.sidecar.vdex.fsv_meta
+[ 86% 961/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/system_dlkm.img
+[ 87% 962/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/SatelliteClient.jar.fsv_meta
+[ 87% 963/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/androidx.window.extensions.jar.fsv_meta
+[ 87% 964/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/androidx.window.sidecar.jar.fsv_meta
+[ 87% 965/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/com.android.extensions.appfunctions.jar.fsv_meta
+[ 87% 966/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/oat/x86_64/SatelliteClient.odex.fsv_meta
+[ 87% 967/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/oat/x86_64/androidx.window.extensions.vdex.fsv_meta
+[ 87% 968/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/oat/x86_64/androidx.window.sidecar.odex.fsv_meta
+[ 87% 969/1105 8m18s remaining] cp 'out/target/product/vsoc_x86_64_only/system_ext/framework/oat/x86_64/apex@com.android.compos@javalib@service-compos.jar@classes.odex.fsv_meta'
+[ 87% 970/1105 8m18s remaining] cp 'out/target/product/vsoc_x86_64_only/system_ext/framework/oat/x86_64/apex@com.android.compos@javalib@service-compos.jar@classes.vdex.fsv_meta'
+[ 87% 971/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/system_other.img
+[ 87% 972/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-userdata.json
+[ 88% 973/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-vendor.txt
+[ 88% 974/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/userdata.img
+[ 88% 975/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/vbmeta_system.img
+[ 88% 976/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/vendor_dlkm.img
+[ 88% 977/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/vbmeta_system_dlkm.img
+[ 88% 978/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/odm.img
+[ 88% 979/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-odm.json
+[ 88% 980/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/odm_dlkm.img
+[ 88% 981/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-odm_dlkm.txt
+[ 88% 982/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/installed-files.json
+[ 88% 983/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/installed-files.txt
+[ 89% 984/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-root.json
+[ 89% 985/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-product.txt
+[ 89% 986/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/oat/x86_64/SatelliteClient.vdex.fsv_meta
+[ 89% 987/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_other_image Installed file list txt [common]
+[ 89% 988/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-system-other.json
+[ 89% 989/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-vendor.json
+[ 89% 990/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_ext_image Installed file list txt [common]
+[ 89% 991/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/system_ext/framework/oat/x86_64/androidx.window.extensions.odex.fsv_meta
+[ 89% 992/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/vbmeta_vendor_dlkm.img
+[ 89% 993/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/vbmeta.img
+[ 89% 994/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-odm.txt
+[ 90% 995/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-odm_dlkm.json
+[ 90% 996/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-system_ext.txt
+[ 90% 997/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-system_ext.json
+[ 90% 998/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-product.json
+[ 90% 999/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-system_dlkm.json
+[ 90% 1000/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-system-other.txt
+[ 90% 1001/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-vendor_dlkm.json
+[ 90% 1002/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_vendor_dlkm_image Installed file list txt [common]
+[ 90% 1003/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-vendor_dlkm.txt
+[ 90% 1004/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device run_apex_sepolicy_test_com.android.profiling
+[ 90% 1005/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_dlkm_image Installed file list txt [common]
+[ 91% 1006/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_userdata_image Installed file list txt [common]
+[ 91% 1007/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_system_image Installed file list txt [common]
+[ 91% 1008/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-system_dlkm.txt
+[ 91% 1009/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-userdata.txt
+[ 91% 1010/1105 8m18s remaining] cp out/target/product/vsoc_x86_64_only/installed-files-root.txt
+[ 91% 1011/1105 8m18s remaining] touch out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_device/android_x86_64_silvermont/product_out_copy_timestamp
+[ 91% 1012/1105 8m18s remaining] touch out/soong/.intermediates/build/soong/fsgen/aosp_cf_x86_64_only_phone_generated_device/android_x86_64_silvermont/all_images_stamp
+[ 91% 1013/1105 8m18s remaining] //build/soong/fsgen:aosp_cf_x86_64_only_phone_generated_device Check partition sizes
+2026-10-30 22:02:25 - check_partition_sizes.py - INFO    : sum of sizes of ['odm', 'odm_dlkm', 'product', 'system', 'system_dlkm', 'system_ext', 'vendor', 'vendor_dlkm', 'system_other'] is less than or equal to BOARD_SUPER_PARTITION_SIZE:
+471040+348160+250114048+729563136+8359936+257482752+303558656+1441792+4399104 == 1555738624 <= 8589934592 == 8589934592
+2026-10-30 22:02:25 - check_partition_sizes.py - INFO    : sum of sizes of ['odm', 'odm_dlkm', 'product', 'system', 'system_dlkm', 'system_ext', 'vendor', 'vendor_dlkm', 'system_other'] is less than or equal to BOARD_SUPER_PARTITION_ERROR_LIMIT:
+471040+348160+250114048+729563136+8359936+257482752+303558656+1441792+4399104 == 1555738624 <= 8589934592 == 8589934592
+2026-10-30 22:02:25 - check_partition_sizes.py - INFO    : sum of sizes of ['odm', 'odm_dlkm', 'product', 'system', 'system_dlkm', 'system_ext', 'vendor', 'vendor_dlkm', 'system_other'] is less than or equal to BOARD_SUPER_PARTITION_WARN_LIMIT:
+471040+348160+250114048+729563136+8359936+257482752+303558656+1441792+4399104 == 1555738624 <= 8160437862 == 8160437862
+2026-10-30 22:02:25 - check_partition_sizes.py - INFO    : sum of sizes of ['product', 'system', 'system_ext', 'system_dlkm'] is less than or equal to BOARD_google_system_dynamic_partitions_SIZE:
+250114048+729563136+257482752+8359936 == 1245519872 <= 6845104128 == 6845104128
+2026-10-30 22:02:25 - check_partition_sizes.py - INFO    : sum of sizes of ['odm', 'vendor', 'vendor_dlkm', 'odm_dlkm'] is less than or equal to BOARD_google_vendor_dynamic_partitions_SIZE:
+471040+303558656+1441792+348160 == 305819648 <= 1472200704 == 1472200704
+2026-10-30 22:02:25 - check_partition_sizes.py - INFO    : sum of sizes of ['google_system_dynamic_partitions', 'google_vendor_dynamic_partitions'] is less than BOARD_SUPER_PARTITION_SIZE:
+6845104128+1472200704 == 8317304832 < 8589934592 == 8589934592
+2026-10-30 22:02:25 - check_partition_sizes.py - INFO    : sum of sizes of ['google_system_dynamic_partitions', 'google_vendor_dynamic_partitions'] plus 1M metadata is less than or equal to BOARD_SUPER_PARTITION_SIZE:
+6845104128+1472200704+1048576 == 8318353408 <= 8589934592 == 8589934592
+[ 91% 1014/1105 8m17s remaining] run apex_sepolicy_tests
+[ 91% 1015/1105 8m17s remaining] run apex_sepolicy_tests
+[ 91% 1016/1105 8m17s remaining] run apex_sepolicy_tests
+[ 92% 1017/1105 8m17s remaining] run apex_sepolicy_tests
+[ 92% 1018/1105 8m17s remaining] run apex_sepolicy_tests
+[ 92% 1019/1105 8m16s remaining] run apex_sepolicy_tests
+[ 92% 1020/1105 8m16s remaining] run apex_sepolicy_tests
+[ 92% 1021/1105 8m16s remaining] run apex_sepolicy_tests
+[ 92% 1022/1105 8m16s remaining] run apex_sepolicy_tests
+[ 92% 1023/1105 8m16s remaining] run apex_sepolicy_tests
+[ 92% 1024/1105 8m16s remaining] run apex_sepolicy_tests
+[ 92% 1025/1105 8m16s remaining] run apex_sepolicy_tests
+[ 92% 1026/1105 8m16s remaining] run apex_sepolicy_tests
+[ 92% 1027/1105 8m16s remaining] run apex_sepolicy_tests
+[ 93% 1028/1105 8m15s remaining] run apex_sepolicy_tests
+[ 93% 1029/1105 8m15s remaining] run apex_sepolicy_tests
+[ 93% 1030/1105 8m15s remaining] run apex_sepolicy_tests
+[ 93% 1031/1105 8m15s remaining] run apex_sepolicy_tests
+[ 93% 1032/1105 8m15s remaining] run apex_sepolicy_tests
+[ 93% 1033/1105 8m15s remaining] run apex_sepolicy_tests
+[ 93% 1034/1105 8m15s remaining] run apex_sepolicy_tests
+[ 93% 1035/1105 8m15s remaining] run apex_sepolicy_tests
+[ 93% 1036/1105 8m15s remaining] run apex_sepolicy_tests
+[ 93% 1037/1105 8m15s remaining] run apex_sepolicy_tests
+[ 93% 1038/1105 8m14s remaining] run apex_sepolicy_tests
+[ 94% 1039/1105 8m14s remaining] run apex_sepolicy_tests
+[ 94% 1040/1105 8m14s remaining] run apex_sepolicy_tests
+[ 94% 1041/1105 8m14s remaining] run apex_sepolicy_tests
+[ 94% 1042/1105 8m14s remaining] run apex_sepolicy_tests
+[ 94% 1043/1105 8m14s remaining] run apex_sepolicy_tests
+[ 94% 1044/1105 8m14s remaining] run apex_sepolicy_tests
+[ 94% 1045/1105 8m14s remaining] run apex_sepolicy_tests
+[ 94% 1046/1105 8m13s remaining] run apex_sepolicy_tests
+[ 94% 1047/1105 8m13s remaining] run apex_sepolicy_tests
+[ 94% 1048/1105 8m13s remaining] run apex_sepolicy_tests
+[ 94% 1049/1105 8m13s remaining] run apex_sepolicy_tests
+[ 95% 1050/1105 8m13s remaining] run apex_sepolicy_tests
+[ 95% 1051/1105 8m13s remaining] run apex_sepolicy_tests
+[ 95% 1052/1105 8m13s remaining] run apex_sepolicy_tests
+[ 95% 1053/1105 8m13s remaining] run apex_sepolicy_tests
+[ 95% 1054/1105 8m13s remaining] run apex_sepolicy_tests
+[ 95% 1055/1105 8m13s remaining] run apex_sepolicy_tests
+[ 95% 1056/1105 8m13s remaining] run apex_sepolicy_tests
+[ 95% 1057/1105 8m13s remaining] run apex_sepolicy_tests
+[ 95% 1058/1105 8m13s remaining] run apex_sepolicy_tests
+[ 95% 1059/1105 8m12s remaining] run apex_sepolicy_tests
+[ 95% 1060/1105 8m12s remaining] run apex_sepolicy_tests
+[ 96% 1061/1105 8m12s remaining] run apex_sepolicy_tests
+[ 96% 1062/1105 8m12s remaining] run apex_sepolicy_tests
+[ 96% 1063/1105 8m12s remaining] run apex_sepolicy_tests
+[ 96% 1064/1105 8m12s remaining] run apex_sepolicy_tests
+[ 96% 1065/1105 8m12s remaining] run apex_sepolicy_tests
+[ 96% 1066/1105 8m12s remaining] run apex_sepolicy_tests
+[ 96% 1067/1105 8m12s remaining] run apex_sepolicy_tests
+[ 96% 1068/1105 8m12s remaining] run apex_sepolicy_tests
+[ 96% 1069/1105 8m12s remaining] run apex_sepolicy_tests
+[ 96% 1070/1105 8m11s remaining] run apex_sepolicy_tests
+[ 96% 1071/1105 8m11s remaining] run apex_sepolicy_tests
+[ 97% 1072/1105 8m11s remaining] run apex_sepolicy_tests
+[ 97% 1073/1105 8m11s remaining] run apex_sepolicy_tests
+[ 97% 1074/1105 8m11s remaining] run apex_sepolicy_tests
+[ 97% 1075/1105 8m11s remaining] run apex_sepolicy_tests
+[ 97% 1076/1105 8m11s remaining] run apex_sepolicy_tests
+[ 97% 1077/1105 8m11s remaining] run apex_sepolicy_tests
+[ 97% 1078/1105 8m11s remaining] run apex_sepolicy_tests
+[ 97% 1079/1105 8m11s remaining] run apex_sepolicy_tests
+[ 97% 1080/1105 8m11s remaining] run apex_sepolicy_tests
+[ 97% 1081/1105 8m10s remaining] run apex_sepolicy_tests
+[ 97% 1082/1105 8m10s remaining] run apex_sepolicy_tests
+[ 98% 1083/1105 8m10s remaining] run apex_sepolicy_tests
+[ 98% 1084/1105 8m10s remaining] run apex_sepolicy_tests
+[ 98% 1085/1105 8m10s remaining] run apex_sepolicy_tests
+[ 98% 1086/1105 8m10s remaining] run apex_sepolicy_tests
+[ 98% 1087/1105 8m10s remaining] run apex_sepolicy_tests
+[ 98% 1088/1105 8m9s remaining] run apex_sepolicy_tests
+[ 98% 1089/1105 8m9s remaining] run apex_sepolicy_tests
+[ 98% 1090/1105 8m9s remaining] run apex_sepolicy_tests
+[ 98% 1091/1105 8m9s remaining] run apex_sepolicy_tests
+[ 98% 1092/1105 8m9s remaining] run apex_sepolicy_tests
+[ 98% 1093/1105 8m9s remaining] run apex_sepolicy_tests
+[ 99% 1094/1105 8m9s remaining] run apex_sepolicy_tests
+[ 99% 1095/1105 8m8s remaining] run apex_sepolicy_tests
+[ 99% 1096/1105 8m8s remaining] run apex_sepolicy_tests
+[ 99% 1097/1105 8m8s remaining] run apex_sepolicy_tests
+[ 99% 1098/1105 8m8s remaining] run apex_sepolicy_tests
+[ 99% 1099/1105 8m8s remaining] run apex_sepolicy_tests
+[ 99% 1100/1105 8m8s remaining] run apex_sepolicy_tests
+[ 99% 1101/1105 8m8s remaining] run apex_sepolicy_tests
+[ 99% 1102/1105 8m8s remaining] run apex_sepolicy_tests
+[ 99% 1103/1105 8m8s remaining] run apex_sepolicy_tests
+[ 99% 1104/1105 8m8s remaining] run apex_sepolicy_tests
+[100% 1105/1105 8m7s remaining] run apex_sepolicy_tests
+
+#### build completed successfully (02:13 (mm:ss)) ####
+

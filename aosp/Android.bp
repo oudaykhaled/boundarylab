@@ -1,0 +1,123 @@
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+aidl_interface {
+    name: "boundarylab-platform",
+    system_ext_specific: true,
+    srcs: ["aidl/dev/boundarylab/platform/*.aidl"],
+    local_include_dir: "aidl",
+    owner: "boundarylab",
+    backend: {
+        cpp: {
+            enabled: true,
+        },
+        java: {
+            enabled: false,
+        },
+        ndk: {
+            enabled: false,
+        },
+    },
+    frozen: true,
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+    ],
+
+    // First integration: run update-api then freeze-api using pinned Soong.
+    // Do not set unstable:true or manufacture a frozen API hash locally.
+}
+
+cc_defaults {
+    name: "boundarylab-native-defaults",
+    cpp_std: "c++17",
+    cflags: [
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+    ],
+    shared_libs: ["libcrypto"],
+    local_include_dirs: ["engine"],
+}
+
+cc_library_static {
+    name: "libboundarylab_engine",
+    defaults: ["boundarylab-native-defaults"],
+    srcs: ["engine/Engine.cpp"],
+    export_include_dirs: ["engine"],
+}
+
+cc_binary {
+    name: "boundarylab_service",
+    system_ext_specific: true,
+    defaults: ["boundarylab-native-defaults"],
+    srcs: ["service/main.cpp"],
+    static_libs: ["libboundarylab_engine"],
+    shared_libs: [
+        "libbinder",
+        "libutils",
+        "boundarylab-platform-V1-cpp",
+    ],
+    init_rc: ["service/boundarylab.rc"],
+}
+
+cc_library_static {
+    name: "libboundarylab_platform_client",
+    defaults: ["boundarylab-native-defaults"],
+    srcs: ["client/Client.cpp"],
+    export_include_dirs: ["client"],
+    shared_libs: [
+        "libbinder",
+        "libutils",
+        "boundarylab-platform-V1-cpp",
+    ],
+    export_shared_lib_headers: ["boundarylab-platform-V1-cpp"],
+}
+
+cc_binary {
+    name: "boundarylab_probe",
+    system_ext_specific: true,
+    defaults: ["boundarylab-native-defaults"],
+    srcs: ["client/probe.cpp"],
+    shared_libs: [
+        "liblog",
+        "libselinux",
+        "libbinder",
+        "libutils",
+        "boundarylab-platform-V1-cpp",
+    ],
+    static_libs: [
+        "libboundarylab_platform_client",
+        "libboundarylab_engine",
+    ],
+}
+
+cc_binary {
+    name: "boundarylab_denied_probe",
+    system_ext_specific: true,
+    defaults: ["boundarylab-native-defaults"],
+    srcs: ["client/probe.cpp"],
+    static_libs: [
+        "libboundarylab_platform_client",
+        "libboundarylab_engine",
+    ],
+    shared_libs: [
+        "liblog",
+        "libselinux",
+        "libbinder",
+        "libutils",
+        "boundarylab-platform-V1-cpp",
+    ],
+}
+
+cc_test {
+    name: "boundarylab_engine_test",
+    defaults: ["boundarylab-native-defaults"],
+    srcs: ["tests/engine_test.cpp"],
+    static_libs: ["libboundarylab_engine"],
+    gtest: false,
+    test_suites: ["general-tests"],
+}

@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "sudo",
+    "--login",
+    "--user=aosp",
+    "--",
+    "env",
+    "PATH=/srv/aosp/source/out/host/linux-x86/bin:/usr/bin:/bin",
+    "python3",
+    "/srv/aosp/source/vendor/boundarylab/scripts/device-smoke.py",
+    "--serial",
+    "0.0.0.0:6520",
+    "--out",
+    "/srv/aosp/evidence/custom/proof/smoke",
+    "--sepolicy-analyze",
+    "/srv/aosp/source/out/host/linux-x86/bin/sepolicy-analyze"
+  ],
+  "started_utc": "2026-10-30T22:38:50.929874+00:00",
+  "ended_utc": "2026-10-30T22:39:20.361826+00:00",
+  "exit_code": 0,
+  "timed_out": false,
+  "error": null,
+  "duration_seconds": 29.431955461001053
+}

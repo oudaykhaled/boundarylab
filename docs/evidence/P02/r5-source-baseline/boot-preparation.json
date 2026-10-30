@@ -1,0 +1,137 @@
+{
+  "kind": "unchanged_source_boot_prepared",
+  "utc": "2026-10-30T21:36:54.959187+00:00",
+  "product_out": "/srv/aosp/source/out/target/product/vsoc_x86_64_only",
+  "host_out": "/srv/aosp/source/out/host/linux-x86",
+  "artifacts": [
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/boot.img",
+      "bytes": 67108864,
+      "sha256": "ba39570697f83d28b935c660099fde06f735f8240a9df545edac0d09fc591412"
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/init_boot.img",
+      "bytes": 8388608,
+      "sha256": "4b56b31cb368807034a4d0ff8e40ae77afce33c2bc00d198f8f54934bb147d11"
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/odm.img",
+      "bytes": 466944,
+      "sha256": "b3fea92cf0ec4350655741949a0192539c3feffff609581b673760af818e7aba"
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/odm_dlkm.img",
+      "bytes": 348160,
+      "sha256": "102c74fa81f4e75b24bc2e1230b0b1ec918d5515f83c68bbdf69a9f853b4fe13"
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/product.img",
+      "bytes": 250114048,
+      "sha256": "4387486fcc1486576af13c423a913e53edc7c88aaacb1558b5d4ccc7990a5e13"
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/ramdisk.img",
+      "bytes": 2965240,
+      "sha256": "14962886833a16fa6723db3f3f47def85b5cb355073ae00627d135c73669ceb8"
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/super.img",
+      "bytes": 1547235288,
+      "sha256": "ef5228585d2303457d82654ef7fb4046e3e49dec68ba501abb338623f554197c"
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/super_empty.img",
+      "bytes": 5488,
+      "sha256": "962248d123bee34452f053fe0cbabd1422fdb69efe425839580bcc077e26975d"
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/system.img",
+      "bytes": 729563136,
+      "sha256": "f3c376f77a75e6695d9369427137950464722d66f4fd358d9813c76de788743b"
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/system_dlkm.img",
+      "bytes": 8359936,
+      "sha256": "700e062d60b08bdd4809a001e777b2aa06710b81e73206a45c6cb5e130b4af30"
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/system_ext.img",
+      "bytes": 257355776,
+      "sha256": "0312ae8e5ca1eadc12bbee5673def72f61b69ee89dd8ac981395f3e777dec5b0"
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/system_other.img",
+      "bytes": 4399104,
+      "sha256": "29e7e31e7720f07c929c9305774c92b1a8ae136669ca74e672138fde0b9a3816"
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/userdata.img",
+      "bytes": 2568492,
+      "sha256": "5edd363dfe6d5f1ce31b88d2b674ac7cb89969190e1938393f27d61ffae382a8"
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/vbmeta.img",
+      "bytes": 65536,
+      "sha256": "141c569d1d7bf67c38ca6097fe6cc4f0242c516a982508236d2b81f00f0452d5"
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/vbmeta_system.img",
+      "bytes": 65536,
+      "sha256": "935a1c50b4f5eddedcac0997d5df915578e8c486e16917595c75c7db3e81ed75"
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/vbmeta_system_dlkm.img",
+      "bytes": 65536,
+      "sha256": "3da906f26599d28ceb3a47b2c9d11bceaf571b0d5e0f0bf6be2bfa52c4ec7e2f"
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/vbmeta_vendor_dlkm.img",
+      "bytes": 65536,
+      "sha256": "aa4c944573399ce76e3bc14deec501cc2f81f6bc06f84174e49361ad2030f4f3"
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/vendor.img",
+      "bytes": 303558656,
+      "sha256": "f00525c429b309a3e4cfd2e831e49aaa8df3f44e838cc2ba9e5df8debffed357"
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/vendor_boot.img",
+      "bytes": 67108864,
+      "sha256": "81eae284a95a3524e2c4e92d5f416b46094759cb5a4311b2be20dd51d3be0aeb"
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/vendor_dlkm.img",
+      "bytes": 1441792,
+      "sha256": "89726c68f4043121cc815ce2a51ed15584df2d9e9136ba32bea76df166b11d2d"
+    },
+    {
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/vendor_ramdisk.img",
+      "bytes": 18709944,
+      "sha256": "1d1b3e3c13a65b9aa5fbfa46603358957a9abc1a2b752661d34b2143838453b2"
+    },
+    {
+      "path": "/srv/aosp/source/out/host/linux-x86/bin/cvd_internal_start",
+      "bytes": 678704,
+      "sha256": "2021b5e8efc755fc6826b050e075bac2949e3538040d32655a210a1fae27e60a"
+    },
+    {
+      "path": "/srv/aosp/source/out/host/linux-x86/bin/cvd_internal_stop",
+      "bytes": 462024,
+      "sha256": "5873bdeac0f8fa126435616b04b50cfe55eaf7c9d68138e22384c4e636031889"
+    },
+    {
+      "path": "/srv/aosp/source/out/host/linux-x86/bin/adb",
+      "bytes": 31924824,
+      "sha256": "28dd15cad9b6bfcec8bccde77bdd96b2a1c862c51a8df9ea0a968cb42cf3ea6d"
+    },
+    {
+      "path": "/srv/aosp/source/out/host/linux-x86/bin/x86_64-linux-gnu/crosvm",
+      "bytes": 21014440,
+      "sha256": "d82928e2e1c68094e4c3d2f55842554da1334088450ec6a8ca56afa3e92d879f"
+    }
+  ],
+  "previous_state_archive_sha256": "b8af251635223e3c44e1a924394cddb0af47cd1c47770ca83a8cb881fb9c18ea",
+  "apparmor_profile_sha256": "6ea102a780924cdc07876019eed66e13a4a2cf748909f2dce101a64416fc6de5",
+  "crosvm_elf": "/srv/aosp/source/out/host/linux-x86/bin/x86_64-linux-gnu/crosvm",
+  "guest_boot_proven": false
+}

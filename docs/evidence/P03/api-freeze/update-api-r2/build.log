@@ -1,0 +1,49 @@
+
+============================================
+PLATFORM_VERSION_CODENAME=REL
+PLATFORM_VERSION=16
+TARGET_PRODUCT=aosp_cf_x86_64_only_phone
+TARGET_BUILD_VARIANT=userdebug
+TARGET_ARCH=x86_64
+TARGET_ARCH_VARIANT=silvermont
+HOST_OS=linux
+HOST_OS_EXTRA=Linux-7.0.0-1014-gcp-x86_64-Ubuntu-24.04.5-LTS
+HOST_CROSS_OS=windows
+BUILD_ID=BP4A.251205.006
+OUT_DIR=out
+SOONG_ONLY=true
+============================================
+Running product configuration...
+============================================
+PLATFORM_VERSION_CODENAME=REL
+PLATFORM_VERSION=16
+TARGET_PRODUCT=aosp_cf_x86_64_only_phone
+TARGET_BUILD_VARIANT=userdebug
+TARGET_ARCH=x86_64
+TARGET_ARCH_VARIANT=silvermont
+HOST_OS=linux
+HOST_OS_EXTRA=Linux-7.0.0-1014-gcp-x86_64-Ubuntu-24.04.5-LTS
+HOST_CROSS_OS=windows
+BUILD_ID=BP4A.251205.006
+OUT_DIR=out
+SOONG_ONLY=true
+============================================
+[100% 1/1] bootstrap blueprint
+Running globs...
+[100% 2/2] analyzing Android.bp files and generating ninja file at out/soong/build.aosp_cf_x86_64_only_phone.ninja
+out/soong/soong_phony_targets.mk was modified, regenerating...
+[ 50% 3/6] initializing packaging system
+[ 66% 4/6] including distdir.mk
+[3/4] defining phony modules ...
+[100% 5/5] writing packaging rules
+Starting ninja...
+[ 50% 6/12] raw aidl_update_api.txt
+[ 58% 7/12] //vendor/boundarylab:boundarylab-platform_interface raw update_or_freeze_api_current.sh
+[ 66% 8/12] rm -rf "out/soong/.intermediates/vendor/boundarylab/boundarylab-platform_interface/dump" && mkdir -p "out/soong/.intermediates/vendor/boundarylab/boundarylab-platform_interface/dump" && out/host/linux-x86/bin/aidl --dumpapi -Ivendor/boundarylab/aidl --structured --out out/soong/.intermediates/vendor/boundarylab/boundarylab-platform_interface/dump vendor/boundarylab/aidl/dev/boundarylab/platform/Capabilities.aidl vendor/boundarylab/aidl/dev/boundarylab/platform/IBoundaryLab.aidl vendor/boundarylab/aidl/dev/boundarylab/platform/Request.aidl vendor/boundarylab/aidl/dev/boundarylab/platform/Result.aidl && out/host/linux-x86/bin/aidl_hash_gen out/soong/.intermediates/vendor/boundarylab/boundarylab-platform_interface/dump latest-version out/soong/.intermediates/vendor/boundarylab/boundarylab-platform_interface/dump/.hash
+[ 75% 9/12] compile out/host/linux-x86/bin/go/blueprint-bpmodify/linux_glibc_x86_64/pkg/github.com/google/blueprint/bpmodify.a
+[ 83% 10/12] compile out/host/linux-x86/bin/go/bpmodify/linux_glibc_x86_64/pkg/bpmodify.a
+[ 91% 11/12] link out/host/linux-x86/bin/go/bpmodify/linux_glibc_x86_64/pkg/bpmodify
+[100% 12/12] //build/blueprint/bpmodify/cmd:bpmodify install bpmodify [linux_glibc]
+
+#### build completed successfully (01:50 (mm:ss)) ####
+

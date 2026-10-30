@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "adb",
+    "-s",
+    "0.0.0.0:6520",
+    "shell",
+    "ls -l /proc/921/fd"
+  ],
+  "started_at": "2026-10-30T22:32:13.450158+00:00",
+  "ended_at": "2026-10-30T22:32:13.496293+00:00",
+  "exit_code": 0,
+  "stdout": "total 0\nlrwx------ 1 nobody nobody 64 2026-10-30 22:32 0 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:32 1 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:32 2 -> /dev/null\nlrwx------ 1 nobody nobody 64 2026-10-30 22:31 3 -> /dev/binderfs/binder\nl-wx------ 1 nobody nobody 64 2026-10-30 22:31 4 -> /sys/kernel/tracing/trace_marker\nlrwx------ 1 nobody nobody 64 2026-10-30 22:31 5 -> socket:[11017]\nl-wx------ 1 nobody nobody 64 2026-10-30 22:31 6 -> /dev/pmsg0\n",
+  "stderr": ""
+}

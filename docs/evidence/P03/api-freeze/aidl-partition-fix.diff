@@ -1,0 +1,12 @@
+diff --git a/aosp/Android.bp b/aosp/Android.bp
+index c5f89a0..3246bc5 100644
+--- a/aosp/Android.bp
++++ b/aosp/Android.bp
+@@ -2,6 +2,7 @@ package { default_applicable_licenses: ["Android-Apache-2.0"] }
+ 
+ aidl_interface {
+     name: "boundarylab-platform",
++    system_ext_specific: true,
+     srcs: ["aidl/dev/boundarylab/platform/*.aidl"],
+     local_include_dir: "aidl",
+     owner: "boundarylab",

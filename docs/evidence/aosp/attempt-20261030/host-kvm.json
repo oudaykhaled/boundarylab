@@ -1,0 +1,1 @@
+{"preflight": "PASS", "system": "Linux", "architecture": "x86_64", "kernel": "7.0.0-1014-gcp", "cpus": 16, "memoryKiB": 65836528, "workspaceFreeBytes": 527278743552, "kvmApi": 12, "transientVmCreatedAndClosed": true, "guestBootProven": false}

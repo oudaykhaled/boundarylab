@@ -1,0 +1,389 @@
+{
+  "kind": "stopped_custom_evidence_snapshot",
+  "label": "r1",
+  "started_utc": "2026-10-30T22:05:56.927641+00:00",
+  "ended_utc": "2026-10-30T22:05:57.038461+00:00",
+  "process_checks": [
+    {
+      "argv": [
+        "ps",
+        "-u",
+        "aosp",
+        "-o",
+        "pid=,comm=,args="
+      ],
+      "started_utc": "2026-10-30T22:05:56.927829+00:00",
+      "ended_utc": "2026-10-30T22:05:56.937661+00:00",
+      "exit_code": 0,
+      "stdout": "   5399 gpg-agent       gpg-agent --homedir /srv/aosp/home/.repoconfig/gnupg --use-standard-socket --daemon\n",
+      "stderr": "",
+      "active_owned_processes": [],
+      "recognized_idle_session_processes": [
+        "   5399 gpg-agent       gpg-agent --homedir /srv/aosp/home/.repoconfig/gnupg --use-standard-socket --daemon"
+      ]
+    },
+    {
+      "argv": [
+        "ps",
+        "-u",
+        "aosp",
+        "-o",
+        "pid=,comm=,args="
+      ],
+      "started_utc": "2026-10-30T22:05:57.028747+00:00",
+      "ended_utc": "2026-10-30T22:05:57.038435+00:00",
+      "exit_code": 0,
+      "stdout": "   5399 gpg-agent       gpg-agent --homedir /srv/aosp/home/.repoconfig/gnupg --use-standard-socket --daemon\n",
+      "stderr": "",
+      "active_owned_processes": [],
+      "recognized_idle_session_processes": [
+        "   5399 gpg-agent       gpg-agent --homedir /srv/aosp/home/.repoconfig/gnupg --use-standard-socket --daemon"
+      ]
+    }
+  ],
+  "source_commit": "df4f293b611ccc60f685e08e9a6a5b873860872e",
+  "source_commit_valid": true,
+  "checkpoint_error": null,
+  "actual_overlay_files": [
+    {
+      "path": "Android.bp",
+      "bytes": 2869,
+      "sha256": "2823bd4cfaaead8654b3be027a754babf6e847a0de4e73c5d44ed79d7bcd394d",
+      "mode": "0o644",
+      "mtime_ns": 1793396963369258616
+    },
+    {
+      "path": "BoardConfigBoundaryLab.mk",
+      "bytes": 72,
+      "sha256": "378a4bb360762017a0f7d9198374f7a2618631bf2191e655cb630bc1f2166056",
+      "mode": "0o664",
+      "mtime_ns": 1793383306000000000
+    },
+    {
+      "path": "PUBLIC-PREFLIGHT.md",
+      "bytes": 1983,
+      "sha256": "7e11b175d4e8c9d7506c815c682ebcf5331af13b834a21a84de328166dab8ffc",
+      "mode": "0o664",
+      "mtime_ns": 1793383306000000000
+    },
+    {
+      "path": "README.md",
+      "bytes": 10366,
+      "sha256": "3cb4f0496be72d38c8cc1c1146f874bb77248bf2d5525c03f33e1b4ea071d1d9",
+      "mode": "0o664",
+      "mtime_ns": 1793383306000000000
+    },
+    {
+      "path": "product.mk",
+      "bytes": 354,
+      "sha256": "6dc19f988be4709ab44001420b155250afa2cd5c650812eea23c097f810db10c",
+      "mode": "0o664",
+      "mtime_ns": 1793383306000000000
+    },
+    {
+      "path": "aidl/dev/boundarylab/platform/Capabilities.aidl",
+      "bytes": 811,
+      "sha256": "4fc33d1e706495bae0806e32c78639d1f7ccde13e1799b3d083b5877df3cf867",
+      "mode": "0o664",
+      "mtime_ns": 1793383306000000000
+    },
+    {
+      "path": "aidl/dev/boundarylab/platform/IBoundaryLab.aidl",
+      "bytes": 851,
+      "sha256": "c2850e424ccc54c724d7139f00bdda373e76a4d766ea714f216378308c2e2c7a",
+      "mode": "0o664",
+      "mtime_ns": 1793383306000000000
+    },
+    {
+      "path": "aidl/dev/boundarylab/platform/Request.aidl",
+      "bytes": 251,
+      "sha256": "e362a699eaf5a0ebb9dad9811f56d18f9d50f08f18bd1bfabf14c606fabcaf62",
+      "mode": "0o664",
+      "mtime_ns": 1793383306000000000
+    },
+    {
+      "path": "aidl/dev/boundarylab/platform/Result.aidl",
+      "bytes": 334,
+      "sha256": "e4e14f3131665cb2515233cb558b54847f178b6d2f9e2b80de026ec5642951de",
+      "mode": "0o664",
+      "mtime_ns": 1793383306000000000
+    },
+    {
+      "path": "aidl_api/boundarylab-platform/1/.hash",
+      "bytes": 41,
+      "sha256": "5af33e491e67fce275b3ba9d42257d4074e175cf698c0f5e196c2e3d0afa5312",
+      "mode": "0o664",
+      "mtime_ns": 1793396963363781390
+    },
+    {
+      "path": "aidl_api/boundarylab-platform/1/dev/boundarylab/platform/Capabilities.aidl",
+      "bytes": 1849,
+      "sha256": "995e8577b632a7d020267c733e27fcfa116460c6cef6a8631192aaf9d8b4c513",
+      "mode": "0o664",
+      "mtime_ns": 1793396963363684593
+    },
+    {
+      "path": "aidl_api/boundarylab-platform/1/dev/boundarylab/platform/IBoundaryLab.aidl",
+      "bytes": 1909,
+      "sha256": "699ff1f3b4db472671c0c5e1501c97dffc7d08d312e10f4ec41b27f639662fb4",
+      "mode": "0o664",
+      "mtime_ns": 1793396963363721977
+    },
+    {
+      "path": "aidl_api/boundarylab-platform/1/dev/boundarylab/platform/Request.aidl",
+      "bytes": 1325,
+      "sha256": "7e312560dd9ec12101cee5fd2453c960c0a356e2083c634ab02c944de0ae91a4",
+      "mode": "0o664",
+      "mtime_ns": 1793396963363738537
+    },
+    {
+      "path": "aidl_api/boundarylab-platform/1/dev/boundarylab/platform/Result.aidl",
+      "bytes": 1402,
+      "sha256": "f3fa5989b9253411f1d2b683fe40811ec1ae16312ab07de799719ab0382caf74",
+      "mode": "0o664",
+      "mtime_ns": 1793396963363755260
+    },
+    {
+      "path": "aidl_api/boundarylab-platform/current/dev/boundarylab/platform/Capabilities.aidl",
+      "bytes": 1849,
+      "sha256": "995e8577b632a7d020267c733e27fcfa116460c6cef6a8631192aaf9d8b4c513",
+      "mode": "0o664",
+      "mtime_ns": 1793396861452711935
+    },
+    {
+      "path": "aidl_api/boundarylab-platform/current/dev/boundarylab/platform/IBoundaryLab.aidl",
+      "bytes": 1909,
+      "sha256": "699ff1f3b4db472671c0c5e1501c97dffc7d08d312e10f4ec41b27f639662fb4",
+      "mode": "0o664",
+      "mtime_ns": 1793396861452756352
+    },
+    {
+      "path": "aidl_api/boundarylab-platform/current/dev/boundarylab/platform/Request.aidl",
+      "bytes": 1325,
+      "sha256": "7e312560dd9ec12101cee5fd2453c960c0a356e2083c634ab02c944de0ae91a4",
+      "mode": "0o664",
+      "mtime_ns": 1793396861452785947
+    },
+    {
+      "path": "aidl_api/boundarylab-platform/current/dev/boundarylab/platform/Result.aidl",
+      "bytes": 1402,
+      "sha256": "f3fa5989b9253411f1d2b683fe40811ec1ae16312ab07de799719ab0382caf74",
+      "mode": "0o664",
+      "mtime_ns": 1793396861452818682
+    },
+    {
+      "path": "client/Client.cpp",
+      "bytes": 2753,
+      "sha256": "e23d6243c599654e24b55346cd9be870c35a3ac80eb71a9ff5bb745d902d492a",
+      "mode": "0o664",
+      "mtime_ns": 1793383306000000000
+    },
+    {
+      "path": "client/Client.h",
+      "bytes": 1303,
+      "sha256": "d00e6c0a6dfaed5512bd176baf61736b072166aea4ed8cad9047867d1bfada15",
+      "mode": "0o664",
+      "mtime_ns": 1793383306000000000
+    },
+    {
+      "path": "client/probe.cpp",
+      "bytes": 11243,
+      "sha256": "16006f3fdd003d24dc73e9d48db5359b8659b52812e5976cc0724f2279e8d34e",
+      "mode": "0o644",
+      "mtime_ns": 1793397604943608191
+    },
+    {
+      "path": "engine/Engine.cpp",
+      "bytes": 11636,
+      "sha256": "b05dd4c31b08cffe3a48bed3280eb2365e28166acc7f74c2ce9bb3218cb20cc1",
+      "mode": "0o664",
+      "mtime_ns": 1793383306000000000
+    },
+    {
+      "path": "engine/Engine.h",
+      "bytes": 2885,
+      "sha256": "3900dbe8968074de7aac66f2dffa3573dfe061cd54ea331436723333878dd790",
+      "mode": "0o664",
+      "mtime_ns": 1793383306000000000
+    },
+    {
+      "path": "scripts/device-smoke.py",
+      "bytes": 10604,
+      "sha256": "1bd25f98d7d8c5d233cb93305c02af4a3d214f184571c30370ec7f0da061f646",
+      "mode": "0o775",
+      "mtime_ns": 1793383306000000000
+    },
+    {
+      "path": "scripts/stage-overlay.py",
+      "bytes": 2239,
+      "sha256": "abcf0aacef96e60c63ada03080566b33fe4c8825e0b389d5854cf28c9cfd970e",
+      "mode": "0o775",
+      "mtime_ns": 1793383306000000000
+    },
+    {
+      "path": "scripts/test-host.sh",
+      "bytes": 743,
+      "sha256": "395adb2ce290cc917889dfb0cde59d1acdc42e956eb48bb7a6f30ce36fcb7f31",
+      "mode": "0o775",
+      "mtime_ns": 1793383306000000000
+    },
+    {
+      "path": "sepolicy/private/boundarylab.te",
+      "bytes": 1552,
+      "sha256": "910968444721c68967443bfc4901aeab236c1ac16b678a12eb9b896ace90db64",
+      "mode": "0o664",
+      "mtime_ns": 1793383306000000000
+    },
+    {
+      "path": "sepolicy/private/file_contexts",
+      "bytes": 217,
+      "sha256": "5185be83d1c73e981c22b07b87d7b01afbe4fd323d2fa04ccfa3b0ca53efd1e0",
+      "mode": "0o664",
+      "mtime_ns": 1793383306000000000
+    },
+    {
+      "path": "sepolicy/private/service_contexts",
+      "bytes": 80,
+      "sha256": "c5af65af923153597bccdf76a80db3d78d38eda4a21669629e734b7d66ce1c4d",
+      "mode": "0o664",
+      "mtime_ns": 1793383306000000000
+    },
+    {
+      "path": "service/boundarylab.rc",
+      "bytes": 380,
+      "sha256": "9c2eb2ad0ecd0b5654ec182d02f0678fa5b741f3d87796d151e43ea82f3cd0cd",
+      "mode": "0o664",
+      "mtime_ns": 1793383306000000000
+    },
+    {
+      "path": "service/main.cpp",
+      "bytes": 6043,
+      "sha256": "e3de5457f72dfbfe0c0ba254117dde373020a8a84ba2ba0955ef3161f508d5d5",
+      "mode": "0o664",
+      "mtime_ns": 1793383306000000000
+    },
+    {
+      "path": "tests/Vectors.h",
+      "bytes": 823,
+      "sha256": "3f72bb5701081a01f476de1ed57bb62f5f822d3ff27f37a6fc592eebefcfb016",
+      "mode": "0o664",
+      "mtime_ns": 1793383306000000000
+    },
+    {
+      "path": "tests/engine_test.cpp",
+      "bytes": 6635,
+      "sha256": "6c5cc1fe0f00342b803d9c01dd80132a0b5e54f4fc1b357927027ff2da7d71b0",
+      "mode": "0o664",
+      "mtime_ns": 1793383306000000000
+    }
+  ],
+  "overlay_matches_checkpoint": true,
+  "installed_source_artifacts": [
+    {
+      "product_relative_path": "system_ext/bin/boundarylab_service",
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/system_ext/bin/boundarylab_service",
+      "state": "present",
+      "bytes": 102944,
+      "sha256": "8c575b2e10b7c23c661ca0f74659afe185377be5e206770cff0087d568685b5c",
+      "mode": "0o775",
+      "mtime_ns": 1793397617272036601,
+      "readelf": {
+        "argv": [
+          "/srv/aosp/source/prebuilts/clang/host/linux-x86/clang-r563880c/bin/llvm-readelf",
+          "-d",
+          "/srv/aosp/source/out/target/product/vsoc_x86_64_only/system_ext/bin/boundarylab_service"
+        ],
+        "exit_code": 0,
+        "stdout_path": "metadata/system_ext__bin__boundarylab_service.stdout.log",
+        "stderr_path": "metadata/system_ext__bin__boundarylab_service.stderr.log"
+      }
+    },
+    {
+      "product_relative_path": "system_ext/bin/boundarylab_probe",
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/system_ext/bin/boundarylab_probe",
+      "state": "present",
+      "bytes": 68608,
+      "sha256": "cffb0e7bfd204d57c4b2a110b93cd9fd579b23aa61325b044b2d17b4ba467d6f",
+      "mode": "0o775",
+      "mtime_ns": 1793397617672802981,
+      "readelf": {
+        "argv": [
+          "/srv/aosp/source/prebuilts/clang/host/linux-x86/clang-r563880c/bin/llvm-readelf",
+          "-d",
+          "/srv/aosp/source/out/target/product/vsoc_x86_64_only/system_ext/bin/boundarylab_probe"
+        ],
+        "exit_code": 0,
+        "stdout_path": "metadata/system_ext__bin__boundarylab_probe.stdout.log",
+        "stderr_path": "metadata/system_ext__bin__boundarylab_probe.stderr.log"
+      }
+    },
+    {
+      "product_relative_path": "system_ext/bin/boundarylab_denied_probe",
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/system_ext/bin/boundarylab_denied_probe",
+      "state": "present",
+      "bytes": 68608,
+      "sha256": "cffb0e7bfd204d57c4b2a110b93cd9fd579b23aa61325b044b2d17b4ba467d6f",
+      "mode": "0o775",
+      "mtime_ns": 1793397617678135482,
+      "readelf": {
+        "argv": [
+          "/srv/aosp/source/prebuilts/clang/host/linux-x86/clang-r563880c/bin/llvm-readelf",
+          "-d",
+          "/srv/aosp/source/out/target/product/vsoc_x86_64_only/system_ext/bin/boundarylab_denied_probe"
+        ],
+        "exit_code": 0,
+        "stdout_path": "metadata/system_ext__bin__boundarylab_denied_probe.stdout.log",
+        "stderr_path": "metadata/system_ext__bin__boundarylab_denied_probe.stderr.log"
+      }
+    },
+    {
+      "product_relative_path": "system_ext/lib64/boundarylab-platform-V1-cpp.so",
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/system_ext/lib64/boundarylab-platform-V1-cpp.so",
+      "state": "present",
+      "bytes": 84736,
+      "sha256": "491a781afdae1846938cc8505300ed24bcaa698c426e80ca4f85f539bec9fc9f",
+      "mode": "0o775",
+      "mtime_ns": 1793397616589030566,
+      "readelf": {
+        "argv": [
+          "/srv/aosp/source/prebuilts/clang/host/linux-x86/clang-r563880c/bin/llvm-readelf",
+          "-d",
+          "/srv/aosp/source/out/target/product/vsoc_x86_64_only/system_ext/lib64/boundarylab-platform-V1-cpp.so"
+        ],
+        "exit_code": 0,
+        "stdout_path": "metadata/system_ext__lib64__boundarylab-platform-V1-cpp.so.stdout.log",
+        "stderr_path": "metadata/system_ext__lib64__boundarylab-platform-V1-cpp.so.stderr.log"
+      }
+    },
+    {
+      "product_relative_path": "data/nativetest64/boundarylab_engine_test/boundarylab_engine_test",
+      "path": "/srv/aosp/source/out/target/product/vsoc_x86_64_only/data/nativetest64/boundarylab_engine_test/boundarylab_engine_test",
+      "state": "present",
+      "bytes": 102792,
+      "sha256": "aae13062a147b97c9859feb96833459d4b6fdb8087533af29582c0187a8849bd",
+      "mode": "0o775",
+      "mtime_ns": 1793397616458029409,
+      "readelf": {
+        "argv": [
+          "/srv/aosp/source/prebuilts/clang/host/linux-x86/clang-r563880c/bin/llvm-readelf",
+          "-d",
+          "/srv/aosp/source/out/target/product/vsoc_x86_64_only/data/nativetest64/boundarylab_engine_test/boundarylab_engine_test"
+        ],
+        "exit_code": 0,
+        "stdout_path": "metadata/data__nativetest64__boundarylab_engine_test__boundarylab_engine_test.stdout.log",
+        "stderr_path": "metadata/data__nativetest64__boundarylab_engine_test__boundarylab_engine_test.stderr.log"
+      }
+    }
+  ],
+  "limits": {
+    "max_seconds": 600,
+    "max_copied_files": 4096,
+    "max_copied_bytes": 2147483648
+  },
+  "limitations": [
+    "Export completion is not proof success; actual result false/missing/invalid is preserved.",
+    "Host process absence is checked at snapshot boundaries; operator must prevent concurrent launches.",
+    "No ELF/image bytes copied; optional readelf status is metadata, not a build/runtime result.",
+    "Hashes establish local integrity, not independent execution authenticity."
+  ]
+}

@@ -1,6 +1,28 @@
 # Optional AOSP cloud budget
 
-Researched 2026-10-30. Planning estimate only: no account, paid VM, disk or cloud service has been created. This budget covers infrastructure, not Codex/Astra subscriptions or usage, engineering labor, taxes or a guarantee of completion time.
+## Authorized limited attempt — 2026-10-30
+
+Completed attempt: the pinned unchanged Android16 baseline and custom native-service image built and booted. The final run passed 236 harness observations, 61 native assertions and 34 operator checks, with enforcing security domains and verified cleanup. All five earlier failed proof attempts are preserved. [Runtime evidence](evidence/aosp/custom-20261030/README.md) · [original host gate](evidence/aosp/attempt-20261030/README.md).
+
+The VM and both disks were verified absent at22:41:46UTC; deadline, IAM and attempt-network cleanup also completed. Estimated infrastructure use is **US$6.1723**; with the US$2 egress allowance and 40% tax/FX reserve, **US$11.4413**. These are estimates, with the settled invoice/credits/taxes unavailable. [Actual deletion receipts and calculation](evidence/aosp/teardown-20261030/README.md). The resource controls below were verified before use and then removed during early teardown.
+
+The user authorized an AOSP attempt with a **total US$50 infrastructure ceiling**, minimum necessary tests, and evidence captured while tests execute. The earlier US$100–200 estimate below is historical planning for a longer campaign, not the budget for this attempt. A complete P01–P09 campaign is not promised within this limit.
+
+Prepare implementation, smoke probes and evidence collection locally before paid runtime. Use one isolated project, one Intel `n2-standard-16` VM, a 50-GiB standard boot disk and a **500-GiB zonal SSD workspace**. The verified regional SSD quota is 500 GiB; Astra chose that layout rather than pay for idle time waiting for quota. The VM must have an **absolute termination timestamp no more than 24 hours after creation**, termination action `DELETE`, and `autoDelete=true` for both attached disks. Verify those applied settings before starting the workload. Do not create reservations, snapshots, extra VMs, retained images, managed groups or a VM service account. No automatic deadline extension or second attempt is authorized by this document.
+
+At the dated list rates, 24 hours of compute and workspace storage is approximately **US$23.60**, plus roughly US$0.19 for standard boot disk and ephemeral external IPv4, and bounded evidence transfer. Billing currency was verified as USD. Reserve substantial headroom inside US$50 for tax, local-currency conversion, network and cleanup. Confirm the resource configuration before provisioning. This is a conservative usage envelope, not a provider-enforced dollar cap or final invoice. Ordinary budget alerts are delayed and do not cap Compute Engine/storage spend.
+
+Use one output tree for the baseline followed by the incremental custom image, shallow/current-branch sync and no source mirror, ccache, duplicate output, distribution archive or image copy. The actual dated Android16 source/output fit was confirmed by the completed build; the original resource gate remains: require at least 180 GiB free after sync, warn below 80 GiB and abort below 40 GiB. Export failure evidence and tear down if the workspace cannot safely accommodate the build.
+
+Stop early for a failed KVM/unchanged-image gate or a build that cannot finish within the remaining time. Capture failures as evidence. Export small logs, manifests, checksums and screenshots during execution; do not transfer multi-gigabyte system images for presentation. Remove the disposable VM and its disks as soon as the required evidence is secured, then verify that no attempt-owned chargeable resources remain. The absolute provider deadline is a backstop, not a reason to leave idle resources running.
+
+The native termination timestamp is cleared if the VM stops or suspends. Therefore, also prepare one independent Cloud Tasks HTTP DELETE for the exact disposable instance at hour23:45, authenticated by a keyless service account whose custom role contains only `compute.instances.delete` in this isolated project. The account is never attached to the VM. Use 300-second retry intervals, bounded retry configuration, and preserve the actual task/queue/IAM receipts. Delete acceptance is asynchronous: verify the instance and both disks are absent. Remove the task/queue and cleanup identity after manual early teardown. See ADR-B14 for retry semantics and time gates. The few Cloud Tasks operations fit the contingency; there is no recurring scheduler job.
+
+Sources: [absolute VM runtime limits](https://docs.cloud.google.com/compute/docs/instances/limit-vm-runtime), [budget alerts](https://docs.cloud.google.com/billing/docs/how-to/budgets), and the price tables below. The actual preflight, source-build, image boot, service tests and cleanup need their own receipts; authorization and a local implementation are not runtime evidence.
+
+## Historical longer-campaign estimate
+
+Researched 2026-10-30. At that historical planning snapshot, no account, paid VM, disk or cloud service had been created. This budget covers infrastructure, not Codex/Astra subscriptions or usage, engineering labor, taxes or a guarantee of completion time.
 
 The [Astra-selected profile](decisions/BUILD-DECISIONS.md) is Intel Google Compute Engine `n2-standard-16`, 64 GB RAM, nested KVM, Ubuntu amd64, 1,000 GiB SSD workspace and a small separate boot disk in `europe-west4`. Actual quota, capacity and KVM/Cuttlefish preflight remain required.
 

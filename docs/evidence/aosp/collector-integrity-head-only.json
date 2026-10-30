@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "evidence_class": "synthetic-collector-integrity-only",
+  "recorded_utc": "2026-10-30T16:13:39.165650+00:00",
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "docs/evidence/aosp",
+    "-p",
+    "test_collector.py",
+    "-v"
+  ],
+  "runner": "unittest TextTestRunner via local Python wrapper to capture counts and source hashes",
+  "tests_run": 6,
+  "tests_passed": 6,
+  "tests_failed": 0,
+  "tests_skipped": 0,
+  "duration_seconds": 8.392,
+  "coverage": null,
+  "source_sha256": {
+    "scripts/aosp-evidence.py": "84b766521057f3bd647c0a4814d8406043a1a6cb3eeb5dda2bd156ef14773dbc",
+    "docs/evidence/aosp/test_collector.py": "2351ded98b62ab9a1fe603c58b4fa810060079f073a1ad011dd2520201cb04c9",
+    "docs/evidence/aosp/receipt.schema.json": "c8461ee0f69313e507c6bdaeaa5cab549edb7a6f9370854b931f4d1853d68b38",
+    "docs/evidence/aosp/probe-result.schema.json": "6b472dcb37211096a79d3b99d34fd8c9801479804e85592784e133eca18b69cd"
+  },
+  "output": "test_empty_or_permissive_claims_cannot_pass (test_collector.CollectorIntegrity.test_empty_or_permissive_claims_cannot_pass) ... ok\ntest_export_verification_detects_corrupted_artifact (test_collector.CollectorIntegrity.test_export_verification_detects_corrupted_artifact) ... ok\ntest_failed_receipt_is_preserved_and_logs_bounded_redacted (test_collector.CollectorIntegrity.test_failed_receipt_is_preserved_and_logs_bounded_redacted) ... ok\ntest_partial_evidence_is_exportable_before_command_finishes (test_collector.CollectorIntegrity.test_partial_evidence_is_exportable_before_command_finishes) ... ok\ntest_skipped_case_does_not_become_a_complete_probe_pass (test_collector.CollectorIntegrity.test_skipped_case_does_not_become_a_complete_probe_pass) ... ok\ntest_timeout_kills_owned_descendant_before_delayed_write (test_collector.CollectorIntegrity.test_timeout_kills_owned_descendant_before_delayed_write) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 8.378s\n\nOK\n",
+  "limitations": [
+    "Synthetic collector integrity only; no cloud resources, AOSP builds, boots or platform probes executed.",
+    "Previous4case and5case runs passed; final6case run adds live incremental evidence assertion after implementation change."
+  ]
+}
