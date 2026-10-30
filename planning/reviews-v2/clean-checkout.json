@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-30T12:47:55.124918+00:00",
+  "revision": "c6c8b8a9a4aadde704a39ec866996e36667759f5",
+  "method": "Fresh local git clone with --no-hardlinks into disposable directory",
+  "scope": "Python reference and ticket-data validation only",
+  "results": [
+    {
+      "command": "python3 -m unittest discover -s examples/fieldpack -v",
+      "exit": 0,
+      "output": "test_cli_exit_codes (test_fieldpack.FieldPackTests.test_cli_exit_codes) ... ok\ntest_count_and_total_caps (test_fieldpack.FieldPackTests.test_count_and_total_caps) ... ok\ntest_failed_create_and_interrupt_leave_no_manifest (test_fieldpack.FieldPackTests.test_failed_create_and_interrupt_leave_no_manifest) ... ok\ntest_known_vectors_and_deterministic_order (test_fieldpack.FieldPackTests.test_known_vectors_and_deterministic_order) ... ok\ntest_match_tamper_missing_and_extra_scope (test_fieldpack.FieldPackTests.test_match_tamper_missing_and_extra_scope) ... ok\ntest_name_policy (test_fieldpack.FieldPackTests.test_name_policy) ... ok\ntest_output_is_external_atomic_and_does_not_overwrite (test_fieldpack.FieldPackTests.test_output_is_external_atomic_and_does_not_overwrite) ... ok\ntest_read_error_and_mutation_close_descriptors (test_fieldpack.FieldPackTests.test_read_error_and_mutation_close_descriptors) ... ok\ntest_real_binary_multichunk_and_bounded_reads (test_fieldpack.FieldPackTests.test_real_binary_multichunk_and_bounded_reads) ... ok\ntest_replacement_after_read_is_detected (test_fieldpack.FieldPackTests.test_replacement_after_read_is_detected) ... ok\ntest_strict_manifest_negatives (test_fieldpack.FieldPackTests.test_strict_manifest_negatives) ... ok\ntest_symlink_hardlink_fifo_and_root_symlink (test_fieldpack.FieldPackTests.test_symlink_hardlink_fifo_and_root_symlink) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.015s\n\nOK\n"
+    },
+    {
+      "command": "python3 examples/fieldpack/demo.py",
+      "exit": 0,
+      "output": "1. Create manifest from actual note, CSV and PNG files\n{\"result\": \"CREATED\", \"files\": 3}\n2. Verify separately copied recipient files\n{\"scope\": \"manifest_entries_only\", \"files\": [{\"name\": \"inspection-note.txt\", \"outcome\": \"MATCH\"}, {\"name\": \"inspection-schematic.png\", \"outcome\": \"MATCH\"}, {\"name\": \"sensor-readings.csv\", \"outcome\": \"MATCH\"}]}\n3. Change one byte without changing file size\n{\"scope\": \"manifest_entries_only\", \"files\": [{\"name\": \"inspection-note.txt\", \"outcome\": \"DIGEST_MISMATCH\"}, {\"name\": \"inspection-schematic.png\", \"outcome\": \"MATCH\"}, {\"name\": \"sensor-readings.csv\", \"outcome\": \"MATCH\"}]}\n4. Remove one recipient attachment\n{\"scope\": \"manifest_entries_only\", \"files\": [{\"name\": \"inspection-note.txt\", \"outcome\": \"DIGEST_MISMATCH\"}, {\"name\": \"inspection-schematic.png\", \"outcome\": \"MISSING\"}, {\"name\": \"sensor-readings.csv\", \"outcome\": \"MATCH\"}]}\n5. Reject an unsupported manifest version\n{\"error\": \"UNSUPPORTED_FORMAT\"}\nPASS: all expected outcomes and exit codes observed\n"
+    },
+    {
+      "command": "python3 -O examples/fieldpack/demo.py",
+      "exit": 0,
+      "output": "1. Create manifest from actual note, CSV and PNG files\n{\"result\": \"CREATED\", \"files\": 3}\n2. Verify separately copied recipient files\n{\"scope\": \"manifest_entries_only\", \"files\": [{\"name\": \"inspection-note.txt\", \"outcome\": \"MATCH\"}, {\"name\": \"inspection-schematic.png\", \"outcome\": \"MATCH\"}, {\"name\": \"sensor-readings.csv\", \"outcome\": \"MATCH\"}]}\n3. Change one byte without changing file size\n{\"scope\": \"manifest_entries_only\", \"files\": [{\"name\": \"inspection-note.txt\", \"outcome\": \"DIGEST_MISMATCH\"}, {\"name\": \"inspection-schematic.png\", \"outcome\": \"MATCH\"}, {\"name\": \"sensor-readings.csv\", \"outcome\": \"MATCH\"}]}\n4. Remove one recipient attachment\n{\"scope\": \"manifest_entries_only\", \"files\": [{\"name\": \"inspection-note.txt\", \"outcome\": \"DIGEST_MISMATCH\"}, {\"name\": \"inspection-schematic.png\", \"outcome\": \"MISSING\"}, {\"name\": \"sensor-readings.csv\", \"outcome\": \"MATCH\"}]}\n5. Reject an unsupported manifest version\n{\"error\": \"UNSUPPORTED_FORMAT\"}\nPASS: all expected outcomes and exit codes observed\n"
+    },
+    {
+      "command": "python3 planning/validate.py",
+      "exit": 0,
+      "output": "PASS: 40 detailed tickets; 17 epics; acyclic prerequisites; only REF01 verified\nreference 1 6\u201312h\nG1 10 64\u2013122h\nG2 20 128\u2013246h\nG3 9 62\u2013124h\n"
+    }
+  ]
+}

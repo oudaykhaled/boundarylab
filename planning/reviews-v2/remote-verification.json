@@ -1,0 +1,301 @@
+{
+  "repository": "https://github.com/oudaykhaled/boundarylab",
+  "project": "https://github.com/users/oudaykhaled/projects/3",
+  "epics": 17,
+  "tasks": 40,
+  "open": 56,
+  "closedReference": [
+    21
+  ],
+  "nativeSubIssueLinks": 40,
+  "nativePrerequisiteLinks": 78,
+  "issueBodies": "40 exact matches to reviewed source",
+  "relationships": [
+    {
+      "kind": "parent",
+      "key": "B01",
+      "count": 2
+    },
+    {
+      "kind": "parent",
+      "key": "B02",
+      "count": 2
+    },
+    {
+      "kind": "parent",
+      "key": "B03",
+      "count": 2
+    },
+    {
+      "kind": "parent",
+      "key": "B04",
+      "count": 1
+    },
+    {
+      "kind": "parent",
+      "key": "B05",
+      "count": 2
+    },
+    {
+      "kind": "parent",
+      "key": "B06",
+      "count": 3
+    },
+    {
+      "kind": "parent",
+      "key": "B07",
+      "count": 2
+    },
+    {
+      "kind": "parent",
+      "key": "B08",
+      "count": 2
+    },
+    {
+      "kind": "parent",
+      "key": "B09",
+      "count": 4
+    },
+    {
+      "kind": "parent",
+      "key": "B10",
+      "count": 2
+    },
+    {
+      "kind": "parent",
+      "key": "B11",
+      "count": 2
+    },
+    {
+      "kind": "parent",
+      "key": "B12",
+      "count": 2
+    },
+    {
+      "kind": "parent",
+      "key": "B13",
+      "count": 2
+    },
+    {
+      "kind": "parent",
+      "key": "B14",
+      "count": 2
+    },
+    {
+      "kind": "parent",
+      "key": "B15",
+      "count": 2
+    },
+    {
+      "kind": "parent",
+      "key": "B16",
+      "count": 1
+    },
+    {
+      "kind": "parent",
+      "key": "B17",
+      "count": 7
+    },
+    {
+      "kind": "dependencies",
+      "key": "C01",
+      "count": 0
+    },
+    {
+      "kind": "dependencies",
+      "key": "C02",
+      "count": 0
+    },
+    {
+      "kind": "dependencies",
+      "key": "C03",
+      "count": 1
+    },
+    {
+      "kind": "dependencies",
+      "key": "C04",
+      "count": 1
+    },
+    {
+      "kind": "dependencies",
+      "key": "A01",
+      "count": 2
+    },
+    {
+      "kind": "dependencies",
+      "key": "A02",
+      "count": 2
+    },
+    {
+      "kind": "dependencies",
+      "key": "A03",
+      "count": 1
+    },
+    {
+      "kind": "dependencies",
+      "key": "F01",
+      "count": 1
+    },
+    {
+      "kind": "dependencies",
+      "key": "F02",
+      "count": 1
+    },
+    {
+      "kind": "dependencies",
+      "key": "Q01",
+      "count": 2
+    },
+    {
+      "kind": "dependencies",
+      "key": "Q02",
+      "count": 3
+    },
+    {
+      "kind": "dependencies",
+      "key": "Q03",
+      "count": 5
+    },
+    {
+      "kind": "dependencies",
+      "key": "D01",
+      "count": 2
+    },
+    {
+      "kind": "dependencies",
+      "key": "D02",
+      "count": 2
+    },
+    {
+      "kind": "dependencies",
+      "key": "V01",
+      "count": 5
+    },
+    {
+      "kind": "dependencies",
+      "key": "V02",
+      "count": 5
+    },
+    {
+      "kind": "dependencies",
+      "key": "M01",
+      "count": 2
+    },
+    {
+      "kind": "dependencies",
+      "key": "M02",
+      "count": 3
+    },
+    {
+      "kind": "dependencies",
+      "key": "M03",
+      "count": 2
+    },
+    {
+      "kind": "dependencies",
+      "key": "M04",
+      "count": 1
+    },
+    {
+      "kind": "dependencies",
+      "key": "L01",
+      "count": 3
+    },
+    {
+      "kind": "dependencies",
+      "key": "L02",
+      "count": 3
+    },
+    {
+      "kind": "dependencies",
+      "key": "T01",
+      "count": 2
+    },
+    {
+      "kind": "dependencies",
+      "key": "T02",
+      "count": 2
+    },
+    {
+      "kind": "dependencies",
+      "key": "P01",
+      "count": 0
+    },
+    {
+      "kind": "dependencies",
+      "key": "P02",
+      "count": 1
+    },
+    {
+      "kind": "dependencies",
+      "key": "P03",
+      "count": 2
+    },
+    {
+      "kind": "dependencies",
+      "key": "P04",
+      "count": 1
+    },
+    {
+      "kind": "dependencies",
+      "key": "P05",
+      "count": 1
+    },
+    {
+      "kind": "dependencies",
+      "key": "P06",
+      "count": 2
+    },
+    {
+      "kind": "dependencies",
+      "key": "P07",
+      "count": 2
+    },
+    {
+      "kind": "dependencies",
+      "key": "P08",
+      "count": 1
+    },
+    {
+      "kind": "dependencies",
+      "key": "P09",
+      "count": 3
+    },
+    {
+      "kind": "dependencies",
+      "key": "FP01",
+      "count": 1
+    },
+    {
+      "kind": "dependencies",
+      "key": "REF01",
+      "count": 0
+    },
+    {
+      "kind": "dependencies",
+      "key": "FP02",
+      "count": 3
+    },
+    {
+      "kind": "dependencies",
+      "key": "FP03",
+      "count": 2
+    },
+    {
+      "kind": "dependencies",
+      "key": "FP04",
+      "count": 2
+    },
+    {
+      "kind": "dependencies",
+      "key": "FP05",
+      "count": 2
+    },
+    {
+      "kind": "dependencies",
+      "key": "FP06",
+      "count": 4
+    }
+  ],
+  "boardVerification": "Browser required separately; REST receipt does not prove project membership"
+}

@@ -17,3 +17,9 @@ Selected decisions: 32 flat aliases; 128 MiB per file **and pack**; 64 KiB reads
 
 - [Final contract/ticket review and resolutions](TICKETS-CONTRACT-REVIEW.md)
 - [Reference implementation review and rerun](REFERENCE-REVIEW.md)
+
+- [Final ticket recheck: PASS](FINAL-TICKET-RECHECK.md)
+- [Fresh-checkout execution receipt](clean-checkout.json)
+- [GitHub issue/hierarchy/dependency readback](remote-verification.json)
+
+- [Publication, live-board and final verification receipt](PUBLICATION.md)
