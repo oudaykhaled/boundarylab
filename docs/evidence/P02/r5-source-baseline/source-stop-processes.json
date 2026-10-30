@@ -1,0 +1,12 @@
+[
+  {
+    "utc": "2026-10-30T21:37:50.199143+00:00",
+    "ps_exit_code": 0,
+    "ps_stderr": "",
+    "valid_ps_result": true,
+    "processes": [
+      "   5399 gpg-agent       gpg-agent --homedir /srv/aosp/home/.repoconfig/gnupg --use-standard-socket --daemon"
+    ],
+    "matching_cvd_processes": []
+  }
+]

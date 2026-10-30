@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-10-30",
+  "updated": "2026-10-30T21:43:38.248071+00:00",
   "sourceCommit": "06b2d4f9d550a7c2b02bcc4d3e8743800ea9eb4c",
   "reviewMethod": "Astra specialist implementation and independent scoped AI security/reliability reviews; root acceptance reconciliation; no human review claimed",
   "notes": [
@@ -413,77 +413,69 @@
       "issue": "https://github.com/oudaykhaled/boundarylab/issues/23",
       "parent": "B12",
       "title": "Build and boot unchanged AOSP baseline image",
-      "status": "In Progress",
+      "status": "Done",
       "owner": "Root + Astra chief",
       "evidence": [
         "docs/evidence/P02/README.md",
-        "docs/evidence/aosp/attempt-20261030/README.md",
-        "docs/decisions/BUILD-DECISIONS.md"
+        "docs/evidence/P02/r5-source-baseline/README.md"
       ],
-      "result": "Pinned clean Android16r4 checkout passed; baseline compilation in progress. Two wrapper/setup failures and one upstream absolute-output-path failure were preserved; standardrelative out correction keeps source unchanged.",
-      "remainingAcceptance": [
-        "Build unchanged pinned manifest/target.",
-        "Boot source-built Android16 image; capture fingerprint/Enforcing/readiness, tool versions, logs and image checksums.",
-        "Record real duration/failure if timebox fails; no physical performance claim."
-      ],
-      "nextStep": "Finish unchanged source baseline, export checksums/build log, boot matching image Enforcing before any overlay."
+      "result": "Pinned unchanged Android16r4 source build and matching sandboxed guest boot passed; all18 readiness/fingerprint/Enforcing checks and process cleanup passed, actual PNG viewed, all39 exported evidence file hashes verified. Four earlier failures remain preserved.",
+      "remainingAcceptance": [],
+      "nextStep": "Preserve verified baseline before custom integration; this does not establish custom-service runtime or P09 fresh reproduction."
     },
     {
       "key": "P03",
       "issue": "https://github.com/oudaykhaled/boundarylab/issues/29",
       "parent": "B13",
       "title": "Implement generated-only native AIDL service and core vectors",
-      "status": "Blocked",
+      "status": "In Progress",
       "owner": "AOSP team",
       "evidence": [
         "docs/evidence/aosp/attempt-20261030/README.md",
         "docs/evidence/reviews/AOSP-REVIEW.md",
         "aosp/README.md"
       ],
-      "result": "Generated-only native implementation prepared and source-reviewed;61 host assertions/SDK AIDL generation do not establish target runtime.",
+      "result": "Baseline verified and reviewed overlay staged. Generated AIDL partition corrected without bypassing enforcement; real pinned Soong update/freeze passed and V1 artifacts copied exactly. Native/policy/image/runtime remain unverified.",
       "remainingAcceptance": [
-        "P02 unchanged source-build/enforcing-boot prerequisite remains open.",
-        "Execute this ticket's original image/service/native-client acceptance on the rebuilt custom image."
+        "Execute every original target-specific acceptance clause with real frozen API, compile/policy/image/runtime provenance; no completion inferred from host tests or baseline."
       ],
-      "nextStep": "Clear P02, stage overlay, build/freeze real APIs and custom image, then execute minimum target probes."
+      "nextStep": "Compile native components and policy/custom image, then one combined target smoke; reconcile every original acceptance clause from actual evidence."
     },
     {
       "key": "P04",
       "issue": "https://github.com/oudaykhaled/boundarylab/issues/32",
       "parent": "B13",
       "title": "Integrate service boot, supervision and enforcing SELinux policy",
-      "status": "Blocked",
+      "status": "In Progress",
       "owner": "AOSP team",
       "evidence": [
         "docs/evidence/aosp/attempt-20261030/README.md",
         "docs/evidence/reviews/AOSP-REVIEW.md",
         "aosp/README.md"
       ],
-      "result": "Generated-only native implementation prepared and source-reviewed;61 host assertions/SDK AIDL generation do not establish target runtime.",
+      "result": "Baseline verified and reviewed overlay staged. Generated AIDL partition corrected without bypassing enforcement; real pinned Soong update/freeze passed and V1 artifacts copied exactly. Native/policy/image/runtime remain unverified.",
       "remainingAcceptance": [
-        "P02 unchanged source-build/enforcing-boot prerequisite remains open.",
-        "Execute this ticket's original image/service/native-client acceptance on the rebuilt custom image."
+        "Execute every original target-specific acceptance clause with real frozen API, compile/policy/image/runtime provenance; no completion inferred from host tests or baseline."
       ],
-      "nextStep": "Clear P02, stage overlay, build/freeze real APIs and custom image, then execute minimum target probes."
+      "nextStep": "Compile native components and policy/custom image, then one combined target smoke; reconcile every original acceptance clause from actual evidence."
     },
     {
       "key": "P05",
       "issue": "https://github.com/oudaykhaled/boundarylab/issues/37",
       "parent": "B14",
       "title": "Implement platform-built facade and deliberate API client",
-      "status": "Blocked",
+      "status": "In Progress",
       "owner": "AOSP team",
       "evidence": [
         "docs/evidence/aosp/attempt-20261030/README.md",
         "docs/evidence/reviews/AOSP-REVIEW.md",
         "aosp/README.md"
       ],
-      "result": "Generated-only native implementation prepared and source-reviewed;61 host assertions/SDK AIDL generation do not establish target runtime.",
+      "result": "Baseline verified and reviewed overlay staged. Generated AIDL partition corrected without bypassing enforcement; real pinned Soong update/freeze passed and V1 artifacts copied exactly. Native/policy/image/runtime remain unverified.",
       "remainingAcceptance": [
-        "P02 unchanged source-build/enforcing-boot prerequisite remains open.",
-        "Execute this ticket's original image/service/native-client acceptance on the rebuilt custom image."
+        "Execute every original target-specific acceptance clause with real frozen API, compile/policy/image/runtime provenance; no completion inferred from host tests or baseline."
       ],
-      "nextStep": "Clear P02, stage overlay, build/freeze real APIs and custom image, then execute minimum target probes."
+      "nextStep": "Compile native components and policy/custom image, then one combined target smoke; reconcile every original acceptance clause from actual evidence."
     },
     {
       "key": "P06",
@@ -768,7 +760,7 @@
     {
       "key": "B12",
       "issue": "https://github.com/oudaykhaled/boundarylab/issues/12",
-      "status": "In Progress",
+      "status": "Done",
       "children": [
         "P01",
         "P02"
@@ -777,7 +769,7 @@
     {
       "key": "B13",
       "issue": "https://github.com/oudaykhaled/boundarylab/issues/13",
-      "status": "Blocked",
+      "status": "In Progress",
       "children": [
         "P03",
         "P04"
@@ -786,7 +778,7 @@
     {
       "key": "B14",
       "issue": "https://github.com/oudaykhaled/boundarylab/issues/14",
-      "status": "Blocked",
+      "status": "In Progress",
       "children": [
         "P05",
         "P06"
@@ -825,27 +817,33 @@
     }
   ],
   "counts": {
-    "Done": 9,
+    "Done": 10,
     "In Review": 11,
-    "In Progress": 9,
+    "In Progress": 11,
     "Planned": 4,
-    "Blocked": 7
+    "Blocked": 4
   },
   "boardCounts": {
-    "Done": 11,
+    "Done": 13,
     "In Review": 15,
-    "In Progress": 16,
+    "In Progress": 19,
     "Planned": 4,
-    "Blocked": 11
+    "Blocked": 6
   },
   "aospAttempt": {
     "sourcePreparationCommit": "5663baa0bcdefb5b82f6a219995129d6c91bd48f",
     "authorizedTotalUsd": 50,
     "budgetScopeAmendment": "ADR-B14; user explicitly authorized cloud testing/evidence after original P01 no-purchase text",
     "hostGate": "Actual non-root KVM and paired public prebuilt boot completed with SELinux Enforcing; source baseline remains separate",
-    "sourceBaseline": "Pinned Android16r4 checkout completed and clean verified; unchanged baseline compiling with conventional relative OUT_DIR=out after retained wrapper/setup/path failures. No source image boot yet.",
+    "sourceBaseline": "Verified Android16r4 unchanged source build21:36:20UTC and enforcing/sandboxed boot+cleanup21:37:50UTC; fingerprint matches actual built system. All39 exported file hashes verified and actual PNG visually inspected.",
     "evidence": "docs/evidence/aosp/attempt-20261030/README.md",
-    "settledCostUsd": null
+    "settledCostUsd": null,
+    "reviewedNativeCheckpoint": "735ebba107a4b0ab82fa4f243cd8c3c350236a8d",
+    "customIntegration": "Pinned Soong update-api-r2 and freeze-api-r1 passed with process groups gone. Actual frozen V1 API and Soong-updated Android.bp copied from host; all19 exported payload hashes verified. Native/policy/custom-image compilation and runtime remain pending.",
+    "sourceBaselineEvidence": "docs/evidence/P02/README.md",
+    "apiPartitionFixCommit": "e50a8e24dc218790e80e84c80677addb16a4b033",
+    "frozenV1Hash": "6a6258db03acac4a2fa4bd1abecbcf528d7348ea",
+    "realApiExportSha256": "a920dd1d8a9648ead13271791593bb59c54e814e95deb251461c88cee39bf758"
   },
   "lastPublishedBoardCounts": {
     "Done": 11,
@@ -854,5 +852,8 @@
     "Planned": 4,
     "Blocked": 11
   },
-  "boardSync": "GitHub Project3 UI statuses verified2026-10-30~17:52UTC; P01Done/P02InProgress/B12InProgress. Issue state/body/labels reconciled via existing same-user CLI login; curated code/evidence remains on the local AOSP branch until publication."
+  "boardSync": {
+    "status": "pending_next_milestone_publication",
+    "note": "Local P02Done/P03\u2013P05InProgress are verified/preparation states. lastPublishedBoardCounts remain the last actual Chrome verification; root will reconcile GitHub after current target results."
+  }
 }

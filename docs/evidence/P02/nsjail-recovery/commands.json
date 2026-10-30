@@ -1,0 +1,109 @@
+[
+  {
+    "argv": [
+      "sudo",
+      "--login",
+      "--user=aosp",
+      "--",
+      "git",
+      "-C",
+      "/srv/aosp/source/.repo/manifests",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "15128c9e27cfa599c48d294babd39286ee8f1426\n",
+    "stderr": "",
+    "utc": "2026-10-30T20:59:11.720437+00:00"
+  },
+  {
+    "argv": [
+      "sudo",
+      "--login",
+      "--user=aosp",
+      "--",
+      "git",
+      "-C",
+      "/srv/aosp/source/prebuilts/build-tools",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "412724a805835d89234d67c363f7ada7f5f8a67f\n",
+    "stderr": "",
+    "utc": "2026-10-30T20:59:11.742642+00:00"
+  },
+  {
+    "argv": [
+      "sudo",
+      "--login",
+      "--user=aosp",
+      "--",
+      "git",
+      "-C",
+      "/srv/aosp/source/prebuilts/build-tools",
+      "status",
+      "--porcelain",
+      "--untracked-files=normal"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "utc": "2026-10-30T20:59:11.776346+00:00"
+  },
+  {
+    "argv": [
+      "sysctl",
+      "-n",
+      "kernel.apparmor_restrict_unprivileged_userns"
+    ],
+    "exit_code": 0,
+    "stdout": "1\n",
+    "stderr": "",
+    "utc": "2026-10-30T20:59:11.845985+00:00"
+  },
+  {
+    "argv": [
+      "sysctl",
+      "-n",
+      "kernel.unprivileged_userns_clone"
+    ],
+    "exit_code": 0,
+    "stdout": "1\n",
+    "stderr": "",
+    "utc": "2026-10-30T20:59:11.848170+00:00"
+  },
+  {
+    "argv": [
+      "apparmor_parser",
+      "--replace",
+      "/etc/apparmor.d/boundarylab-nsjail"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "utc": "2026-10-30T20:59:11.936599+00:00"
+  },
+  {
+    "argv": [
+      "sysctl",
+      "-n",
+      "kernel.apparmor_restrict_unprivileged_userns"
+    ],
+    "exit_code": 0,
+    "stdout": "1\n",
+    "stderr": "",
+    "utc": "2026-10-30T20:59:11.939157+00:00"
+  },
+  {
+    "argv": [
+      "sysctl",
+      "-n",
+      "kernel.unprivileged_userns_clone"
+    ],
+    "exit_code": 0,
+    "stdout": "1\n",
+    "stderr": "",
+    "utc": "2026-10-30T20:59:11.941219+00:00"
+  }
+]

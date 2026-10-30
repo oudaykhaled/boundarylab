@@ -1,6 +1,6 @@
 # Architecture and behavioral contract
 
-Status: proposed. All module names, limits and APIs below are design decisions awaiting implementation. The [revised plan](PLAN-V2.md) defines delivery gates. The [FieldPack contract](FIELDPACK.md) supersedes the file, byte-budget and lifecycle details below where specified.
+Design record: this document preserves the initial component and behavior decisions. Current implementation and verified scope are recorded in [execution status](../planning/EXECUTION-STATUS.md); the [native AOSP layer diagram](AOSP-LAYERS.md) identifies the actual platform versus user-space integration. The [revised plan](PLAN-V2.md) defines delivery gates. The [FieldPack contract](FIELDPACK.md) supersedes the file, byte-budget and lifecycle details below where specified.
 
 ## Product and boundary
 
@@ -17,7 +17,7 @@ The value hypothesis is that a small SDK plus conformance suite reduces the work
 | `examples/android-native/`, `examples/flutter/` | Small submit/status/cancel screens | Middleware policy |
 | `desktop/host/`, `desktop/cli/` | macOS per-user JVM host, framed local socket, transport identity and limits | Android-equivalent UID or lifecycle semantics |
 | `conformance/`, `benchmarks/` | Golden vectors, old-consumer fixtures, fault orchestration and observations | Claims beyond the tested environment |
-| `platform/aosp/` | Conditional image-integrated service, build/boot/security and platform-facing facade | A new kernel, driver, HAL or production certification |
+| `aosp/` | Conditional image-integrated service, build/boot/security and platform-facing facade | A new kernel, driver, HAL or production certification |
 
 Android and macOS share the pure JVM core, not a process or job store. There is no phone-to-PC communication or synchronization. Cross-platform compatibility means matching observable semantics on each host.
 

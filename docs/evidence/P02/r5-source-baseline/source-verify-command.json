@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "sudo",
+    "--login",
+    "--user=aosp",
+    "--",
+    "python3",
+    "/tmp/source-baseline-verify.py",
+    "--deadline-epoch",
+    "1793396817.0980382"
+  ],
+  "started_utc": "2026-10-30T21:37:42.512909+00:00",
+  "ended_utc": "2026-10-30T21:37:49.191419+00:00",
+  "duration_seconds": 6.678526401519775,
+  "exit_code": 0,
+  "timed_out": false,
+  "error": null
+}

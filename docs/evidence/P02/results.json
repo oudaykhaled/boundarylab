@@ -1,7 +1,7 @@
 {
   "ticket": "P02",
-  "status": "in_progress",
-  "recorded_utc": "2026-10-30T17:57:10.110309+00:00",
+  "status": "done",
+  "recorded_utc": "2026-10-30T21:43:38.247144+00:00",
   "source_checkout_completed": true,
   "manifest_commit": "15128c9e27cfa599c48d294babd39286ee8f1426",
   "manifest_lock_sha256": "4e8beb5d1b590dff3d631b1dbb957138dbda4e608a3183c625683da4bc84918f",
@@ -13,22 +13,90 @@
   "relative_out_dir": "out",
   "physical_out_dir": "/srv/aosp/source/out",
   "parallel_jobs": 12,
-  "completed_source_build_proven": false,
-  "source_guest_boot_proven": false,
+  "completed_source_build_proven": true,
+  "source_guest_boot_proven": true,
   "custom_service_runtime_proven": false,
   "prior_failures": [
     "r1 upstream shell nounset incompatibility",
     "r2 host output directory not writable",
-    "r3 upstream test packager absolute output-path assumption"
+    "r3 upstream test packager absolute output-path assumption",
+    "r4 required Trusty nsjail blocked by exact-program Ubuntu24 unprivileged-userns restriction"
   ],
-  "latest_progress_snapshot": {
-    "utc": "2026-10-30T17:56:57.696838+00:00",
-    "pid": 80854,
-    "freeBytes": 377865859072,
-    "warningBelow80GiB": false,
-    "logBytes": 4219372,
-    "tail": "28588/174912] //prebuilts/sdk/current/androidx/m2repository/androidx/wear/compose/compose-foundation/1.6.0-alpha01:androidx.wear.compose_compose-foundation merge assets from dependencies [common apex34] (priority: 37)\n[ 16% 28589/174912] //prebuilts/sdk/current/androidx/m2repository/androidx/wear/compose/compose-material-core/1.6.0-alpha01:androidx.wear.compose_compose-material-core overlay resource file list [common apex34] (priority: 37)\n[ 16% 28590/174912] //prebuilts/sdk/current/androidx/m2repository/androidx/webkit/webkit/1.12.0-alpha02:androidx.webkit_webkit overlay resource file list [common apex31] (priority: 37)\n[ 16% 28591/174912] //prebuilts/sdk/current/androidx/m2repository/androidx/webkit/webkit/1.12.0-alpha02:androidx.webkit_webkit overlay resource file list [common apex33] (priority: 37)\n[ 16% 28592/174912] //prebuilts/sdk/current/androidx/m2repository/androidx/window/window/1.5.0-rc01:androidx.window_window overlay resource file list [common apex10000_p] (priority: 37)\n",
-    "stopReason": null
+  "compilation_limitation": "Upstream Soong disabled host build sandbox after nsjail error; unprivileged isolated build allowed by Astra, no hermetic/build-confinement claim. Runtime CVDsandbox/Enforcing remain required.",
+  "intermediate_export": {
+    "archive": "baseline-progress-checkpoint.tar.gz",
+    "sha256": "53e040ca2817bf97797db929d15fa110923747ec1e96f1950ec79837edd1b5c2",
+    "bytes": 856737,
+    "source_build_completed": false,
+    "file_hashes_verified": true,
+    "snapshot_utc": "2026-10-30T18:22:38.544131+00:00"
   },
-  "compilation_limitation": "Upstream Soong disabled host build sandbox after nsjail error; unprivileged isolated build allowed by Astra, no hermetic/build-confinement claim. Runtime CVDsandbox/Enforcing remain required."
+  "current_attempt": "r5 incremental resume in the same output tree",
+  "resume_progress_counters_cover_remaining_steps_only": true,
+  "r4_failure_full_log": "r4-nsjail-failure/build.log.gz",
+  "r4_failure_full_log_original_sha256": "e110eb55d333981a1227b80122f10c50f2bcf1dad3be4c324b9835a7d197359e",
+  "scoped_nsjail_recovery": {
+    "exact_binary_sha256": "3f97556c3cf8a83d3f5ae854e6dfc2f345355ead547dd661d07a369b6c2ba280",
+    "profile_sha256": "c4a587b1ff1aa8a1e4a5157fb5ca32763c0b49eeefcefe03afe2d9b87d5ffb5f",
+    "global_controls_one": true,
+    "crosvm_profile_unchanged": true,
+    "source_changed": false,
+    "full_apparmor_confinement_claimed": false
+  },
+  "final_build_result": {
+    "kind": "unchanged_source_build",
+    "started_utc": "2026-10-30T20:59:33.889006+00:00",
+    "ended_utc": "2026-10-30T21:36:20.582882+00:00",
+    "exit_code": 0,
+    "stop_reason": null,
+    "cleanup": {
+      "group_present_at_cleanup": false,
+      "kill_sent": false,
+      "group_exists_after_cleanup": false
+    },
+    "source_manifest": "android-16.0.0_r4",
+    "target": "aosp_cf_x86_64_only_phone-bp4a-userdebug",
+    "out_dir": "/srv/aosp/source/out",
+    "overlay_present": false,
+    "log_sha256": "4d5fc02309b039e810f5f33038c060c064d0931e6662f92653d0012d47bc10f3",
+    "log_bytes": 3937178,
+    "guest_boot_proven": false
+  },
+  "boot_and_cleanup_result": {
+    "kind": "unchanged_source_boot_and_cleanup",
+    "passed": true,
+    "window": {
+      "started_utc": "2026-10-30T21:36:57.098038+00:00",
+      "deadline_epoch": 1793396817.0980382,
+      "maximum_seconds": 600.0
+    },
+    "ended_utc": "2026-10-30T21:37:50.199501+00:00",
+    "boot_passed": true,
+    "cleanup_verified": true,
+    "error": null
+  },
+  "boot_check_count": 18,
+  "all_boot_checks_passed": true,
+  "verified_local_export": {
+    "kind": "baseline_local_export_integrity",
+    "utc": "2026-10-30T21:37:55.939014+00:00",
+    "archive": "baseline-final.tar.gz",
+    "bytes": 2659393,
+    "sha256": "cf78a18d8a4eea1f11654187136aa2b03edcde2c826df7b6c8b512a2a0fe6688",
+    "all_file_hashes_match": true,
+    "file_count": 39,
+    "baseline_boot_passed": true,
+    "cleanup_verified": true,
+    "screenshot_sha256": "e0afeb9a7c7cd1e98efc09c71d49e40c442ece7f481b2c4b8ed9d47d22ec6be5",
+    "screenshot_visual_review_pending": true
+  },
+  "screenshot_visually_reviewed": true,
+  "verified_local_export_original_receipt_sha256": "5377167c88295cbfa7741e8dbbd6d7f78206faa4e8dffa59a88d5acf829e3e7b",
+  "later_screenshot_visual_review": {
+    "utc": "2026-10-30T21:40:01.942211+00:00",
+    "screenshot_sha256": "e0afeb9a7c7cd1e98efc09c71d49e40c442ece7f481b2c4b8ed9d47d22ec6be5",
+    "viewed": true,
+    "observation": "Actual Cuttlefish Android lock screen; no personal content. Android version/readiness/enforcement established separately by exact boot receipts."
+  },
+  "visual_review_note": "The original integrity receipt retains its historical pending flag; the later visual review above completes that separate check."
 }

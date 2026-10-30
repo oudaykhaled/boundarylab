@@ -1,0 +1,19 @@
+{
+  "kind": "scoped_nsjail_userns_recovery",
+  "utc": "2026-10-30T20:59:11.941437+00:00",
+  "binary": "/srv/aosp/source/prebuilts/build-tools/linux-x86/bin/nsjail",
+  "binary_sha256": "3f97556c3cf8a83d3f5ae854e6dfc2f345355ead547dd661d07a369b6c2ba280",
+  "binary_project_commit": "412724a805835d89234d67c363f7ada7f5f8a67f",
+  "manifest_commit": "15128c9e27cfa599c48d294babd39286ee8f1426",
+  "profile": "/etc/apparmor.d/boundarylab-nsjail",
+  "profile_sha256": "c4a587b1ff1aa8a1e4a5157fb5ca32763c0b49eeefcefe03afe2d9b87d5ffb5f",
+  "loaded": [
+    "boundarylab-nsjail (unconfined)"
+  ],
+  "crosvm_profile_unchanged": true,
+  "global_userns_controls_remain_one": true,
+  "source_modified": false,
+  "build_retried": false,
+  "guest_boot_proven": false,
+  "limitation": "Exact-program userns compatibility opt-in, not full AppArmor confinement. Earlier r4 compilation had optional host sandbox disabled."
+}

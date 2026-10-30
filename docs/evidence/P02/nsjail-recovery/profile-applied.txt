@@ -1,0 +1,5 @@
+abi <abi/4.0>,
+include <tunables/global>
+profile boundarylab-nsjail /srv/aosp/source/prebuilts/build-tools/linux-x86/bin/nsjail flags=(unconfined) {
+  userns,
+}

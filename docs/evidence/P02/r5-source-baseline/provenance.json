@@ -1,0 +1,425 @@
+{
+  "kind": "public_curation_of_completed_unchanged_source_baseline",
+  "source_archive": {
+    "name": "baseline-final.tar.gz",
+    "bytes": 2659393,
+    "sha256": "cf78a18d8a4eea1f11654187136aa2b03edcde2c826df7b6c8b512a2a0fe6688"
+  },
+  "integrity": {
+    "archive_hash_verified_locally": true,
+    "export_inventory_entries_verified": 39,
+    "archive_regular_members": 40,
+    "inventory_itself_additional_member": true,
+    "scope": "Local consistency/integrity verification of supplied receipts and archive; no independent authenticity, signature, remote attestation or fresh reproduction claim."
+  },
+  "coverage": {
+    "selected_archive_members": 29,
+    "omitted_archive_members": 11,
+    "all_members_accounted_for": true
+  },
+  "members": [
+    {
+      "original_path": "baseline/apparmor-profile-applied.txt",
+      "original_bytes": 165,
+      "original_sha256": "6ea102a780924cdc07876019eed66e13a4a2cf748909f2dce101a64416fc6de5",
+      "disposition": "selected",
+      "public_path": "apparmor-profile-applied.txt",
+      "public_bytes": 165,
+      "public_sha256": "6ea102a780924cdc07876019eed66e13a4a2cf748909f2dce101a64416fc6de5",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/apparmor-profile-before.txt",
+      "original_bytes": 152,
+      "original_sha256": "dc2f2e749aa86419452ef4995a39124dfb6ac34e82abe985d981a52070992643",
+      "disposition": "selected",
+      "public_path": "apparmor-profile-before.txt",
+      "public_bytes": 152,
+      "public_sha256": "dc2f2e749aa86419452ef4995a39124dfb6ac34e82abe985d981a52070992643",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/boot/boot.png",
+      "original_bytes": 711757,
+      "original_sha256": "e0afeb9a7c7cd1e98efc09c71d49e40c442ece7f481b2c4b8ed9d47d22ec6be5",
+      "disposition": "selected",
+      "public_path": "boot/boot.png",
+      "public_bytes": 711757,
+      "public_sha256": "e0afeb9a7c7cd1e98efc09c71d49e40c442ece7f481b2c4b8ed9d47d22ec6be5",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/boot/checks.json",
+      "original_bytes": 3327,
+      "original_sha256": "a53d533418e249c0819614f6e09772a7daad3a7dc3befcf50dbaed0a5ba51dcb",
+      "disposition": "selected",
+      "public_path": "boot/checks.json",
+      "public_bytes": 3327,
+      "public_sha256": "a53d533418e249c0819614f6e09772a7daad3a7dc3befcf50dbaed0a5ba51dcb",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/boot/commands.json",
+      "original_bytes": 38633,
+      "original_sha256": "61245e2f17b9d9947a7a13b4286cf0565673788fefd5eb8e53eb4914966a4e92",
+      "disposition": "selected",
+      "public_path": "boot/commands.json",
+      "public_bytes": 38633,
+      "public_sha256": "61245e2f17b9d9947a7a13b4286cf0565673788fefd5eb8e53eb4914966a4e92",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/boot/effective-config.json",
+      "original_bytes": 10113,
+      "original_sha256": "436da5551f78c2e2e44409e1e3d00f8bd63020848f3dd31080eb49d0b7a584be",
+      "disposition": "selected",
+      "public_path": "boot/effective-config.json",
+      "public_bytes": 10113,
+      "public_sha256": "436da5551f78c2e2e44409e1e3d00f8bd63020848f3dd31080eb49d0b7a584be",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/boot/result.json",
+      "original_bytes": 3800,
+      "original_sha256": "33d7c2f3d2d890fb5cb10cfeca6d453387f451cfc5f9306b48dc9b709becc3da",
+      "disposition": "selected",
+      "public_path": "boot/result.json",
+      "public_bytes": 3800,
+      "public_sha256": "33d7c2f3d2d890fb5cb10cfeca6d453387f451cfc5f9306b48dc9b709becc3da",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/boot-preparation.json",
+      "original_bytes": 5618,
+      "original_sha256": "6f4457e188b914f9f994caeaec7458a126e7b98106d7a1c4b9563c13549f5351",
+      "disposition": "selected",
+      "public_path": "boot-preparation.json",
+      "public_bytes": 5618,
+      "public_sha256": "6f4457e188b914f9f994caeaec7458a126e7b98106d7a1c4b9563c13549f5351",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/boot-run-result.json",
+      "original_bytes": 331,
+      "original_sha256": "345a38b0667a523bc9f38f404988e0673766e51d2e96f8ae3e8aec90d7f73ce1",
+      "disposition": "selected",
+      "public_path": "boot-run-result.json",
+      "public_bytes": 331,
+      "public_sha256": "345a38b0667a523bc9f38f404988e0673766e51d2e96f8ae3e8aec90d7f73ce1",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/boot-window.json",
+      "original_bytes": 124,
+      "original_sha256": "b4ce3b905bf1efe82c4433046e86571954d15eb0e4e43e7e1fde60080c251423",
+      "disposition": "selected",
+      "public_path": "boot-window.json",
+      "public_bytes": 124,
+      "public_sha256": "b4ce3b905bf1efe82c4433046e86571954d15eb0e4e43e7e1fde60080c251423",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/build-result.json",
+      "original_bytes": 607,
+      "original_sha256": "a26b7e8fe4cb25ce87c8bc6140642594b2402822717a8cec6b8c5132d0ee168b",
+      "disposition": "selected",
+      "public_path": "build-result.json",
+      "public_bytes": 607,
+      "public_sha256": "a26b7e8fe4cb25ce87c8bc6140642594b2402822717a8cec6b8c5132d0ee168b",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/build.log",
+      "original_bytes": 3937178,
+      "original_sha256": "4d5fc02309b039e810f5f33038c060c064d0931e6662f92653d0012d47bc10f3",
+      "disposition": "selected",
+      "public_path": "build.log.gz",
+      "public_bytes": 370421,
+      "public_sha256": "1353a6187fcb835699d407ff2f2e28f448c9553358b66ca8825bab322e51b8c6",
+      "transformation": "lossless gzip, level 9, mtime 0; no text changes"
+    },
+    {
+      "original_path": "baseline/manifest.xml",
+      "original_bytes": 233871,
+      "original_sha256": "4e8beb5d1b590dff3d631b1dbb957138dbda4e608a3183c625683da4bc84918f",
+      "disposition": "selected",
+      "public_path": "manifest.xml",
+      "public_bytes": 233871,
+      "public_sha256": "4e8beb5d1b590dff3d631b1dbb957138dbda4e608a3183c625683da4bc84918f",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/previous-prebuilt-state-logs.tar.gz",
+      "original_bytes": 772590,
+      "original_sha256": "b8af251635223e3c44e1a924394cddb0af47cd1c47770ca83a8cb881fb9c18ea",
+      "disposition": "omitted",
+      "reason": "Nested archive of preceding prebuilt state; not this source baseline. Retained in original private export."
+    },
+    {
+      "original_path": "baseline/source-adb-stop-command.json",
+      "original_bytes": 348,
+      "original_sha256": "4fd3633a2f8a970ef435d8025cd23b451e4dd74e04c81d433144ec7075d5ecec",
+      "disposition": "selected",
+      "public_path": "source-adb-stop-command.json",
+      "public_bytes": 348,
+      "public_sha256": "4fd3633a2f8a970ef435d8025cd23b451e4dd74e04c81d433144ec7075d5ecec",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/source-adb-stop.stderr.log",
+      "original_bytes": 0,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "selected",
+      "public_path": "source-adb-stop.stderr.log",
+      "public_bytes": 0,
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/source-adb-stop.stdout.log",
+      "original_bytes": 0,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "selected",
+      "public_path": "source-adb-stop.stdout.log",
+      "public_bytes": 0,
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/source-launch-command.json",
+      "original_bytes": 326,
+      "original_sha256": "a05c12f822085abedf14682cc8f7026b9bb3944af00b140c95c1c59eaf1dfbee",
+      "disposition": "selected",
+      "public_path": "source-launch-command.json",
+      "public_bytes": 326,
+      "public_sha256": "a05c12f822085abedf14682cc8f7026b9bb3944af00b140c95c1c59eaf1dfbee",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/source-launch.stderr.log",
+      "original_bytes": 1015,
+      "original_sha256": "50c7d50a3aa39a44397bd9d2f4363b27437bb1f07b5d6986a51db88ced062d94",
+      "disposition": "selected",
+      "public_path": "source-launch.stderr.log",
+      "public_bytes": 1015,
+      "public_sha256": "50c7d50a3aa39a44397bd9d2f4363b27437bb1f07b5d6986a51db88ced062d94",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/source-launch.stdout.log",
+      "original_bytes": 401,
+      "original_sha256": "0620ee854e9dc0259ffb2b8179b53238eb64ad7f4622a17f387ee53f6e36fc91",
+      "disposition": "selected",
+      "public_path": "source-launch.stdout.log",
+      "public_bytes": 401,
+      "public_sha256": "0620ee854e9dc0259ffb2b8179b53238eb64ad7f4622a17f387ee53f6e36fc91",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/source-status-before.txt",
+      "original_bytes": 44,
+      "original_sha256": "3624b3fa2d85cf06be3b449851d1948b281422ced4649cbf4e9c868cf723329b",
+      "disposition": "selected",
+      "public_path": "source-status-before.txt",
+      "public_bytes": 44,
+      "public_sha256": "3624b3fa2d85cf06be3b449851d1948b281422ced4649cbf4e9c868cf723329b",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/source-stop-command.json",
+      "original_bytes": 333,
+      "original_sha256": "fb59076d35ea231b0e68b3184a8aea3331360da0921bfcf69afff73a12345205",
+      "disposition": "selected",
+      "public_path": "source-stop-command.json",
+      "public_bytes": 333,
+      "public_sha256": "fb59076d35ea231b0e68b3184a8aea3331360da0921bfcf69afff73a12345205",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/source-stop-processes.json",
+      "original_bytes": 307,
+      "original_sha256": "963c5f0ad9f816163fb34e59e34f79767aa9ffa4da7985fcbe1a9617ccff16ea",
+      "disposition": "selected",
+      "public_path": "source-stop-processes.json",
+      "public_bytes": 307,
+      "public_sha256": "963c5f0ad9f816163fb34e59e34f79767aa9ffa4da7985fcbe1a9617ccff16ea",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/source-stop.stderr.log",
+      "original_bytes": 182,
+      "original_sha256": "530a66976e739e553becbef6986bf855f6364a5ac3b3a5a2cf371b02ba695fd2",
+      "disposition": "selected",
+      "public_path": "source-stop.stderr.log",
+      "public_bytes": 182,
+      "public_sha256": "530a66976e739e553becbef6986bf855f6364a5ac3b3a5a2cf371b02ba695fd2",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/source-stop.stdout.log",
+      "original_bytes": 0,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "selected",
+      "public_path": "source-stop.stdout.log",
+      "public_bytes": 0,
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/source-verify-command.json",
+      "original_bytes": 379,
+      "original_sha256": "38dfeaf4cc7f40a92d2d79ea08a1df96306a15d011047080cb21dc96c2bea43e",
+      "disposition": "selected",
+      "public_path": "source-verify-command.json",
+      "public_bytes": 379,
+      "public_sha256": "38dfeaf4cc7f40a92d2d79ea08a1df96306a15d011047080cb21dc96c2bea43e",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/source-verify.stderr.log",
+      "original_bytes": 0,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "selected",
+      "public_path": "source-verify.stderr.log",
+      "public_bytes": 0,
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/source-verify.stdout.log",
+      "original_bytes": 3105,
+      "original_sha256": "589b88319088f111757ce30197a1fce4a436c292597254f3c4ab02d82b97fcc2",
+      "disposition": "selected",
+      "public_path": "source-verify.stdout.log",
+      "public_bytes": 3105,
+      "public_sha256": "589b88319088f111757ce30197a1fce4a436c292597254f3c4ab02d82b97fcc2",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline/toolchains.json",
+      "original_bytes": 23956,
+      "original_sha256": "2dd66d1d93dc661d524113466dabe6de6749658b3a54b1c16da5a503dceeee58",
+      "disposition": "selected",
+      "public_path": "toolchains.json",
+      "public_bytes": 23956,
+      "public_sha256": "2dd66d1d93dc661d524113466dabe6de6749658b3a54b1c16da5a503dceeee58",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "original_path": "baseline-stopped-runtime/assembly/assemble_cvd.log",
+      "original_bytes": 30934,
+      "original_sha256": "cfbae365a4ebbe50d41ceb1f69d59e166ae01ec24063c80a3fc07444df66517f",
+      "disposition": "omitted",
+      "reason": "Repetitive internal runtime diagnostics/state; primary boot commands, effective config, image inventory, PNG, results and cleanup process receipt are retained. No claim that these omitted bytes were publicly redacted or reproduced."
+    },
+    {
+      "original_path": "baseline-stopped-runtime/assembly/cuttlefish_config.json",
+      "original_bytes": 9684,
+      "original_sha256": "cca3ddf90fcbde2f7e08b9ecd78cea97f5ed4b9a610d6b5f586ec5df99b686cd",
+      "disposition": "omitted",
+      "reason": "Repetitive internal runtime diagnostics/state; primary boot commands, effective config, image inventory, PNG, results and cleanup process receipt are retained. No claim that these omitted bytes were publicly redacted or reproduced."
+    },
+    {
+      "original_path": "baseline-stopped-runtime/instances/cvd-1/cuttlefish_config.json",
+      "original_bytes": 9684,
+      "original_sha256": "cca3ddf90fcbde2f7e08b9ecd78cea97f5ed4b9a610d6b5f586ec5df99b686cd",
+      "disposition": "omitted",
+      "reason": "Repetitive internal runtime diagnostics/state; primary boot commands, effective config, image inventory, PNG, results and cleanup process receipt are retained. No claim that these omitted bytes were publicly redacted or reproduced."
+    },
+    {
+      "original_path": "baseline-stopped-runtime/instances/cvd-1/logs/crosvm_openwrt.log",
+      "original_bytes": 13441,
+      "original_sha256": "175320934961b2137aa3100cca1d67aa71e67fcf309f7c5567764b4631a0bf19",
+      "disposition": "omitted",
+      "reason": "Repetitive internal runtime diagnostics/state; primary boot commands, effective config, image inventory, PNG, results and cleanup process receipt are retained. No claim that these omitted bytes were publicly redacted or reproduced."
+    },
+    {
+      "original_path": "baseline-stopped-runtime/instances/cvd-1/logs/crosvm_openwrt_boot.log",
+      "original_bytes": 15562,
+      "original_sha256": "9a68b85707c617e6acaff239b0b3d6640fef0b63c1d718bdca93eda2acda3479",
+      "disposition": "omitted",
+      "reason": "Repetitive internal runtime diagnostics/state; primary boot commands, effective config, image inventory, PNG, results and cleanup process receipt are retained. No claim that these omitted bytes were publicly redacted or reproduced."
+    },
+    {
+      "original_path": "baseline-stopped-runtime/instances/cvd-1/logs/kernel.log",
+      "original_bytes": 421447,
+      "original_sha256": "9289b8328cc22c5175d96b722acd32c4dd4f0b8ec7e25b784031e766d42ca7a0",
+      "disposition": "omitted",
+      "reason": "Repetitive internal runtime diagnostics/state; primary boot commands, effective config, image inventory, PNG, results and cleanup process receipt are retained. No claim that these omitted bytes were publicly redacted or reproduced."
+    },
+    {
+      "original_path": "baseline-stopped-runtime/instances/cvd-1/logs/launcher.log",
+      "original_bytes": 157795,
+      "original_sha256": "3cf85e0cf21adb508a3835c8469cf1b014bd0021c86c6a48dfb7adf73331eb65",
+      "disposition": "omitted",
+      "reason": "Repetitive internal runtime diagnostics/state; primary boot commands, effective config, image inventory, PNG, results and cleanup process receipt are retained. No claim that these omitted bytes were publicly redacted or reproduced."
+    },
+    {
+      "original_path": "baseline-stopped-runtime/instances/cvd-1/logs/logcat",
+      "original_bytes": 5091654,
+      "original_sha256": "799a051a91f891647bca6c9ff3872d4e37b10f05b6d127799df83e583058605c",
+      "disposition": "omitted",
+      "reason": "Repetitive internal runtime diagnostics/state; primary boot commands, effective config, image inventory, PNG, results and cleanup process receipt are retained. No claim that these omitted bytes were publicly redacted or reproduced."
+    },
+    {
+      "original_path": "baseline-stopped-runtime/instances/cvd-1/logs/modem_simulator.log",
+      "original_bytes": 438,
+      "original_sha256": "7b7ef29b740898847ce69b8470aa7c841cf8d4cb433708fd03f10677e6ef604d",
+      "disposition": "omitted",
+      "reason": "Repetitive internal runtime diagnostics/state; primary boot commands, effective config, image inventory, PNG, results and cleanup process receipt are retained. No claim that these omitted bytes were publicly redacted or reproduced."
+    },
+    {
+      "original_path": "baseline-stopped-runtime/instances/cvd-1/modem_nvram.json",
+      "original_bytes": 164,
+      "original_sha256": "43a40c54f1fa73a60647f48d3a4517ef11630ba8f0e38ae64f004676ae34e2e5",
+      "disposition": "omitted",
+      "reason": "Repetitive internal runtime diagnostics/state; primary boot commands, effective config, image inventory, PNG, results and cleanup process receipt are retained. No claim that these omitted bytes were publicly redacted or reproduced."
+    },
+    {
+      "original_path": "baseline/export-inventory.json",
+      "original_bytes": 6925,
+      "original_sha256": "552c79641536941f5194bbfe5f8bf831ace8bf7df23a7804fd4030ef85056928",
+      "disposition": "selected",
+      "public_path": "export-inventory.json",
+      "public_bytes": 6925,
+      "public_sha256": "552c79641536941f5194bbfe5f8bf831ace8bf7df23a7804fd4030ef85056928",
+      "transformation": "none; byte-identical"
+    }
+  ],
+  "additional_input_receipts": [
+    {
+      "original_name": "baseline-final-export-verified.json",
+      "original_bytes": 478,
+      "original_sha256": "5377167c88295cbfa7741e8dbbd6d7f78206faa4e8dffa59a88d5acf829e3e7b",
+      "public_path": "local-export-integrity.json",
+      "public_bytes": 478,
+      "public_sha256": "5377167c88295cbfa7741e8dbbd6d7f78206faa4e8dffa59a88d5acf829e3e7b",
+      "transformation": "none; byte-identical"
+    }
+  ],
+  "privacy_review": {
+    "selected_text_scanned_in_full": true,
+    "redactions": [],
+    "checks": [
+      "PEM private-key material",
+      "common credential/token formats and signed-URL parameters",
+      "Mac user-home roots",
+      "account-email candidates",
+      "known physical-device serial/name patterns",
+      "credential/secret/account keyword review"
+    ],
+    "findings": "No publication-sensitive matches found in selected text. All 1534 email-like build-log matches (335 unique strings) are Android module/APEX/JAR names, not account email addresses. Virtual CVD serial/address, generic aosp account, build/output paths and test-key fingerprint retained as provenance. Pattern review is not a mathematical proof of absence."
+  },
+  "limits": [
+    "r5 is an incremental resume of r4 outputs, not P09 fresh reproduction.",
+    "Earlier optional build sandbox disabled; required Trusty nsjail failure and exact-program userns recovery remain documented in sibling r4 evidence.",
+    "Cuttlefish runtime sandbox=true and guest SELinux Enforcing do not establish prior build sandboxing or full AppArmor confinement.",
+    "13 available pinned tool executables inventoried; not all claimed selected/used. 12 version commands exit 0; nsjail unsupported --version exits 255 as metadata.",
+    "Unchanged source baseline only: no BoundaryLab overlay, service or custom native runtime acceptance."
+  ],
+  "screenshot_visual_review": {
+    "performed_during_curation": true,
+    "finding": "Android Virtual Operator lock screen; no visible personal/account content. Original PNG unmodified.",
+    "original_integrity_receipt_pending_field_preserved": true
+  }
+}
