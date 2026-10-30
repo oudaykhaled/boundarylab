@@ -1,0 +1,4 @@
+FieldPack demonstration inspection
+Asset: training-pump-01
+Observation: inspect the seal before the next training run.
+Fictional training data; no customer or location information.

@@ -3,459 +3,479 @@
     "id": "B01",
     "gate": "G1",
     "title": "Feasibility, trust model and contract",
-    "owner": "maintainer (implementation owner to be confirmed at kickoff)",
     "status": "planned",
-    "nominal_hours": 6,
-    "range_hours": [
-      4,
-      8
+    "owner": "unassigned; proposed maintainer role",
+    "child_ids": [
+      "C01",
+      "C02"
     ],
-    "depends_on": [],
+    "range_hours_rollup": [
+      10,
+      18
+    ],
+    "estimate_policy": "Sum unique leaves only; parent rollup is not additional effort.",
     "requirement_ids": [
       "R01",
-      "R10"
+      "R03",
+      "R07",
+      "R08",
+      "R10",
+      "R14",
+      "R15",
+      "R16",
+      "R19"
     ],
-    "acceptance": [
-      "Prove clean Android and native Flutter build/run on allocated target; prove macOS JDK socket capability without treating tool presence as readiness.",
-      "Freeze protocol, caps including retained-byte ceiling, state/lifecycle/identity ADR and golden vectors.",
-      "Inventory physical measurement device and existing Linux/AOSP resources; record missing prerequisites."
-    ],
+    "depends_on_policy": "Use leaf prerequisites; no serial epic-level chain.",
     "evidence": [],
-    "blocker": "not started; implementation outside current planning task",
-    "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/1"
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/1",
+    "blocker": "No implementation owner/target readiness confirmed; planned status is not resource failure.",
+    "next_step": "Confirm Ready criteria for prerequisite-free leaves; follow detailed tickets."
   },
   {
     "id": "B02",
     "gate": "G1",
     "title": "Bounded deterministic core and state model",
-    "owner": "maintainer (implementation owner to be confirmed at kickoff)",
     "status": "planned",
-    "nominal_hours": 8,
-    "range_hours": [
-      6,
-      10
+    "owner": "unassigned; proposed maintainer role",
+    "child_ids": [
+      "C03",
+      "C04"
     ],
-    "depends_on": [
-      "B01"
+    "range_hours_rollup": [
+      14,
+      28
     ],
+    "estimate_policy": "Sum unique leaves only; parent rollup is not additional effort.",
     "requirement_ids": [
+      "R04",
       "R05",
-      "R08"
+      "R07",
+      "R08",
+      "R10"
     ],
-    "acceptance": [
-      "Independent digest oracle matches generated fixtures.",
-      "One worker, queue/session/retention byte and entry caps hold at boundaries.",
-      "Owner-scoped states, cancellation race and round-robin admission tests exercise invariants."
-    ],
+    "depends_on_policy": "Use leaf prerequisites; no serial epic-level chain.",
     "evidence": [],
-    "blocker": "not started; implementation outside current planning task",
-    "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/2"
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/2",
+    "blocker": "No implementation owner/target readiness confirmed; planned status is not resource failure.",
+    "next_step": "Confirm Ready criteria for prerequisite-free leaves; follow detailed tickets."
   },
   {
     "id": "B03",
     "gate": "G1",
     "title": "Real Android Binder broker and Kotlin SDK",
-    "owner": "maintainer (implementation owner to be confirmed at kickoff)",
     "status": "planned",
-    "nominal_hours": 10,
-    "range_hours": [
-      8,
-      14
+    "owner": "unassigned; proposed maintainer role",
+    "child_ids": [
+      "A01",
+      "A02"
     ],
-    "depends_on": [
-      "B02"
+    "range_hours_rollup": [
+      16,
+      30
     ],
+    "estimate_policy": "Sum unique leaves only; parent rollup is not additional effort.",
     "requirement_ids": [
+      "R07",
       "R14",
       "R16"
     ],
-    "acceptance": [
-      "Separately installed service and client cross real Binder with captured caller identity.",
-      "No work on UI/Binder ingress; bounded polling SDK and connection epoch behave as specified.",
-      "Broker process loss yields explicit lost/unknown; reconnect does not claim job restoration."
-    ],
+    "depends_on_policy": "Use leaf prerequisites; no serial epic-level chain.",
     "evidence": [],
-    "blocker": "not started; implementation outside current planning task",
-    "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/3"
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/3",
+    "blocker": "No implementation owner/target readiness confirmed; planned status is not resource failure.",
+    "next_step": "Confirm Ready criteria for prerequisite-free leaves; follow detailed tickets."
   },
   {
     "id": "B04",
     "gate": "G1",
     "title": "Native consumer, denial client and fault smoke",
-    "owner": "maintainer (implementation owner to be confirmed at kickoff)",
     "status": "planned",
-    "nominal_hours": 6,
-    "range_hours": [
-      4,
-      8
+    "owner": "unassigned; proposed maintainer role",
+    "child_ids": [
+      "A03"
     ],
-    "depends_on": [
-      "B03"
+    "range_hours_rollup": [
+      6,
+      10
     ],
+    "estimate_policy": "Sum unique leaves only; parent rollup is not additional effort.",
     "requirement_ids": [
       "R02",
-      "R07"
+      "R07",
+      "R11"
     ],
-    "acceptance": [
-      "Known digest, cancellation and real broker-death/rebind path execute with raw receipts.",
-      "Wrong-signature client and cross-owner read/cancel are rejected.",
-      "Trace and process receipts identify actual packages/PIDs; fault hooks isolated from release."
-    ],
+    "depends_on_policy": "Use leaf prerequisites; no serial epic-level chain.",
     "evidence": [],
-    "blocker": "not started; implementation outside current planning task",
-    "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/4"
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/4",
+    "blocker": "No implementation owner/target readiness confirmed; planned status is not resource failure.",
+    "next_step": "Confirm Ready criteria for prerequisite-free leaves; follow detailed tickets."
   },
   {
     "id": "B05",
     "gate": "G1",
     "title": "Flutter plugin and second installed consumer",
-    "owner": "maintainer (implementation owner to be confirmed at kickoff)",
     "status": "planned",
-    "nominal_hours": 10,
-    "range_hours": [
-      8,
-      16
+    "owner": "unassigned; proposed maintainer role",
+    "child_ids": [
+      "F01",
+      "F02"
     ],
-    "depends_on": [
-      "B04"
+    "range_hours_rollup": [
+      14,
+      28
     ],
+    "estimate_policy": "Sum unique leaves only; parent rollup is not additional effort.",
     "requirement_ids": [
       "R02",
-      "R15"
+      "R07",
+      "R15",
+      "R18"
     ],
-    "acceptance": [
-      "Dart calls authored native adapter, Kotlin SDK and separate broker; vector matches native consumer.",
-      "Cancellation, timeout semantics, broker loss and engine disposal observed end to end.",
-      "Capture a short G1 demo and disclose any remaining gate failure."
-    ],
+    "depends_on_policy": "Use leaf prerequisites; no serial epic-level chain.",
     "evidence": [],
-    "blocker": "not started; implementation outside current planning task",
-    "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/5"
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/5",
+    "blocker": "No implementation owner/target readiness confirmed; planned status is not resource failure.",
+    "next_step": "Confirm Ready criteria for prerequisite-free leaves; follow detailed tickets."
   },
   {
     "id": "B06",
     "gate": "G2",
     "title": "Deterministic fault, ownership and overload campaign",
-    "owner": "maintainer (implementation owner to be confirmed at kickoff)",
     "status": "planned",
-    "nominal_hours": 10,
-    "range_hours": [
-      8,
-      14
+    "owner": "unassigned; proposed maintainer role",
+    "child_ids": [
+      "Q01",
+      "Q02",
+      "Q03"
     ],
-    "depends_on": [
-      "B05"
+    "range_hours_rollup": [
+      20,
+      38
     ],
+    "estimate_policy": "Sum unique leaves only; parent rollup is not additional effort.",
     "requirement_ids": [
       "R05",
       "R07",
       "R08",
+      "R10",
       "R11",
       "R17"
     ],
-    "acceptance": [
-      "Checkpoint-based faults cover death, churn, cancellation, malformed input and denied owners.",
-      "Required corpus targets 100 repetitions per cell; record actual failures and counts.",
-      "30-minute saturation/churn retains bounded state, second-caller progress and no false success."
-    ],
+    "depends_on_policy": "Use leaf prerequisites; no serial epic-level chain.",
     "evidence": [],
-    "blocker": "not started; implementation outside current planning task",
-    "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/6"
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/6",
+    "blocker": "No implementation owner/target readiness confirmed; planned status is not resource failure.",
+    "next_step": "Confirm Ready criteria for prerequisite-free leaves; follow detailed tickets."
   },
   {
     "id": "B07",
     "gate": "G2",
     "title": "macOS JVM host and CLI conformance",
-    "owner": "maintainer (implementation owner to be confirmed at kickoff)",
     "status": "planned",
-    "nominal_hours": 14,
-    "range_hours": [
-      10,
-      20
+    "owner": "unassigned; proposed maintainer role",
+    "child_ids": [
+      "D01",
+      "D02"
     ],
-    "depends_on": [
-      "B05"
+    "range_hours_rollup": [
+      14,
+      26
     ],
+    "estimate_policy": "Sum unique leaves only; parent rollup is not additional effort.",
     "requirement_ids": [
       "R03",
+      "R07",
+      "R10",
       "R19"
     ],
-    "acceptance": [
-      "Two actual macOS processes use bounded framed Unix sockets and pure Kotlin core.",
-      "Private runtime-directory ownership/permissions, framing/deadline failures and same-user trust documented.",
-      "Same semantic vectors pass on Android and PC; no emulator-as-desktop substitution."
-    ],
+    "depends_on_policy": "Use leaf prerequisites; no serial epic-level chain.",
     "evidence": [],
-    "blocker": "not started; implementation outside current planning task",
-    "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/7"
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/7",
+    "blocker": "No implementation owner/target readiness confirmed; planned status is not resource failure.",
+    "next_step": "Confirm Ready criteria for prerequisite-free leaves; follow detailed tickets."
   },
   {
     "id": "B08",
     "gate": "G2",
     "title": "Compiled compatibility fixtures and quality lanes",
-    "owner": "maintainer (implementation owner to be confirmed at kickoff)",
     "status": "planned",
-    "nominal_hours": 8,
-    "range_hours": [
-      6,
-      10
+    "owner": "unassigned; proposed maintainer role",
+    "child_ids": [
+      "V01",
+      "V02"
     ],
-    "depends_on": [
-      "B06",
-      "B07"
+    "range_hours_rollup": [
+      12,
+      24
     ],
+    "estimate_policy": "Sum unique leaves only; parent rollup is not additional effort.",
     "requirement_ids": [
       "R03",
       "R07",
       "R10",
       "R11"
     ],
-    "acceptance": [
-      "Previously compiled consumers test supported provider evolution and major rejection.",
-      "Add meaningful core, Android instrumentation and macOS conformance checks with pinned tools.",
-      "Release inspection excludes kill/stall controls; build results and native results remain distinct."
-    ],
+    "depends_on_policy": "Use leaf prerequisites; no serial epic-level chain.",
     "evidence": [],
-    "blocker": "not started; implementation outside current planning task",
-    "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/8"
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/8",
+    "blocker": "No implementation owner/target readiness confirmed; planned status is not resource failure.",
+    "next_step": "Confirm Ready criteria for prerequisite-free leaves; follow detailed tickets."
   },
   {
     "id": "B09",
     "gate": "G2",
     "title": "Controlled startup, memory and load experiment",
-    "owner": "maintainer (implementation owner to be confirmed at kickoff)",
     "status": "planned",
-    "nominal_hours": 14,
-    "range_hours": [
-      10,
-      20
+    "owner": "unassigned; proposed maintainer role",
+    "child_ids": [
+      "M01",
+      "M02",
+      "M03",
+      "M04"
     ],
-    "depends_on": [
-      "B08"
+    "range_hours_rollup": [
+      28,
+      50
     ],
+    "estimate_policy": "Sum unique leaves only; parent rollup is not additional effort.",
     "requirement_ids": [
       "R04",
       "R05",
       "R06",
-      "R08"
+      "R07",
+      "R08",
+      "R11"
     ],
-    "acceptance": [
-      "Freeze baselines, reference physical phone, pilot, thermal/compilation rules and decision thresholds.",
-      "Retain startup/steady-state sessions, all outcomes, raw traces, exclusions and analysis script.",
-      "Separate framework, IPC, queue, computation, polling and memory accounting; report uncertainty."
-    ],
+    "depends_on_policy": "Use leaf prerequisites; no serial epic-level chain.",
     "evidence": [],
-    "blocker": "not started; implementation outside current planning task",
-    "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/9"
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/9",
+    "blocker": "No implementation owner/target readiness confirmed; planned status is not resource failure.",
+    "next_step": "Confirm Ready criteria for prerequisite-free leaves; follow detailed tickets."
   },
   {
     "id": "B10",
     "gate": "G2",
     "title": "Fresh consumer, release rehearsal and maintainer docs",
-    "owner": "maintainer (implementation owner to be confirmed at kickoff)",
     "status": "planned",
-    "nominal_hours": 8,
-    "range_hours": [
-      6,
-      12
+    "owner": "unassigned; proposed maintainer role",
+    "child_ids": [
+      "L01",
+      "L02"
     ],
-    "depends_on": [
-      "B09"
+    "range_hours_rollup": [
+      10,
+      20
     ],
+    "estimate_policy": "Sum unique leaves only; parent rollup is not additional effort.",
     "requirement_ids": [
+      "R01",
       "R09",
       "R11",
       "R18"
     ],
-    "acceptance": [
-      "Fresh clone/separately built same-publisher consumer uses documented artifacts without secret setup.",
-      "Provenance, dependency/license inventory, checksums, support limits and upgrade instructions complete.",
-      "G2 acceptance ledger, tagged candidate recipe and five-minute demonstration reflect actual results."
-    ],
+    "depends_on_policy": "Use leaf prerequisites; no serial epic-level chain.",
     "evidence": [],
-    "blocker": "not started; implementation outside current planning task",
-    "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/10"
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/10",
+    "blocker": "No implementation owner/target readiness confirmed; planned status is not resource failure.",
+    "next_step": "Confirm Ready criteria for prerequisite-free leaves; follow detailed tickets."
   },
   {
     "id": "B11",
     "gate": "G2",
     "title": "Technology assessment and evidence case study",
-    "owner": "maintainer (implementation owner to be confirmed at kickoff)",
     "status": "planned",
-    "nominal_hours": 6,
-    "range_hours": [
-      4,
-      8
+    "owner": "unassigned; proposed maintainer role",
+    "child_ids": [
+      "T01",
+      "T02"
     ],
-    "depends_on": [
-      "B10"
+    "range_hours_rollup": [
+      8,
+      16
     ],
+    "estimate_policy": "Sum unique leaves only; parent rollup is not additional effort.",
     "requirement_ids": [
       "R01",
       "R04",
       "R12",
       "R17"
     ],
-    "acceptance": [
-      "Dated source-backed Binder/Messenger, framework and deployment comparison records revisit triggers.",
-      "Document one actually observed defect or bottleneck, competing explanations and regression/measurement.",
-      "Publish negative or inconclusive finding honestly; do not invent a successful optimization."
-    ],
+    "depends_on_policy": "Use leaf prerequisites; no serial epic-level chain.",
     "evidence": [],
-    "blocker": "not started; implementation outside current planning task",
-    "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/11"
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/11",
+    "blocker": "No implementation owner/target readiness confirmed; planned status is not resource failure.",
+    "next_step": "Confirm Ready criteria for prerequisite-free leaves; follow detailed tickets."
   },
   {
     "id": "B12",
     "gate": "G3",
     "title": "Linux/AOSP clean-image feasibility gate",
-    "owner": "maintainer (implementation owner to be confirmed at kickoff)",
     "status": "planned",
-    "nominal_hours": 12,
-    "range_hours": [
-      8,
-      20
+    "owner": "unassigned; proposed maintainer role",
+    "child_ids": [
+      "P01",
+      "P02"
     ],
-    "depends_on": [
-      "B11"
+    "range_hours_rollup": [
+      12,
+      24
     ],
+    "estimate_policy": "Sum unique leaves only; parent rollup is not additional effort.",
     "requirement_ids": [
-      "R16"
+      "R16",
+      "R19"
     ],
-    "acceptance": [
-      "Use suitable existing authorized Linux resources; pin manifest and target.",
-      "Build and boot unmodified baseline image with captured provenance before platform edits.",
-      "If host/build fails, record infrastructure blocker and keep G3 open; no cloud purchase or device flashing."
-    ],
+    "depends_on_policy": "Use leaf prerequisites; no serial epic-level chain.",
     "evidence": [],
-    "blocker": "not started; implementation outside current planning task",
-    "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/12"
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/12",
+    "blocker": "No implementation owner/target readiness confirmed; planned status is not resource failure.",
+    "next_step": "Confirm Ready criteria for prerequisite-free leaves; follow detailed tickets."
   },
   {
     "id": "B13",
     "gate": "G3",
     "title": "Image-integrated native Binder service",
-    "owner": "maintainer (implementation owner to be confirmed at kickoff)",
     "status": "planned",
-    "nominal_hours": 36,
-    "range_hours": [
-      24,
-      52
+    "owner": "unassigned; proposed maintainer role",
+    "child_ids": [
+      "P03",
+      "P04"
     ],
-    "depends_on": [
-      "B12"
+    "range_hours_rollup": [
+      16,
+      32
     ],
+    "estimate_policy": "Sum unique leaves only; parent rollup is not additional effort.",
     "requirement_ids": [
       "R14",
       "R16"
     ],
-    "acceptance": [
-      "Dedicated native service builds into pinned image with init registration and narrow tracked AIDL.",
-      "Known synthetic operation conforms to golden vectors with bounded resources and explicit epochs.",
-      "Permission and least-privilege SELinux policies work in enforcing mode; no hidden-API workaround."
-    ],
+    "depends_on_policy": "Use leaf prerequisites; no serial epic-level chain.",
     "evidence": [],
-    "blocker": "not started; implementation outside current planning task",
-    "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/13"
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/13",
+    "blocker": "No implementation owner/target readiness confirmed; planned status is not resource failure.",
+    "next_step": "Confirm Ready criteria for prerequisite-free leaves; follow detailed tickets."
   },
   {
     "id": "B14",
     "gate": "G3",
     "title": "Platform-facing facade and executed integration tests",
-    "owner": "maintainer (implementation owner to be confirmed at kickoff)",
     "status": "planned",
-    "nominal_hours": 24,
-    "range_hours": [
-      18,
-      34
+    "owner": "unassigned; proposed maintainer role",
+    "child_ids": [
+      "P05",
+      "P06"
     ],
-    "depends_on": [
-      "B13"
+    "range_hours_rollup": [
+      14,
+      28
     ],
+    "estimate_policy": "Sum unique leaves only; parent rollup is not additional effort.",
     "requirement_ids": [
+      "R07",
       "R14",
       "R16",
       "R19"
     ],
-    "acceptance": [
-      "Platform-built client/facade calls intended API; stock APK profile remains separately labeled.",
-      "Boot registration, authorized/denied access, restart and interface compatibility pass on actual image.",
-      "Retain image fingerprint, source/build logs, enforcing status and test records; source-only patch is incomplete."
-    ],
+    "depends_on_policy": "Use leaf prerequisites; no serial epic-level chain.",
     "evidence": [],
-    "blocker": "not started; implementation outside current planning task",
-    "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/14"
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/14",
+    "blocker": "No implementation owner/target readiness confirmed; planned status is not resource failure.",
+    "next_step": "Confirm Ready criteria for prerequisite-free leaves; follow detailed tickets."
   },
   {
     "id": "B15",
     "gate": "G3",
     "title": "Deeper measured investigation and bounded soak",
-    "owner": "maintainer (implementation owner to be confirmed at kickoff)",
     "status": "planned",
-    "nominal_hours": 16,
-    "range_hours": [
-      10,
+    "owner": "unassigned; proposed maintainer role",
+    "child_ids": [
+      "P07",
+      "P08"
+    ],
+    "range_hours_rollup": [
+      12,
       24
     ],
-    "depends_on": [
-      "B14"
-    ],
+    "estimate_policy": "Sum unique leaves only; parent rollup is not additional effort.",
     "requirement_ids": [
       "R04",
       "R05",
       "R07",
       "R17"
     ],
-    "acceptance": [
-      "Investigate real scheduling/memory/startup behavior from executed profiles; test a defensible change.",
-      "Two-hour bounded campaign and any second-device observations identify precise scope.",
-      "Publish tradeoff/negative result, failing evidence and protected-metric regression check."
-    ],
+    "depends_on_policy": "Use leaf prerequisites; no serial epic-level chain.",
     "evidence": [],
-    "blocker": "not started; implementation outside current planning task",
-    "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/15"
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/15",
+    "blocker": "No implementation owner/target readiness confirmed; planned status is not resource failure.",
+    "next_step": "Confirm Ready criteria for prerequisite-free leaves; follow detailed tickets."
   },
   {
     "id": "B16",
     "gate": "G3",
     "title": "Reproduction, productization gaps and final handoff",
-    "owner": "maintainer (implementation owner to be confirmed at kickoff)",
     "status": "planned",
-    "nominal_hours": 12,
-    "range_hours": [
-      10,
-      20
+    "owner": "unassigned; proposed maintainer role",
+    "child_ids": [
+      "P09"
     ],
-    "depends_on": [
-      "B15"
+    "range_hours_rollup": [
+      8,
+      16
     ],
+    "estimate_policy": "Sum unique leaves only; parent rollup is not additional effort.",
     "requirement_ids": [
       "R09",
       "R18"
     ],
-    "acceptance": [
-      "Fresh source/image reproduction recipe and final requirement ledger match executed artifacts.",
-      "Record genuine independent reproduction/review only if a real volunteer participates; otherwise label author-only.",
-      "Publish commercial/productization and remaining career/partner gaps; final demo never claims unbuilt support."
-    ],
+    "depends_on_policy": "Use leaf prerequisites; no serial epic-level chain.",
     "evidence": [],
-    "blocker": "not started; implementation outside current planning task",
-    "next_step": "Resolve dependencies and implement only in an authorized implementation task",
-    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/16"
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/16",
+    "blocker": "No implementation owner/target readiness confirmed; planned status is not resource failure.",
+    "next_step": "Confirm Ready criteria for prerequisite-free leaves; follow detailed tickets."
+  },
+  {
+    "id": "B17",
+    "gate": "G2",
+    "title": "FieldPack real attachment integrity example",
+    "status": "planned",
+    "owner": "unassigned; proposed maintainer role",
+    "child_ids": [
+      "FP01",
+      "REF01",
+      "FP02",
+      "FP03",
+      "FP04",
+      "FP05",
+      "FP06"
+    ],
+    "range_hours_rollup": [
+      46,
+      92
+    ],
+    "estimate_policy": "Sum unique leaves only; parent rollup is not additional effort.",
+    "requirement_ids": [
+      "R01",
+      "R02",
+      "R03",
+      "R05",
+      "R07",
+      "R09",
+      "R10",
+      "R11",
+      "R14",
+      "R15",
+      "R16",
+      "R17",
+      "R18",
+      "R19"
+    ],
+    "depends_on_policy": "Use leaf prerequisites; no serial epic-level chain.",
+    "evidence": [
+      "examples/fieldpack/EVIDENCE.md"
+    ],
+    "github_issue": "https://github.com/oudaykhaled/boundarylab/issues/17",
+    "blocker": "No implementation owner/target readiness confirmed; planned status is not resource failure.",
+    "next_step": "Confirm Ready criteria for prerequisite-free leaves; follow detailed tickets."
   }
 ]

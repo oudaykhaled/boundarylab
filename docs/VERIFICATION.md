@@ -1,5 +1,7 @@
 # Proposed verification and experiment protocol
 
+> Initial-plan document. [Plan v2](PLAN-V2.md) and the [FieldPack contract](FIELDPACK.md) supersede scope, estimates and real-file semantics. Native commands remain proposed.
+
 No tests or benchmarks described here have been executed for BoundaryLab. This is the acceptance design for future implementation, governed by the [evidence policy](EVIDENCE-POLICY.md).
 
 ## Correctness oracles

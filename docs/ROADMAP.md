@@ -1,5 +1,7 @@
 # Delivery roadmap
 
+> Initial-plan document. [Plan v2](PLAN-V2.md) and the [FieldPack contract](FIELDPACK.md) supersede scope, estimates and real-file semantics. Native commands remain proposed.
+
 Status: proposed implementation, not work already completed. One accountable engineer is assumed. Independent people and usable hardware are external dependencies. No purchases, package-store releases or production deployments are included.
 
 ## Recommended sequence

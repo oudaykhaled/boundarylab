@@ -8,3 +8,5 @@ local.properties
 private/
 raw-private/
 build/
+__pycache__/
+*.py[cod]

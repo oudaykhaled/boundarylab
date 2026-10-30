@@ -1,5 +1,7 @@
 # Future five-minute reviewer demonstration
 
+> Initial-plan document. [Plan v2](PLAN-V2.md) and the [FieldPack contract](FIELDPACK.md) supersede scope, estimates and real-file semantics. Native commands remain proposed.
+
 Status: script for a future working artifact. Nothing in this document is a recorded pass or an instruction to claim unfinished work.
 
 | Time | Demonstration | Evidence to open |

@@ -1,0 +1,2269 @@
+{
+  "version": 2,
+  "notes": [
+    "All leaves are planned. Root alone may mark REF01 verified after actual implementation/test receipts; this draft makes no completion claims.",
+    "Existing #1–#16 stay B01–B16 rollup epics; B17 is new FieldPack epic. Sum unique leaf estimates only; old parent hours and 40/120/240h promises are superseded, not additive.",
+    "Owner roles are suggestions, not real assignees. Status readiness requires prerequisites/evidence/resources; Done requires scoped passing verification with commit/environment/results and actual review method.",
+    "R13/R20/R21/R22 remain external-evidence-only; no task fabricates qualification, partnerships, European tenure or international collaboration. R09 commercial shipping and R18 genuine cross-team work also need separate career evidence.",
+    "Canonical caps: 32 files,128MiB/file AND aggregate,64KiB chunks,16KiB manifest,4KiB metadata,16KiB IPC frame/response,16 sessions,4 outstanding/session,16 queued+1running,17 retained job descriptors,64 retained results/60s/1MiB encoded metadata.",
+    "Flat lowercase 1–64 ASCII aliases only; final portable reserved-name policy reconciled with reference implementation. Unknown fields/duplicate JSON keys rejected; no source URI/path/original filename exported.",
+    "Agent02 wins conflicts: 32 not16/100 files;128MiB not256MiB; first-terminal-commit cancellation; matching retained file metadata returns original job and closes duplicate descriptor, not a second file read.",
+    "Android supports read-only regular seekable whole-file descriptors; positional reads avoid shared cursor; blocked reads retain physical slot until exit. AOSP generated-sha256-v1 ONLY; real-file FD AOSP expansion rejected/deferred.",
+    "Native field UI implementations are independent after shared FD/SDK contract; desktop starts from core and host feasibility, not Flutter. Measurement execution depends on relevant Android baseline, not desktop release.",
+    "Verification procedures marked proposed are future contracts, not existing command claims. Evidence paths are planned repository-relative locations, not existing artifacts; root should reconcile REF01 actual paths.",
+    "P02 is an active-work feasibility spike; failed timebox means blocker and new estimate, not completed boot gate. M03 and P08 campaign active hours exclude separately described device runtime.",
+    "Integrity is observed-byte matching, not authenticity, malware scanning, immutable snapshot, cloud transfer, exactly-once execution or kernel work. All jobs volatile; new broker epoch invalidates handles.",
+    "REF01 is dependency-free because its delivered reference contract is independent of future native C02/FP01 adoption. Root reports 12 passing tests, normal/optimized demo and scoped independent AI review; root sets final status after linking actual receipts. Range 6–12h is historical estimate, not elapsed work.",
+    "G1 native proof uses generated-sha256-v1; FP01 is contract adoption only. Actual Android/Flutter/macOS FieldPack integration is G2. Runnable reference is separate reference stage and does not close G1/G2 native leaves."
+  ],
+  "tickets": [
+    {
+      "key": "C01",
+      "title": "Prove Android, Flutter and macOS toolchain feasibility",
+      "parent": "B01",
+      "stage": "G1",
+      "priority": "P0",
+      "role": "Android/Flutter/JVM engineer",
+      "estimateMin": 4,
+      "estimateMax": 8,
+      "requirements": [
+        "R03",
+        "R14",
+        "R15",
+        "R19"
+      ],
+      "dependsOn": [],
+      "value": "Avoid committing to targets that cannot execute.",
+      "scope": [
+        "Minimal clean build/install/run probes",
+        "Toolchain and physical measurement-device inventory"
+      ],
+      "acceptance": [
+        "Pin actual Android SDK, JDK, Flutter and host versions.",
+        "Separate broker/client APK probes run with distinct PIDs.",
+        "Flutter probe executes authored native channel code on Android.",
+        "Two macOS JVM processes exchange one bounded Unix-socket frame.",
+        "Record missing physical phone or host capabilities as blockers; tool installation alone is not success."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Execute clean probe builds and capture install/run logs and process receipts.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "commands": [
+            "./gradlew :android:broker:assembleDebug :examples:android-native:assembleDebug",
+            "flutter build apk --debug",
+            "./gradlew :desktop:host:test"
+          ],
+          "environment": "Repository root for Gradle/Python; selected Flutter package directory for flutter. Device/target identifiers and module/task names are proposed placeholders to freeze at kickoff; these native modules and harnesses do not exist yet.",
+          "expected": "Commands execute the stated acceptance corpus on actual required target and return success; retain complete counts and negative-case assertions, not only build exit status."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/C01/README.md",
+        "docs/evidence/C01/results.json"
+      ],
+      "risks": [
+        "Allocated devices may be unavailable; do not substitute emulator results for physical performance."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/18"
+    },
+    {
+      "key": "C02",
+      "title": "Freeze volatile job contract, caps and ownership semantics",
+      "parent": "B01",
+      "stage": "G1",
+      "priority": "P0",
+      "role": "Middleware architect",
+      "estimateMin": 6,
+      "estimateMax": 10,
+      "requirements": [
+        "R01",
+        "R07",
+        "R08",
+        "R10",
+        "R16"
+      ],
+      "dependsOn": [],
+      "value": "Give clients predictable failure and resource semantics.",
+      "scope": [
+        "Protocol 1.0 and generated/file operation IDs",
+        "Versioned errors, epochs, ownership and race vectors"
+      ],
+      "acceptance": [
+        "Freeze 4KiB descriptor metadata, 16KiB response/frame, 16 sessions, four outstanding/session, 16 queued plus one running.",
+        "Freeze 64 terminal entries, 60s TTL and 1MiB encoded retention; caps include rejection behavior and checked arithmetic.",
+        "Define fresh UUID epoch, owner/session/request dedup and STALE_EPOCH/EXPIRED_OR_UNKNOWN responses.",
+        "Running cancel reports requested state until first terminal commit wins; late success cannot overwrite terminal state.",
+        "File duplicate with same operation/metadata returns original retained job and closes new FD; differing metadata conflicts; changed source requires new request ID.",
+        "Timeout is unknown until queried; broker death is LOST_OR_UNKNOWN; reconnect never restores/replays work.",
+        "Define monotonic 1–120000ms deadline, default 30000ms, and SDK polling at least 250ms with one outstanding poll."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Review state/ownership tables using both orders of completion/cancel/deadline races. Contract completion requires frozen documents/expected vectors; downstream native execution remains in implementation tickets.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "procedure": "Run contract vectors for cap boundaries, expired dedup and stale epochs once harness exists.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/C02/README.md",
+        "docs/evidence/C02/results.json"
+      ],
+      "risks": [
+        "Logical cancellation is not proof a blocked OS read exited.",
+        "Metadata byte accounting excludes JVM object/runtime overhead."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/19"
+    },
+    {
+      "key": "C03",
+      "title": "Implement owner-scoped state machine, quotas and fairness",
+      "parent": "B02",
+      "stage": "G1",
+      "priority": "P0",
+      "role": "Kotlin core engineer",
+      "estimateMin": 8,
+      "estimateMax": 16,
+      "requirements": [
+        "R05",
+        "R07",
+        "R08",
+        "R10"
+      ],
+      "dependsOn": [
+        "C02"
+      ],
+      "value": "Prevent incorrect states and noisy-client resource exhaustion.",
+      "scope": [
+        "Pure Kotlin policy core",
+        "Deterministic scheduler and retention accounting"
+      ],
+      "acceptance": [
+        "Core imports no Android/UI/transport APIs.",
+        "All status/cancel operations require owner, session and epoch match.",
+        "Queued cancel does zero reads and removes work; running races commit one terminal result.",
+        "Round robin chooses one queued job per active session turn without preempting running work.",
+        "Cap−1/cap/cap+1 and checked-overflow cases enforce session, queue, retention bytes/entries and TTL.",
+        "Expired results never restart work; same-key conflict and bounded dedup follow C02."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Proposed ./gradlew :core:test with virtual-clock, seeded-event and deterministic barrier tests.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "commands": [
+            "./gradlew :core:test"
+          ],
+          "environment": "Repository root for Gradle/Python; selected Flutter package directory for flutter. Device/target identifiers and module/task names are proposed placeholders to freeze at kickoff; these native modules and harnesses do not exist yet.",
+          "expected": "Commands execute the stated acceptance corpus on actual required target and return success; retain complete counts and negative-case assertions, not only build exit status."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/C03/README.md",
+        "docs/evidence/C03/results.json"
+      ],
+      "risks": [
+        "Fairness applies at job boundaries, not a hard latency guarantee for a blocked worker."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/22"
+    },
+    {
+      "key": "C04",
+      "title": "Implement bounded generated and positional-source digest engine",
+      "parent": "B02",
+      "stage": "G1",
+      "priority": "P0",
+      "role": "Kotlin core engineer",
+      "estimateMin": 6,
+      "estimateMax": 12,
+      "requirements": [
+        "R04",
+        "R05",
+        "R07",
+        "R08"
+      ],
+      "dependsOn": [
+        "C03"
+      ],
+      "value": "Hash large inputs without retaining whole payloads.",
+      "scope": [
+        "Platform-neutral size/readAt/close source",
+        "Generated-sha256-v1 and digest oracle vectors"
+      ],
+      "acceptance": [
+        "One worker uses a reusable 65536-byte buffer; no whole-file allocation/mmap.",
+        "Zero, one, chunk−1/chunk/chunk+1 and 128MiB vectors match independent SHA-256 oracle.",
+        "128MiB+1, negative and overflow lengths fail before unbounded work.",
+        "Short reads, premature EOF and injected I/O error cannot yield success.",
+        "Cancel/deadline checkpoints submit terminal requests to state owner; blocked read does not free physical slot.",
+        "Source closes exactly once after actual worker exit; counters separate queued/running/retained resources."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Proposed ./gradlew :core:test with counting sources, short-read fixtures, faults and resource assertions.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "commands": [
+            "./gradlew :core:test"
+          ],
+          "environment": "Repository root for Gradle/Python; selected Flutter package directory for flutter. Device/target identifiers and module/task names are proposed placeholders to freeze at kickoff; these native modules and harnesses do not exist yet.",
+          "expected": "Commands execute the stated acceptance corpus on actual required target and return success; retain complete counts and negative-case assertions, not only build exit status."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/C04/README.md",
+        "docs/evidence/C04/results.json"
+      ],
+      "risks": [
+        "Fake sources validate policy, not OS cancellation guarantees."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/25"
+    },
+    {
+      "key": "A01",
+      "title": "Implement same-publisher cross-package Binder service",
+      "parent": "B03",
+      "stage": "G1",
+      "priority": "P0",
+      "role": "Android IPC engineer",
+      "estimateMin": 8,
+      "estimateMax": 16,
+      "requirements": [
+        "R14",
+        "R16",
+        "R07"
+      ],
+      "dependsOn": [
+        "C01",
+        "C03"
+      ],
+      "value": "Expose a real process-isolated service with trustworthy caller identity.",
+      "scope": [
+        "AIDL service and permission",
+        "Session death token and per-method guards"
+      ],
+      "acceptance": [
+        "Broker and native consumer install as distinct packages and PIDs.",
+        "Wrong-signature client cannot bind; same-signature different UID cannot use another owner session.",
+        "Capture Binder UID/user synchronously before dispatch; parcel package/PID is not authority.",
+        "Each operation validates owner/session/epoch; passing another Binder reference does not bypass guards.",
+        "Ingress performs bounded metadata/admission work; hashing never runs on Binder or UI thread.",
+        "Client-owned session token death unregisters session; link/death/admission races have deterministic outcomes."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Proposed ./gradlew :android:broker:connectedCheck using approved and denial packages and real IPC.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "commands": [
+            "./gradlew :android:broker:connectedAndroidTest"
+          ],
+          "environment": "Repository root for Gradle/Python; selected Flutter package directory for flutter. Device/target identifiers and module/task names are proposed placeholders to freeze at kickoff; these native modules and harnesses do not exist yet.",
+          "expected": "Commands execute the stated acceptance corpus on actual required target and return success; retain complete counts and negative-case assertions, not only build exit status."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/A01/README.md",
+        "docs/evidence/A01/results.json"
+      ],
+      "risks": [
+        "In-process mocks are insufficient IPC evidence.",
+        "No arbitrary third-party onboarding."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/26"
+    },
+    {
+      "key": "A02",
+      "title": "Implement Kotlin SDK generation, polling and loss behavior",
+      "parent": "B03",
+      "stage": "G1",
+      "priority": "P0",
+      "role": "Android SDK engineer",
+      "estimateMin": 8,
+      "estimateMax": 14,
+      "requirements": [
+        "R07",
+        "R14",
+        "R16"
+      ],
+      "dependsOn": [
+        "A01",
+        "C04"
+      ],
+      "value": "Applications distinguish uncertain/lost work from completed work.",
+      "scope": [
+        "Typed asynchronous SDK",
+        "Bounded polling and demand-owned reconnect"
+      ],
+      "acceptance": [
+        "No blocking IPC on UI thread.",
+        "Poll interval/request concurrency obey C02 and stop after terminal/session close.",
+        "Disconnection and death merge into generation-aware recovery without duplicate sessions.",
+        "Old-generation callback cannot update fresh state; onBindingDied/null binding are explicit.",
+        "Timeout never auto-resubmits; status-by-request resolves ambiguity while original session lives.",
+        "Broker kill yields LOST_OR_UNKNOWN, fresh epoch invalidates old handles and resubmission is explicit new work.",
+        "Retry budget applies only while foreground demand exists."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Execute instrumented broker kill, lost reply, stale callback and foreground-demand checkpoint cases.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "commands": [
+            "./gradlew :sdk:kotlin:connectedAndroidTest"
+          ],
+          "environment": "Repository root for Gradle/Python; selected Flutter package directory for flutter. Device/target identifiers and module/task names are proposed placeholders to freeze at kickoff; these native modules and harnesses do not exist yet.",
+          "expected": "Commands execute the stated acceptance corpus on actual required target and return success; retain complete counts and negative-case assertions, not only build exit status."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/A02/README.md",
+        "docs/evidence/A02/results.json"
+      ],
+      "risks": [
+        "Reconnect availability is not durable job recovery."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/30"
+    },
+    {
+      "key": "A03",
+      "title": "Build native generated-work consumer and denial smoke suite",
+      "parent": "B04",
+      "stage": "G1",
+      "priority": "P0",
+      "role": "Android application/QA engineer",
+      "estimateMin": 6,
+      "estimateMax": 10,
+      "requirements": [
+        "R02",
+        "R07",
+        "R11"
+      ],
+      "dependsOn": [
+        "A02"
+      ],
+      "value": "Provide an inspectable native baseline and security smoke path.",
+      "scope": [
+        "Submit/status/cancel UI",
+        "Independent denial client and release fault-hook inspection"
+      ],
+      "acceptance": [
+        "Known generated digest traverses real Binder and matches oracle.",
+        "Queue saturation presents BUSY without UI freeze.",
+        "Wrong-signature binding and cross-owner status/cancel fail with expected outcomes.",
+        "Kill/rebind path shows LOST_OR_UNKNOWN and explicit new request.",
+        "Recording identifies actual packages/PIDs without private device information.",
+        "Release package excludes kill/stall hooks and test signing private material."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Run native smoke scenarios and inspect release APK manifest/classes for debug hooks.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "commands": [
+            "./gradlew :examples:android-native:connectedAndroidTest"
+          ],
+          "environment": "Repository root for Gradle/Python; selected Flutter package directory for flutter. Device/target identifiers and module/task names are proposed placeholders to freeze at kickoff; these native modules and harnesses do not exist yet.",
+          "expected": "Commands execute the stated acceptance corpus on actual required target and return success; retain complete counts and negative-case assertions, not only build exit status."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/A03/README.md",
+        "docs/evidence/A03/results.json"
+      ],
+      "risks": [
+        "A screenshot is not proof of cross-process execution."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/33"
+    },
+    {
+      "key": "F01",
+      "title": "Implement authored Flutter plugin and generated-work consumer",
+      "parent": "B05",
+      "stage": "G1",
+      "priority": "P0",
+      "role": "Flutter/Android engineer",
+      "estimateMin": 8,
+      "estimateMax": 16,
+      "requirements": [
+        "R02",
+        "R15"
+      ],
+      "dependsOn": [
+        "A02"
+      ],
+      "value": "Let a second ecosystem use the same broker semantics.",
+      "scope": [
+        "Dart typed facade",
+        "Native adapter to Kotlin SDK"
+      ],
+      "acceptance": [
+        "Installed Flutter client calls authored plugin then SDK then separate broker.",
+        "Dart contains no duplicate scheduler/hash policy and no synthetic success shortcut.",
+        "Digest and error vectors match native baseline.",
+        "Cancellation request, timeout and broker loss are distinct user-visible outcomes.",
+        "Native channel work obeys platform threading rules; heavy calls do not block UI.",
+        "Status polling respects SDK caps rather than stacking a Dart polling loop."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Proposed flutter test plus installed-device integration test with process traces.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "commands": [
+            "flutter test",
+            "flutter test integration_test/generated_profile_test.dart -d DEVICE_ID"
+          ],
+          "environment": "Repository root for Gradle/Python; selected Flutter package directory for flutter. Device/target identifiers and module/task names are proposed placeholders to freeze at kickoff; these native modules and harnesses do not exist yet.",
+          "expected": "Commands execute the stated acceptance corpus on actual required target and return success; retain complete counts and negative-case assertions, not only build exit status."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/F01/README.md",
+        "docs/evidence/F01/results.json"
+      ],
+      "risks": [
+        "Mock channel tests alone do not prove Binder execution."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/34"
+    },
+    {
+      "key": "F02",
+      "title": "Verify Flutter engine lifecycle and second-engine isolation",
+      "parent": "B05",
+      "stage": "G1",
+      "priority": "P0",
+      "role": "Flutter QA engineer",
+      "estimateMin": 6,
+      "estimateMax": 12,
+      "requirements": [
+        "R07",
+        "R15",
+        "R18"
+      ],
+      "dependsOn": [
+        "F01"
+      ],
+      "value": "Prevent leaked sessions and stale UI results during lifecycle changes.",
+      "scope": [
+        "Engine-owned plugin state",
+        "Recreation, disposal and concurrent engine tests"
+      ],
+      "acceptance": [
+        "Engine disposal stops demand and closes only its own session.",
+        "Activity recreation does not accidentally create/replay jobs.",
+        "Old-generation events cannot update disposed/replaced engine.",
+        "Second engine has independent session and cannot cancel/read first engine jobs.",
+        "Delayed native completion after disposal is discarded with resources reclaimed according to worker state.",
+        "Broker death during teardown yields no successful stale completion."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Execute deterministic engine lifecycle tests plus real two-engine device scenario; retain counters.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "commands": [
+            "flutter test integration_test/engine_lifecycle_test.dart -d DEVICE_ID"
+          ],
+          "environment": "Repository root for Gradle/Python; selected Flutter package directory for flutter. Device/target identifiers and module/task names are proposed placeholders to freeze at kickoff; these native modules and harnesses do not exist yet.",
+          "expected": "Commands execute the stated acceptance corpus on actual required target and return success; retain complete counts and negative-case assertions, not only build exit status."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/F02/README.md",
+        "docs/evidence/F02/results.json"
+      ],
+      "risks": [
+        "Activity and Flutter-engine lifetimes are different."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/39"
+    },
+    {
+      "key": "Q01",
+      "title": "Create deterministic fault hooks and regression corpus",
+      "parent": "B06",
+      "stage": "G2",
+      "priority": "P1",
+      "role": "Reliability QA engineer",
+      "estimateMin": 8,
+      "estimateMax": 14,
+      "requirements": [
+        "R07",
+        "R11",
+        "R17"
+      ],
+      "dependsOn": [
+        "A02",
+        "C04"
+      ],
+      "value": "Make difficult failures reproducible.",
+      "scope": [
+        "Test-only barriers around admission/read/commit/reply",
+        "Race and malformed-input corpus"
+      ],
+      "acceptance": [
+        "Cover cancel before admission, queued cancel and both running cancel/completion orders.",
+        "Cover deadline versus completion, session close versus admission and death before/after registration.",
+        "Cover broker death before/after terminal commit and lost submit response.",
+        "Malformed metadata, wrong owner and stale epoch never produce success.",
+        "Blocked-reader test retains occupied worker/FD accounting; no unsafe thread kill or replacement-worker growth.",
+        "Release configuration cannot enable fault hooks."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Run barrier-controlled corpus with seed/checkpoint logs; inspect release artifact hook exclusion.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "commands": [
+            "./gradlew :android:broker:connectedAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=boundarylab.FaultCorpusTest"
+          ],
+          "environment": "Repository root for Gradle/Python; selected Flutter package directory for flutter. Device/target identifiers and module/task names are proposed placeholders to freeze at kickoff; these native modules and harnesses do not exist yet.",
+          "expected": "Commands execute the stated acceptance corpus on actual required target and return success; retain complete counts and negative-case assertions, not only build exit status."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/Q01/README.md",
+        "docs/evidence/Q01/results.json"
+      ],
+      "risks": [
+        "Injected reader stalls are labeled simulations and cannot prove provider behavior."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/35"
+    },
+    {
+      "key": "Q02",
+      "title": "Execute descriptor cleanup and bounded saturation campaign",
+      "parent": "B06",
+      "stage": "G2",
+      "priority": "P1",
+      "role": "Android reliability QA",
+      "estimateMin": 8,
+      "estimateMax": 16,
+      "requirements": [
+        "R05",
+        "R07",
+        "R08",
+        "R11",
+        "R17"
+      ],
+      "dependsOn": [
+        "Q01",
+        "FP02",
+        "F02"
+      ],
+      "value": "Establish bounded resource behavior under real contention.",
+      "scope": [
+        "100 repetitions per selected race cell",
+        "30-minute capped churn and rejection load"
+      ],
+      "acceptance": [
+        "Record planned/actual counts and every failure; incomplete cells remain incomplete.",
+        "Accepted job descriptors never exceed 17; report transient Binder FD headroom separately.",
+        "Rejected/duplicate/queued-cancel FDs close; running descriptors close only after worker exits.",
+        "1000 rejected submissions and churn do not cause persistent owned-FD/session/retention growth after drain/TTL.",
+        "Second caller progresses at job boundaries under noisy-caller load.",
+        "No false success, implicit replay or stale-epoch result occurs across actual process death.",
+        "Report offered/admitted/rejected/completed/cancelled/failed counts and logical caps."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Run actual-package race/churn harness with FD/queue/session sampling and sanitized traces.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "commands": [
+            "python3 tools/run_fault_campaign.py --profile android-files --repetitions 100 --churn-minutes 30"
+          ],
+          "environment": "Repository root for Gradle/Python; selected Flutter package directory for flutter. Device/target identifiers and module/task names are proposed placeholders to freeze at kickoff; these native modules and harnesses do not exist yet.",
+          "expected": "Commands execute the stated acceptance corpus on actual required target and return success; retain complete counts and negative-case assertions, not only build exit status."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/Q02/README.md",
+        "docs/evidence/Q02/results.json"
+      ],
+      "risks": [
+        "Total process FD count includes transport/runtime baseline; do not promise exactly 17 total FDs."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/42"
+    },
+    {
+      "key": "Q03",
+      "title": "Audit manifest, trust boundaries and public evidence privacy",
+      "parent": "B06",
+      "stage": "G2",
+      "priority": "P1",
+      "role": "Security reviewer",
+      "estimateMin": 4,
+      "estimateMax": 8,
+      "requirements": [
+        "R07",
+        "R10",
+        "R11"
+      ],
+      "dependsOn": [
+        "FP01",
+        "FP02",
+        "D01",
+        "REF01",
+        "FP05"
+      ],
+      "value": "Catch unsafe trust claims and disclosure before release.",
+      "scope": [
+        "Threat model review",
+        "Negative-control and evidence sanitization review"
+      ],
+      "acceptance": [
+        "Wrong signature, cross-owner access and unsupported descriptors have executed denial evidence.",
+        "Manifest aliases are not original provider names/URIs or absolute paths.",
+        "Invalid manifest fails before any referenced attachment is opened.",
+        "Traversal/symlink/nonregular cases cannot become verified matches under supported profile.",
+        "Public logs use owned fixtures and omit file contents, device serials, credentials and private roots.",
+        "Same-user filesystem races and mutable-source limitations are explicit; integrity is not authenticity."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Review source/contracts and execute negative corpus on reference plus available native targets; clearly label unexecuted targets.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/Q03/README.md",
+        "docs/evidence/Q03/results.json"
+      ],
+      "risks": [
+        "Author/AI review is not independent human security certification."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/43"
+    },
+    {
+      "key": "D01",
+      "title": "Implement bounded macOS JVM host and connection-owned sessions",
+      "parent": "B07",
+      "stage": "G2",
+      "priority": "P1",
+      "role": "Kotlin/JVM engineer",
+      "estimateMin": 8,
+      "estimateMax": 16,
+      "requirements": [
+        "R03",
+        "R07",
+        "R19"
+      ],
+      "dependsOn": [
+        "C01",
+        "C04"
+      ],
+      "value": "Run the same policy in a real PC process boundary.",
+      "scope": [
+        "Private Unix-socket runtime directory",
+        "Framed protocol, deadlines and cleanup"
+      ],
+      "acceptance": [
+        "Two actual macOS JVM processes exchange protocol requests.",
+        "Private runtime-directory ownership and permissions are checked; no network listener/token published.",
+        "Reject oversized frame length before allocation and truncated/malformed frames explicitly.",
+        "Read/write deadlines and disconnect close connection-owned sessions.",
+        "Same-user trust is documented; no unsupported peer-credential assertion.",
+        "Generated semantic vectors and epoch restart behavior match contract."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Run macOS subprocess conformance for frames, permissions, disconnect and restart.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "commands": [
+            "./gradlew :desktop:host:integrationTest"
+          ],
+          "environment": "Repository root for Gradle/Python; selected Flutter package directory for flutter. Device/target identifiers and module/task names are proposed placeholders to freeze at kickoff; these native modules and harnesses do not exist yet.",
+          "expected": "Commands execute the stated acceptance corpus on actual required target and return success; retain complete counts and negative-case assertions, not only build exit status."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/D01/README.md",
+        "docs/evidence/D01/results.json"
+      ],
+      "risks": [
+        "JDK socket support is proven on selected host; Android emulator does not satisfy PC profile."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/31"
+    },
+    {
+      "key": "D02",
+      "title": "Implement macOS CLI and generated-profile parity corpus",
+      "parent": "B07",
+      "stage": "G2",
+      "priority": "P1",
+      "role": "Kotlin/JVM engineer",
+      "estimateMin": 6,
+      "estimateMax": 10,
+      "requirements": [
+        "R03",
+        "R10",
+        "R19"
+      ],
+      "dependsOn": [
+        "D01",
+        "A02"
+      ],
+      "value": "Demonstrate matching behavior across phone and PC.",
+      "scope": [
+        "CLI submit/status/cancel",
+        "Shared semantic test runner"
+      ],
+      "acceptance": [
+        "CLI drives a separate host process, not direct core calls.",
+        "Same generated vectors pass on named Android and macOS environments.",
+        "Caps, owner/session isolation, cancellation and stale epoch cases report equivalent semantics.",
+        "Platform-specific identity/lifetime differences appear in support matrix.",
+        "Unknown capability/version produces typed rejection rather than silent fallback.",
+        "Run manifest identifies source commit and actual host/tool versions."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Execute shared conformance corpus through both real transports and compare result classifications.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "commands": [
+            "./gradlew :desktop:cli:integrationTest"
+          ],
+          "environment": "Repository root for Gradle/Python; selected Flutter package directory for flutter. Device/target identifiers and module/task names are proposed placeholders to freeze at kickoff; these native modules and harnesses do not exist yet.",
+          "expected": "Commands execute the stated acceptance corpus on actual required target and return success; retain complete counts and negative-case assertions, not only build exit status."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/D02/README.md",
+        "docs/evidence/D02/results.json"
+      ],
+      "risks": [
+        "Sharing code is not runtime compatibility evidence."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/36"
+    },
+    {
+      "key": "V01",
+      "title": "Retain compiled old clients and test supported version evolution",
+      "parent": "B08",
+      "stage": "G2",
+      "priority": "P1",
+      "role": "SDK compatibility engineer",
+      "estimateMin": 6,
+      "estimateMax": 12,
+      "requirements": [
+        "R03",
+        "R07",
+        "R10"
+      ],
+      "dependsOn": [
+        "A02",
+        "F01",
+        "D01",
+        "FP02",
+        "FP05"
+      ],
+      "value": "Prevent upgrades from silently breaking consumers.",
+      "scope": [
+        "Compiled client fixtures",
+        "Generated/file capability evolution matrix"
+      ],
+      "acceptance": [
+        "Old fixture binaries are archived with checksums and compiler versions, never rebuilt against new API during test.",
+        "Old client/new provider and new client/old provider supported cells pass.",
+        "Unsupported protocol major is rejected explicitly.",
+        "Generated-only provider advertises file operation unsupported and rejects before work/FD retention.",
+        "Additive change preserves agreed ABI; intentional incompatible AIDL change fails test.",
+        "Unknown error handling does not turn failures into success."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Run binary compatibility matrix against actual Android provider and macOS host.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "commands": [
+            "./gradlew compatibilityTest"
+          ],
+          "environment": "Repository root for Gradle/Python; selected Flutter package directory for flutter. Device/target identifiers and module/task names are proposed placeholders to freeze at kickoff; these native modules and harnesses do not exist yet.",
+          "expected": "Commands execute the stated acceptance corpus on actual required target and return success; retain complete counts and negative-case assertions, not only build exit status."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/V01/README.md",
+        "docs/evidence/V01/results.json"
+      ],
+      "risks": [
+        "A version field cannot repair incompatible AIDL layout."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/44"
+    },
+    {
+      "key": "V02",
+      "title": "Create pinned quality lanes and meaningful regression gates",
+      "parent": "B08",
+      "stage": "G2",
+      "priority": "P1",
+      "role": "CI engineer",
+      "estimateMin": 6,
+      "estimateMax": 12,
+      "requirements": [
+        "R10",
+        "R11"
+      ],
+      "dependsOn": [
+        "C04",
+        "A03",
+        "F01",
+        "D02",
+        "V01"
+      ],
+      "value": "Make development standards executable.",
+      "scope": [
+        "Core/reference/Android/macOS CI lanes",
+        "Artifact inspection and contribution checks"
+      ],
+      "acceptance": [
+        "Pin toolchains and document cache versus clean build modes.",
+        "Core and reference lanes execute semantic/negative tests.",
+        "Android and macOS runtime lanes show explicit executed/skipped/blocked states.",
+        "Deliberate contract/authorization regression causes relevant lane to fail.",
+        "Release inspection rejects test fault controls and secrets.",
+        "Build success, runtime success and reviewed status remain separate fields."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Execute workflow lanes and controlled negative mutations; capture run URLs or local equivalent transcripts.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "commands": [
+            "./gradlew check",
+            "flutter test"
+          ],
+          "environment": "Repository root for Gradle/Python; selected Flutter package directory for flutter. Device/target identifiers and module/task names are proposed placeholders to freeze at kickoff; these native modules and harnesses do not exist yet.",
+          "expected": "Commands execute the stated acceptance corpus on actual required target and return success; retain complete counts and negative-case assertions, not only build exit status."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/V02/README.md",
+        "docs/evidence/V02/results.json"
+      ],
+      "risks": [
+        "Hosted CI performance is not an authoritative phone benchmark."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/46"
+    },
+    {
+      "key": "M01",
+      "title": "Preregister fair benchmark hypotheses and bounded experiment matrix",
+      "parent": "B09",
+      "stage": "G2",
+      "priority": "P1",
+      "role": "Performance engineer",
+      "estimateMin": 4,
+      "estimateMax": 8,
+      "requirements": [
+        "R04",
+        "R05",
+        "R06",
+        "R08"
+      ],
+      "dependsOn": [
+        "C02",
+        "FP01"
+      ],
+      "value": "Ensure later measurements answer falsifiable questions.",
+      "scope": [
+        "Physical device and baseline design",
+        "Input cells, sample plan and exclusions"
+      ],
+      "acceptance": [
+        "Declare physical phone or mark execution blocked; pin release/compilation/profile state.",
+        "Define no-work shell and same-native-reader/hash in-process baselines for native and Flutter.",
+        "Include 0,1KiB,1MiB,16MiB,128MiB and boundary-invalid files plus 32-file packs; invalid cells excluded from speed pools.",
+        "Separate process cold/resident from prewarmed/uncontrolled filesystem cache; restart is not disk-cold.",
+        "Freeze sample counts, randomized balanced order, thermal rules, protected metrics and hypotheses before confirmation.",
+        "Calibrate targets after pilot; no universal throughput or measured gain asserted.",
+        "Document device-hours and additional provider/device matrix as separately estimated scope."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Review preregistration and run ten-pair pilot after instrumentation is available; no confirmatory conclusions from pilot.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/M01/README.md",
+        "docs/evidence/M01/results.json"
+      ],
+      "risks": [
+        "Large matrices require reserved device time; old 120h target is superseded."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/27"
+    },
+    {
+      "key": "M02",
+      "title": "Instrument equal baselines and stage timing without private data",
+      "parent": "B09",
+      "stage": "G2",
+      "priority": "P1",
+      "role": "Android/Flutter performance engineer",
+      "estimateMin": 8,
+      "estimateMax": 16,
+      "requirements": [
+        "R04",
+        "R05",
+        "R06"
+      ],
+      "dependsOn": [
+        "M01",
+        "FP03",
+        "FP04"
+      ],
+      "value": "Separate actual middleware overhead from file and UI delays.",
+      "scope": [
+        "Trace points and counters",
+        "Native/Flutter in-process and broker variants"
+      ],
+      "acceptance": [
+        "All variants use equal input, reader, chunk size, digest and export behavior.",
+        "Trace launch/frame, provider open, descriptor handoff, admission, queue, read/hash, terminal, poll and export milestones.",
+        "Poll observation delay is separate from control-RPC latency.",
+        "FD handoff is not described as copying all file bytes through Binder.",
+        "Correlation IDs and monotonic clock domains are documented; overlapping spans are not blindly summed.",
+        "Trace contains owned aliases only; compare trace-on/off overhead and collect memory separately.",
+        "Missing/overrun events invalidate attribution instead of becoming zero durations."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Execute baseline parity check and trace extraction/counter consistency tests.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "commands": [
+            "./gradlew :benchmarks:connectedAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=boundarylab.TracePilotTest"
+          ],
+          "environment": "Repository root for Gradle/Python; selected Flutter package directory for flutter. Device/target identifiers and module/task names are proposed placeholders to freeze at kickoff; these native modules and harnesses do not exist yet.",
+          "expected": "Commands execute the stated acceptance corpus on actual required target and return success; retain complete counts and negative-case assertions, not only build exit status."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/M02/README.md",
+        "docs/evidence/M02/results.json"
+      ],
+      "risks": [
+        "Instrumentation can perturb performance; low-overhead counters required for confirmation."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/47"
+    },
+    {
+      "key": "M03",
+      "title": "Execute physical-device startup, file, load and memory campaign",
+      "parent": "B09",
+      "stage": "G2",
+      "priority": "P1",
+      "role": "Performance QA engineer",
+      "estimateMin": 10,
+      "estimateMax": 16,
+      "requirements": [
+        "R04",
+        "R05",
+        "R06",
+        "R07",
+        "R08"
+      ],
+      "dependsOn": [
+        "M02",
+        "Q02"
+      ],
+      "value": "Collect reproducible performance and resource observations.",
+      "scope": [
+        "Bounded campaign; active estimate excludes 12–24 reserved device-hours",
+        "Separate pilot and confirmation"
+      ],
+      "acceptance": [
+        "Record ten paired pilot trials separately.",
+        "Run three sessions ×30 launches ×four framework/treatment combinations per declared startup state, or report exact incomplete cells.",
+        "Run native file windows across three sizes and separately declared Flutter confirmation subset.",
+        "Run three sessions ×five 60s windows ×four concurrency levels per treatment plus fixed-arrival overload.",
+        "Run three 30-minute memory/churn sessions with all clients+broker PSS and logical counters.",
+        "Preserve failures, exclusions, thermal/cache notes, actual sample counts and randomized block order.",
+        "No native/desktop measurement is fabricated when hardware unavailable."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Execute frozen M01 campaign runner, retain raw JSON/traces/environment and checksums.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "commands": [
+            "python3 benchmarks/run_campaign.py --plan benchmarks/experiment-v1.json --device DEVICE_ID"
+          ],
+          "environment": "Repository root for Gradle/Python; selected Flutter package directory for flutter. Device/target identifiers and module/task names are proposed placeholders to freeze at kickoff; these native modules and harnesses do not exist yet.",
+          "expected": "Commands execute the stated acceptance corpus on actual required target and return success; retain complete counts and negative-case assertions, not only build exit status."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/M03/README.md",
+        "docs/evidence/M03/results.json"
+      ],
+      "risks": [
+        "Campaign may need re-estimation after pilot; device elapsed hours are additional to active labor."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/50"
+    },
+    {
+      "key": "M04",
+      "title": "Publish reproducible analysis with uncertainty and protected metrics",
+      "parent": "B09",
+      "stage": "G2",
+      "priority": "P1",
+      "role": "Performance analyst",
+      "estimateMin": 6,
+      "estimateMax": 10,
+      "requirements": [
+        "R04",
+        "R05",
+        "R06",
+        "R08",
+        "R11"
+      ],
+      "dependsOn": [
+        "M03"
+      ],
+      "value": "Let reviewers regenerate conclusions from raw observations.",
+      "scope": [
+        "Analysis scripts and report",
+        "Per-session distributions and resource accounting"
+      ],
+      "acceptance": [
+        "Clean analysis command regenerates all tables from immutable raw data.",
+        "Report counts, failures, medians/tails and clustered uncertainty without unsupported p99 claims.",
+        "Separate queue, read wait, hash, IPC and polling; PSS and desktop RSS not ranked as equivalent.",
+        "Logical resource counters return to defined drained baseline; PSS trends reported separately.",
+        "Any proposed improvement fails acceptance if protected cancellation/memory metric regresses beyond frozen threshold.",
+        "Negative/inconclusive outcomes remain visible with no claimed speedup."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Run analysis from fresh environment and compare report checksums/tables to stored expected outputs.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "commands": [
+            "python3 benchmarks/analyze.py --input docs/evidence/M03 --output docs/evidence/M04"
+          ],
+          "environment": "Repository root for Gradle/Python; selected Flutter package directory for flutter. Device/target identifiers and module/task names are proposed placeholders to freeze at kickoff; these native modules and harnesses do not exist yet.",
+          "expected": "Commands execute the stated acceptance corpus on actual required target and return success; retain complete counts and negative-case assertions, not only build exit status."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/M04/README.md",
+        "docs/evidence/M04/results.json"
+      ],
+      "risks": [
+        "Small independent-session count limits generalization."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/54"
+    },
+    {
+      "key": "L01",
+      "title": "Rehearse fresh same-publisher consumer and release artifacts",
+      "parent": "B10",
+      "stage": "G2",
+      "priority": "P1",
+      "role": "Release/SDK engineer",
+      "estimateMin": 6,
+      "estimateMax": 12,
+      "requirements": [
+        "R09",
+        "R11"
+      ],
+      "dependsOn": [
+        "V02",
+        "FP06",
+        "Q03"
+      ],
+      "value": "Prove documented integration works outside the development workspace.",
+      "scope": [
+        "Clean consumer integration",
+        "Provenance, license inventory and checksums"
+      ],
+      "acceptance": [
+        "Fresh clone builds documented artifacts without private maintainer configuration.",
+        "Separately built same-publisher consumer uses intended SDK and broker successfully.",
+        "Local demo signing material generated outside repository; no reusable private keys published.",
+        "License/dependency inventory, checksums, versions and upgrade instructions complete.",
+        "Support matrix distinguishes reference, app, PC and conditional platform evidence.",
+        "Release candidate recipe names remaining gates and never claims commercial shipment."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Execute fresh-workspace recipe and artifact inspection; retain commands and environment.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/L01/README.md",
+        "docs/evidence/L01/results.json"
+      ],
+      "risks": [
+        "Same-publisher integration is not third-party adoption or partner work."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/51"
+    },
+    {
+      "key": "L02",
+      "title": "Publish auditable requirement ledger and five-minute FieldPack demo",
+      "parent": "B10",
+      "stage": "G2",
+      "priority": "P1",
+      "role": "Architect/documentation writer",
+      "estimateMin": 4,
+      "estimateMax": 8,
+      "requirements": [
+        "R01",
+        "R09",
+        "R18"
+      ],
+      "dependsOn": [
+        "L01",
+        "M04",
+        "T02"
+      ],
+      "value": "Make architectural evidence easy for a skeptical panel to inspect.",
+      "scope": [
+        "Demo script/recording",
+        "R01–R22 claim ledger"
+      ],
+      "acceptance": [
+        "Show real native/Flutter selection, broker failure, fresh attempt and explicit manifest export.",
+        "Show recipient verification, changed file and missing file from separately supplied fixture directory.",
+        "Each implemented claim links commit, command, environment and actual result.",
+        "Python reference, app Binder, macOS JVM and AOSP evidence never substitute for each other.",
+        "Mark R13/R20/R21/R22 external; R09 shipping and R18 real cross-team work remain separate career evidence.",
+        "State no snapshot/authenticity/cloud-sync/exactly-once/kernel claim.",
+        "Unbuilt optional platform portion stays planned in recording and ledger."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Execute five-minute script from clean starting state and audit each claim link.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/L02/README.md",
+        "docs/evidence/L02/results.json"
+      ],
+      "risks": [
+        "Polished demonstration must not hide failing required cells."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/56"
+    },
+    {
+      "key": "T01",
+      "title": "Assess technology alternatives and architectural revisit triggers",
+      "parent": "B11",
+      "stage": "G2",
+      "priority": "P1",
+      "role": "Software architect",
+      "estimateMin": 4,
+      "estimateMax": 8,
+      "requirements": [
+        "R01",
+        "R12"
+      ],
+      "dependsOn": [
+        "C02",
+        "FP01"
+      ],
+      "value": "Explain why selected boundaries fit the actual workflow.",
+      "scope": [
+        "Dated primary-source comparison",
+        "Binder/Messenger, Flutter alternatives, regular-file profile and daemon placement"
+      ],
+      "acceptance": [
+        "Compare at least two realistic alternatives for each major selected boundary.",
+        "Record user value, complexity/security tradeoffs and observable revisit trigger.",
+        "Distinguish app AIDL from image-internal structured AIDL.",
+        "Explain regular seekable input restriction and why streaming providers are deferred.",
+        "Document macOS same-user boundary and why generic JDK FD passing is not assumed.",
+        "Cite primary sources and dates; research exposure is not hands-on expertise."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Review ADR against contract and current official platform documentation at implementation kickoff.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/T01/README.md",
+        "docs/evidence/T01/results.json"
+      ],
+      "risks": [
+        "Post-hoc decisions must be labeled as reassessments."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/28"
+    },
+    {
+      "key": "T02",
+      "title": "Document one observed difficult defect or bottleneck investigation",
+      "parent": "B11",
+      "stage": "G2",
+      "priority": "P1",
+      "role": "Architect/performance engineer",
+      "estimateMin": 4,
+      "estimateMax": 8,
+      "requirements": [
+        "R04",
+        "R12",
+        "R17"
+      ],
+      "dependsOn": [
+        "M04",
+        "T01"
+      ],
+      "value": "Show evidence-based engineering judgment.",
+      "scope": [
+        "Actual failing observation",
+        "Hypothesis, minimal experiment and outcome"
+      ],
+      "acceptance": [
+        "Start from an actual recorded defect/bottleneck, not invented incident.",
+        "List competing explanations and a discriminating test.",
+        "Link minimal change or justified no-change decision to result.",
+        "Retain failing evidence and regression/protected-metric check.",
+        "Publish negative/inconclusive result honestly.",
+        "Explain impact on roadmap and what remains unresolved."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Reproduce case from stored artifacts and rerun discriminating/regression test.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/T02/README.md",
+        "docs/evidence/T02/results.json"
+      ],
+      "risks": [
+        "No guaranteed optimization; defect absence must not trigger fabrication."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/55"
+    },
+    {
+      "key": "P01",
+      "title": "Audit authorized Linux/AOSP resources and pin baseline target",
+      "parent": "B12",
+      "stage": "G3",
+      "priority": "P2",
+      "role": "AOSP platform engineer",
+      "estimateMin": 4,
+      "estimateMax": 8,
+      "requirements": [
+        "R16"
+      ],
+      "dependsOn": [],
+      "value": "Determine whether conditional platform work is feasible.",
+      "scope": [
+        "Linux resource inventory",
+        "Pinned manifest/target and build plan"
+      ],
+      "acceptance": [
+        "Verify suitable existing authorized Linux host and virtualization resources.",
+        "Record actual disk/RAM/toolchain prerequisites against selected AOSP documentation.",
+        "Pin source manifest/target and active versus elapsed build-time budget.",
+        "No cloud purchase, device flashing or new external deployment.",
+        "Unavailable resources produce exact blocker/unblock condition; no fake Ready state.",
+        "Scope explicitly generated-sha256-v1 only; real-file privileged ingestion deferred."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Run documented resource capability checks and review pinned baseline plan.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "procedure": "On the P01-authorized Linux host, checkout the pinned manifest, select the exact P02 build target, build changed modules/image using its documented AOSP build recipe, boot that image in the recorded virtual target, wait for adb readiness, capture ro.build.fingerprint and getenforce, then run the ticket-specific authorized/denied/restart/corpus cases. Record source manifest, build output, boot logs and case results. P01 is an inventory-only exception; P02 exercises baseline only.",
+          "commands": [
+            "adb shell getprop ro.build.fingerprint",
+            "adb shell getenforce"
+          ],
+          "expected": "Executed target matches pinned image and enforcing policy; source-only compilation never closes image runtime acceptance. P01/P02 prerequisite exclusions apply as specified in scope."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/P01/README.md",
+        "docs/evidence/P01/results.json"
+      ],
+      "risks": [
+        "Current workstation readiness is not AOSP host readiness."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/20"
+    },
+    {
+      "key": "P02",
+      "title": "Build and boot unchanged AOSP baseline image",
+      "parent": "B12",
+      "stage": "G3",
+      "priority": "P2",
+      "role": "AOSP platform engineer",
+      "estimateMin": 8,
+      "estimateMax": 16,
+      "requirements": [
+        "R16",
+        "R19"
+      ],
+      "dependsOn": [
+        "P01"
+      ],
+      "value": "Establish a known working image before modifications.",
+      "scope": [
+        "Clean baseline build/boot spike",
+        "Provenance and test access"
+      ],
+      "acceptance": [
+        "Build unmodified pinned manifest/target.",
+        "Boot image and record fingerprint and host/tool versions.",
+        "Test runner can reach target and execute baseline smoke.",
+        "Preserve build/boot logs and artifact checksums.",
+        "If timebox fails, record failure and re-estimate follow-up; image gate remains open.",
+        "Do not claim physical phone performance from virtual target."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Execute pinned AOSP build and virtual-image boot recipe; retain source/build/boot receipts.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "procedure": "On the P01-authorized Linux host, checkout the pinned manifest, select the exact P02 build target, build changed modules/image using its documented AOSP build recipe, boot that image in the recorded virtual target, wait for adb readiness, capture ro.build.fingerprint and getenforce, then run the ticket-specific authorized/denied/restart/corpus cases. Record source manifest, build output, boot logs and case results. P01 is an inventory-only exception; P02 exercises baseline only.",
+          "commands": [
+            "adb shell getprop ro.build.fingerprint",
+            "adb shell getenforce"
+          ],
+          "expected": "Executed target matches pinned image and enforcing policy; source-only compilation never closes image runtime acceptance. P01/P02 prerequisite exclusions apply as specified in scope."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/P02/README.md",
+        "docs/evidence/P02/results.json"
+      ],
+      "risks": [
+        "8–16h active spike excludes long machine build time; success is not guaranteed."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/23"
+    },
+    {
+      "key": "P03",
+      "title": "Implement generated-only native AIDL service and core vectors",
+      "parent": "B13",
+      "stage": "G3",
+      "priority": "P2",
+      "role": "Native/platform engineer",
+      "estimateMin": 8,
+      "estimateMax": 16,
+      "requirements": [
+        "R14",
+        "R16"
+      ],
+      "dependsOn": [
+        "P02",
+        "C02"
+      ],
+      "value": "Extend the actual system image with a bounded native capability.",
+      "scope": [
+        "Dedicated native service",
+        "Generated-sha256-v1 only and tracked internal AIDL"
+      ],
+      "acceptance": [
+        "Service implements generated vectors and bounded state/worker policy.",
+        "Structured AIDL is tracked for selected platform target; no vendor/VINTF promise.",
+        "File capability is absent and file operation/FD request explicitly rejected.",
+        "Known digest, byte cap, cancellation and epoch semantics match common corpus.",
+        "Native tests include malformed/over-limit input and one terminal race winner.",
+        "No ordinary app hidden-API reflection or system_server placement."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Run native tests and build service into pinned target; capture test/build logs.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "procedure": "On the P01-authorized Linux host, checkout the pinned manifest, select the exact P02 build target, build changed modules/image using its documented AOSP build recipe, boot that image in the recorded virtual target, wait for adb readiness, capture ro.build.fingerprint and getenforce, then run the ticket-specific authorized/denied/restart/corpus cases. Record source manifest, build output, boot logs and case results. P01 is an inventory-only exception; P02 exercises baseline only.",
+          "commands": [
+            "adb shell getprop ro.build.fingerprint",
+            "adb shell getenforce"
+          ],
+          "expected": "Executed target matches pinned image and enforcing policy; source-only compilation never closes image runtime acceptance. P01/P02 prerequisite exclusions apply as specified in scope."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/P03/README.md",
+        "docs/evidence/P03/results.json"
+      ],
+      "risks": [
+        "Do not expand privileged file access to match app FieldPack profile."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/29"
+    },
+    {
+      "key": "P04",
+      "title": "Integrate service boot, supervision and enforcing SELinux policy",
+      "parent": "B13",
+      "stage": "G3",
+      "priority": "P2",
+      "role": "Platform/security engineer",
+      "estimateMin": 8,
+      "estimateMax": 16,
+      "requirements": [
+        "R14",
+        "R16"
+      ],
+      "dependsOn": [
+        "P03"
+      ],
+      "value": "Make platform service lifecycle and isolation real.",
+      "scope": [
+        "Init/service registration",
+        "Least-privilege permission and SELinux integration",
+        "Own minimal authorized/denied generated-interface platform test clients; P05 later supplies deliberate published facade/client."
+      ],
+      "acceptance": [
+        "Booted image starts dedicated service and advertises intended interface.",
+        "SELinux remains enforcing with narrow reviewed policy.",
+        "Authorized platform client succeeds; denied client fails.",
+        "Restart creates fresh epoch and old handles fail.",
+        "Crash-loop/supervision policy is documented and exercised without unlimited rapid respawn.",
+        "Record service/PID/registration evidence; source-only patch cannot pass."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Execute boot/restart/denial tests on actual custom image and inspect policy denial logs.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "procedure": "On the P01-authorized Linux host, checkout the pinned manifest, select the exact P02 build target, build changed modules/image using its documented AOSP build recipe, boot that image in the recorded virtual target, wait for adb readiness, capture ro.build.fingerprint and getenforce, then run the ticket-specific authorized/denied/restart/corpus cases. Record source manifest, build output, boot logs and case results. P01 is an inventory-only exception; P02 exercises baseline only.",
+          "commands": [
+            "adb shell getprop ro.build.fingerprint",
+            "adb shell getenforce"
+          ],
+          "expected": "Executed target matches pinned image and enforcing policy; source-only compilation never closes image runtime acceptance. P01/P02 prerequisite exclusions apply as specified in scope."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/P04/README.md",
+        "docs/evidence/P04/results.json"
+      ],
+      "risks": [
+        "Policy debugging may exceed estimate; split repair work rather than disable enforcement."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/32"
+    },
+    {
+      "key": "P05",
+      "title": "Implement platform-built facade and deliberate API client",
+      "parent": "B14",
+      "stage": "G3",
+      "priority": "P2",
+      "role": "Platform framework engineer",
+      "estimateMin": 8,
+      "estimateMax": 16,
+      "requirements": [
+        "R14",
+        "R16",
+        "R19"
+      ],
+      "dependsOn": [
+        "P04"
+      ],
+      "value": "Expose platform capability through an intentional framework surface.",
+      "scope": [
+        "Platform-built facade/client",
+        "Separate app and platform profiles"
+      ],
+      "acceptance": [
+        "Facade is compiled against intended custom platform API.",
+        "Client executes generated operation through real native service.",
+        "No reflection into hidden ServiceManager APIs from ordinary downloadable app.",
+        "Permission denial and unsupported file capability reach typed client outcomes.",
+        "Lifecycle/epoch changes remain visible to client.",
+        "Layer diagram and build/run records identify exact framework versus user-space changes."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Build facade/client with pinned image and execute authorized/denied tests.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "procedure": "On the P01-authorized Linux host, checkout the pinned manifest, select the exact P02 build target, build changed modules/image using its documented AOSP build recipe, boot that image in the recorded virtual target, wait for adb readiness, capture ro.build.fingerprint and getenforce, then run the ticket-specific authorized/denied/restart/corpus cases. Record source manifest, build output, boot logs and case results. P01 is an inventory-only exception; P02 exercises baseline only.",
+          "commands": [
+            "adb shell getprop ro.build.fingerprint",
+            "adb shell getenforce"
+          ],
+          "expected": "Executed target matches pinned image and enforcing policy; source-only compilation never closes image runtime acceptance. P01/P02 prerequisite exclusions apply as specified in scope."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/P05/README.md",
+        "docs/evidence/P05/results.json"
+      ],
+      "risks": [
+        "This is system framework integration, not kernel implementation."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/37"
+    },
+    {
+      "key": "P06",
+      "title": "Execute platform boot, restart and interface-compatibility corpus",
+      "parent": "B14",
+      "stage": "G3",
+      "priority": "P2",
+      "role": "Platform QA engineer",
+      "estimateMin": 6,
+      "estimateMax": 12,
+      "requirements": [
+        "R07",
+        "R14",
+        "R16",
+        "R19"
+      ],
+      "dependsOn": [
+        "P05",
+        "V01"
+      ],
+      "value": "Verify image integration beyond a happy-path call.",
+      "scope": [
+        "Generated-only image conformance",
+        "Boot, restart and supported interface evolution"
+      ],
+      "acceptance": [
+        "Each run records image fingerprint/source manifest/enforcing status.",
+        "Boot registration and authorized/denied client behavior pass.",
+        "Service kill/restart yields fresh epoch and no old-job restoration.",
+        "Supported generated-interface evolution passes previously compiled platform consumer fixture.",
+        "File capability stays unsupported and rejects without receiving/retaining user data.",
+        "All actual failures/skip reasons retained; app-profile test cannot substitute."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Run image instrumentation/conformance matrix using generated fixtures only.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "procedure": "On the P01-authorized Linux host, checkout the pinned manifest, select the exact P02 build target, build changed modules/image using its documented AOSP build recipe, boot that image in the recorded virtual target, wait for adb readiness, capture ro.build.fingerprint and getenforce, then run the ticket-specific authorized/denied/restart/corpus cases. Record source manifest, build output, boot logs and case results. P01 is an inventory-only exception; P02 exercises baseline only.",
+          "commands": [
+            "adb shell getprop ro.build.fingerprint",
+            "adb shell getenforce"
+          ],
+          "expected": "Executed target matches pinned image and enforcing policy; source-only compilation never closes image runtime acceptance. P01/P02 prerequisite exclusions apply as specified in scope."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/P06/README.md",
+        "docs/evidence/P06/results.json"
+      ],
+      "risks": [
+        "Platform binary compatibility differs from Gradle app AIDL; keep fixtures distinct."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/48"
+    },
+    {
+      "key": "P07",
+      "title": "Investigate platform scheduling or memory with a controlled experiment",
+      "parent": "B15",
+      "stage": "G3",
+      "priority": "P2",
+      "role": "Platform performance engineer",
+      "estimateMin": 8,
+      "estimateMax": 16,
+      "requirements": [
+        "R04",
+        "R05",
+        "R17"
+      ],
+      "dependsOn": [
+        "P06",
+        "M01"
+      ],
+      "value": "Develop defensible system-layer performance evidence.",
+      "scope": [
+        "Trace-backed generated-work investigation",
+        "Bounded candidate experiment"
+      ],
+      "acceptance": [
+        "Identify actual trace observation and competing explanations.",
+        "Use matched baseline/candidate image/workload and pinned state.",
+        "Separate scheduling/IPC/compute effects with declared metrics.",
+        "Protected cancellation/memory behavior remains within frozen budgets.",
+        "Retain negative/inconclusive conclusions and raw traces.",
+        "Limit conclusions to executed virtual/physical target; no phone generalization."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Run paired generated-work experiment and repeat protected-metric checks.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "procedure": "On the P01-authorized Linux host, checkout the pinned manifest, select the exact P02 build target, build changed modules/image using its documented AOSP build recipe, boot that image in the recorded virtual target, wait for adb readiness, capture ro.build.fingerprint and getenforce, then run the ticket-specific authorized/denied/restart/corpus cases. Record source manifest, build output, boot logs and case results. P01 is an inventory-only exception; P02 exercises baseline only.",
+          "commands": [
+            "adb shell getprop ro.build.fingerprint",
+            "adb shell getenforce"
+          ],
+          "expected": "Executed target matches pinned image and enforcing policy; source-only compilation never closes image runtime acceptance. P01/P02 prerequisite exclusions apply as specified in scope."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/P07/README.md",
+        "docs/evidence/P07/results.json"
+      ],
+      "risks": [
+        "No promised speedup or transfer of file-profile claims to platform profile."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/52"
+    },
+    {
+      "key": "P08",
+      "title": "Run two-hour bounded generated-profile platform soak",
+      "parent": "B15",
+      "stage": "G3",
+      "priority": "P2",
+      "role": "Platform QA engineer",
+      "estimateMin": 4,
+      "estimateMax": 8,
+      "requirements": [
+        "R05",
+        "R07"
+      ],
+      "dependsOn": [
+        "P06"
+      ],
+      "value": "Observe longer-running resource and failure behavior.",
+      "scope": [
+        "Two-hour campaign plus active analysis",
+        "Restart/churn/cap accounting"
+      ],
+      "acceptance": [
+        "Complete two-hour declared workload or record exact failure time/incomplete status.",
+        "Preserve offered/admitted/rejected/completed/lost counts.",
+        "Track worker/session/retention and actual memory trends.",
+        "Restart faults never create false success or restore old epoch.",
+        "Enforcing state remains unchanged throughout.",
+        "No file descriptors from user attachments are introduced."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Run timed image campaign and regenerate counter/memory report from logs.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "procedure": "On the P01-authorized Linux host, checkout the pinned manifest, select the exact P02 build target, build changed modules/image using its documented AOSP build recipe, boot that image in the recorded virtual target, wait for adb readiness, capture ro.build.fingerprint and getenforce, then run the ticket-specific authorized/denied/restart/corpus cases. Record source manifest, build output, boot logs and case results. P01 is an inventory-only exception; P02 exercises baseline only.",
+          "commands": [
+            "adb shell getprop ro.build.fingerprint",
+            "adb shell getenforce"
+          ],
+          "expected": "Executed target matches pinned image and enforcing policy; source-only compilation never closes image runtime acceptance. P01/P02 prerequisite exclusions apply as specified in scope."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/P08/README.md",
+        "docs/evidence/P08/results.json"
+      ],
+      "risks": [
+        "Finite soak does not establish production SLO; elapsed runtime additional to active labor."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/53"
+    },
+    {
+      "key": "P09",
+      "title": "Reproduce final image and reconcile platform productization gaps",
+      "parent": "B16",
+      "stage": "G3",
+      "priority": "P2",
+      "role": "Release architect",
+      "estimateMin": 8,
+      "estimateMax": 16,
+      "requirements": [
+        "R09",
+        "R18"
+      ],
+      "dependsOn": [
+        "P07",
+        "P08",
+        "L02"
+      ],
+      "value": "Make final platform evidence reproducible and bounded.",
+      "scope": [
+        "Fresh source/image recipe",
+        "Final evidence and productization handoff"
+      ],
+      "acceptance": [
+        "Recipe reproduces pinned image/client from documented inputs.",
+        "Final ledger references executed image tests and unresolved failures.",
+        "Review identity/method is real; absence of independent volunteer explicitly author-only.",
+        "Commercial rollout, maintenance, security, distribution and career gaps stated.",
+        "Generated-only platform scope and unsupported file capability remain visible.",
+        "No deployment or production certification claimed by source publication."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Execute fresh reproduction where resources permit and audit final claims against evidence.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "procedure": "On the P01-authorized Linux host, checkout the pinned manifest, select the exact P02 build target, build changed modules/image using its documented AOSP build recipe, boot that image in the recorded virtual target, wait for adb readiness, capture ro.build.fingerprint and getenforce, then run the ticket-specific authorized/denied/restart/corpus cases. Record source manifest, build output, boot logs and case results. P01 is an inventory-only exception; P02 exercises baseline only.",
+          "commands": [
+            "adb shell getprop ro.build.fingerprint",
+            "adb shell getenforce"
+          ],
+          "expected": "Executed target matches pinned image and enforcing policy; source-only compilation never closes image runtime acceptance. P01/P02 prerequisite exclusions apply as specified in scope."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/P09/README.md",
+        "docs/evidence/P09/results.json"
+      ],
+      "risks": [
+        "Independent reproduction cannot be fabricated or made contingent on invented collaborators."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/57"
+    },
+    {
+      "key": "FP01",
+      "title": "Freeze FieldPack manifest, file profile and shared negative vectors",
+      "parent": "B17",
+      "stage": "G1",
+      "priority": "P0",
+      "role": "Contract architect",
+      "estimateMin": 4,
+      "estimateMax": 8,
+      "requirements": [
+        "R01",
+        "R03",
+        "R07",
+        "R10",
+        "R11"
+      ],
+      "dependsOn": [
+        "C02"
+      ],
+      "value": "Give producer and recipient one precise portable integrity contract.",
+      "scope": [
+        "Strict manifest v1",
+        "Flat aliases and bounded real-file profile"
+      ],
+      "acceptance": [
+        "Top-level fields exactly format/version/algorithm/files; entries exactly name/size/sha256; reject unknown/duplicate keys and wrong types including bool integers.",
+        "Use 1–64 lowercase ASCII aliases matching [a-z0-9][a-z0-9._-]{0,63}, reject dot/dotdot, separators and trailing dot and reserved basenames con/prn/aux/nul/com1..9/lpt1..9 per docs/FIELDPACK.md; no implicit normalization.",
+        "Require sorted unique aliases, 1–32 entries, SHA-256 lowercase hex, 128MiB per file AND aggregate, 16KiB UTF-8 manifest, 64KiB chunks.",
+        "No URI/path/original filename/device identity/timestamp emitted; aliases literal, no percent decoding.",
+        "Freeze MATCH/MISSING/SIZE_MISMATCH/DIGEST_MISMATCH/UNREADABLE_OR_UNSUPPORTED; exit0 all match, exit1 any non-MATCH entry including unreadable, exit2 invalid manifest/root or operation-level error; interrupt130.",
+        "Reject malformed manifest before attachment opens; extra directory files ignored and explicitly stated.",
+        "Android profile accepts read-only regular seekable whole-file descriptors only; AOSP generated-only.",
+        "Mutation checks describe observed bytes, not immutable snapshot, authenticity or malware safety."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Review frozen manifest/file specification and executable reference vectors. Native/JVM vector execution is downstream acceptance and does not block completion of the contract document.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/FP01/README.md",
+        "docs/evidence/FP01/results.json"
+      ],
+      "risks": [
+        "Portable aliases intentionally restrict names; no broad Unicode/nested-path support.",
+        "Alias policy must align reference implementation before final acceptance.",
+        "Reference policy is frozen; native/JVM adoption must run the same versioned vectors."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/24"
+    },
+    {
+      "key": "REF01",
+      "title": "Deliver runnable Python FieldPack reference, tests, fixtures and walkthrough",
+      "parent": "B17",
+      "stage": "reference",
+      "priority": "P0",
+      "role": "Python reference maintainer",
+      "estimateMin": 6,
+      "estimateMax": 12,
+      "requirements": [
+        "R05",
+        "R07",
+        "R09",
+        "R10",
+        "R11",
+        "R18"
+      ],
+      "dependsOn": [],
+      "value": "Provide a useful bounded real-file example before native middleware exists.",
+      "scope": [
+        "Python stdlib create/verify CLI",
+        "Owned fixture and happy/changed/missing walkthrough",
+        "Reference file contract already delivered in docs/FIELDPACK.md; native adoption remains FP01/C02 work. Historical planning range 6–12h is not an elapsed-time assertion."
+      ],
+      "acceptance": [
+        "Commands accept actual caller-specified supported files/root and output, not hard-coded fixture identities.",
+        "Use bounded reads, strict manifest validation and FP01 caps; symlink/nonregular/unsafe aliases reject under documented POSIX capability profile.",
+        "Create publishes complete output outside input root with explicit no-overwrite behavior; failed creation leaves no success-shaped manifest; verifier never mutates inputs.",
+        "Known empty/binary/multichunk digests match independent oracle; changed and missing files produce distinct nonzero outcomes.",
+        "Test duplicate keys, bool sizes, limits, path escapes, injected read/mutation errors and interruption without claiming all mutation detection.",
+        "Root-relative safe opens and capability limitations documented; diagnostics expose aliases only.",
+        "Clean walkthrough creates/verifies project-owned note, CSV and PNG fixtures, then modifies/removes temporary copies; explicit Python-reference label, no Binder/Flutter/JVM completion.",
+        "Record actual command/interpreter/host/commit/test counts before root changes planned status to verified."
+      ],
+      "verification": [
+        {
+          "proposed": false,
+          "commands": [
+            "python3 -m unittest discover -s examples/fieldpack -v",
+            "python3 examples/fieldpack/demo.py",
+            "python3 -O examples/fieldpack/demo.py",
+            "python3 examples/fieldpack/fieldpack.py verify --root examples/fieldpack/fixtures --manifest examples/fieldpack/inspection.fieldpack.json"
+          ],
+          "environment": "Executed receipt: Python 3.14.5, Darwin arm64, 2026-10-30; examples/fieldpack/EVIDENCE.md. Agent07 read receipt; root owns execution.",
+          "expected": "Receipt records 12 passing tests, both demo modes PASS and all three committed fixture aliases MATCH; no native runtime implication."
+        },
+        {
+          "proposed": false,
+          "procedure": "Agent10 scoped independent AI review reported pass by root; retain report link and label reviewer as AI.",
+          "expected": "No implication of independent human/native middleware review."
+        }
+      ],
+      "evidence": [
+        "docs/FIELDPACK.md",
+        "examples/fieldpack/README.md",
+        "examples/fieldpack/EVIDENCE.md",
+        "examples/fieldpack/test_fieldpack.py",
+        "examples/fieldpack/inspection.fieldpack.json"
+      ],
+      "risks": [
+        "Reference success does not close native epics.",
+        "Root is implementing independently; reconcile actual CLI and evidence paths before publication."
+      ],
+      "status": "verified",
+      "reviewMethod": "Independent AI source review and local execution; no human review claimed.",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/21"
+    },
+    {
+      "key": "FP02",
+      "title": "Implement Android regular-file capability and descriptor ownership",
+      "parent": "B17",
+      "stage": "G2",
+      "priority": "P1",
+      "role": "Android storage/IPC engineer",
+      "estimateMin": 8,
+      "estimateMax": 16,
+      "requirements": [
+        "R05",
+        "R07",
+        "R14",
+        "R16",
+        "R17"
+      ],
+      "dependsOn": [
+        "FP01",
+        "A02",
+        "C04"
+      ],
+      "value": "Hash authorized real files across Binder without broad storage access.",
+      "scope": [
+        "Client-opened read-only PFD transfer",
+        "Platform-neutral positional reader adapter"
+      ],
+      "acceptance": [
+        "Broker receives actual cross-package descriptor; never reopens client URI/path; no file bytes in AIDL arrays.",
+        "Validate regular/seekable/read-only whole-file descriptor and known 0–128MiB length; reject pipe/socket/directory/closed/writable/subsection inputs without content probing.",
+        "Use positional reads from offset zero; client cursor changes do not alter digest.",
+        "Client closes local PFD after synchronous submit returns/errors; broker owns received PFD through rejection/duplicate/terminal/cleanup with exactly one close owner.",
+        "Same retained request metadata returns old job and closes incoming duplicate FD without reading; conflict closes FD.",
+        "Before/after same-FD metadata and exact byte count detect chosen changes; premature EOF/growth/read error cannot succeed.",
+        "One worker stays occupied until blocked read exits; no hard cancellation deadline, unsafe thread kill or replacement pool.",
+        "100-cycle rejection/acceptance tests show owned FD baseline recovery.",
+        "Reject st_nlink != 1 and explicitly unsupported source properties; absence of required validation cannot silently enable file capability."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Run actual Android provider/regular-FD tests with wrong owner, shared cursor, revoked open, read errors and deterministic mutations.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "commands": [
+            "./gradlew :android:broker:connectedAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=boundarylab.RegularFileCapabilityTest"
+          ],
+          "environment": "Repository root for Gradle/Python; selected Flutter package directory for flutter. Device/target identifiers and module/task names are proposed placeholders to freeze at kickoff; these native modules and harnesses do not exist yet.",
+          "expected": "Commands execute the stated acceptance corpus on actual required target and return success; retain complete counts and negative-case assertions, not only build exit status."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/FP02/README.md",
+        "docs/evidence/FP02/results.json"
+      ],
+      "risks": [
+        "Regular provider-backed reads may still block; provider support is explicit.",
+        "If implementation exceeds 16h split adapter and transport follow-up before starting."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/38"
+    },
+    {
+      "key": "FP03",
+      "title": "Implement native FieldPack selection, assembly and explicit export",
+      "parent": "B17",
+      "stage": "G2",
+      "priority": "P1",
+      "role": "Android application engineer",
+      "estimateMin": 8,
+      "estimateMax": 16,
+      "requirements": [
+        "R07",
+        "R09",
+        "R14",
+        "R18"
+      ],
+      "dependsOn": [
+        "FP02",
+        "A03"
+      ],
+      "value": "Let an inspector create a complete attachment-integrity manifest.",
+      "scope": [
+        "SAF picker/open lifecycle",
+        "Sequential pack attempt and manifest export"
+      ],
+      "acceptance": [
+        "Select 1–32 documents with read-only grants; no all-files permission, URI-to-path conversion or default persisted grant.",
+        "Open off UI thread with bounded concurrency; null/missing/revoked/provider-cancel/late-open results handled and FDs closed.",
+        "Assign approved safe aliases; reject collisions and pack aggregate over128MiB before successful export.",
+        "Sequential jobs share one assembly attempt; any failure/cancel/loss prevents success manifest.",
+        "New explicit attempt rehashes all inputs; never combine prior epoch partial results silently.",
+        "Successful export requires confirmed destination write; cancellation/write failure not shown as exported.",
+        "Explain matching alias filenames must be transferred separately; no source-file copy or cloud transfer implied."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Use actual picker with owned fixtures and test provider delays/revocation; verify output via REF01 and negative second-file/loss scenarios.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "commands": [
+            "./gradlew :examples:android-native:connectedAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=boundarylab.FieldPackFlowTest"
+          ],
+          "environment": "Repository root for Gradle/Python; selected Flutter package directory for flutter. Device/target identifiers and module/task names are proposed placeholders to freeze at kickoff; these native modules and harnesses do not exist yet.",
+          "expected": "Commands execute the stated acceptance corpus on actual required target and return success; retain complete counts and negative-case assertions, not only build exit status."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/FP03/README.md",
+        "docs/evidence/FP03/results.json"
+      ],
+      "risks": [
+        "Picker can expose cloud providers; app makes no network upload but provider I/O may occur.",
+        "Android destination providers may not support atomic replacement; guarantee complete serialized content before write, not universal atomic export."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/40"
+    },
+    {
+      "key": "FP04",
+      "title": "Implement Flutter real-file workflow through native broker adapter",
+      "parent": "B17",
+      "stage": "G2",
+      "priority": "P1",
+      "role": "Flutter/Android engineer",
+      "estimateMin": 8,
+      "estimateMax": 16,
+      "requirements": [
+        "R02",
+        "R07",
+        "R09",
+        "R15"
+      ],
+      "dependsOn": [
+        "FP02",
+        "F02"
+      ],
+      "value": "Offer the same real inspection workflow in Flutter.",
+      "scope": [
+        "Picker native bridge",
+        "Dart pack UI and explicit manifest export"
+      ],
+      "acceptance": [
+        "Actual selection/open/descriptor submit runs native side; no raw bytes/FD numbers/URIs cross Dart channel.",
+        "Use safe opaque selection handles and approved aliases; enforce32-file/128MiB pack limits.",
+        "Real broker produces each digest; Dart cannot hash locally as substitute.",
+        "All-success active attempt alone enables export; cancel/loss/error disables it.",
+        "Engine disposal/navigation/late callbacks release handles and cannot publish stale manifest.",
+        "Native and Flutter equivalent fixtures yield identical sorted manifest content.",
+        "Destination cancellation/write error visible; instructions distinguish export from separately transferred attachments."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Execute real-device Flutter selection through Binder, disposal and broker-loss flows; compare manifest to native/reference vectors.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "commands": [
+            "flutter test integration_test/fieldpack_flow_test.dart -d DEVICE_ID"
+          ],
+          "environment": "Repository root for Gradle/Python; selected Flutter package directory for flutter. Device/target identifiers and module/task names are proposed placeholders to freeze at kickoff; these native modules and harnesses do not exist yet.",
+          "expected": "Commands execute the stated acceptance corpus on actual required target and return success; retain complete counts and negative-case assertions, not only build exit status."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/FP04/README.md",
+        "docs/evidence/FP04/results.json"
+      ],
+      "risks": [
+        "Plugin lifecycle/open cancellation adds native work beyond a happy-path channel."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/45"
+    },
+    {
+      "key": "FP05",
+      "title": "Implement macOS rooted-file host capability and JVM recipient verifier",
+      "parent": "B17",
+      "stage": "G2",
+      "priority": "P1",
+      "role": "Kotlin/JVM engineer",
+      "estimateMin": 8,
+      "estimateMax": 16,
+      "requirements": [
+        "R03",
+        "R07",
+        "R09",
+        "R19"
+      ],
+      "dependsOn": [
+        "FP01",
+        "D02"
+      ],
+      "value": "Verify separately supplied attachments through the real PC host profile.",
+      "scope": [
+        "Explicit startup input root",
+        "Alias-only file operation and strict manifest verification"
+      ],
+      "acceptance": [
+        "Host opens only validated flat aliases below explicit startup root; no hypothetical JDK FD passing.",
+        "No-follow regular-file channel, positional reads and same-handle mutation checks follow supported JDK/filesystem capabilities.",
+        "Pin root identity and detect replacement where possible; document residual same-user TOCTOU, no race-proof sandbox claim.",
+        "CLI strictly validates manifest before attachment reads and invokes separate host process.",
+        "MATCH/MISSING/SIZE_MISMATCH/DIGEST_MISMATCH/UNREADABLE_OR_UNSUPPORTED outcomes and aggregate caps match shared corpus.",
+        "Unknown version, symlink/nonregular/root escape and oversized frames fail safely.",
+        "Generated operation remains supported; file support advertises independently.",
+        "Prove nlink==1, seekability, regular type and no-follow/root checks on selected JDK/filesystem; fail capability gate if unavailable. Any JNI helper is separately reviewed and estimated."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Run macOS host/CLI subprocess tests on real user-specified fixture roots, including tamper/missing/symlink/root-change cases. Include hardlink and nonseekable negatives; record unsupported primitive as a file-capability failure.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "commands": [
+            "./gradlew :desktop:host:integrationTest :desktop:cli:integrationTest"
+          ],
+          "environment": "Repository root for Gradle/Python; selected Flutter package directory for flutter. Device/target identifiers and module/task names are proposed placeholders to freeze at kickoff; these native modules and harnesses do not exist yet.",
+          "expected": "Commands execute the stated acceptance corpus on actual required target and return success; retain complete counts and negative-case assertions, not only build exit status."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/FP05/README.md",
+        "docs/evidence/FP05/results.json"
+      ],
+      "risks": [
+        "Java secure-directory support is platform dependent; scope trust rather than claim unsupported guarantees."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/41"
+    },
+    {
+      "key": "FP06",
+      "title": "Verify manual Android-to-PC FieldPack handoff and failure diagnosis",
+      "parent": "B17",
+      "stage": "G2",
+      "priority": "P1",
+      "role": "Integration QA/documentation engineer",
+      "estimateMin": 4,
+      "estimateMax": 8,
+      "requirements": [
+        "R02",
+        "R03",
+        "R09",
+        "R18",
+        "R19"
+      ],
+      "dependsOn": [
+        "FP03",
+        "FP04",
+        "FP05",
+        "REF01"
+      ],
+      "value": "Show an end-to-end real business example with honest transfer boundaries.",
+      "scope": [
+        "Owned inspection note and generated binary fixture",
+        "Manual alias-preserving transfer and recipient checks"
+      ],
+      "acceptance": [
+        "Native and Flutter each hash same owned attachments through actual broker and export schema-valid manifests.",
+        "Operator separately copies fixtures to supplied macOS directory with exact aliases; no automatic synchronization claimed.",
+        "JVM verifier and Python reference independently agree on good manifest/file set.",
+        "Changed-byte, missing-file and unsupported-input cases return documented distinct failures.",
+        "Broker death mid-pack prevents complete manifest; explicit restart attempt rehashes all.",
+        "Evidence omits private inputs and labels reference versus native versus JVM process proofs.",
+        "Walkthrough works from documented clean state and describes integrity-not-authenticity limitation."
+      ],
+      "verification": [
+        {
+          "proposed": true,
+          "procedure": "Execute entire owned-fixture handoff on declared Android/macOS targets and record sanitized transcript/video.",
+          "expected": "All acceptance cases pass; retain actual counts, failures, environment and commit. No skipped native test counts as passing."
+        },
+        {
+          "proposed": true,
+          "commands": [
+            "python3 examples/fieldpack/fieldpack.py verify --root RECIPIENT_DIRECTORY --manifest EXPORTED_MANIFEST"
+          ],
+          "environment": "Repository root for Gradle/Python; selected Flutter package directory for flutter. Device/target identifiers and module/task names are proposed placeholders to freeze at kickoff; these native modules and harnesses do not exist yet.",
+          "expected": "Commands execute the stated acceptance corpus on actual required target and return success; retain complete counts and negative-case assertions, not only build exit status."
+        }
+      ],
+      "evidence": [
+        "docs/evidence/FP06/README.md",
+        "docs/evidence/FP06/results.json"
+      ],
+      "risks": [
+        "Reference-only walkthrough cannot satisfy this native handoff ticket."
+      ],
+      "status": "planned",
+      "githubIssue": "https://github.com/oudaykhaled/boundarylab/issues/49"
+    }
+  ],
+  "review": {
+    "date": "2026-10-30",
+    "method": "ten independent Astra planning reports; root synthesis; separate AI contract review",
+    "source": "planning/reviews-v2/",
+    "externalHumanReview": false
+  },
+  "externalEvidenceOnly": [
+    "R13",
+    "R20",
+    "R21",
+    "R22"
+  ]
+}
