@@ -6,6 +6,10 @@ BoundaryLab proposes a small framework for bounded, cancellable local jobs, with
 
 **Current status: planning only.** There is no product implementation, installable application, measured performance result or external adopter yet. The initial repository contains the consolidated plan, implementation backlog and ten independent research proposals. Original material is licensed under [Apache-2.0](LICENSE).
 
+## Animated presentation
+
+The [eight-scene browser presentation](presentation/README.md) explains the business value, process boundaries, failure semantics and evidence roadmap. Open its `index.html` locally for offline playback, with pause, scene navigation and reduced-motion support. [Speaker notes](presentation/SPEAKER-NOTES.md) accompany the animation. The motion illustrates proposed behavior; it is not recorded middleware execution.
+
 ## Read the plan
 
 | Document | What you can assess |
