@@ -31,3 +31,7 @@ binder_use(boundarylab_denied)
 binder_call(boundarylab_denied, boundarylab)
 allow boundarylab_denied boundarylab_service:service_manager find;
 write_logd(boundarylab_denied)
+
+# Both probes call security_getenforce(), which opens and reads selinuxfs/enforce.
+# Base domain policy already grants directory search and metadata access.
+allow { boundarylab_probe boundarylab_denied } selinuxfs:file { open read };
