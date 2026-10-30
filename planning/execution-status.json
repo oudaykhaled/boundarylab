@@ -7,7 +7,7 @@
     "tickets-v2.json is the immutable original planning snapshot; this file records current execution without rewriting original acceptance.",
     "Done is scoped task acceptance, not completion of every G1/G2/G3 gate or production release.",
     "In Review identifies implemented work with specific remaining acceptance; it is not a pass.",
-    "Blocked AOSP items need host allocation and their own runtime proof; no spending authorized."
+    "AOSP attempt authorized2026-10-30 with totalUS$50 ceiling and minimum required tests/evidence; host KVM and each ticket runtime proof still required. Original acceptance is preserved; ADR-B14 records the authorized scope amendment."
   ],
   "tickets": [
     {

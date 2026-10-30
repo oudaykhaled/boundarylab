@@ -1,0 +1,52 @@
+{
+  "scope": "local SDK35 AIDL C++ code generation only",
+  "started_at": "2026-10-30T16:20:12.345671+00:00",
+  "ended_at": "2026-10-30T16:20:12.390259+00:00",
+  "argv": [
+    "<ANDROID_SDK_ROOT>/build-tools/35.0.0/aidl",
+    "--lang=cpp",
+    "--structured",
+    "--version=1",
+    "--omit_invocation",
+    "-I",
+    "aosp/aidl",
+    "--out=/var/folders/y4/mjjbmr5j7xd5my1_7vnj6tp40000gn/T/boundarylab-aidl-dg9di572/src",
+    "--header_out=/var/folders/y4/mjjbmr5j7xd5my1_7vnj6tp40000gn/T/boundarylab-aidl-dg9di572/include",
+    "aosp/aidl/dev/boundarylab/platform/Capabilities.aidl",
+    "aosp/aidl/dev/boundarylab/platform/IBoundaryLab.aidl",
+    "aosp/aidl/dev/boundarylab/platform/Request.aidl",
+    "aosp/aidl/dev/boundarylab/platform/Result.aidl"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "input_sha256": {
+    "aosp/aidl/dev/boundarylab/platform/Capabilities.aidl": "4fc33d1e706495bae0806e32c78639d1f7ccde13e1799b3d083b5877df3cf867",
+    "aosp/aidl/dev/boundarylab/platform/IBoundaryLab.aidl": "c2850e424ccc54c724d7139f00bdda373e76a4d766ea714f216378308c2e2c7a",
+    "aosp/aidl/dev/boundarylab/platform/Request.aidl": "e362a699eaf5a0ebb9dad9811f56d18f9d50f08f18bd1bfabf14c606fabcaf62",
+    "aosp/aidl/dev/boundarylab/platform/Result.aidl": "e4e14f3131665cb2515233cb558b54847f178b6d2f9e2b80de026ec5642951de"
+  },
+  "generated_sha256": {
+    "include/dev/boundarylab/platform/BnBoundaryLab.h": "1604a35fc6f5c91cb4a85325a4b5eb6d01e2ab394ee9e58ea84ce095791b5da8",
+    "include/dev/boundarylab/platform/BnCapabilities.h": "b8906568dc2166b2e84ed7bbe275d0444f9f3d2642bc7cca9b45cb03ca495e4c",
+    "include/dev/boundarylab/platform/BnRequest.h": "b8906568dc2166b2e84ed7bbe275d0444f9f3d2642bc7cca9b45cb03ca495e4c",
+    "include/dev/boundarylab/platform/BnResult.h": "b8906568dc2166b2e84ed7bbe275d0444f9f3d2642bc7cca9b45cb03ca495e4c",
+    "include/dev/boundarylab/platform/BpBoundaryLab.h": "9a8a92eb8615da896d3bb54a4697fc46b7427e1f3c3b5b0900402b7222fe3083",
+    "include/dev/boundarylab/platform/BpCapabilities.h": "d132b9a6af380edae6e3ab103d28d4dcaceafc7c6c35b6817631f8328b104eaf",
+    "include/dev/boundarylab/platform/BpRequest.h": "d132b9a6af380edae6e3ab103d28d4dcaceafc7c6c35b6817631f8328b104eaf",
+    "include/dev/boundarylab/platform/BpResult.h": "d132b9a6af380edae6e3ab103d28d4dcaceafc7c6c35b6817631f8328b104eaf",
+    "include/dev/boundarylab/platform/Capabilities.h": "80c7c769f339d86c97a8846bed41d156593cc55fb18d265b9fd19fb7ece457c7",
+    "include/dev/boundarylab/platform/IBoundaryLab.h": "2e4e8e77f72ce7dd1f12585e8fee882329f39a2ff02697ea6a5f4cd8028abec7",
+    "include/dev/boundarylab/platform/Request.h": "e4db86122926140bfb24ae6c17b27384e42cdb085c650d50919843b6fd4cc2da",
+    "include/dev/boundarylab/platform/Result.h": "b528e437318eae8b5a9167f9f0986254f089744096f127dafaff1b00fab2ae6d",
+    "src/dev/boundarylab/platform/Capabilities.cpp": "fe30de07d2d9ab4a769034c4b591cbcd14a1e5a512f58535083aa12e5b1e53f1",
+    "src/dev/boundarylab/platform/IBoundaryLab.cpp": "dce07bf26b35fa416d2a049419690fd72771c76a5aaa12a7bac8db9d0d375836",
+    "src/dev/boundarylab/platform/Request.cpp": "fc86f169093063e91b6fa5910894805402404fb9d464a977dd9bd2f614faf537",
+    "src/dev/boundarylab/platform/Result.cpp": "38c373b4f31e519b2e201ebd3b358c7fbf2d160a5c24e8b3597283830756f775"
+  },
+  "curation": {
+    "redacted": "Local Android SDK absolute home path only; execution results and content hashes unchanged. Original preserved privately outside the repository.",
+    "original_sha256": "62662ade01a4ca39edd0879110523a44dff7617114d68b7166f97b072f07ab81",
+    "curated_at": "2026-10-30T16:21:32.894325+00:00"
+  }
+}

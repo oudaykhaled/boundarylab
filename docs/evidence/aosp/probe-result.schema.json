@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Optional AOSP smoke runner assertion result",
+  "type": "object",
+  "required": ["schema_version", "context", "cases"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "context": {
+      "type": "object",
+      "required": ["fingerprint", "selinux", "service", "service_pid", "build_target", "source_manifest_sha256"],
+      "properties": {
+        "fingerprint": {"type": "string", "minLength": 1},
+        "selinux": {"type": "string", "minLength": 1},
+        "service": {"type": "string", "minLength": 1},
+        "service_pid": {"type": "string", "minLength": 1},
+        "build_target": {"type": "string", "minLength": 1},
+        "source_manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "cases": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "required": ["probe", "status", "expected", "actual"],
+        "properties": {
+          "probe": {"enum": ["boot", "authorized", "denied", "malformed", "over-cap", "unsupported-file", "cancel", "restart", "supervision", "compatibility", "soak", "experiment", "reproduction"]},
+          "status": {"enum": ["passed", "failed", "skipped", "not-run"]},
+          "expected": {}, "actual": {}
+        }
+      }
+    }
+  },
+  "$comment": "Collector additionally rejects duplicate probe names and any passing runtime assertion unless SELinux is Enforcing. No missing case is inferred passed."
+}

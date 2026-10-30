@@ -1,0 +1,33 @@
+type boundarylab, domain, coredomain;
+type boundarylab_exec, exec_type, system_file_type, file_type;
+type boundarylab_service, service_manager_type;
+init_daemon_domain(boundarylab)
+binder_use(boundarylab)
+add_service(boundarylab, boundarylab_service)
+
+# The platform probe is deliberately narrow and userdebug-only in the product.
+# Exact Binder UID is checked independently by the daemon; root is not authorized.
+type boundarylab_probe, domain, coredomain;
+type boundarylab_probe_exec, exec_type, system_file_type, file_type;
+init_daemon_domain(boundarylab_probe)
+binder_use(boundarylab_probe)
+binder_call(boundarylab_probe, boundarylab)
+allow boundarylab_probe boundarylab_service:service_manager find;
+write_logd(boundarylab_probe)
+userdebug_or_eng(`
+    domain_auto_trans(shell, boundarylab_probe_exec, boundarylab_probe)
+    allow boundarylab_probe shell:fd use;
+    allow boundarylab_probe adbd:fd use;
+    allow boundarylab_probe adbd:unix_stream_socket { read write getattr getopt };
+    allow boundarylab_probe devpts:chr_file { read write ioctl getattr };
+    allow boundarylab_probe shell:fifo_file { read write getattr };
+')
+
+# Separate denied identity reaches the UID gate; this is not a discovery-denial test.
+type boundarylab_denied, domain, coredomain;
+type boundarylab_denied_exec, exec_type, system_file_type, file_type;
+init_daemon_domain(boundarylab_denied)
+binder_use(boundarylab_denied)
+binder_call(boundarylab_denied, boundarylab)
+allow boundarylab_denied boundarylab_service:service_manager find;
+write_logd(boundarylab_denied)

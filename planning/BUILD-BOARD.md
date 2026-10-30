@@ -2,6 +2,15 @@
 
 Sole writer: root. Updated 2026-10-30. This board supplements the frozen Planv2 backlog. Implemented, compiled, runtime-verified, reviewed, merged and published are distinct. Tested source: `06b2d4f`; [publication PR#58](https://github.com/oudaykhaled/boundarylab/pull/58). Exact current task states and unmet acceptance are in [EXECUTION-STATUS.md](EXECUTION-STATUS.md).
 
+Current AOSP attempt: the user authorized Google Cloud development/testing/evidence on 2026-10-30 with a **total US$50 ceiling**, minimum necessary tests and evidence captured during execution. This supersedes the earlier resource-only/no-purchase constraint for this attempt; original ticket acceptance remains historical and unmodified. No paid resource has started. Root controls the account, resource lifetime and teardown. The isolated project's USD billing, quota and effective nested-virtualization policy are verified; KVM on an allocated host and the actual build remain unverified.
+
+| AOSP attempt work | Owner | Status | Evidence | Blocker | Next step |
+|---|---|---|---|---|---|
+| Explicit account/project and cost controls | root | Prepared; applied VM settings still pending | Matching account, isolated project, USD billing, CPU/disk quotas, nested policy, narrow IAP-only SSH and US$30 early-warning budget; no VM/disk created | Need actual fixed-deadline/auto-delete response | Use one500-GiB SSD+50-GiB standard boot layout with <=24h absolute DELETE and validate the provider response |
+| Minimum proof and source/target decision | Astra chief | Prepared and reviewed locally | ADR-B14: Android16r4, bp4a userdebug, minimum source-build/native-service proof; pinned public preflight archives identified | Real host/source-build/boot remain unverified | Apply the source pin and preserve all incomplete acceptance |
+| Generated-only native service and smoke harness | AOSP engineer | In progress; local preparation | New `aosp/` implementation only; no execution claimed | Baseline build/boot gate | Prepare source and evidence collection before paid runtime |
+| Cloud run and evidence | root + AOSP engineer | Not started | None | Local readiness and host preflight | One time-limited host, narrow proof, export evidence and remove temporary resources |
+
 | Work | Owner | Status | Evidence | Blocker | Next step |
 |---|---|---|---|---|---|
 | Critical decisions / C02 | Astra chief | Done in declared scope | [Build decisions](../docs/decisions/BUILD-DECISIONS.md), frozen shared API and13 decisions | None for frozen contract; host allocation remains separate | Maintain decisions and revisit triggers |

@@ -1,0 +1,13 @@
+service boundarylab /system_ext/bin/boundarylab_service
+    class main
+    user nobody
+    group nobody
+    restart_period 10
+    # Dedicated daemon: no critical reboot, capability, socket, user files or system_server.
+
+service boundarylab_denied_probe /system_ext/bin/boundarylab_denied_probe denied
+    class late_start
+    user nobody
+    group nobody
+    disabled
+    oneshot

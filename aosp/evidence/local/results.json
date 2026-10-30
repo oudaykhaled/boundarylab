@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-30T16:19:28.811193+00:00",
+  "scope": "local-host-only",
+  "engine": {
+    "command": "./aosp/scripts/test-host.sh",
+    "exit_code": 0,
+    "checks": 61,
+    "all_passed": true,
+    "sanitizers": [
+      "address",
+      "undefined"
+    ],
+    "sanitizer_stderr_bytes": 0
+  },
+  "aidl": {
+    "compiler": "Android SDK Build Tools 35.0.0 aidl",
+    "operation": "--lang=cpp --structured --version=1",
+    "exit_code": 0,
+    "scope": "code generation only; not Android16 Soong build or API freeze"
+  },
+  "scripts": {
+    "python_syntax": "passed",
+    "host_shell_syntax": "passed"
+  },
+  "unexecuted": [
+    "Android16 Soong build",
+    "V1 Soong API freeze",
+    "SELinux compilation",
+    "custom image boot",
+    "device Binder corpus"
+  ],
+  "source_sha256": {
+    "aosp/.gitignore": "f157d45f5cf9b6d04b64bae75d84b586f9fc156cd6cb9af8de2d94ec45cf8618",
+    "aosp/Android.bp": "d4245ae6393541b83de5426d27ba983d8a8ea6800761972d9884637ba90cef1a",
+    "aosp/BoardConfigBoundaryLab.mk": "378a4bb360762017a0f7d9198374f7a2618631bf2191e655cb630bc1f2166056",
+    "aosp/PUBLIC-PREFLIGHT.md": "7e11b175d4e8c9d7506c815c682ebcf5331af13b834a21a84de328166dab8ffc",
+    "aosp/README.md": "3cb4f0496be72d38c8cc1c1146f874bb77248bf2d5525c03f33e1b4ea071d1d9",
+    "aosp/aidl/dev/boundarylab/platform/Capabilities.aidl": "4fc33d1e706495bae0806e32c78639d1f7ccde13e1799b3d083b5877df3cf867",
+    "aosp/aidl/dev/boundarylab/platform/IBoundaryLab.aidl": "c2850e424ccc54c724d7139f00bdda373e76a4d766ea714f216378308c2e2c7a",
+    "aosp/aidl/dev/boundarylab/platform/Request.aidl": "e362a699eaf5a0ebb9dad9811f56d18f9d50f08f18bd1bfabf14c606fabcaf62",
+    "aosp/aidl/dev/boundarylab/platform/Result.aidl": "e4e14f3131665cb2515233cb558b54847f178b6d2f9e2b80de026ec5642951de",
+    "aosp/client/Client.cpp": "e23d6243c599654e24b55346cd9be870c35a3ac80eb71a9ff5bb745d902d492a",
+    "aosp/client/Client.h": "d00e6c0a6dfaed5512bd176baf61736b072166aea4ed8cad9047867d1bfada15",
+    "aosp/client/probe.cpp": "3b87335220b68835438baed142591ec791b32ac79b365702c36aec3d69801b6e",
+    "aosp/engine/Engine.cpp": "b05dd4c31b08cffe3a48bed3280eb2365e28166acc7f74c2ce9bb3218cb20cc1",
+    "aosp/engine/Engine.h": "3900dbe8968074de7aac66f2dffa3573dfe061cd54ea331436723333878dd790",
+    "aosp/product.mk": "6dc19f988be4709ab44001420b155250afa2cd5c650812eea23c097f810db10c",
+    "aosp/scripts/device-smoke.py": "70c171f60e8673587a1da1b32eeff5b2f62ed9c0d55faa9837a8bc0170f4ab6e",
+    "aosp/scripts/stage-overlay.py": "abcf0aacef96e60c63ada03080566b33fe4c8825e0b389d5854cf28c9cfd970e",
+    "aosp/scripts/test-host.sh": "395adb2ce290cc917889dfb0cde59d1acdc42e956eb48bb7a6f30ce36fcb7f31",
+    "aosp/sepolicy/private/boundarylab.te": "910968444721c68967443bfc4901aeab236c1ac16b678a12eb9b896ace90db64",
+    "aosp/sepolicy/private/file_contexts": "5185be83d1c73e981c22b07b87d7b01afbe4fd323d2fa04ccfa3b0ca53efd1e0",
+    "aosp/sepolicy/private/service_contexts": "c5af65af923153597bccdf76a80db3d78d38eda4a21669629e734b7d66ce1c4d",
+    "aosp/service/boundarylab.rc": "9c2eb2ad0ecd0b5654ec182d02f0678fa5b741f3d87796d151e43ea82f3cd0cd",
+    "aosp/service/main.cpp": "e3de5457f72dfbfe0c0ba254117dde373020a8a84ba2ba0955ef3161f508d5d5",
+    "aosp/tests/Vectors.h": "3f72bb5701081a01f476de1ed57bb62f5f822d3ff27f37a6fc592eebefcfb016",
+    "aosp/tests/engine_test.cpp": "6c5cc1fe0f00342b803d9c01dd80132a0b5e54f4fc1b357927027ff2da7d71b0"
+  },
+  "review_updates": "Source snapshot refreshed after reviewed platform probe/policy/harness edits; engine and AIDL inputs unchanged. No image/runtime claim."
+}

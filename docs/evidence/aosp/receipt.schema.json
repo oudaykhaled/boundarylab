@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BoundaryLab AOSP collector receipt v1",
+  "type": "object",
+  "required": ["schema_version", "event_type"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "event_type": {"enum": ["attempt", "command-start", "command", "artifact"]},
+    "scope": {"enum": ["resource-preflight", "prebuilt-baseline", "source-baseline", "custom-image", "collector-self-test"]}
+  },
+  "oneOf": [
+    {
+      "properties": {"event_type": {"const": "command-start"}},
+      "required": ["id", "scope", "label", "started_utc", "command", "timeout_seconds", "partial_log_paths", "status"]
+    },
+    {
+      "properties": {"event_type": {"const": "attempt"}},
+      "required": ["created_utc", "attempt_id", "source_commit", "build_target", "device_class", "initial_probe_status", "limitations"]
+    },
+    {
+      "properties": {
+        "event_type": {"const": "command"},
+        "command": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "timed_out": {"type": "boolean"},
+        "command_expectation_met": {"type": "boolean"},
+        "probe_assertions_passed": {"type": "boolean"},
+        "outputs": {"type": "object", "required": ["stdout", "stderr"]}
+      },
+      "required": ["id", "scope", "label", "started_utc", "ended_utc", "duration_seconds", "timeout_seconds", "command", "exit_code", "expected_exit_code", "timed_out", "launch_error", "command_expectation_met", "outputs", "probe_result", "probe_parse_error", "probe_assertions_passed"]
+    },
+    {
+      "properties": {"event_type": {"const": "artifact"}, "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "bytes": {"type": "integer", "minimum": 0}},
+      "required": ["id", "scope", "label", "captured_utc", "sha256", "bytes", "path", "hash_only"]
+    }
+  ],
+  "$comment": "Schema validates receipt shape, not truth or platform acceptance. Referenced-file hashes must be verified and copied inventory compared. Command exit is distinct from semantic assertions."
+}
