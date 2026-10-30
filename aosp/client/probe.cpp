@@ -141,7 +141,7 @@ int main(int argc, char** argv) {
     check(client.submit(r).error == "INCOMPATIBLE", "submit_major_2");
     {
         android::Parcel data, reply;
-        data.writeInterfaceToken(wire::IBoundaryLab::getInterfaceDescriptor());
+        data.writeInterfaceToken(wire::IBoundaryLab::descriptor);
         data.writeFileDescriptor(STDOUT_FILENO);
         const auto status = android::IInterface::asBinder(client.raw())->transact(android::IBinder::FIRST_CALL_TRANSACTION + 2, data, &reply);
         android::binder::Status result;
@@ -153,7 +153,7 @@ int main(int argc, char** argv) {
     }
     {
         android::Parcel data, reply;
-        data.writeInterfaceToken(wire::IBoundaryLab::getInterfaceDescriptor());
+        data.writeInterfaceToken(wire::IBoundaryLab::descriptor);
         data.writeString16(android::String16(std::string(4096, 'a').c_str()));
         const auto status = android::IInterface::asBinder(client.raw())->transact(android::IBinder::FIRST_CALL_TRANSACTION, data, &reply);
         android::binder::Status result; auto parsed = result.readFromParcel(reply);
