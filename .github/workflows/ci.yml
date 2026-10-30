@@ -22,7 +22,7 @@ jobs:
       matrix:
         include:
           - { profile: jvm, os: ubuntu-24.04 }
-          - { profile: jvm, os: macos-14 }
+          - { profile: jvm, os: macos-15 }
           - { profile: android, os: ubuntu-24.04 }
           - { profile: reference, os: ubuntu-24.04 }
     steps:

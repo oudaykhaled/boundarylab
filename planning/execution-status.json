@@ -882,5 +882,7 @@
       "Blocked": 6
     },
     "note": "P03-P05 and B13 Done only after published exact source/evidence and independent18-clause AI audit; B14 remains In Progress1/2, P06-P09/B15/B16 Blocked. Final PR merge is separate from scoped ticket acceptance."
-  }
+  },
+  "integrationPullRequest": "https://github.com/oudaykhaled/boundarylab/pull/59",
+  "ciRunnerMigrationEvidence": "docs/evidence/build/ci-macos14-brownout-20261030.json"
 }
