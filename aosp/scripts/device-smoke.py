@@ -7,6 +7,7 @@ import argparse
 from datetime import datetime, timezone
 import hashlib
 import json
+import re
 from pathlib import Path
 import subprocess
 import shlex
@@ -65,9 +66,73 @@ def shell(*args, **kwargs):
     return adb('shell', shlex.join(args), **kwargs)['stdout'].strip()
 
 
+def verify_raw_fd(records, logs):
+    observations = [r['rawFd'] for r in records if 'rawFd' in r]
+    check('raw_fd_observation', len(observations) == 1, observations)
+    observation = observations[0]
+    status = observation.get('status')
+    classification = observation.get('classification')
+    if classification == 'SERVICE_INVALID':
+        check('raw_fd_rejected', status == 0 and observation.get('parsedStatus') == 0 and
+              observation.get('replyDecoded') is True and observation.get('exceptionCode') == -8 and
+              observation.get('serviceError') == 1, observation)
+        return
+    if classification == 'PERMISSION_DENIED':
+        check('raw_fd_rejected', status == -1 and observation.get('parsedStatus') == -1 and observation.get('replyDecoded') is False, observation)
+        return
+    check('raw_fd_observation_shape', classification == 'FAILED_TRANSACTION_REQUIRES_AVC' and
+          status == -2147483646 and observation.get('parsedStatus') == status and
+          observation.get('replyDecoded') is False, observation)
+    fields = ('pid', 'stdoutInode', 'startedEpochMs', 'endedEpochMs')
+    check('raw_fd_identity_shape', all(type(observation.get(k)) is int and observation[k] > 0 for k in fields)
+          and observation['startedEpochMs'] <= observation['endedEpochMs'], observation)
+    # Audit timestamps are quantized and logd delivers driver messages asynchronously.
+    # One second on either side is fixed; exact PID, inode, audit ID and identities
+    # must still match. No missing or unrelated transport error becomes a pass.
+    lower = observation['startedEpochMs'] / 1000 - 1
+    upper = observation['endedEpochMs'] / 1000 + 1
+    events = []
+    for line in logs.splitlines():
+        match = re.match(r'^\s*(\d+\.\d+)\s+(\d+)\s+(\d+)\s+[VDIWEF]\s+([^:]+):\s*(.*)$', line)
+        if match and lower <= float(match[1]) <= upper:
+            events.append((int(match[2]), match[4].strip(), match[5], line))
+    pid, inode = observation['pid'], observation['stdoutInode']
+    avcs = []
+    audit_ids = set()
+    for event_pid, tag, message, line in events:
+        audit = re.search(r'audit\([^)]*:(\d+)\)', message)
+        if event_pid == pid and tag in {'auditd', 'boundarylab_pro'} and audit and re.search(r'avc:\s+denied\s+\{\s*use\s*\}', message) and all(
+                token in message.split() for token in (
+                    'type=1400', f'ino={inode}', 'scontext=u:r:boundarylab:s0', 'tcontext=u:r:adbd:s0',
+                    'tclass=fd', 'permissive=0')):
+            avcs.append(line)
+            audit_ids.add(audit[1])
+    check('raw_fd_unique_denial_audit', len(audit_ids) == 1,
+          {'observation': observation, 'audit_ids': sorted(audit_ids), 'avcs': avcs})
+    audit_id = next(iter(audit_ids))
+    identities = [line for event_pid, tag, message, line in events if event_pid == pid and
+        tag in {'auditd', 'boundarylab_pro'} and
+        re.search(r'audit\([^)]*:' + re.escape(audit_id) + r'\)', message) and
+        all(token in message.split() for token in ('type=1300', 'syscall=16', 'uid=2000', 'euid=2000',
+            'exe="/system_ext/bin/boundarylab_probe"', 'subj=u:r:boundarylab_probe:s0'))]
+    drivers = [line for event_pid, tag, message, line in events if event_pid == 0 and tag == 'rust_binder' and re.search(
+        r'Transaction failed: BR_FAILED_REPLY \{ source: EACCES \} my_pid:' + str(pid) + r'\b', message)]
+    check('raw_fd_rejected', bool(identities) and len(drivers) == 1,
+          {'classification': 'CORRELATED_SELINUX_FD_USE_DENIAL', 'observation': observation,
+           'audit_id': audit_id, 'avcs': avcs, 'identities': identities, 'drivers': drivers})
+
+
 def run_probe(*args, timeout=150):
-    out = shell(probe, *args, timeout=timeout)
-    records = [json.loads(line) for line in out.splitlines() if line.startswith('{')]
+    smoke = args == ('smoke',)
+    log_start = shell('date', '+%m-%d %H:%M:%S.000') if smoke else None
+    receipt = adb('shell', shlex.join((probe, *args)), timeout=timeout, required=False)
+    # Preserve denial/driver logs even when a later probe case fails. Shell's log
+    # access on this userdebug image needs no root or policy expansion.
+    logs = shell('logcat', '-b', 'all', '-d', '-v', 'epoch', '-T', log_start) if smoke else ''
+    records = [json.loads(line) for line in receipt['stdout'].splitlines() if line.startswith('{')]
+    if smoke:
+        verify_raw_fd(records, logs)
+    check('probe_command:' + ' '.join(args), receipt['exit_code'] == 0, receipt)
     for record in records:
         if 'case' in record:
             check('probe:' + record['case'], record['passed'], record)

@@ -8,6 +8,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <thread>
+#include <sys/stat.h>
 #include <unistd.h>
 #include <vector>
 namespace wire = dev::boundarylab::platform;
@@ -141,15 +142,37 @@ int main(int argc, char** argv) {
     check(client.submit(r).error == "INCOMPATIBLE", "submit_major_2");
     {
         android::Parcel data, reply;
-        data.writeInterfaceToken(wire::IBoundaryLab::descriptor);
-        data.writeFileDescriptor(STDOUT_FILENO);
+        check(data.writeInterfaceToken(wire::IBoundaryLab::descriptor) == android::OK &&
+              data.writeFileDescriptor(STDOUT_FILENO) == android::OK, "raw_fd_parcel_written");
+        struct stat stdoutStat {};
+        check(fstat(STDOUT_FILENO, &stdoutStat) == 0, "raw_fd_identity_available");
+        const auto epochMillis = [] {
+            return std::chrono::duration_cast<std::chrono::milliseconds>(
+                std::chrono::system_clock::now().time_since_epoch()).count();
+        };
+        const auto started = epochMillis();
         const auto status = android::IInterface::asBinder(client.raw())->transact(android::IBinder::FIRST_CALL_TRANSACTION + 2, data, &reply);
+        const auto ended = epochMillis();
         android::binder::Status result;
         const auto parsed = status == android::OK ? result.readFromParcel(reply) : status;
-        const bool serviceRejected = status == android::OK && parsed == android::OK &&
+        const bool decoded = status == android::OK && parsed == android::OK;
+        const bool serviceRejected = decoded &&
             result.exceptionCode() == android::binder::Status::EX_SERVICE_SPECIFIC && result.serviceSpecificErrorCode() == 1;
         const bool kernelDenied = status == android::PERMISSION_DENIED;
-        check(serviceRejected || kernelDenied, "raw_fd_rejected", serviceRejected ? "SERVICE_INVALID" : "KERNEL_PERMISSION_DENIED");
+        const bool pendingPolicyEvidence = status == android::FAILED_TRANSACTION;
+        const std::string classification = serviceRejected ? "SERVICE_INVALID" : kernelDenied ? "PERMISSION_DENIED" :
+            pendingPolicyEvidence ? "FAILED_TRANSACTION_REQUIRES_AVC" : "UNEXPECTED_RESULT";
+        // FAILED_TRANSACTION also represents unrelated failures (including frozen targets).
+        // This observation is never a rejection pass: the host must correlate the actual
+        // FD, caller, audit identity, and driver EACCES before the combined proof succeeds.
+        std::cout << "{\"rawFd\":{\"pid\":" << getpid() << ",\"stdoutInode\":" << stdoutStat.st_ino
+                  << ",\"status\":" << status << ",\"parsedStatus\":" << parsed
+                  << ",\"replyDecoded\":" << (decoded ? "true" : "false")
+                  << ",\"exceptionCode\":" << result.exceptionCode() << ",\"serviceError\":" << result.serviceSpecificErrorCode()
+                  << ",\"startedEpochMs\":" << started << ",\"endedEpochMs\":" << ended
+                  << ",\"classification\":\"" << classification << "\"}}" << std::endl;
+        if (!serviceRejected && !kernelDenied && !pendingPolicyEvidence)
+            check(false, "raw_fd_rejected", classification + ":" + std::to_string(status));
     }
     {
         android::Parcel data, reply;
