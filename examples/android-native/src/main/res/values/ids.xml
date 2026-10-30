@@ -1,0 +1,9 @@
+<resources>
+    <item type="id" name="select_attachments" />
+    <item type="id" name="prepare_pack" />
+    <item type="id" name="cancel_attempt" />
+    <item type="id" name="export_manifest" />
+    <item type="id" name="run_generated" />
+    <item type="id" name="pack_status" />
+    <item type="id" name="attachment_list" />
+</resources>

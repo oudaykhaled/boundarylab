@@ -1,0 +1,53 @@
+{
+  "target": "physical Samsung SM-A336B API36",
+  "installs": [
+    {
+      "command": [
+        "adb",
+        "-s",
+        "<allocated-target>",
+        "install",
+        "-r",
+        "-t",
+        "<repository>/android/broker/build/outputs/apk/debug/broker-debug.apk"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.555,
+      "stdout": "Performing Streamed Install\nSuccess\n",
+      "stderr": "",
+      "apk_sha256": "33504ece04cfc679ac1ebe57eb912b80702adf0630f717c56bf1d1b30c8fd463"
+    },
+    {
+      "command": [
+        "adb",
+        "-s",
+        "<allocated-target>",
+        "install",
+        "-r",
+        "-t",
+        "<repository>/android/broker/build/outputs/apk/androidTest/debug/broker-debug-androidTest.apk"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.614,
+      "stdout": "Performing Streamed Install\nSuccess\n",
+      "stderr": "",
+      "apk_sha256": "e620ba737a56cf288eb0c74e0e0f90a917b62dbdd8aa3d8f6728dbb1023fd02e"
+    },
+    {
+      "command": [
+        "adb",
+        "-s",
+        "<allocated-target>",
+        "install",
+        "-r",
+        "-t",
+        "<repository>/examples/android-native/build/outputs/apk/debug/android-native-debug.apk"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.842,
+      "stdout": "Performing Streamed Install\nSuccess\n",
+      "stderr": "",
+      "apk_sha256": "f753b0cfade7141ce96e7a0f2645331f85e7a8596c15a44a4084f3453daab62f"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "target": "physical Samsung SM-A336B API36",
+  "installs": [
+    {
+      "command": [
+        "adb",
+        "-s",
+        "<allocated-target>",
+        "install",
+        "-r",
+        "-t",
+        "<repository>/android/broker/build/outputs/apk/debug/broker-debug.apk"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.323,
+      "stdout": "Performing Streamed Install\nSuccess\n",
+      "stderr": "",
+      "apk_sha256": "902f4318e27e9df5fae1d881d35f426a3c8bb2dbe263867bb984cebe6ee21bbd"
+    },
+    {
+      "command": [
+        "adb",
+        "-s",
+        "<allocated-target>",
+        "install",
+        "-r",
+        "-t",
+        "<repository>/examples/android-native/build/outputs/apk/debug/android-native-debug.apk"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.359,
+      "stdout": "Performing Streamed Install\nSuccess\n",
+      "stderr": "",
+      "apk_sha256": "54f5e21478b92f94c8f41d81db46932ab46da34d78c53cb33f3fc4fc0570a66c"
+    },
+    {
+      "command": [
+        "adb",
+        "-s",
+        "<allocated-target>",
+        "install",
+        "-r",
+        "-t",
+        "<repository>/examples/android-native/build/outputs/apk/androidTest/debug/android-native-debug-androidTest.apk"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.339,
+      "stdout": "Performing Streamed Install\nSuccess\n",
+      "stderr": "",
+      "apk_sha256": "da0fd4df1458a79a6a6d6590ce14f9c5bd035c43c5170c687873fbc59080eeff"
+    },
+    {
+      "command": [
+        "adb",
+        "-s",
+        "<allocated-target>",
+        "install",
+        "-r",
+        "-t",
+        "<repository>/android/denied-client/build/outputs/apk/debug/denied-client-debug.apk"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.256,
+      "stdout": "Performing Streamed Install\nSuccess\n",
+      "stderr": "",
+      "apk_sha256": "4b2ed1aeffa1fc430cbadab7344c159b56536461c8ace42109796f8b6909ba12"
+    },
+    {
+      "command": [
+        "adb",
+        "-s",
+        "<allocated-target>",
+        "install",
+        "-r",
+        "-t",
+        "<repository>/android/denied-client/build/outputs/apk/androidTest/debug/denied-client-debug-androidTest.apk"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.279,
+      "stdout": "Performing Streamed Install\nSuccess\n",
+      "stderr": "",
+      "apk_sha256": "558d19836e4a83e851d94c62f184498feb7f0c6eb03eccb09d2fc05ba60933fc"
+    }
+  ]
+}

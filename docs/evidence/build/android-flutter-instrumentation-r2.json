@@ -1,0 +1,48 @@
+{
+  "command": [
+    "adb",
+    "-s",
+    "<allocated-target>",
+    "shell",
+    "am",
+    "instrument",
+    "-w",
+    "-r",
+    "dev.boundarylab.flutterclient.test/androidx.test.runner.AndroidJUnitRunner"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 3.465,
+  "stdout": "INSTRUMENTATION_STATUS: class=dev.boundarylab.fieldpack_flutter.EngineLifecycleTest\nINSTRUMENTATION_STATUS: current=1\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=3\nINSTRUMENTATION_STATUS: stream=\ndev.boundarylab.fieldpack_flutter.EngineLifecycleTest:\nINSTRUMENTATION_STATUS: test=destroyingEngineWithOutstandingWorkLeavesFreshEngineUsable\nINSTRUMENTATION_STATUS_CODE: 1\nINSTRUMENTATION_STATUS: class=dev.boundarylab.fieldpack_flutter.EngineLifecycleTest\nINSTRUMENTATION_STATUS: current=1\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=3\nINSTRUMENTATION_STATUS: stream=.\nINSTRUMENTATION_STATUS: test=destroyingEngineWithOutstandingWorkLeavesFreshEngineUsable\nINSTRUMENTATION_STATUS_CODE: 0\nINSTRUMENTATION_STATUS: class=dev.boundarylab.fieldpack_flutter.EngineLifecycleTest\nINSTRUMENTATION_STATUS: current=2\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=3\nINSTRUMENTATION_STATUS: stream=\nINSTRUMENTATION_STATUS: test=disposingOneEngineDoesNotCloseAnotherEngineSession\nINSTRUMENTATION_STATUS_CODE: 1\nINSTRUMENTATION_STATUS: class=dev.boundarylab.fieldpack_flutter.EngineLifecycleTest\nINSTRUMENTATION_STATUS: current=2\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=3\nINSTRUMENTATION_STATUS: stream=.\nINSTRUMENTATION_STATUS: test=disposingOneEngineDoesNotCloseAnotherEngineSession\nINSTRUMENTATION_STATUS_CODE: 0\nINSTRUMENTATION_STATUS: class=dev.boundarylab.fieldpack_flutter.EngineLifecycleTest\nINSTRUMENTATION_STATUS: current=3\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=3\nINSTRUMENTATION_STATUS: stream=\nINSTRUMENTATION_STATUS: test=rawChannelRejectsDoubleAndNaNWithoutAdmission\nINSTRUMENTATION_STATUS_CODE: 1\nINSTRUMENTATION_STATUS: class=dev.boundarylab.fieldpack_flutter.EngineLifecycleTest\nINSTRUMENTATION_STATUS: current=3\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=3\nINSTRUMENTATION_STATUS: stream=.\nINSTRUMENTATION_STATUS: test=rawChannelRejectsDoubleAndNaNWithoutAdmission\nINSTRUMENTATION_STATUS_CODE: 0\nINSTRUMENTATION_RESULT: stream=\n\nTime: 2,594\n\nOK (3 tests)\n\n\nINSTRUMENTATION_CODE: -1\n",
+  "stderr": "",
+  "target": "physical Samsung SM-A336B API36",
+  "evidence_class": "installed-device-instrumentation",
+  "tests": [
+    {
+      "class": "dev.boundarylab.fieldpack_flutter.EngineLifecycleTest",
+      "test": "destroyingEngineWithOutstandingWorkLeavesFreshEngineUsable",
+      "code": 0,
+      "status": "passed",
+      "stack": null
+    },
+    {
+      "class": "dev.boundarylab.fieldpack_flutter.EngineLifecycleTest",
+      "test": "disposingOneEngineDoesNotCloseAnotherEngineSession",
+      "code": 0,
+      "status": "passed",
+      "stack": null
+    },
+    {
+      "class": "dev.boundarylab.fieldpack_flutter.EngineLifecycleTest",
+      "test": "rawChannelRejectsDoubleAndNaNWithoutAdmission",
+      "code": 0,
+      "status": "passed",
+      "stack": null
+    }
+  ],
+  "tests_run": 3,
+  "tests_passed": 3,
+  "tests_failed": 0,
+  "tests_skipped": 0,
+  "coverage": null,
+  "suite_completed": true
+}

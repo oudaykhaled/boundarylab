@@ -10,3 +10,11 @@ raw-private/
 build/
 __pycache__/
 *.py[cod]
+.gradle/
+.kotlin/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+**/local.properties
+.idea/
+.vscode/

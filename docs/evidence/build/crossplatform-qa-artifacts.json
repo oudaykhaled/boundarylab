@@ -1,0 +1,47 @@
+{
+  "evidenceClass": "compiled-artifact-digests",
+  "artifacts": [
+    {
+      "path": "android/broker/build/outputs/apk/debug/broker-debug.apk",
+      "bytes": 2676859,
+      "sha256": "53c97d7478aba6fddb84832d81b86e6b43207f6a7685a377e523469cc896d0f9"
+    },
+    {
+      "path": "android/broker/build/outputs/apk/androidTest/debug/broker-debug-androidTest.apk",
+      "bytes": 2250458,
+      "sha256": "98b1afee824fe349266174536f75f290304e314f89dadd693ed150db1bb555e2"
+    },
+    {
+      "path": "android/denied-client/build/outputs/apk/debug/denied-client-debug.apk",
+      "bytes": 2460474,
+      "sha256": "4b2ed1aeffa1fc430cbadab7344c159b56536461c8ace42109796f8b6909ba12"
+    },
+    {
+      "path": "android/denied-client/build/outputs/apk/androidTest/debug/denied-client-debug-androidTest.apk",
+      "bytes": 2163113,
+      "sha256": "558d19836e4a83e851d94c62f184498feb7f0c6eb03eccb09d2fc05ba60933fc"
+    },
+    {
+      "path": "examples/android-native/build/outputs/apk/debug/android-native-debug.apk",
+      "bytes": 2723551,
+      "sha256": "e524b2e3368b63f8c64b7d9db08f439bc795973b89c086333445dc1be72efbe7"
+    },
+    {
+      "path": "examples/android-native/build/outputs/apk/androidTest/debug/android-native-debug-androidTest.apk",
+      "bytes": 2250858,
+      "sha256": "897cc4a18ca1d4bd3e65dc9ca1eede50e5b54b5fe9c96feeab98d1103051415a"
+    },
+    {
+      "path": "examples/flutter/build/app/outputs/flutter-apk/app-debug.apk",
+      "bytes": 161379962,
+      "sha256": "238b65338130d2b941245e60187693286ad019f0faab0187c0f3dc78046a2d7f"
+    },
+    {
+      "path": "examples/flutter/build/app/outputs/apk/androidTest/debug/app-debug-androidTest.apk",
+      "bytes": 836638,
+      "sha256": "ab312cb26ed150d00f1a2a1987bd5a5d29f7cecdd4077fd39008b4114277f94a"
+    }
+  ],
+  "deviceExecutionByThisAgent": false,
+  "timestampUtc": "2026-10-30T13:46:08.827824+00:00"
+}

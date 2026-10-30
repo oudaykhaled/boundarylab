@@ -1,0 +1,22 @@
+{
+  "java": "openjdk version \"17.0.14\" 2025-01-21\nOpenJDK Runtime Environment Homebrew (build 17.0.14+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.14+0, mixed mode, sharing)",
+  "flutter": {
+    "frameworkVersion": "3.38.9",
+    "channel": "stable",
+    "repositoryUrl": "https://github.com/flutter/flutter.git",
+    "frameworkRevision": "67323de285b00232883f53b84095eb72be97d35c",
+    "frameworkCommitDate": "2026-01-28 13:43:12 -0800",
+    "engineRevision": "587c18f873b8ab57330422bce09047420d9c7f42",
+    "engineCommitDate": "2026-01-27 23:23:03.000Z",
+    "engineContentHash": "5eb06b7ad5bb8cbc22c5230264c7a00ceac7674b",
+    "engineBuildDate": "2026-01-28 02:01:00.393",
+    "dartSdkVersion": "3.10.8",
+    "devToolsVersion": "2.51.1",
+    "flutterVersion": "3.38.9"
+  },
+  "gradleWrapper": "distributionBase=GRADLE_USER_HOME\ndistributionPath=wrapper/dists\ndistributionUrl=https\\://services.gradle.org/distributions/gradle-8.13-bin.zip\ndistributionSha256Sum=20f1b1176237254a6fc204d8434196fa11a4cfb387567519c61556e8710aed78\nnetworkTimeout=30000\nvalidateDistributionUrl=true\nzipStoreBase=GRADLE_USER_HOME\nzipStorePath=wrapper/dists\n",
+  "versionCatalog": "[versions]\nagp = \"8.11.1\"\nkotlin = \"2.2.21\"\njunit4 = \"4.13.2\"\njunit-jupiter = \"5.11.4\"\nandroidx-test-runner = \"1.6.2\"\nandroidx-test-junit = \"1.2.1\"\ncompile-sdk = \"36\"\nmin-sdk = \"30\"\ntarget-sdk = \"36\"\n\n[libraries]\njunit4 = { module = \"junit:junit\", version.ref = \"junit4\" }\njunit-jupiter = { module = \"org.junit.jupiter:junit-jupiter\", version.ref = \"junit-jupiter\" }\njunit-platform-launcher = { module = \"org.junit.platform:junit-platform-launcher\", version = \"1.11.4\" }\nkotlin-test = { module = \"org.jetbrains.kotlin:kotlin-test\", version.ref = \"kotlin\" }\nkotlin-test-junit = { module = \"org.jetbrains.kotlin:kotlin-test-junit\", version.ref = \"kotlin\" }\nandroidx-test-runner = { module = \"androidx.test:runner\", version.ref = \"androidx-test-runner\" }\nandroidx-test-junit = { module = \"androidx.test.ext:junit\", version.ref = \"androidx-test-junit\" }\n\n[plugins]\nandroid-application = { id = \"com.android.application\", version.ref = \"agp\" }\nandroid-library = { id = \"com.android.library\", version.ref = \"agp\" }\nkotlin-android = { id = \"org.jetbrains.kotlin.android\", version.ref = \"kotlin\" }\nkotlin-jvm = { id = \"org.jetbrains.kotlin.jvm\", version.ref = \"kotlin\" }\n",
+  "os": "Darwin",
+  "osRelease": "25.5.0",
+  "architecture": "arm64"
+}

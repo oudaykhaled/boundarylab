@@ -1,0 +1,69 @@
+{
+  "target": "physical Samsung SM-A336B API36",
+  "installs": [
+    {
+      "command": [
+        "adb",
+        "-s",
+        "<allocated-target>",
+        "install",
+        "-r",
+        "-t",
+        "<repository>/android/broker/build/outputs/apk/debug/broker-debug.apk"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.48,
+      "stdout": "Performing Streamed Install\nSuccess\n",
+      "stderr": "",
+      "apk_sha256": "53c97d7478aba6fddb84832d81b86e6b43207f6a7685a377e523469cc896d0f9"
+    },
+    {
+      "command": [
+        "adb",
+        "-s",
+        "<allocated-target>",
+        "install",
+        "-r",
+        "-t",
+        "<repository>/examples/android-native/build/outputs/apk/debug/android-native-debug.apk"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.625,
+      "stdout": "Performing Streamed Install\nSuccess\n",
+      "stderr": "",
+      "apk_sha256": "e524b2e3368b63f8c64b7d9db08f439bc795973b89c086333445dc1be72efbe7"
+    },
+    {
+      "command": [
+        "adb",
+        "-s",
+        "<allocated-target>",
+        "install",
+        "-r",
+        "-t",
+        "<repository>/examples/flutter/build/app/outputs/flutter-apk/app-debug.apk"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.396,
+      "stdout": "Performing Streamed Install\nSuccess\n",
+      "stderr": "",
+      "apk_sha256": "238b65338130d2b941245e60187693286ad019f0faab0187c0f3dc78046a2d7f"
+    },
+    {
+      "command": [
+        "adb",
+        "-s",
+        "<allocated-target>",
+        "install",
+        "-r",
+        "-t",
+        "<repository>/examples/flutter/build/app/outputs/apk/androidTest/debug/app-debug-androidTest.apk"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.308,
+      "stdout": "Performing Streamed Install\nSuccess\n",
+      "stderr": "",
+      "apk_sha256": "ab312cb26ed150d00f1a2a1987bd5a5d29f7cecdd4077fd39008b4114277f94a"
+    }
+  ]
+}

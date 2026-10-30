@@ -1,0 +1,62 @@
+{
+  "command": [
+    "adb",
+    "-s",
+    "<allocated-target>",
+    "shell",
+    "am",
+    "instrument",
+    "-w",
+    "-r",
+    "dev.boundarylab.nativeclient.test/androidx.test.runner.AndroidJUnitRunner"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 2.61,
+  "stdout": "INSTRUMENTATION_STATUS: class=dev.boundarylab.nativeapp.BrokerWireTest\nINSTRUMENTATION_STATUS: current=1\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=8\nINSTRUMENTATION_STATUS: stream=\ndev.boundarylab.nativeapp.BrokerWireTest:\nINSTRUMENTATION_STATUS: test=duplicateMetadataReturnsRetainedJobAndChangedMetadataConflicts\nINSTRUMENTATION_STATUS_CODE: 1\nINSTRUMENTATION_STATUS: class=dev.boundarylab.nativeapp.BrokerWireTest\nINSTRUMENTATION_STATUS: current=1\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=8\nINSTRUMENTATION_STATUS: stream=.\nINSTRUMENTATION_STATUS: test=duplicateMetadataReturnsRetainedJobAndChangedMetadataConflicts\nINSTRUMENTATION_STATUS_CODE: 0\nINSTRUMENTATION_STATUS: class=dev.boundarylab.nativeapp.BrokerWireTest\nINSTRUMENTATION_STATUS: current=2\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=8\nINSTRUMENTATION_STATUS: stream=\nINSTRUMENTATION_STATUS: test=declaredLengthMismatchIsRejectedBeforeAdmission\nINSTRUMENTATION_STATUS_CODE: 1\nINSTRUMENTATION_STATUS: class=dev.boundarylab.nativeapp.BrokerWireTest\nINSTRUMENTATION_STATUS: current=2\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=8\nINSTRUMENTATION_STATUS: stream=.\nINSTRUMENTATION_STATUS: test=declaredLengthMismatchIsRejectedBeforeAdmission\nINSTRUMENTATION_STATUS_CODE: 0\nINSTRUMENTATION_STATUS: class=dev.boundarylab.nativeapp.FieldPackFlowTest\nINSTRUMENTATION_STATUS: current=3\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=8\nINSTRUMENTATION_STATUS: stream=\ndev.boundarylab.nativeapp.FieldPackFlowTest:\nINSTRUMENTATION_STATUS: test=cancellationInvalidatesExportBeforeAcknowledgement\nINSTRUMENTATION_STATUS_CODE: 1\nINSTRUMENTATION_STATUS: class=dev.boundarylab.nativeapp.FieldPackFlowTest\nINSTRUMENTATION_STATUS: current=3\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=8\nINSTRUMENTATION_STATUS: stream=.\nINSTRUMENTATION_STATUS: test=cancellationInvalidatesExportBeforeAcknowledgement\nINSTRUMENTATION_STATUS_CODE: 0\nINSTRUMENTATION_STATUS: class=dev.boundarylab.nativeapp.FieldPackFlowTest\nINSTRUMENTATION_STATUS: current=4\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=8\nINSTRUMENTATION_STATUS: stream=\nINSTRUMENTATION_STATUS: test=twoActualFilesProduceCompleteManifest\nINSTRUMENTATION_STATUS_CODE: 1\nINSTRUMENTATION_STATUS: class=dev.boundarylab.nativeapp.FieldPackFlowTest\nINSTRUMENTATION_STATUS: current=4\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=8\nINSTRUMENTATION_STATUS: stream=.\nINSTRUMENTATION_STATUS: test=twoActualFilesProduceCompleteManifest\nINSTRUMENTATION_STATUS_CODE: 0\nINSTRUMENTATION_STATUS: class=dev.boundarylab.nativeapp.FieldPackFlowTest\nINSTRUMENTATION_STATUS: current=5\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=8\nINSTRUMENTATION_STATUS: stream=\nINSTRUMENTATION_STATUS: test=generatedDigestTraversesSeparateBrokerProcess\nINSTRUMENTATION_STATUS_CODE: 1\nINSTRUMENTATION_STATUS: class=dev.boundarylab.nativeapp.FieldPackFlowTest\nINSTRUMENTATION_STATUS: current=5\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=8\nINSTRUMENTATION_STATUS: stream=.\nINSTRUMENTATION_STATUS: test=generatedDigestTraversesSeparateBrokerProcess\nINSTRUMENTATION_STATUS_CODE: 0\nINSTRUMENTATION_STATUS: class=dev.boundarylab.nativeapp.FieldPackFlowTest\nINSTRUMENTATION_STATUS: current=6\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=8\nINSTRUMENTATION_STATUS: stream=\nINSTRUMENTATION_STATUS: test=disposalClosesDescriptorAlreadyQueuedForMainDelivery\nINSTRUMENTATION_STATUS_CODE: 1\nINSTRUMENTATION_RESULT: shortMsg=Process crashed.\nINSTRUMENTATION_CODE: 0\n",
+  "stderr": "",
+  "target": "physical Samsung SM-A336B API36",
+  "evidence_class": "installed-device-instrumentation",
+  "tests": [
+    {
+      "class": "dev.boundarylab.nativeapp.BrokerWireTest",
+      "test": "duplicateMetadataReturnsRetainedJobAndChangedMetadataConflicts",
+      "code": 0,
+      "status": "passed",
+      "stack": null
+    },
+    {
+      "class": "dev.boundarylab.nativeapp.BrokerWireTest",
+      "test": "declaredLengthMismatchIsRejectedBeforeAdmission",
+      "code": 0,
+      "status": "passed",
+      "stack": null
+    },
+    {
+      "class": "dev.boundarylab.nativeapp.FieldPackFlowTest",
+      "test": "cancellationInvalidatesExportBeforeAcknowledgement",
+      "code": 0,
+      "status": "passed",
+      "stack": null
+    },
+    {
+      "class": "dev.boundarylab.nativeapp.FieldPackFlowTest",
+      "test": "twoActualFilesProduceCompleteManifest",
+      "code": 0,
+      "status": "passed",
+      "stack": null
+    },
+    {
+      "class": "dev.boundarylab.nativeapp.FieldPackFlowTest",
+      "test": "generatedDigestTraversesSeparateBrokerProcess",
+      "code": 0,
+      "status": "passed",
+      "stack": null
+    }
+  ],
+  "tests_run": 5,
+  "tests_passed": 5,
+  "tests_failed": 0,
+  "tests_skipped": 0,
+  "coverage": null,
+  "suite_completed": false
+}

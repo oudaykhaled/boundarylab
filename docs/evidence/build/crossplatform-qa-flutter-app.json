@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "evidenceClass": "host-unit-integration-tests",
+  "androidRuntimeExecuted": false,
+  "timestampUtc": "2026-10-30T13:17:35.141035+00:00",
+  "baseCommit": "2a49ae3c15dafd0d3070bde74c48d2390f286538",
+  "sourceState": "concurrently edited working tree; JUnit artifacts identify only this run",
+  "command": [
+    "flutter",
+    "test",
+    "--machine"
+  ],
+  "cwd": "examples/flutter",
+  "exitCode": 0,
+  "timedOut": false,
+  "durationSeconds": 2.965,
+  "environment": {
+    "os": "Darwin",
+    "osRelease": "25.5.0",
+    "machine": "arm64"
+  },
+  "tests_run": 6,
+  "tests_passed": 6,
+  "tests_failed": 0,
+  "tests_skipped": 0,
+  "coverage": null,
+  "coverageReason": "No coverage instrumentation configured by this runner.",
+  "cases": [
+    {
+      "id": "all-success attempt enables export; new attempt rehashes",
+      "status": "passed"
+    },
+    {
+      "id": "late prepare success after cancel cannot enable export",
+      "status": "passed"
+    },
+    {
+      "id": "broker loss clears successful pack",
+      "status": "passed"
+    },
+    {
+      "id": "write failure retains complete pack for explicit retry",
+      "status": "passed"
+    },
+    {
+      "id": "dispose discards delayed completion and closes gateway",
+      "status": "passed"
+    },
+    {
+      "id": "actions gated and transfer guidance visible",
+      "status": "passed"
+    }
+  ],
+  "junitArtifacts": [],
+  "log": "docs/evidence/build/crossplatform-qa-flutter-app.log",
+  "suiteCompleted": true
+}

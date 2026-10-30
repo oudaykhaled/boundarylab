@@ -1,0 +1,134 @@
+{
+  "scope": "installed desktop scripts, distinct JVMs; Python only orchestrates test processes",
+  "cases": [
+    {
+      "profile": "native-files",
+      "generated": {
+        "exit": 0,
+        "output": {
+          "result": "SUCCEEDED",
+          "size": 65537,
+          "sha256": "a06f90a8ad95b4a8528baffc69f68729e941decadb1c352fcedf3942e0bf7278",
+          "hostPid": 99721,
+          "cliPid": 99743
+        }
+      },
+      "create": {
+        "exit": 0,
+        "output": {
+          "result": "CREATED",
+          "files": 2,
+          "hostPid": 99721,
+          "cliPid": 99755
+        }
+      },
+      "match": {
+        "exit": 0,
+        "output": {
+          "scope": "manifest_entries_only",
+          "files": [
+            {
+              "name": "abc.txt",
+              "outcome": "MATCH"
+            },
+            {
+              "name": "empty.bin",
+              "outcome": "MATCH"
+            }
+          ],
+          "hostPid": 99721,
+          "cliPid": 99779
+        }
+      },
+      "changed": {
+        "exit": 1,
+        "output": {
+          "scope": "manifest_entries_only",
+          "files": [
+            {
+              "name": "abc.txt",
+              "outcome": "DIGEST_MISMATCH"
+            },
+            {
+              "name": "empty.bin",
+              "outcome": "MATCH"
+            }
+          ],
+          "hostPid": 99721,
+          "cliPid": 99789
+        }
+      },
+      "missing": {
+        "exit": 1,
+        "output": {
+          "scope": "manifest_entries_only",
+          "files": [
+            {
+              "name": "abc.txt",
+              "outcome": "MISSING"
+            },
+            {
+              "name": "empty.bin",
+              "outcome": "MATCH"
+            }
+          ],
+          "hostPid": 99721,
+          "cliPid": 99816
+        }
+      },
+      "manifest": {
+        "format": "fieldpack",
+        "version": 1,
+        "algorithm": "sha256",
+        "files": [
+          {
+            "name": "abc.txt",
+            "size": 3,
+            "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+          },
+          {
+            "name": "empty.bin",
+            "size": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ]
+      }
+    },
+    {
+      "profile": "missing-library-generated-only",
+      "generated": {
+        "exit": 0,
+        "output": {
+          "result": "SUCCEEDED",
+          "size": 65537,
+          "sha256": "a06f90a8ad95b4a8528baffc69f68729e941decadb1c352fcedf3942e0bf7278",
+          "hostPid": 99826,
+          "cliPid": 99836
+        }
+      },
+      "file_rejection": {
+        "exit": 2,
+        "output": {
+          "error": "UNSUPPORTED_CAPABILITY"
+        }
+      },
+      "host_diagnostic": "File capability unavailable: UNSUPPORTED"
+    }
+  ],
+  "result": "PASS",
+  "recordedAtUtc": "2026-10-30T13:28:15.145334+00:00",
+  "baseCommit": "2a49ae3c15dafd0d3070bde74c48d2390f286538",
+  "sourceState": "uncommitted implementation working tree",
+  "environment": {
+    "os": "macOS 26.5.1 arm64",
+    "jvm": "OpenJDK 17.0.14",
+    "gradle": "8.13",
+    "kotlin": "2.2.21"
+  },
+  "sourceSha256": {
+    "desktop/host/src/main/kotlin/dev/boundarylab/desktop/Host.kt": "bc6247065d8374d92c6f4202f79c44fb15036aa32ff73810827826b2afdaf0a3",
+    "desktop/cli/src/main/kotlin/dev/boundarylab/desktop/cli/Main.kt": "6c2a15011fe4b71aea76f93c6038f2feecdbc74114d2f0c1938e02d3a2df5bf8",
+    "desktop/host/src/main/c/native_files.c": "dff7979d32ee3151db416390a11d98b8559e70cad3a6906d6168a5340466f953",
+    "desktop/host/src/main/kotlin/dev/boundarylab/desktop/RootedFileProvider.kt": "cafa7436b6de35402af501bbe23268a540512322f53d0be3b0a9d6c408f2964d"
+  }
+}

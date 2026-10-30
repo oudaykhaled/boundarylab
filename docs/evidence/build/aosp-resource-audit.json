@@ -1,0 +1,16 @@
+{
+  "schema": "boundarylab-resource-audit-v1",
+  "recorded_at": "2026-10-30",
+  "scope": "P01 inventory only; no AOSP source fetched, modified, built, or booted",
+  "status": "blocked",
+  "local_host": {"os": "Darwin", "kernel": "25.5.0", "architecture": "arm64", "memory_bytes": 34359738368, "free_disk_bytes_at_probe": 39862181888, "dev_kvm": false},
+  "docker_daemon_reachable": false,
+  "authorized_remote_linux_host": null,
+  "required_baseline": {"host": "64-bit Linux x86_64 with glibc >= 2.17", "free_disk_gb_min": 400, "ram_gb_min": 64, "virtualization": "working KVM usable by Cuttlefish"},
+  "source_manifest": null,
+  "build_target": null,
+  "image_fingerprint": null,
+  "selinux_enforcing_verified": false,
+  "unblock": "Allocate an existing authorized Linux/KVM host meeting AOSP resource requirements; pin an immutable release manifest and matching Cuttlefish target; build and boot the unchanged baseline before any generated-only service edits.",
+  "references": ["https://source.android.com/docs/setup/start/requirements", "https://source.android.com/docs/devices/cuttlefish/get-started"]
+}

@@ -1,0 +1,17 @@
+{
+  "evidenceClass": "release-apk-static-inspection",
+  "apk": "examples/android-native/build/outputs/apk/release/android-native-release-unsigned.apk",
+  "apkSha256": "c18c4f4dac1b4794d0204981d4e4f8712eded3538d72f4c816b7a3c2b9c04207",
+  "checks": {
+    "OwnerFixtureService": {
+      "absentFromManifest": true,
+      "absentFromDex": true
+    },
+    "DelayedFixtureProvider": {
+      "absentFromManifest": true,
+      "absentFromDex": true
+    }
+  },
+  "passed": true,
+  "deviceExecution": false
+}

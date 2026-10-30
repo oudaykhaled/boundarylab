@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 1,
+  "rampDefinition": "byte(i) = (seed + i) & 255; arithmetic interpreted modulo 256",
+  "cases": [
+    {
+      "id": "ascii-abc",
+      "size": 3,
+      "generator": {
+        "kind": "base64",
+        "data": "YWJj"
+      },
+      "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+    },
+    {
+      "id": "ramp-0-0",
+      "size": 0,
+      "generator": {
+        "kind": "ramp",
+        "seed": 0
+      },
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "ramp-0-1",
+      "size": 1,
+      "generator": {
+        "kind": "ramp",
+        "seed": 0
+      },
+      "sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"
+    },
+    {
+      "id": "ramp-0-65535",
+      "size": 65535,
+      "generator": {
+        "kind": "ramp",
+        "seed": 0
+      },
+      "sha256": "5f1bf999bcba5e05d4c34a13710d2e4bff005877874dcce49ac87af61076231e"
+    },
+    {
+      "id": "ramp-0-65536",
+      "size": 65536,
+      "generator": {
+        "kind": "ramp",
+        "seed": 0
+      },
+      "sha256": "7daca2095d0438260fa849183dfc67faa459fdf4936e1bc91eec6b281b27e4c2"
+    },
+    {
+      "id": "ramp-0-65537",
+      "size": 65537,
+      "generator": {
+        "kind": "ramp",
+        "seed": 0
+      },
+      "sha256": "2deb0bd2129a9d3aed91e3cff58b3993752be549642890a3e853ec1065f9b617"
+    },
+    {
+      "id": "ramp-0-134217728",
+      "size": 134217728,
+      "generator": {
+        "kind": "ramp",
+        "seed": 0
+      },
+      "sha256": "a626d17da2e502f5b4b8e3ebd23f0bf9daef6255688d8e0bb482b3ae3794a682"
+    },
+    {
+      "id": "ramp-255-0",
+      "size": 0,
+      "generator": {
+        "kind": "ramp",
+        "seed": 255
+      },
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "ramp-255-1",
+      "size": 1,
+      "generator": {
+        "kind": "ramp",
+        "seed": 255
+      },
+      "sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89"
+    },
+    {
+      "id": "ramp-255-65535",
+      "size": 65535,
+      "generator": {
+        "kind": "ramp",
+        "seed": 255
+      },
+      "sha256": "fab3cf143e3434805b9494b6b5147f28297ae4b274e45c4d1b108d9daffc594d"
+    },
+    {
+      "id": "ramp-255-65536",
+      "size": 65536,
+      "generator": {
+        "kind": "ramp",
+        "seed": 255
+      },
+      "sha256": "a974f48025925b9d8052c177c1d1a491885c05d834e6ec0c5404343303fd6d96"
+    },
+    {
+      "id": "ramp-255-65537",
+      "size": 65537,
+      "generator": {
+        "kind": "ramp",
+        "seed": 255
+      },
+      "sha256": "a06f90a8ad95b4a8528baffc69f68729e941decadb1c352fcedf3942e0bf7278"
+    },
+    {
+      "id": "ramp-255-134217728",
+      "size": 134217728,
+      "generator": {
+        "kind": "ramp",
+        "seed": 255
+      },
+      "sha256": "2490d659fcc70af4fb033e66ea4fe67d096d37426bc776b34b52b0a5af163006"
+    },
+    {
+      "id": "ramp--1-0",
+      "size": 0,
+      "generator": {
+        "kind": "ramp",
+        "seed": -1
+      },
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "ramp--1-1",
+      "size": 1,
+      "generator": {
+        "kind": "ramp",
+        "seed": -1
+      },
+      "sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89"
+    },
+    {
+      "id": "ramp--1-65535",
+      "size": 65535,
+      "generator": {
+        "kind": "ramp",
+        "seed": -1
+      },
+      "sha256": "fab3cf143e3434805b9494b6b5147f28297ae4b274e45c4d1b108d9daffc594d"
+    },
+    {
+      "id": "ramp--1-65536",
+      "size": 65536,
+      "generator": {
+        "kind": "ramp",
+        "seed": -1
+      },
+      "sha256": "a974f48025925b9d8052c177c1d1a491885c05d834e6ec0c5404343303fd6d96"
+    },
+    {
+      "id": "ramp--1-65537",
+      "size": 65537,
+      "generator": {
+        "kind": "ramp",
+        "seed": -1
+      },
+      "sha256": "a06f90a8ad95b4a8528baffc69f68729e941decadb1c352fcedf3942e0bf7278"
+    },
+    {
+      "id": "ramp--1-134217728",
+      "size": 134217728,
+      "generator": {
+        "kind": "ramp",
+        "seed": -1
+      },
+      "sha256": "2490d659fcc70af4fb033e66ea4fe67d096d37426bc776b34b52b0a5af163006"
+    },
+    {
+      "id": "ramp-9223372036854775807-0",
+      "size": 0,
+      "generator": {
+        "kind": "ramp",
+        "seed": 9223372036854775807
+      },
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "ramp-9223372036854775807-1",
+      "size": 1,
+      "generator": {
+        "kind": "ramp",
+        "seed": 9223372036854775807
+      },
+      "sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89"
+    },
+    {
+      "id": "ramp-9223372036854775807-65535",
+      "size": 65535,
+      "generator": {
+        "kind": "ramp",
+        "seed": 9223372036854775807
+      },
+      "sha256": "fab3cf143e3434805b9494b6b5147f28297ae4b274e45c4d1b108d9daffc594d"
+    },
+    {
+      "id": "ramp-9223372036854775807-65536",
+      "size": 65536,
+      "generator": {
+        "kind": "ramp",
+        "seed": 9223372036854775807
+      },
+      "sha256": "a974f48025925b9d8052c177c1d1a491885c05d834e6ec0c5404343303fd6d96"
+    },
+    {
+      "id": "ramp-9223372036854775807-65537",
+      "size": 65537,
+      "generator": {
+        "kind": "ramp",
+        "seed": 9223372036854775807
+      },
+      "sha256": "a06f90a8ad95b4a8528baffc69f68729e941decadb1c352fcedf3942e0bf7278"
+    },
+    {
+      "id": "ramp-9223372036854775807-134217728",
+      "size": 134217728,
+      "generator": {
+        "kind": "ramp",
+        "seed": 9223372036854775807
+      },
+      "sha256": "2490d659fcc70af4fb033e66ea4fe67d096d37426bc776b34b52b0a5af163006"
+    }
+  ]
+}

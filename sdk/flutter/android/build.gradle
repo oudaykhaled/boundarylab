@@ -1,0 +1,18 @@
+group = 'dev.boundarylab.flutter'
+version = '0.1.0'
+apply plugin: 'com.android.library'
+apply plugin: 'org.jetbrains.kotlin.android'
+android {
+    namespace 'dev.boundarylab.flutter'
+    compileSdk 36
+    defaultConfig { minSdk 30 }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions { jvmTarget = '17' }
+}
+dependencies {
+    implementation project(':sdk:kotlin')
+    testImplementation 'junit:junit:4.13.2'
+}

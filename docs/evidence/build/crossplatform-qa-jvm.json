@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "evidenceClass": "host-unit-integration-tests",
+  "androidRuntimeExecuted": false,
+  "timestampUtc": "2026-10-30T13:15:56.437082+00:00",
+  "baseCommit": "2a49ae3c15dafd0d3070bde74c48d2390f286538",
+  "sourceState": "concurrently edited working tree; JUnit artifacts identify only this run",
+  "command": [
+    "./gradlew",
+    "--no-daemon",
+    "--console=plain",
+    ":desktop:host:test",
+    ":desktop:cli:test",
+    "--rerun-tasks"
+  ],
+  "cwd": ".",
+  "exitCode": 1,
+  "timedOut": false,
+  "durationSeconds": 44.82,
+  "environment": {
+    "os": "Darwin",
+    "osRelease": "25.5.0",
+    "machine": "arm64"
+  },
+  "tests_run": 16,
+  "tests_passed": 16,
+  "tests_failed": 0,
+  "tests_skipped": 0,
+  "coverage": null,
+  "coverageReason": "No coverage instrumentation configured by this runner.",
+  "cases": [
+    {
+      "id": "dev.boundarylab.desktop.HostProcessTest.connection death releases all sessions and process loss is not replayed()",
+      "status": "passed",
+      "durationSeconds": "0.518"
+    },
+    {
+      "id": "dev.boundarylab.desktop.HostProcessTest.socket mode is private and malformed or oversized frames never kill host()",
+      "status": "passed",
+      "durationSeconds": "0.13"
+    },
+    {
+      "id": "dev.boundarylab.desktop.HostProcessTest.invalid protocol numeric booleans and unknown fields reject before work()",
+      "status": "passed",
+      "durationSeconds": "0.123"
+    },
+    {
+      "id": "dev.boundarylab.desktop.HostProcessTest.separate JVM generated vector ownership dedup and closed session()",
+      "status": "passed",
+      "durationSeconds": "0.409"
+    },
+    {
+      "id": "dev.boundarylab.desktop.HostProcessTest.partial frame absolute deadline releases a stalled connection()",
+      "status": "passed",
+      "durationSeconds": "5.144"
+    },
+    {
+      "id": "dev.boundarylab.desktop.RootedFileProviderTest.one hundred success rejection and closure cycles recover descriptors()",
+      "status": "passed",
+      "durationSeconds": "0.255"
+    },
+    {
+      "id": "dev.boundarylab.desktop.RootedFileProviderTest.output authorization is outside root and rejects existing targets()",
+      "status": "passed",
+      "durationSeconds": "0.004"
+    },
+    {
+      "id": "dev.boundarylab.desktop.RootedFileProviderTest.unsafe types links aliases and missing files have explicit failures()",
+      "status": "passed",
+      "durationSeconds": "0.014"
+    },
+    {
+      "id": "dev.boundarylab.desktop.RootedFileProviderTest.oversized regular file rejected before content read and exact cap supported()",
+      "status": "passed",
+      "durationSeconds": "0.002"
+    },
+    {
+      "id": "dev.boundarylab.desktop.RootedFileProviderTest.native ABI rejects invalid array bounds and alias traversal()",
+      "status": "passed",
+      "durationSeconds": "0.002"
+    },
+    {
+      "id": "dev.boundarylab.desktop.RootedFileProviderTest.pinned source supports empty and positional bounded reads()",
+      "status": "passed",
+      "durationSeconds": "0.003"
+    },
+    {
+      "id": "dev.boundarylab.desktop.RootedFileProviderTest.seventeen total input slots bound opened and pending admission descriptors()",
+      "status": "passed",
+      "durationSeconds": "0.002"
+    },
+    {
+      "id": "dev.boundarylab.desktop.RootedFileProviderTest.mutation growth shrink alias replacement and root replacement reject success()",
+      "status": "passed",
+      "durationSeconds": "0.006"
+    },
+    {
+      "id": "dev.boundarylab.desktop.WireTest.duplicate keys invalid UTF8 BOM nesting and noninteger JSON are rejected()",
+      "status": "passed",
+      "durationSeconds": "0.002"
+    },
+    {
+      "id": "dev.boundarylab.desktop.WireTest.exact frame byte cap is accepted and cap plus one rejected()",
+      "status": "passed",
+      "durationSeconds": "0.009"
+    },
+    {
+      "id": "dev.boundarylab.desktop.WireTest.strict JSON round trip preserves long integers and Unicode()",
+      "status": "passed",
+      "durationSeconds": "0.003"
+    }
+  ],
+  "junitArtifacts": [
+    {
+      "path": "desktop/host/build/test-results/test/TEST-dev.boundarylab.desktop.HostProcessTest.xml",
+      "sha256": "bb6f9b21a16c908660e9a57b169f7fb59282de9f800144b0d22602c14c287663"
+    },
+    {
+      "path": "desktop/host/build/test-results/test/TEST-dev.boundarylab.desktop.RootedFileProviderTest.xml",
+      "sha256": "d2e8074220e26aff0c5fc05d947a2ff3640b2578608a0cb0f95d95d86cf4f0b7"
+    },
+    {
+      "path": "desktop/host/build/test-results/test/TEST-dev.boundarylab.desktop.WireTest.xml",
+      "sha256": "65e10a82e90b169867a2d53d26fd4578ede367662ab075a73b86bd821db74664"
+    }
+  ],
+  "log": "docs/evidence/build/crossplatform-qa-jvm.log",
+  "suiteCompleted": false
+}
