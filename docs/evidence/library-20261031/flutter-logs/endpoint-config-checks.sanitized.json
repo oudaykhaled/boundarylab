@@ -1,0 +1,32 @@
+{
+  "evidence_class": "gradle-buildconfig-only",
+  "default_config_verified": true,
+  "checks": [
+    {
+      "case": "custom-endpoint-config",
+      "passed": true,
+      "command": [
+        "./gradlew",
+        "--console=plain",
+        ":boundarylab:generateDebugBuildConfig",
+        "-PboundarylabRepository=/workspace/outputs/boundarylab-library-20261031/maven",
+        "-Pboundarylab.brokerPackage=com.example.boundarybroker",
+        "-Pboundarylab.brokerServiceClass=dev.boundarylab.broker.BoundaryBrokerService",
+        "-Pboundarylab.brokerBindPermission=com.example.boundarybroker.permission.BIND_BROKER"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "partial-endpoint-config",
+      "passed": true,
+      "command": [
+        "./gradlew",
+        "--console=plain",
+        ":boundarylab:generateDebugBuildConfig",
+        "-PboundarylabRepository=/workspace/outputs/boundarylab-library-20261031/maven",
+        "-Pboundarylab.brokerPackage=com.example.boundarybroker"
+      ],
+      "exit_code": 1
+    }
+  ]
+}

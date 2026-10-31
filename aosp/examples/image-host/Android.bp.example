@@ -1,0 +1,12 @@
+// Template only: rename to Android.bp in your own image integration after review.
+// Replace main.cpp's empty UID list with your image-owned exact native caller UIDs.
+cc_binary {
+    name: "example_generated_hash_service",
+    system_ext_specific: true,
+    cpp_std: "c++17",
+    cflags: ["-Wall", "-Wextra", "-Werror"],
+    srcs: ["main.cpp"],
+    static_libs: ["libboundarylab_service"],
+    shared_libs: ["libbinder", "libutils", "libcrypto", "boundarylab-platform-V1-cpp"],
+    init_rc: ["example_generated_hash.rc"],
+}

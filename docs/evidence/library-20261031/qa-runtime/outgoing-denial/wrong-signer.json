@@ -1,0 +1,135 @@
+{
+  "started": "2026-10-31T19:11:17.335448+00:00",
+  "finished": "2026-10-31T19:11:18.114915+00:00",
+  "phase": "wrong-signer",
+  "commands": [
+    {
+      "argv": [
+        "adb",
+        "-s",
+        "emulator-5580",
+        "get-state"
+      ],
+      "timeout_seconds": 30,
+      "exit_code": 0,
+      "stdout": "device\n",
+      "stderr": "",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "adb",
+        "-s",
+        "emulator-5580",
+        "logcat",
+        "-c"
+      ],
+      "timeout_seconds": 30,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "adb",
+        "-s",
+        "emulator-5580",
+        "shell",
+        "am",
+        "force-stop",
+        "dev.boundarylab.standalone"
+      ],
+      "timeout_seconds": 30,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "adb",
+        "-s",
+        "emulator-5580",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "dev.boundarylab.consumer.ExternalEndpointTest#installedWrongSignerBrokerIsDeniedAndDescriptorClosed",
+        "-e",
+        "expectedWrongSigner",
+        "true",
+        "dev.boundarylab.standalone.test/androidx.test.runner.AndroidJUnitRunner"
+      ],
+      "timeout_seconds": 300,
+      "exit_code": 0,
+      "stdout": "INSTRUMENTATION_STATUS: class=dev.boundarylab.consumer.ExternalEndpointTest\nINSTRUMENTATION_STATUS: current=1\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=1\nINSTRUMENTATION_STATUS: stream=\ndev.boundarylab.consumer.ExternalEndpointTest:\nINSTRUMENTATION_STATUS: test=installedWrongSignerBrokerIsDeniedAndDescriptorClosed\nINSTRUMENTATION_STATUS_CODE: 1\nINSTRUMENTATION_STATUS: class=dev.boundarylab.consumer.ExternalEndpointTest\nINSTRUMENTATION_STATUS: current=1\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=1\nINSTRUMENTATION_STATUS: stream=.\nINSTRUMENTATION_STATUS: test=installedWrongSignerBrokerIsDeniedAndDescriptorClosed\nINSTRUMENTATION_STATUS_CODE: 0\nINSTRUMENTATION_RESULT: stream=\n\nTime: 0.027\n\nOK (1 test)\n\n\nINSTRUMENTATION_CODE: -1\n",
+      "stderr": "",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "adb",
+        "-s",
+        "emulator-5580",
+        "logcat",
+        "-d",
+        "-v",
+        "threadtime",
+        "BoundaryLabConsumer:I",
+        "ExternalEndpointQA:I",
+        "TestRunner:I",
+        "AndroidRuntime:E",
+        "*:S"
+      ],
+      "timeout_seconds": 30,
+      "exit_code": 0,
+      "stdout": "--------- beginning of main\n10-31 20:11:17.532  7229  7248 I TestRunner: run started: 1 tests\n10-31 20:11:17.533  7229  7248 I TestRunner: started: installedWrongSignerBrokerIsDeniedAndDescriptorClosed(dev.boundarylab.consumer.ExternalEndpointTest)\n10-31 20:11:17.556  7229  7248 I ExternalEndpointQA: DENIED package=dev.boundarylab.qa.broker expectedPermission=dev.boundarylab.qa.permission.BIND_BROKER descriptorClosed=true\n10-31 20:11:17.557  7229  7248 I TestRunner: finished: installedWrongSignerBrokerIsDeniedAndDescriptorClosed(dev.boundarylab.consumer.ExternalEndpointTest)\n10-31 20:11:17.559  7229  7248 I TestRunner: run finished: 1 tests, 0 failed, 0 ignored\n",
+      "stderr": "",
+      "timed_out": false
+    }
+  ],
+  "passed": true,
+  "checks": {
+    "transport_completed": true,
+    "runner_completed": true,
+    "positive_expected_count": true,
+    "declared_count_matches": true,
+    "summary_count_matches": true,
+    "terminal_count_matches": true,
+    "start_count_matches": true,
+    "unique_terminals": true,
+    "starts_match_terminals": true,
+    "selected_identities": true,
+    "all_required_passed": true,
+    "no_failure_marker": true
+  },
+  "events": [
+    {
+      "class": "dev.boundarylab.consumer.ExternalEndpointTest",
+      "current": "1",
+      "id": "AndroidJUnitRunner",
+      "numtests": "1",
+      "stream": "",
+      "test": "installedWrongSignerBrokerIsDeniedAndDescriptorClosed",
+      "status_code": 1
+    },
+    {
+      "class": "dev.boundarylab.consumer.ExternalEndpointTest",
+      "current": "1",
+      "id": "AndroidJUnitRunner",
+      "numtests": "1",
+      "stream": ".",
+      "test": "installedWrongSignerBrokerIsDeniedAndDescriptorClosed",
+      "status_code": 0
+    }
+  ],
+  "tests_run": 1,
+  "tests_passed": 1,
+  "tests_failed": 0,
+  "tests_skipped": 0,
+  "output_sha256": "5beed35b872553d12f8396b6dcf161e828996a6b7761b6781597ddb666438fef"
+}

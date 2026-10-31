@@ -1,0 +1,36 @@
+[
+  {
+    "argv": [
+      "adb",
+      "-s",
+      "emulator-5580",
+      "shell",
+      "pm",
+      "list",
+      "packages",
+      "-3",
+      "-U"
+    ],
+    "exit_code": 0,
+    "stdout": "package:dev.boundarylab.nativeclient.test uid:10211\npackage:dev.boundarylab.deniedclient.test uid:10213\npackage:dev.boundarylab.qa.broker.test uid:10215\npackage:dev.boundarylab.broker uid:10208\npackage:dev.boundarylab.standalone.test uid:10207\npackage:dev.boundarylab.qa.broker uid:10217\npackage:dev.boundarylab.deniedclient uid:10212\npackage:dev.boundarylab.standalone uid:10206\npackage:dev.boundarylab.broker.test uid:10209\npackage:dev.boundarylab.nativeclient uid:10210\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "adb",
+      "-s",
+      "emulator-5580",
+      "logcat",
+      "-d",
+      "-v",
+      "threadtime",
+      "BoundaryLabConsumer:I",
+      "ExternalEndpointQA:I",
+      "AndroidRuntime:E",
+      "*:S"
+    ],
+    "exit_code": 0,
+    "stdout": "--------- beginning of main\n10-31 20:11:27.844  7327  7341 I ExternalEndpointQA: DENIED package=dev.boundarylab.qa.broker expectedPermission=android.permission.INTERNET descriptorClosed=true\n10-31 20:11:28.360  7327  7341 I ExternalEndpointQA: DOCUMENT_OK bytes=38 sha256=939b150ec43b6e08f939710adb791e17c3658ae93e8d2fbd9ded9ff711e95db8\n10-31 20:11:28.736  7327  7341 I ExternalEndpointQA: POSITIVE clientUid=10206 brokerUid=10217 clientPid=7327 brokerPid=7350 sha256=6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d\n10-31 20:12:02.465  7418  7418 I BoundaryLabConsumer: CONNECTING\n10-31 20:12:02.636  7418  7418 I BoundaryLabConsumer: CONNECTED brokerPid=7350 clientPid=7418\n10-31 20:12:03.028  7418  7418 I BoundaryLabConsumer: PUBLISHED_ANDROID_OK bytes=65536 sha256=0bf0c2fa457e649fae80dcdd53fc222a4784d7696cd286895ac7d9d3993d2dec alias=generated.bin\n10-31 20:12:32.701  7418  7418 I BoundaryLabConsumer: CONNECTING\n10-31 20:12:32.866  7418  7418 I BoundaryLabConsumer: CONNECTED brokerPid=7350 clientPid=7418\n10-31 20:12:32.980  7418  7418 I BoundaryLabConsumer: DOCUMENT_SHA256_OK bytes=38 sha256=939b150ec43b6e08f939710adb791e17c3658ae93e8d2fbd9ded9ff711e95db8 alias=inspection.txt\n10-31 20:13:03.572  7418  7418 I BoundaryLabConsumer: MANIFEST_EXPORTED bytes=178\n",
+    "stderr": ""
+  }
+]

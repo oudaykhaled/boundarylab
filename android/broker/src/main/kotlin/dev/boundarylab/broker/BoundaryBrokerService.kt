@@ -27,7 +27,7 @@ class BoundaryBrokerService : Service() {
     private fun owner(): String {
         // Capture before any asynchronous work or identity clearing. UID includes Android user.
         val uid = Binder.getCallingUid()
-        enforceCallingOrSelfPermission("dev.boundarylab.permission.BIND_BROKER", "Signature permission required")
+        enforceCallingOrSelfPermission(BuildConfig.BROKER_BIND_PERMISSION, "Signature permission required")
         if (uid / 100_000 != Process.myUid() / 100_000 ||
             packageManager.checkSignatures(uid, Process.myUid()) != PackageManager.SIGNATURE_MATCH
         ) throw SecurityException("Caller denied")

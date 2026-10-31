@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-31T19:14:36.452146+00:00",
+  "owned_emulator_stopped": true,
+  "owned_temporary_avd_removed": true,
+  "private_disposable_signer_removed": true,
+  "existing_avds_untouched": true,
+  "device_check": {
+    "argv": [
+      "adb",
+      "devices",
+      "-l"
+    ],
+    "exit_code": 0,
+    "stdout": "List of devices attached\n\n",
+    "stderr": ""
+  }
+}

@@ -1,0 +1,584 @@
+{
+  "campaign": "2026-10-31 reusable library",
+  "base_commit": "647f1df",
+  "source_commit": "not yet assigned; root owns final source manifest",
+  "original_root": "outputs/boundarylab-library-20261031 outside checkout",
+  "files": [
+    {
+      "file": "03-packages.sanitized.md",
+      "bytes": 15195,
+      "sha256": "581756ecc7d46feff273d46e9d0164ea04c9ef6a9ea39059068f6f75e7070717",
+      "original_source": "03-packages.md",
+      "original_bytes": 15627,
+      "original_sha256": "f62afd0b5b22e2d8560074ff3ac2f92fb6b587fa61602c1582d2112a1afc0682",
+      "transformations": [
+        "Replaced workspace absolute prefix with /workspace and remaining user home with /home/USER"
+      ]
+    },
+    {
+      "file": "05-flutter.sanitized.md",
+      "bytes": 6516,
+      "sha256": "4a42979e32b2195f85fdc0689d5d5b20d47fbaa525bd879a4546d218558adb8b",
+      "original_source": "05-flutter.md",
+      "original_bytes": 6548,
+      "original_sha256": "83e4f22e287baa8d6cb36f6797970c7c80ccae6a01dfdb8c60831e7027270aa4",
+      "transformations": [
+        "Replaced workspace absolute prefix with /workspace and remaining user home with /home/USER"
+      ]
+    },
+    {
+      "file": "06-qa.sanitized.md",
+      "bytes": 9842,
+      "sha256": "ac261b583c50f9d2cf5e4345bc23924b4e51785f7a7e0ed020a73995dce0a497",
+      "original_source": "06-qa.md",
+      "original_bytes": 9792,
+      "original_sha256": "fe10a83b82fd347bbfe54d1e3b2542c601e6ca533f9749978983152f7d9d1b20",
+      "transformations": [
+        "Updated relative receipt links to explicitly sanitized copy filenames"
+      ]
+    },
+    {
+      "file": "07-aosp-host.sanitized.md",
+      "bytes": 4381,
+      "sha256": "c08a5c2dec71e13d6a75b6107a978dda3d6116475d8fb20892c31bd05c37ac9c",
+      "original_source": "07-aosp-host.md",
+      "original_bytes": 4445,
+      "original_sha256": "593bab0a03e912f934e60e1ae052b58df3926f4dde5a13e311a65015fdfcb035",
+      "transformations": [
+        "Replaced workspace absolute prefix with /workspace and remaining user home with /home/USER"
+      ]
+    },
+    {
+      "file": "artifact-inventory.json",
+      "bytes": 3404,
+      "sha256": "63a1add8c0c40e3c68c539654aa82bdf156f8d80dadb2b46447a035a095dd634",
+      "original_source": "artifact-inventory.json",
+      "original_bytes": 3404,
+      "original_sha256": "63a1add8c0c40e3c68c539654aa82bdf156f8d80dadb2b46447a035a095dd634",
+      "transformations": []
+    },
+    {
+      "file": "packaged-source-lineage.json",
+      "bytes": 2401,
+      "sha256": "ab3cc43fff16d59b5257c33074357953f6afc575878a00ea7efcecb399e50bda",
+      "original_source": "packaged-source-lineage.json",
+      "original_bytes": 2401,
+      "original_sha256": "ab3cc43fff16d59b5257c33074357953f6afc575878a00ea7efcecb399e50bda",
+      "transformations": []
+    },
+    {
+      "file": "publication.sanitized.log",
+      "bytes": 3582,
+      "sha256": "88d7c5fb94fa27fe831613dd26a7a800e6c39f11383619d4b910551a01e7ec81",
+      "original_source": "publication.log",
+      "original_bytes": 3742,
+      "original_sha256": "02c722cbb56c7a21ed266bfa53182386293cab7342615739a1fdf744d9486318",
+      "transformations": [
+        "Replaced workspace absolute prefix with /workspace and remaining user home with /home/USER"
+      ]
+    },
+    {
+      "file": "consumer-jvm.log",
+      "bytes": 456,
+      "sha256": "a8679c469c4187b1c6d4a6f8a90fa835d5528830f65022ad3a7680e597d3fbd0",
+      "original_source": "consumer-jvm.log",
+      "original_bytes": 456,
+      "original_sha256": "a8679c469c4187b1c6d4a6f8a90fa835d5528830f65022ad3a7680e597d3fbd0",
+      "transformations": []
+    },
+    {
+      "file": "consumer-android.sanitized.log",
+      "bytes": 2711,
+      "sha256": "5c0dc4ce9c505e20a8fd94dfa28bfc1cc64bcbf8361b4e4f28e50d10ed618227",
+      "original_source": "consumer-android.log",
+      "original_bytes": 2743,
+      "original_sha256": "9c3740a704629ebe87b11f808453349fb8c002f1b2ac41927b2183d86cce76df",
+      "transformations": [
+        "Replaced workspace absolute prefix with /workspace and remaining user home with /home/USER"
+      ]
+    },
+    {
+      "file": "consumer-android-custom.sanitized.log",
+      "bytes": 3481,
+      "sha256": "672e0564fdafd04bbc10e69b73a59dec40458e3ba3d6f93be06754d508208c8e",
+      "original_source": "consumer-android-custom.log",
+      "original_bytes": 3513,
+      "original_sha256": "de943f82239da10e44ddcf757124bba6044ef3bee775f4470a03378b1af26ab8",
+      "transformations": [
+        "Replaced workspace absolute prefix with /workspace and remaining user home with /home/USER"
+      ]
+    },
+    {
+      "file": "aosp-host/results.json",
+      "bytes": 242,
+      "sha256": "dc7bc963ad0e7550ce03029b6ab59794417fe167ddfdab06bcf1694abc0b5b66",
+      "original_source": "aosp-host/results.json",
+      "original_bytes": 242,
+      "original_sha256": "dc7bc963ad0e7550ce03029b6ab59794417fe167ddfdab06bcf1694abc0b5b66",
+      "transformations": []
+    },
+    {
+      "file": "aosp-host/source-sha256.json",
+      "bytes": 2125,
+      "sha256": "c48d1908d77c472491a7df759a6248d968df52c6cb20d05e266d67410c37edef",
+      "original_source": "aosp-host/source-sha256.json",
+      "original_bytes": 2125,
+      "original_sha256": "c48d1908d77c472491a7df759a6248d968df52c6cb20d05e266d67410c37edef",
+      "transformations": []
+    },
+    {
+      "file": "aosp-host/entrypoint-syntax.sanitized.json",
+      "bytes": 301,
+      "sha256": "ee0457f54f4309aaefd6dd05d2c670835cb1f6d1b8c40f5e9f201bd9acfcb61c",
+      "original_source": "aosp-host/entrypoint-syntax.json",
+      "original_bytes": 333,
+      "original_sha256": "628121cf3096bede003d923a7837d6cdac0ff863e2cf3dd0a4910892d4d88649",
+      "transformations": [
+        "Replaced workspace absolute prefix with /workspace and remaining user home with /home/USER"
+      ]
+    },
+    {
+      "file": "aosp-host/environment.txt",
+      "bytes": 242,
+      "sha256": "d1db0d8d3c2d5f90e47f3fcc3035ee2f606a34bcd6bfd5ebd84739bde8fa052b",
+      "original_source": "aosp-host/environment.txt",
+      "original_bytes": 242,
+      "original_sha256": "d1db0d8d3c2d5f90e47f3fcc3035ee2f606a34bcd6bfd5ebd84739bde8fa052b",
+      "transformations": []
+    },
+    {
+      "file": "aosp-host/build.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_source": "aosp-host/build.txt",
+      "original_bytes": 0,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformations": []
+    },
+    {
+      "file": "aosp-host/checks.jsonl",
+      "bytes": 2597,
+      "sha256": "66c45888b1d9313434e34ba887a86a468d4b078cd86ab1a521f6f25f1e63a671",
+      "original_source": "aosp-host/checks.jsonl",
+      "original_bytes": 2597,
+      "original_sha256": "66c45888b1d9313434e34ba887a86a468d4b078cd86ab1a521f6f25f1e63a671",
+      "transformations": []
+    },
+    {
+      "file": "aosp-host/sanitizer.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_source": "aosp-host/sanitizer.txt",
+      "original_bytes": 0,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformations": []
+    },
+    {
+      "file": "aosp-host/service-config-build.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_source": "aosp-host/service-config-build.txt",
+      "original_bytes": 0,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformations": []
+    },
+    {
+      "file": "aosp-host/service-config-checks.jsonl",
+      "bytes": 1112,
+      "sha256": "4cc1a721079d7567a1dad0b29eed317056056592ff1e877fe98bf7f211e7d3c0",
+      "original_source": "aosp-host/service-config-checks.jsonl",
+      "original_bytes": 1112,
+      "original_sha256": "4cc1a721079d7567a1dad0b29eed317056056592ff1e877fe98bf7f211e7d3c0",
+      "transformations": []
+    },
+    {
+      "file": "aosp-host/service-config-sanitizer.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_source": "aosp-host/service-config-sanitizer.txt",
+      "original_bytes": 0,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformations": []
+    },
+    {
+      "file": "flutter-logs/copied-debug-apk.log",
+      "bytes": 127,
+      "sha256": "890a73ccd806cdcd371008503077e12b92a9e27c58e60a311c9038823656a95c",
+      "original_source": "flutter-logs/copied-debug-apk.log",
+      "original_bytes": 127,
+      "original_sha256": "890a73ccd806cdcd371008503077e12b92a9e27c58e60a311c9038823656a95c",
+      "transformations": []
+    },
+    {
+      "file": "flutter-logs/plugin-dart-analyze.log",
+      "bytes": 38,
+      "sha256": "7a22388e4295207b5a30d4a16ad83f72effaeea044da943664c139329003352b",
+      "original_source": "flutter-logs/plugin-dart-analyze.log",
+      "original_bytes": 38,
+      "original_sha256": "7a22388e4295207b5a30d4a16ad83f72effaeea044da943664c139329003352b",
+      "transformations": []
+    },
+    {
+      "file": "flutter-logs/example-dart-analyze.log",
+      "bytes": 38,
+      "sha256": "7a22388e4295207b5a30d4a16ad83f72effaeea044da943664c139329003352b",
+      "original_source": "flutter-logs/example-dart-analyze.log",
+      "original_bytes": 38,
+      "original_sha256": "7a22388e4295207b5a30d4a16ad83f72effaeea044da943664c139329003352b",
+      "transformations": []
+    },
+    {
+      "file": "flutter-logs/plugin-test.sanitized.log",
+      "bytes": 1834,
+      "sha256": "8b8c2b76e77e3b1c1cec3f307e53bddd21da8240cfa6d27982341bd7d1a46898",
+      "original_source": "flutter-logs/plugin-test.log",
+      "original_bytes": 1898,
+      "original_sha256": "085aedde6451daa6020e2315d110b4e86eb06f9c1437597e9cda785e0841664a",
+      "transformations": [
+        "Replaced workspace absolute prefix with /workspace and remaining user home with /home/USER"
+      ]
+    },
+    {
+      "file": "flutter-logs/example-test.sanitized.log",
+      "bytes": 5802,
+      "sha256": "e40e14d203eb155b824557ce31809a8bf92f42022960a513dc6f3d4a80337ac0",
+      "original_source": "flutter-logs/example-test.log",
+      "original_bytes": 5898,
+      "original_sha256": "9fea4c712f374a383c880fab03f1425fe90de303fdba0fa7d46f076eda05c70f",
+      "transformations": [
+        "Replaced workspace absolute prefix with /workspace and remaining user home with /home/USER"
+      ]
+    },
+    {
+      "file": "flutter-logs/plugin-analyze.sanitized.log",
+      "bytes": 3574,
+      "sha256": "3eb8ee159773a0971bfb96234135b2beedde78cad915d1f0dc01c24d7e344811",
+      "original_source": "flutter-logs/plugin-analyze.log",
+      "original_bytes": 8588,
+      "original_sha256": "a6a086f3a29433cdd2b834a9043e94c247e0e66283daf51fc8afe6acbd279081",
+      "transformations": [
+        "Replaced workspace absolute prefix with /workspace and remaining user home with /home/USER",
+        "Removed generated GitHub issue URLs containing encoded doctor and local-device inventory; diagnostic text retained"
+      ]
+    },
+    {
+      "file": "flutter-logs/custom-endpoint-config.sanitized.log",
+      "bytes": 1092,
+      "sha256": "55589722d0808695016e186675dc2ce0147fc22fdce3c2822bb8d5e8df2ae1c4",
+      "original_source": "flutter-logs/custom-endpoint-config.log",
+      "original_bytes": 1124,
+      "original_sha256": "101dca26af6e1a20348b29a6c45ad34b8b7fdb0efef75840ee9499dd8289975a",
+      "transformations": [
+        "Replaced workspace absolute prefix with /workspace and remaining user home with /home/USER"
+      ]
+    },
+    {
+      "file": "flutter-logs/partial-endpoint-config.sanitized.log",
+      "bytes": 1887,
+      "sha256": "01e8a92bbb1fa8197df8cc1c8dbb0cd839e8319d8cb0f7edad5ebcb712d6b804",
+      "original_source": "flutter-logs/partial-endpoint-config.log",
+      "original_bytes": 1951,
+      "original_sha256": "9491a10d4b52babcd7921177226c4e3d330bb932aaddc002a8429f37876c3a97",
+      "transformations": [
+        "Replaced workspace absolute prefix with /workspace and remaining user home with /home/USER"
+      ]
+    },
+    {
+      "file": "flutter-logs/endpoint-config-checks.sanitized.json",
+      "bytes": 1039,
+      "sha256": "a2a65d4dae34a155e67c3384686b7f34d0a41dd7f6eca56ba5353178797f2a5b",
+      "original_source": "flutter-logs/endpoint-config-checks.json",
+      "original_bytes": 1103,
+      "original_sha256": "ef17b5449a2119850b389a5dd770abd85e51f03ac6020445459eddf24102a829",
+      "transformations": [
+        "Replaced workspace absolute prefix with /workspace and remaining user home with /home/USER"
+      ]
+    },
+    {
+      "file": "flutter-logs/apk.sanitized.json",
+      "bytes": 350,
+      "sha256": "049b59caa2215948b88e5ca562a3b5a0658645f15fc607121e061ad98a22a81e",
+      "original_source": "flutter-logs/apk.json",
+      "original_bytes": 382,
+      "original_sha256": "97ab6dc795e2b5632b07647244fbee93e8527847a2788a8bbe494953a7d6187a",
+      "transformations": [
+        "Replaced workspace absolute prefix with /workspace and remaining user home with /home/USER"
+      ]
+    },
+    {
+      "file": "flutter-logs/copied-source-check.sanitized.json",
+      "bytes": 239,
+      "sha256": "bff777df7e038b6cb50b923a248633bac4e7500440e853ebd201bd85eb3741a4",
+      "original_source": "flutter-logs/copied-source-check.json",
+      "original_bytes": 271,
+      "original_sha256": "2417858b4ff206771fd430baeeb07056e4831a335700b43238c2ab66368831ee",
+      "transformations": [
+        "Replaced workspace absolute prefix with /workspace and remaining user home with /home/USER"
+      ]
+    },
+    {
+      "file": "qa-runtime/summary.json",
+      "bytes": 1382,
+      "sha256": "a6137dd6cd09dcb31f2c2bf9901376fb870a361964dc3429b5779960797dee21",
+      "original_source": "qa-runtime/summary.json",
+      "original_bytes": 1382,
+      "original_sha256": "a6137dd6cd09dcb31f2c2bf9901376fb870a361964dc3429b5779960797dee21",
+      "transformations": []
+    },
+    {
+      "file": "qa-runtime/cleanup.json",
+      "bytes": 370,
+      "sha256": "0d15d404ce44c226b48eb250008cfb1cecb05dacb8f3741c145f7ad9500936e9",
+      "original_source": "qa-runtime/cleanup.json",
+      "original_bytes": 370,
+      "original_sha256": "0d15d404ce44c226b48eb250008cfb1cecb05dacb8f3741c145f7ad9500936e9",
+      "transformations": []
+    },
+    {
+      "file": "qa-runtime/toolchain.sanitized.json",
+      "bytes": 1997,
+      "sha256": "40117a2487f8367dd30a65fab9187e54ef1ab4a07413d593ac388a7fea8d282f",
+      "original_source": "qa-runtime/toolchain.json",
+      "original_bytes": 2013,
+      "original_sha256": "c28c5d00f24b13464acabec15c8323ad09b581079f28ee2245a4a915c98e582a",
+      "transformations": [
+        "Replaced workspace absolute prefix with /workspace and remaining user home with /home/USER"
+      ]
+    },
+    {
+      "file": "qa-runtime/parser-only-tests.sanitized.json",
+      "bytes": 357,
+      "sha256": "54664c402bf25960b0d2a1bc1e80c4d865428e0a62a42acc8abf1485528201ee",
+      "original_source": "qa-runtime/parser-only-tests.json",
+      "original_bytes": 389,
+      "original_sha256": "edcf9fe26a7d07b2e47046c3facce101983262cebf5d7b36e8eb5254f90b8402",
+      "transformations": [
+        "Replaced workspace absolute prefix with /workspace and remaining user home with /home/USER"
+      ]
+    },
+    {
+      "file": "qa-runtime/parser-only-tests.log",
+      "bytes": 107,
+      "sha256": "d9d734ee1c2de67b748aeef1c4126433aa438ad8375ca953916f12b1df11414d",
+      "original_source": "qa-runtime/parser-only-tests.log",
+      "original_bytes": 107,
+      "original_sha256": "d9d734ee1c2de67b748aeef1c4126433aa438ad8375ca953916f12b1df11414d",
+      "transformations": []
+    },
+    {
+      "file": "qa-runtime/device-runtime.sanitized.json",
+      "bytes": 516,
+      "sha256": "e9aae3b413dd10feb2210cd03595e68d53429ff020eaa6b6c1b8df6fbebda9a5",
+      "original_source": "qa-runtime/device-runtime.json",
+      "original_bytes": 548,
+      "original_sha256": "53fa9891b0de22f59bbe57314baf8d75f3fd7eb37ff7966667fb60bd0f2b3a7e",
+      "transformations": [
+        "Replaced workspace absolute prefix with /workspace and remaining user home with /home/USER"
+      ]
+    },
+    {
+      "file": "qa-runtime/device-runtime.log",
+      "bytes": 107,
+      "sha256": "a61cde06b6650270371ce32bb45576a8c8d89a999c572ef955e8c4a2dd1bcedc",
+      "original_source": "qa-runtime/device-runtime.log",
+      "original_bytes": 107,
+      "original_sha256": "a61cde06b6650270371ce32bb45576a8c8d89a999c572ef955e8c4a2dd1bcedc",
+      "transformations": []
+    },
+    {
+      "file": "qa-runtime/strict-revalidation.json",
+      "bytes": 23183,
+      "sha256": "343fa48b2c05689a98f611463e56955884a738c681d87aae6d100985c07914d7",
+      "original_source": "qa-runtime/strict-revalidation.json",
+      "original_bytes": 23183,
+      "original_sha256": "343fa48b2c05689a98f611463e56955884a738c681d87aae6d100985c07914d7",
+      "transformations": []
+    },
+    {
+      "file": "qa-runtime/document-hashed.png",
+      "bytes": 81211,
+      "sha256": "ecdc95d67e37d3f4fb7b0aa369da3c39f6eb43df5b4dda871ff0916261d36192",
+      "original_source": "qa-runtime/document-hashed.png",
+      "original_bytes": 81211,
+      "original_sha256": "ecdc95d67e37d3f4fb7b0aa369da3c39f6eb43df5b4dda871ff0916261d36192",
+      "transformations": []
+    },
+    {
+      "file": "qa-runtime/manifest-exported.png",
+      "bytes": 53852,
+      "sha256": "7baf31f9b5e96977caa308b774eeb3b2ac4fe2787bc3866f1e099a3e65486838",
+      "original_source": "qa-runtime/manifest-exported.png",
+      "original_bytes": 53852,
+      "original_sha256": "7baf31f9b5e96977caa308b774eeb3b2ac4fe2787bc3866f1e099a3e65486838",
+      "transformations": []
+    },
+    {
+      "file": "qa-runtime/document-hashed-capture.json",
+      "bytes": 279,
+      "sha256": "8d7c01ba0c0f8a2e5d5bfa30521f61af391679932958e40095791d64dc3e87ac",
+      "original_source": "qa-runtime/document-hashed-capture.json",
+      "original_bytes": 279,
+      "original_sha256": "8d7c01ba0c0f8a2e5d5bfa30521f61af391679932958e40095791d64dc3e87ac",
+      "transformations": []
+    },
+    {
+      "file": "qa-runtime/manifest-exported-capture.json",
+      "bytes": 281,
+      "sha256": "89e3a53073886c8e62321e0ad7990f5962f2ffb89b99662dae00260d0d7bd9ba",
+      "original_source": "qa-runtime/manifest-exported-capture.json",
+      "original_bytes": 281,
+      "original_sha256": "89e3a53073886c8e62321e0ad7990f5962f2ffb89b99662dae00260d0d7bd9ba",
+      "transformations": []
+    },
+    {
+      "file": "qa-runtime/final-device-identities-and-ui.json",
+      "bytes": 2291,
+      "sha256": "33f46b3aca5ba349fb220b2a253d7d1771f6f0179109c29e11101ab2f456227f",
+      "original_source": "qa-runtime/final-device-identities-and-ui.json",
+      "original_bytes": 2291,
+      "original_sha256": "33f46b3aca5ba349fb220b2a253d7d1771f6f0179109c29e11101ab2f456227f",
+      "transformations": []
+    },
+    {
+      "file": "qa-runtime/verify-exported-recipient.sanitized.json",
+      "bytes": 573,
+      "sha256": "124b615a801426498df3792e727ad158896f1489704d84b08ee3c942d8988e0a",
+      "original_source": "qa-runtime/verify-exported-recipient.json",
+      "original_bytes": 669,
+      "original_sha256": "d2584440ced4662bf33f2b750f1e56a34c6f81eb4edaeb2875f23a6996c21415",
+      "transformations": [
+        "Replaced workspace absolute prefix with /workspace and remaining user home with /home/USER"
+      ]
+    },
+    {
+      "file": "qa-runtime/verify-exported-recipient.log",
+      "bytes": 94,
+      "sha256": "cb8edbbd936c0fc42860bdea90c7ddf78a1eae98803a1d04265c4368e5e10758",
+      "original_source": "qa-runtime/verify-exported-recipient.log",
+      "original_bytes": 94,
+      "original_sha256": "cb8edbbd936c0fc42860bdea90c7ddf78a1eae98803a1d04265c4368e5e10758",
+      "transformations": []
+    },
+    {
+      "file": "qa-runtime/recipient-changed.sanitized.json",
+      "bytes": 550,
+      "sha256": "2420f9d8f2f4e2a6b357803a7b0a184176bfb0b76c8b749e72a1922fcc0ae556",
+      "original_source": "qa-runtime/recipient-changed.json",
+      "original_bytes": 614,
+      "original_sha256": "78f81cb1528454c1f11506f5651dedd472cb0969e7e1ef187a25f7a133222f4b",
+      "transformations": [
+        "Replaced workspace absolute prefix with /workspace and remaining user home with /home/USER"
+      ]
+    },
+    {
+      "file": "qa-runtime/apk-inventory.sanitized.json",
+      "bytes": 5810,
+      "sha256": "e4f6e78ef8c156759e0939fee23a4d24328857ce3f13371097854f1ed1ff1f74",
+      "original_source": "qa-runtime/apk-inventory.json",
+      "original_bytes": 6250,
+      "original_sha256": "da891cba43c1b202f19616b8e1f4475a4ccf745009ad0f9669838da6c3f554dc",
+      "transformations": [
+        "Replaced workspace absolute prefix with /workspace and remaining user home with /home/USER"
+      ]
+    },
+    {
+      "file": "qa-runtime/tested-source-hashes.json",
+      "bytes": 5135,
+      "sha256": "ecb04bf9b62f37bbb3d6ea2878725d0c15a0dffc0702d392ce625669764dda8c",
+      "original_source": "qa-runtime/tested-source-hashes.json",
+      "original_bytes": 5135,
+      "original_sha256": "ecb04bf9b62f37bbb3d6ea2878725d0c15a0dffc0702d392ce625669764dda8c",
+      "transformations": []
+    },
+    {
+      "file": "qa-runtime/fixtures/oracle.json",
+      "bytes": 127,
+      "sha256": "f091ddc74b0575a3745fe6a8493cf56862a41c5b181274a13fe54664bc87bddf",
+      "original_source": "qa-runtime/fixtures/oracle.json",
+      "original_bytes": 127,
+      "original_sha256": "f091ddc74b0575a3745fe6a8493cf56862a41c5b181274a13fe54664bc87bddf",
+      "transformations": []
+    },
+    {
+      "file": "qa-runtime/fixtures/inspection.txt",
+      "bytes": 38,
+      "sha256": "939b150ec43b6e08f939710adb791e17c3658ae93e8d2fbd9ded9ff711e95db8",
+      "original_source": "qa-runtime/fixtures/inspection.txt",
+      "original_bytes": 38,
+      "original_sha256": "939b150ec43b6e08f939710adb791e17c3658ae93e8d2fbd9ded9ff711e95db8",
+      "transformations": []
+    },
+    {
+      "file": "qa-runtime/fixtures/fieldpack.json",
+      "bytes": 178,
+      "sha256": "03fdecfdaa964619ef61bc2c14ae2479939535b61e21e4b6d85039e2c99d6b4b",
+      "original_source": "qa-runtime/fixtures/fieldpack.json",
+      "original_bytes": 178,
+      "original_sha256": "03fdecfdaa964619ef61bc2c14ae2479939535b61e21e4b6d85039e2c99d6b4b",
+      "transformations": []
+    },
+    {
+      "file": "qa-runtime/recipient-changed/inspection.txt",
+      "bytes": 38,
+      "sha256": "56855676f8e5b01ea447cac5ac536d9ac3738bec66cf2977d91a2d5831ad7a4e",
+      "original_source": "qa-runtime/recipient-changed/inspection.txt",
+      "original_bytes": 38,
+      "original_sha256": "56855676f8e5b01ea447cac5ac536d9ac3738bec66cf2977d91a2d5831ad7a4e",
+      "transformations": []
+    },
+    {
+      "file": "qa-runtime/default-regression/broker.json",
+      "bytes": 39307,
+      "sha256": "049f4d26fbeb13a569b0fb4207c2105d73b93d0076600085f7a66573f225a9a3",
+      "original_source": "qa-runtime/default-regression/broker.json",
+      "original_bytes": 39307,
+      "original_sha256": "049f4d26fbeb13a569b0fb4207c2105d73b93d0076600085f7a66573f225a9a3",
+      "transformations": []
+    },
+    {
+      "file": "qa-runtime/custom-endpoint/endpoint.json",
+      "bytes": 20222,
+      "sha256": "6db377fdfa511b58477defd15d9b5fc32ac8a9aacb8210a9b44c2d3e27627fcb",
+      "original_source": "qa-runtime/custom-endpoint/endpoint.json",
+      "original_bytes": 20222,
+      "original_sha256": "6db377fdfa511b58477defd15d9b5fc32ac8a9aacb8210a9b44c2d3e27627fcb",
+      "transformations": []
+    },
+    {
+      "file": "qa-runtime/incoming-denial/denied-client.json",
+      "bytes": 3563,
+      "sha256": "52204116ff6b3ea121b673788c5a97527935f199a346616d9991d78c05878ef6",
+      "original_source": "qa-runtime/incoming-denial/denied-client.json",
+      "original_bytes": 3563,
+      "original_sha256": "52204116ff6b3ea121b673788c5a97527935f199a346616d9991d78c05878ef6",
+      "transformations": []
+    },
+    {
+      "file": "qa-runtime/external-positive/consumer.json",
+      "bytes": 9856,
+      "sha256": "0db7da0f70d31e4e0b97136545a540b0146b9d9397a618558753bf9d923afec2",
+      "original_source": "qa-runtime/external-positive/consumer.json",
+      "original_bytes": 9856,
+      "original_sha256": "0db7da0f70d31e4e0b97136545a540b0146b9d9397a618558753bf9d923afec2",
+      "transformations": []
+    },
+    {
+      "file": "qa-runtime/outgoing-denial/wrong-signer.json",
+      "bytes": 4577,
+      "sha256": "7de417e74f485d75c901ff229e099a8ac744909d6492726ac331ae1e673796b1",
+      "original_source": "qa-runtime/outgoing-denial/wrong-signer.json",
+      "original_bytes": 4577,
+      "original_sha256": "7de417e74f485d75c901ff229e099a8ac744909d6492726ac331ae1e673796b1",
+      "transformations": []
+    },
+    {
+      "file": "qa-runtime/restored-positive/consumer.json",
+      "bytes": 9856,
+      "sha256": "f1638160952772e1914f8bdce3aef9c71a88bda597611cf07231c6726ec0143d",
+      "original_source": "qa-runtime/restored-positive/consumer.json",
+      "original_bytes": 9856,
+      "original_sha256": "f1638160952772e1914f8bdce3aef9c71a88bda597611cf07231c6726ec0143d",
+      "transformations": []
+    }
+  ]
+}

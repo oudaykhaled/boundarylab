@@ -1,0 +1,6 @@
+# Rename to example_generated_hash.rc when activating the Blueprint template.
+service example_generated_hash /system_ext/bin/example_generated_hash_service
+    class main
+    user nobody
+    group nobody
+    restart_period 10

@@ -1,5 +1,24 @@
 # BoundaryLab Kotlin core
 
+Reuse the bounded engine and FieldPack codec in a JVM 17 application without
+Android classes or Binder. Publish from the repository root:
+
+```sh
+./gradlew publishLibrariesToLocalRepository -PboundarylabRepository=/absolute/path/to/maven
+```
+
+Configure that folder as a Maven repository restricted to `dev.boundarylab`, then
+add `implementation("dev.boundarylab:boundarylab-core:0.1.0-SNAPSHOT")`. This is a
+local development artifact, not a Maven Central availability claim. POM/module
+metadata, sources and Dokka HTML API docs accompany the JAR. The default producer
+folder is `build/local-maven`; producer and consumer versions must match.
+
+The [library guide](../docs/LIBRARY-GUIDE.md) covers repository setup, and the
+[standalone JVM consumer](../examples/standalone/README.md) executes generated
+SHA-256 and a FieldPack round trip using only the published coordinate. Embedding
+the core runs work in your own process; use a transport host when you need a
+separate worker process.
+
 `dev.boundarylab.core` implements the volatile job policy in
 [ADR-B02](../docs/decisions/BUILD-DECISIONS.md) and the
 [FieldPack contract](../docs/FIELDPACK.md). It has no Android, transport, coroutine,

@@ -17,3 +17,12 @@ clang++ -std=c++17 -Wall -Wextra -Werror -pthread -fsanitize=address,undefined \
   > "$AOSP_LOCAL_OUT/build.txt" 2>&1
 "$AOSP_LOCAL_OUT/engine_test" > "$AOSP_LOCAL_OUT/checks.jsonl" 2> "$AOSP_LOCAL_OUT/sanitizer.txt"
 cat "$AOSP_LOCAL_OUT/checks.jsonl"
+
+# Compile the production helper used by RunService and Client; no Binder stubs.
+clang++ -std=c++17 -Wall -Wextra -Werror -fsanitize=address,undefined \
+  -I aosp/service aosp/service/ServiceConfig.cpp aosp/tests/service_config_test.cpp \
+  -o "$AOSP_LOCAL_OUT/service_config_test" \
+  > "$AOSP_LOCAL_OUT/service-config-build.txt" 2>&1
+"$AOSP_LOCAL_OUT/service_config_test" > "$AOSP_LOCAL_OUT/service-config-checks.jsonl" \
+  2> "$AOSP_LOCAL_OUT/service-config-sanitizer.txt"
+cat "$AOSP_LOCAL_OUT/service-config-checks.jsonl"

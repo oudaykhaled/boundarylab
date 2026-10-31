@@ -1,4 +1,5 @@
 #include "Client.h"
+#include "ServiceConfig.h"
 #include <binder/IServiceManager.h>
 #include <binder/ProcessState.h>
 namespace wire = dev::boundarylab::platform;
@@ -14,10 +15,12 @@ wire::Result checked(const android::binder::Status& status, wire::Result value) 
 }
 wire::Result lost() { wire::Result r; r.error = "LOST_OR_UNKNOWN"; return r; }
 }
-Client::Client() : token_(android::sp<android::BBinder>::make()) {
+Client::Client() : Client("dev.boundarylab.platform.IBoundaryLab/default") {}
+Client::Client(const std::string& serviceName) : token_(android::sp<android::BBinder>::make()) {
+    if (!IsValidServiceName(serviceName)) return;
     android::ProcessState::self()->startThreadPool();
     service_ = android::interface_cast<wire::IBoundaryLab>(android::defaultServiceManager()->checkService(
-        android::String16("dev.boundarylab.platform.IBoundaryLab/default")));
+        android::String16(serviceName.c_str())));
 }
 Client::~Client() { if (!session_.sessionId.empty()) close(); }
 wire::Capabilities Client::capabilities(std::string* error) {

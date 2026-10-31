@@ -1,0 +1,17 @@
+{
+  "started": "2026-10-31T19:13:06.201157+00:00",
+  "finished": "2026-10-31T19:13:06.256606+00:00",
+  "cwd": "/workspace/BoundaryLab",
+  "argv": [
+    "python3",
+    "examples/fieldpack/fieldpack.py",
+    "verify",
+    "--root",
+    "/workspace/outputs/boundarylab-library-20261031/qa-runtime/fixtures",
+    "--manifest",
+    "/workspace/outputs/boundarylab-library-20261031/qa-runtime/fixtures/fieldpack.json"
+  ],
+  "exit_code": 0,
+  "output_sha256": "cb8edbbd936c0fc42860bdea90c7ddf78a1eae98803a1d04265c4368e5e10758",
+  "output_file": "verify-exported-recipient.log"
+}

@@ -2,10 +2,23 @@ group = 'dev.boundarylab.flutter'
 version = '0.1.0'
 apply plugin: 'com.android.library'
 apply plugin: 'org.jetbrains.kotlin.android'
+
+def brokerProperties = ['boundarylab.brokerPackage', 'boundarylab.brokerServiceClass', 'boundarylab.brokerBindPermission']
+def brokerValues = brokerProperties.collect { providers.gradleProperty(it).orNull }
+if (brokerValues.any { it != null } && brokerValues.any { it == null || it.trim().isEmpty() }) {
+    throw new GradleException('Set all three boundarylab.brokerPackage, boundarylab.brokerServiceClass and boundarylab.brokerBindPermission properties, or omit all three for the default broker.')
+}
 android {
     namespace 'dev.boundarylab.flutter'
     compileSdk 36
-    defaultConfig { minSdk 30 }
+    defaultConfig {
+        minSdk 30
+        buildConfigField 'boolean', 'CUSTOM_BROKER_ENDPOINT', brokerValues.any { it != null }.toString()
+        ['BROKER_PACKAGE', 'BROKER_SERVICE_CLASS', 'BROKER_BIND_PERMISSION'].eachWithIndex { name, index ->
+            buildConfigField 'String', name, groovy.json.JsonOutput.toJson(brokerValues[index] ?: '')
+        }
+    }
+    buildFeatures { buildConfig true }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
@@ -13,6 +26,6 @@ android {
     kotlinOptions { jvmTarget = '17' }
 }
 dependencies {
-    implementation project(':sdk:kotlin')
+    implementation "dev.boundarylab:boundarylab-android:${providers.gradleProperty('boundarylabVersion').getOrElse('0.1.0-SNAPSHOT')}"
     testImplementation 'junit:junit:4.13.2'
 }

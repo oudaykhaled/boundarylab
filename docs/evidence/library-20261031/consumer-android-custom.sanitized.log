@@ -1,0 +1,86 @@
+
+> Configure project :
+w: file:///workspace/outputs/boundarylab-library-20261031/consumers/android/build.gradle.kts:39:21: 'jvmTarget: String' is deprecated. Please migrate to the compilerOptions DSL. More details are here: https://kotl.in/u1r8ln
+
+> Task :preBuild UP-TO-DATE
+> Task :preDebugBuild UP-TO-DATE
+> Task :mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :generateDebugBuildConfig
+> Task :checkDebugAarMetadata UP-TO-DATE
+> Task :generateDebugResValues UP-TO-DATE
+> Task :mapDebugSourceSetPaths UP-TO-DATE
+> Task :generateDebugResources UP-TO-DATE
+> Task :mergeDebugResources UP-TO-DATE
+> Task :packageDebugResources UP-TO-DATE
+> Task :parseDebugLocalResources UP-TO-DATE
+> Task :createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :extractDeepLinksDebug
+> Task :processDebugMainManifest
+> Task :processDebugManifest
+> Task :javaPreCompileDebug UP-TO-DATE
+> Task :mergeDebugShaders UP-TO-DATE
+> Task :compileDebugShaders NO-SOURCE
+> Task :generateDebugAssets UP-TO-DATE
+> Task :mergeDebugAssets UP-TO-DATE
+> Task :compressDebugAssets UP-TO-DATE
+> Task :desugarDebugFileDependencies UP-TO-DATE
+> Task :checkDebugDuplicateClasses UP-TO-DATE
+> Task :mergeExtDexDebug UP-TO-DATE
+> Task :mergeLibDexDebug UP-TO-DATE
+> Task :mergeDebugJniLibFolders UP-TO-DATE
+> Task :mergeDebugNativeLibs NO-SOURCE
+> Task :stripDebugDebugSymbols NO-SOURCE
+> Task :validateSigningDebug UP-TO-DATE
+> Task :writeDebugAppMetadata UP-TO-DATE
+> Task :writeDebugSigningConfigVersions UP-TO-DATE
+> Task :preDebugAndroidTestBuild SKIPPED
+> Task :processDebugAndroidTestManifest
+> Task :generateDebugAndroidTestBuildConfig
+> Task :checkDebugAndroidTestAarMetadata
+> Task :processDebugManifestForPackage
+> Task :generateDebugAndroidTestResValues
+> Task :mapDebugAndroidTestSourceSetPaths
+> Task :generateDebugAndroidTestResources
+> Task :mergeDebugAndroidTestResources
+> Task :processDebugResources
+> Task :processDebugAndroidTestResources
+> Task :javaPreCompileDebugAndroidTest
+> Task :mergeDebugAndroidTestShaders
+> Task :compileDebugAndroidTestShaders NO-SOURCE
+> Task :generateDebugAndroidTestAssets UP-TO-DATE
+> Task :mergeDebugAndroidTestAssets
+> Task :compressDebugAndroidTestAssets
+> Task :desugarDebugAndroidTestFileDependencies
+> Task :checkDebugAndroidTestDuplicateClasses
+> Task :compileDebugKotlin
+> Task :compileDebugJavaWithJavac
+> Task :dexBuilderDebug
+> Task :mergeDebugGlobalSynthetics UP-TO-DATE
+> Task :processDebugJavaRes UP-TO-DATE
+> Task :mergeDebugJavaResource UP-TO-DATE
+> Task :mergeExtDexDebugAndroidTest
+> Task :mergeProjectDexDebug
+> Task :bundleDebugClassesToCompileJar
+> Task :packageDebug
+> Task :createDebugApkListingFileRedirect UP-TO-DATE
+> Task :assembleDebug
+> Task :mergeLibDexDebugAndroidTest
+> Task :mergeDebugAndroidTestJniLibFolders
+> Task :mergeDebugAndroidTestNativeLibs NO-SOURCE
+> Task :stripDebugAndroidTestDebugSymbols NO-SOURCE
+> Task :validateSigningDebugAndroidTest
+> Task :writeDebugAndroidTestSigningConfigVersions
+> Task :compileDebugAndroidTestKotlin
+> Task :compileDebugAndroidTestJavaWithJavac
+> Task :dexBuilderDebugAndroidTest
+> Task :mergeDebugAndroidTestGlobalSynthetics
+> Task :processDebugAndroidTestJavaRes
+> Task :mergeProjectDexDebugAndroidTest
+> Task :mergeDebugAndroidTestJavaResource
+> Task :packageDebugAndroidTest
+> Task :createDebugAndroidTestApkListingFileRedirect
+> Task :assembleDebugAndroidTest
+
+BUILD SUCCESSFUL in 5s
+64 actionable tasks: 40 executed, 24 up-to-date

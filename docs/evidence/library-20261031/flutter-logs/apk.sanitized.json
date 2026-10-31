@@ -1,0 +1,8 @@
+{
+  "path": "/workspace/outputs/boundarylab-library-20261031/consumers/flutter/app/build/app/outputs/flutter-apk/app-debug.apk",
+  "bytes": 147377126,
+  "sha256": "3ea8bf861fe337558bbae6bca2a391c4d34e1bbc9ef50993ff6d5e424d8590c2",
+  "evidence_class": "copied-flutter-consumer-debug-apk",
+  "broker_endpoint": "default",
+  "runtime_executed": false
+}

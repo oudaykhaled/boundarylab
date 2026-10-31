@@ -1,0 +1,55 @@
+{
+  "verdict": "PASS-WITH-GAPS",
+  "scope": "local Android application broker and outside-checkout published Kotlin SDK consumer",
+  "runtime": {
+    "tests_run": 46,
+    "tests_passed": 46,
+    "tests_failed": 0,
+    "tests_skipped": 0,
+    "distinct_test_methods": 30
+  },
+  "parser_only": {
+    "tests_run": 9,
+    "tests_passed": 9,
+    "tests_failed": 0
+  },
+  "ui": {
+    "generated_cta": "PASS",
+    "saf_choose_hash_export": "PASS"
+  },
+  "recipient": {
+    "original": "MATCH, expected exit 0",
+    "changed_byte": "DIGEST_MISMATCH, expected exit 1"
+  },
+  "device": {
+    "kind": "fresh temporary emulator",
+    "api": 35,
+    "android": "15",
+    "abi": "arm64-v8a",
+    "selinux": "Enforcing"
+  },
+  "unexecuted": [
+    "Flutter Android runtime",
+    "new AOSP/platform bridge image",
+    "physical device/API30/API36 current-source regression",
+    "SAF cancellation/configuration/provider-loss matrix",
+    "sample asynchronous export-stop race"
+  ],
+  "cleanup": {
+    "at": "2026-10-31T19:14:36.452146+00:00",
+    "owned_emulator_stopped": true,
+    "owned_temporary_avd_removed": true,
+    "private_disposable_signer_removed": true,
+    "existing_avds_untouched": true,
+    "device_check": {
+      "argv": [
+        "adb",
+        "devices",
+        "-l"
+      ],
+      "exit_code": 0,
+      "stdout": "List of devices attached\n\n",
+      "stderr": ""
+    }
+  }
+}

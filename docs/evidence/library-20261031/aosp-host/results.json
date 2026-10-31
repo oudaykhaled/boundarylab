@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "engine_checks": 61,
+  "production_config_policy_checks": 20,
+  "sanitizer_output_bytes": 0,
+  "entrypoint_syntax_exit_code": 0,
+  "binder_soong_image_execution": "NOT RUN",
+  "source_manifest": "source-sha256.json"
+}

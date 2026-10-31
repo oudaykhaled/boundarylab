@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-31T19:12:35.744240+00:00",
+  "argv": [
+    "adb",
+    "-s",
+    "emulator-5580",
+    "exec-out",
+    "screencap",
+    "-p"
+  ],
+  "exit_code": 0,
+  "sha256": "ecdc95d67e37d3f4fb7b0aa369da3c39f6eb43df5b4dda871ff0916261d36192",
+  "image": "document-hashed.png"
+}

@@ -1,0 +1,167 @@
+[
+  {
+    "name": "broker-custom-test.apk",
+    "sha256": "311f178519d6a69d022e8b11d9ddb50b1d34018fe2911e583677c4065ddf2205",
+    "bytes": 2247855,
+    "signer_certificate_sha256": [
+      "6b9991b39b4ad0faef79f4db866e6b61492adf2391804df8dc6ea78eb9d15450"
+    ],
+    "verification_argv": [
+      "/home/USER/Library/Android/sdk/build-tools/35.0.0/apksigner",
+      "verify",
+      "--print-certs",
+      "/workspace/outputs/boundarylab-library-20261031/qa-runtime/apks/broker-custom-test.apk"
+    ],
+    "verification_exit_code": 0
+  },
+  {
+    "name": "broker-custom-wrong-signer.apk",
+    "sha256": "9d8c4b0fb4d8a6c4bd22e6c713ae587f06770f7cdd4739f728dd26590a2fe719",
+    "bytes": 2635218,
+    "signer_certificate_sha256": [
+      "b66f49faf73c1f90abce4c7c7994cefb2a13d929a2e9029efa9277822926324a"
+    ],
+    "verification_argv": [
+      "/home/USER/Library/Android/sdk/build-tools/35.0.0/apksigner",
+      "verify",
+      "--print-certs",
+      "/workspace/outputs/boundarylab-library-20261031/qa-runtime/apks/broker-custom-wrong-signer.apk"
+    ],
+    "verification_exit_code": 0
+  },
+  {
+    "name": "broker-custom.apk",
+    "sha256": "1c5a3a01b0b9ce4be058daac4a4307bf1697b82671361f0f3dd76fd8d91a02aa",
+    "bytes": 2628378,
+    "signer_certificate_sha256": [
+      "6b9991b39b4ad0faef79f4db866e6b61492adf2391804df8dc6ea78eb9d15450"
+    ],
+    "verification_argv": [
+      "/home/USER/Library/Android/sdk/build-tools/35.0.0/apksigner",
+      "verify",
+      "--print-certs",
+      "/workspace/outputs/boundarylab-library-20261031/qa-runtime/apks/broker-custom.apk"
+    ],
+    "verification_exit_code": 0
+  },
+  {
+    "name": "broker-default-test.apk",
+    "sha256": "8dfc3da504e2528c15b1b22a6ca41cb1be1469b6e17361e228cbac750a12b39d",
+    "bytes": 2247799,
+    "signer_certificate_sha256": [
+      "6b9991b39b4ad0faef79f4db866e6b61492adf2391804df8dc6ea78eb9d15450"
+    ],
+    "verification_argv": [
+      "/home/USER/Library/Android/sdk/build-tools/35.0.0/apksigner",
+      "verify",
+      "--print-certs",
+      "/workspace/outputs/boundarylab-library-20261031/qa-runtime/apks/broker-default-test.apk"
+    ],
+    "verification_exit_code": 0
+  },
+  {
+    "name": "broker-default.apk",
+    "sha256": "511f5097afb91f14135e336eb27f91d04c6311e51a5ca951bd93843753138f29",
+    "bytes": 2628342,
+    "signer_certificate_sha256": [
+      "6b9991b39b4ad0faef79f4db866e6b61492adf2391804df8dc6ea78eb9d15450"
+    ],
+    "verification_argv": [
+      "/home/USER/Library/Android/sdk/build-tools/35.0.0/apksigner",
+      "verify",
+      "--print-certs",
+      "/workspace/outputs/boundarylab-library-20261031/qa-runtime/apks/broker-default.apk"
+    ],
+    "verification_exit_code": 0
+  },
+  {
+    "name": "consumer-custom-test.apk",
+    "sha256": "55cd87ede339957c6f2ffcbd0dec2a0c9ffddb8febe89c2f6072f303c4bc6c2e",
+    "bytes": 2178555,
+    "signer_certificate_sha256": [
+      "6b9991b39b4ad0faef79f4db866e6b61492adf2391804df8dc6ea78eb9d15450"
+    ],
+    "verification_argv": [
+      "/home/USER/Library/Android/sdk/build-tools/35.0.0/apksigner",
+      "verify",
+      "--print-certs",
+      "/workspace/outputs/boundarylab-library-20261031/qa-runtime/apks/consumer-custom-test.apk"
+    ],
+    "verification_exit_code": 0
+  },
+  {
+    "name": "consumer-custom.apk",
+    "sha256": "c04f8736f04599e3dd7e4f3cab0ee96c4b17ba43df5ae7bf10f571b60a52940d",
+    "bytes": 2637701,
+    "signer_certificate_sha256": [
+      "6b9991b39b4ad0faef79f4db866e6b61492adf2391804df8dc6ea78eb9d15450"
+    ],
+    "verification_argv": [
+      "/home/USER/Library/Android/sdk/build-tools/35.0.0/apksigner",
+      "verify",
+      "--print-certs",
+      "/workspace/outputs/boundarylab-library-20261031/qa-runtime/apks/consumer-custom.apk"
+    ],
+    "verification_exit_code": 0
+  },
+  {
+    "name": "denied-test.apk",
+    "sha256": "674ced5e06b8b38b2d4d374917a661cc26e3b5d51cdc64b46eefe8fc2b7b2a77",
+    "bytes": 2163113,
+    "signer_certificate_sha256": [
+      "b66f49faf73c1f90abce4c7c7994cefb2a13d929a2e9029efa9277822926324a"
+    ],
+    "verification_argv": [
+      "/home/USER/Library/Android/sdk/build-tools/35.0.0/apksigner",
+      "verify",
+      "--print-certs",
+      "/workspace/outputs/boundarylab-library-20261031/qa-runtime/apks/denied-test.apk"
+    ],
+    "verification_exit_code": 0
+  },
+  {
+    "name": "denied.apk",
+    "sha256": "77c9e2a70cdf832e5d2b84173baa8406a702fe047172609d1c615a85d93df66b",
+    "bytes": 2460474,
+    "signer_certificate_sha256": [
+      "b66f49faf73c1f90abce4c7c7994cefb2a13d929a2e9029efa9277822926324a"
+    ],
+    "verification_argv": [
+      "/home/USER/Library/Android/sdk/build-tools/35.0.0/apksigner",
+      "verify",
+      "--print-certs",
+      "/workspace/outputs/boundarylab-library-20261031/qa-runtime/apks/denied.apk"
+    ],
+    "verification_exit_code": 0
+  },
+  {
+    "name": "native-test.apk",
+    "sha256": "6d68ac5c28b4743b9c521be414a284268bc96464f1d1fac28dd81a675602c243",
+    "bytes": 2207133,
+    "signer_certificate_sha256": [
+      "6b9991b39b4ad0faef79f4db866e6b61492adf2391804df8dc6ea78eb9d15450"
+    ],
+    "verification_argv": [
+      "/home/USER/Library/Android/sdk/build-tools/35.0.0/apksigner",
+      "verify",
+      "--print-certs",
+      "/workspace/outputs/boundarylab-library-20261031/qa-runtime/apks/native-test.apk"
+    ],
+    "verification_exit_code": 0
+  },
+  {
+    "name": "native.apk",
+    "sha256": "955196789b25b45f3ace40d3537e5b3e0fc6bd329f4ffbd5e34ac61130af5d08",
+    "bytes": 2665678,
+    "signer_certificate_sha256": [
+      "6b9991b39b4ad0faef79f4db866e6b61492adf2391804df8dc6ea78eb9d15450"
+    ],
+    "verification_argv": [
+      "/home/USER/Library/Android/sdk/build-tools/35.0.0/apksigner",
+      "verify",
+      "--print-certs",
+      "/workspace/outputs/boundarylab-library-20261031/qa-runtime/apks/native.apk"
+    ],
+    "verification_exit_code": 0
+  }
+]

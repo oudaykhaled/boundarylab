@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "clang++",
+    "-std=c++17",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-I",
+    "aosp/service",
+    "-fsyntax-only",
+    "aosp/service/main.cpp",
+    "aosp/examples/image-host/main.cpp"
+  ],
+  "cwd": "/workspace/BoundaryLab",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

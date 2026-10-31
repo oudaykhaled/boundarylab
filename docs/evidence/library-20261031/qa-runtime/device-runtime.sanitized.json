@@ -1,0 +1,15 @@
+{
+  "started": "2026-10-31T19:02:58.449582+00:00",
+  "finished": "2026-10-31T19:02:58.630053+00:00",
+  "cwd": "/workspace/BoundaryLab",
+  "argv": [
+    "adb",
+    "-s",
+    "emulator-5580",
+    "shell",
+    "getprop ro.build.version.release; getprop ro.build.version.sdk; getprop ro.product.cpu.abi; getprop ro.build.fingerprint; getprop ro.kernel.qemu; getenforce"
+  ],
+  "exit_code": 0,
+  "output_sha256": "a61cde06b6650270371ce32bb45576a8c8d89a999c572ef955e8c4a2dd1bcedc",
+  "output_file": "device-runtime.log"
+}
