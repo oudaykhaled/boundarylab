@@ -38,3 +38,6 @@ User-authorized18-agent documentation/media pass; root remains sole board, Git a
 | Hero, diagrams, charts and animated replay | Agents06–10,18 | Implemented, rendered and reviewed | Eight assets in docs/media/readme/; source-linked data/generators and checksums | None | Verify hosted GitHub image rendering |
 | Independent truth/privacy/accessibility/render review | Agents02,14–17 | Scoped AI reviews passed; corrections integrated | 149 local links, eight asset hashes, exact replay citations; all1,244 frozen originals unchanged | No scoped blocker | Preserve limits and rendered result |
 | Publication | root | Reviewed locally; publication/merge tracked in the associated README PR | Documentation-only branch, deterministic asset/source checks and original hashes | Hosted rendering and normal PR integration | Publish and verify actual GitHub README |
+
+
+README presentation correction (2026-10-31, root): removed the two lock-screen captures from the main README after user review. The primary section now shows exact recorded Binder success, typed denial and native execution output. Boot images remain only in the collapsed supporting gallery archive; original bytes are unchanged. Publication is tracked in the associated correction PR. No cloud or device execution is required.

@@ -10,6 +10,21 @@ The images below are original execution captures from **30 October 2026**. Open 
 
 The recorded Google Cloud host ran **Linux x86_64 with 16 CPUs, 64 GiB nominal RAM (62.8 GiB reported) and working KVM API 12**. Source-built images and their matching source-built Cuttlefish host binaries booted the pinned `android-16.0.0_r4` target. [Host/KVM receipt](evidence/aosp/attempt-20261030/host-kvm.json) · [Baseline source/build record](evidence/P02/r5-source-baseline/README.md) · [Final custom source checkpoint](evidence/aosp/custom-20261030/runtime/r6/source-checkpoint.json)
 
+| Inspect the executed behavior | Recorded evidence |
+| --- | --- |
+| **34/34 operator checks** — image identity, installed binaries, profile, enforcement, final proof and cleanup | [Original final aggregate](evidence/aosp/custom-20261030/runtime/r6/run-result.json) |
+| **236/236 harness observations** — real Binder goldens, caller identity, typed denial, session ownership, cancellation, death cleanup and restart/epoch checks | [Original harness checks](evidence/aosp/custom-20261030/runtime/r6/smoke/checks.json) |
+| **61 unique native assertions, all true**, followed by the PASS/61 summary | [Original native command receipt](evidence/aosp/custom-20261030/runtime/r6/smoke/058-command.json) · [Extracted JSONL](evidence/aosp/custom-20261030/runtime/r6/native61.jsonl) |
+| Actual loaded policy and relevant service/probe/denied domains | [Loaded policy](evidence/aosp/custom-20261030/runtime/r6/smoke/loaded-policy.bin) · [Permissive-domain analysis](evidence/aosp/custom-20261030/runtime/r6/smoke/permissive-domains.json) |
+| Cloud VM and both disks absent after evidence export | [Verified teardown receipt](evidence/aosp/teardown-20261030/teardown.json) |
+
+The 236 observations include repeated checks; the three counts describe different layers and are **not additive unique-test totals**. Authorized Binder probes ran as UID 2000 in `boundarylab_probe`; the denied client ran as Android UID 9999 in `boundarylab_denied`. Native engine assertions ran separately under `su`, whose domain was permissive. [Exact identity boundaries, earlier failures and remaining scope](evidence/aosp/custom-20261030/README.md)
+
+## Supporting boot captures
+
+<details>
+<summary>Open the baseline and custom-image lock screens (boot context only)</summary>
+
 <table>
   <tr>
     <th width="50%">1 · Unchanged source baseline</th>
@@ -27,15 +42,9 @@ The recorded Google Cloud host ran **Linux x86_64 with 16 CPUs, 64 GiB nominal R
 
 These lock screens show the actual booted virtual guests. **The service result is established by the command receipts below**: the native service has no graphical UI.
 
-| Inspect the executed behavior | Recorded evidence |
-| --- | --- |
-| **34/34 operator checks** — image identity, installed binaries, profile, enforcement, final proof and cleanup | [Original final aggregate](evidence/aosp/custom-20261030/runtime/r6/run-result.json) |
-| **236/236 harness observations** — real Binder goldens, caller identity, typed denial, session ownership, cancellation, death cleanup and restart/epoch checks | [Original harness checks](evidence/aosp/custom-20261030/runtime/r6/smoke/checks.json) |
-| **61 unique native assertions, all true**, followed by the PASS/61 summary | [Original native command receipt](evidence/aosp/custom-20261030/runtime/r6/smoke/058-command.json) · [Extracted JSONL](evidence/aosp/custom-20261030/runtime/r6/native61.jsonl) |
-| Actual loaded policy and relevant service/probe/denied domains | [Loaded policy](evidence/aosp/custom-20261030/runtime/r6/smoke/loaded-policy.bin) · [Permissive-domain analysis](evidence/aosp/custom-20261030/runtime/r6/smoke/permissive-domains.json) |
-| Cloud VM and both disks absent after evidence export | [Verified teardown receipt](evidence/aosp/teardown-20261030/teardown.json) |
+These are supporting boot captures, not demonstrations of the service doing work. The recorded Binder request/response and native execution above establish that behavior.
 
-The 236 observations include repeated checks; the three counts describe different layers and are **not additive unique-test totals**. Authorized Binder probes ran as UID 2000 in `boundarylab_probe`; the denied client ran as Android UID 9999 in `boundarylab_denied`. Native engine assertions ran separately under `su`, whose domain was permissive. [Exact identity boundaries, earlier failures and remaining scope](evidence/aosp/custom-20261030/README.md)
+</details>
 
 ## FieldPack on a physical Android phone
 
