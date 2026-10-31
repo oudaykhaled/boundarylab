@@ -2,7 +2,7 @@
 
 The desktop CLI sends jobs to a **separate JVM host** over a Unix-domain socket. The host hashes explicitly selected aliases under its startup root. The CLI creates a portable manifest or verifies separately supplied files against one; it does not hash attachments locally.
 
-**Executed target:** macOS 26.5.1 arm64, OpenJDK 17.0.14, Gradle 8.13, Kotlin 2.2.21 and Apple clang 21.0.0. The native file adapter is verified on this target. **Linux CI execution is pending**; POSIX source alone is not a Linux support claim. Windows is unsupported.
+**Executed walkthrough target:** macOS 26.5.1 arm64, OpenJDK 17.0.14, Gradle 8.13, Kotlin 2.2.21 and Apple clang 21.0.0. The native file adapter is verified on this target. The separate [hosted CI run](https://github.com/oudaykhaled/boundarylab/actions/runs/41141910969) passed all five lanes, including JVM checks on Ubuntu 24.04 and macOS 15 ARM64. Hosted checks do not extend the physical walkthrough or establish Android/macOS feature parity. Windows is unsupported.
 
 ## Build the launchers and native adapter
 
@@ -156,4 +156,4 @@ The walkthrough blocks above were executed unchanged through `/bin/zsh` on 2026-
 - [CLI/core QA receipt](../docs/evidence/build/crossplatform-qa-core-jvm-r3.json): 11 CLI tests and 159 core tests passed; CLI tests cover 127 manifest vectors, 24 generated vectors and a real multi-chunk file checked by the independent Python reference.
 - [Conformance instructions and limitations](../conformance/desktop/README.md).
 
-These are desktop execution receipts. Android/Flutter export and manual transfer require their separate handoff evidence; Linux CI and physical-device performance remain separate gates.
+These are desktop execution receipts. Android/Flutter export and manual transfer require their separate handoff evidence. [Ubuntu and macOS hosted JVM checks passed](https://github.com/oudaykhaled/boundarylab/actions/runs/41141910969); physical-device performance and Android/macOS feature parity remain separate, unexecuted gates.

@@ -1,0 +1,1302 @@
+{
+  "schemaVersion": 1,
+  "title": "BoundaryLab: actual Android 16 source build and custom-image proof on Linux/KVM",
+  "metricSchema": "Each metric has value, unit, scope, sources (repository path + RFC6901 pointer or inclusive one-based lines); derived metrics state the derivation.",
+  "scope": "Display dataset derived offline from retained public receipts. No new build, device test, cloud action or current timestamp.",
+  "caveats": [
+    "Counts are separate overlapping evidence layers; never sum them into unique tests.",
+    "236 harness observations include repeated case names. 61 native case names are unique and exclude the summary row.",
+    "Native assertions ran under su, which is permissive; the three BoundaryLab domains were checked nonpermissive in loaded policy.",
+    "Timeline includes incremental builds and development fixes; it is not a performance comparison.",
+    "Actual virtual Android lock-screen PNGs establish visual boot context; service semantics are supported by command receipts.",
+    "Compatibility evolution, old consumer, performance, soak and fresh final reproduction remain outside this proof.",
+    "Local hashes establish retained-byte integrity, not independent execution attestation.",
+    "All costs are estimates. The reserved projection is not a settled bill or additional actual spend."
+  ],
+  "host": {
+    "system": {
+      "value": "Linux",
+      "unit": "name",
+      "scope": "Recorded host preflight, not Android guest kernel.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/attempt-20261030/host-kvm.json",
+          "pointer": "/system"
+        }
+      ]
+    },
+    "architecture": {
+      "value": "x86_64",
+      "unit": "name",
+      "scope": "Recorded Linux host architecture.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/attempt-20261030/host-kvm.json",
+          "pointer": "/architecture"
+        }
+      ]
+    },
+    "kernel": {
+      "value": "7.0.0-1014-gcp",
+      "unit": "version",
+      "scope": "Recorded Linux host kernel.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/attempt-20261030/host-kvm.json",
+          "pointer": "/kernel"
+        }
+      ]
+    },
+    "machineType": {
+      "value": "n2-standard-16",
+      "unit": "name",
+      "scope": "Applied Google Cloud VM machine type.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/attempt-20261030/cloud-controls.json",
+          "pointer": "/machine_type"
+        }
+      ]
+    },
+    "cpuCount": {
+      "value": 16,
+      "unit": "logical CPU",
+      "scope": "Logical CPUs observed by host preflight.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/attempt-20261030/host-kvm.json",
+          "pointer": "/cpus"
+        }
+      ]
+    },
+    "memoryKiB": {
+      "value": 65836528,
+      "unit": "KiB",
+      "scope": "Memory reported to the Linux host; not nominal SKU RAM.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/attempt-20261030/host-kvm.json",
+          "pointer": "/memoryKiB"
+        }
+      ]
+    },
+    "memoryGiB": {
+      "value": 62.7866,
+      "unit": "GiB",
+      "scope": "Observed Linux host memory converted from KiB; not nominal SKU RAM.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/attempt-20261030/host-kvm.json",
+          "pointer": "/memoryKiB"
+        }
+      ],
+      "derivation": "round(memoryKiB / 1024**2, 4)"
+    },
+    "kvmApi": {
+      "value": 12,
+      "unit": "API version",
+      "scope": "KVM API ioctl succeeded in host preflight.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/attempt-20261030/host-kvm.json",
+          "pointer": "/kvmApi"
+        }
+      ]
+    },
+    "transientKvmVmCreatedAndClosed": {
+      "value": true,
+      "unit": "boolean",
+      "scope": "KVM preflight created/closed a transient VM; guest boot is established separately.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/attempt-20261030/host-kvm.json",
+          "pointer": "/transientVmCreatedAndClosed"
+        }
+      ]
+    },
+    "nestedVirtualization": {
+      "value": true,
+      "unit": "boolean",
+      "scope": "Applied cloud VM control.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/attempt-20261030/cloud-controls.json",
+          "pointer": "/nested_virtualization"
+        }
+      ]
+    }
+  },
+  "identity": {
+    "aospTag": {
+      "value": "android-16.0.0_r4",
+      "unit": "tag",
+      "scope": "Pinned Android source baseline, then same target with overlay.",
+      "sources": [
+        {
+          "path": "docs/evidence/P02/r5-source-baseline/build-result.json",
+          "pointer": "/source_manifest"
+        }
+      ]
+    },
+    "target": {
+      "value": "aosp_cf_x86_64_only_phone-bp4a-userdebug",
+      "unit": "name",
+      "scope": "Actual source build target.",
+      "sources": [
+        {
+          "path": "docs/evidence/P02/r5-source-baseline/build-result.json",
+          "pointer": "/target"
+        }
+      ]
+    },
+    "sourceCommit": {
+      "value": "444ae29a31833616c465e155a3dc1335d061cda6",
+      "unit": "git SHA",
+      "scope": "BoundaryLab source revision used by final r6 proof.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/custom-20261030/runtime/r6/run-result.json",
+          "pointer": "/source_commit"
+        }
+      ]
+    },
+    "globalSelinuxBefore": {
+      "value": "Enforcing",
+      "unit": "mode",
+      "scope": "Guest global state before final smoke.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/custom-20261030/actual-results.json",
+          "pointer": "/policy/guest_global_before"
+        }
+      ]
+    },
+    "globalSelinuxAfter": {
+      "value": "Enforcing",
+      "unit": "mode",
+      "scope": "Guest global state after final smoke.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/custom-20261030/actual-results.json",
+          "pointer": "/policy/guest_global_after"
+        }
+      ]
+    },
+    "nonpermissiveBoundaryLabDomains": {
+      "value": [
+        "boundarylab",
+        "boundarylab_probe",
+        "boundarylab_denied"
+      ],
+      "unit": "domain list",
+      "scope": "Domains checked against the loaded guest policy, not every Android domain.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/custom-20261030/actual-results.json",
+          "pointer": "/policy/boundarylab_domains_checked_nonpermissive"
+        }
+      ]
+    },
+    "nativeExecutionIdentity": {
+      "value": "root, u:r:su:s0; su listed permissive in loaded policy; no su-enforcement claim",
+      "unit": "identity",
+      "scope": "Native assertion identity must remain distinct from authorized Binder probe identity.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/custom-20261030/actual-results.json",
+          "pointer": "/native_assertions/execution_identity"
+        }
+      ]
+    }
+  },
+  "counts": {
+    "baselineChecks": {
+      "value": 18,
+      "unit": "count",
+      "scope": "Unchanged Android 16 baseline; separate from custom-image proof.",
+      "sources": [
+        {
+          "path": "docs/evidence/P02/r5-source-baseline/boot/checks.json",
+          "pointer": ""
+        }
+      ],
+      "derivation": "len(root array)"
+    },
+    "baselinePassed": {
+      "value": 18,
+      "unit": "count",
+      "scope": "Unchanged baseline checks with passed=true.",
+      "sources": [
+        {
+          "path": "docs/evidence/P02/r5-source-baseline/boot/checks.json",
+          "pointer": ""
+        }
+      ],
+      "derivation": "count(root rows where passed is true)"
+    },
+    "operatorChecks": {
+      "value": 34,
+      "unit": "count",
+      "scope": "Final r6 operator checks, including harness/native summaries; overlaps other layers.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/custom-20261030/runtime/r6/run-result.json",
+          "pointer": "/checks"
+        }
+      ],
+      "derivation": "len(checks)"
+    },
+    "operatorPassed": {
+      "value": 34,
+      "unit": "count",
+      "scope": "Final r6 operator checks with passed=true.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/custom-20261030/runtime/r6/run-result.json",
+          "pointer": "/checks"
+        }
+      ],
+      "derivation": "count(checks where passed is true)"
+    },
+    "harnessObservations": {
+      "value": 236,
+      "unit": "count",
+      "scope": "Final r6 observations include repeated case/identity names; not 236 unique tests.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/custom-20261030/runtime/r6/smoke/checks.json",
+          "pointer": "/checks"
+        }
+      ],
+      "derivation": "len(checks)"
+    },
+    "harnessPassed": {
+      "value": 236,
+      "unit": "count",
+      "scope": "Final r6 harness observations with passed=true.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/custom-20261030/runtime/r6/smoke/checks.json",
+          "pointer": "/checks"
+        }
+      ],
+      "derivation": "count(checks where passed is true)"
+    },
+    "nativeAssertions": {
+      "value": 61,
+      "unit": "count",
+      "scope": "Unique native assertion cases; executed once under su, a permissive domain.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/custom-20261030/runtime/r6/native61.jsonl",
+          "lines": [
+            1,
+            62
+          ]
+        }
+      ],
+      "derivation": "count(distinct case names); summary row excluded"
+    },
+    "nativePassed": {
+      "value": 61,
+      "unit": "count",
+      "scope": "Unique native cases with passed=true; not proof that su is enforcing.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/custom-20261030/runtime/r6/native61.jsonl",
+          "lines": [
+            1,
+            62
+          ]
+        }
+      ],
+      "derivation": "count(case rows where passed is true); summary row excluded"
+    },
+    "failedRuntimeAttempts": {
+      "value": 5,
+      "unit": "count",
+      "scope": "r1-r5 are retained failures, followed by passing r6.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/custom-20261030/actual-results.json",
+          "pointer": "/preserved_failed_attempts"
+        }
+      ],
+      "derivation": "len(preserved_failed_attempts)"
+    }
+  },
+  "timeline": [
+    {
+      "id": "baseline-build",
+      "label": "Unchanged AOSP source build",
+      "scope": "One development build; elapsed time is not a benchmark.",
+      "startedUtc": {
+        "value": "2026-10-30T20:59:33.889006+00:00",
+        "unit": "UTC timestamp",
+        "scope": "One development build; elapsed time is not a benchmark.",
+        "sources": [
+          {
+            "path": "docs/evidence/P02/r5-source-baseline/build-result.json",
+            "pointer": "/started_utc"
+          }
+        ]
+      },
+      "endedUtc": {
+        "value": "2026-10-30T21:36:20.582882+00:00",
+        "unit": "UTC timestamp",
+        "scope": "One development build; elapsed time is not a benchmark.",
+        "sources": [
+          {
+            "path": "docs/evidence/P02/r5-source-baseline/build-result.json",
+            "pointer": "/ended_utc"
+          }
+        ]
+      },
+      "passed": {
+        "value": true,
+        "unit": "boolean",
+        "scope": "One development build; elapsed time is not a benchmark.",
+        "sources": [
+          {
+            "path": "docs/evidence/P02/r5-source-baseline/build-result.json",
+            "pointer": "/exit_code"
+          }
+        ],
+        "derivation": "exit_code == 0"
+      }
+    },
+    {
+      "id": "baseline-boot",
+      "label": "Unchanged source baseline boot and cleanup",
+      "scope": "Unchanged baseline before BoundaryLab overlay.",
+      "startedUtc": {
+        "value": "2026-10-30T21:36:57.098038+00:00",
+        "unit": "UTC timestamp",
+        "scope": "Unchanged baseline before BoundaryLab overlay.",
+        "sources": [
+          {
+            "path": "docs/evidence/P02/r5-source-baseline/boot-run-result.json",
+            "pointer": "/window/started_utc"
+          }
+        ]
+      },
+      "endedUtc": {
+        "value": "2026-10-30T21:37:50.199501+00:00",
+        "unit": "UTC timestamp",
+        "scope": "Unchanged baseline before BoundaryLab overlay.",
+        "sources": [
+          {
+            "path": "docs/evidence/P02/r5-source-baseline/boot-run-result.json",
+            "pointer": "/ended_utc"
+          }
+        ]
+      },
+      "passed": {
+        "value": true,
+        "unit": "boolean",
+        "scope": "Unchanged baseline before BoundaryLab overlay.",
+        "sources": [
+          {
+            "path": "docs/evidence/P02/r5-source-baseline/boot-run-result.json",
+            "pointer": "/passed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "native-r5",
+      "label": "Final incremental native build",
+      "scope": "Final incremental native compilation; not clean-build performance.",
+      "startedUtc": {
+        "value": "2026-10-30T22:36:49.930371+00:00",
+        "unit": "UTC timestamp",
+        "scope": "Final incremental native compilation; not clean-build performance.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/build/native-r5/build-result.json",
+            "pointer": "/started_utc"
+          }
+        ]
+      },
+      "endedUtc": {
+        "value": "2026-10-30T22:37:01.225747+00:00",
+        "unit": "UTC timestamp",
+        "scope": "Final incremental native compilation; not clean-build performance.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/build/native-r5/build-result.json",
+            "pointer": "/ended_utc"
+          }
+        ]
+      },
+      "passed": {
+        "value": true,
+        "unit": "boolean",
+        "scope": "Final incremental native compilation; not clean-build performance.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/build/native-r5/build-result.json",
+            "pointer": "/exit_code"
+          }
+        ],
+        "derivation": "exit_code == 0"
+      }
+    },
+    {
+      "id": "image-r4",
+      "label": "Final incremental image build",
+      "scope": "Final incremental image package; compilation is not runtime assertion execution.",
+      "startedUtc": {
+        "value": "2026-10-30T22:37:03.296776+00:00",
+        "unit": "UTC timestamp",
+        "scope": "Final incremental image package; compilation is not runtime assertion execution.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/build/image-r4/build-result.json",
+            "pointer": "/started_utc"
+          }
+        ]
+      },
+      "endedUtc": {
+        "value": "2026-10-30T22:37:20.958644+00:00",
+        "unit": "UTC timestamp",
+        "scope": "Final incremental image package; compilation is not runtime assertion execution.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/build/image-r4/build-result.json",
+            "pointer": "/ended_utc"
+          }
+        ]
+      },
+      "passed": {
+        "value": true,
+        "unit": "boolean",
+        "scope": "Final incremental image package; compilation is not runtime assertion execution.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/build/image-r4/build-result.json",
+            "pointer": "/exit_code"
+          }
+        ],
+        "derivation": "exit_code == 0"
+      }
+    },
+    {
+      "id": "runtime-r6",
+      "label": "Custom image boot, combined proof and cleanup",
+      "scope": "Minimum combined runtime proof; no performance, soak or fresh reproduction campaign.",
+      "startedUtc": {
+        "value": "2026-10-30T22:37:58.797726+00:00",
+        "unit": "UTC timestamp",
+        "scope": "Minimum combined runtime proof; no performance, soak or fresh reproduction campaign.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r6/run-window.json",
+            "pointer": "/started_utc"
+          }
+        ]
+      },
+      "endedUtc": {
+        "value": "2026-10-30T22:39:22.424199+00:00",
+        "unit": "UTC timestamp",
+        "scope": "Minimum combined runtime proof; no performance, soak or fresh reproduction campaign.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r6/run-result.json",
+            "pointer": "/ended_utc"
+          }
+        ]
+      },
+      "passed": {
+        "value": true,
+        "unit": "boolean",
+        "scope": "Minimum combined runtime proof; no performance, soak or fresh reproduction campaign.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r6/run-result.json",
+            "pointer": "/passed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "export-verified",
+      "label": "Final evidence archive verified locally",
+      "scope": "Local hash verification, not independent execution authenticity.",
+      "startedUtc": null,
+      "endedUtc": {
+        "value": "2026-10-30T22:40:09.183000+00:00",
+        "unit": "UTC timestamp",
+        "scope": "Verified after export, before deletion.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/archives/r6-local-verification.json",
+            "pointer": "/verified_utc"
+          }
+        ]
+      },
+      "passed": {
+        "value": true,
+        "unit": "boolean",
+        "scope": "Local export integrity verification.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/archives/r6-local-verification.json",
+            "pointer": "/verified"
+          }
+        ]
+      }
+    },
+    {
+      "id": "charged-resources-deleted",
+      "label": "VM and both disks verified absent",
+      "scope": "Operator-recorded provider checks; settled invoice not available.",
+      "startedUtc": null,
+      "endedUtc": {
+        "value": "2026-10-30T22:41:46.211288+00:00",
+        "unit": "UTC timestamp",
+        "scope": "Actual retained teardown timestamp.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/teardown-20261030/teardown.json",
+            "pointer": "/charged_resources_absent_since_utc"
+          }
+        ]
+      },
+      "passed": {
+        "value": true,
+        "unit": "boolean",
+        "scope": "Conjunction of cited absence/deletion fields and empty final provider resource lists.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/teardown-20261030/teardown.json",
+            "pointer": "/instance_absent"
+          },
+          {
+            "path": "docs/evidence/aosp/teardown-20261030/teardown.json",
+            "pointer": "/both_disks_absent"
+          },
+          {
+            "path": "docs/evidence/aosp/teardown-20261030/teardown.json",
+            "pointer": "/final_resource_lists"
+          }
+        ],
+        "derivation": "all(cited boolean fields are true) and all(final_resource_lists values are empty)"
+      }
+    },
+    {
+      "id": "teardown-verified",
+      "label": "Attempt teardown verified",
+      "scope": "Operator-recorded provider checks; settled invoice not available.",
+      "startedUtc": null,
+      "endedUtc": {
+        "value": "2026-10-30T22:42:33.521039+00:00",
+        "unit": "UTC timestamp",
+        "scope": "Actual retained teardown timestamp.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/teardown-20261030/teardown.json",
+            "pointer": "/verified_utc"
+          }
+        ]
+      },
+      "passed": {
+        "value": true,
+        "unit": "boolean",
+        "scope": "Conjunction of cited absence/deletion fields and empty final provider resource lists.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/teardown-20261030/teardown.json",
+            "pointer": "/instance_absent"
+          },
+          {
+            "path": "docs/evidence/aosp/teardown-20261030/teardown.json",
+            "pointer": "/both_disks_absent"
+          },
+          {
+            "path": "docs/evidence/aosp/teardown-20261030/teardown.json",
+            "pointer": "/deadline_task_deleted"
+          },
+          {
+            "path": "docs/evidence/aosp/teardown-20261030/teardown.json",
+            "pointer": "/deadline_queue_deleted"
+          },
+          {
+            "path": "docs/evidence/aosp/teardown-20261030/teardown.json",
+            "pointer": "/deadline_iam_binding_role_service_account_deleted"
+          },
+          {
+            "path": "docs/evidence/aosp/teardown-20261030/teardown.json",
+            "pointer": "/attempt_firewall_subnet_network_deleted"
+          },
+          {
+            "path": "docs/evidence/aosp/teardown-20261030/teardown.json",
+            "pointer": "/evidence_verified_before_deletion"
+          },
+          {
+            "path": "docs/evidence/aosp/teardown-20261030/teardown.json",
+            "pointer": "/final_resource_lists"
+          }
+        ],
+        "derivation": "all(cited boolean fields are true) and all(final_resource_lists values are empty)"
+      }
+    }
+  ],
+  "runtimeAttempts": [
+    {
+      "id": "r1",
+      "passed": {
+        "value": false,
+        "unit": "boolean",
+        "scope": "Whole attempt result; passing subset does not override failure.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r1/run-result.json",
+            "pointer": "/passed"
+          }
+        ]
+      },
+      "startedUtc": {
+        "value": "2026-10-30T22:04:59.267060+00:00",
+        "unit": "UTC timestamp",
+        "scope": "Operator recorded runtime start.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r1/run-result.json",
+            "pointer": "/started_epoch"
+          }
+        ],
+        "derivation": "datetime.fromtimestamp(started_epoch, UTC).isoformat(timespec='microseconds')"
+      },
+      "endedUtc": {
+        "value": "2026-10-30T22:05:48.826664+00:00",
+        "unit": "UTC timestamp",
+        "scope": "Operator recorded runtime end.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r1/run-result.json",
+            "pointer": "/ended_utc"
+          }
+        ]
+      },
+      "reason": {
+        "value": "Shell could not hash a protected system_ext service binary; functional harness not reached.",
+        "unit": "description",
+        "scope": "Editorial diagnosis tied to retained attempt table and aggregate.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/README.md",
+            "lines": [
+              43,
+              43
+            ]
+          },
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r1/run-result.json",
+            "pointer": "/error"
+          },
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r1/run-result.json",
+            "pointer": "/passed"
+          }
+        ],
+        "derivation": "Concise description of cited runtime-attempt row; no failure reclassified."
+      },
+      "cleanupVerified": {
+        "value": true,
+        "unit": "boolean",
+        "scope": "Attempt guest/build process cleanup; cloud teardown is separate.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r1/run-result.json",
+            "pointer": "/cleanup_verified"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "passed": {
+        "value": false,
+        "unit": "boolean",
+        "scope": "Whole attempt result; passing subset does not override failure.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r2/run-result.json",
+            "pointer": "/passed"
+          }
+        ]
+      },
+      "startedUtc": {
+        "value": "2026-10-30T22:08:32.992516+00:00",
+        "unit": "UTC timestamp",
+        "scope": "Operator recorded runtime start.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r2/run-result.json",
+            "pointer": "/started_epoch"
+          }
+        ],
+        "derivation": "datetime.fromtimestamp(started_epoch, UTC).isoformat(timespec='microseconds')"
+      },
+      "endedUtc": {
+        "value": "2026-10-30T22:09:19.772866+00:00",
+        "unit": "UTC timestamp",
+        "scope": "Operator recorded runtime end.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r2/run-result.json",
+            "pointer": "/ended_utc"
+          }
+        ]
+      },
+      "reason": {
+        "value": "Native test file had matching hash but mode 0644 instead of executable 0755; functional harness not reached.",
+        "unit": "description",
+        "scope": "Editorial diagnosis tied to retained attempt table and aggregate.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/README.md",
+            "lines": [
+              44,
+              44
+            ]
+          },
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r2/run-result.json",
+            "pointer": "/error"
+          },
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r2/run-result.json",
+            "pointer": "/passed"
+          }
+        ],
+        "derivation": "Concise description of cited runtime-attempt row; no failure reclassified."
+      },
+      "cleanupVerified": {
+        "value": true,
+        "unit": "boolean",
+        "scope": "Attempt guest/build process cleanup; cloud teardown is separate.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r2/run-result.json",
+            "pointer": "/cleanup_verified"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "passed": {
+        "value": false,
+        "unit": "boolean",
+        "scope": "Whole attempt result; passing subset does not override failure.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r3/run-result.json",
+            "pointer": "/passed"
+          }
+        ]
+      },
+      "startedUtc": {
+        "value": "2026-10-30T22:11:56.591486+00:00",
+        "unit": "UTC timestamp",
+        "scope": "Operator recorded runtime start.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r3/run-result.json",
+            "pointer": "/started_epoch"
+          }
+        ],
+        "derivation": "datetime.fromtimestamp(started_epoch, UTC).isoformat(timespec='microseconds')"
+      },
+      "endedUtc": {
+        "value": "2026-10-30T22:12:44.369144+00:00",
+        "unit": "UTC timestamp",
+        "scope": "Operator recorded runtime end.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r3/run-result.json",
+            "pointer": "/ended_utc"
+          }
+        ]
+      },
+      "reason": {
+        "value": "Probe could not read selinuxfs/enforce; global_enforcing observation failed after authorized-domain entry.",
+        "unit": "description",
+        "scope": "Editorial diagnosis tied to retained attempt table and aggregate.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/README.md",
+            "lines": [
+              45,
+              45
+            ]
+          },
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r3/run-result.json",
+            "pointer": "/error"
+          },
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r3/run-result.json",
+            "pointer": "/passed"
+          }
+        ],
+        "derivation": "Concise description of cited runtime-attempt row; no failure reclassified."
+      },
+      "cleanupVerified": {
+        "value": true,
+        "unit": "boolean",
+        "scope": "Attempt guest/build process cleanup; cloud teardown is separate.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r3/run-result.json",
+            "pointer": "/cleanup_verified"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "passed": {
+        "value": false,
+        "unit": "boolean",
+        "scope": "Whole attempt result; passing subset does not override failure.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r4/run-result.json",
+            "pointer": "/passed"
+          }
+        ]
+      },
+      "startedUtc": {
+        "value": "2026-10-30T22:19:33.434144+00:00",
+        "unit": "UTC timestamp",
+        "scope": "Operator recorded runtime start.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r4/run-result.json",
+            "pointer": "/started_epoch"
+          }
+        ],
+        "derivation": "datetime.fromtimestamp(started_epoch, UTC).isoformat(timespec='microseconds')"
+      },
+      "endedUtc": {
+        "value": "2026-10-30T22:20:33.527642+00:00",
+        "unit": "UTC timestamp",
+        "scope": "Operator recorded runtime end.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r4/run-result.json",
+            "pointer": "/ended_utc"
+          }
+        ]
+      },
+      "reason": {
+        "value": "Raw-FD classification assertion failed; old detail label does not establish the historical numeric Binder status.",
+        "unit": "description",
+        "scope": "Editorial diagnosis tied to retained attempt table and aggregate.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/README.md",
+            "lines": [
+              46,
+              46
+            ]
+          },
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r4/run-result.json",
+            "pointer": "/error"
+          },
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r4/run-result.json",
+            "pointer": "/passed"
+          }
+        ],
+        "derivation": "Concise description of cited runtime-attempt row; no failure reclassified."
+      },
+      "cleanupVerified": {
+        "value": true,
+        "unit": "boolean",
+        "scope": "Attempt guest/build process cleanup; cloud teardown is separate.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r4/run-result.json",
+            "pointer": "/cleanup_verified"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "passed": {
+        "value": false,
+        "unit": "boolean",
+        "scope": "Whole attempt result; passing subset does not override failure.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r5/run-result.json",
+            "pointer": "/passed"
+          }
+        ]
+      },
+      "startedUtc": {
+        "value": "2026-10-30T22:31:11.785940+00:00",
+        "unit": "UTC timestamp",
+        "scope": "Operator recorded runtime start.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r5/run-result.json",
+            "pointer": "/started_epoch"
+          }
+        ],
+        "derivation": "datetime.fromtimestamp(started_epoch, UTC).isoformat(timespec='microseconds')"
+      },
+      "endedUtc": {
+        "value": "2026-10-30T22:32:16.643373+00:00",
+        "unit": "UTC timestamp",
+        "scope": "Operator recorded runtime end.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r5/run-result.json",
+            "pointer": "/ended_utc"
+          }
+        ]
+      },
+      "reason": {
+        "value": "Denied fixture observed Android UID 9999 against old 65534 expectation; stopped before typed DENIED call.",
+        "unit": "description",
+        "scope": "Editorial diagnosis tied to retained attempt table and aggregate.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/README.md",
+            "lines": [
+              47,
+              47
+            ]
+          },
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r5/run-result.json",
+            "pointer": "/error"
+          },
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r5/run-result.json",
+            "pointer": "/passed"
+          }
+        ],
+        "derivation": "Concise description of cited runtime-attempt row; no failure reclassified."
+      },
+      "cleanupVerified": {
+        "value": true,
+        "unit": "boolean",
+        "scope": "Attempt guest/build process cleanup; cloud teardown is separate.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r5/run-result.json",
+            "pointer": "/cleanup_verified"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "passed": {
+        "value": true,
+        "unit": "boolean",
+        "scope": "Whole attempt result; passing subset does not override failure.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r6/run-result.json",
+            "pointer": "/passed"
+          }
+        ]
+      },
+      "startedUtc": {
+        "value": "2026-10-30T22:37:58.792032+00:00",
+        "unit": "UTC timestamp",
+        "scope": "Operator recorded runtime start.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r6/run-result.json",
+            "pointer": "/started_epoch"
+          }
+        ],
+        "derivation": "datetime.fromtimestamp(started_epoch, UTC).isoformat(timespec='microseconds')"
+      },
+      "endedUtc": {
+        "value": "2026-10-30T22:39:22.424199+00:00",
+        "unit": "UTC timestamp",
+        "scope": "Operator recorded runtime end.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r6/run-result.json",
+            "pointer": "/ended_utc"
+          }
+        ]
+      },
+      "reason": {
+        "value": "Complete minimum combined proof passed; earlier failed attempts remain failures.",
+        "unit": "description",
+        "scope": "Editorial diagnosis tied to retained attempt table and aggregate.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/README.md",
+            "lines": [
+              48,
+              48
+            ]
+          },
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r6/run-result.json",
+            "pointer": "/error"
+          },
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r6/run-result.json",
+            "pointer": "/passed"
+          }
+        ],
+        "derivation": "Concise description of cited runtime-attempt row; no failure reclassified."
+      },
+      "cleanupVerified": {
+        "value": true,
+        "unit": "boolean",
+        "scope": "Attempt guest/build process cleanup; cloud teardown is separate.",
+        "sources": [
+          {
+            "path": "docs/evidence/aosp/custom-20261030/runtime/r6/run-result.json",
+            "pointer": "/cleanup_verified"
+          }
+        ]
+      }
+    }
+  ],
+  "cost": {
+    "infrastructureEstimateUsd": {
+      "value": 6.1723,
+      "unit": "USD",
+      "scope": "VM, SSD/standard disk and IPv4 through verified deletion; estimate, not settled invoice.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/teardown-20261030/cost-estimate.json",
+          "pointer": "/infrastructure_subtotal_estimate_usd"
+        }
+      ]
+    },
+    "reservedEstimateUsd": {
+      "value": 11.4413,
+      "unit": "USD",
+      "scope": "Same infrastructure plus USD 2 egress allowance and 40% tax/FX reserve; estimate, not actual spend.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/teardown-20261030/cost-estimate.json",
+          "pointer": "/allin_projection_with_2usd_egress_and_40pct_taxfx_reserve_usd"
+        }
+      ]
+    },
+    "budgetUsd": {
+      "value": 50,
+      "unit": "USD",
+      "scope": "Authorized total infrastructure cap for this bounded attempt.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/teardown-20261030/cost-estimate.json",
+          "pointer": "/limit_usd"
+        }
+      ]
+    },
+    "settledInvoiceAvailable": {
+      "value": false,
+      "unit": "boolean",
+      "scope": "No provider invoice total is asserted.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/teardown-20261030/cost-estimate.json",
+          "pointer": "/settled_invoice_available"
+        }
+      ]
+    },
+    "chargedHoursEstimate": {
+      "value": 6.2257,
+      "unit": "hours",
+      "scope": "Cost clock stops at verified charged-resource deletion.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/teardown-20261030/cost-estimate.json",
+          "pointer": "/accrued_running_hours_estimate"
+        }
+      ]
+    },
+    "estimateEndUtc": {
+      "value": "2026-10-30T22:41:46.211288+00:00",
+      "unit": "UTC timestamp",
+      "scope": "Estimate endpoint, not a future live accrual clock.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/teardown-20261030/cost-estimate.json",
+          "pointer": "/estimate_end_utc"
+        }
+      ]
+    }
+  },
+  "teardown": {
+    "chargedResourcesAbsentSinceUtc": {
+      "value": "2026-10-30T22:41:46.211288+00:00",
+      "unit": "UTC timestamp",
+      "scope": "VM and both disks verified absent.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/teardown-20261030/teardown.json",
+          "pointer": "/charged_resources_absent_since_utc"
+        }
+      ]
+    },
+    "verifiedUtc": {
+      "value": "2026-10-30T22:42:33.521039+00:00",
+      "unit": "UTC timestamp",
+      "scope": "Final attempt teardown provider checks completed.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/teardown-20261030/teardown.json",
+          "pointer": "/verified_utc"
+        }
+      ]
+    },
+    "instanceAbsent": {
+      "value": true,
+      "unit": "boolean",
+      "scope": "Attempt-owned VM only.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/teardown-20261030/teardown.json",
+          "pointer": "/instance_absent"
+        }
+      ]
+    },
+    "bothDisksAbsent": {
+      "value": true,
+      "unit": "boolean",
+      "scope": "Attempt-owned boot and workspace disks.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/teardown-20261030/teardown.json",
+          "pointer": "/both_disks_absent"
+        }
+      ]
+    },
+    "finalResourceLists": {
+      "value": {
+        "instances": [],
+        "disks": [],
+        "addresses": [],
+        "snapshots": [],
+        "networks": [],
+        "queues": []
+      },
+      "unit": "resource lists",
+      "scope": "All listed attempt-scoped provider responses are empty.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/teardown-20261030/teardown.json",
+          "pointer": "/final_resource_lists"
+        }
+      ]
+    },
+    "evidenceVerifiedBeforeDeletion": {
+      "value": true,
+      "unit": "boolean",
+      "scope": "Export and local verification preceded deletion.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/teardown-20261030/teardown.json",
+          "pointer": "/evidence_verified_before_deletion"
+        }
+      ]
+    }
+  },
+  "sourceFiles": [
+    {
+      "path": "docs/evidence/P02/r5-source-baseline/boot-run-result.json",
+      "sha256": "345a38b0667a523bc9f38f404988e0673766e51d2e96f8ae3e8aec90d7f73ce1"
+    },
+    {
+      "path": "docs/evidence/P02/r5-source-baseline/boot/checks.json",
+      "sha256": "a53d533418e249c0819614f6e09772a7daad3a7dc3befcf50dbaed0a5ba51dcb"
+    },
+    {
+      "path": "docs/evidence/P02/r5-source-baseline/build-result.json",
+      "sha256": "a26b7e8fe4cb25ce87c8bc6140642594b2402822717a8cec6b8c5132d0ee168b"
+    },
+    {
+      "path": "docs/evidence/aosp/attempt-20261030/cloud-controls.json",
+      "sha256": "8bea7891267bf208c5c3f6f9c22b928043b211d84731d6b90bc6d445aefb0f03"
+    },
+    {
+      "path": "docs/evidence/aosp/attempt-20261030/host-kvm.json",
+      "sha256": "3b6a6a27a54084534f92ca50d12f37d77b71bde21507887644a907c7f119204c"
+    },
+    {
+      "path": "docs/evidence/aosp/custom-20261030/README.md",
+      "sha256": "b7b601099139214c7cbc90dde1d1b340e2c993e87a9990d26eef8e90f0f12b84"
+    },
+    {
+      "path": "docs/evidence/aosp/custom-20261030/actual-results.json",
+      "sha256": "a37704e8c2f254071677c2ab9357c250a1e536290f74f8993bdbd53e8a3b28f8"
+    },
+    {
+      "path": "docs/evidence/aosp/custom-20261030/archives/r6-local-verification.json",
+      "sha256": "a22d8f033a52d389721691edf581cae73d81a0abae639db2d36be24322f9a516"
+    },
+    {
+      "path": "docs/evidence/aosp/custom-20261030/build/image-r4/build-result.json",
+      "sha256": "666a31d6b8af5220b082b49d019f8b41c79f49292e1d200e35c2006fc61cc21f"
+    },
+    {
+      "path": "docs/evidence/aosp/custom-20261030/build/native-r5/build-result.json",
+      "sha256": "de4efce9c0104a1c685bf09c35914930204b5769dd6351f0a6e2faf42d89e483"
+    },
+    {
+      "path": "docs/evidence/aosp/custom-20261030/runtime/r1/run-result.json",
+      "sha256": "9192ec4633c919bcb264b9c581322ea3fc643cfc705d72e2f27afc9debe414f6"
+    },
+    {
+      "path": "docs/evidence/aosp/custom-20261030/runtime/r2/run-result.json",
+      "sha256": "ce1a7362e75e4a785f4b6b40d4d52941a9a62973538343c88626892f507c9b74"
+    },
+    {
+      "path": "docs/evidence/aosp/custom-20261030/runtime/r3/run-result.json",
+      "sha256": "338b9c3527d76075b0c7a6e4b36834732bd2da3c25b09eb4592bfad2b7d7ac83"
+    },
+    {
+      "path": "docs/evidence/aosp/custom-20261030/runtime/r4/run-result.json",
+      "sha256": "8872acb40a3298eda6d1592e56530406df23554c1f54ae4aecbdc87ce8a92191"
+    },
+    {
+      "path": "docs/evidence/aosp/custom-20261030/runtime/r5/run-result.json",
+      "sha256": "99cbc1bd1c24fc6641e439eb8b808e5ab99446106bf0c690d19a12b151ec568d"
+    },
+    {
+      "path": "docs/evidence/aosp/custom-20261030/runtime/r6/native61.jsonl",
+      "sha256": "66c45888b1d9313434e34ba887a86a468d4b078cd86ab1a521f6f25f1e63a671"
+    },
+    {
+      "path": "docs/evidence/aosp/custom-20261030/runtime/r6/run-result.json",
+      "sha256": "6cd5237201efdd4d00087d9cbca82d76bc362982f191a5bc26b528db030e0879"
+    },
+    {
+      "path": "docs/evidence/aosp/custom-20261030/runtime/r6/run-window.json",
+      "sha256": "3f7377c3981b293aec80c5be96076ac9ad57c86da82ccac1a85a144ba565e9c9"
+    },
+    {
+      "path": "docs/evidence/aosp/custom-20261030/runtime/r6/smoke/checks.json",
+      "sha256": "365aa7432cdde69abacae3ce1b37fdcd7f5a5be4778429a977755508442f56b9"
+    },
+    {
+      "path": "docs/evidence/aosp/teardown-20261030/cost-estimate.json",
+      "sha256": "4cd2aef1ce59025306f037e7c203c9cf3065575bf57dfb4c3b2e98b9a8cd5426"
+    },
+    {
+      "path": "docs/evidence/aosp/teardown-20261030/teardown.json",
+      "sha256": "0f3340de1bc7363a9f14c111a361faa200ed2274838c6b6209adc4f0d6f1b976"
+    }
+  ]
+}

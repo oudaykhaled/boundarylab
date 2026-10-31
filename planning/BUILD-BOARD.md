@@ -25,3 +25,16 @@ Current AOSP attempt: completed within the user's **total US$50 ceiling**, with 
 | Integration and publication | root | Tested public engineering prototype; AOSP integration tracked in PR#59 | [PR#58](https://github.com/oudaykhaled/boundarylab/pull/58); source06b2d4f; final independent scoped AI review and evidence reconciliation | Full40-leaf roadmap remains open | Maintain truthful current board and remaining acceptance |
 
 Known remaining gates include compiled old-consumer compatibility, the Android nlink=2 runtime fixture, controlled performance/memory/startup campaign, broader device/accessibility validation and wider conditional AOSP compatibility/soak/reproduction acceptance. No production deployment, device flashing, commercial shipment or human/external adoption is claimed.
+
+
+## README evidence showcase — 2026-10-31
+
+User-authorized18-agent documentation/media pass; root remains sole board, Git and browser writer. Astra owns critical editorial/architecture decisions. Existing Linux/AOSP receipts and original screenshots are immutable; no new cloud resource, build, device test or paid execution is part of this pass.
+
+| Work | Owner | State | Evidence | Blocker | Next step |
+|---|---|---|---|---|---|
+| Evidence audit and narrative | Agents01–05,12–13 | Initial audit complete | Actual Linux compiler/HOST_OS, KVM, build/image/runtime and teardown receipts | None | Integrate source-linked proof into README |
+| README and original screenshot gallery | Agents03,11 | Implemented and reviewed | Root README and docs/SHOWCASE.md | None | Verify hosted GitHub rendering |
+| Hero, diagrams, charts and animated replay | Agents06–10,18 | Implemented, rendered and reviewed | Eight assets in docs/media/readme/; source-linked data/generators and checksums | None | Verify hosted GitHub image rendering |
+| Independent truth/privacy/accessibility/render review | Agents02,14–17 | Scoped AI reviews passed; corrections integrated | 149 local links, eight asset hashes, exact replay citations; all1,244 frozen originals unchanged | No scoped blocker | Preserve limits and rendered result |
+| Publication | root | Reviewed locally; publication/merge tracked in the associated README PR | Documentation-only branch, deterministic asset/source checks and original hashes | Hosted rendering and normal PR integration | Publish and verify actual GitHub README |

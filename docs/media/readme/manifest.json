@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "historicalExecutionDateUtc": "2026-10-30",
+  "newCloudExecution": false,
+  "originalEvidenceModified": false,
+  "metricsSources": "data/run-summary.json",
+  "replaySources": "data/replay-scenes.json",
+  "artifacts": [
+    {
+      "path": "hero.svg",
+      "classification": "illustration",
+      "bytes": 4141,
+      "sha256": "e3baba51532a74aebd77bf5dfde70641311f32a954559bfe209a3f9f4ea607ee",
+      "generator": "src/hero.py"
+    },
+    {
+      "path": "architecture.svg",
+      "classification": "explanatory-diagram",
+      "bytes": 7650,
+      "sha256": "d883d695ec8ad5fd7e0ca65011b9fb96ff42b4fefd2a700abb1616cfd63b6bc3",
+      "generator": "src/architecture.py"
+    },
+    {
+      "path": "server-to-guest-pipeline.svg",
+      "classification": "explanatory-diagram",
+      "bytes": 8896,
+      "sha256": "0fc201e5e6351f9153ffeb75c9b76a97a3c1fe6091732c56c5d333b874a3a4fb",
+      "generator": "src/server_pipeline.py"
+    },
+    {
+      "path": "evidence-results.svg",
+      "classification": "receipt-derived-chart",
+      "bytes": 12328,
+      "sha256": "9b1fff4dcbba7dc21be72b4a77accfd06de8eec6be4d6444c29bdd086850d50b",
+      "generator": "src/charts.py"
+    },
+    {
+      "path": "cost.svg",
+      "classification": "receipt-derived-estimate-chart",
+      "bytes": 11438,
+      "sha256": "36a7c3451587d6bba3f099b722895be7284d388b9f489bc5104b6d90d33c819c",
+      "generator": "src/charts.py"
+    },
+    {
+      "path": "run-timeline.svg",
+      "classification": "receipt-derived-milestone-chart",
+      "bytes": 19736,
+      "sha256": "6165cb46ba432a9f69013a3975860256ac9a7db8c304a0f9219f6c5d11e7f2f9",
+      "generator": "src/charts.py"
+    },
+    {
+      "path": "aosp-proof-replay.gif",
+      "classification": "animated-evidence-replay-not-recording",
+      "bytes": 436100,
+      "sha256": "726559d0f31d5522d0ef9fa8ec4c682d9db9c8493f4c5c5ca9e1795afe2436a0",
+      "generator": "src/proof_replay.py"
+    },
+    {
+      "path": "aosp-proof-poster.png",
+      "classification": "static-replay-poster-not-recording",
+      "bytes": 80758,
+      "sha256": "b0dd858f98162e0054a49d68a98712ca7fb00f344f717cbfd35625127d3bc944",
+      "generator": "src/proof_replay.py"
+    }
+  ],
+  "scope": "Illustrations, receipt-derived charts, labeled replay and static fallback; not new execution or an original screen recording."
+}

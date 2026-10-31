@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="880" viewBox="0 0 1400 880" role="img" aria-labelledby="title desc">
+<title id="title">BoundaryLab architecture: application, desktop and native AOSP profiles</title>
+<desc id="desc">Explanatory architecture, not a runtime screenshot. Android native and Flutter clients use the Kotlin SDK or Flutter bridge to call an isolated app Binder broker with its own Kotlin/JVM core. A separate macOS CLI calls a per-user JVM host through a same-user Unix-domain socket. The Android 16 custom AOSP image has a separate native C++ facade with frozen V1 CPP AIDL, using the existing Binder driver to call a UID 9999 daemon and generated-only C++ engine. The authorized native probe has UID 2000; the denied probe has UID 9999. Init supervises the daemon, and all three BoundaryLab SELinux domains are enforcing. The Java framework, system_server and kernel are unchanged.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L8 4L0 8Z" fill="#37dfc5"/></marker></defs>
+<g font-family="Arial, Helvetica, sans-serif">
+<rect width="1400" height="880" fill="#09111f"/>
+
+<text x="48" y="65" font-size="44" fill="#e7eef7" font-weight="700" text-anchor="start">Architecture with explicit boundaries</text>
+<text x="48" y="108" font-size="26" fill="#a5b7cc" font-weight="400" text-anchor="start">Explanatory diagram · distinct application and custom AOSP integrations</text>
+<rect x="42" y="145" width="1316" height="294" rx="24" fill="#0d1829" stroke="#263b54" stroke-width="2"/>
+<text x="64" y="187" font-size="28" fill="#37dfc5" font-weight="700" text-anchor="start">APPLICATION PROFILE</text>
+<text x="1121" y="187" font-size="26" fill="#37dfc5" font-weight="700" text-anchor="middle">macOS</text>
+<rect x="64" y="220" width="256" height="130" rx="18" fill="#111f32" stroke="#30465f" stroke-width="2"/>
+<text x="192" y="264" font-size="30" fill="#e7eef7" font-weight="700" text-anchor="middle">Android native</text>
+<text x="192" y="300" font-size="30" fill="#e7eef7" font-weight="700" text-anchor="middle">Flutter client</text>
+<text x="192" y="332" font-size="24" fill="#a5b7cc" font-weight="400" text-anchor="middle">Separate client apps</text>
+<rect x="360" y="220" width="210" height="130" rx="18" fill="#111f32" stroke="#30465f" stroke-width="2"/>
+<text x="465" y="264" font-size="30" fill="#e7eef7" font-weight="700" text-anchor="middle">Kotlin SDK</text>
+<text x="465" y="300" font-size="24" fill="#a5b7cc" font-weight="400" text-anchor="middle">Flutter bridge</text>
+<text x="465" y="332" font-size="24" fill="#a5b7cc" font-weight="400" text-anchor="middle">Worker IPC</text>
+<rect x="612" y="220" width="270" height="130" rx="18" fill="#102b31" stroke="#37dfc5" stroke-width="2"/>
+<text x="747" y="264" font-size="30" fill="#e7eef7" font-weight="700" text-anchor="middle">App broker</text>
+<text x="747" y="300" font-size="27" fill="#e7eef7" font-weight="400" text-anchor="middle">Kotlin/JVM core</text>
+<text x="747" y="332" font-size="24" fill="#a5b7cc" font-weight="400" text-anchor="middle">Own process</text>
+<line x1="323" y1="285" x2="352" y2="285" stroke="#37dfc5" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="573" y1="285" x2="604" y2="285" stroke="#37dfc5" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="591" y1="212" x2="591" y2="358" stroke="#ffcd73" stroke-width="3" stroke-dasharray="6 7"/>
+<text x="64" y="397" font-size="26" fill="#a5b7cc" font-weight="400" text-anchor="start">Signature permission + Binder UID → owner-bound session</text>
+<rect x="916" y="209" width="410" height="202" rx="18" fill="#111f32" stroke="#30465f" stroke-width="2"/>
+<text x="1121" y="250" font-size="30" fill="#e7eef7" font-weight="700" text-anchor="middle">Desktop CLI</text>
+<line x1="1121" y1="266" x2="1121" y2="289" stroke="#37dfc5" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="1121" y="325" font-size="30" fill="#e7eef7" font-weight="700" text-anchor="middle">Per-user JVM host</text>
+<text x="1121" y="360" font-size="26" fill="#e7eef7" font-weight="400" text-anchor="middle">Own Kotlin/JVM core</text>
+<text x="1121" y="394" font-size="24" fill="#a5b7cc" font-weight="400" text-anchor="middle">Same-user Unix socket</text>
+<rect x="42" y="467" width="1316" height="320" rx="24" fill="#0d1829" stroke="#263b54" stroke-width="2"/>
+<text x="64" y="509" font-size="30" fill="#37dfc5" font-weight="700" text-anchor="start">AOSP 16 CUSTOM IMAGE</text>
+<text x="640" y="509" font-size="26" fill="#a5b7cc" font-weight="400" text-anchor="start">Native platform profile · system_ext</text>
+<rect x="64" y="548" width="248" height="130" rx="18" fill="#111f32" stroke="#30465f" stroke-width="2"/>
+<text x="188" y="588" font-size="30" fill="#e7eef7" font-weight="700" text-anchor="middle">Native probes</text>
+<text x="188" y="623" font-size="24" fill="#37dfc5" font-weight="400" text-anchor="middle">UID 2000: allowed</text>
+<text x="188" y="657" font-size="24" fill="#ffcd73" font-weight="400" text-anchor="middle">UID 9999: DENIED</text>
+<rect x="356" y="548" width="266" height="130" rx="18" fill="#111f32" stroke="#30465f" stroke-width="2"/>
+<text x="489" y="588" font-size="30" fill="#e7eef7" font-weight="700" text-anchor="middle">C++ facade</text>
+<text x="489" y="623" font-size="24" fill="#e7eef7" font-weight="400" text-anchor="middle">Frozen V1 CPP AIDL</text>
+<text x="489" y="657" font-size="24" fill="#a5b7cc" font-weight="400" text-anchor="middle">Platform-built clients</text>
+<rect x="666" y="548" width="176" height="130" rx="18" fill="#111f32" stroke="#30465f" stroke-width="2"/>
+<text x="754" y="588" font-size="30" fill="#e7eef7" font-weight="700" text-anchor="middle">Binder</text>
+<text x="754" y="623" font-size="24" fill="#a5b7cc" font-weight="400" text-anchor="middle">Existing</text>
+<text x="754" y="657" font-size="24" fill="#a5b7cc" font-weight="400" text-anchor="middle">kernel driver</text>
+<rect x="886" y="548" width="440" height="130" rx="18" fill="#102b31" stroke="#37dfc5" stroke-width="2"/>
+<text x="1106" y="588" font-size="30" fill="#e7eef7" font-weight="700" text-anchor="middle">Native Binder daemon</text>
+<text x="1106" y="623" font-size="24" fill="#e7eef7" font-weight="400" text-anchor="middle">UID 9999 · dedicated domain</text>
+<text x="1106" y="657" font-size="26" fill="#e7eef7" font-weight="400" text-anchor="middle">C++ engine · generated-only</text>
+<line x1="315" y1="613" x2="348" y2="613" stroke="#37dfc5" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="625" y1="613" x2="658" y2="613" stroke="#37dfc5" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="845" y1="613" x2="878" y2="613" stroke="#37dfc5" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="864" y1="538" x2="864" y2="686" stroke="#ffcd73" stroke-width="3" stroke-dasharray="6 7"/>
+<text x="64" y="724" font-size="26" fill="#a5b7cc" font-weight="400" text-anchor="start">UID gate + owner/session checks</text>
+<text x="64" y="760" font-size="26" fill="#a5b7cc" font-weight="400" text-anchor="start">Three BoundaryLab domains: Enforcing</text>
+<text x="834" y="724" font-size="26" fill="#a5b7cc" font-weight="400" text-anchor="start">Init boot + bounded restart</text>
+<text x="834" y="760" font-size="26" fill="#a5b7cc" font-weight="400" text-anchor="start">1 worker · 64 KiB buffer</text>
+<line x1="48" y1="815" x2="1352" y2="815" stroke="#263b54" stroke-width="3"/>
+<text x="48" y="852" font-size="26" fill="#a5b7cc" font-weight="400" text-anchor="start">Java framework, system_server and kernel unchanged · See docs/AOSP-LAYERS.md</text>
+</g></svg>
