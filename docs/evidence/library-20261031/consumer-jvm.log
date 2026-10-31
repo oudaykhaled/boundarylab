@@ -1,0 +1,12 @@
+Starting a Gradle Daemon, 1 incompatible Daemon could not be reused, use --status for details
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :processResources NO-SOURCE
+> Task :compileKotlin
+> Task :compileJava NO-SOURCE
+> Task :classes UP-TO-DATE
+
+> Task :run
+PUBLISHED_CORE_OK bytes=65536 sha256=0bf0c2fa457e649fae80dcdd53fc222a4784d7696cd286895ac7d9d3993d2dec manifestBytes=180
+
+BUILD SUCCESSFUL in 11s
+2 actionable tasks: 2 executed

@@ -1,6 +1,6 @@
 # Implementation progress board
 
-Sole writer: root. Updated 2026-10-30. This board supplements the frozen Planv2 backlog. Implemented, compiled, runtime-verified, reviewed, merged and published are distinct. Tested source: `06b2d4f`; [publication PR#58](https://github.com/oudaykhaled/boundarylab/pull/58). Exact current task states and unmet acceptance are in [EXECUTION-STATUS.md](EXECUTION-STATUS.md).
+Sole writer: root. Updated 2026-10-31. This board supplements the frozen Planv2 backlog. Implemented, compiled, runtime-verified, reviewed, merged and published are distinct. Historical app baseline tested source: `06b2d4f`; [publication PR#58](https://github.com/oudaykhaled/boundarylab/pull/58). Exact current task states and unmet acceptance are in [EXECUTION-STATUS.md](EXECUTION-STATUS.md).
 
 Current AOSP attempt: completed within the user's **total US$50 ceiling**, with evidence captured during execution. Source `444ae29` passed the final combined custom native-image proof:34operator checks,236harness observations and61unique native assertions. Astra's [18-clause audit](../docs/evidence/reviews/AOSP-ACCEPTANCE-MAP.md) supports P03–P05. All five earlier failed proofs are preserved. The VM and both disks were verified absent at22:41:46UTC, followed by deadline/IAM/network cleanup. [Infrastructure estimateUS$6.1723, conservative reserveUS$11.4413](../docs/evidence/aosp/teardown-20261030/README.md); actual invoice unavailable. Source/evidence are published at `83f99f1`; P03–P05/B13 are closed and the actual GitHub board is verified. Final hosted checks and integration are tracked in [PR#59](https://github.com/oudaykhaled/boundarylab/pull/59).
 
@@ -41,3 +41,20 @@ User-authorized18-agent documentation/media pass; root remains sole board, Git a
 
 
 README presentation correction (2026-10-31, root): removed the two lock-screen captures from the main README after user review. The primary section now shows exact recorded Binder success, typed denial and native execution output. Boot images remain only in the collapsed supporting gallery archive; original bytes are unchanged. Publication is tracked in the associated correction PR. No cloud or device execution is required.
+
+
+## Reusable library implementation — 2026-10-31
+
+Root is sole board/Git/publication writer. Local work only; no paid server, OS image execution or public package-registry publication is included in this phase. Existing AOSP execution remains historical evidence for its recorded source.
+
+| Work | Owner | Status | Evidence | Blocker | Next step |
+|---|---|---|---|---|---|
+| Architecture and guardrails | Astra architect + guardrails | Scoped design reviewed | Local campaign briefs; existing ADR-B07 and frozen contracts | Substantive new workload pending user selection | Review implemented diff and native reuse slice |
+| Core and Android library distribution | Sol packages | Implemented; publication and independent consumption passed | Core JAR/SDK AAR with sources, real API docs and transitive metadata; external JVM execution and Android builds | Runtime validation separate | Final source/runtime evidence reconciliation |
+| Configurable broker and reciprocal trust | Sol identity + Astra security | Implemented, reviewed and runtime-verified in scoped API35 matrix | Twelve endpoint cases; default/custom, installed incoming/outgoing signer denial | Wider device/provider matrix unrun | Preserve tested-source and package hashes |
+| Flutter independent dependency | Sol Flutter | Implemented; external APK build and 13 facade/widget tests pass | Coordinate dependency, custom config and partial-config rejection, direct analysis | Current-source installed Flutter runtime unrun; local flutter analyze wrapper mismatch recorded | Hosted pinned-toolchain verification |
+| Local runtime and security proof | Sol QA | Scoped PASS; cleanup verified | [46 executions, 30 distinct methods, zero failures/skips](../docs/evidence/library-20261031/README.md); owned emulator/signer removed | Named wider runtime matrix remains unrun | Preserve raw counts and boundaries |
+| Reusable native OS service host | Sol native + Astra architect | Implemented and source-reviewed; host checks pass | ADR-B20; 61 engine + 20 production policy checks, no sanitizer output | Soong/Binder/new image execution not run | Preserve source-only image integration status |
+| Independent real document example | Sol packages + QA | Implemented, reviewed and executed | Real picker → document hash → manifest export; independent recipient MATCH and changed-byte rejection | Wider provider/lifecycle combinations unrun | Reuse committed consumer and harness |
+| New document-inspection/hardware/AI capability | root | Decision pending | One scoped question already sent | User workload selection | Scope selected capability separately from current hashing operations |
+| Documentation and integration | docs + root | Source review and local verification complete; GitHub integration tracked separately | [Adopter guide](../docs/LIBRARY-GUIDE.md), [fresh evidence](../docs/evidence/library-20261031/README.md), CI independent consumers and downloadable Maven folder | Hosted checks/merge status belong to associated PR | Publish and complete normal GitHub checks |

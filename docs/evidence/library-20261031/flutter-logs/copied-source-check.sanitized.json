@@ -1,0 +1,7 @@
+{
+  "evidence_class": "static-copied-consumer-check",
+  "fixture": "/workspace/outputs/boundarylab-library-20261031/consumers/flutter",
+  "source_tree_references_in_android_config": false,
+  "pub_path": "../plugin",
+  "checked_files": 4
+}

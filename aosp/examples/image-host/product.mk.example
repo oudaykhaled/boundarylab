@@ -1,0 +1,4 @@
+# Template only. Include from your selected image product after configuring its UID policy.
+PRODUCT_PACKAGES += example_generated_hash_service
+# Put the policy directory in the selected image's BoardConfig, not product inheritance:
+# SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += <your-image-path>/sepolicy/private

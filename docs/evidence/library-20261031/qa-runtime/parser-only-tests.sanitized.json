@@ -1,0 +1,12 @@
+{
+  "started": "2026-10-31T19:14:11.597162+00:00",
+  "finished": "2026-10-31T19:14:11.676363+00:00",
+  "cwd": "/workspace/BoundaryLab",
+  "argv": [
+    "python3",
+    "conformance/library/test-runner.py"
+  ],
+  "exit_code": 0,
+  "output_sha256": "d9d734ee1c2de67b748aeef1c4126433aa438ad8375ca953916f12b1df11414d",
+  "output_file": "parser-only-tests.log"
+}

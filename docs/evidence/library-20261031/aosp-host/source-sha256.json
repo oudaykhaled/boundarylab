@@ -1,0 +1,22 @@
+{
+  "aosp/.gitignore": "65f6d6b767f5d68cfa242373f2880859b5e761db67c341873d4894878e3f163a",
+  "aosp/Android.bp": "68f1a101f7b64fe25b70aa9648cf64f043095a41821106de9cd6a7e8159919e0",
+  "aosp/README.md": "aafae205bfce1e710f8495edf01569cb2b0d4cd9a29cae3cc2f96d341dabb3ff",
+  "aosp/client/Client.cpp": "27fce686b0c5f36f867c80c7c22bbdee521e7810f9fce5758674b356f677ce20",
+  "aosp/client/Client.h": "13c3e353edb7eb86f6f8bcf091bd377e1185162bfc26b95e3151cc98f7ab5ec6",
+  "aosp/scripts/test-host.sh": "68f728a8bdee7c0604935d3432ebc9b9898fae52956afbc2125a19103f0bd984",
+  "aosp/service/main.cpp": "00a3f811989d6c389765cedccbea93885289cfc9d66c95d30156cf4ddf48fc0f",
+  "aosp/service/ServiceConfig.cpp": "56d8ff6a97df78047382c187d1a5d610dfb02ee9915c7b3a473e057e9b111a09",
+  "aosp/service/ServiceConfig.h": "b399c86284e0c1e6aeba7f2dcac30da4ba066c8e48098dc4b48ce2ef3a737a23",
+  "aosp/service/ServiceHost.cpp": "383f13052ab65ceb9f0e3742d9e73ea8785fc27c7e529eb17bed448be1f90b15",
+  "aosp/service/ServiceHost.h": "f25ffd768e8abbe4a8b43e0270fff3f406709ac678fa1275713d6eec149bb59b",
+  "aosp/tests/service_config_test.cpp": "e24f030143863245087a710b7c29b0ddd64f35ab8ed03ab63f9b3f80a2b267a2",
+  "aosp/examples/image-host/Android.bp.example": "f7f2d8a8c37f8ffdad2777c55e36f7a23fc9f4a9d0b298ba8b47e7d5547735f3",
+  "aosp/examples/image-host/README.md": "ddf36a97ac047ed3b02e19124afe4f9f00a1c2e88dad4010677a26734856c048",
+  "aosp/examples/image-host/example_generated_hash.rc.example": "eb0e36a462255dbf4f5b3dc3a7b8549cf429f961672b98da0e19ebb870e51d25",
+  "aosp/examples/image-host/example_generated_hash.te.example": "509e7dac13c5c9656e178beb91b28119fbe588c3dc0249755c0d31ea3236c57e",
+  "aosp/examples/image-host/file_contexts.example": "d0f7521d181fc7dfbe0e689544b4ae91257a88dcf904fb80772a6998b9d77926",
+  "aosp/examples/image-host/main.cpp": "253ab37f12c829e8771fc496f8a1ec17fe0d827aaa9e035a014c8ae4fb4bf379",
+  "aosp/examples/image-host/product.mk.example": "93d5ab2840d0a94227790d147dd5b2fe3c541f976e30dbcfd67f2a3ac5869a35",
+  "aosp/examples/image-host/service_contexts.example": "5332bbe4d1e8d806b34d8cb0e2f06f9f0279e002c3cd21cdbda601d97f20143b"
+}

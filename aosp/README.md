@@ -1,5 +1,10 @@
 # BoundaryLab native AOSP profile
 
+The 2026-10-31 reusable-host extraction below is **source-only for Binder/Soong/image
+integration**. Its production config/policy helper and unchanged Engine pass local native
+sanitizer checks. The historical custom-image result immediately below applies only to
+its recorded source revision; it does not certify the new extraction or adopter template.
+
 Status: **the bounded Android 16 source-build and custom native-service proof passed** at
 source `444ae29a31833616c465e155a3dc1335d061cda6`. The completed run records 236 harness
 checks, 61 unique native assertions and 34 operator checks, with guest SELinux Enforcing,
@@ -10,6 +15,54 @@ are separate from earlier host-only evidence in `evidence/local/`.
 This is the generated-only native platform integration in P03–P05. Compatibility
 evolution, performance, soak and fresh final-image reproduction remain open. The facade
 is a native platform library; the Java framework, `system_server` and kernel are unchanged.
+
+## Reuse from an image-owned native service
+
+The existing Soong `libboundarylab_engine` and `libboundarylab_platform_client` modules
+are joined by `libboundarylab_service`. Link that static library and call the public
+[`boundarylab::RunService(const ServiceConfig&)`](service/ServiceHost.h) from your own
+native daemon's main. It owns the existing V1 Binder dispatch, exact caller gate,
+client-death session leases, bounded Engine, registration and thread pool. It continues
+to serve only the generated SHA-256 operation; no workload extension API is introduced.
+A consumer also links the frozen `boundarylab-platform-V1-cpp`, `libbinder`, `libutils`
+and `libcrypto` dependencies as shown in the [inert image integration template](examples/image-host/README.md).
+
+[`ServiceConfig`](service/ServiceConfig.h) takes an explicit registry name and exact
+`std::vector<uint32_t>` caller UID list. The shared production
+`libboundarylab_service_config` helper enforces these library-specific limits:
+
+- Registry name: 1–127 bytes, only ASCII `A–Z a–z 0–9 _ . - /`; embedded NUL,
+  whitespace and non-ASCII are rejected. This is not an Android platform maximum.
+- Caller list: 1–16 distinct UIDs, each at most `INT32_MAX`; empty, duplicate or
+  out-of-range values invalidate the entire configuration.
+- `CallerPolicy` snapshots validated values. Invalid/default policy denies every
+  caller. `RunService` returns 2 before Binder setup/registration for invalid config;
+  registration failure or unexpected pool exit returns 1.
+
+The Binder transport supplies the UID; the policy checks it before generated parcel
+unmarshalling, with the existing FD/4096-byte/oneway restrictions retained. There is no
+implicit root or shell entry. UID allowlisting is appropriate only where the image owner
+controls the actual native caller identity and narrow SELinux domains. It is not a
+general production application authentication or signing/permission scheme.
+
+The legacy `boundarylab_service` is now a thin main supplying exactly
+`dev.boundarylab.platform.IBoundaryLab/default` and `{2000}`. Its binary name, init rc,
+product installation and SELinux policy remain unchanged, as do all AIDL and frozen V1
+files. Existing `Client()` keeps that name; new
+`Client("org.example.generated_hash/default")` performs an exact nonblocking lookup.
+An invalid name leaves the client disconnected without lookup or fallback. Both clients
+retain existing transport mapping, session/epoch handling and no-replay semantics.
+
+The [adopter main and product/policy templates](examples/image-host/README.md) are not
+included by the default product or Soong graph. Their empty caller list deliberately
+rejects startup until the image owner supplies its actual allocation. Their integration
+requires a real pinned Soong build and image authorization/lifecycle checks; neither was
+executed for this extraction on the Mac. Historical image receipts remain untouched.
+
+The host script now builds the actual production `ServiceConfig.cpp` with the Engine
+checks. `service-config-checks.jsonl` covers valid names/UIDs, name/UID boundaries,
+invalid/default deny-all, exact configured caller decisions and immutable snapshots.
+These helper checks do not exercise Binder lookup/registration/dispatch or SELinux.
 
 ## Fixed source target
 

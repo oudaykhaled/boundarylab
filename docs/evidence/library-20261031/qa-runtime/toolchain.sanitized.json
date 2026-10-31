@@ -1,0 +1,33 @@
+{
+  "at": "2026-10-31T19:14:12.009544+00:00",
+  "commands": [
+    {
+      "argv": [
+        "adb",
+        "version"
+      ],
+      "exit_code": 0,
+      "stdout": "Android Debug Bridge version 1.0.41\nVersion 35.0.2-12147458\nInstalled as /home/USER/Library/Android/sdk/platform-tools/adb\nRunning on Darwin 25.5.0 (arm64)\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/openjdk@17/17.0.14/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "-version"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "openjdk version \"17.0.14\" 2025-01-21\nOpenJDK Runtime Environment Homebrew (build 17.0.14+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.14+0, mixed mode, sharing)\n"
+    },
+    {
+      "argv": [
+        "/home/USER/Library/Android/sdk/emulator/emulator",
+        "-version"
+      ],
+      "exit_code": 0,
+      "stdout": "Android emulator version 36.4.10.0 (build_id 15004761) (CL:N/A)\nCopyright (C) 2006-2024 The Android Open Source Project and many others.\nThis program is a derivative of the QEMU CPU emulator (www.qemu.org).\n\n  This software is licensed under the terms of the GNU General Public\n  License version 2, as published by the Free Software Foundation, and\n  may be copied, distributed, and modified under those terms.\n\n  This program is distributed in the hope that it will be useful,\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n  GNU General Public License for more details.\n\n",
+      "stderr": ""
+    }
+  ],
+  "image_properties": "Pkg.Desc=System Image arm64-v8a with Google Play.\nPkg.Revision=8\nPkg.Dependencies=emulator#33.1.24\nAndroidVersion.ApiLevel=35\nAndroidVersion.ExtensionLevel=13\nAndroidVersion.IsBaseSdk=true\nSystemImage.Abi=arm64-v8a\nSystemImage.TagId=google_apis_playstore\nSystemImage.TagDisplay=Google Play\nSystemImage.GpuSupport=true\nAddon.VendorId=google\nAddon.VendorDisplay=Google Inc.\n"
+}

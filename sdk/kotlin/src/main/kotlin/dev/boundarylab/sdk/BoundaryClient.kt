@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
 import android.content.pm.PackageManager
+import android.content.pm.PermissionInfo
 import android.os.Binder
 import android.os.Handler
 import android.os.IBinder
@@ -25,9 +26,12 @@ import java.util.concurrent.atomic.AtomicBoolean
  * One foreground-demand connection/session. IPC is serialized off the main thread;
  * callbacks are delivered on main. Closing the client ends demand and never replays work.
  */
-class BoundaryClient(context: Context) : AutoCloseable {
+class BoundaryClient @JvmOverloads constructor(
+    context: Context,
+    private val endpoint: BrokerEndpoint = BrokerEndpoint.DEFAULT
+) : AutoCloseable {
     private val context = context.applicationContext
-    private val brokerComponent = ComponentName("dev.boundarylab.broker", "dev.boundarylab.broker.BoundaryBrokerService")
+    private val brokerComponent = endpoint.component
     private val main = Handler(Looper.getMainLooper())
     private val worker = ScheduledThreadPoolExecutor(1) { task -> Thread(task, "boundary-sdk") }
         .apply { removeOnCancelPolicy = true }
@@ -152,10 +156,22 @@ class BoundaryClient(context: Context) : AutoCloseable {
     }
 
     private fun verifyBrokerIdentity() {
-        val service = context.packageManager.getServiceInfo(brokerComponent, 0)
-        if (!service.exported || service.permission != "dev.boundarylab.permission.BIND_BROKER" ||
-            context.packageManager.checkSignatures(context.applicationInfo.uid, service.applicationInfo.uid) !=
-            PackageManager.SIGNATURE_MATCH) throw SecurityException("Broker signature denied")
+        try {
+            val manager = context.packageManager
+            val service = manager.getServiceInfo(brokerComponent, 0)
+            val permission = manager.getPermissionInfo(endpoint.bindPermission, 0)
+            if (!service.enabled || !service.applicationInfo.enabled || !service.exported ||
+                ComponentName(service.packageName, service.name) != brokerComponent ||
+                service.applicationInfo.packageName != brokerComponent.packageName ||
+                service.permission != endpoint.bindPermission ||
+                permission.packageName != brokerComponent.packageName ||
+                (permission.protectionLevel and PermissionInfo.PROTECTION_MASK_BASE) != PermissionInfo.PROTECTION_SIGNATURE ||
+                manager.checkSignatures(context.applicationInfo.uid, service.applicationInfo.uid) !=
+                PackageManager.SIGNATURE_MATCH) throw SecurityException("Broker identity denied")
+        } catch (error: PackageManager.NameNotFoundException) {
+            // A missing/hidden broker or permission cannot establish ADR-B07 identity.
+            throw SecurityException("Broker identity unavailable", error)
+        }
     }
 
     private fun execute(onRejected: () -> Unit = {}, action: () -> Unit) {

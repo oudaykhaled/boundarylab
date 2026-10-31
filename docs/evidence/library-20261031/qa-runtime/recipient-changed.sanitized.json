@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-31T19:13:24.229576+00:00",
+  "argv": [
+    "python3",
+    "examples/fieldpack/fieldpack.py",
+    "verify",
+    "--root",
+    "/workspace/outputs/boundarylab-library-20261031/qa-runtime/recipient-changed",
+    "--manifest",
+    "/workspace/outputs/boundarylab-library-20261031/qa-runtime/fixtures/fieldpack.json"
+  ],
+  "expected_exit_code": 1,
+  "exit_code": 1,
+  "stdout": "{\"scope\": \"manifest_entries_only\", \"files\": [{\"name\": \"inspection.txt\", \"outcome\": \"DIGEST_MISMATCH\"}]}\n",
+  "stderr": "",
+  "passed": true
+}

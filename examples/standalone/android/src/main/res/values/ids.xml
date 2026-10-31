@@ -1,0 +1,6 @@
+<resources>
+    <item name="run_workload" type="id" />
+    <item name="choose_document" type="id" />
+    <item name="export_manifest" type="id" />
+    <item name="workload_status" type="id" />
+</resources>

@@ -1,0 +1,737 @@
+{
+  "default-regression": {
+    "passed": true,
+    "checks": {
+      "transport_completed": true,
+      "runner_completed": true,
+      "positive_expected_count": true,
+      "declared_count_matches": true,
+      "summary_count_matches": true,
+      "terminal_count_matches": true,
+      "start_count_matches": true,
+      "unique_terminals": true,
+      "starts_match_terminals": true,
+      "selected_identities": true,
+      "all_required_passed": true,
+      "no_failure_marker": true
+    },
+    "events": [
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "1",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": "",
+        "test": "missingExpectedPermissionIsDeniedBeforeBinding",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "1",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": ".",
+        "test": "missingExpectedPermissionIsDeniedBeforeBinding",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "2",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": "",
+        "test": "mismatchedExpectedPermissionIsDeniedBeforeBindingAndDescriptorDelegation",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "2",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": ".",
+        "test": "mismatchedExpectedPermissionIsDeniedBeforeBindingAndDescriptorDelegation",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "3",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": "",
+        "test": "permissionOwnedByAnotherPackageIsDeniedBeforeBinding",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "3",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": ".",
+        "test": "permissionOwnedByAnotherPackageIsDeniedBeforeBinding",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "4",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": "",
+        "test": "missingIdentityIsDeniedBeforeBindingAndTransferredDescriptorIsClosed",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "4",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": ".",
+        "test": "missingIdentityIsDeniedBeforeBindingAndTransferredDescriptorIsClosed",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "5",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": "",
+        "test": "explicitInstalledEndpointConnectsUsingStableServiceClass",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "5",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": ".",
+        "test": "explicitInstalledEndpointConnectsUsingStableServiceClass",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "6",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": "",
+        "test": "normalProtectionPermissionIsDeniedBeforeBinding",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "6",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": ".",
+        "test": "normalProtectionPermissionIsDeniedBeforeBinding",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "7",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": "",
+        "test": "identityIsRecheckedAfterBindingBeforeAnyHandshakeTransaction",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "7",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": ".",
+        "test": "identityIsRecheckedAfterBindingBeforeAnyHandshakeTransaction",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "8",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": "",
+        "test": "disabledApplicationIsDeniedBeforeBinding",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "8",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": ".",
+        "test": "disabledApplicationIsDeniedBeforeBinding",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "9",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": "",
+        "test": "malformedEndpointNamesAreRejectedBeforeClientCreation",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "9",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": ".",
+        "test": "malformedEndpointNamesAreRejectedBeforeClientCreation",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "10",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": "",
+        "test": "unexpectedCallbackComponentIsDeniedBeforeHandshake",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "10",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": ".",
+        "test": "unexpectedCallbackComponentIsDeniedBeforeHandshake",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "11",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": "",
+        "test": "disabledServiceIsDeniedBeforeBinding",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "11",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": ".",
+        "test": "disabledServiceIsDeniedBeforeBinding",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "12",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": "",
+        "test": "defaultValuesAndOriginalJvmConstructorRemainAvailable",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "12",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": ".",
+        "test": "defaultValuesAndOriginalJvmConstructorRemainAvailable",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.SdkOwnershipTest",
+        "current": "13",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": "",
+        "test": "closedClientRejectsAndClosesTransferredDescriptorExactlyOnce",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.SdkOwnershipTest",
+        "current": "13",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": ".",
+        "test": "closedClientRejectsAndClosesTransferredDescriptorExactlyOnce",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.SdkOwnershipTest",
+        "current": "14",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": "",
+        "test": "rejectedExecutorClosesTransferredDescriptorAndSettlesCallback",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.SdkOwnershipTest",
+        "current": "14",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": ".",
+        "test": "rejectedExecutorClosesTransferredDescriptorAndSettlesCallback",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.SdkOwnershipTest",
+        "current": "15",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": "",
+        "test": "concurrentCloseAndSubmissionNeverLeaksOwnedDescriptorsOrCallbacks",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.SdkOwnershipTest",
+        "current": "15",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": ".",
+        "test": "concurrentCloseAndSubmissionNeverLeaksOwnedDescriptorsOrCallbacks",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.SdkLifecycleTest",
+        "current": "16",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": "",
+        "test": "malformedMetadataIsRejectedBeforeTransportWithoutReconnectAndClosesFile",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.SdkLifecycleTest",
+        "current": "16",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": ".",
+        "test": "malformedMetadataIsRejectedBeforeTransportWithoutReconnectAndClosesFile",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.SdkLifecycleTest",
+        "current": "17",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": "",
+        "test": "blockedTransportBoundsPublicIngressAndSpacesSubsequentPolls",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.SdkLifecycleTest",
+        "current": "17",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": ".",
+        "test": "blockedTransportBoundsPublicIngressAndSpacesSubsequentPolls",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.SdkLifecycleTest",
+        "current": "18",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": "",
+        "test": "remoteFailureSettlesOnceAndDelayedMainReceivesLossBeforeRecovery",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.SdkLifecycleTest",
+        "current": "18",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": ".",
+        "test": "remoteFailureSettlesOnceAndDelayedMainReceivesLossBeforeRecovery",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.SdkLifecycleTest",
+        "current": "19",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": "",
+        "test": "submitTimeoutCompletesOnceWithoutReplayAndOriginalRequestRemainsQueryable",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.SdkLifecycleTest",
+        "current": "19",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": ".",
+        "test": "submitTimeoutCompletesOnceWithoutReplayAndOriginalRequestRemainsQueryable",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.SdkLifecycleTest",
+        "current": "20",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": "",
+        "test": "oldHandleStatusAndCancelReportLossWhileRecoveredTransportIsUnavailable",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.SdkLifecycleTest",
+        "current": "20",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": ".",
+        "test": "oldHandleStatusAndCancelReportLossWhileRecoveredTransportIsUnavailable",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.SdkLifecycleTest",
+        "current": "21",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": "",
+        "test": "realPackageManagerSignerMismatchPreventsBindingAndDescriptorDelegation",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.SdkLifecycleTest",
+        "current": "21",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": ".",
+        "test": "realPackageManagerSignerMismatchPreventsBindingAndDescriptorDelegation",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.SdkLifecycleTest",
+        "current": "22",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": "",
+        "test": "oldGenerationPollCleanupCannotRemoveNewGenerationSameRequestSlot",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.SdkLifecycleTest",
+        "current": "22",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": ".",
+        "test": "oldGenerationPollCleanupCannotRemoveNewGenerationSameRequestSlot",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.CrossOwnerTest",
+        "current": "23",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": "",
+        "test": "nativeOwnedSessionCannotBeReadOrCancelledByBrokerUid",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.CrossOwnerTest",
+        "current": "23",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": ".",
+        "test": "nativeOwnedSessionCannotBeReadOrCancelledByBrokerUid",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.CrossOwnerTest",
+        "current": "24",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": "",
+        "test": "clientProcessDeathRevokesNativeTokenSession",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.CrossOwnerTest",
+        "current": "24",
+        "id": "AndroidJUnitRunner",
+        "numtests": "24",
+        "stream": ".",
+        "test": "clientProcessDeathRevokesNativeTokenSession",
+        "status_code": 0
+      }
+    ],
+    "tests_run": 24,
+    "tests_passed": 24,
+    "tests_failed": 0,
+    "tests_skipped": 0
+  },
+  "custom-endpoint": {
+    "passed": true,
+    "checks": {
+      "transport_completed": true,
+      "runner_completed": true,
+      "positive_expected_count": true,
+      "declared_count_matches": true,
+      "summary_count_matches": true,
+      "terminal_count_matches": true,
+      "start_count_matches": true,
+      "unique_terminals": true,
+      "starts_match_terminals": true,
+      "selected_identities": true,
+      "all_required_passed": true,
+      "no_failure_marker": true
+    },
+    "events": [
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "1",
+        "id": "AndroidJUnitRunner",
+        "numtests": "12",
+        "stream": "",
+        "test": "missingExpectedPermissionIsDeniedBeforeBinding",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "1",
+        "id": "AndroidJUnitRunner",
+        "numtests": "12",
+        "stream": ".",
+        "test": "missingExpectedPermissionIsDeniedBeforeBinding",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "2",
+        "id": "AndroidJUnitRunner",
+        "numtests": "12",
+        "stream": "",
+        "test": "mismatchedExpectedPermissionIsDeniedBeforeBindingAndDescriptorDelegation",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "2",
+        "id": "AndroidJUnitRunner",
+        "numtests": "12",
+        "stream": ".",
+        "test": "mismatchedExpectedPermissionIsDeniedBeforeBindingAndDescriptorDelegation",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "3",
+        "id": "AndroidJUnitRunner",
+        "numtests": "12",
+        "stream": "",
+        "test": "permissionOwnedByAnotherPackageIsDeniedBeforeBinding",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "3",
+        "id": "AndroidJUnitRunner",
+        "numtests": "12",
+        "stream": ".",
+        "test": "permissionOwnedByAnotherPackageIsDeniedBeforeBinding",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "4",
+        "id": "AndroidJUnitRunner",
+        "numtests": "12",
+        "stream": "",
+        "test": "missingIdentityIsDeniedBeforeBindingAndTransferredDescriptorIsClosed",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "4",
+        "id": "AndroidJUnitRunner",
+        "numtests": "12",
+        "stream": ".",
+        "test": "missingIdentityIsDeniedBeforeBindingAndTransferredDescriptorIsClosed",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "5",
+        "id": "AndroidJUnitRunner",
+        "numtests": "12",
+        "stream": "",
+        "test": "explicitInstalledEndpointConnectsUsingStableServiceClass",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "5",
+        "id": "AndroidJUnitRunner",
+        "numtests": "12",
+        "stream": ".",
+        "test": "explicitInstalledEndpointConnectsUsingStableServiceClass",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "6",
+        "id": "AndroidJUnitRunner",
+        "numtests": "12",
+        "stream": "",
+        "test": "normalProtectionPermissionIsDeniedBeforeBinding",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "6",
+        "id": "AndroidJUnitRunner",
+        "numtests": "12",
+        "stream": ".",
+        "test": "normalProtectionPermissionIsDeniedBeforeBinding",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "7",
+        "id": "AndroidJUnitRunner",
+        "numtests": "12",
+        "stream": "",
+        "test": "identityIsRecheckedAfterBindingBeforeAnyHandshakeTransaction",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "7",
+        "id": "AndroidJUnitRunner",
+        "numtests": "12",
+        "stream": ".",
+        "test": "identityIsRecheckedAfterBindingBeforeAnyHandshakeTransaction",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "8",
+        "id": "AndroidJUnitRunner",
+        "numtests": "12",
+        "stream": "",
+        "test": "disabledApplicationIsDeniedBeforeBinding",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "8",
+        "id": "AndroidJUnitRunner",
+        "numtests": "12",
+        "stream": ".",
+        "test": "disabledApplicationIsDeniedBeforeBinding",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "9",
+        "id": "AndroidJUnitRunner",
+        "numtests": "12",
+        "stream": "",
+        "test": "malformedEndpointNamesAreRejectedBeforeClientCreation",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "9",
+        "id": "AndroidJUnitRunner",
+        "numtests": "12",
+        "stream": ".",
+        "test": "malformedEndpointNamesAreRejectedBeforeClientCreation",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "10",
+        "id": "AndroidJUnitRunner",
+        "numtests": "12",
+        "stream": "",
+        "test": "unexpectedCallbackComponentIsDeniedBeforeHandshake",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "10",
+        "id": "AndroidJUnitRunner",
+        "numtests": "12",
+        "stream": ".",
+        "test": "unexpectedCallbackComponentIsDeniedBeforeHandshake",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "11",
+        "id": "AndroidJUnitRunner",
+        "numtests": "12",
+        "stream": "",
+        "test": "disabledServiceIsDeniedBeforeBinding",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "11",
+        "id": "AndroidJUnitRunner",
+        "numtests": "12",
+        "stream": ".",
+        "test": "disabledServiceIsDeniedBeforeBinding",
+        "status_code": 0
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "12",
+        "id": "AndroidJUnitRunner",
+        "numtests": "12",
+        "stream": "",
+        "test": "defaultValuesAndOriginalJvmConstructorRemainAvailable",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.broker.BrokerEndpointTest",
+        "current": "12",
+        "id": "AndroidJUnitRunner",
+        "numtests": "12",
+        "stream": ".",
+        "test": "defaultValuesAndOriginalJvmConstructorRemainAvailable",
+        "status_code": 0
+      }
+    ],
+    "tests_run": 12,
+    "tests_passed": 12,
+    "tests_failed": 0,
+    "tests_skipped": 0
+  },
+  "incoming-denial": {
+    "passed": true,
+    "checks": {
+      "transport_completed": true,
+      "runner_completed": true,
+      "positive_expected_count": true,
+      "declared_count_matches": true,
+      "summary_count_matches": true,
+      "terminal_count_matches": true,
+      "start_count_matches": true,
+      "unique_terminals": true,
+      "starts_match_terminals": true,
+      "selected_identities": true,
+      "all_required_passed": true,
+      "no_failure_marker": true
+    },
+    "events": [
+      {
+        "class": "dev.boundarylab.deniedclient.SignatureDenialTest",
+        "current": "1",
+        "id": "AndroidJUnitRunner",
+        "numtests": "1",
+        "stream": "",
+        "test": "differentlySignedClientIsDeniedBeforeObtainingBrokerBinder",
+        "status_code": 1
+      },
+      {
+        "class": "dev.boundarylab.deniedclient.SignatureDenialTest",
+        "current": "1",
+        "id": "AndroidJUnitRunner",
+        "numtests": "1",
+        "stream": ".",
+        "test": "differentlySignedClientIsDeniedBeforeObtainingBrokerBinder",
+        "status_code": 0
+      }
+    ],
+    "tests_run": 1,
+    "tests_passed": 1,
+    "tests_failed": 0,
+    "tests_skipped": 0
+  }
+}

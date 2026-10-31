@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <permission android:name="dev.boundarylab.permission.BIND_BROKER" android:protectionLevel="signature" />
-    <uses-permission android:name="dev.boundarylab.permission.BIND_BROKER" />
+    <permission android:name="${brokerBindPermission}" android:protectionLevel="signature" />
+    <uses-permission android:name="${brokerBindPermission}" />
     <application android:label="BoundaryLab Broker" android:allowBackup="false" android:supportsRtl="true">
-        <service android:name=".BoundaryBrokerService" android:exported="true"
-            android:permission="dev.boundarylab.permission.BIND_BROKER" />
+        <service android:name="dev.boundarylab.broker.BoundaryBrokerService" android:exported="true"
+            android:permission="${brokerBindPermission}" />
     </application>
 </manifest>

@@ -1,0 +1,45 @@
+> Task :gradle:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :gradle:compileKotlin UP-TO-DATE
+> Task :gradle:compileJava NO-SOURCE
+> Task :gradle:compileGroovy NO-SOURCE
+> Task :gradle:pluginDescriptors UP-TO-DATE
+> Task :gradle:processResources UP-TO-DATE
+> Task :gradle:classes UP-TO-DATE
+> Task :gradle:jar UP-TO-DATE
+
+FAILURE: Build completed with 2 failures.
+
+1: Task failed with an exception.
+-----------
+* Where:
+Build file '/workspace/outputs/boundarylab-library-20261031/consumers/flutter/plugin/android/build.gradle' line: 9
+
+* What went wrong:
+A problem occurred evaluating project ':boundarylab'.
+> Set all three boundarylab.brokerPackage, boundarylab.brokerServiceClass and boundarylab.brokerBindPermission properties, or omit all three for the default broker.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+==============================================================================
+
+2: Task failed with an exception.
+-----------
+* What went wrong:
+A problem occurred configuring project ':boundarylab'.
+> Failed to notify project evaluation listener.
+   > java.lang.NullPointerException (no error message)
+   > java.lang.NullPointerException (no error message)
+   > Android Gradle Plugin: project ':boundarylab' does not specify `compileSdk` in build.gradle (/workspace/outputs/boundarylab-library-20261031/consumers/flutter/plugin/android/build.gradle).
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+==============================================================================
+
+BUILD FAILED in 686ms
+4 actionable tasks: 4 up-to-date

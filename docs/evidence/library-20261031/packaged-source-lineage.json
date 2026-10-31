@@ -1,0 +1,47 @@
+{
+  "checks": [
+    {
+      "source": "core/src/main/kotlin/dev/boundarylab/core/PositionalSource.kt",
+      "sha256": "29b11796e1df2cbac33bb01a62043d6c6e5ae6495d3319015aece83b431d6c8b",
+      "artifact": "dev/boundarylab/boundarylab-core/0.1.0-SNAPSHOT/boundarylab-core-0.1.0-20261031.190331-1-sources.jar",
+      "matches_packaged_source": true
+    },
+    {
+      "source": "core/src/main/kotlin/dev/boundarylab/core/Models.kt",
+      "sha256": "878da64de8807d9d2fbceec6aa77a4167ec6979acddf82b3ff4acffd67ea93d5",
+      "artifact": "dev/boundarylab/boundarylab-core/0.1.0-SNAPSHOT/boundarylab-core-0.1.0-20261031.190331-1-sources.jar",
+      "matches_packaged_source": true
+    },
+    {
+      "source": "core/src/main/kotlin/dev/boundarylab/core/CoreEngine.kt",
+      "sha256": "2f5c12615fcfd2b99c777a055ff8d4131e07a4a5d8b7aa3797441aa34f133320",
+      "artifact": "dev/boundarylab/boundarylab-core/0.1.0-SNAPSHOT/boundarylab-core-0.1.0-20261031.190331-1-sources.jar",
+      "matches_packaged_source": true
+    },
+    {
+      "source": "core/src/main/kotlin/dev/boundarylab/core/FieldPack.kt",
+      "sha256": "01b3e0c575b04df1f8b89befd3654432ece071460f1e39c1f5f1bbf560d03b90",
+      "artifact": "dev/boundarylab/boundarylab-core/0.1.0-SNAPSHOT/boundarylab-core-0.1.0-20261031.190331-1-sources.jar",
+      "matches_packaged_source": true
+    },
+    {
+      "source": "sdk/kotlin/src/main/kotlin/dev/boundarylab/sdk/BrokerEndpoint.kt",
+      "sha256": "c4fb39097f1ff48b42f58c473522540438d1f675367e80f688acce8f43aa2b4c",
+      "artifact": "dev/boundarylab/boundarylab-android/0.1.0-SNAPSHOT/boundarylab-android-0.1.0-20261031.190331-1-sources.jar",
+      "matches_packaged_source": true
+    },
+    {
+      "source": "sdk/kotlin/src/main/kotlin/dev/boundarylab/sdk/Models.kt",
+      "sha256": "3147fd80cfa3a3377d70057a64df39729bec9d5567ef304c45c937d744645639",
+      "artifact": "dev/boundarylab/boundarylab-android/0.1.0-SNAPSHOT/boundarylab-android-0.1.0-20261031.190331-1-sources.jar",
+      "matches_packaged_source": true
+    },
+    {
+      "source": "sdk/kotlin/src/main/kotlin/dev/boundarylab/sdk/BoundaryClient.kt",
+      "sha256": "675d0eaad0163355e76697b750b405b5e7e5141c7bf2866d03641031d79d522d",
+      "artifact": "dev/boundarylab/boundarylab-android/0.1.0-SNAPSHOT/boundarylab-android-0.1.0-20261031.190331-1-sources.jar",
+      "matches_packaged_source": true
+    }
+  ],
+  "passed": true
+}

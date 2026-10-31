@@ -8,7 +8,11 @@
 
 *Architecture illustration. Every execution claim below links to retained receipts.*
 
-[**Evidence gallery**](docs/SHOWCASE.md) · [**Run locally**](#try-fieldpack-locally) · [**Architecture**](docs/AOSP-LAYERS.md) · [**Delivery board**](https://github.com/users/oudaykhaled/projects/3)
+[**Use as a library**](docs/LIBRARY-GUIDE.md) · [**Evidence gallery**](docs/SHOWCASE.md) · [**Run locally**](#try-fieldpack-locally) · [**Architecture**](docs/AOSP-LAYERS.md) · [**Delivery board**](https://github.com/users/oudaykhaled/projects/3)
+
+Embed a bounded file-hashing broker in Android/Flutter apps, reuse its core in a
+JVM application, or integrate the generated-only native service host into a custom
+Android image. [Install and configure the libraries](docs/LIBRARY-GUIDE.md).
 
 ## Built and tested on a real Linux AOSP server
 
@@ -126,6 +130,25 @@ python3 examples/fieldpack/demo.py
 ```
 
 The demo creates a manifest from three owned fixtures, verifies copied files, changes a byte, removes an attachment and rejects an unsupported format. Its expected final marker is `PASS: all expected outcomes and exit codes observed`. This single-process reference runs independently of the recorded AOSP image. [Walkthrough and custom files](examples/fieldpack/README.md)
+
+## Use BoundaryLab in another project
+
+Reuse the existing bounded SHA-256 engine and FieldPack codec without including
+this checkout's Gradle source projects. The core is a JVM 17 JAR; the Android SDK
+is an API 30+ AAR that talks to a separately installed broker. Flutter consumes
+the same AAR. Local Maven coordinates are
+`dev.boundarylab:boundarylab-core:0.1.0-SNAPSHOT` and
+`dev.boundarylab:boundarylab-android:0.1.0-SNAPSHOT`; this is local/private
+distribution, with no Maven Central or pub.dev release claimed.
+
+The [library guide](docs/LIBRARY-GUIDE.md) covers publication, independent JVM and
+Android consumers, Flutter setup, and a custom broker package. Approved Android
+clients and broker must share signing identity and declare the broker's exact
+signature permission. The [native OS host](aosp/README.md) is a separate,
+generated-only custom-image integration; current source additions do not inherit
+the recorded image's execution results. Generated SHA-256 and FieldPack remain
+the available workloads; a substantive new capability requires its own design,
+implementation and evidence.
 
 ## Explore or build an implementation
 

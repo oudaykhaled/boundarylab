@@ -7,6 +7,8 @@ namespace boundarylab {
 class Client {
 public:
     Client();
+    // Invalid names remain disconnected; no fallback to the legacy service.
+    explicit Client(const std::string& serviceName);
     ~Client();
     bool connected() const { return service_ != nullptr; }
     dev::boundarylab::platform::Capabilities capabilities(std::string* error);

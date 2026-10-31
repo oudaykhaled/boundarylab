@@ -1,0 +1,104 @@
+{
+  "started": "2026-10-31T19:08:52.151558+00:00",
+  "finished": "2026-10-31T19:08:52.658481+00:00",
+  "phase": "denied-client",
+  "commands": [
+    {
+      "argv": [
+        "adb",
+        "-s",
+        "emulator-5580",
+        "get-state"
+      ],
+      "exit_code": 0,
+      "stdout": "device\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "adb",
+        "-s",
+        "emulator-5580",
+        "logcat",
+        "-c"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "adb",
+        "-s",
+        "emulator-5580",
+        "shell",
+        "am",
+        "force-stop",
+        "dev.boundarylab.deniedclient"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "adb",
+        "-s",
+        "emulator-5580",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "dev.boundarylab.deniedclient.SignatureDenialTest",
+        "dev.boundarylab.deniedclient.test/androidx.test.runner.AndroidJUnitRunner"
+      ],
+      "exit_code": 0,
+      "stdout": "INSTRUMENTATION_STATUS: class=dev.boundarylab.deniedclient.SignatureDenialTest\nINSTRUMENTATION_STATUS: current=1\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=1\nINSTRUMENTATION_STATUS: stream=\ndev.boundarylab.deniedclient.SignatureDenialTest:\nINSTRUMENTATION_STATUS: test=differentlySignedClientIsDeniedBeforeObtainingBrokerBinder\nINSTRUMENTATION_STATUS_CODE: 1\nINSTRUMENTATION_STATUS: class=dev.boundarylab.deniedclient.SignatureDenialTest\nINSTRUMENTATION_STATUS: current=1\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=1\nINSTRUMENTATION_STATUS: stream=.\nINSTRUMENTATION_STATUS: test=differentlySignedClientIsDeniedBeforeObtainingBrokerBinder\nINSTRUMENTATION_STATUS_CODE: 0\nINSTRUMENTATION_RESULT: stream=\n\nTime: 0.01\n\nOK (1 test)\n\n\nINSTRUMENTATION_CODE: -1\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "adb",
+        "-s",
+        "emulator-5580",
+        "logcat",
+        "-d",
+        "-v",
+        "threadtime",
+        "BoundaryLabConsumer:I",
+        "ExternalEndpointQA:I",
+        "TestRunner:I",
+        "AndroidRuntime:E",
+        "*:S"
+      ],
+      "exit_code": 0,
+      "stdout": "--------- beginning of main\n10-31 20:08:52.108  6892  6905 I TestRunner: run started: 1 tests\n10-31 20:08:52.108  6892  6905 I TestRunner: started: differentlySignedClientIsDeniedBeforeObtainingBrokerBinder(dev.boundarylab.deniedclient.SignatureDenialTest)\n10-31 20:08:52.114  6892  6905 I TestRunner: finished: differentlySignedClientIsDeniedBeforeObtainingBrokerBinder(dev.boundarylab.deniedclient.SignatureDenialTest)\n10-31 20:08:52.117  6892  6905 I TestRunner: run finished: 1 tests, 0 failed, 0 ignored\n",
+      "stderr": ""
+    }
+  ],
+  "passed": true,
+  "events": [
+    {
+      "class": "dev.boundarylab.deniedclient.SignatureDenialTest",
+      "current": "1",
+      "id": "AndroidJUnitRunner",
+      "numtests": "1",
+      "stream": "",
+      "test": "differentlySignedClientIsDeniedBeforeObtainingBrokerBinder",
+      "status_code": 1
+    },
+    {
+      "class": "dev.boundarylab.deniedclient.SignatureDenialTest",
+      "current": "1",
+      "id": "AndroidJUnitRunner",
+      "numtests": "1",
+      "stream": ".",
+      "test": "differentlySignedClientIsDeniedBeforeObtainingBrokerBinder",
+      "status_code": 0
+    }
+  ],
+  "output_sha256": "9240c2871535c8d384a790b41005cf47350168e5b44644d20cc1b530dd95461d"
+}

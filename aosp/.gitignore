@@ -1,4 +1,5 @@
 evidence/local/engine_test
+evidence/local/service_config_test
 evidence/local/aidl-generated/
 __pycache__/
 *.pyc

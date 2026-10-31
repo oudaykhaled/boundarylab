@@ -1,0 +1,93 @@
+[
+  {
+    "artifactId": "boundarylab-core",
+    "dependencies": [
+      {
+        "groupId": "org.jetbrains.kotlin",
+        "artifactId": "kotlin-stdlib",
+        "version": "2.2.21",
+        "scope": "compile"
+      }
+    ],
+    "apiHtmlFiles": 125,
+    "kotlinSourceFiles": 4,
+    "artifacts": [
+      {
+        "file": "dev/boundarylab/boundarylab-core/0.1.0-SNAPSHOT/boundarylab-core-0.1.0-20261031.190331-1-javadoc.jar",
+        "bytes": 816642,
+        "sha256": "dbaf6e7eac98b6be92d681285a6e32571aeb154c381b056e96e97e2791b37ed4"
+      },
+      {
+        "file": "dev/boundarylab/boundarylab-core/0.1.0-SNAPSHOT/boundarylab-core-0.1.0-20261031.190331-1-sources.jar",
+        "bytes": 13210,
+        "sha256": "7104cd45d13b638b56378cff75a962e946926cccbc1251444dc6c329a58e171e"
+      },
+      {
+        "file": "dev/boundarylab/boundarylab-core/0.1.0-SNAPSHOT/boundarylab-core-0.1.0-20261031.190331-1.jar",
+        "bytes": 58606,
+        "sha256": "c3846206872da2d0d185419e128f24ebdc0e2751a82f7386f1d186ee61af6b95"
+      },
+      {
+        "file": "dev/boundarylab/boundarylab-core/0.1.0-SNAPSHOT/boundarylab-core-0.1.0-20261031.190331-1.module",
+        "bytes": 3402,
+        "sha256": "6a0a8beed3822ac9fb7b1195349381adb7995633aa41d6bf8686d3d22b865d4d"
+      },
+      {
+        "file": "dev/boundarylab/boundarylab-core/0.1.0-SNAPSHOT/boundarylab-core-0.1.0-20261031.190331-1.pom",
+        "bytes": 1546,
+        "sha256": "12d6ab2ca2f557edae0c8e32ae7ebb8d13bac68b07a07f7f3298c0d7ea4b4f78"
+      }
+    ]
+  },
+  {
+    "artifactId": "boundarylab-android",
+    "dependencies": [
+      {
+        "groupId": "dev.boundarylab",
+        "artifactId": "boundarylab-core",
+        "version": "0.1.0-SNAPSHOT",
+        "scope": "compile"
+      },
+      {
+        "groupId": "org.jetbrains.kotlin",
+        "artifactId": "kotlin-stdlib",
+        "version": "2.2.21",
+        "scope": "compile"
+      }
+    ],
+    "apiHtmlFiles": 58,
+    "kotlinSourceFiles": 3,
+    "artifacts": [
+      {
+        "file": "dev/boundarylab/boundarylab-android/0.1.0-SNAPSHOT/boundarylab-android-0.1.0-20261031.190331-1-javadoc.jar",
+        "bytes": 647145,
+        "sha256": "b302dfcc71ebef5e8c00b6aaa4eee5a1171450b6a976eca035c6ba3416cf7f2d"
+      },
+      {
+        "file": "dev/boundarylab/boundarylab-android/0.1.0-SNAPSHOT/boundarylab-android-0.1.0-20261031.190331-1-sources.jar",
+        "bytes": 13438,
+        "sha256": "c6435db7d169377da034b0e96f354dc9eef396495cabef156cea2a9b1d0a0da7"
+      },
+      {
+        "file": "dev/boundarylab/boundarylab-android/0.1.0-SNAPSHOT/boundarylab-android-0.1.0-20261031.190331-1.aar",
+        "bytes": 38039,
+        "sha256": "9c724afd568ed87b21cf77d57ca8e94ffc539c9547fbad7509ad1a82301f816c"
+      },
+      {
+        "file": "dev/boundarylab/boundarylab-android/0.1.0-SNAPSHOT/boundarylab-android-0.1.0-20261031.190331-1.module",
+        "bytes": 3554,
+        "sha256": "24a463ca7acc6f571bbc87ec7593eae332522f86da34b0ba727afb0b736f95ca"
+      },
+      {
+        "file": "dev/boundarylab/boundarylab-android/0.1.0-SNAPSHOT/boundarylab-android-0.1.0-20261031.190331-1.pom",
+        "bytes": 1786,
+        "sha256": "98f91e3a62c37868312ee01d9a466cdd568a529d526f2197c057526bf2f289c8"
+      }
+    ],
+    "aarContains": [
+      "dev/boundarylab/sdk/BrokerEndpoint.class",
+      "dev/boundarylab/sdk/BoundaryClient.class",
+      "dev/boundarylab/ipc/IBoundaryBroker.class"
+    ]
+  }
+]

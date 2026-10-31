@@ -10,6 +10,38 @@ packages and UIDs. Every AIDL method captures and verifies the calling UID befor
 policy operations; owner identity is never accepted from request metadata. A
 client Binder death token revokes its session and cooperatively cancels work.
 
+## Install an adopter-owned broker
+
+The published Android AAR is a client library; it does not install this service.
+Build the broker APK separately and sign it and every approved consumer with the
+same private development or product certificate. The default Android debug key
+is suitable only for a local matched demonstration. Keep signing keys outside
+source control. Independently signed applications are denied.
+
+For a custom application ID and an owned signature permission:
+
+```sh
+./gradlew :android:broker:assembleDebug -Pboundarylab.brokerApplicationId=com.example.boundarybroker -Pboundarylab.brokerBindPermission=com.example.boundarybroker.permission.BIND_BROKER
+adb install -r android/broker/build/outputs/apk/debug/broker-debug.apk
+```
+
+Both properties are optional and retain the defaults above when omitted. The
+service class stays `dev.boundarylab.broker.BoundaryBrokerService`; changing the
+application ID does not relocate it. The broker declares its configured permission
+with fixed `signature` protection and uses the same value on every Binder entry.
+A custom permission must be owned by that broker package.
+
+Each consumer supplies the exact component/permission through
+[`BrokerEndpoint`](../../sdk/kotlin/README.md), requests the permission with
+`<uses-permission>`, and declares a `<queries><package>` entry for the broker in
+its own application manifest. The SDK checks both the permission owner/protection
+and matching signatures before delegation. See the
+[library guide](../../docs/LIBRARY-GUIDE.md) for the complete install sequence and
+an independent Android consumer. This application broker is separate from the
+[custom OS native service](../../aosp/README.md).
+
+## Descriptor and session contract
+
 The service delegates policy to `dev.boundarylab.core.CoreEngine`, with one worker.
 Binder ingress performs bounded metadata/admission work. It never opens a supplied
 URI/path and never hashes on a Binder thread. The adapter validates read-only

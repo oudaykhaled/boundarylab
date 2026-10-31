@@ -4,11 +4,12 @@ plugins {
     alias(libs.plugins.android.library) apply false
     alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.kotlin.jvm) apply false
+    id("org.jetbrains.dokka") version "2.2.0" apply false
 }
 
 allprojects {
     group = "dev.boundarylab"
-    version = "0.1.0-SNAPSHOT"
+    version = providers.gradleProperty("boundarylabVersion").getOrElse("0.1.0-SNAPSHOT")
 }
 
 subprojects {
@@ -39,3 +40,10 @@ tasks.register("checkAndroid") {
 }
 
 tasks.named("check") { dependsOn("checkJvm", "checkAndroid") }
+
+tasks.register("publishLibrariesToLocalRepository") {
+    group = "publishing"
+    description = "Publish core and Android SDK, metadata, sources and API docs to a folder Maven repository."
+    dependsOn(":core:publishLibraryPublicationToBoundaryLabLocalRepository",
+        ":sdk:kotlin:publishLibraryPublicationToBoundaryLabLocalRepository")
+}

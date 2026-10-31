@@ -1,0 +1,186 @@
+{
+  "started": "2026-10-31T19:11:27.790452+00:00",
+  "finished": "2026-10-31T19:11:29.293680+00:00",
+  "phase": "consumer",
+  "commands": [
+    {
+      "argv": [
+        "adb",
+        "-s",
+        "emulator-5580",
+        "get-state"
+      ],
+      "timeout_seconds": 30,
+      "exit_code": 0,
+      "stdout": "device\n",
+      "stderr": "",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "adb",
+        "-s",
+        "emulator-5580",
+        "logcat",
+        "-c"
+      ],
+      "timeout_seconds": 30,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "adb",
+        "-s",
+        "emulator-5580",
+        "shell",
+        "am",
+        "force-stop",
+        "dev.boundarylab.standalone"
+      ],
+      "timeout_seconds": 30,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "adb",
+        "-s",
+        "emulator-5580",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "dev.boundarylab.consumer.ExternalEndpointTest#sameSignerSeparateUidRunsRealSubmitAndStatus,dev.boundarylab.consumer.ExternalEndpointTest#originalDefaultConstructorRunsAgainstDefaultInstalledBroker,dev.boundarylab.consumer.ExternalEndpointTest#actualReadOnlyFileDescriptorProducesRecipientVerifiableManifest,dev.boundarylab.consumer.ExternalEndpointTest#wrongExpectedPermissionIsDeniedAgainstRealInstalledService",
+        "dev.boundarylab.standalone.test/androidx.test.runner.AndroidJUnitRunner"
+      ],
+      "timeout_seconds": 300,
+      "exit_code": 0,
+      "stdout": "INSTRUMENTATION_STATUS: class=dev.boundarylab.consumer.ExternalEndpointTest\nINSTRUMENTATION_STATUS: current=1\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=4\nINSTRUMENTATION_STATUS: stream=\ndev.boundarylab.consumer.ExternalEndpointTest:\nINSTRUMENTATION_STATUS: test=wrongExpectedPermissionIsDeniedAgainstRealInstalledService\nINSTRUMENTATION_STATUS_CODE: 1\nINSTRUMENTATION_STATUS: class=dev.boundarylab.consumer.ExternalEndpointTest\nINSTRUMENTATION_STATUS: current=1\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=4\nINSTRUMENTATION_STATUS: stream=.\nINSTRUMENTATION_STATUS: test=wrongExpectedPermissionIsDeniedAgainstRealInstalledService\nINSTRUMENTATION_STATUS_CODE: 0\nINSTRUMENTATION_STATUS: class=dev.boundarylab.consumer.ExternalEndpointTest\nINSTRUMENTATION_STATUS: current=2\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=4\nINSTRUMENTATION_STATUS: stream=\nINSTRUMENTATION_STATUS: test=actualReadOnlyFileDescriptorProducesRecipientVerifiableManifest\nINSTRUMENTATION_STATUS_CODE: 1\nINSTRUMENTATION_STATUS: class=dev.boundarylab.consumer.ExternalEndpointTest\nINSTRUMENTATION_STATUS: current=2\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=4\nINSTRUMENTATION_STATUS: stream=.\nINSTRUMENTATION_STATUS: test=actualReadOnlyFileDescriptorProducesRecipientVerifiableManifest\nINSTRUMENTATION_STATUS_CODE: 0\nINSTRUMENTATION_STATUS: class=dev.boundarylab.consumer.ExternalEndpointTest\nINSTRUMENTATION_STATUS: current=3\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=4\nINSTRUMENTATION_STATUS: stream=\nINSTRUMENTATION_STATUS: test=originalDefaultConstructorRunsAgainstDefaultInstalledBroker\nINSTRUMENTATION_STATUS_CODE: 1\nINSTRUMENTATION_STATUS: class=dev.boundarylab.consumer.ExternalEndpointTest\nINSTRUMENTATION_STATUS: current=3\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=4\nINSTRUMENTATION_STATUS: stream=.\nINSTRUMENTATION_STATUS: test=originalDefaultConstructorRunsAgainstDefaultInstalledBroker\nINSTRUMENTATION_STATUS_CODE: 0\nINSTRUMENTATION_STATUS: class=dev.boundarylab.consumer.ExternalEndpointTest\nINSTRUMENTATION_STATUS: current=4\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=4\nINSTRUMENTATION_STATUS: stream=\nINSTRUMENTATION_STATUS: test=sameSignerSeparateUidRunsRealSubmitAndStatus\nINSTRUMENTATION_STATUS_CODE: 1\nINSTRUMENTATION_STATUS: class=dev.boundarylab.consumer.ExternalEndpointTest\nINSTRUMENTATION_STATUS: current=4\nINSTRUMENTATION_STATUS: id=AndroidJUnitRunner\nINSTRUMENTATION_STATUS: numtests=4\nINSTRUMENTATION_STATUS: stream=.\nINSTRUMENTATION_STATUS: test=sameSignerSeparateUidRunsRealSubmitAndStatus\nINSTRUMENTATION_STATUS_CODE: 0\nINSTRUMENTATION_RESULT: stream=\n\nTime: 0.908\n\nOK (4 tests)\n\n\nINSTRUMENTATION_CODE: -1\n",
+      "stderr": "",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "adb",
+        "-s",
+        "emulator-5580",
+        "logcat",
+        "-d",
+        "-v",
+        "threadtime",
+        "BoundaryLabConsumer:I",
+        "ExternalEndpointQA:I",
+        "TestRunner:I",
+        "AndroidRuntime:E",
+        "*:S"
+      ],
+      "timeout_seconds": 30,
+      "exit_code": 0,
+      "stdout": "--------- beginning of main\n10-31 20:11:27.829  7327  7341 I TestRunner: run started: 4 tests\n10-31 20:11:27.830  7327  7341 I TestRunner: started: wrongExpectedPermissionIsDeniedAgainstRealInstalledService(dev.boundarylab.consumer.ExternalEndpointTest)\n10-31 20:11:27.844  7327  7341 I ExternalEndpointQA: DENIED package=dev.boundarylab.qa.broker expectedPermission=android.permission.INTERNET descriptorClosed=true\n10-31 20:11:27.844  7327  7341 I TestRunner: finished: wrongExpectedPermissionIsDeniedAgainstRealInstalledService(dev.boundarylab.consumer.ExternalEndpointTest)\n10-31 20:11:27.845  7327  7341 I TestRunner: started: actualReadOnlyFileDescriptorProducesRecipientVerifiableManifest(dev.boundarylab.consumer.ExternalEndpointTest)\n10-31 20:11:28.360  7327  7341 I ExternalEndpointQA: DOCUMENT_OK bytes=38 sha256=939b150ec43b6e08f939710adb791e17c3658ae93e8d2fbd9ded9ff711e95db8\n10-31 20:11:28.361  7327  7341 I TestRunner: finished: actualReadOnlyFileDescriptorProducesRecipientVerifiableManifest(dev.boundarylab.consumer.ExternalEndpointTest)\n10-31 20:11:28.364  7327  7341 I TestRunner: started: originalDefaultConstructorRunsAgainstDefaultInstalledBroker(dev.boundarylab.consumer.ExternalEndpointTest)\n10-31 20:11:28.714  7327  7341 I TestRunner: finished: originalDefaultConstructorRunsAgainstDefaultInstalledBroker(dev.boundarylab.consumer.ExternalEndpointTest)\n10-31 20:11:28.718  7327  7341 I TestRunner: started: sameSignerSeparateUidRunsRealSubmitAndStatus(dev.boundarylab.consumer.ExternalEndpointTest)\n10-31 20:11:28.736  7327  7341 I ExternalEndpointQA: POSITIVE clientUid=10206 brokerUid=10217 clientPid=7327 brokerPid=7350 sha256=6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d\n10-31 20:11:28.737  7327  7341 I TestRunner: finished: sameSignerSeparateUidRunsRealSubmitAndStatus(dev.boundarylab.consumer.ExternalEndpointTest)\n10-31 20:11:28.738  7327  7341 I TestRunner: run finished: 4 tests, 0 failed, 0 ignored\n",
+      "stderr": "",
+      "timed_out": false
+    }
+  ],
+  "passed": true,
+  "checks": {
+    "transport_completed": true,
+    "runner_completed": true,
+    "positive_expected_count": true,
+    "declared_count_matches": true,
+    "summary_count_matches": true,
+    "terminal_count_matches": true,
+    "start_count_matches": true,
+    "unique_terminals": true,
+    "starts_match_terminals": true,
+    "selected_identities": true,
+    "all_required_passed": true,
+    "no_failure_marker": true
+  },
+  "events": [
+    {
+      "class": "dev.boundarylab.consumer.ExternalEndpointTest",
+      "current": "1",
+      "id": "AndroidJUnitRunner",
+      "numtests": "4",
+      "stream": "",
+      "test": "wrongExpectedPermissionIsDeniedAgainstRealInstalledService",
+      "status_code": 1
+    },
+    {
+      "class": "dev.boundarylab.consumer.ExternalEndpointTest",
+      "current": "1",
+      "id": "AndroidJUnitRunner",
+      "numtests": "4",
+      "stream": ".",
+      "test": "wrongExpectedPermissionIsDeniedAgainstRealInstalledService",
+      "status_code": 0
+    },
+    {
+      "class": "dev.boundarylab.consumer.ExternalEndpointTest",
+      "current": "2",
+      "id": "AndroidJUnitRunner",
+      "numtests": "4",
+      "stream": "",
+      "test": "actualReadOnlyFileDescriptorProducesRecipientVerifiableManifest",
+      "status_code": 1
+    },
+    {
+      "class": "dev.boundarylab.consumer.ExternalEndpointTest",
+      "current": "2",
+      "id": "AndroidJUnitRunner",
+      "numtests": "4",
+      "stream": ".",
+      "test": "actualReadOnlyFileDescriptorProducesRecipientVerifiableManifest",
+      "status_code": 0
+    },
+    {
+      "class": "dev.boundarylab.consumer.ExternalEndpointTest",
+      "current": "3",
+      "id": "AndroidJUnitRunner",
+      "numtests": "4",
+      "stream": "",
+      "test": "originalDefaultConstructorRunsAgainstDefaultInstalledBroker",
+      "status_code": 1
+    },
+    {
+      "class": "dev.boundarylab.consumer.ExternalEndpointTest",
+      "current": "3",
+      "id": "AndroidJUnitRunner",
+      "numtests": "4",
+      "stream": ".",
+      "test": "originalDefaultConstructorRunsAgainstDefaultInstalledBroker",
+      "status_code": 0
+    },
+    {
+      "class": "dev.boundarylab.consumer.ExternalEndpointTest",
+      "current": "4",
+      "id": "AndroidJUnitRunner",
+      "numtests": "4",
+      "stream": "",
+      "test": "sameSignerSeparateUidRunsRealSubmitAndStatus",
+      "status_code": 1
+    },
+    {
+      "class": "dev.boundarylab.consumer.ExternalEndpointTest",
+      "current": "4",
+      "id": "AndroidJUnitRunner",
+      "numtests": "4",
+      "stream": ".",
+      "test": "sameSignerSeparateUidRunsRealSubmitAndStatus",
+      "status_code": 0
+    }
+  ],
+  "tests_run": 4,
+  "tests_passed": 4,
+  "tests_failed": 0,
+  "tests_skipped": 0,
+  "output_sha256": "1ee99cd12cd3fe55e72923dda6a877335882e34a77357e6c78710f0e0d06eda0"
+}

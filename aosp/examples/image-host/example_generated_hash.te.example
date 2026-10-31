@@ -1,0 +1,14 @@
+# Template only: place reviewed rules in your image's active policy directory.
+type example_generated_hash, domain, coredomain;
+type example_generated_hash_exec, exec_type, system_file_type, file_type;
+type example_generated_hash_service, service_manager_type;
+init_daemon_domain(example_generated_hash)
+binder_use(example_generated_hash)
+add_service(example_generated_hash, example_generated_hash_service)
+
+# Replace example_image_native_caller with your EXISTING image-owned native caller
+# domain. Pair that domain's actual runtime UID with main.cpp's explicit allowlist.
+# Do not add broad appdomain/shell grants or assume an app UID is a stable principal.
+binder_use(example_image_native_caller)
+binder_call(example_image_native_caller, example_generated_hash)
+allow example_image_native_caller example_generated_hash_service:service_manager find;

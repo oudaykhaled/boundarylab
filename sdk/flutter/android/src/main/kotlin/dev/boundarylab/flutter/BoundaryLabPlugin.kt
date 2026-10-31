@@ -1,6 +1,7 @@
 package dev.boundarylab.flutter
 
 import android.app.Activity
+import android.content.ComponentName
 import android.content.Intent
 import android.net.Uri
 import android.os.Handler
@@ -9,6 +10,7 @@ import dev.boundarylab.core.FieldPackCodec
 import dev.boundarylab.core.FieldPackEntry
 import dev.boundarylab.core.FieldPackManifest
 import dev.boundarylab.sdk.BoundaryClient
+import dev.boundarylab.sdk.BrokerEndpoint
 import dev.boundarylab.sdk.BoundaryException
 import dev.boundarylab.sdk.JobHandle
 import dev.boundarylab.sdk.JobSnapshot
@@ -46,7 +48,11 @@ class BoundaryLabPlugin : FlutterPlugin, ActivityAware, MethodChannel.MethodCall
 
     override fun onAttachedToEngine(binding: FlutterPlugin.FlutterPluginBinding) {
         resolver = binding.applicationContext.contentResolver
-        client = BoundaryClient(binding.applicationContext)
+        val endpoint = if (BuildConfig.CUSTOM_BROKER_ENDPOINT) BrokerEndpoint(
+            ComponentName(BuildConfig.BROKER_PACKAGE, BuildConfig.BROKER_SERVICE_CLASS),
+            BuildConfig.BROKER_BIND_PERMISSION,
+        ) else BrokerEndpoint.DEFAULT
+        client = BoundaryClient(binding.applicationContext, endpoint)
         channel = MethodChannel(binding.binaryMessenger, "dev.boundarylab/client")
         channel.setMethodCallHandler(this)
         attached = true

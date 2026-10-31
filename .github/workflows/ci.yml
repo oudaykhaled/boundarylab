@@ -99,6 +99,15 @@ jobs:
         run: sdkmanager 'platforms;android-36' 'build-tools;35.0.0' 'ndk;28.2.13676358'
       - name: Check SDK and app, then build debug APK
         run: python3 scripts/check-flutter.py
+      - name: Check published libraries from independent consumers
+        run: python3 scripts/check-library-consumers.py
+      - name: Retain consumable Maven folder with source and API documentation
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: boundarylab-library-maven-${{ github.sha }}
+          retention-days: 14
+          if-no-files-found: error
+          path: build/local-maven/
       - name: Build broker and native client with the same runner debug signer
         timeout-minutes: 10
         run: ./gradlew --no-daemon --console=plain :android:broker:assembleDebug :examples:android-native:assembleDebug
@@ -120,3 +129,4 @@ jobs:
           if-no-files-found: warn
           path: |
             build/evidence/flutter/
+            build/evidence/library-consumers/
