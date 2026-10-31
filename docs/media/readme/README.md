@@ -17,7 +17,7 @@ These assets present the **recorded 30 October 2026 Linux/KVM Android16 run**. T
 | [Animated replay](aosp-proof-replay.gif) | **Animated evidence replay — not a live recording** | Eight scenes,28seconds, actual literal excerpts or explicitly labeled selected JSON fields |
 | [Static poster](aosp-proof-poster.png) | Typeset first replay scene | Same original Linux compiler excerpt; accessible without animation |
 
-The displayed baseline and custom guest PNGs in the README are **original lock-screen captures**. Command receipts establish the service semantics. The physical Android/Flutter screenshots belong to the separate application profile; the native AOSP service has no graphical UI. [Original captures and captions](../../SHOWCASE.md).
+The baseline and custom guest PNGs in the gallery’s collapsed supporting archive are **original lock-screen captures**. Command receipts establish the service semantics. The physical Android/Flutter screenshots belong to the separate application profile; the native AOSP service has no graphical UI. [Original captures and captions](../../SHOWCASE.md).
 
 The three BoundaryLab domains were checked nonpermissive and the guest was globally Enforcing. The61 native assertions ran separately under permissive `su`; this distinction appears in the affected graphics and README. Five failed runtime attempts remain available. Compatibility evolution, controlled performance, two-hour soak and fresh final-image reproduction remain open.
 
