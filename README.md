@@ -1,71 +1,153 @@
 # BoundaryLab
 
-**Bounded local middleware for Android, Flutter and a desktop JVM—with a real attachment-integrity example.**
+**Bounded middleware, from app clients to a source-built Android 16 system image.**
 
-BoundaryLab shares admission, ownership, cancellation, deadlines and process-loss behavior across clients. Android apps call a separately installed Binder broker; the desktop CLI calls a separate JVM host over a local Unix socket. Jobs and sessions are volatile.
+[5 hosted lanes passed (recorded run)](https://github.com/oudaykhaled/boundarylab/actions/runs/41141910969) · [Apache-2.0](LICENSE)
 
-**FieldPack** is the example: select inspection attachments, hash them through the broker and explicitly export a SHA-256 manifest. A recipient obtains the attachments separately and checks a local directory. Changed and missing files are reported. Matching bytes establishes consistency, not sender authenticity.
+![BoundaryLab architecture illustration: Android, Flutter and desktop clients, with a separate native AOSP profile](docs/media/readme/hero.svg)
 
-## Build status
+*Architecture illustration. Every execution claim below links to retained receipts.*
 
-Engineering prototype: core, desktop host/CLI, Android broker/SDK, native client and authored Flutter plugin/client are implemented. At source `06b2d4f`, 393 selected host test cases passed; final physical-device suites passed 31 cases with one explicitly unavailable hardlink fixture. Native and Flutter each exported a real manifest, and separate JVM/Python recipients agreed on all five good/changed/missing/unsupported outcomes. An isolated fresh-checkout desktop consumer and all five [hosted CI lanes](https://github.com/oudaykhaled/boundarylab/actions/runs/41068567469) passed. See the [quality report](docs/evidence/build/QUALITY.md), [current ticket status](planning/EXECUTION-STATUS.md) and [requirement evidence map](docs/IMPLEMENTATION-STATUS.md). The pinned Android16 baseline and custom native-service image also built and booted; the [minimum AOSP proof](docs/evidence/aosp/custom-20261030/README.md) passed 236 harness observations and 61 native assertions at `444ae29`. Compatibility evolution, performance/soak and fresh final-image reproduction remain open.
+[**Evidence gallery**](docs/SHOWCASE.md) · [**Run locally**](#try-fieldpack-locally) · [**Architecture**](docs/AOSP-LAYERS.md) · [**Delivery board**](https://github.com/users/oudaykhaled/projects/3)
 
-No production release, commercial shipment, external adopter or human implementation review is claimed. [Astra architecture decisions](docs/decisions/BUILD-DECISIONS.md), [security review](docs/evidence/reviews/SECURITY-REVIEW.md) and [reliability review](docs/evidence/reviews/RELIABILITY-REVIEW.md) document the actual AI review scope.
+## Built and tested on a real Linux AOSP server
 
-Actual installed-device captures below show explicit successful exports. These are runtime screenshots; the separate animated presentation illustrates the architecture proposal.
+On **30 October 2026**, we built and booted the pinned Android 16 source baseline, then a custom native-service image, on a **Google Cloud Linux x86_64 server with KVM**. The host ran Ubuntu 24.04 with **16 vCPU, 64 GiB nominal RAM (62.8 GiB reported) and a 500 GiB SSD workspace**. This was source-built Android running in Cuttlefish on that server. [Host/KVM receipts](docs/evidence/aosp/attempt-20261030/host-kvm.json) · [Allocated host inventory](docs/evidence/P01/README.md)
 
-<p>
-  <img src="docs/evidence/build/native-exported-post-loss-api36.png" width="300" alt="Native FieldPack client after real manifest export" />
-  <img src="docs/evidence/build/flutter-exported-final-api36.png" width="300" alt="Flutter FieldPack client after real manifest export" />
-</p>
+The [original native compiler log](docs/evidence/aosp/custom-20261030/build/native-r5/build.log#L9-L10) records the Linux host directly:
 
-[Real mobile-to-desktop results](conformance/desktop/mobile-handoff.json) · [Observed defect and verified fix](docs/case-studies/broker-loss.md) · [AOSP proof](docs/evidence/aosp/custom-20261030/README.md) · [US$6.17 estimated infrastructure and verified teardown](docs/evidence/aosp/teardown-20261030/README.md)
+```text
+HOST_OS=linux
+HOST_OS_EXTRA=Linux-7.0.0-1014-gcp-x86_64-Ubuntu-24.04.5-LTS
+```
 
-## Run the reference now
+**Pinned source:** `android-16.0.0_r4` · **Target:** `aosp_cf_x86_64_only_phone-bp4a-userdebug` · **Executed overlay:** [`444ae29`](https://github.com/oudaykhaled/boundarylab/commit/444ae29a31833616c465e155a3dc1335d061cda6).
 
-Python3.10+ on macOS or Linux/POSIX, standard library only:
+| Recorded proof layer | Final result | Inspect the evidence |
+|---|---:|---|
+| Operator checks | **34 / 34 passed** | [Source, image, boot and cleanup aggregate](docs/evidence/aosp/custom-20261030/runtime/r6/run-result.json) |
+| Harness observations | **236 / 236 passed** | [Real Binder/lifecycle checks](docs/evidence/aosp/custom-20261030/runtime/r6/smoke/checks.json) |
+| Distinct native assertions | **61 / 61 passed** | [Original command and stdout](docs/evidence/aosp/custom-20261030/runtime/r6/smoke/058-command.json) |
+
+These are separate layers; observations include repeated checks. **Native assertions ran under permissive `su`.** Live authorized Binder calls used UID 2000 / `boundarylab_probe`; the service and both probe domains were nonpermissive in the [loaded SELinux policy](docs/evidence/aosp/custom-20261030/runtime/r6/smoke/permissive-domains.json).
+
+[![Receipt-derived poster of the real Google Cloud Linux compiler log showing HOST_OS=linux and a successful incremental native build; select to open the evidence replay](docs/media/readme/aosp-proof-poster.png)](docs/media/readme/aosp-proof-replay.gif)
+
+**Animated evidence replay — not a live recording.** Derived from retained commands and results. [Static poster](docs/media/readme/aosp-proof-poster.png) · [Replay transcript and provenance](docs/media/readme/README.md#animated-replay-transcript) · [Original execution evidence](docs/evidence/aosp/custom-20261030/README.md)
+
+<details>
+<summary><strong>Watch the 28-second recorded-evidence replay</strong></summary>
+
+![Animated evidence replay — not a live recording. Receipt-derived progression from Linux host and source build to Android boot, Binder checks and teardown](docs/media/readme/aosp-proof-replay.gif)
+
+**Animated evidence replay — not a live recording.** Collapse this panel to return to the static view. [Read the transcript](docs/media/readme/README.md#animated-replay-transcript).
+
+</details>
+
+<table>
+  <tr>
+    <th>Unchanged source baseline</th>
+    <th>Custom native-service image</th>
+  </tr>
+  <tr>
+    <td align="center"><a href="docs/evidence/P02/r5-source-baseline/boot/boot.png"><img src="docs/evidence/P02/r5-source-baseline/boot/boot.png" width="260" alt="Original Cuttlefish Android 16 baseline boot capture showing the virtual-device lock screen" /></a></td>
+    <td align="center"><a href="docs/evidence/aosp/custom-20261030/runtime/r6/custom-boot.png"><img src="docs/evidence/aosp/custom-20261030/runtime/r6/custom-boot.png" width="260" alt="Original Cuttlefish Android 16 custom-image boot capture showing the virtual-device lock screen" /></a></td>
+  </tr>
+</table>
+
+*Original boot PNGs, displayed smaller without altering their bytes. They show virtual Android lock screens; the linked [baseline build/boot receipts](docs/evidence/P02/r5-source-baseline/README.md) and [custom commands](docs/evidence/aosp/custom-20261030/runtime/r6/smoke/checks.json) establish the corresponding execution.*
+
+![Explanatory pipeline from the real Linux/KVM server through source build and Cuttlefish to native Binder service execution and evidence export](docs/media/readme/server-to-guest-pipeline.svg)
+
+*Execution pipeline diagram. [Actual Soong API update/freeze](docs/evidence/P03/api-freeze/README.md) → [native build](docs/evidence/aosp/custom-20261030/build/native-r5/build.log) → [image build](docs/evidence/aosp/custom-20261030/build/image-r4/build.log) → [runtime receipts](docs/evidence/aosp/custom-20261030/runtime/r6/run-result.json).*
+
+The added AOSP components are a **native C++ facade, frozen AIDL V1, a dedicated `system_ext` Binder daemon, init definitions and SELinux rules**. This profile supports generated SHA-256 work; file jobs return `UNSUPPORTED`. The Java framework, `system_server` and kernel are unchanged. [Layer ownership and source](docs/AOSP-LAYERS.md)
+
+<details>
+<summary><strong>Open the results, cost and recorded-run timeline charts</strong></summary>
+
+![Recorded AOSP proof results, with operator checks, harness observations and native assertions shown as separate layers](docs/media/readme/evidence-results.svg)
+
+*Receipt-derived results. The 61 native assertions used permissive `su`; the three BoundaryLab domains were nonpermissive. Short restart and quiescent FD observations do not establish performance or soak. [Underlying results](docs/evidence/aosp/custom-20261030/actual-results.json).*
+
+![Historical infrastructure estimate compared with the authorized budget](docs/media/readme/cost.svg)
+
+*Estimated infrastructure **US$6.17**; **US$11.44** including egress allowance and tax/FX reserve. Final invoice unavailable. Server and both disks were verified deleted at **22:41:46 UTC on 30 October 2026**. [Cost calculation and teardown receipts](docs/evidence/aosp/teardown-20261030/README.md).*
+
+![Receipt-derived timeline of the recorded baseline, custom builds, runtime attempts and teardown](docs/media/readme/run-timeline.svg)
+
+*Historical execution timeline. Five failed runtime attempts and their exact corrections remain [preserved](docs/evidence/aosp/custom-20261030/README.md). [All visuals and sources](docs/SHOWCASE.md).*
+
+</details>
+
+## A useful example: inspection attachments that can be checked
+
+**FieldPack helps a recipient catch changed or missing attachments before working from the wrong files.** It demonstrates process isolation, bounded work and explicit recovery when a worker disappears.
+
+An inspector selects attachments in the native Android or Flutter client. A separate Android application broker hashes them; the client explicitly exports a SHA-256 manifest. The recipient receives the manifest and attachments separately, then verifies a local directory through a separate desktop JVM host or the Python reference.
+
+<table>
+  <tr><th>Native Android — actual export</th><th>Flutter — actual export</th></tr>
+  <tr>
+    <td align="center"><a href="docs/evidence/build/native-exported-post-loss-api36.png"><img src="docs/evidence/build/native-exported-post-loss-api36.png" width="280" alt="Actual installed native FieldPack client after successfully exporting its manifest on Android API 36" /></a></td>
+    <td align="center"><a href="docs/evidence/build/flutter-exported-final-api36.png"><img src="docs/evidence/build/flutter-exported-final-api36.png" width="280" alt="Actual installed Flutter FieldPack client after successfully exporting its manifest on Android API 36" /></a></td>
+  </tr>
+</table>
+
+Both clients exported the same **299-byte manifest**. Separate JVM and Python recipient implementations agreed on all five outcomes: **matching, changed, truncated, missing and unsupported symlink**—10 JVM and 10 Python cases across the two exports. [Original handoff results](conformance/desktop/mobile-handoff.json) · [Observed broker-loss defect and verified fix](docs/case-studies/broker-loss.md)
+
+![Explanatory architecture showing the Android application broker, Flutter plugin, desktop JVM host and separate generated-only native AOSP profile](docs/media/readme/architecture.svg)
+
+*Architecture diagram. FieldPack uses the application broker; the native AOSP profile is a separate integration. [File/job contract](docs/FIELDPACK.md) · [Wire contract](contracts/PROTOCOL-V1.md).*
+
+## Try FieldPack locally
+
+Requires **Git and Python 3.10+ on macOS or Linux/POSIX**. Uses only the standard library; after cloning, the reference demo runs offline.
 
 ```sh
-python3 -m unittest discover -s examples/fieldpack -v
+git clone https://github.com/oudaykhaled/boundarylab.git
+cd boundarylab
 python3 examples/fieldpack/demo.py
 ```
 
-The [reference walkthrough](examples/fieldpack/README.md) uses actual owned note/CSV/PNG files, successful verification, tampering, removal and invalid input. It executes in one process and is independently useful for checking native output.
+The demo creates a manifest from three owned fixtures, verifies copied files, changes a byte, removes an attachment and rejects an unsupported format. Its expected final marker is `PASS: all expected outcomes and exit codes observed`. This single-process reference runs independently of the recorded AOSP image. [Walkthrough and custom files](examples/fieldpack/README.md)
 
-## Build the implementations
+## Explore or build an implementation
 
-Use JDK17, Android SDK36/build-tools35.0.0, Flutter3.38.9/Dart3.10.8, and a trusted local C compiler for desktop file support. Gradle8.13/AGP8.11.1/Kotlin2.2.21 are pinned. Android installation minimum is API30 (Android11); actual local device evidence is API36. Broader runtime support is untested. No global SDK upgrade is required.
+| Goal | Start here |
+|---|---|
+| Native Android application and broker | [Native client](examples/android-native/README.md) · [Binder broker](android/broker/README.md) · [Kotlin SDK](sdk/kotlin/README.md) |
+| Flutter application and plugin | [Flutter consumer](examples/flutter/README.md) · [Flutter SDK](sdk/flutter/README.md) |
+| Separate-process desktop host and CLI | [Desktop quickstart](desktop/README.md) · [Conformance results](conformance/desktop/README.md) |
+| Native AOSP source integration | [AOSP profile](aosp/README.md) · [Layer diagram](docs/AOSP-LAYERS.md) |
+
+<details>
+<summary><strong>Pinned application toolchains and local check commands</strong></summary>
+
+JDK 17, Android SDK 36 / build-tools 35.0.0, Gradle 8.13, AGP 8.11.1 and Kotlin 2.2.21; Flutter 3.38.9 / Dart 3.10.8. Desktop file support needs a trusted local C compiler. Android installation minimum is API 30; actual local device evidence is API 36.
 
 ```sh
-# Root checks are intentionally serialized. These do not install or test a device.
 python3 scripts/verify-wrapper.py
 python3 scripts/check.py reference
 python3 scripts/check.py jvm
 python3 scripts/check.py android
-
-# Flutter package/widget checks and debug APK build
 python3 scripts/check-flutter.py
 ```
 
-The installed local Flutter SDK's wrapper analyzer is incomplete; local receipts identify the equivalent direct Dart analyzer used. CI uses a complete pinned SDK and retains each command's actual result.
+These commands check/build applications; they do not install a device or provision AOSP infrastructure. The local Flutter receipts record the equivalent direct Dart analyzer used where the wrapper analyzer was incomplete; CI uses the complete pinned SDK.
 
-- [Desktop host/CLI quickstart](desktop/README.md): exact tested installDist commands, private socket directory, real files, separate recipient, changed/missing results.
-- [Flutter consumer](examples/flutter/README.md): typed native plugin, real file picker, session lifecycle and developer diagnostics.
-- [Original design](design/DESIGN.md) and [interactive prototype](design/index.html): visual/state source; prototype execution is explicitly simulated.
-- [File/job contract](docs/FIELDPACK.md) and [wire contract](contracts/PROTOCOL-V1.md): strict limits and failure semantics.
+Broker and both Android consumers **must have matching signing certificates**. Build them with the same local signing setup or use the matched three-APK CI bundle. The separately signed denial fixture is intentionally rejected. [Build/runtime quality report](docs/evidence/build/QUALITY.md)
 
-Native debug APKs are built at `android/broker/build/outputs/apk/debug/` and `examples/android-native/build/outputs/apk/debug/`; Flutter at `examples/flutter/build/app/outputs/flutter-apk/app-debug.apk`. Broker and both consumers **must have matching signing certificates**. Build them on the same local signing setup or use the matched three-APK CI bundle. A separately signed denial fixture is intentionally rejected. Private signing keys are never published.
+</details>
 
-## What is bounded
+## Evidence, scope and next work
 
-32 flat aliases,128MiB per file **and pack**,64KiB reads,16KiB manifest, one worker, fixed queue/session/retention caps. Android accepts the supported read-only regular seekable file profile; arbitrary/cloud-backed providers are not promised. The desktop JNI helper supplies descriptor-relative no-follow opening and same-handle validation that the tested JDK does not expose. Generated work remains available when native file support is unavailable.
+The engineering prototype has actual app, desktop and AOSP execution evidence. **393 selected host cases** and **31 physical-device cases** passed at the recorded application source, with one hardlink fixture explicitly unavailable; those counts are separate from the AOSP proof above. [Quality report](docs/evidence/build/QUALITY.md) · [Current requirement evidence](docs/IMPLEMENTATION-STATUS.md) · [AI acceptance audit](docs/evidence/reviews/AOSP-ACCEPTANCE-MAP.md)
 
-Cancellation is cooperative, including storage reads. Broker loss means lost/unknown, a fresh epoch and explicit resubmission. No persistence, atomic multi-file snapshot, automatic transfer/sync, authenticity or exactly-once claim. See [security scope](SECURITY.md).
+Work is bounded: 32 flat aliases, 128 MiB per file and pack, 64 KiB reads, 16 KiB manifest, fixed resource caps and one worker. Jobs and sessions are volatile; process loss requires a fresh epoch and explicit resubmission. Matching hashes establish byte consistency. [Security and supported file profile](SECURITY.md)
 
-## Follow the work
+**Open:** compatibility evolution/old consumers, controlled performance and peak-resource measurement, the two-hour soak, fresh final-image reproduction and other declared roadmap acceptance. The [baseline's incremental-build/sandbox history](docs/evidence/P02/r5-source-baseline/README.md#limits-retained-from-the-actual-run) and [failed custom attempts](docs/evidence/aosp/custom-20261030/README.md#runtime-attempts-and-exact-failures) remain inspectable. No production release, commercial adoption or independent execution authenticity is claimed.
 
-[GitHub delivery board](https://github.com/users/oudaykhaled/projects/3) · [FieldPack view](https://github.com/users/oudaykhaled/projects/3/views/2) · [40 detailed tasks](planning/TICKETS.md) · [Planv2](docs/PLAN-V2.md) · [22-item job evidence matrix](docs/REQUIREMENTS.md). The original40/120/240h hypotheses were superseded by the leaf plan; agent concurrency does not substitute for acceptance evidence.
+[Architecture decisions](docs/decisions/BUILD-DECISIONS.md) · [40-task plan and status](planning/EXECUTION-STATUS.md) · [22-item role evidence matrix](docs/REQUIREMENTS.md) · [Original animated proposal](presentation/README.md) · [Contributing](CONTRIBUTING.md) · [Evidence policy](docs/EVIDENCE-POLICY.md)
 
-The [animated presentation](presentation/README.md) explains the architecture proposal; it is an illustration rather than recorded middleware execution. Original [research proposals](planning/DECISION.md) and [ten planning reviews](planning/reviews-v2/README.md) remain inspectable.
-
-Prepared for the Principal Architect—OS Middleware & System Frameworks role. Career experience, genuine partners, sustained European work and international collaboration require authentic external evidence; software cannot manufacture them. [Contributing](CONTRIBUTING.md) · [evidence policy](docs/EVIDENCE-POLICY.md) · [Apache-2.0 license](LICENSE).
+Created and maintained by [Ouday Khaled](https://github.com/oudaykhaled). [Apache-2.0](LICENSE).

@@ -2,7 +2,7 @@
 
 An inspection recipient needs to know whether the note, readings and image they received match the sender's files. FieldPack creates a portable manifest of logical names, byte counts and SHA-256 digests. The recipient supplies the attachments separately and checks them locally. This can catch incomplete or changed handoffs before someone works from the wrong attachment.
 
-**Available now:** this Python standard-library reference utility, project-owned files and executable checks. **Planned:** Android Binder hashing, native and Flutter workflows, and a JVM recipient using BoundaryLab. This utility executes in one process and supplies no evidence of those implementations or their performance.
+**Available now:** this Python standard-library reference utility, project-owned files and executable checks. Separate native Android and Flutter clients use the Android Binder broker, and a desktop JVM recipient is implemented; see the [recorded mobile-to-desktop handoff](../../conformance/desktop/mobile-handoff.json). This Python utility executes in one process, so its demo does not exercise those implementations or establish their performance. The [root README](../../README.md#built-and-tested-on-a-real-linux-aosp-server) separately documents the Linux/AOSP source-build and native-service proof.
 
 Requires Python 3.10+ on macOS or Linux/POSIX with no-follow, descriptor-relative file opening. Windows is unsupported. No installation, network service, account or upload is required. Run from the repository root:
 

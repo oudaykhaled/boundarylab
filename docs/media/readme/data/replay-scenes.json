@@ -1,0 +1,333 @@
+{
+  "schema_version": 1,
+  "title": "BoundaryLab AOSP execution evidence replay",
+  "classification": "Designed animation of retained evidence excerpts, not an original recording, new execution or independent attestation",
+  "permanent_label": "Animated evidence replay \u2014 not a live recording",
+  "dimensions": [
+    1440,
+    810
+  ],
+  "duration_ms": 28000,
+  "source_commit": "444ae29a31833616c465e155a3dc1335d061cda6",
+  "rendering": {
+    "method": "Python Pillow; source text is selected, normalized JSON fields labeled, line-wrapped and typeset; no original screenshots are modified",
+    "fonts": "Helvetica and Menlo on macOS; Liberation Sans/Mono or DejaVu Sans/Mono fallback on Linux",
+    "minimum_main_text_px": 32,
+    "minimum_source_text_px": 24,
+    "reveal": "Whole retained excerpt/field rows appear progressively; there are no simulated prompts or live typing",
+    "gif": "8 scenes, 3500 ms each, no flashes; static PNG poster available"
+  },
+  "scenes": [
+    {
+      "id": 1,
+      "duration_ms": 3500,
+      "event_date_utc": "2026-10-30 UTC",
+      "title": "Built on a real Linux cloud host",
+      "subtitle": "Google Cloud Ubuntu x86_64 -> AOSP source compilation",
+      "note": "Literal compiler excerpts \u00b7 nonadjacent lines \u00b7 final incremental native build",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/custom-20261030/build/native-r5/build.log",
+          "sha256": "fbbb1afbe70720f08d7184042a589516006255e98f4a82e078f4b1b2d61dc4a4",
+          "kind": "lines",
+          "lines": [
+            7,
+            9,
+            10,
+            49
+          ],
+          "expected": [
+            "TARGET_ARCH=x86_64",
+            "HOST_OS=linux",
+            "HOST_OS_EXTRA=Linux-7.0.0-1014-gcp-x86_64-Ubuntu-24.04.5-LTS",
+            "#### build completed successfully (9 seconds) ####"
+          ]
+        }
+      ],
+      "footer_locators": [
+        "lines 7, 9, 10, 49"
+      ]
+    },
+    {
+      "id": 2,
+      "duration_ms": 3500,
+      "event_date_utc": "2026-10-30 UTC",
+      "title": "Android 16 booted the custom image",
+      "subtitle": "Cuttlefish guest -> built-image fingerprint match -> SELinux checks",
+      "note": "Selected receipt fields \u00b7 global Enforcing before and after \u00b7 BoundaryLab profile generated-v1",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/custom-20261030/runtime/r6/run-result.json",
+          "sha256": "6cd5237201efdd4d00087d9cbca82d76bc362982f191a5bc26b528db030e0879",
+          "kind": "json_fields",
+          "fields": [
+            {
+              "pointer": "/checks/4/actual",
+              "label": "Android release",
+              "expected": "16"
+            },
+            {
+              "pointer": "/checks/5/actual",
+              "label": "Android API",
+              "expected": "36"
+            },
+            {
+              "pointer": "/checks/6/actual",
+              "label": "Build ID",
+              "expected": "BP4A.251205.006"
+            },
+            {
+              "pointer": "/checks/8/actual",
+              "label": "SELinux before",
+              "expected": "Enforcing"
+            },
+            {
+              "pointer": "/checks/30/actual",
+              "label": "SELinux after",
+              "expected": "Enforcing"
+            }
+          ]
+        }
+      ],
+      "footer_locators": [
+        "/checks/{4,5,6,8,30}/actual"
+      ]
+    },
+    {
+      "id": 3,
+      "duration_ms": 3500,
+      "event_date_utc": "2026-10-30 UTC",
+      "title": "An authorized Binder job succeeded",
+      "subtitle": "Real caller UID 2000 \u00b7 boundarylab_probe security domain",
+      "note": "Literal decoded stdout excerpts \u00b7 known 1-byte input SHA-256 \u00b7 long lines wrapped",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/custom-20261030/runtime/r6/smoke/012-command.json",
+          "sha256": "c9cb409e10e53d53d7f5b8d03cdd3f2b411b4ad5b7cdf2349782a44cf109fe39",
+          "kind": "stdout_lines",
+          "lines": [
+            2,
+            5,
+            10
+          ],
+          "expected": [
+            "{\"case\":\"authorized_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_probe:s0\"}",
+            "{\"case\":\"authorized_real_uid\",\"passed\":true,\"detail\":\"2000\"}",
+            "{\"case\":\"known_job_succeeded\",\"passed\":true,\"detail\":\"6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d\"}"
+          ]
+        }
+      ],
+      "footer_locators": [
+        "/stdout \u00b7 lines 2, 5, 10"
+      ]
+    },
+    {
+      "id": 4,
+      "duration_ms": 3500,
+      "event_date_utc": "2026-10-30 UTC",
+      "title": "A different identity was denied",
+      "subtitle": "Android AID_NOBODY 9999 \u00b7 boundarylab_denied domain",
+      "note": "Literal decoded stdout excerpts \u00b7 typed DENIED response \u00b7 omissions between lines",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/custom-20261030/runtime/r6/smoke/057-command.json",
+          "sha256": "7b9b4d3c2ba12e3f3a3d66e9ac635fbd478d3bf7320dca42f5660b86b174936d",
+          "kind": "stdout_lines",
+          "lines": [
+            12,
+            15,
+            16
+          ],
+          "expected": [
+            "I/BoundaryLabProbe( 4371): {\"case\":\"denied_domain\",\"passed\":true,\"detail\":\"u:r:boundarylab_denied:s0\"}",
+            "I/BoundaryLabProbe( 4371): {\"case\":\"denied_real_uid\",\"passed\":true,\"detail\":\"9999\"}",
+            "I/BoundaryLabProbe( 4371): {\"case\":\"denied\",\"passed\":true,\"detail\":\"DENIED\"}"
+          ]
+        }
+      ],
+      "footer_locators": [
+        "/stdout \u00b7 lines 12, 15, 16"
+      ]
+    },
+    {
+      "id": 5,
+      "duration_ms": 3500,
+      "event_date_utc": "2026-10-30 UTC",
+      "title": "61 unique native assertions passed",
+      "subtitle": "One on-guest native binary execution \u00b7 separate from Binder authorization",
+      "note": "Native unit binary ran under permissive su; the three BoundaryLab domains were nonpermissive.",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/custom-20261030/runtime/r6/native61.jsonl",
+          "sha256": "66c45888b1d9313434e34ba887a86a468d4b078cd86ab1a521f6f25f1e63a671",
+          "kind": "lines",
+          "lines": [
+            1,
+            17,
+            62
+          ],
+          "expected": [
+            "{\"case\":\"admit_0\",\"passed\":true}",
+            "{\"case\":\"golden_134217728\",\"passed\":true}",
+            "{\"summary\":\"PASS\",\"checks\":61}"
+          ]
+        },
+        {
+          "path": "docs/evidence/aosp/custom-20261030/actual-results.json",
+          "sha256": "a37704e8c2f254071677c2ab9357c250a1e536290f74f8993bdbd53e8a3b28f8",
+          "kind": "json_fields",
+          "fields": [
+            {
+              "pointer": "/native_assertions/execution_identity",
+              "label": "Execution identity",
+              "expected": "root, u:r:su:s0; su listed permissive in loaded policy; no su-enforcement claim"
+            }
+          ],
+          "display": false
+        }
+      ],
+      "footer_locators": [
+        "JSONL lines 1, 17, 62",
+        "/native_assertions/execution_identity"
+      ]
+    },
+    {
+      "id": 6,
+      "duration_ms": 3500,
+      "event_date_utc": "2026-10-30 UTC",
+      "title": "Cleanup and restart recovery were observed",
+      "subtitle": "Quiescent FD count 7 -> 7 \u00b7 three actual init restarts",
+      "note": "Selected same-generation FD fields \u00b7 restart PIDs \u00b7 this is not a performance or soak test",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/custom-20261030/runtime/r6/smoke/checks.json",
+          "sha256": "365aa7432cdde69abacae3ce1b37fdcd7f5a5be4778429a977755508442f56b9",
+          "kind": "json_fields",
+          "fields": [
+            {
+              "pointer": "/checks/174/actual/before/fd_count",
+              "label": "FDs before",
+              "expected": 7
+            },
+            {
+              "pointer": "/checks/174/actual/after/fd_count",
+              "label": "FDs after",
+              "expected": 7
+            },
+            {
+              "pointer": "/checks/192/actual/previous_pid",
+              "label": "Original PID",
+              "expected": "918"
+            },
+            {
+              "pointer": "/checks/191/actual",
+              "label": "Restart PID 1",
+              "expected": "4396"
+            },
+            {
+              "pointer": "/checks/193/actual",
+              "label": "Restart PID 2",
+              "expected": "4480"
+            },
+            {
+              "pointer": "/checks/195/actual",
+              "label": "Restart PID 3",
+              "expected": "4557"
+            }
+          ]
+        }
+      ],
+      "footer_locators": [
+        "/checks/{174,191,192,193,195} \u00b7 exact pointers in manifest"
+      ]
+    },
+    {
+      "id": 7,
+      "duration_ms": 3500,
+      "event_date_utc": "2026-10-30 UTC",
+      "title": "Evidence was exported and verified",
+      "subtitle": "Preserved raw receipts, failed attempts and original boot PNGs",
+      "note": "Selected export fields \u00b7 payload hashes establish local consistency, not independent attestation",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/custom-20261030/archives/r6-local-verification.json",
+          "sha256": "a22d8f033a52d389721691edf581cae73d81a0abae639db2d36be24322f9a516",
+          "kind": "json_fields",
+          "fields": [
+            {
+              "pointer": "/verified",
+              "label": "Export verified",
+              "expected": true
+            },
+            {
+              "pointer": "/payload_hashes_verified",
+              "label": "Payload hashes verified",
+              "expected": 1589
+            },
+            {
+              "pointer": "/verified_utc",
+              "label": "Verified at",
+              "expected": "2026-10-30T22:40:09.183000+00:00"
+            },
+            {
+              "pointer": "/proof_result/passed",
+              "label": "Runtime proof passed",
+              "expected": true
+            }
+          ]
+        }
+      ],
+      "footer_locators": [
+        "/verified \u00b7 /payload_hashes_verified \u00b7 /verified_utc \u00b7 /proof_result/passed"
+      ]
+    },
+    {
+      "id": 8,
+      "duration_ms": 3500,
+      "event_date_utc": "2026-10-30 UTC",
+      "title": "The paid server and disks were deleted",
+      "subtitle": "No new cloud run was needed to make this evidence replay",
+      "note": "Infrastructure estimate US$6.1723 \u00b7 final invoice pending \u00b7 compatibility/performance/soak remain open",
+      "sources": [
+        {
+          "path": "docs/evidence/aosp/teardown-20261030/teardown.json",
+          "sha256": "0f3340de1bc7363a9f14c111a361faa200ed2274838c6b6209adc4f0d6f1b976",
+          "kind": "json_fields",
+          "fields": [
+            {
+              "pointer": "/instance_absent",
+              "label": "VM absent",
+              "expected": true
+            },
+            {
+              "pointer": "/both_disks_absent",
+              "label": "Both disks absent",
+              "expected": true
+            },
+            {
+              "pointer": "/charged_resources_absent_since_utc",
+              "label": "Verified absent since",
+              "expected": "2026-10-30T22:41:46.211288+00:00"
+            }
+          ]
+        },
+        {
+          "path": "docs/evidence/aosp/teardown-20261030/cost-estimate.json",
+          "sha256": "4cd2aef1ce59025306f037e7c203c9cf3065575bf57dfb4c3b2e98b9a8cd5426",
+          "kind": "json_fields",
+          "fields": [
+            {
+              "pointer": "/infrastructure_subtotal_estimate_usd",
+              "label": "Infrastructure estimate USD",
+              "expected": 6.1723
+            }
+          ]
+        }
+      ],
+      "footer_locators": [
+        "/instance_absent \u00b7 /both_disks_absent \u00b7 /charged_resources_absent_since_utc",
+        "/infrastructure_subtotal_estimate_usd"
+      ]
+    }
+  ]
+}

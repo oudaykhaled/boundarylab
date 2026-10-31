@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="880" viewBox="0 0 1500 880" role="img" aria-labelledby="title description">
+<title id="title">BoundaryLab: built on a Linux server, tested inside a real Android 16 Cuttlefish guest</title>
+<desc id="description">Explanatory diagram from retained 30 October 2026 receipts. A Google Cloud Ubuntu 24.04.5 x86_64 n2-standard-16 host with 16 virtual CPUs, 64 GiB nominal memory and KVM compiled the pinned Android 16 r4 unchanged baseline, then a custom system_ext native-service image. The nested Cuttlefish Android 16 API 36 guest executed authorized and denied Binder calls, 61 unique native assertion cases under the separate permissive su domain, 236 harness observations including repeats, and 34 operator checks. Evidence was exported and locally hash verified before the VM and both disks were deleted.</desc>
+<metadata>{
+  &quot;facts&quot;: {
+    &quot;baseline_build_end_utc&quot;: &quot;2026-10-30T21:36:20.582882+00:00&quot;,
+    &quot;charged_resources_absent_since_utc&quot;: &quot;2026-10-30T22:41:46.211288+00:00&quot;,
+    &quot;custom_image_build_end_utc&quot;: &quot;2026-10-30T22:37:20.958644+00:00&quot;,
+    &quot;linux_ubuntu_lts&quot;: &quot;24.04.5&quot;,
+    &quot;runtime_end_utc&quot;: &quot;2026-10-30T22:39:22.424199+00:00&quot;
+  },
+  &quot;kind&quot;: &quot;explanatory_diagram_from_retained_receipts&quot;,
+  &quot;limits&quot;: [
+    &quot;Native unit binary ran as su, which is a permissive domain.&quot;,
+    &quot;236 harness observations include repeated case names; counts are not added together.&quot;,
+    &quot;Baseline and custom builds reused source/output state; no fresh full reproduction claim.&quot;,
+    &quot;The diagram explains retained operator receipts, not independent execution attestation.&quot;
+  ],
+  &quot;run_date&quot;: &quot;2026-10-30&quot;,
+  &quot;source_commit&quot;: &quot;444ae29a31833616c465e155a3dc1335d061cda6&quot;,
+  &quot;sources&quot;: {
+    &quot;baseline&quot;: {
+      &quot;path&quot;: &quot;docs/evidence/P02/r5-source-baseline/build-result.json&quot;,
+      &quot;sha256&quot;: &quot;a26b7e8fe4cb25ce87c8bc6140642594b2402822717a8cec6b8c5132d0ee168b&quot;
+    },
+    &quot;baseline_boot&quot;: {
+      &quot;path&quot;: &quot;docs/evidence/P02/r5-source-baseline/boot/result.json&quot;,
+      &quot;sha256&quot;: &quot;33d7c2f3d2d890fb5cb10cfeca6d453387f451cfc5f9306b48dc9b709becc3da&quot;
+    },
+    &quot;cloud&quot;: {
+      &quot;path&quot;: &quot;docs/evidence/aosp/attempt-20261030/cloud-controls.json&quot;,
+      &quot;sha256&quot;: &quot;8bea7891267bf208c5c3f6f9c22b928043b211d84731d6b90bc6d445aefb0f03&quot;
+    },
+    &quot;custom_image&quot;: {
+      &quot;path&quot;: &quot;docs/evidence/aosp/custom-20261030/build/image-r4/build-result.json&quot;,
+      &quot;sha256&quot;: &quot;666a31d6b8af5220b082b49d019f8b41c79f49292e1d200e35c2006fc61cc21f&quot;
+    },
+    &quot;host&quot;: {
+      &quot;path&quot;: &quot;docs/evidence/aosp/attempt-20261030/host-kvm.json&quot;,
+      &quot;sha256&quot;: &quot;3b6a6a27a54084534f92ca50d12f37d77b71bde21507887644a907c7f119204c&quot;
+    },
+    &quot;native_log&quot;: {
+      &quot;path&quot;: &quot;docs/evidence/aosp/custom-20261030/build/native-r5/build.log&quot;,
+      &quot;sha256&quot;: &quot;fbbb1afbe70720f08d7184042a589516006255e98f4a82e078f4b1b2d61dc4a4&quot;
+    },
+    &quot;runtime&quot;: {
+      &quot;path&quot;: &quot;docs/evidence/aosp/custom-20261030/actual-results.json&quot;,
+      &quot;sha256&quot;: &quot;a37704e8c2f254071677c2ab9357c250a1e536290f74f8993bdbd53e8a3b28f8&quot;
+    },
+    &quot;teardown&quot;: {
+      &quot;path&quot;: &quot;docs/evidence/aosp/teardown-20261030/teardown.json&quot;,
+      &quot;sha256&quot;: &quot;0f3340de1bc7363a9f14c111a361faa200ed2274838c6b6209adc4f0d6f1b976&quot;
+    }
+  }
+}</metadata>
+<g font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<rect width="1500" height="880" fill="#09111f"/>
+<text x="40" y="65" font-size="52" font-weight="700" fill="#e7eef7">Built on Linux. Tested inside Android.</text>
+<text x="42" y="109" font-size="26" font-weight="400" fill="#a5b7cc">Executed 30 Oct 2026 · explanatory diagram from retained receipts</text>
+<rect x="40" y="142" width="1420" height="510" rx="24" fill="#101d30" stroke="#2b425b" stroke-width="2"/>
+<rect x="69" y="165" width="44" height="35" rx="7" fill="#15333b" stroke="#37dfc5" stroke-width="2"/>
+<path d="M77 177h28M77 189h28" fill="none" stroke="#37dfc5" stroke-width="3"/>
+<text x="130" y="192" font-size="32" font-weight="700" fill="#37dfc5">GOOGLE CLOUD / LINUX HOST</text>
+<text x="70" y="230" font-size="26" font-weight="400" fill="#a5b7cc">Ubuntu 24.04.5 LTS · x86_64 · n2-standard-16 · 16 vCPU / 64 GiB nominal · KVM API 12</text>
+<path d="M70 249H1430" fill="none" stroke="#2b425b" stroke-width="2"/>
+<rect x="70" y="268" width="570" height="348" rx="20" fill="#0b1524" stroke="#2b425b" stroke-width="2"/>
+<text x="94" y="309" font-size="30" font-weight="700" fill="#e7eef7">1 / SOONG SOURCE BUILDS</text>
+<text x="94" y="343" font-size="26" font-weight="600" fill="#37dfc5">android-16.0.0_r4</text>
+<rect x="94" y="362" width="522" height="87" rx="12" fill="#142337" stroke="#294157" stroke-width="2"/>
+<text x="115" y="397" font-size="30" font-weight="650" fill="#e7eef7">Unchanged source baseline</text>
+<text x="115" y="430" font-size="24" font-weight="400" fill="#a5b7cc">Built + booted before overlay · 18 checks</text>
+<rect x="94" y="465" width="522" height="126" rx="12" fill="#142337" stroke="#294157" stroke-width="2"/>
+<text x="115" y="502" font-size="30" font-weight="650" fill="#e7eef7">Custom system_ext image</text>
+<text x="115" y="538" font-size="24" font-weight="400" fill="#a5b7cc">Native service + stable AIDL V1</text>
+<text x="115" y="571" font-size="24" font-weight="400" fill="#a5b7cc">init service + SELinux policy</text>
+<path d="M656 435H715" fill="none" stroke="#37dfc5" stroke-width="3"/>
+<path d="M709 428L720 435L709 442" fill="none" stroke="#37dfc5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="656" y="413" font-size="24" font-weight="600" fill="#37dfc5">boot</text>
+<rect x="738" y="268" width="692" height="348" rx="20" fill="#102a31" stroke="#37dfc5" stroke-width="2"/>
+<text x="765" y="309" font-size="30" font-weight="700" fill="#37dfc5">2 / CUTTLEFISH ANDROID GUEST</text>
+<text x="765" y="343" font-size="26" font-weight="400" fill="#e7eef7">Android 16 · API 36 · actual built images</text>
+<path d="M766 362H1402" fill="none" stroke="#285051" stroke-width="2"/>
+<text x="765" y="401" font-size="30" font-weight="650" fill="#e7eef7">Real Binder calls</text>
+<text x="765" y="438" font-size="24" font-weight="600" fill="#37dfc5">UID 2000 → SUCCEEDED</text>
+<text x="1120" y="438" font-size="24" font-weight="600" fill="#ffcd73">UID 9999 → DENIED</text>
+<text x="765" y="480" font-size="30" font-weight="650" fill="#e7eef7">61 native assertion cases passed</text>
+<text x="765" y="512" font-size="24" font-weight="400" fill="#ffcd73">Unit binary: su domain (permissive).</text>
+<text x="765" y="546" font-size="24" font-weight="400" fill="#a5b7cc">236 harness observations, including repeats</text>
+<text x="765" y="578" font-size="24" font-weight="400" fill="#a5b7cc">Guest Enforcing; BoundaryLab domains nonpermissive.</text>
+<text x="765" y="606" font-size="24" font-weight="600" fill="#37dfc5">34 operator checks · cleanup verified</text>
+<path d="M1084 618V666H385V680" fill="none" stroke="#37dfc5" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M378 675L385 685L392 675" fill="none" stroke="#37dfc5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="40" y="696" width="690" height="138" rx="20" fill="#102331" stroke="#285051" stroke-width="2"/>
+<text x="70" y="736" font-size="30" font-weight="700" fill="#37dfc5">3 / EXPORT &amp; VERIFY</text>
+<text x="70" y="773" font-size="24" font-weight="400" fill="#e7eef7">SHA-256 archive + raw receipts + original PNGs</text>
+<text x="70" y="808" font-size="24" font-weight="400" fill="#a5b7cc">Final runtime passed 22:39:22 UTC</text>
+<path d="M738 763H756M750 757L759 763L750 769" fill="none" stroke="#37dfc5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="770" y="696" width="690" height="138" rx="20" fill="#152730" stroke="#52715d" stroke-width="2"/>
+<text x="800" y="736" font-size="30" font-weight="700" fill="#37dfc5">4 / TEARDOWN VERIFIED</text>
+<text x="800" y="773" font-size="24" font-weight="400" fill="#e7eef7">VM + both disks absent at 22:41:46 UTC</text>
+<text x="800" y="808" font-size="24" font-weight="400" fill="#a5b7cc">No retained VM, disks, snapshots or addresses</text>
+<text x="41" y="867" font-size="24" font-weight="400" fill="#a5b7cc">Operator-recorded evidence + local hash integrity; no independent execution attestation.</text>
+</g></svg>

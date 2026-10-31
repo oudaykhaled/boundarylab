@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="620" viewBox="0 0 1600 620" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">BoundaryLab: source-built Android 16, exercised on a real Linux server</title>
+  <desc id="hero-desc">A documentation illustration of the actual test topology: a Google Cloud Linux x86_64 host with KVM ran a Cuttlefish Android 16 guest containing BoundaryLab's native Binder service. The minimum AOSP proof recorded 34 operator checks, 236 harness observations and 61 native assertions. These are separate layers, not a sum of unique tests. The diagram is not a server screenshot or recorded execution.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1L6 4L1 7" fill="none" stroke="#37dfc5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="620" rx="24" fill="#09111f"/>
+  <path d="M64 59H90V85M64 59V85M64 85H90" fill="none" stroke="#37dfc5" stroke-width="5" stroke-linecap="round"/>
+  <path d="M104 59H130V85M104 85H130" fill="none" stroke="#37dfc5" stroke-width="5" stroke-linecap="round"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="64" y="174" fill="#e7eef7" font-size="82" font-weight="750" letter-spacing="-3">BoundaryLab</text>
+    <text x="67" y="225" fill="#a5b7cc" font-size="32" letter-spacing="0.3">Android · Flutter · JVM · AOSP</text>
+    <text x="64" y="322" fill="#e7eef7" font-size="47" font-weight="700" letter-spacing="-1">Source-built Android 16.</text>
+    <text x="64" y="381" fill="#e7eef7" font-size="42" font-weight="600" letter-spacing="-0.8">Built &amp; exercised on real Linux.</text>
+    <circle cx="76" cy="435" r="6" fill="#37dfc5"/>
+    <text x="96" y="444" fill="#37dfc5" font-size="30" font-weight="600">Google Cloud · x86_64 · KVM</text>
+
+    <rect x="1010" y="59" width="526" height="369" rx="20" fill="#111f31" stroke="#314258" stroke-width="2"/>
+    <text x="1041" y="105" fill="#a5b7cc" font-size="26" font-weight="650" letter-spacing="2">LINUX HOST</text>
+    <text x="1041" y="146" fill="#e7eef7" font-size="28" font-weight="600">Google Cloud · x86_64 / KVM</text>
+    <path d="M1273 155V175" fill="none" stroke="#37dfc5" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="1035" y="183" width="476" height="220" rx="16" fill="#0d1e31" stroke="#37dfc5" stroke-width="2"/>
+    <text x="1273" y="231" text-anchor="middle" fill="#e7eef7" font-size="30" font-weight="650">Cuttlefish · Android 16</text>
+    <path d="M1273 244V266" fill="none" stroke="#37dfc5" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="1066" y="276" width="414" height="103" rx="12" fill="#10302f" stroke="#37dfc5" stroke-width="2"/>
+    <text x="1273" y="318" text-anchor="middle" fill="#e7eef7" font-size="30" font-weight="650">Native Binder service</text>
+    <text x="1273" y="356" text-anchor="middle" fill="#37dfc5" font-size="26">Frozen AIDL V1 · SELinux</text>
+    <text x="1273" y="471" text-anchor="middle" fill="#a5b7cc" font-size="26">Architecture illustration · not a capture</text>
+
+    <path d="M64 509H1536" fill="none" stroke="#314258" stroke-width="2"/>
+    <text x="64" y="566" fill="#37dfc5" font-size="43" font-weight="750">34</text>
+    <text x="132" y="563" fill="#e7eef7" font-size="30" font-weight="600">operator checks</text>
+    <path d="M505 536V578" fill="none" stroke="#314258" stroke-width="2"/>
+    <text x="560" y="566" fill="#37dfc5" font-size="43" font-weight="750">236</text>
+    <text x="657" y="563" fill="#e7eef7" font-size="30" font-weight="600">observations</text>
+    <path d="M1015 536V578" fill="none" stroke="#314258" stroke-width="2"/>
+    <text x="1070" y="566" fill="#37dfc5" font-size="43" font-weight="750">61</text>
+    <text x="1138" y="563" fill="#e7eef7" font-size="30" font-weight="600">native assertions</text>
+    <text x="64" y="606" fill="#a5b7cc" font-size="26">Minimum AOSP proof · separate receipt layers · 30 Oct 2026</text>
+  </g>
+</svg>
